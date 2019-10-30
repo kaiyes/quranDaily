@@ -1,34 +1,35 @@
-import React from 'react';
+import React from 'react'
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
   Text,
-  StatusBar,
-} from 'react-native';
+  StatusBar
+} from 'react-native'
 
-const App = () => {
+function Duas() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+          style={styles.scrollView}
+        >
           <View style={styles.ViewContainer}>
-            <Text>Hye</Text>
+            <Text>Duas</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
     </>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: 'white',
-  },
-});
+    backgroundColor: 'white'
+  }
+})
 
-export default App;
+export default Duas

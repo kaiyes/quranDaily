@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,29 +6,37 @@ import {
   View,
   Text,
   StatusBar
-} from 'react-native';
+} from 'react-native'
 
-function Home() {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <View style={styles.ViewContainer}>
-            <Text>Home</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
+export default class Home extends React.Component {
+  render() {
+    const { navigate } = this.props.navigation
+    return (
+      <>
+        <StatusBar barStyle="dark-content" />
+        <SafeAreaView>
+          <ScrollView
+            contentInsetAdjustmentBehavior="automatic"
+            style={styles.scrollView}
+          >
+            <View style={styles.ViewContainer}>
+              <Text
+                onPress={function goToDuas() {
+                  navigate('Dua')
+                }}
+              >
+                Home
+              </Text>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+      </>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: 'white'
   }
-});
-
-export default Home;
+})
