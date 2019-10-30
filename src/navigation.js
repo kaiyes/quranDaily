@@ -8,7 +8,10 @@ import DuaScreen from './screens/Duas'
 
 const AppNavigator = createStackNavigator({
   Home: {
-    screen: HomeScreen
+    screen: HomeScreen,
+    navigationOptions: () => ({
+      headerTransparent: true
+    })
   },
   Dua: {
     screen: DuaScreen
