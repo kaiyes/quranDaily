@@ -8,7 +8,7 @@ import {
   StatusBar
 } from 'react-native'
 
-function Home() {
+function Duas() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -18,7 +18,7 @@ function Home() {
           style={styles.scrollView}
         >
           <View style={styles.ViewContainer}>
-            <Text>Home</Text>
+            <Text>Duas</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Home
+export default Duas
