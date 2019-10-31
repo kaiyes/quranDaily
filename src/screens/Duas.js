@@ -8,28 +8,26 @@ import {
   StatusBar
 } from 'react-native'
 
-function Duas() {
+export default function dua() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}
-        >
-          <View style={styles.ViewContainer}>
-            <Text>Duas</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+
+      <View style={styles.root}>
+        <Text style={styles.text}>Dua</Text>
+      </View>
     </>
   )
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: 'white'
+  root: {
+    flex: 1,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  text: {
+    fontWeight: 'bold'
   }
 })
-
-export default Duas

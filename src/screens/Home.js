@@ -1,34 +1,38 @@
 import React from 'react'
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar
+  StatusBar,
+  TouchableOpacity
 } from 'react-native'
 
-function Home() {
+function Home({ navigation }) {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}
+      <View style={styles.root}>
+        <TouchableOpacity
+          onPress={function gotoDua() {
+            navigation.navigate('Dua')
+          }}
         >
-          <View style={styles.ViewContainer}>
-            <Text>Home</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+          <Text style={styles.text}>Home</Text>
+        </TouchableOpacity>
+      </View>
     </>
   )
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: 'white'
+  root: {
+    flex: 1,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  text: {
+    fontWeight: 'bold'
   }
 })
 
