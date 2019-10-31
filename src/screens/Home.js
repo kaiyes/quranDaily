@@ -13,16 +13,16 @@ import {
 } from "react-native-responsive-screen"
 
 const items = [
-  { name: "Quran", code: "#1abc9c" },
-  { name: "Dua", code: "#2ecc71" },
-  { name: "Deeds", code: "#3498db" },
-  { name: "Memorize", code: "#9b59b6" },
-  { name: "Duo Lingo", code: "#34495e" },
-  { name: "Live Quiz", code: "#16a085" },
-  { name: "Qtor", code: "#2ecc71" },
-  { name: "Arabic Bazar", code: "#3498db" },
-  { name: "Mentors", code: "#1abc9c" },
-  { name: "Mentors", code: "#1abc9c" }
+  { name: "Quran", code: "#1abc9c", detail: "quran" },
+  { name: "Dua", code: "#2ecc71", detail: "dua" },
+  { name: "Deeds", code: "#3498db", detail: "deeds" },
+  { name: "Memorize", code: "#9b59b6", detail: "memorize" },
+  { name: "Learn Arabic", code: "#34495e", detail: "learnArabic" },
+  { name: "Live Quiz", code: "#16a085", detail: "liveQuiz" },
+  { name: "Quran tutor", code: "#2ecc71", detail: "qTor" },
+  { name: "Arabic Bazar", code: "#3498db", detail: "arabicBazar" },
+  { name: "Mentors", code: "#1abc9c", detail: "mentors" },
+  { name: "Kitabs", code: "#f39c12", detail: "kitabs" }
 ]
 
 function Home({ navigation }) {
@@ -32,10 +32,16 @@ function Home({ navigation }) {
       items={items}
       contentContainerStyle={styles.root}
       spacing={10}
+      scrollEnabled={false}
       renderItem={({ item, index }) => (
-        <View style={[styles.itemContainer, { backgroundColor: item.code }]}>
+        <TouchableOpacity
+          style={[styles.itemContainer, { backgroundColor: item.code }]}
+          onPress={function goToOwnScreen() {
+            navigation.navigate(`${item.detail}`)
+          }}
+        >
           <Text style={styles.text}>{item.name}</Text>
-        </View>
+        </TouchableOpacity>
       )}
     />
   )
@@ -54,7 +60,7 @@ const styles = StyleSheet.create({
     color: "white"
   },
   itemContainer: {
-    width: wp("40%"),
+    width: wp("46%"),
     height: hp("15%"),
     justifyContent: "center",
     alignItems: "center",
