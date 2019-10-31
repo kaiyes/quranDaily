@@ -1,21 +1,19 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
+import { NavigationNativeContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 //screens
 import HomeScreen from './screens/Home'
-import DuaScreen from './screens/Duas'
+import DetailScreen from './screens/Details'
 
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-    navigationOptions: () => ({
-      headerTransparent: true
-    })
-  },
-  Dua: {
-    screen: DuaScreen
-  }
-})
+const Stack = createStackNavigator()
 
-export default createAppContainer(AppNavigator)
+export default function App() {
+  return (
+    <NavigationNativeContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailScreen} />
+      </Stack.Navigator>
+    </NavigationNativeContainer>
+  )
+}
