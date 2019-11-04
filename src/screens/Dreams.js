@@ -8,13 +8,13 @@ import {
   StatusBar
 } from "react-native"
 
-export default function ArabicMarket() {
+export default function Dreams() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
 
       <View style={styles.root}>
-        <Text style={styles.text}>Arabic Teaching Marketplace </Text>
+        <Text style={styles.text}>Dreams </Text>
       </View>
     </>
   )

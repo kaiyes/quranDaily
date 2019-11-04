@@ -20,7 +20,7 @@ const items = [
   { name: "Learn Arabic", code: "#34495e", detail: "learnArabic" },
   { name: "Live Quiz", code: "#16a085", detail: "liveQuiz" },
   { name: "Quran tutor", code: "#2ecc71", detail: "qTor" },
-  { name: "Arabic Bazar", code: "#3498db", detail: "arabicBazar" },
+  { name: "Dream Interpreation", code: "#3498db", detail: "dreams" },
   { name: "Mentors", code: "#1abc9c", detail: "mentors" },
   { name: "Kitabs", code: "#f39c12", detail: "kitabs" }
 ]
