@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   rootView: {
     backgroundColor: "#FEF5DC",
     height: hp("100%"),
-    paddingTop: hp("10%"),
+    paddingTop: hp("5%"),
     alignItems: "center",
     paddingHorizontal: wp("3%")
   },

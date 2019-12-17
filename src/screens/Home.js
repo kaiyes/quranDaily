@@ -21,7 +21,8 @@ const items = [
   { name: "Learn Arabic", code: "#34495e", detail: "learnArabic" },
   { name: "Live Quiz", code: "tomato", detail: "liveQuiz" },
   { name: "Quran tutor", code: "palegreen", detail: "qTor" },
-  { name: "Janaza", code: "#9b59b6", detail: "janaza" }
+  { name: "Janaza", code: "#9b59b6", detail: "janaza" },
+  { name: "Janaza", code: "purple", detail: "janaza" }
 ]
 
 function Home({ navigation }) {
