@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'quran' do
-  # Pods for quran
+target 'AdminApp' do
+  # Pods for AdminApp
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -34,16 +34,7 @@ target 'quran' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
-
-  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
-
-  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
-
-
-  pod 'RNScreens', :path => '../node_modules/react-native-screens'
-
-  target 'quranTests' do
+  target 'AdminAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -51,10 +42,10 @@ target 'quran' do
   use_native_modules!
 end
 
-target 'quran-tvOS' do
-  # Pods for quran-tvOS
+target 'AdminApp-tvOS' do
+  # Pods for AdminApp-tvOS
 
-  target 'quran-tvOSTests' do
+  target 'AdminApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
