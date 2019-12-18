@@ -3,12 +3,11 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { Icon } from "react-native-elements"
 //Screens
-import ListScreen from "./screens/List.screen"
+import DeedScreen from "./screens/Deeds.screen"
 import DetailScreen from "./screens/Details.screen"
 import SplashScreen from "./screens/Splash.screen"
-import ChatScreen from "./screens/Chat.screen"
-import PaymentScreen from "./screens/Payment.screen"
-import MatchScreen from "./screens/Match.screen"
+import DuaScreen from "./screens/Dua.screen"
+import JanazaScreen from "./screens/Janaza.screen"
 
 //components
 import IconWithBadge from "./Components/ChatIcon"
@@ -24,10 +23,19 @@ function Splash() {
   )
 }
 
-function ListStack() {
+function DeedStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="List" component={ListScreen} />
+      <Stack.Screen name="Deeds" component={DeedScreen} />
+      <Stack.Screen name="Details" component={DetailScreen} />
+    </Stack.Navigator>
+  )
+}
+
+function DuaStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Deeds" component={DuaScreen} />
       <Stack.Screen name="Details" component={DetailScreen} />
     </Stack.Navigator>
   )
@@ -52,17 +60,14 @@ function LoggedInStack() {
           let iconName
 
           switch (route.name) {
-            case "List":
+            case "Deeds":
               iconName = "home"
               break
-            case "Chat":
+            case "Dua":
               iconName = "chat"
               break
-            case "Payment":
+            case "Janaza":
               iconName = "credit"
-              break
-            case "Match":
-              iconName = "heart"
               break
             default:
           }
@@ -84,10 +89,9 @@ function LoggedInStack() {
         inactiveTintColor: "darkgrey"
       }}
     >
-      <Tab.Screen name="List" component={ListStack} />
-      <Tab.Screen name="Chat" component={ChatScreen} />
-      <Tab.Screen name="Payment" component={PaymentScreen} />
-      <Tab.Screen name="Match" component={MatchScreen} />
+      <Tab.Screen name="Deeds" component={DeedStack} />
+      <Tab.Screen name="Dua" component={DuaStack} />
+      <Tab.Screen name="Janaza" component={JanazaScreen} />
     </Tab.Navigator>
   )
 }
@@ -95,7 +99,6 @@ function LoggedInStack() {
 export default function Navigator({ navigation }) {
   const [isLoading, setIsLoading] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(true)
-  const [isInLimbo, setLimbo] = useState(false)
 
   return isLoading ? Splash() : LoggedInStack()
 }
