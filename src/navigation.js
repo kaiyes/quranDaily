@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { Icon } from "react-native-elements"
 //Screens
 import DeedScreen from "./screens/Deeds.screen"
-import DetailScreen from "./screens/Details.screen"
+import DuaDetailScreen from "./screens/DuaDetails.screen"
 import SplashScreen from "./screens/Splash.screen"
 import DuaScreen from "./screens/Dua.screen"
 import JanazaScreen from "./screens/Janaza.screen"
@@ -27,7 +27,6 @@ function DeedStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Deeds" component={DeedScreen} />
-      <Stack.Screen name="Details" component={DetailScreen} />
     </Stack.Navigator>
   )
 }
@@ -36,7 +35,7 @@ function DuaStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Deeds" component={DuaScreen} />
-      <Stack.Screen name="Details" component={DetailScreen} />
+      <Stack.Screen name="Details" component={DuaDetailScreen} />
     </Stack.Navigator>
   )
 }
@@ -61,13 +60,13 @@ function LoggedInStack() {
 
           switch (route.name) {
             case "Deeds":
-              iconName = "home"
+              iconName = "list"
               break
             case "Dua":
-              iconName = "chat"
+              iconName = "book"
               break
             case "Janaza":
-              iconName = "credit"
+              iconName = "map"
               break
             default:
           }

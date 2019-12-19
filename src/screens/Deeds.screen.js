@@ -11,7 +11,6 @@ import {
 } from "react-native"
 import { Avatar } from "react-native-elements"
 //utility
-import FakeUsers from "../utility/FakeUsers"
 
 export default function Deeds({ navigation }) {
   return (

@@ -8,12 +8,12 @@ import {
   StatusBar
 } from "react-native"
 
-export default function Janaza() {
+export default function DuaDetails() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
-        <Text style={styles.sectionTitle}> janaza </Text>
+        <Text style={styles.sectionTitle}> Dua Details </Text>
       </SafeAreaView>
     </>
   )
