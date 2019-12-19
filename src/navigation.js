@@ -57,9 +57,11 @@ function DuaStack() {
         component={DuaDetailScreen}
         options={({ route }) => ({
           title:
-            route.params.title.length > 10
-              ? `${route.params.title.slice(0, 15)}...`
-              : route.params.title
+            route.params.title != null
+              ? route.params.title.length > 10
+                ? `${route.params.title.slice(0, 12)}...`
+                : route.params.title
+              : ""
         })}
       />
     </Stack.Navigator>

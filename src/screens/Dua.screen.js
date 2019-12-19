@@ -56,19 +56,18 @@ export default function Dua({ navigation }) {
               style={styles.item}
               onPress={() => {
                 navigation.navigate("Dua", {
-                  title: item.title,
-                  dua: item.dua,
-                  spelling: item.spelling,
-                  meaning: item.meaning,
-                  source: item.source,
-                  audio: item.audio
+                  pageTitle: item.pageTitle,
+                  arabic: item.arabic,
+                  transliteration: item.transliteration,
+                  translations: item.translations,
+                  Reference: item.Reference
                 })
               }}
             >
               <View style={styles.circle}>
                 <Text style={styles.number}>{item.id}</Text>
               </View>
-              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.title}>{item.pageTitle}</Text>
             </TouchableOpacity>
           )}
           keyExtractor={item => item.id}

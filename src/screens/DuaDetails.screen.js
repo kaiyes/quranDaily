@@ -4,7 +4,8 @@ import {
   View,
   Text,
   FlatList,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView
 } from "react-native"
 import {
   widthPercentageToDP as wp,
@@ -16,17 +17,25 @@ import DUA from "../utility/dua"
 import "../assets/fonts/me_quran.ttf"
 
 export default function DuaDetail({ route, navigation }) {
-  const { title, dua, spelling, meaning, source } = route.params
+  const {
+    pageTitle,
+    arabic,
+    translations,
+    transliteration,
+    Reference
+  } = route.params
 
   return (
     <View style={styles.rootView}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.dua}>{dua}</Text>
-      <Text style={styles.spelling}>{spelling}</Text>
-      <View style={styles.secondContainer}>
-        <Text style={styles.meaning}>{meaning}</Text>
-        <Text style={styles.source}>{source}</Text>
-      </View>
+      <ScrollView>
+        <Text style={styles.title}>{pageTitle}</Text>
+        <Text style={styles.dua}>{arabic}</Text>
+        <Text style={styles.spelling}>{transliteration}</Text>
+        <View style={styles.secondContainer}>
+          <Text style={styles.meaning}>{translations}</Text>
+          <Text style={styles.source}>{Reference}</Text>
+        </View>
+      </ScrollView>
     </View>
   )
 }
@@ -43,7 +52,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: "bold",
-    color: "darkolivegreen"
+    color: "darkolivegreen",
+    textAlign: "center"
   },
   dua: {
     marginTop: hp("3%"),
