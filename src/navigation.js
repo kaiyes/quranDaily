@@ -2,6 +2,11 @@ import React, { useState } from "react"
 import { createStackNavigator } from "@react-navigation/stack"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { Icon } from "react-native-elements"
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp
+} from "react-native-responsive-screen"
+
 //Screens
 import DeedScreen from "./screens/Deeds.screen"
 import DuaDetailScreen from "./screens/DuaDetails.screen"
@@ -33,9 +38,25 @@ function DeedStack() {
 
 function DuaStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Dua" component={DuaScreen} />
-      <Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
+    <Stack.Navigator
+      screenOptions={() => ({
+        headerStyle: {
+          backgroundColor: "seagreen"
+        },
+        headerTintColor: "white",
+        headerTitleStyle: {
+          fontWeight: "bold",
+          fontFamily: "Menlo",
+          fontSize: hp("2.4%")
+        }
+      })}
+    >
+      <Stack.Screen name="All Dua" component={DuaScreen} />
+      <Stack.Screen
+        name="Dua"
+        component={DuaDetailScreen}
+        options={({ route }) => ({ title: route.params.title })}
+      />
     </Stack.Navigator>
   )
 }
@@ -84,8 +105,16 @@ function LoggedInStack() {
         }
       })}
       tabBarOptions={{
-        activeTintColor: "darkgreen",
-        inactiveTintColor: "darkgrey"
+        activeTintColor: "white",
+        inactiveTintColor: "darkseagreen",
+        style: {
+          backgroundColor: "seagreen"
+        },
+        labelStyle: {
+          fontWeight: "bold",
+          fontFamily: "Menlo",
+          fontSize: hp("1.5%")
+        }
       }}
     >
       <Tab.Screen name="Deeds" component={DeedStack} />

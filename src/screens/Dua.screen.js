@@ -39,7 +39,7 @@ export default function Dua({ navigation }) {
                 key={item.code}
                 style={[styles.itemContainer, { backgroundColor: item.code }]}
                 onPress={function goToOwnScreen() {
-                  navigation.navigate("DuaDetails")
+                  navigation.navigate("Dua")
                 }}
               >
                 <Text style={styles.itemName}>{item.name}</Text>
@@ -55,7 +55,7 @@ export default function Dua({ navigation }) {
             <TouchableOpacity
               style={styles.item}
               onPress={() => {
-                navigation.navigate("DuaDetail", {
+                navigation.navigate("Dua", {
                   title: item.title,
                   dua: item.dua,
                   spelling: item.spelling,
@@ -74,7 +74,7 @@ export default function Dua({ navigation }) {
           keyExtractor={item => item.id}
           contentContainerStyle={styles.flatList}
         />
-        <ScrollView tabLabel="Favourite" />
+        <ScrollView tabLabel="Favourites" />
       </ScrollableTabView>
     </SafeAreaView>
   )

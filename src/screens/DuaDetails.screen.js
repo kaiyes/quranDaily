@@ -33,7 +33,7 @@ export default function DuaDetail({ route, navigation }) {
 
 const styles = StyleSheet.create({
   rootView: {
-    backgroundColor: "#FEF5DC",
+    backgroundColor: "honeydew",
     height: hp("100%"),
     paddingTop: hp("5%"),
     alignItems: "center",
@@ -42,29 +42,37 @@ const styles = StyleSheet.create({
   secondContainer: { width: wp("90%") },
   title: {
     fontSize: 22,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "darkolivegreen"
   },
   dua: {
     marginTop: hp("3%"),
     fontSize: 32,
     fontWeight: "300",
     textAlign: "right",
-    fontFamily: "me_quran"
+    fontFamily: "me_quran",
+    color: "darkolivegreen"
   },
   spelling: {
     marginTop: hp("3%"),
     fontSize: 18,
-    fontWeight: "400"
+    fontWeight: "400",
+    fontFamily: "Menlo",
+    color: "darkolivegreen"
   },
   meaning: {
     marginTop: hp("3%"),
     fontSize: 18,
-    fontWeight: "400"
+    fontWeight: "400",
+    fontFamily: "Menlo",
+    color: "darkolivegreen"
   },
   source: {
     marginTop: hp("3%"),
     fontSize: 16,
-    fontWeight: "200"
+    fontWeight: "200",
+    fontFamily: "Menlo",
+    color: "darkolivegreen"
   },
   playButton: {
     position: "absolute",
