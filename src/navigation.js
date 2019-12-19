@@ -34,8 +34,8 @@ function DeedStack() {
 function DuaStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Deeds" component={DuaScreen} />
-      <Stack.Screen name="Details" component={DuaDetailScreen} />
+      <Stack.Screen name="Dua" component={DuaScreen} />
+      <Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
     </Stack.Navigator>
   )
 }
@@ -84,7 +84,7 @@ function LoggedInStack() {
         }
       })}
       tabBarOptions={{
-        activeTintColor: "slateblue",
+        activeTintColor: "darkgreen",
         inactiveTintColor: "darkgrey"
       }}
     >

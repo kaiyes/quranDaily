@@ -26,11 +26,12 @@ const items = [
 export default function Dua({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollableTabView>
-        <ScrollView tabLabel="All Dua">
-          <View style={styles.topContainer} />
+      <ScrollableTabView
+        tabBarTextStyle={styles.tabBarText}
+        tabBarUnderlineStyle={styles.underline}
+      >
+        <View tabLabel="Categorised" style={styles.topContainer}>
           <FlatList
-            tabLabel="Explore"
             data={items}
             numColumns={3}
             renderItem={({ item }) => (
@@ -38,23 +39,23 @@ export default function Dua({ navigation }) {
                 key={item.code}
                 style={[styles.itemContainer, { backgroundColor: item.code }]}
                 onPress={function goToOwnScreen() {
-                  navigation.navigate("Details")
+                  navigation.navigate("DuaDetails")
                 }}
               >
                 <Text style={styles.itemName}>{item.name}</Text>
               </TouchableOpacity>
             )}
           />
-        </ScrollView>
+        </View>
+
         <FlatList
           data={DUA}
-          tabLabel="Categorised"
-          ListHeaderComponent={<View style={styles.spacer} />}
+          tabLabel="All Duas"
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.item}
               onPress={() => {
-                navigation.navigate("details", {
+                navigation.navigate("DuaDetail", {
                   title: item.title,
                   dua: item.dua,
                   spelling: item.spelling,
@@ -65,7 +66,7 @@ export default function Dua({ navigation }) {
               }}
             >
               <View style={styles.circle}>
-                <Text style={styles.textContainer}>{item.id}</Text>
+                <Text style={styles.number}>{item.id}</Text>
               </View>
               <Text style={styles.title}>{item.title}</Text>
             </TouchableOpacity>
@@ -82,12 +83,12 @@ export default function Dua({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FEF5DC",
+    backgroundColor: "honeydew",
     justifyContent: "center",
     alignItems: "center"
   },
   topContainer: {
-    height: hp("66%")
+    marginTop: hp("60%")
   },
   itemName: {
     fontWeight: "500",
@@ -104,11 +105,11 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   duaContainer: {
-    backgroundColor: "#FEF5DC",
+    backgroundColor: "honeydew",
     flex: 1
   },
   flatList: {
-    backgroundColor: "#FEF5DC"
+    backgroundColor: "honeydew"
   },
   item: {
     width: wp("95%"),
@@ -121,15 +122,33 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 25,
-    backgroundColor: "#F8B566",
+    backgroundColor: "lightgreen",
     marginRight: 10,
     justifyContent: "center",
     alignItems: "center"
   },
-  title: {
-    fontSize: 18
-  },
   spacer: {
     marginTop: hp("5%")
+  },
+  number: {
+    fontWeight: "500",
+    fontSize: hp("2%"),
+    color: "darkolivegreen",
+    fontFamily: "Menlo"
+  },
+  tabBarText: {
+    fontWeight: "500",
+    fontSize: hp("1.6%"),
+    color: "darkolivegreen",
+    fontFamily: "Menlo"
+  },
+  underline: {
+    backgroundColor: "darkgreen"
+  },
+  title: {
+    fontWeight: "400",
+    fontSize: hp("2.1%"),
+    color: "darkolivegreen",
+    fontFamily: "Menlo"
   }
 })
