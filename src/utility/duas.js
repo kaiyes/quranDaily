@@ -7424,7 +7424,7 @@ function uniqueId() {
 
 Duas.map(item => {
   item.key = uniqueId()
-  item.id = parseInt(item.duas[0]._id)
+  item.id = parseInt(item.duas[0]._id) - 1
 })
 
 let x = Duas.sort((a, b) => a.id - b.id)

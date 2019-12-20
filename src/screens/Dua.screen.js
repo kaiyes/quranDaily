@@ -17,11 +17,36 @@ import ScrollableTabView from "react-native-scrollable-tab-view"
 //Utility
 import DUA from "../utility/duas"
 
+function uniqueId() {
+  return (
+    "_" +
+    Math.random()
+      .toString(36)
+      .substr(2, 9)
+  )
+}
+
 const items = [
-  { name: "Dua from Quran", code: "#2ecc71", detail: "Dua from Quran" },
-  { name: "Dua for Morning & Evening", code: "#3498db", detail: "deeds" },
-  { name: "Dua for Travelling", code: "#9b59b6", detail: "janaza" }
+  { name: "কুরআনের দোয়া", code: "mediumaquamarine", detail: "quran" },
+  { name: "সকাল-সন্ধ্যায়", code: "mediumseagreen", detail: "morning" },
+  { name: "যাত্রা পথে", code: "forestgreen", detail: "travelling" },
+  { name: "সালাতের দোয়া", code: "green", detail: "salah" },
+  { name: "তাওবা", code: "darkgreen", detail: "তাওবা" },
+  { name: "ইস্তেখারার দোয়া ", code: "darkolivegreen", detail: "istekhara" },
+  { name: "অসুস্থতার দোয়া ", code: "olivedrab", detail: "quran" },
+  { name: "শিশুদের নিরাপত্তা", code: "olive", detail: "morning" },
+  { name: "রুকিয়ার দোয়া", code: "darkkhaki", detail: "ruqiah" },
+  { name: "বিয়ে সঙ্ক্রান্ত", code: "mediumaquamarine", detail: "marriage" },
+  { name: "আর্থিক", code: "mediumseagreen", detail: "money" },
+  { name: "জানাযা", code: "forestgreen", detail: "janaza" },
+  { name: "অতিথির জন্যে", code: "green", detail: "mehman" },
+  { name: "রামাদানের দোয়া", code: "darkgreen", detail: "ramadan" },
+  { name: "হজ্বের দোয়া", code: "darkolivegreen", detail: "hajj" }
 ]
+
+items.map(item => {
+  return (item.key = uniqueId())
+})
 
 export default function Dua({ navigation }) {
   return (
@@ -34,7 +59,7 @@ export default function Dua({ navigation }) {
           <FlatList
             data={items}
             numColumns={3}
-            keyExtractor={item => item.code}
+            keyExtractor={item => item.key}
             renderItem={({ item }) => (
               <TouchableOpacity
                 key={item.code}
@@ -86,7 +111,8 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   topContainer: {
-    marginTop: hp("60%")
+    position: "absolute",
+    bottom: 0
   },
   itemName: {
     fontWeight: "500",
