@@ -52,6 +52,7 @@ export default function Dua({ navigation }) {
         <FlatList
           data={DUA}
           tabLabel="All Duas"
+          keyExtractor={item => item.key}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.item}
@@ -146,6 +147,7 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     fontSize: hp("2.1%"),
     color: "darkolivegreen",
-    fontFamily: "Menlo"
+    fontFamily: "Menlo",
+    width: wp("75%")
   }
 })

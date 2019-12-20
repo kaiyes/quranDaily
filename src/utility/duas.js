@@ -7422,6 +7422,11 @@ function uniqueId() {
   )
 }
 
-Duas.forEach(item => (item.id = uniqueId()))
+Duas.map(item => {
+  item.key = uniqueId()
+  item.id = parseInt(item.duas[0]._id)
+})
+
+let x = Duas.sort((a, b) => a.id - b.id)
 
 export default Duas
