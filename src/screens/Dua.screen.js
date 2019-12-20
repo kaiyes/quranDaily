@@ -15,7 +15,7 @@ import {
 } from "react-native-responsive-screen"
 import ScrollableTabView from "react-native-scrollable-tab-view"
 //Utility
-import DUA from "../utility/dua"
+import DUA from "../utility/duas"
 
 const items = [
   { name: "Dua from Quran", code: "#2ecc71", detail: "Dua from Quran" },
@@ -34,6 +34,7 @@ export default function Dua({ navigation }) {
           <FlatList
             data={items}
             numColumns={3}
+            keyExtractor={item => item.code}
             renderItem={({ item }) => (
               <TouchableOpacity
                 key={item.code}
@@ -57,10 +58,7 @@ export default function Dua({ navigation }) {
               onPress={() => {
                 navigation.navigate("Dua", {
                   pageTitle: item.pageTitle,
-                  arabic: item.arabic,
-                  transliteration: item.transliteration,
-                  translations: item.translations,
-                  Reference: item.Reference
+                  dua: item.detail
                 })
               }}
             >
