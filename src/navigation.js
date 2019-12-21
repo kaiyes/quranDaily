@@ -44,15 +44,27 @@ function DuaStack() {
           backgroundColor: "seagreen"
         },
         headerTintColor: "white",
+        headerBackTitle: null,
         headerTitleStyle: {
-          fontWeight: "bold",
+          fontWeight: "500",
           fontFamily: "Menlo",
-          fontSize: hp("2.4%")
+          fontSize: hp("2%")
         }
       })}
     >
-      <Stack.Screen name="AllDua" component={DuaScreen} />
-      <Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
+      <Stack.Screen name="Dua Home" component={DuaScreen} />
+      <Stack.Screen
+        name="DuaDetail"
+        component={DuaDetailScreen}
+        options={({ route }) => ({
+          title:
+            route.params.pageTitle != null
+              ? route.params.pageTitle.length > 10
+                ? `${route.params.pageTitle.slice(0, 12)}...`
+                : route.params.pageTitle
+              : ""
+        })}
+      />
     </Stack.Navigator>
   )
 }
@@ -79,7 +91,7 @@ function LoggedInStack() {
             case "Deeds":
               iconName = "list"
               break
-            case "DuaHome":
+            case "Dua":
               iconName = "book"
               break
             case "Janaza":
@@ -114,7 +126,7 @@ function LoggedInStack() {
       }}
     >
       <Tab.Screen name="Deeds" component={DeedStack} />
-      <Tab.Screen name="DuaHome" component={DuaStack} />
+      <Tab.Screen name="Dua" component={DuaStack} />
       <Tab.Screen name="Janaza" component={JanazaScreen} />
     </Tab.Navigator>
   )
@@ -126,12 +138,3 @@ export default function Navigator({ navigation }) {
 
   return isLoading ? Splash() : LoggedInStack()
 }
-
-// options={({ route }) => ({
-//   title:
-//     route.params.pageTitle != null
-//       ? route.params.pageTitle.length > 10
-//         ? `${route.params.pageTitle.slice(0, 12)}...`
-//         : route.params.title
-//       : ""
-// })}

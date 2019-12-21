@@ -43,10 +43,10 @@ export default function DuaDetail({ route, navigation }) {
                 {item.bottom}
               </Text>
             )}
-            {item.bottom.length < 1 ? null : (
+            {item.reference.length < 1 ? null : (
               <Text style={styles.source}>
                 <Text style={styles.preSpell}>উৎস:</Text>
-                {item.Reference}
+                {item.reference}
               </Text>
             )}
           </View>
