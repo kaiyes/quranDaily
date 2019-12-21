@@ -13,33 +13,10 @@ import {
 } from "react-native-responsive-screen"
 
 //utility
-import DUA from "../utility/dua"
 import "../assets/fonts/me_quran.ttf"
 
 export default function Categorised({ route, navigation }) {
-  return (
-    <FlatList
-      data={DUA}
-      renderItem={({ item }) => (
-        <TouchableOpacity
-          style={styles.item}
-          onPress={() => {
-            navigation.navigate("Dua", {
-              pageTitle: item.pageTitle,
-              duas: item.duas
-            })
-          }}
-        >
-          <View style={styles.circle}>
-            <Text style={styles.number}>{item.id}</Text>
-          </View>
-          <Text style={styles.title}>{item.pageTitle}</Text>
-        </TouchableOpacity>
-      )}
-      keyExtractor={item => item.id}
-      contentContainerStyle={styles.flatList}
-    />
-  )
+  return <Text style={styles.title}>asdad</Text>
 }
 
 const styles = StyleSheet.create({

@@ -78,13 +78,14 @@ export default function Dua({ navigation }) {
           data={DUA}
           tabLabel="All Duas"
           keyExtractor={item => item.key}
+          contentContainerStyle={styles.flatList}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.item}
-              onPress={() => {
-                navigation.navigate("Dua", {
+              onPress={function goToDetail() {
+                navigation.navigate("DuaDetail", {
                   pageTitle: item.pageTitle,
-                  dua: item.detail
+                  duas: item.duas
                 })
               }}
             >
@@ -94,8 +95,6 @@ export default function Dua({ navigation }) {
               <Text style={styles.title}>{item.pageTitle}</Text>
             </TouchableOpacity>
           )}
-          keyExtractor={item => item.id}
-          contentContainerStyle={styles.flatList}
         />
         <ScrollView tabLabel="Favourites" />
       </ScrollableTabView>

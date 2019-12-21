@@ -5,7 +5,8 @@ import {
   Text,
   FlatList,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  SafeAreaView
 } from "react-native"
 import {
   widthPercentageToDP as wp,
@@ -13,42 +14,61 @@ import {
 } from "react-native-responsive-screen"
 
 //utility
-import DUA from "../utility/dua"
 import "../assets/fonts/me_quran.ttf"
 
 export default function DuaDetail({ route, navigation }) {
-  const {
-    pageTitle,
-    arabic,
-    translations,
-    transliteration,
-    Reference
-  } = route.params
+  const { pageTitle, duas } = route.params
 
   return (
-    <View style={styles.rootView}>
-      <ScrollView>
-        <Text style={styles.title}>{pageTitle}</Text>
-        <Text style={styles.dua}>{arabic}</Text>
-        <Text style={styles.spelling}>{transliteration}</Text>
-        <View style={styles.secondContainer}>
-          <Text style={styles.meaning}>{translations}</Text>
-          <Text style={styles.source}>{Reference}</Text>
+    <ScrollView
+      contentContainerStyle={styles.rootView}
+      style={styles.backgroundScrollView}
+    >
+      <Text style={styles.title}>{pageTitle}</Text>
+      {duas.map(item => (
+        <View style={styles.section}>
+          <Text style={styles.dua}>{item.arabic}</Text>
+          <Text style={styles.spelling}>
+            <Text style={styles.preSpell}>উচ্চারণ:</Text>
+            {item.transliteration}
+          </Text>
+          <View style={styles.secondContainer}>
+            <Text style={styles.meaning}>
+              <Text style={styles.preSpell}>অর্থ:</Text>
+              {item.translations}
+            </Text>
+            {item.bottom.length < 1 ? null : (
+              <Text style={styles.meaning}>
+                <Text style={styles.preSpell}>ফাজায়েল:</Text>
+                {item.bottom}
+              </Text>
+            )}
+            {item.bottom.length < 1 ? null : (
+              <Text style={styles.source}>
+                <Text style={styles.preSpell}>উৎস:</Text>
+                {item.Reference}
+              </Text>
+            )}
+          </View>
         </View>
-      </ScrollView>
-    </View>
+      ))}
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   rootView: {
     backgroundColor: "honeydew",
-    height: hp("100%"),
-    paddingTop: hp("5%"),
-    alignItems: "center",
+    paddingTop: hp("3%"),
+    paddingBottom: hp("5%"),
     paddingHorizontal: wp("3%")
   },
-  secondContainer: { width: wp("90%") },
+  backgroundScrollView: {
+    backgroundColor: "honeydew"
+  },
+  secondContainer: {
+    width: wp("90%")
+  },
   title: {
     fontSize: 22,
     fontWeight: "bold",
@@ -56,7 +76,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   dua: {
-    marginTop: hp("3%"),
+    marginTop: hp("2%"),
     fontSize: 32,
     fontWeight: "300",
     textAlign: "right",
@@ -78,7 +98,7 @@ const styles = StyleSheet.create({
     color: "darkolivegreen"
   },
   source: {
-    marginTop: hp("3%"),
+    marginTop: hp("2%"),
     fontSize: 16,
     fontWeight: "200",
     fontFamily: "Menlo",
@@ -90,5 +110,13 @@ const styles = StyleSheet.create({
     bottom: hp("3.5%"),
     width: wp("27%"),
     height: hp("20%")
+  },
+  preSpell: {
+    fontSize: 16,
+    fontWeight: "bold",
+    fontFamily: "Menlo",
+    color: "darkgreen",
+    textDecorationLine: "underline",
+    marginRight: wp("10%")
   }
 })

@@ -51,19 +51,8 @@ function DuaStack() {
         }
       })}
     >
-      <Stack.Screen name="All Dua" component={DuaScreen} />
-      <Stack.Screen
-        name="Dua"
-        component={DuaDetailScreen}
-        options={({ route }) => ({
-          title:
-            route.params.title != null
-              ? route.params.title.length > 10
-                ? `${route.params.title.slice(0, 12)}...`
-                : route.params.title
-              : ""
-        })}
-      />
+      <Stack.Screen name="AllDua" component={DuaScreen} />
+      <Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
     </Stack.Navigator>
   )
 }
@@ -90,7 +79,7 @@ function LoggedInStack() {
             case "Deeds":
               iconName = "list"
               break
-            case "Dua":
+            case "DuaHome":
               iconName = "book"
               break
             case "Janaza":
@@ -125,7 +114,7 @@ function LoggedInStack() {
       }}
     >
       <Tab.Screen name="Deeds" component={DeedStack} />
-      <Tab.Screen name="Dua" component={DuaStack} />
+      <Tab.Screen name="DuaHome" component={DuaStack} />
       <Tab.Screen name="Janaza" component={JanazaScreen} />
     </Tab.Navigator>
   )
@@ -137,3 +126,12 @@ export default function Navigator({ navigation }) {
 
   return isLoading ? Splash() : LoggedInStack()
 }
+
+// options={({ route }) => ({
+//   title:
+//     route.params.pageTitle != null
+//       ? route.params.pageTitle.length > 10
+//         ? `${route.params.pageTitle.slice(0, 12)}...`
+//         : route.params.title
+//       : ""
+// })}
