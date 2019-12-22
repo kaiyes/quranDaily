@@ -14,32 +14,31 @@ import {
 
 //utility
 import Duas from "../utility/duas"
-import "../assets/fonts/me_quran.ttf"
 
 export default function AllDua({ route, navigation }) {
   return (
     <View style={styles.rootView}>
       <FlatList
-        data={Duas}
-        keyExtractor={item => item.duas[0]._id}
+        data={DUA}
+        tabLabel="All Duas"
+        keyExtractor={item => item.key}
+        contentContainerStyle={styles.flatList}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.item}
-            onPress={() => {
-              navigation.navigate("Dua", {
+            onPress={function goToDetail() {
+              navigation.navigate("DuaDetail", {
                 pageTitle: item.pageTitle,
                 duas: item.duas
               })
             }}
           >
             <View style={styles.circle}>
-              <Text style={styles.number}>{item.duas[0]._id}</Text>
+              <Text style={styles.number}>{item.id}</Text>
             </View>
             <Text style={styles.title}>{item.pageTitle}</Text>
           </TouchableOpacity>
         )}
-        keyExtractor={item => item.id}
-        contentContainerStyle={styles.flatList}
       />
     </View>
   )
