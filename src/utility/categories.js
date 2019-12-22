@@ -11,66 +11,70 @@ let items = [
   {
     name: "কুরআনের দোয়া",
     color: "darkslateblue",
-    detail: "quran"
+    category: "quran"
   },
   {
     name: "সকাল-সন্ধ্যায়",
     color: "indianred",
-    detail: "morning"
+    category: "morning"
   },
   {
     name: "যাত্রা পথে",
     color: "darkslateblue",
-    detail: "travelling"
+    category: "travelling"
   },
   {
     name: "সালাতের দোয়া",
     color: "indianred",
-    detail: "salah"
+    category: "salah"
   },
-  { name: "তাওবা", color: "darkslateblue", detail: "তাওবা" },
+  { name: "তাওবা", color: "darkslateblue", category: "তাওবা" },
   {
     name: "ইস্তেখারার দোয়া ",
     color: "indianred",
-    detail: "istekhara"
+    category: "istekhara"
   },
   {
     name: "অসুস্থতার দোয়া ",
     color: "darkslateblue",
-    detail: "quran"
+    category: "quran"
   },
   {
     name: "শিশুদের নিরাপত্তা",
     color: "indianred",
-    detail: "morning"
+    category: "morning"
   },
   {
     name: "রুকিয়ার দোয়া",
     color: "darkslateblue",
-    detail: "ruqiah"
+    category: "ruqiah"
   },
   {
     name: "বিয়ে সঙ্ক্রান্ত",
     color: "indianred",
-    detail: "marriage"
+    category: "marriage"
   },
-  { name: "আর্থিক", color: "darkslateblue", detail: "money" },
-  { name: "জানাযা", color: "indianred", detail: "janaza" },
+  { name: "আর্থিক", color: "darkslateblue", category: "money" },
+  { name: "জানাযা", color: "indianred", category: "janaza" },
   {
     name: "অতিথির জন্যে",
     color: "darkslateblue",
-    detail: "mehman"
+    category: "mehman"
   },
   {
     name: "রামাদানের দোয়া",
     color: "indianred",
-    detail: "ramadan"
+    category: "ramadan"
   },
-  { name: "হজ্বের দোয়া", color: "darkslateblue", detail: "hajj" },
-  { name: "ঘুমের দোয়া", color: "indianred", detail: "sleeping" },
-  { name: "অনুভূতির দোয়া", color: "darkslateblue", detail: "feelings" },
-  { name: "দুর্দশাগ্রস্ত ও বিপদের দোয়া", color: "indianred", detail: "danger" },
-  { name: "শত্রুর সামনে দোয়া", color: "darkslateblue", detail: "enemy" }
+  { name: "হজ্বের দোয়া", color: "darkslateblue", category: "hajj" },
+  { name: "ঘুমের দোয়া", color: "indianred", category: "sleeping" },
+  { name: "অনুভূতির দোয়া", color: "darkslateblue", category: "feelings" },
+  {
+    name: "দুর্দশাগ্রস্ত ও বিপদের দোয়া",
+    color: "indianred",
+    category: "danger"
+  },
+  { name: "শত্রুর সামনে দোয়া", color: "darkslateblue", category: "enemy" }
 ]
 
 items.map(item => {

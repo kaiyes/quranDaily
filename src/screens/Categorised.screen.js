@@ -5,7 +5,8 @@ import {
   Text,
   FlatList,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  SafeAreaView
 } from "react-native"
 import {
   widthPercentageToDP as wp,
@@ -13,60 +14,71 @@ import {
 } from "react-native-responsive-screen"
 
 //utility
-import "../assets/fonts/me_quran.ttf"
+import Duas from "../utility/duas"
 
 export default function Categorised({ route, navigation }) {
-  return <Text style={styles.title}>asdad</Text>
+  const { pageTitle, category } = route.params
+
+  return (
+    <FlatList
+      data={Duas.filter(item => item.category == category)}
+      keyExtractor={item => item.key}
+      contentContainerStyle={styles.flatList}
+      style={styles.backgroundScrollView}
+      renderItem={({ item }) => (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={function goToDetail() {
+            navigation.navigate("DuaDetail", {
+              pageTitle: item.pageTitle,
+              duas: item.duas
+            })
+          }}
+        >
+          <View style={styles.circle}>
+            <Text style={styles.number}>{item.id}</Text>
+          </View>
+          <Text style={styles.title}>{item.pageTitle}</Text>
+        </TouchableOpacity>
+      )}
+    />
+  )
 }
 
 const styles = StyleSheet.create({
-  rootView: {
-    backgroundColor: "honeydew",
-    height: hp("100%"),
-    paddingTop: hp("5%"),
-    paddingHorizontal: wp("3%")
+  backgroundScrollView: {
+    backgroundColor: "honeydew"
   },
-  secondContainer: { width: wp("90%") },
-  title: {
-    fontSize: 22,
-    fontWeight: "bold",
+  flatList: {
+    backgroundColor: "honeydew"
+  },
+  item: {
+    width: wp("95%"),
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    padding: 12
+  },
+  circle: {
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    backgroundColor: "lightgreen",
+    marginRight: 10,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  number: {
+    fontWeight: "500",
+    fontSize: hp("2%"),
     color: "darkolivegreen",
-    textAlign: "center"
+    fontFamily: "Menlo"
   },
-  dua: {
-    marginTop: hp("3%"),
-    fontSize: 32,
-    fontWeight: "300",
-    textAlign: "right",
-    fontFamily: "me_quran",
-    color: "darkolivegreen"
-  },
-  spelling: {
-    marginTop: hp("3%"),
-    fontSize: 18,
+  title: {
     fontWeight: "400",
+    fontSize: hp("2.1%"),
+    color: "darkolivegreen",
     fontFamily: "Menlo",
-    color: "darkolivegreen"
-  },
-  meaning: {
-    marginTop: hp("3%"),
-    fontSize: 18,
-    fontWeight: "400",
-    fontFamily: "Menlo",
-    color: "darkolivegreen"
-  },
-  source: {
-    marginTop: hp("3%"),
-    fontSize: 16,
-    fontWeight: "200",
-    fontFamily: "Menlo",
-    color: "darkolivegreen"
-  },
-  playButton: {
-    position: "absolute",
-    right: wp("5%"),
-    bottom: hp("3.5%"),
-    width: wp("27%"),
-    height: hp("20%")
+    width: wp("80%")
   }
 })

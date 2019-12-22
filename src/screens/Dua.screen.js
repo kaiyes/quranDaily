@@ -32,7 +32,10 @@ export default function Dua({ navigation }) {
             key={item.key}
             style={[styles.itemContainer, { backgroundColor: item.color }]}
             onPress={function goToOwnScreen() {
-              navigation.navigate("Categories")
+              navigation.navigate("Categories", {
+                pageTitle: item.name,
+                category: item.category
+              })
             }}
           >
             <Text style={styles.itemName}>{item.name}</Text>

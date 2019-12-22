@@ -57,7 +57,18 @@ function DuaStack() {
     >
       <Stack.Screen name="Dua Home" component={DuaScreen} />
       <Stack.Screen name="AllDuas" component={AllDuaScreen} />
-      <Stack.Screen name="Categories" component={CategoryScreen} />
+      <Stack.Screen
+        name="Categories"
+        component={CategoryScreen}
+        options={({ route }) => ({
+          title:
+            route.params.pageTitle != null
+              ? route.params.pageTitle.length > 10
+                ? `${route.params.pageTitle.slice(0, 12)}...`
+                : route.params.pageTitle
+              : ""
+        })}
+      />
       <Stack.Screen name="Favourites" component={FavouriteScreen} />
       <Stack.Screen
         name="DuaDetail"
