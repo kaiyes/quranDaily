@@ -14,6 +14,8 @@ import SplashScreen from "./screens/Splash.screen"
 import DuaScreen from "./screens/Dua.screen"
 import JanazaScreen from "./screens/Janaza.screen"
 import AllDuaScreen from "./screens/AllDua.screen"
+import CategoryScreen from "./screens/Categorised.screen"
+import FavouriteScreen from "./screens/Favourites.screen"
 
 //components
 import IconWithBadge from "./Components/ChatIcon"
@@ -55,6 +57,8 @@ function DuaStack() {
     >
       <Stack.Screen name="Dua Home" component={DuaScreen} />
       <Stack.Screen name="AllDuas" component={AllDuaScreen} />
+      <Stack.Screen name="Categories" component={CategoryScreen} />
+      <Stack.Screen name="Favourites" component={FavouriteScreen} />
       <Stack.Screen
         name="DuaDetail"
         component={DuaDetailScreen}

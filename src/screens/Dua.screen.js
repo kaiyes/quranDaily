@@ -32,7 +32,7 @@ export default function Dua({ navigation }) {
             key={item.key}
             style={[styles.itemContainer, { backgroundColor: item.color }]}
             onPress={function goToOwnScreen() {
-              navigation.navigate("Dua")
+              navigation.navigate("Categories")
             }}
           >
             <Text style={styles.itemName}>{item.name}</Text>
@@ -42,15 +42,22 @@ export default function Dua({ navigation }) {
 
       <Text style={styles.title}> All Duas </Text>
       <TouchableOpacity
-        style={styles.duaHolder}
+        style={[styles.duaHolder, { backgroundColor: "steelblue" }]}
         onPress={function goToOwnScreen() {
           navigation.navigate("AllDuas")
         }}
       >
         <Text style={styles.itemName}>দুয়া সমগ্র</Text>
       </TouchableOpacity>
+      <View style={styles.spacer} />
+
       <Text style={styles.title}> Favourites</Text>
-      <TouchableOpacity style={styles.duaHolder}>
+      <TouchableOpacity
+        style={[styles.duaHolder, { backgroundColor: "goldenrod" }]}
+        onPress={function goToOwnScreen() {
+          navigation.navigate("Favourites")
+        }}
+      >
         <Text style={styles.itemName}>favourites</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -93,11 +100,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: wp("4%"),
-    backgroundColor: "navy",
     marginLeft: wp("3%"),
     marginTop: hp("1%")
   },
   spacer: {
-    height: hp("5%")
+    height: hp("3%")
   }
 })
