@@ -66,7 +66,11 @@ let items = [
     color: "indianred",
     detail: "ramadan"
   },
-  { name: "হজ্বের দোয়া", color: "darkslateblue", detail: "hajj" }
+  { name: "হজ্বের দোয়া", color: "darkslateblue", detail: "hajj" },
+  { name: "ঘুমের দোয়া", color: "indianred", detail: "sleeping" },
+  { name: "অনুভূতির দোয়া", color: "darkslateblue", detail: "feelings" },
+  { name: "দুর্দশাগ্রস্ত ও বিপদের দোয়া", color: "indianred", detail: "danger" },
+  { name: "শত্রুর সামনে দোয়া", color: "darkslateblue", detail: "enemy" }
 ]
 
 items.map(item => {

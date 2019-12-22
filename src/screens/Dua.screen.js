@@ -67,7 +67,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     fontFamily: "Menlo",
-    fontSize: hp("2%")
+    fontSize: hp("2%"),
+    width: wp("30%"),
+    textAlign: "center"
   },
   itemContainer: {
     width: wp("35%"),
