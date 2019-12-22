@@ -17,36 +17,38 @@ import Duas from "../utility/duas"
 
 export default function AllDua({ route, navigation }) {
   return (
-    <View style={styles.rootView}>
-      <FlatList
-        data={DUA}
-        tabLabel="All Duas"
-        keyExtractor={item => item.key}
-        contentContainerStyle={styles.flatList}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.item}
-            onPress={function goToDetail() {
-              navigation.navigate("DuaDetail", {
-                pageTitle: item.pageTitle,
-                duas: item.duas
-              })
-            }}
-          >
-            <View style={styles.circle}>
-              <Text style={styles.number}>{item.id}</Text>
-            </View>
-            <Text style={styles.title}>{item.pageTitle}</Text>
-          </TouchableOpacity>
-        )}
-      />
-    </View>
+    <FlatList
+      data={Duas}
+      tabLabel="All Duas"
+      keyExtractor={item => item.key}
+      contentContainerStyle={styles.flatList}
+      style={styles.backgroundScrollView}
+      renderItem={({ item }) => (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={function goToDetail() {
+            navigation.navigate("DuaDetail", {
+              pageTitle: item.pageTitle,
+              duas: item.duas
+            })
+          }}
+        >
+          <View style={styles.circle}>
+            <Text style={styles.number}>{item.id}</Text>
+          </View>
+          <Text style={styles.title}>{item.pageTitle}</Text>
+        </TouchableOpacity>
+      )}
+    />
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "honeydew"
+  },
+  backgroundScrollView: {
     backgroundColor: "honeydew"
   },
   topContainer: {

@@ -13,6 +13,7 @@ import DuaDetailScreen from "./screens/DuaDetails.screen"
 import SplashScreen from "./screens/Splash.screen"
 import DuaScreen from "./screens/Dua.screen"
 import JanazaScreen from "./screens/Janaza.screen"
+import AllDuaScreen from "./screens/AllDua.screen"
 
 //components
 import IconWithBadge from "./Components/ChatIcon"
@@ -53,6 +54,7 @@ function DuaStack() {
       })}
     >
       <Stack.Screen name="Dua Home" component={DuaScreen} />
+      <Stack.Screen name="AllDuas" component={AllDuaScreen} />
       <Stack.Screen
         name="DuaDetail"
         component={DuaDetailScreen}

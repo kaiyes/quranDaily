@@ -26,7 +26,7 @@ export default function DuaDetail({ route, navigation }) {
     >
       <Text style={styles.title}>{pageTitle}</Text>
       {duas.map(item => (
-        <View style={styles.section}>
+        <View style={styles.section} keyExtractor={item => item.AyaID}>
           <Text style={styles.dua}>{item.arabic}</Text>
           <Text style={styles.spelling}>
             <Text style={styles.preSpell}>উচ্চারণ:</Text>
