@@ -16,7 +16,17 @@ let items = [
   {
     name: "সকাল-সন্ধ্যায়",
     color: "indianred",
-    category: "morning"
+    category: "morningEvening"
+  },
+  {
+    name: "খাওয়ার দোয়া ",
+    color: "darkslateblue",
+    category: "eating"
+  },
+  {
+    name: "বাড়ী থেকে বের হওয়ার দোয়া",
+    color: "indianred",
+    category: "home"
   },
   {
     name: "যাত্রা পথে",
@@ -26,9 +36,25 @@ let items = [
   {
     name: "সালাতের দোয়া",
     color: "indianred",
-    category: "salah"
+    category: "salat"
   },
-  { name: "তাওবা", color: "darkslateblue", category: "তাওবা" },
+  { name: "সালাত শেষে দোয়া", color: "darkslateblue", category: "salatEnd" },
+  {
+    name: "কুরবানির দোয়া",
+    color: "indianred",
+    category: "qurbani"
+  },
+  { name: "তাওবার দোয়া ", color: "darkslateblue", category: "tawba" },
+  {
+    name: "ঈমানের সুরক্ষায় দোয়া",
+    color: "indianred",
+    category: "eeman"
+  },
+  {
+    name: "উপকারীর জন্যে দোয়া",
+    color: "darkslateblue",
+    category: "beneficial"
+  },
   {
     name: "ইস্তেখারার দোয়া ",
     color: "indianred",
@@ -37,12 +63,12 @@ let items = [
   {
     name: "অসুস্থতার দোয়া ",
     color: "darkslateblue",
-    category: "quran"
+    category: "disease"
   },
   {
     name: "শিশুদের নিরাপত্তা",
     color: "indianred",
-    category: "morning"
+    category: "child"
   },
   {
     name: "রুকিয়ার দোয়া",
@@ -54,7 +80,7 @@ let items = [
     color: "indianred",
     category: "marriage"
   },
-  { name: "আর্থিক", color: "darkslateblue", category: "money" },
+  { name: "আর্থিক", color: "darkslateblue", category: "financial" },
   { name: "জানাযা", color: "indianred", category: "janaza" },
   {
     name: "অতিথির জন্যে",
@@ -74,7 +100,10 @@ let items = [
     color: "indianred",
     category: "danger"
   },
-  { name: "শত্রুর সামনে দোয়া", color: "darkslateblue", category: "enemy" }
+  { name: "শত্রুর সামনে দোয়া", color: "darkslateblue", category: "enemy" },
+  { name: "জন্ম হলে দোয়া", color: "indianred", category: "childborn" },
+  { name: "আবহাওয়ার দোয়া", color: "darkslateblue", category: "weather" },
+  { name: "মজলিসের দোয়া", color: "indianred", category: "majlis" }
 ]
 
 items.map(item => {
