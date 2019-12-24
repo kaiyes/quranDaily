@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   SafeAreaView,
   StyleSheet,
@@ -7,15 +7,30 @@ import {
   Text,
   StatusBar
 } from "react-native"
+import MapView from "react-native-maps"
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp
+} from "react-native-responsive-screen"
 
 export default function Janaza() {
+  // const [region, setRegion] = useState({
+  //   latitude: 37.78825,
+  //   longitude: -122.4324,
+  //   latitudeDelta: 0.0922,
+  //   longitudeDelta: 0.0421
+  // })
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.scrollView}>
-        <Text style={styles.sectionTitle}> janaza </Text>
-      </SafeAreaView>
-    </>
+    <MapView
+      style={{ height: hp("100%"), width: wp("100%") }}
+      initialRegion={{
+        latitude: 23.7916,
+        longitude: 90.4152,
+        latitudeDelta: 1,
+        longitudeDelta: 1
+      }}
+      showsUserLocation={true}
+    />
   )
 }
 
