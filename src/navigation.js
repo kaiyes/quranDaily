@@ -16,6 +16,7 @@ import JanazaScreen from "./screens/Janaza.screen"
 import AllDuaScreen from "./screens/AllDua.screen"
 import CategoryScreen from "./screens/Categorised.screen"
 import FavouriteScreen from "./screens/Favourites.screen"
+import CalendarScreen from "./screens/Calendar.screen"
 
 //components
 import IconWithBadge from "./Components/ChatIcon"
@@ -33,8 +34,28 @@ function Splash() {
 
 function DeedStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Deeds" component={DeedScreen} />
+    <Stack.Navigator
+      screenOptions={() => ({
+        headerStyle: {
+          backgroundColor: "seagreen"
+        },
+        headerTintColor: "white",
+        headerBackTitle: null,
+        headerTitleStyle: {
+          fontWeight: "500",
+          fontFamily: "Menlo",
+          fontSize: hp("2%")
+        }
+      })}
+    >
+      <Stack.Screen
+        name="Deeds"
+        component={DeedScreen}
+        options={({ route }) => ({
+          title: "Daily Deeds"
+        })}
+      />
+      <Stack.Screen name="Calendar" component={CalendarScreen} />
     </Stack.Navigator>
   )
 }
@@ -144,7 +165,6 @@ function LoggedInStack() {
     >
       <Tab.Screen name="Deeds" component={DeedStack} />
       <Tab.Screen name="Dua" component={DuaStack} />
-      <Tab.Screen name="Janaza" component={JanazaScreen} />
     </Tab.Navigator>
   )
 }
@@ -155,3 +175,5 @@ export default function Navigator({ navigation }) {
 
   return isLoading ? Splash() : LoggedInStack()
 }
+
+// <Tab.Screen name="Janaza" component={JanazaScreen} />
