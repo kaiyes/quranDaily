@@ -34,20 +34,7 @@ function Splash() {
 
 function DeedStack() {
   return (
-    <Stack.Navigator
-      screenOptions={() => ({
-        headerStyle: {
-          backgroundColor: "seagreen"
-        },
-        headerTintColor: "white",
-        headerBackTitle: null,
-        headerTitleStyle: {
-          fontWeight: "500",
-          fontFamily: "Menlo",
-          fontSize: hp("2%")
-        }
-      })}
-    >
+    <Stack.Navigator headerMode="none">
       <Stack.Screen
         name="Deeds"
         component={DeedScreen}
@@ -68,7 +55,7 @@ function DuaStack() {
           backgroundColor: "seagreen"
         },
         headerTintColor: "white",
-        headerBackTitle: null,
+        headerBackTitleVisible: false,
         headerTitleStyle: {
           fontWeight: "500",
           fontFamily: "Menlo",
