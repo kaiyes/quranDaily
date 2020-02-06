@@ -7,13 +7,14 @@ import {
   Text,
   StatusBar,
   FlatList,
-  TouchableOpacity
+  TouchableOpacity,
+  SectionList
 } from "react-native"
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp
 } from "react-native-responsive-screen"
-import { Icon } from "react-native-elements"
+import { Icon, CheckBox } from "react-native-elements"
 
 //utility
 
@@ -23,7 +24,57 @@ export default function Deeds({ navigation }) {
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollView}>
-          <Text style={styles.heading}>Morning Prayer</Text>
+          <View style={styles.card}>
+            <View style={styles.leftCol}>
+              <CheckBox
+                center
+                iconType="feather"
+                checkedIcon="check-circle"
+                uncheckedIcon="circle"
+                checkedColor="seagreen"
+                uncheckedColor="seagreen"
+                size={40}
+                checked={true}
+              />
+            </View>
+            <View style={styles.rightCol}>
+              <Text style={styles.taskTest}>Morning Prayer</Text>
+            </View>
+          </View>
+          <View style={styles.card}>
+            <View style={styles.leftCol}>
+              <CheckBox
+                center
+                iconType="feather"
+                checkedIcon="check-circle"
+                uncheckedIcon="circle"
+                checkedColor="seagreen"
+                uncheckedColor="seagreen"
+                size={40}
+                checked={true}
+              />
+            </View>
+            <View style={styles.rightCol}>
+              <Text style={styles.taskTest}>Morning Prayer</Text>
+            </View>
+          </View>
+          <View style={styles.card}>
+            <View style={styles.leftCol}>
+              <CheckBox
+                center
+                iconType="feather"
+                checkedIcon="check-circle"
+                uncheckedIcon="circle"
+                checkedColor="seagreen"
+                uncheckedColor="seagreen"
+                size={40}
+                checked={true}
+              />
+            </View>
+            <View style={styles.rightCol}>
+              <Text style={styles.taskTest}>Morning Prayer</Text>
+            </View>
+          </View>
         </ScrollView>
       </SafeAreaView>
     </>
@@ -33,35 +84,32 @@ export default function Deeds({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff"
+    backgroundColor: "white"
   },
   scrollView: {
-    backgroundColor: "white",
-    paddingLeft: wp("5%"),
-    paddingTop: hp("2%")
+    backgroundColor: "white"
   },
-  heading: {
-    fontWeight: "bold",
+  taskTest: {
     color: "darkslateblue",
     fontFamily: "Menlo",
-    fontSize: hp("2%")
+    fontSize: hp("2.4%")
   },
-  calenderIcon: {
-    alignItems: "flex-end",
-    marginRight: wp("5%")
+  card: {
+    flexDirection: "row",
+    height: hp("10%"),
+    borderBottomWidth: hp(".02%"),
+    borderBottomColor: "darkgrey"
+  },
+  leftCol: {
+    width: wp("30%"),
+    backgroundColor: "whitesmoke",
+    paddingLeft: wp("5%"),
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  rightCol: {
+    justifyContent: "center",
+    alignItems: "center",
+    paddingLeft: wp("5%")
   }
 })
-
-// <TouchableOpacity
-//   onPress={() => {
-//     navigation.navigate("Calendar")
-//   }}
-// >
-//   <Icon
-//     name="calendar"
-//     type="entypo"
-//     color="seagreen"
-//     containerStyle={styles.calenderIcon}
-//   />
-// </TouchableOpacity>
-//

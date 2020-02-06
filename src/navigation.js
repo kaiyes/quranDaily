@@ -34,12 +34,25 @@ function Splash() {
 
 function DeedStack() {
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator
+      screenOptions={() => ({
+        headerStyle: {
+          backgroundColor: "white"
+        },
+        headerTitleAlign: "left",
+        headerTintColor: "seagreen",
+        headerTitleStyle: {
+          fontWeight: "500",
+          fontFamily: "Menlo",
+          fontSize: hp("3.4%")
+        }
+      })}
+    >
       <Stack.Screen
         name="Deeds"
         component={DeedScreen}
         options={({ route }) => ({
-          title: "Daily Deeds"
+          title: "Deeds"
         })}
       />
       <Stack.Screen name="Calendar" component={CalendarScreen} />

@@ -41,6 +41,7 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Feather.ttf</string>
 		<string>me_quran.ttf</string>
 		<string>Entypo.ttf</string>
 	</array>
