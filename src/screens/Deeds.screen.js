@@ -24,11 +24,31 @@ export default function Deeds({ navigation }) {
   const [asr, setAsr] = useState(false)
   const [magrib, setMagrib] = useState(false)
   const [isha, setIsha] = useState(false)
+
+  const [week, setWeek] = useState([1, 2, 3, 4, 5])
+
   return (
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollView}>
+          <Text style={styles.header}>Today</Text>
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            style={styles.days}
+          >
+            <View style={styles.today}>
+              <Text style={styles.date}>Tues {"\n"} 7th Feb</Text>
+            </View>
+            {week.map(() => (
+              <View style={[styles.today, { backgroundColor: "lavender" }]}>
+                <Text style={[styles.date, { color: "dimgray" }]}>
+                  8th February
+                </Text>
+              </View>
+            ))}
+          </ScrollView>
           <Text style={styles.taskHeader}>Daily Prayer</Text>
           <View style={styles.card}>
             <View
@@ -192,6 +212,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white"
   },
+  header: {
+    fontWeight: "bold",
+    color: "seagreen",
+    fontFamily: "Menlo",
+    fontSize: hp("4%"),
+    marginLeft: wp("5%")
+  },
   scrollView: {
     backgroundColor: "white"
   },
@@ -224,5 +251,25 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "flex-start",
     flex: 1
+  },
+  days: {
+    flexDirection: "row",
+    paddingLeft: wp("5%"),
+    marginVertical: hp("2%")
+  },
+  today: {
+    width: wp("20%"),
+    height: hp("10%"),
+    borderRadius: hp("1%"),
+    backgroundColor: "slateblue",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: wp("2%")
+  },
+  date: {
+    fontWeight: "bold",
+    color: "white",
+    fontFamily: "Menlo",
+    fontSize: hp("2%")
   }
 })
