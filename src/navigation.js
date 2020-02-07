@@ -34,20 +34,7 @@ function Splash() {
 
 function DeedStack() {
   return (
-    <Stack.Navigator
-      screenOptions={() => ({
-        headerStyle: {
-          backgroundColor: "white"
-        },
-        headerTitleAlign: "left",
-        headerTintColor: "seagreen",
-        headerTitleStyle: {
-          fontWeight: "500",
-          fontFamily: "Menlo",
-          fontSize: hp("3.4%")
-        }
-      })}
-    >
+    <Stack.Navigator headerMode="none">
       <Stack.Screen
         name="Deeds"
         component={DeedScreen}
@@ -157,9 +144,9 @@ function LoggedInStack() {
           backgroundColor: "seagreen"
         },
         labelStyle: {
-          fontWeight: "bold",
+          fontWeight: "400",
           fontFamily: "Menlo",
-          fontSize: hp("1.5%")
+          fontSize: hp("2.3%")
         }
       }}
     >
@@ -177,3 +164,16 @@ export default function Navigator({ navigation }) {
 }
 
 // <Tab.Screen name="Janaza" component={JanazaScreen} />
+//options for header
+// screenOptions={() => ({
+//   headerStyle: {
+//     backgroundColor: "white"
+//   },
+//   headerTitleAlign: "middle",
+//   headerTintColor: "seagreen",
+//   headerTitleStyle: {
+//     fontWeight: "500",
+//     fontFamily: "Menlo",
+//     fontSize: hp("3.8%")
+//   }
+// })}
