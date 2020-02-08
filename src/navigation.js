@@ -34,12 +34,55 @@ function Splash() {
 
 function DeedStack() {
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator
+      screenOptions={() => ({
+        headerStyle: {
+          backgroundColor: "seagreen"
+        },
+        headerTintColor: "white",
+        headerBackTitleVisible: false
+      })}
+    >
       <Stack.Screen
         name="Deeds"
         component={DeedScreen}
         options={({ route }) => ({
-          title: "Deeds"
+          title: "Deeds",
+          headerTitleAlign: "middle",
+          headerTitleStyle: {
+            fontWeight: "500",
+            fontFamily: "Menlo",
+            fontSize: hp("3.8%")
+          }
+        })}
+      />
+      <Stack.Screen
+        name="DeedDetail"
+        component={CategoryScreen}
+        options={({ route }) => ({
+          title:
+            route.params.pageTitle != null
+              ? route.params.pageTitle.length > 10
+                ? `${route.params.pageTitle.slice(0, 12)}...`
+                : route.params.pageTitle
+              : "",
+          headerTitleStyle: {
+            fontWeight: "500",
+            fontFamily: "Menlo",
+            fontSize: hp("2%")
+          }
+        })}
+      />
+      <Stack.Screen
+        name="DuaDetail"
+        component={DuaDetailScreen}
+        options={({ route }) => ({
+          title:
+            route.params.pageTitle != null
+              ? route.params.pageTitle.length > 10
+                ? `${route.params.pageTitle.slice(0, 12)}...`
+                : route.params.pageTitle
+              : ""
         })}
       />
       <Stack.Screen name="Calendar" component={CalendarScreen} />
@@ -165,15 +208,3 @@ export default function Navigator({ navigation }) {
 
 // <Tab.Screen name="Janaza" component={JanazaScreen} />
 //options for header
-// screenOptions={() => ({
-//   headerStyle: {
-//     backgroundColor: "white"
-//   },
-//   headerTitleAlign: "middle",
-//   headerTintColor: "seagreen",
-//   headerTitleStyle: {
-//     fontWeight: "500",
-//     fontFamily: "Menlo",
-//     fontSize: hp("3.8%")
-//   }
-// })}

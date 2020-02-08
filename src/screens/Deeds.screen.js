@@ -32,7 +32,6 @@ export default function Deeds({ navigation }) {
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollView}>
-          <Text style={styles.header}>Today</Text>
           <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
@@ -49,7 +48,7 @@ export default function Deeds({ navigation }) {
               </View>
             ))}
           </ScrollView>
-          <Text style={styles.taskHeader}>Daily Prayer</Text>
+          <Text style={styles.taskHeader}>Daily Tasks</Text>
           <View style={styles.card}>
             <View
               style={[
@@ -200,7 +199,75 @@ export default function Deeds({ navigation }) {
               <Text style={styles.taskText}>Isha</Text>
             </View>
           </View>
-          <Text style={styles.taskHeader}>Morning Dua</Text>
+          <View style={styles.card}>
+            <View
+              style={[
+                styles.leftCol,
+                { backgroundColor: isha ? "honeydew" : "white" }
+              ]}
+            >
+              <CheckBox
+                center
+                iconType="feather"
+                checkedIcon="check-circle"
+                uncheckedIcon="circle"
+                checkedColor="seagreen"
+                uncheckedColor="crimson"
+                size={30}
+                checked={isha}
+                onPress={() => {
+                  setIsha(!isha)
+                }}
+              />
+            </View>
+            <View
+              style={[
+                styles.rightCol,
+                { backgroundColor: isha ? "honeydew" : "white" }
+              ]}
+            >
+              <Text style={styles.taskText}>Tahajjud</Text>
+            </View>
+          </View>
+          <View style={styles.card}>
+            <View
+              style={[
+                styles.leftCol,
+                { backgroundColor: isha ? "honeydew" : "white" }
+              ]}
+            >
+              <CheckBox
+                center
+                iconType="feather"
+                checkedIcon="check-circle"
+                uncheckedIcon="circle"
+                checkedColor="seagreen"
+                uncheckedColor="crimson"
+                size={30}
+                checked={isha}
+                onPress={() => {
+                  setIsha(!isha)
+                }}
+              />
+            </View>
+            <View
+              style={[
+                styles.rightCol,
+                { backgroundColor: isha ? "honeydew" : "white" }
+              ]}
+            >
+              <TouchableOpacity
+                onPress={function goToOwnScreen() {
+                  navigation.navigate("DeedDetail", {
+                    pageTitle: "সকাল-সন্ধ্যায়",
+                    category: "morningEvening"
+                  })
+                }}
+              >
+                <Text style={styles.taskText}>Dua for morning</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </ScrollView>
       </SafeAreaView>
     </>
