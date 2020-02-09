@@ -15,6 +15,7 @@ import {
   heightPercentageToDP as hp
 } from "react-native-responsive-screen"
 import { Icon, CheckBox } from "react-native-elements"
+import { format, formatDistance, formatRelative, subDays } from "date-fns"
 
 //utility
 
@@ -24,8 +25,18 @@ export default function Deeds({ navigation }) {
   const [asr, setAsr] = useState(false)
   const [magrib, setMagrib] = useState(false)
   const [isha, setIsha] = useState(false)
+  const [morning, setMorning] = useState(false)
+  const [quran, setQuran] = useState(false)
 
-  const [week, setWeek] = useState([1, 2, 3, 4, 5])
+  const [week, setWeek] = useState([
+    "Friday",
+    "Saturday",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "ThursDay"
+  ])
 
   return (
     <>
@@ -37,14 +48,15 @@ export default function Deeds({ navigation }) {
             showsHorizontalScrollIndicator={false}
             style={styles.days}
           >
-            <View style={styles.today}>
-              <Text style={styles.date}>Tues {"\n"} 7th Feb</Text>
-            </View>
-            {week.map(() => (
-              <View style={[styles.today, { backgroundColor: "lavender" }]}>
-                <Text style={[styles.date, { color: "dimgray" }]}>
-                  8th February
-                </Text>
+            {week.map(item => (
+              <View
+                style={
+                  format(new Date(), "iiii") === "item"
+                    ? styles.today
+                    : [styles.today, { backgroundColor: "lavender" }]
+                }
+              >
+                <Text style={[styles.date, { color: "dimgray" }]}>{item}</Text>
               </View>
             ))}
           </ScrollView>
@@ -233,6 +245,45 @@ export default function Deeds({ navigation }) {
             <View
               style={[
                 styles.leftCol,
+                { backgroundColor: morning ? "honeydew" : "white" }
+              ]}
+            >
+              <CheckBox
+                center
+                iconType="feather"
+                checkedIcon="check-circle"
+                uncheckedIcon="circle"
+                checkedColor="seagreen"
+                uncheckedColor="crimson"
+                size={30}
+                checked={morning}
+                onPress={() => {
+                  setMorning(!morning)
+                }}
+              />
+            </View>
+            <View
+              style={[
+                styles.rightCol,
+                { backgroundColor: morning ? "honeydew" : "white" }
+              ]}
+            >
+              <TouchableOpacity
+                onPress={function goToOwnScreen() {
+                  navigation.navigate("DeedDetail", {
+                    pageTitle: "সকাল-সন্ধ্যায়",
+                    category: "morningEvening"
+                  })
+                }}
+              >
+                <Text style={styles.taskText}>Dua for morning</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.card}>
+            <View
+              style={[
+                styles.leftCol,
                 { backgroundColor: isha ? "honeydew" : "white" }
               ]}
             >
@@ -264,8 +315,38 @@ export default function Deeds({ navigation }) {
                   })
                 }}
               >
-                <Text style={styles.taskText}>Dua for morning</Text>
+                <Text style={styles.taskText}>Dua for Evening</Text>
               </TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.card}>
+            <View
+              style={[
+                styles.leftCol,
+                { backgroundColor: quran ? "honeydew" : "white" }
+              ]}
+            >
+              <CheckBox
+                center
+                iconType="feather"
+                checkedIcon="check-circle"
+                uncheckedIcon="circle"
+                checkedColor="seagreen"
+                uncheckedColor="crimson"
+                size={30}
+                checked={quran}
+                onPress={() => {
+                  setQuran(!quran)
+                }}
+              />
+            </View>
+            <View
+              style={[
+                styles.rightCol,
+                { backgroundColor: quran ? "honeydew" : "white" }
+              ]}
+            >
+              <Text style={styles.taskText}>100 ayas of Quran</Text>
             </View>
           </View>
         </ScrollView>

@@ -17,6 +17,7 @@ import AllDuaScreen from "./screens/AllDua.screen"
 import CategoryScreen from "./screens/Categorised.screen"
 import FavouriteScreen from "./screens/Favourites.screen"
 import CalendarScreen from "./screens/Calendar.screen"
+import DeedsHomeScreen from "./screens/DeedsHome.screen"
 
 //components
 import IconWithBadge from "./Components/ChatIcon"
@@ -34,15 +35,12 @@ function Splash() {
 
 function DeedStack() {
   return (
-    <Stack.Navigator
-      screenOptions={() => ({
-        headerStyle: {
-          backgroundColor: "seagreen"
-        },
-        headerTintColor: "white",
-        headerBackTitleVisible: false
-      })}
-    >
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen
+        name="DeedsHome"
+        component={DeedsHomeScreen}
+        headerMode="none"
+      />
       <Stack.Screen
         name="Deeds"
         component={DeedScreen}
