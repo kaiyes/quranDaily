@@ -34,7 +34,7 @@ export default function Deeds({ navigation }) {
             })
           }}
         >
-          <Icon reverse name="book" type="feather" color="lightseagreen" />
+          <Icon reverse name="moon" type="feather" color="lightseagreen" />
           <Text style={styles.cardHeader}>Fard Salah</Text>
           <View style={styles.dotHolder}>
             <View style={[styles.dot, { backgroundColor: "tomato" }]} />
@@ -68,7 +68,7 @@ export default function Deeds({ navigation }) {
             })
           }}
         >
-          <Icon reverse name="book" type="feather" color="lightseagreen" />
+          <Icon reverse name="moon" type="feather" color="lightseagreen" />
           <Text style={styles.cardHeader}>Sunnah Salah</Text>
           <View style={styles.dotHolder}>
             <View style={[styles.dot, { backgroundColor: "tomato" }]} />
@@ -83,7 +83,7 @@ export default function Deeds({ navigation }) {
             })
           }}
         >
-          <Icon reverse name="book" type="feather" color="lightseagreen" />
+          <Icon reverse name="moon" type="feather" color="lightseagreen" />
           <Text style={styles.cardHeader}>Tahajjud</Text>
           <View style={styles.dotHolder}>
             <View style={[styles.dot, { backgroundColor: "tomato" }]} />
@@ -91,13 +91,37 @@ export default function Deeds({ navigation }) {
         </TouchableOpacity>
         <View style={styles.spacerH} />
       </View>
+      <View style={styles.row}>
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => {
+            navigation.navigate("Deeds", {
+              topic: "sadaka"
+            })
+          }}
+        >
+          <Icon
+            reverse
+            name="dollar-sign"
+            type="feather"
+            color="lightseagreen"
+          />
+          <Text style={styles.cardHeader}>Sadakah</Text>
+          <View style={styles.dotHolder}>
+            <View style={[styles.dot, { backgroundColor: "tomato" }]} />
+          </View>
+        </TouchableOpacity>
+        <View style={styles.spacerH} />
+        <TouchableOpacity style={styles.plusIcon}>
+          <Icon reverse name="plus" type="feather" color="seagreen" />
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   scrollView: {
-    flex: 1,
     paddingHorizontal: wp("5%"),
     paddingTop: hp("5%")
   },
@@ -116,7 +140,8 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     width: wp("100%"),
-    marginTop: hp("3%")
+    marginTop: hp("3%"),
+    alignItems: "center"
   },
   card: {
     backgroundColor: "white",
@@ -145,5 +170,10 @@ const styles = StyleSheet.create({
     height: hp("2%"),
     borderRadius: hp("1%"),
     marginHorizontal: wp(".5%")
+  },
+  plusIcon: {
+    width: wp("45%"),
+    justifyContent: "center",
+    alignItems: "center"
   }
 })

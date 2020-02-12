@@ -42,7 +42,6 @@ export default function Deeds({ route, navigation }) {
 
   return (
     <>
-      <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.container}>
         <View style={styles.backNav}>
           <TouchableOpacity
@@ -71,9 +70,9 @@ export default function Deeds({ route, navigation }) {
               </View>
             ))}
           </ScrollView>
-          <Text style={styles.taskHeader}>Daily Tasks</Text>
           {topic === "prayer" ? (
             <>
+              <Text style={styles.taskHeader}>Fard Salah</Text>
               <View style={styles.card}>
                 <View
                   style={[
@@ -227,6 +226,7 @@ export default function Deeds({ route, navigation }) {
             </>
           ) : topic === "quran" ? (
             <>
+              <Text style={styles.taskHeader}>Daily Quran study</Text>
               <View style={styles.card}>
                 <View
                   style={[
@@ -284,12 +284,13 @@ export default function Deeds({ route, navigation }) {
                     { backgroundColor: quran ? "honeydew" : "white" }
                   ]}
                 >
-                  <Text style={styles.taskText}>1 Manjil </Text>
+                  <Text style={styles.taskText}>1/7 Manjil </Text>
                 </View>
               </View>
             </>
           ) : topic === "sunnahSalah" ? (
             <>
+              <Text style={styles.taskHeader}>Sunnah Salah</Text>
               <View style={styles.card}>
                 <View
                   style={[
@@ -506,6 +507,8 @@ export default function Deeds({ route, navigation }) {
             <>
               <Text style={styles.taskHeader}>Tahajjud Alarm</Text>
             </>
+          ) : topic === "sadaka" ? (
+            <Text style={styles.taskHeader}> Daily Sadaka </Text>
           ) : null}
         </ScrollView>
       </SafeAreaView>
@@ -582,6 +585,7 @@ const styles = StyleSheet.create({
     width: wp("100%"),
     height: hp("5%"),
     alignItems: "flex-start",
+    justifyContent: "center",
     paddingLeft: wp("1.5%"),
     borderBottomWidth: hp(".2%"),
     borderBottomColor: "whitesmoke"
