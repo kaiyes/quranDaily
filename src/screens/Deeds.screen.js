@@ -44,6 +44,15 @@ export default function Deeds({ route, navigation }) {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.container}>
+        <View style={styles.backNav}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.goBack()
+            }}
+          >
+            <Icon name="arrow-bold-left" type="entypo" color="dimgray" />
+          </TouchableOpacity>
+        </View>
         <ScrollView contentContainerStyle={styles.scrollView}>
           <ScrollView
             horizontal={true}
@@ -215,36 +224,6 @@ export default function Deeds({ route, navigation }) {
                   <Text style={styles.taskText}>Isha</Text>
                 </View>
               </View>
-              <View style={styles.card}>
-                <View
-                  style={[
-                    styles.leftCol,
-                    { backgroundColor: isha ? "honeydew" : "white" }
-                  ]}
-                >
-                  <CheckBox
-                    center
-                    iconType="feather"
-                    checkedIcon="check-circle"
-                    uncheckedIcon="circle"
-                    checkedColor="seagreen"
-                    uncheckedColor="crimson"
-                    size={30}
-                    checked={isha}
-                    onPress={() => {
-                      setIsha(!isha)
-                    }}
-                  />
-                </View>
-                <View
-                  style={[
-                    styles.rightCol,
-                    { backgroundColor: isha ? "honeydew" : "white" }
-                  ]}
-                >
-                  <Text style={styles.taskText}>Tahajjud</Text>
-                </View>
-              </View>
             </>
           ) : topic === "quran" ? (
             <>
@@ -278,9 +257,6 @@ export default function Deeds({ route, navigation }) {
                   <Text style={styles.taskText}>100 ayas of Quran</Text>
                 </View>
               </View>
-            </>
-          ) : (
-            <>
               <View style={styles.card}>
                 <View
                   style={[
@@ -308,9 +284,226 @@ export default function Deeds({ route, navigation }) {
                     { backgroundColor: quran ? "honeydew" : "white" }
                   ]}
                 >
-                  <Text style={styles.taskText}>100 ayas of Quran</Text>
+                  <Text style={styles.taskText}>1 Manjil </Text>
                 </View>
               </View>
+            </>
+          ) : topic === "sunnahSalah" ? (
+            <>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Fajr 2 rakat</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Duha Salah</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Dhuhr 4 rakat</Text>
+                </View>
+              </View>
+
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Dhuhr 2 Rakat </Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Magrib 2 rakat</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Isha 2 rakat</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Witr</Text>
+                </View>
+              </View>
+            </>
+          ) : (
+            <>
               <View style={styles.card}>
                 <View
                   style={[
@@ -461,5 +654,13 @@ const styles = StyleSheet.create({
     color: "white",
     fontFamily: "Menlo",
     fontSize: hp("2%")
+  },
+  backNav: {
+    width: wp("100%"),
+    height: hp("5%"),
+    alignItems: "flex-start",
+    paddingLeft: wp("1.5%"),
+    borderBottomWidth: hp(".2%"),
+    borderBottomColor: "whitesmoke"
   }
 })

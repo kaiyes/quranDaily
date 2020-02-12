@@ -35,10 +35,9 @@ export default function Deeds({ navigation }) {
           }}
         >
           <Icon reverse name="book" type="feather" color="lightseagreen" />
-          <Text style={styles.cardHeader}>Prayer</Text>
+          <Text style={styles.cardHeader}>Fard Salah</Text>
           <View style={styles.dotHolder}>
             <View style={[styles.dot, { backgroundColor: "tomato" }]} />
-            <View style={[styles.dot, { backgroundColor: "seagreen" }]} />
             <View style={[styles.dot, { backgroundColor: "goldenrod" }]} />
           </View>
         </TouchableOpacity>
@@ -61,9 +60,35 @@ export default function Deeds({ navigation }) {
         </TouchableOpacity>
       </View>
       <View style={styles.row}>
-        <View style={styles.card} />
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => {
+            navigation.navigate("Deeds", {
+              topic: "sunnahSalah"
+            })
+          }}
+        >
+          <Icon reverse name="book" type="feather" color="lightseagreen" />
+          <Text style={styles.cardHeader}>Sunnah Salah</Text>
+          <View style={styles.dotHolder}>
+            <View style={[styles.dot, { backgroundColor: "tomato" }]} />
+          </View>
+        </TouchableOpacity>
         <View style={styles.spacerH} />
-        <View style={styles.card} />
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => {
+            navigation.navigate("Deeds", {
+              topic: "sunnahSalah"
+            })
+          }}
+        >
+          <Icon reverse name="book" type="feather" color="lightseagreen" />
+          <Text style={styles.cardHeader}>Sunnah Salah</Text>
+          <View style={styles.dotHolder}>
+            <View style={[styles.dot, { backgroundColor: "tomato" }]} />
+          </View>
+        </TouchableOpacity>
         <View style={styles.spacerH} />
       </View>
     </ScrollView>
