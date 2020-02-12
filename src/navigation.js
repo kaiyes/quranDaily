@@ -36,24 +36,8 @@ function Splash() {
 function DeedStack() {
   return (
     <Stack.Navigator headerMode="none">
-      <Stack.Screen
-        name="DeedsHome"
-        component={DeedsHomeScreen}
-        headerMode="none"
-      />
-      <Stack.Screen
-        name="Deeds"
-        component={DeedScreen}
-        options={({ route }) => ({
-          title: "Deeds",
-          headerTitleAlign: "middle",
-          headerTitleStyle: {
-            fontWeight: "500",
-            fontFamily: "Menlo",
-            fontSize: hp("3.8%")
-          }
-        })}
-      />
+      <Stack.Screen name="DeedsHome" component={DeedsHomeScreen} />
+      <Stack.Screen name="Deeds" component={DeedScreen} />
       <Stack.Screen
         name="DeedDetail"
         component={CategoryScreen}

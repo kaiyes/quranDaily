@@ -22,27 +22,44 @@ import { Calendar, CalendarList, Agenda } from "react-native-calendars"
 
 export default function Deeds({ navigation }) {
   return (
-    <>
-      <StatusBar barStyle="light-content" />
-      <SafeAreaView style={styles.container}>
-        <ScrollView contentContainerStyle={styles.scrollView}>
-          <Text style={styles.header}>WelCome, Kaiyes</Text>
-          <Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <ScrollView contentContainerStyle={styles.scrollView}>
+      <Text style={styles.header}>WelCome, Kaiyes</Text>
+      <Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
+      <View style={styles.row}>
+        <View style={styles.card} />
+        <View style={styles.spacerH} />
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => {
+            navigation.navigate("DeedDetail", {
+              pageTitle: "Quran"
+            })
+          }}
+        >
+          <Icon reverse name="book" type="feather" color="lightseagreen" />
+          <Text style={styles.cardHeader}>Quran</Text>
+          <View style={styles.dotHolder}>
+            <View style={[styles.dot, { backgroundColor: "tomato" }]} />
+            <View style={[styles.dot, { backgroundColor: "seagreen" }]} />
+            <View style={[styles.dot, { backgroundColor: "goldenrod" }]} />
+          </View>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.row}>
+        <View style={styles.card} />
+        <View style={styles.spacerH} />
+        <View style={styles.card} />
+        <View style={styles.spacerH} />
+      </View>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white"
-  },
   scrollView: {
-    backgroundColor: "white",
-    paddingLeft: wp("5%"),
-    paddingTop: hp("2%")
+    flex: 1,
+    paddingHorizontal: wp("5%"),
+    paddingTop: hp("5%")
   },
   header: {
     fontWeight: "400",
@@ -55,5 +72,38 @@ const styles = StyleSheet.create({
     color: "gray",
     fontFamily: "Menlo",
     fontSize: hp("2.5%")
+  },
+  row: {
+    flexDirection: "row",
+    width: wp("100%"),
+    marginTop: hp("3%")
+  },
+  card: {
+    backgroundColor: "white",
+    width: wp("42.5%"),
+    height: hp("25%"),
+    borderRadius: wp("2%"),
+    alignItems: "center",
+    paddingTop: hp("2%")
+  },
+  spacerH: {
+    width: wp("5%")
+  },
+  cardHeader: {
+    fontWeight: "400",
+    color: "dimgray",
+    fontFamily: "Menlo",
+    fontSize: hp("2.5%"),
+    marginTop: hp("4%")
+  },
+  dotHolder: {
+    flexDirection: "row",
+    marginTop: hp("1%")
+  },
+  dot: {
+    width: hp("2%"),
+    height: hp("2%"),
+    borderRadius: hp("1%"),
+    marginHorizontal: wp(".5%")
   }
 })
