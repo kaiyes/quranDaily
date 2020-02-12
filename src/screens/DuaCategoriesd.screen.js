@@ -29,6 +29,13 @@ export default function Categorised({ route, navigation }) {
         >
           <Icon name="arrow-bold-left" type="entypo" color="dimgray" />
         </TouchableOpacity>
+        <Text style={styles.navHeader}>
+          {pageTitle != null
+            ? pageTitle.length > 15
+              ? `${pageTitle.slice(0, 15)}...`
+              : pageTitle
+            : ""}
+        </Text>
       </View>
       <FlatList
         data={Duas.filter(item => item.category == category)}
@@ -39,7 +46,7 @@ export default function Categorised({ route, navigation }) {
           <TouchableOpacity
             style={styles.item}
             onPress={function goToDetail() {
-              navigation.navigate("Duas", {
+              navigation.navigate("DuaDetail", {
                 pageTitle: item.pageTitle,
                 duas: item.duas
               })
@@ -93,6 +100,9 @@ const styles = StyleSheet.create({
     width: wp("80%")
   },
   backNav: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
     width: wp("100%"),
     height: hp("10%"),
     alignItems: "flex-start",
@@ -101,5 +111,12 @@ const styles = StyleSheet.create({
     backgroundColor: "honeydew",
     borderBottomWidth: hp(".2%"),
     borderBottomColor: "whitesmoke"
+  },
+  navHeader: {
+    fontWeight: "bold",
+    fontSize: hp("3%"),
+    color: "darkolivegreen",
+    fontFamily: "Menlo",
+    marginLeft: wp("22%")
   }
 })

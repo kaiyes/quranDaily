@@ -68,11 +68,11 @@ const styles = StyleSheet.create({
   rootView: {
     backgroundColor: "honeydew",
     paddingTop: hp("3%"),
-    paddingBottom: hp("5%"),
-    paddingHorizontal: wp("3%")
+    paddingBottom: hp("5%")
   },
   backgroundScrollView: {
-    backgroundColor: "honeydew"
+    backgroundColor: "honeydew",
+    paddingHorizontal: wp("5%")
   },
   secondContainer: {
     width: wp("90%")
@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "center",
     paddingLeft: wp("1.5%"),
+    marginBottom: hp("2%"),
     borderBottomWidth: hp(".2%"),
     borderBottomColor: "whitesmoke"
   }

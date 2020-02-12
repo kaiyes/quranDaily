@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
     backgroundColor: "honeydew"
   },
   scrollView: {
-    flex: 1,
     backgroundColor: "honeydew"
   },
   title: {

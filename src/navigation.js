@@ -14,7 +14,7 @@ import SplashScreen from "./screens/Splash.screen"
 import DuaScreen from "./screens/DuaHome.screen"
 import JanazaScreen from "./screens/Janaza.screen"
 import AllDuaScreen from "./screens/AllDua.screen"
-import CategoryScreen from "./screens/Categorised.screen"
+import DuaCategoriesdScreen from "./screens/DuaCategoriesd.screen"
 import FavouriteScreen from "./screens/Favourites.screen"
 import CalendarScreen from "./screens/Calendar.screen"
 import DeedsHomeScreen from "./screens/DeedsHome.screen"
@@ -40,7 +40,7 @@ function DeedStack() {
       <Stack.Screen name="Deeds" component={DeedScreen} />
       <Stack.Screen
         name="DeedDetail"
-        component={CategoryScreen}
+        component={DuaCategoriesdScreen}
         options={({ route }) => ({
           title:
             route.params.pageTitle != null
@@ -65,31 +65,9 @@ function DuaStack() {
     <Stack.Navigator headerMode="none">
       <Stack.Screen name="Dua Home" component={DuaScreen} />
       <Stack.Screen name="AllDuas" component={AllDuaScreen} />
-      <Stack.Screen
-        name="Categories"
-        component={CategoryScreen}
-        options={({ route }) => ({
-          title:
-            route.params.pageTitle != null
-              ? route.params.pageTitle.length > 10
-                ? `${route.params.pageTitle.slice(0, 12)}...`
-                : route.params.pageTitle
-              : ""
-        })}
-      />
+      <Stack.Screen name="Categories" component={DuaCategoriesdScreen} />
       <Stack.Screen name="Favourites" component={FavouriteScreen} />
-      <Stack.Screen
-        name="DuaDetail"
-        component={DuaDetailScreen}
-        options={({ route }) => ({
-          title:
-            route.params.pageTitle != null
-              ? route.params.pageTitle.length > 10
-                ? `${route.params.pageTitle.slice(0, 12)}...`
-                : route.params.pageTitle
-              : ""
-        })}
-      />
+      <Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
     </Stack.Navigator>
   )
 }
