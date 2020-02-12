@@ -19,7 +19,7 @@ let items = [
     category: "morningEvening"
   },
   {
-    name: "খাওয়ার দোয়া ",
+    name: "খাওয়ার দোয়া",
     color: "darkslateblue",
     category: "eating"
   },

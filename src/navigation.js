@@ -38,23 +38,7 @@ function DeedStack() {
     <Stack.Navigator headerMode="none">
       <Stack.Screen name="DeedsHome" component={DeedsHomeScreen} />
       <Stack.Screen name="Deeds" component={DeedScreen} />
-      <Stack.Screen
-        name="DeedDetail"
-        component={DuaCategoriesdScreen}
-        options={({ route }) => ({
-          title:
-            route.params.pageTitle != null
-              ? route.params.pageTitle.length > 10
-                ? `${route.params.pageTitle.slice(0, 12)}...`
-                : route.params.pageTitle
-              : "",
-          headerTitleStyle: {
-            fontWeight: "500",
-            fontFamily: "Menlo",
-            fontSize: hp("2%")
-          }
-        })}
-      />
+      <Stack.Screen name="DeedDetail" component={DuaCategoriesdScreen} />
       <Stack.Screen name="Calendar" component={CalendarScreen} />
     </Stack.Navigator>
   )

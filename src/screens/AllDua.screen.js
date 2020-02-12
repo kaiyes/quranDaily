@@ -5,54 +5,65 @@ import {
   Text,
   FlatList,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  SafeAreaView
 } from "react-native"
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp
 } from "react-native-responsive-screen"
+import { Icon } from "react-native-elements"
 
 //utility
 import Duas from "../utility/duas"
 
 export default function AllDua({ route, navigation }) {
   return (
-    <FlatList
-      data={Duas}
-      tabLabel="All Duas"
-      keyExtractor={item => item.key}
-      contentContainerStyle={styles.flatList}
-      style={styles.backgroundScrollView}
-      renderItem={({ item }) => (
+    <SafeAreaView style={styles.root}>
+      <View style={styles.backNav}>
         <TouchableOpacity
-          style={styles.item}
-          onPress={function goToDetail() {
-            navigation.navigate("DuaDetail", {
-              pageTitle: item.pageTitle,
-              duas: item.duas
-            })
+          onPress={() => {
+            navigation.goBack()
           }}
         >
-          <View style={styles.circle}>
-            <Text style={styles.number}>{item.id}</Text>
-          </View>
-          <Text style={styles.title}>{item.pageTitle}</Text>
+          <Icon name="arrow-bold-left" type="entypo" color="dimgray" />
         </TouchableOpacity>
-      )}
-    />
+        <Text style={styles.navHeader}>All Duas</Text>
+      </View>
+      <FlatList
+        data={Duas}
+        tabLabel="All Duas"
+        keyExtractor={item => item.key}
+        contentContainerStyle={styles.scrollContainer}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.item}
+            onPress={function goToDetail() {
+              navigation.navigate("DuaDetail", {
+                pageTitle: item.pageTitle,
+                duas: item.duas
+              })
+            }}
+          >
+            <View style={styles.circle}>
+              <Text style={styles.number}>{item.id}</Text>
+            </View>
+            <Text style={styles.title}>{item.pageTitle}</Text>
+          </TouchableOpacity>
+        )}
+      />
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
     backgroundColor: "honeydew"
   },
-  backgroundScrollView: {
-    backgroundColor: "honeydew"
-  },
-  topContainer: {
-    marginTop: hp("60%")
+  scrollContainer: {
+    backgroundColor: "honeydew",
+    alignItems: "center"
   },
   itemName: {
     fontWeight: "500",
@@ -61,19 +72,6 @@ const styles = StyleSheet.create({
     fontSize: hp("2%"),
     color: "white",
     fontFamily: "Menlo"
-  },
-  itemContainer: {
-    width: wp("35%"),
-    height: hp("15%"),
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  duaContainer: {
-    backgroundColor: "honeydew",
-    flex: 1
-  },
-  flatList: {
-    backgroundColor: "honeydew"
   },
   item: {
     width: wp("95%"),
@@ -115,5 +113,25 @@ const styles = StyleSheet.create({
     color: "darkolivegreen",
     fontFamily: "Menlo",
     width: wp("80%")
+  },
+  backNav: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    width: wp("100%"),
+    height: hp("10%"),
+    alignItems: "flex-start",
+    paddingLeft: wp("1.5%"),
+    paddingTop: hp("4%"),
+    backgroundColor: "honeydew",
+    borderBottomWidth: hp(".2%"),
+    borderBottomColor: "whitesmoke"
+  },
+  navHeader: {
+    fontWeight: "bold",
+    fontSize: hp("3%"),
+    color: "darkolivegreen",
+    fontFamily: "Menlo",
+    marginLeft: wp("30%")
   }
 })
