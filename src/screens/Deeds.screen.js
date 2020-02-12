@@ -19,7 +19,7 @@ import { format, formatDistance, formatRelative, subDays } from "date-fns"
 
 //utility
 
-export default function Deeds({ navigation }) {
+export default function Deeds({ route, navigation }) {
   const [fajr, setFajr] = useState(false)
   const [dhuhr, setDhuhr] = useState(false)
   const [asr, setAsr] = useState(false)
@@ -37,6 +37,8 @@ export default function Deeds({ navigation }) {
     "Wednesday",
     "ThursDay"
   ])
+
+  const { topic } = route.params
 
   return (
     <>
@@ -61,294 +63,334 @@ export default function Deeds({ navigation }) {
             ))}
           </ScrollView>
           <Text style={styles.taskHeader}>Daily Tasks</Text>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: fajr ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={fajr}
-                onPress={() => {
-                  setFajr(!fajr)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: fajr ? "honeydew" : "white" }
-              ]}
-            >
-              <Text style={styles.taskText}>Fajr</Text>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: dhuhr ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={dhuhr}
-                onPress={() => {
-                  setDhuhr(!dhuhr)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: dhuhr ? "honeydew" : "white" }
-              ]}
-            >
-              <Text style={styles.taskText}>Dhuhr</Text>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: asr ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={asr}
-                onPress={() => {
-                  setAsr(!asr)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: asr ? "honeydew" : "white" }
-              ]}
-            >
-              <Text style={styles.taskText}>Asr</Text>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: magrib ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={magrib}
-                onPress={() => {
-                  setMagrib(!magrib)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: magrib ? "honeydew" : "white" }
-              ]}
-            >
-              <Text style={styles.taskText}>Magrib</Text>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: isha ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={isha}
-                onPress={() => {
-                  setIsha(!isha)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: isha ? "honeydew" : "white" }
-              ]}
-            >
-              <Text style={styles.taskText}>Isha</Text>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: isha ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={isha}
-                onPress={() => {
-                  setIsha(!isha)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: isha ? "honeydew" : "white" }
-              ]}
-            >
-              <Text style={styles.taskText}>Tahajjud</Text>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: morning ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={morning}
-                onPress={() => {
-                  setMorning(!morning)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: morning ? "honeydew" : "white" }
-              ]}
-            >
-              <TouchableOpacity
-                onPress={function goToOwnScreen() {
-                  navigation.navigate("DeedDetail", {
-                    pageTitle: "সকাল-সন্ধ্যায়",
-                    category: "morningEvening"
-                  })
-                }}
-              >
-                <Text style={styles.taskText}>Dua for morning</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: isha ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={isha}
-                onPress={() => {
-                  setIsha(!isha)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: isha ? "honeydew" : "white" }
-              ]}
-            >
-              <TouchableOpacity
-                onPress={function goToOwnScreen() {
-                  navigation.navigate("DeedDetail", {
-                    pageTitle: "সকাল-সন্ধ্যায়",
-                    category: "morningEvening"
-                  })
-                }}
-              >
-                <Text style={styles.taskText}>Dua for Evening</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.card}>
-            <View
-              style={[
-                styles.leftCol,
-                { backgroundColor: quran ? "honeydew" : "white" }
-              ]}
-            >
-              <CheckBox
-                center
-                iconType="feather"
-                checkedIcon="check-circle"
-                uncheckedIcon="circle"
-                checkedColor="seagreen"
-                uncheckedColor="crimson"
-                size={30}
-                checked={quran}
-                onPress={() => {
-                  setQuran(!quran)
-                }}
-              />
-            </View>
-            <View
-              style={[
-                styles.rightCol,
-                { backgroundColor: quran ? "honeydew" : "white" }
-              ]}
-            >
-              <Text style={styles.taskText}>100 ayas of Quran</Text>
-            </View>
-          </View>
+          {topic === "prayer" ? (
+            <>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: fajr ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={fajr}
+                    onPress={() => {
+                      setFajr(!fajr)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: fajr ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Fajr</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: dhuhr ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={dhuhr}
+                    onPress={() => {
+                      setDhuhr(!dhuhr)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: dhuhr ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Dhuhr</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: asr ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={asr}
+                    onPress={() => {
+                      setAsr(!asr)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: asr ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Asr</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: magrib ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={magrib}
+                    onPress={() => {
+                      setMagrib(!magrib)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: magrib ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Magrib</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Isha</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>Tahajjud</Text>
+                </View>
+              </View>
+            </>
+          ) : topic === "quran" ? (
+            <>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: quran ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={quran}
+                    onPress={() => {
+                      setQuran(!quran)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: quran ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>100 ayas of Quran</Text>
+                </View>
+              </View>
+            </>
+          ) : (
+            <>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: quran ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={quran}
+                    onPress={() => {
+                      setQuran(!quran)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: quran ? "honeydew" : "white" }
+                  ]}
+                >
+                  <Text style={styles.taskText}>100 ayas of Quran</Text>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: morning ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={morning}
+                    onPress={() => {
+                      setMorning(!morning)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: morning ? "honeydew" : "white" }
+                  ]}
+                >
+                  <TouchableOpacity
+                    onPress={function goToOwnScreen() {
+                      navigation.navigate("DeedDetail", {
+                        pageTitle: "সকাল-সন্ধ্যায়",
+                        category: "morningEvening"
+                      })
+                    }}
+                  >
+                    <Text style={styles.taskText}>Dua for morning</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+              <View style={styles.card}>
+                <View
+                  style={[
+                    styles.leftCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <CheckBox
+                    center
+                    iconType="feather"
+                    checkedIcon="check-circle"
+                    uncheckedIcon="circle"
+                    checkedColor="seagreen"
+                    uncheckedColor="crimson"
+                    size={30}
+                    checked={isha}
+                    onPress={() => {
+                      setIsha(!isha)
+                    }}
+                  />
+                </View>
+                <View
+                  style={[
+                    styles.rightCol,
+                    { backgroundColor: isha ? "honeydew" : "white" }
+                  ]}
+                >
+                  <TouchableOpacity
+                    onPress={function goToOwnScreen() {
+                      navigation.navigate("DeedDetail", {
+                        pageTitle: "সকাল-সন্ধ্যায়",
+                        category: "morningEvening"
+                      })
+                    }}
+                  >
+                    <Text style={styles.taskText}>Dua for Evening</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </>
+          )}
         </ScrollView>
       </SafeAreaView>
     </>

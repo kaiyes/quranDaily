@@ -29,7 +29,7 @@ export default function Categorised({ route, navigation }) {
         <TouchableOpacity
           style={styles.item}
           onPress={function goToDetail() {
-            navigation.navigate("DuaDetail", {
+            navigation.navigate("Duas", {
               pageTitle: item.pageTitle,
               duas: item.duas
             })

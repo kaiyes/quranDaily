@@ -26,13 +26,28 @@ export default function Deeds({ navigation }) {
       <Text style={styles.header}>WelCome, Kaiyes</Text>
       <Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
       <View style={styles.row}>
-        <View style={styles.card} />
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => {
+            navigation.navigate("Deeds", {
+              topic: "prayer"
+            })
+          }}
+        >
+          <Icon reverse name="book" type="feather" color="lightseagreen" />
+          <Text style={styles.cardHeader}>Prayer</Text>
+          <View style={styles.dotHolder}>
+            <View style={[styles.dot, { backgroundColor: "tomato" }]} />
+            <View style={[styles.dot, { backgroundColor: "seagreen" }]} />
+            <View style={[styles.dot, { backgroundColor: "goldenrod" }]} />
+          </View>
+        </TouchableOpacity>
         <View style={styles.spacerH} />
         <TouchableOpacity
           style={styles.card}
           onPress={() => {
-            navigation.navigate("DeedDetail", {
-              pageTitle: "Quran"
+            navigation.navigate("Deeds", {
+              topic: "quran"
             })
           }}
         >

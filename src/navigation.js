@@ -55,18 +55,6 @@ function DeedStack() {
           }
         })}
       />
-      <Stack.Screen
-        name="DuaDetail"
-        component={DuaDetailScreen}
-        options={({ route }) => ({
-          title:
-            route.params.pageTitle != null
-              ? route.params.pageTitle.length > 10
-                ? `${route.params.pageTitle.slice(0, 12)}...`
-                : route.params.pageTitle
-              : ""
-        })}
-      />
       <Stack.Screen name="Calendar" component={CalendarScreen} />
     </Stack.Navigator>
   )
