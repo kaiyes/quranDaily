@@ -502,88 +502,11 @@ export default function Deeds({ route, navigation }) {
                 </View>
               </View>
             </>
-          ) : (
+          ) : topic === "tahajjud" ? (
             <>
-              <View style={styles.card}>
-                <View
-                  style={[
-                    styles.leftCol,
-                    { backgroundColor: morning ? "honeydew" : "white" }
-                  ]}
-                >
-                  <CheckBox
-                    center
-                    iconType="feather"
-                    checkedIcon="check-circle"
-                    uncheckedIcon="circle"
-                    checkedColor="seagreen"
-                    uncheckedColor="crimson"
-                    size={30}
-                    checked={morning}
-                    onPress={() => {
-                      setMorning(!morning)
-                    }}
-                  />
-                </View>
-                <View
-                  style={[
-                    styles.rightCol,
-                    { backgroundColor: morning ? "honeydew" : "white" }
-                  ]}
-                >
-                  <TouchableOpacity
-                    onPress={function goToOwnScreen() {
-                      navigation.navigate("DeedDetail", {
-                        pageTitle: "সকাল-সন্ধ্যায়",
-                        category: "morningEvening"
-                      })
-                    }}
-                  >
-                    <Text style={styles.taskText}>Dua for morning</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
-              <View style={styles.card}>
-                <View
-                  style={[
-                    styles.leftCol,
-                    { backgroundColor: isha ? "honeydew" : "white" }
-                  ]}
-                >
-                  <CheckBox
-                    center
-                    iconType="feather"
-                    checkedIcon="check-circle"
-                    uncheckedIcon="circle"
-                    checkedColor="seagreen"
-                    uncheckedColor="crimson"
-                    size={30}
-                    checked={isha}
-                    onPress={() => {
-                      setIsha(!isha)
-                    }}
-                  />
-                </View>
-                <View
-                  style={[
-                    styles.rightCol,
-                    { backgroundColor: isha ? "honeydew" : "white" }
-                  ]}
-                >
-                  <TouchableOpacity
-                    onPress={function goToOwnScreen() {
-                      navigation.navigate("DeedDetail", {
-                        pageTitle: "সকাল-সন্ধ্যায়",
-                        category: "morningEvening"
-                      })
-                    }}
-                  >
-                    <Text style={styles.taskText}>Dua for Evening</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
+              <Text style={styles.taskHeader}>Tahajjud Alarm</Text>
             </>
-          )}
+          ) : null}
         </ScrollView>
       </SafeAreaView>
     </>

@@ -79,12 +79,12 @@ export default function Deeds({ navigation }) {
           style={styles.card}
           onPress={() => {
             navigation.navigate("Deeds", {
-              topic: "sunnahSalah"
+              topic: "tahajjud"
             })
           }}
         >
           <Icon reverse name="book" type="feather" color="lightseagreen" />
-          <Text style={styles.cardHeader}>Sunnah Salah</Text>
+          <Text style={styles.cardHeader}>Tahajjud</Text>
           <View style={styles.dotHolder}>
             <View style={[styles.dot, { backgroundColor: "tomato" }]} />
           </View>
