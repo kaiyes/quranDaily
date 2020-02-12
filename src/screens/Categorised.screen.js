@@ -12,7 +12,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp
 } from "react-native-responsive-screen"
-
+import { Icon } from "react-native-elements"
 //utility
 import Duas from "../utility/duas"
 
@@ -20,28 +20,39 @@ export default function Categorised({ route, navigation }) {
   const { pageTitle, category } = route.params
 
   return (
-    <FlatList
-      data={Duas.filter(item => item.category == category)}
-      keyExtractor={item => item.key}
-      contentContainerStyle={styles.flatList}
-      style={styles.backgroundScrollView}
-      renderItem={({ item }) => (
+    <>
+      <View style={styles.backNav}>
         <TouchableOpacity
-          style={styles.item}
-          onPress={function goToDetail() {
-            navigation.navigate("Duas", {
-              pageTitle: item.pageTitle,
-              duas: item.duas
-            })
+          onPress={() => {
+            navigation.goBack()
           }}
         >
-          <View style={styles.circle}>
-            <Text style={styles.number}>{item.id}</Text>
-          </View>
-          <Text style={styles.title}>{item.pageTitle}</Text>
+          <Icon name="arrow-bold-left" type="entypo" color="dimgray" />
         </TouchableOpacity>
-      )}
-    />
+      </View>
+      <FlatList
+        data={Duas.filter(item => item.category == category)}
+        keyExtractor={item => item.key}
+        contentContainerStyle={styles.flatList}
+        style={styles.backgroundScrollView}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.item}
+            onPress={function goToDetail() {
+              navigation.navigate("Duas", {
+                pageTitle: item.pageTitle,
+                duas: item.duas
+              })
+            }}
+          >
+            <View style={styles.circle}>
+              <Text style={styles.number}>{item.id}</Text>
+            </View>
+            <Text style={styles.title}>{item.pageTitle}</Text>
+          </TouchableOpacity>
+        )}
+      />
+    </>
   )
 }
 
@@ -80,5 +91,15 @@ const styles = StyleSheet.create({
     color: "darkolivegreen",
     fontFamily: "Menlo",
     width: wp("80%")
+  },
+  backNav: {
+    width: wp("100%"),
+    height: hp("10%"),
+    alignItems: "flex-start",
+    paddingLeft: wp("1.5%"),
+    paddingTop: hp("4%"),
+    backgroundColor: "honeydew",
+    borderBottomWidth: hp(".2%"),
+    borderBottomColor: "whitesmoke"
   }
 })

@@ -12,7 +12,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp
 } from "react-native-responsive-screen"
-
+import { Icon } from "react-native-elements"
 //utility
 import "../assets/fonts/me_quran.ttf"
 
@@ -20,39 +20,47 @@ export default function DuaDetail({ route, navigation }) {
   const { pageTitle, duas } = route.params
 
   return (
-    <ScrollView
-      contentContainerStyle={styles.rootView}
-      style={styles.backgroundScrollView}
-    >
-      <Text style={styles.title}>{pageTitle}</Text>
-      {duas.map(item => (
-        <View style={styles.section} keyExtractor={item => item.AyaID}>
-          <Text style={styles.dua}>{item.arabic}</Text>
-          <Text style={styles.spelling}>
-            <Text style={styles.preSpell}>উচ্চারণ:</Text>
-            {item.transliteration}
-          </Text>
-          <View style={styles.secondContainer}>
-            <Text style={styles.meaning}>
-              <Text style={styles.preSpell}>অর্থ:</Text>
-              {item.translations}
+    <SafeAreaView style={styles.rootView}>
+      <View style={styles.backNav}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.goBack()
+          }}
+        >
+          <Icon name="arrow-bold-left" type="entypo" color="dimgray" />
+        </TouchableOpacity>
+      </View>
+      <ScrollView style={styles.backgroundScrollView}>
+        <Text style={styles.title}>{pageTitle}</Text>
+        {duas.map(item => (
+          <View style={styles.section} keyExtractor={item => item.AyaID}>
+            <Text style={styles.dua}>{item.arabic}</Text>
+            <Text style={styles.spelling}>
+              <Text style={styles.preSpell}>উচ্চারণ:</Text>
+              {item.transliteration}
             </Text>
-            {item.bottom.length < 1 ? null : (
+            <View style={styles.secondContainer}>
               <Text style={styles.meaning}>
-                <Text style={styles.preSpell}>ফাজায়েল:</Text>
-                {item.bottom}
+                <Text style={styles.preSpell}>অর্থ:</Text>
+                {item.translations}
               </Text>
-            )}
-            {item.reference.length < 1 ? null : (
-              <Text style={styles.source}>
-                <Text style={styles.preSpell}>উৎস:</Text>
-                {item.reference}
-              </Text>
-            )}
+              {item.bottom.length < 1 ? null : (
+                <Text style={styles.meaning}>
+                  <Text style={styles.preSpell}>ফাজায়েল:</Text>
+                  {item.bottom}
+                </Text>
+              )}
+              {item.reference.length < 1 ? null : (
+                <Text style={styles.source}>
+                  <Text style={styles.preSpell}>উৎস:</Text>
+                  {item.reference}
+                </Text>
+              )}
+            </View>
           </View>
-        </View>
-      ))}
-    </ScrollView>
+        ))}
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
@@ -118,5 +126,14 @@ const styles = StyleSheet.create({
     color: "darkgreen",
     textDecorationLine: "underline",
     marginRight: wp("10%")
+  },
+  backNav: {
+    width: wp("100%"),
+    height: hp("5%"),
+    alignItems: "flex-start",
+    justifyContent: "center",
+    paddingLeft: wp("1.5%"),
+    borderBottomWidth: hp(".2%"),
+    borderBottomColor: "whitesmoke"
   }
 })

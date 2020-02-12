@@ -11,7 +11,7 @@ import {
 import DeedScreen from "./screens/Deeds.screen"
 import DuaDetailScreen from "./screens/DuaDetails.screen"
 import SplashScreen from "./screens/Splash.screen"
-import DuaScreen from "./screens/Dua.screen"
+import DuaScreen from "./screens/DuaHome.screen"
 import JanazaScreen from "./screens/Janaza.screen"
 import AllDuaScreen from "./screens/AllDua.screen"
 import CategoryScreen from "./screens/Categorised.screen"
@@ -62,20 +62,7 @@ function DeedStack() {
 
 function DuaStack() {
   return (
-    <Stack.Navigator
-      screenOptions={() => ({
-        headerStyle: {
-          backgroundColor: "seagreen"
-        },
-        headerTintColor: "white",
-        headerBackTitleVisible: false,
-        headerTitleStyle: {
-          fontWeight: "500",
-          fontFamily: "Menlo",
-          fontSize: hp("2%")
-        }
-      })}
-    >
+    <Stack.Navigator headerMode="none">
       <Stack.Screen name="Dua Home" component={DuaScreen} />
       <Stack.Screen name="AllDuas" component={AllDuaScreen} />
       <Stack.Screen
