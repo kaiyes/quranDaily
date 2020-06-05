@@ -18,6 +18,8 @@ import DuaCategoriesdScreen from "./screens/DuaCategoriesd.screen"
 import FavouriteScreen from "./screens/Favourites.screen"
 import CalendarScreen from "./screens/Calendar.screen"
 import DeedsHomeScreen from "./screens/DeedsHome.screen"
+import StatScreen from "./screens/Stats.screen"
+import QuranScreen from "./screens/Quran.screen"
 
 //components
 import IconWithBadge from "./components/ChatIcon"
@@ -81,8 +83,11 @@ function LoggedInStack() {
 						case "Dua":
 							iconName = "book"
 							break
-						case "Janaza":
-							iconName = "map"
+						case "Stats":
+							iconName = "bar-graph"
+							break
+						case "Quran":
+							iconName = "book"
 							break
 						default:
 					}
@@ -108,12 +113,14 @@ function LoggedInStack() {
 				labelStyle: {
 					fontWeight: "400",
 					fontFamily: "Menlo",
-					fontSize: 20
+					fontSize: 14
 				}
 			}}
 		>
 			<Tab.Screen name="Deeds" component={DeedStack} />
+			<Tab.Screen name="Quran" component={QuranScreen} />
 			<Tab.Screen name="Dua" component={DuaStack} />
+			<Tab.Screen name="Stats" component={StatScreen} />
 		</Tab.Navigator>
 	)
 }

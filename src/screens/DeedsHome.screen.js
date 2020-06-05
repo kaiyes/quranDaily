@@ -22,9 +22,11 @@ export default function Deeds({ navigation }) {
 		return (
 			<TouchableOpacity
 				style={styles.card}
-				onPress={() => {
-					console.log(icon)
-				}}
+				onPress={() =>
+					navigation.navigate("Deeds", {
+						topic: topic
+					})
+				}
 			>
 				<Icon
 					reverse
