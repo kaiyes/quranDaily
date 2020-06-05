@@ -5,7 +5,6 @@ import {
 	ScrollView,
 	View,
 	Text,
-	StatusBar,
 	FlatList,
 	TouchableOpacity
 } from "react-native"
@@ -13,32 +12,46 @@ import {
 	widthPercentageToDP as wp,
 	heightPercentageToDP as hp
 } from "react-native-responsive-screen"
-import { Icon, CheckBox } from "react-native-elements"
+import { Icon } from "react-native-elements"
 import { format, subDays } from "date-fns"
 
+import FakeData from "../utility/fakeData"
+
 export default function Deeds({ navigation }) {
+	function renderItem({ item: { icon, status, topicName, topic } }) {
+		return (
+			<TouchableOpacity
+				style={styles.card}
+				onPress={() => {
+					console.log(icon)
+				}}
+			>
+				<Icon
+					reverse
+					name={icon}
+					type="feather"
+					color="lightseagreen"
+					size={32}
+					reverseColor={"white"}
+				/>
+
+				<Text style={styles.cardHeader}>{topicName}</Text>
+			</TouchableOpacity>
+		)
+	}
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<Text style={styles.header}>WelCome, Kaiyes</Text>
 			<Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
 
-			<View style={styles.row}>
-				<TouchableOpacity
-					style={styles.card}
-					onPress={() => {
-						navigation.navigate("Deeds", {
-							topic: "prayer"
-						})
-					}}
-				>
-					<Icon reverse name="moon" type="feather" color="lightseagreen" />
-					<Text style={styles.cardHeader}>Fard Salah</Text>
-					<View style={styles.dotHolder}>
-						<View style={[styles.dot, { backgroundColor: "tomato" }]} />
-						<View style={[styles.dot, { backgroundColor: "goldenrod" }]} />
-					</View>
-				</TouchableOpacity>
-			</View>
+			<FlatList
+				data={FakeData}
+				keyExtractor={item => item.topicName}
+				contentContainerStyle={styles.flatList}
+				numColumns={2}
+				renderItem={item => renderItem(item)}
+			/>
 		</SafeAreaView>
 	)
 }
@@ -46,7 +59,7 @@ export default function Deeds({ navigation }) {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "honeydew"
+		backgroundColor: "white"
 	},
 	header: {
 		fontWeight: "400",
@@ -63,12 +76,10 @@ const styles = StyleSheet.create({
 		fontSize: 22,
 		marginLeft: wp("5%")
 	},
-	row: {
-		flexDirection: "row",
+	flatList: {
 		width: wp("100%"),
 		marginTop: hp("3%"),
-		alignItems: "center",
-		marginLeft: wp("5%")
+		alignItems: "center"
 	},
 	card: {
 		backgroundColor: "white",
@@ -77,6 +88,8 @@ const styles = StyleSheet.create({
 		borderRadius: wp("2%"),
 		alignItems: "center",
 		paddingTop: hp("2%"),
+		marginBottom: hp("3%"),
+		marginHorizontal: wp("2.5%"),
 		shadowColor: "#000",
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.37,
@@ -92,16 +105,6 @@ const styles = StyleSheet.create({
 		fontFamily: "Menlo",
 		fontSize: hp("2.5%"),
 		marginTop: hp("4%")
-	},
-	dotHolder: {
-		flexDirection: "row",
-		marginTop: hp("1%")
-	},
-	dot: {
-		width: hp("2%"),
-		height: hp("2%"),
-		borderRadius: hp("1%"),
-		marginHorizontal: wp(".5%")
 	},
 	plusIcon: {
 		width: wp("45%"),
