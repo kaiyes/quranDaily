@@ -13,7 +13,7 @@ import {
 	heightPercentageToDP as hp
 } from "react-native-responsive-screen"
 import { Icon } from "react-native-elements"
-import { format, subDays } from "date-fns"
+import { Bar } from "react-native-progress"
 
 import FakeData from "../utility/fakeData"
 
@@ -36,6 +36,11 @@ export default function Deeds({ navigation }) {
 				/>
 
 				<Text style={styles.cardHeader}>{topicName}</Text>
+				<Bar
+					progress={status / 100}
+					width={wp("25%")}
+					color={"lightseagreen"}
+				/>
 			</TouchableOpacity>
 		)
 	}
@@ -54,7 +59,7 @@ export default function Deeds({ navigation }) {
 			/>
 			<View style={styles.button}>
 				<TouchableOpacity style={styles.plusIcon}>
-					<Icon reverse name="plus" type="feather" color="seagreen" />
+					<Icon reverse name="plus" type="feather" color="salmon" />
 				</TouchableOpacity>
 			</View>
 		</SafeAreaView>
@@ -92,7 +97,7 @@ const styles = StyleSheet.create({
 		height: hp("20%"),
 		borderRadius: wp("2%"),
 		alignItems: "center",
-		paddingTop: hp("2%"),
+		paddingTop: hp("1.5%"),
 		marginBottom: hp("3%"),
 		marginHorizontal: wp("2.5%"),
 		shadowColor: "#000",
@@ -101,15 +106,12 @@ const styles = StyleSheet.create({
 		shadowRadius: 4,
 		elevation: 4
 	},
-	spacerH: {
-		width: wp("5%")
-	},
 	cardHeader: {
 		fontWeight: "400",
 		color: "dimgray",
 		fontFamily: "Menlo",
 		fontSize: 22,
-		marginTop: hp("2%"),
+		marginVertical: hp("1.5%"),
 		marginHorizontal: wp("2%")
 	},
 	plusIcon: {

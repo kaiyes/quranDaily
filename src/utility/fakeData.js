@@ -5,19 +5,19 @@ const FakeData = [
 	{ topicName: "Tahajjud", topic: "prayer", icon: "moon", status: 40 },
 	{ topicName: "Sadakah", topic: "prayer", icon: "dollar-sign", status: 10 },
 	{
-		topicName: "Morning Azkar",
+		topicName: "Morning Dua",
 		topic: "morningDua",
 		icon: "clock",
 		status: 46
 	},
 	{
-		topicName: "Evening Azkar",
+		topicName: "Evening Dua",
 		topic: "eveningDua",
 		icon: "clock",
 		status: 46
 	},
 	{
-		topicName: "Listening to Lecture",
+		topicName: "Lecture",
 		topic: "lecture",
 		icon: "clock",
 		status: 46
