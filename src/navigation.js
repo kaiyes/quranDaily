@@ -20,7 +20,7 @@ import CalendarScreen from "./screens/Calendar.screen"
 import DeedsHomeScreen from "./screens/DeedsHome.screen"
 
 //components
-import IconWithBadge from "./Components/ChatIcon"
+import IconWithBadge from "./components/ChatIcon"
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()

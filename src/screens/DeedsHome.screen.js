@@ -7,8 +7,7 @@ import {
 	Text,
 	StatusBar,
 	FlatList,
-	TouchableOpacity,
-	SectionList
+	TouchableOpacity
 } from "react-native"
 import {
 	widthPercentageToDP as wp,
@@ -19,7 +18,7 @@ import { format, subDays } from "date-fns"
 
 export default function Deeds({ navigation }) {
 	return (
-		<ScrollView contentContainerStyle={styles.scrollView}>
+		<SafeAreaView style={styles.container}>
 			<Text style={styles.header}>WelCome, Kaiyes</Text>
 			<Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
 
@@ -39,116 +38,37 @@ export default function Deeds({ navigation }) {
 						<View style={[styles.dot, { backgroundColor: "goldenrod" }]} />
 					</View>
 				</TouchableOpacity>
-
-				<View style={styles.spacerH} />
-
-				<TouchableOpacity
-					style={styles.card}
-					onPress={() => {
-						navigation.navigate("Deeds", {
-							topic: "quran"
-						})
-					}}
-				>
-					<Icon reverse name="book" type="feather" color="lightseagreen" />
-					<Text style={styles.cardHeader}>Quran</Text>
-					<View style={styles.dotHolder}>
-						<View style={[styles.dot, { backgroundColor: "tomato" }]} />
-						<View style={[styles.dot, { backgroundColor: "seagreen" }]} />
-						<View style={[styles.dot, { backgroundColor: "goldenrod" }]} />
-					</View>
-				</TouchableOpacity>
 			</View>
-
-			<View style={styles.row}>
-				<TouchableOpacity
-					style={styles.card}
-					onPress={() => {
-						navigation.navigate("Deeds", {
-							topic: "sunnahSalah"
-						})
-					}}
-				>
-					<Icon reverse name="moon" type="feather" color="lightseagreen" />
-					<Text style={styles.cardHeader}>Sunnah Salah</Text>
-					<View style={styles.dotHolder}>
-						<View style={[styles.dot, { backgroundColor: "tomato" }]} />
-					</View>
-				</TouchableOpacity>
-
-				<View style={styles.spacerH} />
-
-				<TouchableOpacity
-					style={styles.card}
-					onPress={() => {
-						navigation.navigate("Deeds", {
-							topic: "tahajjud"
-						})
-					}}
-				>
-					<Icon reverse name="moon" type="feather" color="lightseagreen" />
-					<Text style={styles.cardHeader}>Tahajjud</Text>
-					<View style={styles.dotHolder}>
-						<View style={[styles.dot, { backgroundColor: "tomato" }]} />
-					</View>
-				</TouchableOpacity>
-
-				<View style={styles.spacerH} />
-			</View>
-
-			<View style={styles.row}>
-				<TouchableOpacity
-					style={styles.card}
-					onPress={() => {
-						navigation.navigate("Deeds", {
-							topic: "sadaka"
-						})
-					}}
-				>
-					<Icon
-						reverse
-						name="dollar-sign"
-						type="feather"
-						color="lightseagreen"
-					/>
-					<Text style={styles.cardHeader}>Sadakah</Text>
-					<View style={styles.dotHolder}>
-						<View style={[styles.dot, { backgroundColor: "tomato" }]} />
-					</View>
-				</TouchableOpacity>
-
-				<View style={styles.spacerH} />
-
-				<TouchableOpacity style={styles.plusIcon}>
-					<Icon reverse name="plus" type="feather" color="seagreen" />
-				</TouchableOpacity>
-			</View>
-		</ScrollView>
+		</SafeAreaView>
 	)
 }
 
 const styles = StyleSheet.create({
-	scrollView: {
-		paddingHorizontal: wp("5%"),
-		paddingTop: hp("7%")
+	container: {
+		flex: 1,
+		backgroundColor: "honeydew"
 	},
 	header: {
 		fontWeight: "400",
 		color: "black",
 		fontFamily: "Menlo",
-		fontSize: 34
+		fontSize: 34,
+		marginLeft: wp("5%"),
+		marginTop: hp("1%")
 	},
 	headerSubtitle: {
 		fontWeight: "400",
 		color: "gray",
 		fontFamily: "Menlo",
-		fontSize: 22
+		fontSize: 22,
+		marginLeft: wp("5%")
 	},
 	row: {
 		flexDirection: "row",
 		width: wp("100%"),
 		marginTop: hp("3%"),
-		alignItems: "center"
+		alignItems: "center",
+		marginLeft: wp("5%")
 	},
 	card: {
 		backgroundColor: "white",
@@ -156,7 +76,12 @@ const styles = StyleSheet.create({
 		height: hp("25%"),
 		borderRadius: wp("2%"),
 		alignItems: "center",
-		paddingTop: hp("2%")
+		paddingTop: hp("2%"),
+		shadowColor: "#000",
+		shadowOffset: { width: 0, height: 4 },
+		shadowOpacity: 0.37,
+		shadowRadius: 4,
+		elevation: 4
 	},
 	spacerH: {
 		width: wp("5%")
@@ -184,3 +109,6 @@ const styles = StyleSheet.create({
 		alignItems: "center"
 	}
 })
+// <TouchableOpacity style={styles.plusIcon}>
+// 	<Icon reverse name="plus" type="feather" color="seagreen" />
+// </TouchableOpacity>
