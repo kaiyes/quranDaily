@@ -52,6 +52,11 @@ export default function Deeds({ navigation }) {
 				numColumns={2}
 				renderItem={item => renderItem(item)}
 			/>
+			<View style={styles.button}>
+				<TouchableOpacity style={styles.plusIcon}>
+					<Icon reverse name="plus" type="feather" color="seagreen" />
+				</TouchableOpacity>
+			</View>
 		</SafeAreaView>
 	)
 }
@@ -108,11 +113,12 @@ const styles = StyleSheet.create({
 		marginHorizontal: wp("2%")
 	},
 	plusIcon: {
-		width: wp("45%"),
 		justifyContent: "center",
 		alignItems: "center"
+	},
+	button: {
+		position: "absolute",
+		bottom: 0,
+		right: 0
 	}
 })
-// <TouchableOpacity style={styles.plusIcon}>
-// 	<Icon reverse name="plus" type="feather" color="seagreen" />
-// </TouchableOpacity>
