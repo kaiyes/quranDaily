@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
 	card: {
 		backgroundColor: "white",
 		width: wp("42.5%"),
-		height: hp("25%"),
+		height: hp("20%"),
 		borderRadius: wp("2%"),
 		alignItems: "center",
 		paddingTop: hp("2%"),
@@ -103,8 +103,9 @@ const styles = StyleSheet.create({
 		fontWeight: "400",
 		color: "dimgray",
 		fontFamily: "Menlo",
-		fontSize: hp("2.5%"),
-		marginTop: hp("4%")
+		fontSize: 22,
+		marginTop: hp("2%"),
+		marginHorizontal: wp("2%")
 	},
 	plusIcon: {
 		width: wp("45%"),
