@@ -6,19 +6,23 @@ const FakeData = [
 		status: 60,
 		subTasks: [
 			{
-				name: "Read at least 100 ayah",
+				name: "Fajr",
 				done: false
 			},
 			{
-				name: "Read 1 Juz",
+				name: "Dhuhr",
 				done: false
 			},
 			{
-				name: "Memorize 5 ayah",
+				name: "Asr",
 				done: false
 			},
 			{
-				name: "Read 1 Manzil",
+				name: "Magrib",
+				done: false
+			},
+			{
+				name: "Isha",
 				done: false
 			}
 		]
@@ -51,24 +55,28 @@ const FakeData = [
 
 	{
 		topicName: "Sunnah Salah",
-		topic: "prayer",
+		topic: "sunnahPrayer",
 		icon: "bar-chart",
 		status: 73,
 		subTasks: [
 			{
-				name: "Read at least 100 ayah",
+				name: "Fajr 2 rakah",
 				done: false
 			},
 			{
-				name: "Read 1 Juz",
+				name: "Ishraq 4 rakah",
 				done: false
 			},
 			{
-				name: "Memorize 5 ayah",
+				name: "Dhuhr 2+4 rakah",
 				done: false
 			},
 			{
-				name: "Read 1 Manzil",
+				name: "Magrib 2 rakah",
+				done: false
+			},
+			{
+				name: "Isha 2+1 rakah",
 				done: false
 			}
 		]
@@ -76,7 +84,7 @@ const FakeData = [
 
 	{
 		topicName: "Tahajjud",
-		topic: "prayer",
+		topic: "tahajjud",
 		icon: "moon",
 		status: 40,
 		subTasks: [
@@ -105,24 +113,24 @@ const FakeData = [
 
 	{
 		topicName: "Sadakah",
-		topic: "prayer",
+		topic: "sadaqa",
 		icon: "dollar-sign",
 		status: 10,
 		subTasks: [
 			{
-				name: "Read at least 100 ayah",
+				name: "money",
 				done: false
 			},
 			{
-				name: "Read 1 Juz",
+				name: "smile",
 				done: false
 			},
 			{
-				name: "Memorize 5 ayah",
+				name: "lokma",
 				done: false
 			},
 			{
-				name: "Read 1 Manzil",
+				name: "Intimacy",
 				done: false
 			}
 		]
@@ -135,19 +143,11 @@ const FakeData = [
 		status: 46,
 		subTasks: [
 			{
-				name: "Read at least 100 ayah",
+				name: "Read All",
 				done: false
 			},
 			{
-				name: "Read 1 Juz",
-				done: false
-			},
-			{
-				name: "Memorize 5 ayah",
-				done: false
-			},
-			{
-				name: "Read 1 Manzil",
+				name: "Read Collected ones",
 				done: false
 			}
 		]
@@ -155,49 +155,16 @@ const FakeData = [
 
 	{
 		topicName: "Evening Dua",
-		topic: "eveningDua",
+		topic: "evening-Dua",
 		icon: "clock",
 		status: 46,
 		subTasks: [
 			{
-				name: "Read at least 100 ayah",
+				name: "Read All",
 				done: false
 			},
 			{
-				name: "Read 1 Juz",
-				done: false
-			},
-			{
-				name: "Memorize 5 ayah",
-				done: false
-			},
-			{
-				name: "Read 1 Manzil",
-				done: false
-			}
-		]
-	},
-
-	{
-		topicName: "Lecture",
-		topic: "lecture",
-		icon: "clock",
-		status: 46,
-		subTasks: [
-			{
-				name: "Read at least 100 ayah",
-				done: false
-			},
-			{
-				name: "Read 1 Juz",
-				done: false
-			},
-			{
-				name: "Memorize 5 ayah",
-				done: false
-			},
-			{
-				name: "Read 1 Manzil",
+				name: "Read Collected ones",
 				done: false
 			}
 		]

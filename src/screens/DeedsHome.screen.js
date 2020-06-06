@@ -18,32 +18,34 @@ import { Bar } from "react-native-progress"
 import FakeData from "../utility/fakeData"
 
 export default function Deeds({ navigation }) {
-	function renderItem({ item: { icon, status, topicName, topic } }) {
+	function renderItem({ item: { icon, status, topicName, topic, subTasks } }) {
 		return (
-			<TouchableOpacity
-				style={styles.card}
-				onPress={() =>
-					navigation.navigate("Deeds", {
-						topic: topic
-					})
-				}
-			>
+			<View style={styles.card}>
 				<Icon
 					reverse
 					name={icon}
 					type="feather"
-					color="lightseagreen"
-					size={32}
+					color="mediumaquamarine"
+					size={25}
 					reverseColor={"white"}
 				/>
 
 				<Text style={styles.cardHeader}>{topicName}</Text>
-				<Bar
-					progress={status / 100}
-					width={wp("25%")}
-					color={"lightseagreen"}
-				/>
-			</TouchableOpacity>
+				<View style={styles.dotHolder}>
+					{subTasks.map(task => (
+						<TouchableOpacity key={Math.random()}>
+							<Icon
+								reverse
+								name={icon}
+								type="feather"
+								color="gold"
+								size={15}
+								reverseColor={"#242126"}
+							/>
+						</TouchableOpacity>
+					))}
+				</View>
+			</View>
 		)
 	}
 
@@ -96,12 +98,13 @@ const styles = StyleSheet.create({
 	card: {
 		backgroundColor: "white",
 		width: wp("42.5%"),
-		height: hp("20%"),
 		borderRadius: wp("2%"),
 		alignItems: "center",
 		paddingTop: hp("1.5%"),
 		marginBottom: hp("3%"),
 		marginHorizontal: wp("2.5%"),
+		paddingHorizontal: wp("2.5%"),
+		paddingBottom: hp("1.5%"),
 		shadowColor: "#000",
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.37,
@@ -110,10 +113,10 @@ const styles = StyleSheet.create({
 	},
 	cardHeader: {
 		fontWeight: "400",
-		color: "dimgray",
+		color: "#242126",
 		fontFamily: "Menlo",
 		fontSize: 22,
-		marginVertical: hp("1.5%"),
+		marginVertical: hp("1%"),
 		marginHorizontal: wp("2%")
 	},
 	plusIcon: {
@@ -124,5 +127,9 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		bottom: 0,
 		right: 0
+	},
+	dotHolder: {
+		flexDirection: "row",
+		flexWrap: "wrap"
 	}
 })
