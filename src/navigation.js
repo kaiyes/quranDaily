@@ -15,7 +15,6 @@ import DuaScreen from "./screens/DuaHome.screen"
 import AllDuaScreen from "./screens/AllDua.screen"
 import DuaCategoriesdScreen from "./screens/DuaCategoriesd.screen"
 import FavouriteScreen from "./screens/Favourites.screen"
-import CalendarScreen from "./screens/Calendar.screen"
 import DeedsHomeScreen from "./screens/DeedsHome.screen"
 import StatScreen from "./screens/Stats.screen"
 import QuranScreen from "./screens/Quran.screen"
@@ -40,7 +39,6 @@ function DeedStack() {
 			<Stack.Screen name="DeedsHome" component={DeedsHomeScreen} />
 			<Stack.Screen name="Deeds" component={DeedScreen} />
 			<Stack.Screen name="DeedDetail" component={DuaCategoriesdScreen} />
-			<Stack.Screen name="Calendar" component={CalendarScreen} />
 		</Stack.Navigator>
 	)
 }
@@ -88,6 +86,9 @@ function LoggedInStack() {
 						case "Quran":
 							iconName = "book"
 							break
+						case "Memorize":
+							iconName = "save"
+							break
 						default:
 					}
 
@@ -119,6 +120,7 @@ function LoggedInStack() {
 			<Tab.Screen name="Deeds" component={DeedStack} />
 			<Tab.Screen name="Quran" component={QuranScreen} />
 			<Tab.Screen name="Dua" component={DuaStack} />
+			<Tab.Screen name="Memorize" component={StatScreen} />
 			<Tab.Screen name="Stats" component={StatScreen} />
 		</Tab.Navigator>
 	)
