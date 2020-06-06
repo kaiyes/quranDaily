@@ -36,25 +36,34 @@ const FakeData = [
 	{
 		topicName: "Quran",
 		topic: "quran",
-		icon: "book",
 		status: 90,
 		image: require("../assets/images/quran.jpg"),
 		subTasks: [
 			{
+				name: "Memorize 5 ayah",
+				done: false,
+				icon: require("../assets/icons/5_ayah.png")
+			},
+			{
+				name: "1 page",
+				done: false,
+				icon: require("../assets/icons/1_page.png")
+			},
+
+			{
 				name: "Read at least 100 ayah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/100.png")
 			},
 			{
 				name: "Read 1 Juz",
-				done: false
-			},
-			{
-				name: "Memorize 5 ayah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/1_juz.png")
 			},
 			{
 				name: "Read 1 Manzil",
-				done: false
+				done: false,
+				icon: require("../assets/icons/1_monjil.png")
 			}
 		]
 	},
@@ -62,29 +71,33 @@ const FakeData = [
 	{
 		topicName: "Sunna Salah",
 		topic: "sunnahPrayer",
-		icon: "bar-chart",
 		image: require("../assets/images/sunnah.jpg"),
 		status: 73,
 		subTasks: [
 			{
 				name: "Fajr 2 rakah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_up.png")
 			},
 			{
 				name: "Ishraq 4 rakah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_israq.png")
 			},
 			{
 				name: "Dhuhr 2+4 rakah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_full.png")
 			},
 			{
 				name: "Magrib 2 rakah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_down.png")
 			},
 			{
 				name: "Isha 2+1 rakah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/moon.png")
 			}
 		]
 	},
@@ -92,7 +105,6 @@ const FakeData = [
 	{
 		topicName: "Tahajjud",
 		topic: "tahajjud",
-		icon: "moon",
 		status: 40,
 		image: require("../assets/images/tahajjud.jpg"),
 		subTasks: [
@@ -122,7 +134,6 @@ const FakeData = [
 	{
 		topicName: "Sadakah",
 		topic: "sadaqa",
-		icon: "dollar-sign",
 		status: 10,
 		image: require("../assets/images/sadaqa.png"),
 		subTasks: [
@@ -148,7 +159,6 @@ const FakeData = [
 	{
 		topicName: "Morning Dua",
 		topic: "morningDua",
-		icon: "clock",
 		status: 46,
 		image: require("../assets/images/morning.jpg"),
 		subTasks: [
@@ -166,7 +176,6 @@ const FakeData = [
 	{
 		topicName: "Evening Dua",
 		topic: "evening-Dua",
-		icon: "clock",
 		status: 46,
 		image: require("../assets/images/evening.jpg"),
 		subTasks: [

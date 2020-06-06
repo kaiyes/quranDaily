@@ -19,9 +19,7 @@ import { Bar } from "react-native-progress"
 import FakeData from "../utility/fakeData"
 
 export default function Deeds({ navigation }) {
-	function renderItem({
-		item: { icon, status, topicName, topic, subTasks, image }
-	}) {
+	function renderItem({ item: { status, topicName, topic, subTasks, image } }) {
 		return (
 			<View style={styles.card}>
 				<View style={styles.topRow}>
