@@ -109,14 +109,6 @@ const FakeData = [
 		image: require("../assets/images/tahajjud.jpg"),
 		subTasks: [
 			{
-				name: "Pray in last 1/3 of night",
-				done: false
-			},
-			{
-				name: "Pray after isha",
-				done: false
-			},
-			{
 				name: "Pray 2 rakah at least",
 				done: false
 			},
@@ -139,19 +131,18 @@ const FakeData = [
 		subTasks: [
 			{
 				name: "money",
-				done: false
+				done: false,
+				icon: require("../assets/icons/money.png")
 			},
 			{
 				name: "smile",
-				done: false
+				done: false,
+				icon: require("../assets/icons/smile.png")
 			},
 			{
 				name: "lokma",
-				done: false
-			},
-			{
-				name: "Intimacy",
-				done: false
+				done: false,
+				icon: require("../assets/icons/smile.png")
 			}
 		]
 	},
