@@ -2,29 +2,33 @@ const FakeData = [
 	{
 		topicName: "Fard Salah",
 		topic: "prayer",
-		icon: "sun",
 		status: 60,
 		image: require("../assets/images/prayer.png"),
 		subTasks: [
 			{
 				name: "Fajr",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_up.png")
 			},
 			{
 				name: "Dhuhr",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_full.png")
 			},
 			{
 				name: "Asr",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_asr.png")
 			},
 			{
 				name: "Magrib",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_down.png")
 			},
 			{
 				name: "Isha",
-				done: false
+				done: false,
+				icon: require("../assets/icons/moon.png")
 			}
 		]
 	},

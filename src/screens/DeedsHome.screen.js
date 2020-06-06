@@ -32,14 +32,7 @@ export default function Deeds({ navigation }) {
 					<View style={styles.dotHolder}>
 						{subTasks.map(task => (
 							<TouchableOpacity key={Math.random()}>
-								<Icon
-									reverse
-									name={icon}
-									type="feather"
-									color="gold"
-									size={13}
-									reverseColor={"#242126"}
-								/>
+								<Image source={task.icon} style={styles.taskIcon} />
 							</TouchableOpacity>
 						))}
 					</View>
@@ -117,7 +110,7 @@ const styles = StyleSheet.create({
 	bottomRow: {
 		flex: 1,
 		width: wp("42.5%"),
-		backgroundColor: "#23201f",
+		backgroundColor: "#343a40",
 		alignItems: "center",
 		paddingHorizontal: wp("2%"),
 		paddingBottom: hp("1.5%"),
@@ -150,5 +143,11 @@ const styles = StyleSheet.create({
 		width: wp("42.5%"),
 		borderTopLeftRadius: wp("2%"),
 		borderTopRightRadius: wp("2%")
+	},
+	taskIcon: {
+		width: wp("10%"),
+		height: wp("10%"),
+		borderRadius: wp("5%"),
+		marginRight: wp("2%")
 	}
 })
