@@ -21,29 +21,33 @@ export default function Deeds({ navigation }) {
 	function renderItem({ item: { icon, status, topicName, topic, subTasks } }) {
 		return (
 			<View style={styles.card}>
-				<Icon
-					reverse
-					name={icon}
-					type="feather"
-					color="mediumaquamarine"
-					size={25}
-					reverseColor={"white"}
-				/>
-
-				<Text style={styles.cardHeader}>{topicName}</Text>
-				<View style={styles.dotHolder}>
-					{subTasks.map(task => (
-						<TouchableOpacity key={Math.random()}>
-							<Icon
-								reverse
-								name={icon}
-								type="feather"
-								color="gold"
-								size={15}
-								reverseColor={"#242126"}
-							/>
-						</TouchableOpacity>
-					))}
+				<View style={styles.topRow}>
+					<Icon
+						reverse
+						name={icon}
+						type="feather"
+						color="white"
+						size={25}
+						reverseColor={"black"}
+						containerStyle={styles.icon}
+					/>
+				</View>
+				<View style={styles.bottomRow}>
+					<Text style={styles.cardHeader}>{topicName}</Text>
+					<View style={styles.dotHolder}>
+						{subTasks.map(task => (
+							<TouchableOpacity key={Math.random()}>
+								<Icon
+									reverse
+									name={icon}
+									type="feather"
+									color="gold"
+									size={13}
+									reverseColor={"#242126"}
+								/>
+							</TouchableOpacity>
+						))}
+					</View>
 				</View>
 			</View>
 		)
@@ -96,15 +100,13 @@ const styles = StyleSheet.create({
 		alignItems: "center"
 	},
 	card: {
-		backgroundColor: "white",
+		backgroundColor: "tomato",
 		width: wp("42.5%"),
 		borderRadius: wp("2%"),
 		alignItems: "center",
 		paddingTop: hp("1.5%"),
 		marginBottom: hp("3%"),
 		marginHorizontal: wp("2.5%"),
-		paddingHorizontal: wp("2.5%"),
-		paddingBottom: hp("1.5%"),
 		shadowColor: "#000",
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.37,
@@ -112,12 +114,12 @@ const styles = StyleSheet.create({
 		elevation: 4
 	},
 	cardHeader: {
-		fontWeight: "400",
-		color: "#242126",
 		fontFamily: "Menlo",
+		fontWeight: "500",
+		fontStyle: "italic",
+		color: "white",
 		fontSize: 18,
-		marginVertical: hp("1%"),
-		marginHorizontal: wp("2%")
+		marginVertical: hp("1.5%")
 	},
 	plusIcon: {
 		justifyContent: "center",
@@ -128,8 +130,31 @@ const styles = StyleSheet.create({
 		bottom: 0,
 		right: 0
 	},
+	topRow: {
+		height: hp("12%"),
+		justifyContent: "center",
+		alignItems: "center"
+	},
+	bottomRow: {
+		flex: 1,
+		width: wp("42.5%"),
+		backgroundColor: "black",
+		alignItems: "center",
+		paddingHorizontal: wp("3.5%"),
+		paddingBottom: hp("1.5%"),
+		borderBottomLeftRadius: wp("2%"),
+		borderBottomRightRadius: wp("2%")
+	},
 	dotHolder: {
 		flexDirection: "row",
-		flexWrap: "wrap"
+		flexWrap: "wrap",
+		justifyContent: "center"
+	},
+	icon: {
+		shadowColor: "#000",
+		shadowOffset: { width: 0, height: 4 },
+		shadowOpacity: 0.37,
+		shadowRadius: 7.49,
+		elevation: 12
 	}
 })
