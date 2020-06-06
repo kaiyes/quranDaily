@@ -6,7 +6,8 @@ import {
 	View,
 	Text,
 	FlatList,
-	TouchableOpacity
+	TouchableOpacity,
+	Image
 } from "react-native"
 import {
 	widthPercentageToDP as wp,
@@ -18,19 +19,13 @@ import { Bar } from "react-native-progress"
 import FakeData from "../utility/fakeData"
 
 export default function Deeds({ navigation }) {
-	function renderItem({ item: { icon, status, topicName, topic, subTasks } }) {
+	function renderItem({
+		item: { icon, status, topicName, topic, subTasks, image }
+	}) {
 		return (
 			<View style={styles.card}>
 				<View style={styles.topRow}>
-					<Icon
-						reverse
-						name={icon}
-						type="feather"
-						color="white"
-						size={25}
-						reverseColor={"black"}
-						containerStyle={styles.icon}
-					/>
+					<Image source={image} style={styles.image} />
 				</View>
 				<View style={styles.bottomRow}>
 					<Text style={styles.cardHeader}>{topicName}</Text>
@@ -65,11 +60,6 @@ export default function Deeds({ navigation }) {
 				numColumns={2}
 				renderItem={item => renderItem(item)}
 			/>
-			<View style={styles.button}>
-				<TouchableOpacity style={styles.plusIcon}>
-					<Icon reverse name="plus" type="feather" color="salmon" />
-				</TouchableOpacity>
-			</View>
 		</SafeAreaView>
 	)
 }
@@ -83,7 +73,7 @@ const styles = StyleSheet.create({
 		fontWeight: "400",
 		color: "black",
 		fontFamily: "Menlo",
-		fontSize: 34,
+		fontSize: 22,
 		marginLeft: wp("5%"),
 		marginTop: hp("1%")
 	},
@@ -91,7 +81,7 @@ const styles = StyleSheet.create({
 		fontWeight: "400",
 		color: "gray",
 		fontFamily: "Menlo",
-		fontSize: 22,
+		fontSize: 17,
 		marginLeft: wp("5%")
 	},
 	flatList: {
@@ -104,7 +94,6 @@ const styles = StyleSheet.create({
 		width: wp("42.5%"),
 		borderRadius: wp("2%"),
 		alignItems: "center",
-		paddingTop: hp("1.5%"),
 		marginBottom: hp("3%"),
 		marginHorizontal: wp("2.5%"),
 		shadowColor: "#000",
@@ -116,10 +105,29 @@ const styles = StyleSheet.create({
 	cardHeader: {
 		fontFamily: "Menlo",
 		fontWeight: "500",
-		fontStyle: "italic",
 		color: "white",
-		fontSize: 18,
+		fontSize: 17,
 		marginVertical: hp("1.5%")
+	},
+	topRow: {
+		height: hp("12%"),
+		justifyContent: "center",
+		alignItems: "center"
+	},
+	bottomRow: {
+		flex: 1,
+		width: wp("42.5%"),
+		backgroundColor: "#23201f",
+		alignItems: "center",
+		paddingHorizontal: wp("2%"),
+		paddingBottom: hp("1.5%"),
+		borderBottomLeftRadius: wp("2%"),
+		borderBottomRightRadius: wp("2%")
+	},
+	dotHolder: {
+		flexDirection: "row",
+		flexWrap: "wrap",
+		justifyContent: "center"
 	},
 	plusIcon: {
 		justifyContent: "center",
@@ -130,31 +138,17 @@ const styles = StyleSheet.create({
 		bottom: 0,
 		right: 0
 	},
-	topRow: {
-		height: hp("12%"),
-		justifyContent: "center",
-		alignItems: "center"
-	},
-	bottomRow: {
-		flex: 1,
-		width: wp("42.5%"),
-		backgroundColor: "black",
-		alignItems: "center",
-		paddingHorizontal: wp("3.5%"),
-		paddingBottom: hp("1.5%"),
-		borderBottomLeftRadius: wp("2%"),
-		borderBottomRightRadius: wp("2%")
-	},
-	dotHolder: {
-		flexDirection: "row",
-		flexWrap: "wrap",
-		justifyContent: "center"
-	},
 	icon: {
 		shadowColor: "#000",
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.37,
 		shadowRadius: 7.49,
 		elevation: 12
+	},
+	image: {
+		flex: 1,
+		width: wp("42.5%"),
+		borderTopLeftRadius: wp("2%"),
+		borderTopRightRadius: wp("2%")
 	}
 })

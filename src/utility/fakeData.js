@@ -4,6 +4,7 @@ const FakeData = [
 		topic: "prayer",
 		icon: "sun",
 		status: 60,
+		image: require("../assets/images/prayer.png"),
 		subTasks: [
 			{
 				name: "Fajr",
@@ -33,6 +34,7 @@ const FakeData = [
 		topic: "quran",
 		icon: "book",
 		status: 90,
+		image: require("../assets/images/quran.jpg"),
 		subTasks: [
 			{
 				name: "Read at least 100 ayah",
@@ -57,6 +59,7 @@ const FakeData = [
 		topicName: "Sunna Salah",
 		topic: "sunnahPrayer",
 		icon: "bar-chart",
+		image: require("../assets/images/sunnah.jpg"),
 		status: 73,
 		subTasks: [
 			{
@@ -87,6 +90,7 @@ const FakeData = [
 		topic: "tahajjud",
 		icon: "moon",
 		status: 40,
+		image: require("../assets/images/tahajjud.jpg"),
 		subTasks: [
 			{
 				name: "Pray in last 1/3 of night",
@@ -116,6 +120,7 @@ const FakeData = [
 		topic: "sadaqa",
 		icon: "dollar-sign",
 		status: 10,
+		image: require("../assets/images/sadaqa.png"),
 		subTasks: [
 			{
 				name: "money",
@@ -141,6 +146,7 @@ const FakeData = [
 		topic: "morningDua",
 		icon: "clock",
 		status: 46,
+		image: require("../assets/images/morning.jpg"),
 		subTasks: [
 			{
 				name: "Read All",
@@ -158,6 +164,7 @@ const FakeData = [
 		topic: "evening-Dua",
 		icon: "clock",
 		status: 46,
+		image: require("../assets/images/evening.jpg"),
 		subTasks: [
 			{
 				name: "Read All",
