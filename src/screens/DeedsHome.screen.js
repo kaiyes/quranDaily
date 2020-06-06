@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
 		fontWeight: "400",
 		color: "#242126",
 		fontFamily: "Menlo",
-		fontSize: 22,
+		fontSize: 18,
 		marginVertical: hp("1%"),
 		marginHorizontal: wp("2%")
 	},

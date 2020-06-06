@@ -54,7 +54,7 @@ const FakeData = [
 	},
 
 	{
-		topicName: "Sunnah Salah",
+		topicName: "Sunna Salah",
 		topic: "sunnahPrayer",
 		icon: "bar-chart",
 		status: 73,
