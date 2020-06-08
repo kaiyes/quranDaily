@@ -49,7 +49,6 @@ const FakeData = [
 				done: false,
 				icon: require("../assets/icons/1_page.png")
 			},
-
 			{
 				name: "Read at least 100 ayah",
 				done: false,
@@ -137,7 +136,7 @@ const FakeData = [
 			{
 				name: "smile",
 				done: false,
-				icon: require("../assets/icons/smile.png")
+				icon: require("../assets/icons/intimate.jpg")
 			},
 			{
 				name: "lokma",
