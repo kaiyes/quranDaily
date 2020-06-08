@@ -70,7 +70,7 @@ const FakeData = [
 	{
 		topicName: "Sunna Salah",
 		topic: "sunnahPrayer",
-		image: require("../assets/images/sunnah.jpg"),
+		image: require("../assets/images/sunnah.png"),
 		status: 73,
 		subTasks: [
 			{
@@ -150,35 +150,20 @@ const FakeData = [
 	},
 
 	{
-		topicName: "Morning Dua",
+		topicName: "Morning Dua/Evening Dua",
 		topic: "morningDua",
 		status: 46,
 		image: require("../assets/images/morning.jpg"),
 		subTasks: [
 			{
 				name: "Read All",
-				done: false
+				done: false,
+				icon: require("../assets/icons/sun_full.png")
 			},
 			{
 				name: "Read Collected ones",
-				done: false
-			}
-		]
-	},
-
-	{
-		topicName: "Evening Dua",
-		topic: "evening-Dua",
-		status: 46,
-		image: require("../assets/images/evening.jpg"),
-		subTasks: [
-			{
-				name: "Read All",
-				done: false
-			},
-			{
-				name: "Read Collected ones",
-				done: false
+				done: false,
+				icon: require("../assets/icons/moon_t.png")
 			}
 		]
 	}
