@@ -49,6 +49,7 @@ export default function Deeds({ navigation }) {
 				keyExtractor={item => item.topicName}
 				contentContainerStyle={styles.flatList}
 				numColumns={2}
+				ListFooterComponent={() => <View style={styles.footer} />}
 				renderItem={item => renderItem(item)}
 			/>
 		</SafeAreaView>
@@ -147,5 +148,8 @@ const styles = StyleSheet.create({
 		height: wp("10%"),
 		borderRadius: wp("5%"),
 		marginRight: wp("2%")
+	},
+	footer: {
+		height: wp("3%")
 	}
 })
