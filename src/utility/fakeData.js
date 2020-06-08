@@ -105,19 +105,22 @@ const FakeData = [
 		topicName: "Tahajjud",
 		topic: "tahajjud",
 		status: 40,
-		image: require("../assets/images/tahajjud.jpg"),
+		image: require("../assets/images/tahajjud.png"),
 		subTasks: [
 			{
 				name: "Pray 2 rakah at least",
-				done: false
+				done: false,
+				icon: require("../assets/icons/2.png")
 			},
 			{
 				name: "Pray 4 rakah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/4.png")
 			},
 			{
 				name: "Pray full 8 rakah",
-				done: false
+				done: false,
+				icon: require("../assets/icons/8.png")
 			}
 		]
 	},
