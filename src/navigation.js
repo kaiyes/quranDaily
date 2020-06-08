@@ -1,44 +1,38 @@
-import React, { useState } from "react"
-import { createStackNavigator } from "@react-navigation/stack"
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { Icon } from "react-native-elements"
+import React, { useState } from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Icon } from 'react-native-elements'
 import {
 	widthPercentageToDP as wp,
 	heightPercentageToDP as hp
-} from "react-native-responsive-screen"
+} from 'react-native-responsive-screen'
 
 //Screens
-import DeedScreen from "./screens/Deeds.screen"
-import DuaDetailScreen from "./screens/DuaDetails.screen"
-import SplashScreen from "./screens/Splash.screen"
-import DuaScreen from "./screens/DuaHome.screen"
-import AllDuaScreen from "./screens/AllDua.screen"
-import DuaCategoriesdScreen from "./screens/DuaCategoriesd.screen"
-import FavouriteScreen from "./screens/Favourites.screen"
-import DeedsHomeScreen from "./screens/DeedsHome.screen"
-import StatScreen from "./screens/Stats.screen"
-import QuranScreen from "./screens/Quran.screen"
+import DuaDetailScreen from './screens/DuaDetails.screen'
+import SplashScreen from './screens/Splash.screen'
+import DuaScreen from './screens/DuaHome.screen'
+import AllDuaScreen from './screens/AllDua.screen'
+import DuaCategoriesdScreen from './screens/DuaCategoriesd.screen'
+import FavouriteScreen from './screens/Favourites.screen'
+import DeedsHomeScreen from './screens/DeedsHome.screen'
+import StatScreen from './screens/Stats.screen'
+import QuranScreen from './screens/Quran.screen'
+import MemorizeScreen from './screens/Memorize.screen'
 
 //components
-import IconWithBadge from "./components/ChatIcon"
+import IconWithBadge from './components/ChatIcon'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
 function Splash() {
-	return (
-		<Stack.Navigator headerMode="none">
-			<Stack.Screen name="Splash" component={SplashScreen} />
-		</Stack.Navigator>
-	)
+	return <SplashScreen />
 }
 
 function DeedStack() {
 	return (
 		<Stack.Navigator headerMode="none">
 			<Stack.Screen name="DeedsHome" component={DeedsHomeScreen} />
-			<Stack.Screen name="Deeds" component={DeedScreen} />
-			<Stack.Screen name="DeedDetail" component={DuaCategoriesdScreen} />
 		</Stack.Navigator>
 	)
 }
@@ -60,6 +54,7 @@ function SignUpStack() {
 		<Stack.Navigator headerMode="none">
 			<>
 				<Stack.Screen name="SignUp" component={SignUpScreen} />
+
 				<Stack.Screen name="LogIn" component={LogInScreen} />
 			</>
 		</Stack.Navigator>
@@ -74,20 +69,20 @@ function LoggedInStack() {
 					let iconName
 
 					switch (route.name) {
-						case "Deeds":
-							iconName = "list"
+						case 'Deeds':
+							iconName = 'list'
 							break
-						case "Dua":
-							iconName = "book"
+						case 'Dua':
+							iconName = 'book'
 							break
-						case "Stats":
-							iconName = "bar-graph"
+						case 'Stats':
+							iconName = 'bar-graph'
 							break
-						case "Quran":
-							iconName = "book"
+						case 'Quran':
+							iconName = 'book'
 							break
-						case "Memorize":
-							iconName = "save"
+						case 'Memorize':
+							iconName = 'save'
 							break
 						default:
 					}
@@ -96,7 +91,7 @@ function LoggedInStack() {
 					return (
 						<IconWithBadge
 							name={iconName}
-							type={"entypo"}
+							type={'entypo'}
 							size={22}
 							color={color}
 							badgeCount={0}
@@ -105,22 +100,21 @@ function LoggedInStack() {
 				}
 			})}
 			tabBarOptions={{
-				activeTintColor: "white",
-				inactiveTintColor: "darkseagreen",
+				activeTintColor: 'white',
+				inactiveTintColor: 'darkseagreen',
 				style: {
-					backgroundColor: "seagreen"
+					backgroundColor: 'seagreen'
 				},
 				labelStyle: {
-					fontWeight: "400",
-					fontFamily: "Menlo",
+					fontWeight: '400',
+					fontFamily: 'Menlo',
 					fontSize: 14
 				}
-			}}
-		>
+			}}>
 			<Tab.Screen name="Deeds" component={DeedStack} />
 			<Tab.Screen name="Quran" component={QuranScreen} />
 			<Tab.Screen name="Dua" component={DuaStack} />
-			<Tab.Screen name="Memorize" component={StatScreen} />
+			<Tab.Screen name="Memorize" component={MemorizeScreen} />
 			<Tab.Screen name="Stats" component={StatScreen} />
 		</Tab.Navigator>
 	)

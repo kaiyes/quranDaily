@@ -30,6 +30,7 @@ export default function AllDua({ route, navigation }) {
 				</TouchableOpacity>
 				<Text style={styles.navHeader}>All Duas</Text>
 			</View>
+
 			<FlatList
 				data={Duas}
 				tabLabel="All Duas"
