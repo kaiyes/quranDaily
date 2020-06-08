@@ -88,7 +88,8 @@ const styles = StyleSheet.create({
 		fontSize: 22,
 		fontWeight: "bold",
 		color: "darkolivegreen",
-		textAlign: "center"
+		textAlign: "center",
+		textDecorationLine: "underline"
 	},
 	dua: {
 		marginTop: hp("2%"),
@@ -139,7 +140,7 @@ const styles = StyleSheet.create({
 		height: hp("5%"),
 		alignItems: "flex-start",
 		justifyContent: "center",
-		paddingLeft: wp("1.5%"),
+		paddingLeft: wp("3.5%"),
 		marginBottom: hp("2%"),
 		borderBottomWidth: hp(".2%"),
 		borderBottomColor: "whitesmoke"

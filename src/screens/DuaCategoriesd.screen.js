@@ -29,6 +29,7 @@ export default function Categorised({ route, navigation }) {
 				>
 					<Icon name="arrow-bold-left" type="entypo" color="dimgray" />
 				</TouchableOpacity>
+
 				<Text style={styles.navHeader}>
 					{pageTitle != null
 						? pageTitle.length > 15
@@ -37,6 +38,7 @@ export default function Categorised({ route, navigation }) {
 						: ""}
 				</Text>
 			</View>
+
 			<FlatList
 				data={Duas.filter(item => item.category == category)}
 				keyExtractor={item => item.key}
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
 		width: 50,
 		borderRadius: 25,
 		backgroundColor: "lightgreen",
-		marginRight: 10,
+		marginRight: wp("5%"),
 		justifyContent: "center",
 		alignItems: "center"
 	},
@@ -97,7 +99,7 @@ const styles = StyleSheet.create({
 		fontSize: hp("2.1%"),
 		color: "darkolivegreen",
 		fontFamily: "Menlo",
-		width: wp("80%")
+		width: wp("75%")
 	},
 	backNav: {
 		flexDirection: "row",
