@@ -30,26 +30,32 @@ export default function DuaDetail({ route, navigation }) {
 					<Icon name="arrow-bold-left" type="entypo" color="dimgray" />
 				</TouchableOpacity>
 			</View>
+
 			<ScrollView style={styles.backgroundScrollView}>
 				<Text style={styles.title}>{pageTitle}</Text>
+
 				{duas.map(item => (
-					<View style={styles.section} keyExtractor={item => item.AyaID}>
+					<View style={styles.section} key={item.AyaID}>
 						<Text style={styles.dua}>{item.arabic}</Text>
+
 						<Text style={styles.spelling}>
 							<Text style={styles.preSpell}>উচ্চারণ:</Text>
 							{item.transliteration}
 						</Text>
+
 						<View style={styles.secondContainer}>
 							<Text style={styles.meaning}>
 								<Text style={styles.preSpell}>অর্থ:</Text>
 								{item.translations}
 							</Text>
+
 							{item.bottom.length < 1 ? null : (
 								<Text style={styles.meaning}>
 									<Text style={styles.preSpell}>ফাজায়েল:</Text>
 									{item.bottom}
 								</Text>
 							)}
+
 							{item.reference.length < 1 ? null : (
 								<Text style={styles.source}>
 									<Text style={styles.preSpell}>উৎস:</Text>
