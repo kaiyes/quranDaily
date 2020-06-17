@@ -45,10 +45,10 @@ export default function Dua({ navigation }) {
 				data={Categories}
 				keyExtractor={item => item.key}
 				contentContainerStyle={styles.scrollContainer}
-				numColumns={2}
+				numColumns={3}
 				renderItem={({ item }) => (
 					<TouchableOpacity
-						style={[styles.itemContainer, { backgroundColor: item.color }]}
+						style={styles.itemContainer}
 						onPress={function goToOwnScreen() {
 							navigation.navigate('Categories', {
 								pageTitle: item.pageTitle,
@@ -66,10 +66,10 @@ export default function Dua({ navigation }) {
 const styles = StyleSheet.create({
 	root: {
 		flex: 1,
-		backgroundColor: 'honeydew'
+		backgroundColor: 'white'
 	},
 	scrollContainer: {
-		backgroundColor: 'honeydew',
+		backgroundColor: 'white',
 		alignItems: 'center'
 	},
 	topNav: {
@@ -93,8 +93,9 @@ const styles = StyleSheet.create({
 		fontSize: 24
 	},
 	itemContainer: {
-		width: wp('42.5%'),
-		height: hp('25%'),
+		width: wp('25%'),
+		height: hp('16%'),
+		backgroundColor: '#343a40',
 		borderRadius: wp('2%'),
 		alignItems: 'center',
 		paddingTop: hp('1%'),
@@ -106,8 +107,9 @@ const styles = StyleSheet.create({
 		fontWeight: '500',
 		color: 'white',
 		fontFamily: 'Menlo',
-		fontSize: 22,
-		marginTop: hp('3%')
+		fontSize: 17,
+		marginTop: hp('3%'),
+		flexWrap: 'wrap'
 	},
 	duaHolder: {
 		width: wp('35%'),

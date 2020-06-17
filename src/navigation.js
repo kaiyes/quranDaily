@@ -3,8 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Icon } from 'react-native-elements'
 import {
-	widthPercentageToDP as wp,
-	heightPercentageToDP as hp
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 
 //Screens
@@ -26,103 +26,100 @@ const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
 function Splash() {
-	return <SplashScreen />
+  return <SplashScreen />
 }
 
 function DeedStack() {
-	return (
-		<Stack.Navigator headerMode="none">
-			<Stack.Screen name="DeedsHome" component={DeedsHomeScreen} />
-		</Stack.Navigator>
-	)
+  return (
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name="DeedsHome" component={DeedsHomeScreen} />
+    </Stack.Navigator>
+  )
 }
 
 function DuaStack() {
-	return (
-		<Stack.Navigator headerMode="none">
-			<Stack.Screen name="Dua Home" component={DuaScreen} />
-			<Stack.Screen name="AllDuas" component={AllDuaScreen} />
-			<Stack.Screen name="Categories" component={DuaCategoriesdScreen} />
-			<Stack.Screen name="Favourites" component={FavouriteScreen} />
-			<Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
-		</Stack.Navigator>
-	)
+  return (
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name="Dua Home" component={DuaScreen} />
+      <Stack.Screen name="AllDuas" component={AllDuaScreen} />
+      <Stack.Screen name="Categories" component={DuaCategoriesdScreen} />
+      <Stack.Screen name="Favourites" component={FavouriteScreen} />
+      <Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
+    </Stack.Navigator>
+  )
 }
 
 function SignUpStack() {
-	return (
-		<Stack.Navigator headerMode="none">
-			<>
-				<Stack.Screen name="SignUp" component={SignUpScreen} />
-
-				<Stack.Screen name="LogIn" component={LogInScreen} />
-			</>
-		</Stack.Navigator>
-	)
+  return (
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name="SignUp" component={SignUpScreen} />
+      <Stack.Screen name="LogIn" component={LogInScreen} />
+    </Stack.Navigator>
+  )
 }
 
 function LoggedInStack() {
-	return (
-		<Tab.Navigator
-			screenOptions={({ route }) => ({
-				tabBarIcon: ({ focused, color, size = 22 }) => {
-					let iconName
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size = 22 }) => {
+          let iconName
 
-					switch (route.name) {
-						case 'Deeds':
-							iconName = 'list'
-							break
-						case 'Dua':
-							iconName = 'book'
-							break
-						case 'Stats':
-							iconName = 'bar-graph'
-							break
-						case 'Quran':
-							iconName = 'book'
-							break
-						case 'Memorize':
-							iconName = 'save'
-							break
-						default:
-					}
+          switch (route.name) {
+            case 'Deeds':
+              iconName = 'list'
+              break
+            case 'Dua':
+              iconName = 'book'
+              break
+            case 'Stats':
+              iconName = 'bar-graph'
+              break
+            case 'Quran':
+              iconName = 'book'
+              break
+            case 'Memorize':
+              iconName = 'save'
+              break
+            default:
+          }
 
-					// You can return any component that you like here!
-					return (
-						<IconWithBadge
-							name={iconName}
-							type={'entypo'}
-							size={22}
-							color={color}
-							badgeCount={0}
-						/>
-					)
-				}
-			})}
-			tabBarOptions={{
-				activeTintColor: 'white',
-				inactiveTintColor: 'darkseagreen',
-				style: {
-					backgroundColor: 'seagreen'
-				},
-				labelStyle: {
-					fontWeight: '400',
-					fontFamily: 'Menlo',
-					fontSize: 14
-				}
-			}}>
-			<Tab.Screen name="Deeds" component={DeedStack} />
-			<Tab.Screen name="Quran" component={QuranScreen} />
-			<Tab.Screen name="Dua" component={DuaStack} />
-			<Tab.Screen name="Memorize" component={MemorizeScreen} />
-			<Tab.Screen name="Stats" component={StatScreen} />
-		</Tab.Navigator>
-	)
+          // You can return any component that you like here!
+          return (
+            <IconWithBadge
+              name={iconName}
+              type={'entypo'}
+              size={22}
+              color={color}
+              badgeCount={0}
+            />
+          )
+        }
+      })}
+      tabBarOptions={{
+        activeTintColor: 'white',
+        inactiveTintColor: 'darkseagreen',
+        style: {
+          backgroundColor: 'seagreen'
+        },
+        labelStyle: {
+          fontWeight: '400',
+          fontFamily: 'Menlo',
+          fontSize: 14
+        }
+      }}>
+      <Tab.Screen name="Deeds" component={DeedStack} />
+      <Tab.Screen name="Quran" component={QuranScreen} />
+      <Tab.Screen name="Dua" component={DuaStack} />
+      <Tab.Screen name="Memorize" component={MemorizeScreen} />
+      <Tab.Screen name="Stats" component={StatScreen} />
+    </Tab.Navigator>
+  )
 }
 
 export default function Navigator({ navigation }) {
-	const [isLoading, setIsLoading] = useState(false)
-	const [isLoggedIn, setIsLoggedIn] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
 
-	return isLoading ? Splash() : LoggedInStack()
+  return isLoading ? Splash() : LoggedInStack()
 }
