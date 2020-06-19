@@ -35,20 +35,78 @@ function Splash() {
 
 function DeedStack() {
 	return (
-		<Stack.Navigator headerMode="none">
-			<Stack.Screen name="DeedsHome" component={DeedsHomeScreen} />
+		<Stack.Navigator
+			screenOptions={{
+				...TransitionPresets.SlideFromRightIOS
+			}}>
+			<Stack.Screen
+				name="DeedsHome"
+				component={DeedsHomeScreen}
+				options={{ headerShown: false }}
+			/>
 		</Stack.Navigator>
 	)
 }
 
 function DuaStack() {
 	return (
-		<Stack.Navigator headerMode="none">
-			<Stack.Screen name="Dua Home" component={DuaScreen} />
-			<Stack.Screen name="AllDuas" component={AllDuaScreen} />
-			<Stack.Screen name="Categories" component={DuaCategoriesdScreen} />
-			<Stack.Screen name="Favourites" component={FavouriteScreen} />
-			<Stack.Screen name="DuaDetail" component={DuaDetailScreen} />
+		<Stack.Navigator
+			screenOptions={{
+				...TransitionPresets.SlideFromRightIOS
+			}}>
+			<Stack.Screen
+				name="Dua Home"
+				component={DuaScreen}
+				options={{
+					headerShown: false
+				}}
+			/>
+			<Stack.Screen
+				name="AllDuas"
+				component={AllDuaScreen}
+				options={({ route }) => ({
+					headerTitleAlign: 'center',
+					headerTintColor: 'black',
+					headerStyle: {
+						backgroundColor: '#80ca8e'
+					}
+				})}
+			/>
+			<Stack.Screen
+				name="Categories"
+				component={DuaCategoriesdScreen}
+				options={({ route }) => ({
+					title: route.params.category,
+					headerTitleAlign: 'center',
+					headerTintColor: 'black',
+					headerStyle: {
+						backgroundColor: '#80ca8e'
+					}
+				})}
+			/>
+
+			<Stack.Screen
+				name="Favourites"
+				component={FavouriteScreen}
+				options={({ route }) => ({
+					headerTitleAlign: 'center',
+					headerTintColor: 'black',
+					headerStyle: {
+						backgroundColor: '#80ca8e'
+					}
+				})}
+			/>
+			<Stack.Screen
+				name="DuaDetail"
+				component={DuaDetailScreen}
+				options={({ route }) => ({
+					headerTitleAlign: 'center',
+					headerTintColor: 'black',
+					headerStyle: {
+						backgroundColor: '#80ca8e'
+					}
+				})}
+			/>
 		</Stack.Navigator>
 	)
 }
