@@ -1,3 +1,4 @@
+export default
 {
   "number": 86,
   "name": "سورة الطارق",

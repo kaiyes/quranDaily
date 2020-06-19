@@ -1,3 +1,4 @@
+export default
 {
   "number": 76,
   "name": "سورة الانسان",

@@ -1,3 +1,4 @@
+export default
 {
   "number": 60,
   "name": "سورة الممتحنة",

@@ -1,3 +1,4 @@
+export default
 {
   "number": 100,
   "name": "سورة العاديات",

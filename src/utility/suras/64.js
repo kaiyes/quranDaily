@@ -1,3 +1,4 @@
+export default
 {
   "number": 64,
   "name": "سورة التغابن",

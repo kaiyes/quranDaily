@@ -1,3 +1,4 @@
+export default
 {
   "number": 59,
   "name": "سورة الحشر",

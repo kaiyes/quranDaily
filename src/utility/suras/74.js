@@ -1,3 +1,4 @@
+export default
 {
   "number": 74,
   "name": "سورة المدثر",

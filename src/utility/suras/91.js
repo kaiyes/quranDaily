@@ -1,3 +1,4 @@
+export default
 {
   "number": 91,
   "name": "سورة الشمس",

@@ -1,3 +1,4 @@
+export default
 {
   "number": 107,
   "name": "سورة الماعون",

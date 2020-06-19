@@ -1,3 +1,4 @@
+export default
 {
   "number": 75,
   "name": "سورة القيامة",

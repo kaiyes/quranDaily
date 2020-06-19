@@ -1,3 +1,4 @@
+export default
 {
   "number": 90,
   "name": "سورة البلد",

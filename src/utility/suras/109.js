@@ -1,3 +1,4 @@
+export default
 {
   "number": 109,
   "name": "سورة الكافرون",

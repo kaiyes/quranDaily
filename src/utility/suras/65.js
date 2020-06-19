@@ -1,3 +1,4 @@
+export default
 {
   "number": 65,
   "name": "سورة الطلاق",

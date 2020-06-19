@@ -1,3 +1,4 @@
+export default
 {
   "number": 106,
   "name": "سورة قريش",

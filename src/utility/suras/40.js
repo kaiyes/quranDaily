@@ -1,3 +1,4 @@
+export default
 {
   "number": 40,
   "name": "سورة غافر",

@@ -1,3 +1,4 @@
+export default
 {
   "number": 19,
   "name": "سورة مريم",

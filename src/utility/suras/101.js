@@ -1,3 +1,4 @@
+export default
 {
   "number": 101,
   "name": "سورة القارعة",

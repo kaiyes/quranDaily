@@ -1,3 +1,4 @@
+export default
 {
   "number": 87,
   "name": "سورة الأعلى",

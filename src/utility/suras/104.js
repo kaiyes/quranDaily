@@ -1,3 +1,4 @@
+export default
 {
   "number": 104,
   "name": "سورة الهمزة",

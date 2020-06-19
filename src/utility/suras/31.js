@@ -1,3 +1,4 @@
+export default
 {
   "number": 31,
   "name": "سورة لقمان",

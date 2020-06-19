@@ -1,3 +1,4 @@
+export default
 {
   "number": 82,
   "name": "سورة الإنفطار",

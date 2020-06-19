@@ -1,3 +1,4 @@
+export default
 {
   "number": 14,
   "name": "سورة ابراهيم",

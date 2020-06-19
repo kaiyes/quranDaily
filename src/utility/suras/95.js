@@ -1,3 +1,4 @@
+export default
 {
   "number": 95,
   "name": "سورة التين",

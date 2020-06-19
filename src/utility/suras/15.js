@@ -1,3 +1,4 @@
+export default
 {
   "number": 15,
   "name": "سورة الحجر",

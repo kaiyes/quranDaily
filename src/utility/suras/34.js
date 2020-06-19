@@ -1,3 +1,4 @@
+export default
 {
   "number": 34,
   "name": "سورة سبإ",

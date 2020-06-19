@@ -1,3 +1,4 @@
+export default
 {
   "number": 58,
   "name": "سورة المجادلة",

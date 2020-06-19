@@ -1,3 +1,4 @@
+export default
 {
   "number": 49,
   "name": "سورة الحجرات",

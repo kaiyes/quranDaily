@@ -1,3 +1,4 @@
+export default
 {
   "number": 17,
   "name": "سورة الإسراء",

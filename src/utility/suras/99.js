@@ -1,3 +1,4 @@
+export default
 {
   "number": 99,
   "name": "سورة الزلزلة",

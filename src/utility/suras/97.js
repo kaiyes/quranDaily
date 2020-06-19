@@ -1,3 +1,4 @@
+export default
 {
   "number": 97,
   "name": "سورة القدر",

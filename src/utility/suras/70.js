@@ -1,3 +1,4 @@
+export default
 {
   "number": 70,
   "name": "سورة المعارج",

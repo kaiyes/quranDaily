@@ -1,3 +1,4 @@
+export default
 {
   "number": 18,
   "name": "سورة الكهف",

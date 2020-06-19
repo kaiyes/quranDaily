@@ -1,3 +1,4 @@
+export default
 {
   "number": 33,
   "name": "سورة الأحزاب",

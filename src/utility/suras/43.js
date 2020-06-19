@@ -1,3 +1,4 @@
+export default
 {
   "number": 43,
   "name": "سورة الزخرف",

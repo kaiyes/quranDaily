@@ -1,3 +1,4 @@
+export default
 {
   "number": 57,
   "name": "سورة الحديد",

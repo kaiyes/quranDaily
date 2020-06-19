@@ -1,3 +1,4 @@
+export default
 {
   "number": 71,
   "name": "سورة نوح",

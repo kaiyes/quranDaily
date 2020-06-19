@@ -1,3 +1,4 @@
+export default
 {
   "number": 21,
   "name": "سورة الأنبياء",

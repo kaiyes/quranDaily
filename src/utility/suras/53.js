@@ -1,3 +1,4 @@
+export default
 {
   "number": 53,
   "name": "سورة النجم",

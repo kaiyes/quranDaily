@@ -1,3 +1,4 @@
+export default
 {
   "number": 110,
   "name": "سورة النصر",

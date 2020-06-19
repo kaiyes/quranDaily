@@ -1,3 +1,4 @@
+export default
 {
   "number": 89,
   "name": "سورة الفجر",

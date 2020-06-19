@@ -1,3 +1,4 @@
+export default
 {
   "number": 41,
   "name": "سورة فصلت",

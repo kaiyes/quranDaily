@@ -1,3 +1,4 @@
+export default
 {
   "number": 16,
   "name": "سورة النحل",

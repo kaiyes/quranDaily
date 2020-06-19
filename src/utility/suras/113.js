@@ -1,3 +1,4 @@
+export default
 {
   "number": 113,
   "name": "سورة الفلق",

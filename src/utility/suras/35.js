@@ -1,3 +1,4 @@
+export default
 {
   "number": 35,
   "name": "سورة فاطر",

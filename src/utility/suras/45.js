@@ -1,3 +1,4 @@
+export default
 {
   "number": 45,
   "name": "سورة الجاثية",

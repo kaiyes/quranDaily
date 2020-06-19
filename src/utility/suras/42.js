@@ -1,3 +1,4 @@
+export default
 {
   "number": 42,
   "name": "سورة الشورى",

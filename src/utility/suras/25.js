@@ -1,3 +1,4 @@
+export default
 {
   "number": 25,
   "name": "سورة الفرقان",

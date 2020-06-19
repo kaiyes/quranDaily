@@ -1,3 +1,4 @@
+export default
 {
   "number": 79,
   "name": "سورة النازعات",

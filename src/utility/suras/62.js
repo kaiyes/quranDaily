@@ -1,3 +1,4 @@
+export default
 {
   "number": 62,
   "name": "سورة الجمعة",

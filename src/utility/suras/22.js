@@ -1,3 +1,4 @@
+export default
 {
   "number": 22,
   "name": "سورة الحج",

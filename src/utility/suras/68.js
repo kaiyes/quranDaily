@@ -1,3 +1,4 @@
+export default
 {
   "number": 68,
   "name": "سورة القلم",

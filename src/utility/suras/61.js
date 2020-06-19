@@ -1,3 +1,4 @@
+export default
 {
   "number": 61,
   "name": "سورة الصف",

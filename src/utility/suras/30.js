@@ -1,3 +1,4 @@
+export default
 {
   "number": 30,
   "name": "سورة الروم",

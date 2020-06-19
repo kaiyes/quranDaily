@@ -1,3 +1,4 @@
+export default
 {
   "number": 7,
   "name": "سورة الأعراف",

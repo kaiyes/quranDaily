@@ -1,3 +1,4 @@
+export default
 {
   "number": 37,
   "name": "سورة الصافات",

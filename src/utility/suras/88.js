@@ -1,3 +1,4 @@
+export default
 {
   "number": 88,
   "name": "سورة الغاشية",

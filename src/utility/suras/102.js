@@ -1,3 +1,4 @@
+export default
 {
   "number": 102,
   "name": "سورة التكاثر",

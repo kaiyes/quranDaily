@@ -1,3 +1,4 @@
+export default
 {
   "number": 85,
   "name": "سورة البروج",

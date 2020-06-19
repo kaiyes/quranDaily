@@ -1,3 +1,4 @@
+export default
 {
   "number": 56,
   "name": "سورة الواقعة",

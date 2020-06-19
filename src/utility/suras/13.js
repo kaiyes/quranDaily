@@ -1,3 +1,4 @@
+export default
 {
   "number": 13,
   "name": "سورة الرعد",

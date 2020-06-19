@@ -1,3 +1,4 @@
+export default
 {
   "number": 84,
   "name": "سورة الإنشقاق",

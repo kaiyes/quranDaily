@@ -1,3 +1,4 @@
+export default
 {
   "number": 83,
   "name": "سورة المطففين",

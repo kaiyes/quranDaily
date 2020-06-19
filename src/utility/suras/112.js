@@ -1,3 +1,4 @@
+export default
 {
   "number": 112,
   "name": "سورة الإخلاص",

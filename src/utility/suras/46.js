@@ -1,3 +1,4 @@
+export default
 {
   "number": 46,
   "name": "سورة الأحقاف",

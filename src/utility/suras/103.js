@@ -1,3 +1,4 @@
+export default
 {
   "number": 103,
   "name": "سورة العصر",

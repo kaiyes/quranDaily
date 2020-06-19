@@ -1,3 +1,4 @@
+export default
 {
   "number": 54,
   "name": "سورة القمر",

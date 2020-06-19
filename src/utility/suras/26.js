@@ -1,3 +1,4 @@
+export default
 {
   "number": 26,
   "name": "سورة الشعراء",

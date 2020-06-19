@@ -1,3 +1,4 @@
+export default
 {
   "number": 63,
   "name": "سورة المنافقون",

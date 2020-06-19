@@ -1,3 +1,4 @@
+export default
 {
   "number": 36,
   "name": "سورة يس",

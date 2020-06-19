@@ -1,3 +1,4 @@
+export default
 {
   "number": 92,
   "name": "سورة الليل",

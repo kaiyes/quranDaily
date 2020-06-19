@@ -1,3 +1,4 @@
+export default
 {
   "number": 69,
   "name": "سورة الحاقة",

@@ -1,3 +1,4 @@
+export default
 {
   "number": 20,
   "name": "سورة طه",

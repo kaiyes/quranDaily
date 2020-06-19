@@ -1,3 +1,4 @@
+export default
 {
   "number": 108,
   "name": "سورة الكوثر",

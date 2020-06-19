@@ -1,3 +1,4 @@
+export default
 {
   "number": 93,
   "name": "سورة الضحى",

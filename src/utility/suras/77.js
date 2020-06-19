@@ -1,3 +1,4 @@
+export default
 {
   "number": 77,
   "name": "سورة المرسلات",

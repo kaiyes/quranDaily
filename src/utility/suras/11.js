@@ -1,3 +1,4 @@
+export default
 {
   "number": 11,
   "name": "سورة هود",

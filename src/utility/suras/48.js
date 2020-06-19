@@ -1,3 +1,4 @@
+export default
 {
   "number": 48,
   "name": "سورة الفتح",

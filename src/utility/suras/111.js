@@ -1,3 +1,4 @@
+export default
 {
   "number": 111,
   "name": "سورة المسد",

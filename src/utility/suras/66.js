@@ -1,3 +1,4 @@
+export default
 {
   "number": 66,
   "name": "سورة التحريم",

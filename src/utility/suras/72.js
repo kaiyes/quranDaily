@@ -1,3 +1,4 @@
+export default
 {
   "number": 72,
   "name": "سورة الجن",

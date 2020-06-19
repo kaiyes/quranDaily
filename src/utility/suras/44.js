@@ -1,3 +1,4 @@
+export default
 {
   "number": 44,
   "name": "سورة الدخان",
