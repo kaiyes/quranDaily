@@ -36,11 +36,13 @@ export default function Quran({ navigation: { navigate } }) {
 				}
 				onPress={() => navigate('Sura', { suraName: item.transliteration_en })}>
 				<Text style={styles.number}>{item.number}</Text>
+
 				<View style={styles.nameBlock}>
 					<View style={styles.nameRow}>
 						<Text style={styles.name}>{item.transliteration_en}</Text>
 						<Text style={styles.italicSubtitle}>{item.transliteration_en}</Text>
 					</View>
+
 					<Text style={styles.subTitle}>
 						{item.revelation_type} - {item.total_verses} verses
 					</Text>

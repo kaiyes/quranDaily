@@ -61,10 +61,13 @@ function DuaStack() {
 					headerShown: false
 				}}
 			/>
+
 			<Stack.Screen
 				name="AllDuas"
 				component={AllDuaScreen}
 				options={({ route }) => ({
+					title: 'all duas',
+					headerBackTitle: null,
 					headerTitleAlign: 'center',
 					headerTintColor: 'black',
 					headerStyle: {
@@ -72,11 +75,13 @@ function DuaStack() {
 					}
 				})}
 			/>
+
 			<Stack.Screen
 				name="Categories"
 				component={DuaCategoriesdScreen}
 				options={({ route }) => ({
-					title: route.params.category,
+					title: route.params.pageTitle,
+					headerBackTitle: null,
 					headerTitleAlign: 'center',
 					headerTintColor: 'black',
 					headerStyle: {
@@ -96,6 +101,7 @@ function DuaStack() {
 					}
 				})}
 			/>
+
 			<Stack.Screen
 				name="DuaDetail"
 				component={DuaDetailScreen}
@@ -130,6 +136,7 @@ function QuranStack() {
 				name="Quran"
 				component={QuranScreen}
 				options={{
+					headerShown: false,
 					headerTitleAlign: 'center',
 					headerTintColor: 'black',
 					headerStyle: {

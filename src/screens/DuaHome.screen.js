@@ -49,12 +49,12 @@ export default function Dua({ navigation }) {
 				renderItem={({ item }) => (
 					<TouchableOpacity
 						style={styles.itemContainer}
-						onPress={function goToOwnScreen() {
+						onPress={() =>
 							navigation.navigate('Categories', {
-								pageTitle: item.pageTitle,
+								pageTitle: item.name,
 								category: item.category
 							})
-						}}>
+						}>
 						<Text style={styles.itemName}>{item.name}</Text>
 					</TouchableOpacity>
 				)}
