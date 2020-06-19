@@ -13,10 +13,12 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 
-import Suras from '../utility/suras.js'
+import Sura from '../utility/sura.js'
 import '../assets/fonts/me_quran.ttf'
 
-export default function Quran({ navigation: { navigate } }) {
+export default function Quran({ route }) {
+	const { suraName } = route.params
+
 	function ayah(item) {
 		return (
 			<View style={styles.ayahBlock}>
@@ -26,36 +28,13 @@ export default function Quran({ navigation: { navigate } }) {
 		)
 	}
 
-	function suraBlock(item) {
-		return (
-			<TouchableOpacity
-				style={
-					item.number % 2 === 0
-						? [styles.suraBlock, { backgroundColor: 'palegoldenrod' }]
-						: [styles.suraBlock, { backgroundColor: 'lemonchiffon' }]
-				}
-				onPress={() => navigate('Sura', { suraName: item.transliteration_en })}>
-				<Text style={styles.number}>{item.number}</Text>
-				<View style={styles.nameBlock}>
-					<View style={styles.nameRow}>
-						<Text style={styles.name}>{item.transliteration_en}</Text>
-						<Text style={styles.italicSubtitle}>{item.transliteration_en}</Text>
-					</View>
-					<Text style={styles.subTitle}>
-						{item.revelation_type} - {item.total_verses} verses
-					</Text>
-				</View>
-			</TouchableOpacity>
-		)
-	}
-
 	return (
 		<SafeAreaView style={styles.container}>
 			<FlatList
-				data={Suras}
+				data={Sura.verses}
 				keyExtractor={item => item.number}
 				contentContainerStyle={styles.flatList}
-				renderItem={({ item }) => suraBlock(item)}
+				renderItem={({ item }) => ayah(item)}
 			/>
 		</SafeAreaView>
 	)
