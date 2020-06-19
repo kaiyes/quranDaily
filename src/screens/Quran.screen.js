@@ -14,18 +14,8 @@ import {
 } from 'react-native-responsive-screen'
 
 import Suras from '../utility/suras.js'
-import '../assets/fonts/me_quran.ttf'
 
 export default function Quran({ navigation: { navigate } }) {
-	function ayah(item) {
-		return (
-			<View style={styles.ayahBlock}>
-				<Text style={styles.ayah}>{item.text}</Text>
-				<Text style={styles.translation}>{item.translation_en}</Text>
-			</View>
-		)
-	}
-
 	function suraBlock(item) {
 		return (
 			<TouchableOpacity
@@ -34,7 +24,12 @@ export default function Quran({ navigation: { navigate } }) {
 						? [styles.suraBlock, { backgroundColor: 'palegoldenrod' }]
 						: [styles.suraBlock, { backgroundColor: 'lemonchiffon' }]
 				}
-				onPress={() => navigate('Sura', { suraName: item.transliteration_en })}>
+				onPress={() =>
+					navigate('Sura', {
+						suraName: item.transliteration_en,
+						suraNumber: item.number
+					})
+				}>
 				<Text style={styles.number}>{item.number}</Text>
 
 				<View style={styles.nameBlock}>
@@ -68,23 +63,9 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: 'lemonchiffon'
 	},
-	ayah: {
-		fontSize: 32,
-		fontFamily: 'me_quran',
-		marginBottom: hp('1%')
-	},
 	name: {
 		fontSize: 17,
 		fontFamily: 'Menlo'
-	},
-	ayahBlock: {
-		width: wp('100%'),
-		alignItems: 'flex-end',
-		paddingHorizontal: wp('4%'),
-		paddingVertical: hp('1%'),
-		marginBottom: hp('2%'),
-		borderBottomWidth: 1,
-		borderBottomColor: 'silver'
 	},
 	suraBlock: {
 		width: wp('100%'),
@@ -93,18 +74,13 @@ const styles = StyleSheet.create({
 		paddingHorizontal: wp('5%'),
 		paddingVertical: hp('3%')
 	},
-	translation: {
-		fontSize: 17,
-		fontFamily: 'Menlo',
-		marginBottom: hp('1%')
-	},
 	subTitle: {
 		fontSize: 14,
 		fontWeight: '200',
 		marginTop: hp('.5%')
 	},
 	number: {
-		fontSize: 24,
+		fontSize: 20,
 		marginRight: wp('4%')
 	},
 	nameRow: {
