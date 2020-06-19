@@ -66,10 +66,10 @@ export default function Dua({ navigation }) {
 const styles = StyleSheet.create({
 	root: {
 		flex: 1,
-		backgroundColor: 'white'
+		backgroundColor: 'honeydew'
 	},
 	scrollContainer: {
-		backgroundColor: 'white',
+		backgroundColor: 'honeydew',
 		alignItems: 'center'
 	},
 	topNav: {
