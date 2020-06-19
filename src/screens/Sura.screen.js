@@ -13,7 +13,6 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 
-import Sura from '../utility/suras/1'
 import '../assets/fonts/me_quran.ttf'
 
 export default function Quran({ route }) {
@@ -289,6 +288,194 @@ export default function Quran({ route }) {
 				break
 			case 67:
 				suraObject = require('../utility/suras/67')
+				setSura(suraObject.default.verses)
+				break
+			case 68:
+				suraObject = require('../utility/suras/68')
+				setSura(suraObject.default.verses)
+				break
+			case 69:
+				suraObject = require('../utility/suras/69')
+				setSura(suraObject.default.verses)
+				break
+			case 70:
+				suraObject = require('../utility/suras/70')
+				setSura(suraObject.default.verses)
+				break
+			case 71:
+				suraObject = require('../utility/suras/71')
+				setSura(suraObject.default.verses)
+				break
+			case 72:
+				suraObject = require('../utility/suras/72')
+				setSura(suraObject.default.verses)
+				break
+			case 73:
+				suraObject = require('../utility/suras/73')
+				setSura(suraObject.default.verses)
+				break
+			case 74:
+				suraObject = require('../utility/suras/74')
+				setSura(suraObject.default.verses)
+				break
+			case 75:
+				suraObject = require('../utility/suras/75')
+				setSura(suraObject.default.verses)
+				break
+			case 76:
+				suraObject = require('../utility/suras/76')
+				setSura(suraObject.default.verses)
+				break
+			case 77:
+				suraObject = require('../utility/suras/77')
+				setSura(suraObject.default.verses)
+				break
+			case 78:
+				suraObject = require('../utility/suras/78')
+				setSura(suraObject.default.verses)
+				break
+			case 79:
+				suraObject = require('../utility/suras/79')
+				setSura(suraObject.default.verses)
+				break
+			case 80:
+				suraObject = require('../utility/suras/80')
+				setSura(suraObject.default.verses)
+				break
+			case 81:
+				suraObject = require('../utility/suras/81')
+				setSura(suraObject.default.verses)
+				break
+			case 82:
+				suraObject = require('../utility/suras/82')
+				setSura(suraObject.default.verses)
+				break
+			case 83:
+				suraObject = require('../utility/suras/83')
+				setSura(suraObject.default.verses)
+				break
+			case 84:
+				suraObject = require('../utility/suras/84')
+				setSura(suraObject.default.verses)
+				break
+			case 85:
+				suraObject = require('../utility/suras/85')
+				setSura(suraObject.default.verses)
+				break
+			case 86:
+				suraObject = require('../utility/suras/85')
+				setSura(suraObject.default.verses)
+				break
+			case 87:
+				suraObject = require('../utility/suras/87')
+				setSura(suraObject.default.verses)
+				break
+			case 88:
+				suraObject = require('../utility/suras/88')
+				setSura(suraObject.default.verses)
+				break
+			case 89:
+				suraObject = require('../utility/suras/89')
+				setSura(suraObject.default.verses)
+				break
+			case 90:
+				suraObject = require('../utility/suras/90')
+				setSura(suraObject.default.verses)
+				break
+			case 91:
+				suraObject = require('../utility/suras/91')
+				setSura(suraObject.default.verses)
+				break
+			case 92:
+				suraObject = require('../utility/suras/92')
+				setSura(suraObject.default.verses)
+				break
+			case 93:
+				suraObject = require('../utility/suras/93')
+				setSura(suraObject.default.verses)
+				break
+			case 94:
+				suraObject = require('../utility/suras/94')
+				setSura(suraObject.default.verses)
+				break
+			case 95:
+				suraObject = require('../utility/suras/95')
+				setSura(suraObject.default.verses)
+				break
+			case 96:
+				suraObject = require('../utility/suras/96')
+				setSura(suraObject.default.verses)
+				break
+			case 97:
+				suraObject = require('../utility/suras/97')
+				setSura(suraObject.default.verses)
+				break
+			case 98:
+				suraObject = require('../utility/suras/98')
+				setSura(suraObject.default.verses)
+				break
+			case 99:
+				suraObject = require('../utility/suras/99')
+				setSura(suraObject.default.verses)
+				break
+			case 100:
+				suraObject = require('../utility/suras/100')
+				setSura(suraObject.default.verses)
+				break
+			case 101:
+				suraObject = require('../utility/suras/101')
+				setSura(suraObject.default.verses)
+				break
+			case 102:
+				suraObject = require('../utility/suras/102')
+				setSura(suraObject.default.verses)
+				break
+			case 103:
+				suraObject = require('../utility/suras/103')
+				setSura(suraObject.default.verses)
+				break
+			case 104:
+				suraObject = require('../utility/suras/104')
+				setSura(suraObject.default.verses)
+				break
+			case 105:
+				suraObject = require('../utility/suras/105')
+				setSura(suraObject.default.verses)
+				break
+			case 106:
+				suraObject = require('../utility/suras/106')
+				setSura(suraObject.default.verses)
+				break
+			case 107:
+				suraObject = require('../utility/suras/107')
+				setSura(suraObject.default.verses)
+				break
+			case 108:
+				suraObject = require('../utility/suras/108')
+				setSura(suraObject.default.verses)
+				break
+			case 109:
+				suraObject = require('../utility/suras/109')
+				setSura(suraObject.default.verses)
+				break
+			case 110:
+				suraObject = require('../utility/suras/110')
+				setSura(suraObject.default.verses)
+				break
+			case 111:
+				suraObject = require('../utility/suras/111')
+				setSura(suraObject.default.verses)
+				break
+			case 112:
+				suraObject = require('../utility/suras/112')
+				setSura(suraObject.default.verses)
+				break
+			case 113:
+				suraObject = require('../utility/suras/113')
+				setSura(suraObject.default.verses)
+				break
+			case 114:
+				suraObject = require('../utility/suras/114')
 				setSura(suraObject.default.verses)
 				break
 			default:
