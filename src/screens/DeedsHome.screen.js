@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import {
 	SafeAreaView,
 	StyleSheet,
@@ -8,15 +8,15 @@ import {
 	FlatList,
 	TouchableOpacity,
 	Image
-} from "react-native"
+} from 'react-native'
 import {
 	widthPercentageToDP as wp,
 	heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { Icon } from "react-native-elements"
-import { Bar } from "react-native-progress"
+} from 'react-native-responsive-screen'
+import { Icon } from 'react-native-elements'
+import { Bar } from 'react-native-progress'
 
-import FakeData from "../utility/fakeData"
+import FakeData from '../utility/fakeData'
 
 export default function Deeds({ navigation }) {
 	function renderItem({ item: { status, topicName, topic, subTasks, image } }) {
@@ -30,7 +30,11 @@ export default function Deeds({ navigation }) {
 					<View style={styles.dotHolder}>
 						{subTasks.map(task => (
 							<TouchableOpacity key={Math.random()}>
-								<Image source={task.icon} style={styles.taskIcon} />
+								<Image
+									source={task.icon}
+									style={styles.taskIcon}
+									blurRadius={task.done ? 7 : null}
+								/>
 							</TouchableOpacity>
 						))}
 					</View>
@@ -59,79 +63,79 @@ export default function Deeds({ navigation }) {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "white"
+		backgroundColor: 'white'
 	},
 	header: {
-		fontWeight: "400",
-		color: "black",
-		fontFamily: "Menlo",
+		fontWeight: '400',
+		color: 'black',
+		fontFamily: 'Menlo',
 		fontSize: 22,
-		marginLeft: wp("5%"),
-		marginTop: hp("1%")
+		marginLeft: wp('5%'),
+		marginTop: hp('1%')
 	},
 	headerSubtitle: {
-		fontWeight: "400",
-		color: "gray",
-		fontFamily: "Menlo",
+		fontWeight: '400',
+		color: 'gray',
+		fontFamily: 'Menlo',
 		fontSize: 17,
-		marginLeft: wp("5%")
+		marginLeft: wp('5%')
 	},
 	flatList: {
-		width: wp("100%"),
-		marginTop: hp("3%"),
-		alignItems: "center"
+		width: wp('100%'),
+		marginTop: hp('3%'),
+		alignItems: 'center'
 	},
 	card: {
-		backgroundColor: "tomato",
-		width: wp("42.5%"),
-		borderRadius: wp("2%"),
-		alignItems: "center",
-		marginBottom: hp("3%"),
-		marginHorizontal: wp("2.5%"),
-		shadowColor: "#000",
+		backgroundColor: 'tomato',
+		width: wp('42.5%'),
+		borderRadius: wp('2%'),
+		alignItems: 'center',
+		marginBottom: hp('3%'),
+		marginHorizontal: wp('2.5%'),
+		shadowColor: '#000',
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.37,
 		shadowRadius: 4,
 		elevation: 4
 	},
 	cardHeader: {
-		fontFamily: "Menlo",
-		fontWeight: "500",
-		color: "white",
+		fontFamily: 'Menlo',
+		fontWeight: '500',
+		color: 'white',
 		fontSize: 17,
-		marginVertical: hp("1.5%")
+		marginVertical: hp('1.5%')
 	},
 	topRow: {
-		height: hp("12%"),
-		justifyContent: "center",
-		alignItems: "center"
+		height: hp('12%'),
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	bottomRow: {
 		flex: 1,
-		width: wp("42.5%"),
-		backgroundColor: "#343a40",
-		alignItems: "center",
-		paddingHorizontal: wp("2%"),
-		paddingBottom: hp("1.5%"),
-		borderBottomLeftRadius: wp("2%"),
-		borderBottomRightRadius: wp("2%")
+		width: wp('42.5%'),
+		backgroundColor: '#343a40',
+		alignItems: 'center',
+		paddingHorizontal: wp('2%'),
+		paddingBottom: hp('1.5%'),
+		borderBottomLeftRadius: wp('2%'),
+		borderBottomRightRadius: wp('2%')
 	},
 	dotHolder: {
-		flexDirection: "row",
-		flexWrap: "wrap",
-		justifyContent: "center"
+		flexDirection: 'row',
+		flexWrap: 'wrap',
+		justifyContent: 'center'
 	},
 	plusIcon: {
-		justifyContent: "center",
-		alignItems: "center"
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	button: {
-		position: "absolute",
+		position: 'absolute',
 		bottom: 0,
 		right: 0
 	},
 	icon: {
-		shadowColor: "#000",
+		shadowColor: '#000',
 		shadowOffset: { width: 0, height: 4 },
 		shadowOpacity: 0.37,
 		shadowRadius: 7.49,
@@ -139,17 +143,17 @@ const styles = StyleSheet.create({
 	},
 	image: {
 		flex: 1,
-		width: wp("42.5%"),
-		borderTopLeftRadius: wp("2%"),
-		borderTopRightRadius: wp("2%")
+		width: wp('42.5%'),
+		borderTopLeftRadius: wp('2%'),
+		borderTopRightRadius: wp('2%')
 	},
 	taskIcon: {
-		width: wp("10%"),
-		height: wp("10%"),
-		borderRadius: wp("5%"),
-		marginRight: wp("2%")
+		width: wp('10%'),
+		height: wp('10%'),
+		borderRadius: wp('5%'),
+		marginRight: wp('2%')
 	},
 	footer: {
-		height: wp("3%")
+		height: wp('3%')
 	}
 })

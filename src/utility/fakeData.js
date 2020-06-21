@@ -1,169 +1,169 @@
 const FakeData = [
 	{
-		topicName: "Fard Salah",
-		topic: "prayer",
+		topicName: 'Fard Salah',
+		topic: 'prayer',
 		status: 60,
-		image: require("../assets/images/prayer.png"),
+		image: require('../assets/images/prayer.png'),
 		subTasks: [
 			{
-				name: "Fajr",
-				done: false,
-				icon: require("../assets/icons/sun_up.png")
+				name: 'Fajr',
+				done: true,
+				icon: require('../assets/icons/sun_up.png')
 			},
 			{
-				name: "Dhuhr",
-				done: false,
-				icon: require("../assets/icons/sun_full.png")
+				name: 'Dhuhr',
+				done: true,
+				icon: require('../assets/icons/sun_full.png')
 			},
 			{
-				name: "Asr",
+				name: 'Asr',
 				done: false,
-				icon: require("../assets/icons/sun_asr.png")
+				icon: require('../assets/icons/sun_asr.png')
 			},
 			{
-				name: "Magrib",
+				name: 'Magrib',
 				done: false,
-				icon: require("../assets/icons/sun_down.png")
+				icon: require('../assets/icons/sun_down.png')
 			},
 			{
-				name: "Isha",
+				name: 'Isha',
 				done: false,
-				icon: require("../assets/icons/moon.png")
+				icon: require('../assets/icons/moon.png')
 			}
 		]
 	},
 
 	{
-		topicName: "Quran",
-		topic: "quran",
+		topicName: 'Quran',
+		topic: 'quran',
 		status: 90,
-		image: require("../assets/images/quran.jpg"),
+		image: require('../assets/images/quran.jpg'),
 		subTasks: [
 			{
-				name: "Memorize 5 ayah",
+				name: 'Memorize 5 ayah',
 				done: false,
-				icon: require("../assets/icons/5_ayah.png")
+				icon: require('../assets/icons/5_ayah.png')
 			},
 			{
-				name: "1 page",
+				name: '1 page',
 				done: false,
-				icon: require("../assets/icons/1_page.png")
+				icon: require('../assets/icons/1_page.png')
 			},
 			{
-				name: "Read at least 100 ayah",
-				done: false,
-				icon: require("../assets/icons/100.png")
+				name: 'Read at least 100 ayah',
+				done: true,
+				icon: require('../assets/icons/100.png')
 			},
 			{
-				name: "Read 1 Juz",
+				name: 'Read 1 Juz',
 				done: false,
-				icon: require("../assets/icons/1_juz.png")
+				icon: require('../assets/icons/1_juz.png')
 			},
 			{
-				name: "Read 1 Manzil",
+				name: 'Read 1 Manzil',
 				done: false,
-				icon: require("../assets/icons/1_monjil.png")
+				icon: require('../assets/icons/1_monjil.png')
 			}
 		]
 	},
 
 	{
-		topicName: "Sunna Salah",
-		topic: "sunnahPrayer",
-		image: require("../assets/images/sunnah.png"),
+		topicName: 'Sunna Salah',
+		topic: 'sunnahPrayer',
+		image: require('../assets/images/sunnah.png'),
 		status: 73,
 		subTasks: [
 			{
-				name: "Fajr 2 rakah",
+				name: 'Fajr 2 rakah',
 				done: false,
-				icon: require("../assets/icons/sun_up.png")
+				icon: require('../assets/icons/sun_up.png')
 			},
 			{
-				name: "Ishraq 4 rakah",
-				done: false,
-				icon: require("../assets/icons/sun_israq.png")
+				name: 'Ishraq 4 rakah',
+				done: true,
+				icon: require('../assets/icons/sun_israq.png')
 			},
 			{
-				name: "Dhuhr 2+4 rakah",
+				name: 'Dhuhr 2+4 rakah',
 				done: false,
-				icon: require("../assets/icons/sun_full.png")
+				icon: require('../assets/icons/sun_full.png')
 			},
 			{
-				name: "Magrib 2 rakah",
-				done: false,
-				icon: require("../assets/icons/sun_down.png")
+				name: 'Magrib 2 rakah',
+				done: true,
+				icon: require('../assets/icons/sun_down.png')
 			},
 			{
-				name: "Isha 2+1 rakah",
+				name: 'Isha 2+1 rakah',
 				done: false,
-				icon: require("../assets/icons/moon.png")
+				icon: require('../assets/icons/moon.png')
 			}
 		]
 	},
 
 	{
-		topicName: "Tahajjud",
-		topic: "tahajjud",
+		topicName: 'Tahajjud',
+		topic: 'tahajjud',
 		status: 40,
-		image: require("../assets/images/tahajjud.png"),
+		image: require('../assets/images/tahajjud.png'),
 		subTasks: [
 			{
-				name: "Pray 2 rakah at least",
-				done: false,
-				icon: require("../assets/icons/2.png")
+				name: 'Pray 2 rakah at least',
+				done: true,
+				icon: require('../assets/icons/2.png')
 			},
 			{
-				name: "Pray 4 rakah",
+				name: 'Pray 4 rakah',
 				done: false,
-				icon: require("../assets/icons/4.png")
+				icon: require('../assets/icons/4.png')
 			},
 			{
-				name: "Pray full 8 rakah",
+				name: 'Pray full 8 rakah',
 				done: false,
-				icon: require("../assets/icons/8.png")
+				icon: require('../assets/icons/8.png')
 			}
 		]
 	},
 
 	{
-		topicName: "Sadakah",
-		topic: "sadaqa",
+		topicName: 'Sadakah',
+		topic: 'sadaqa',
 		status: 10,
-		image: require("../assets/images/sadaqa.png"),
+		image: require('../assets/images/sadaqa.png'),
 		subTasks: [
 			{
-				name: "money",
+				name: 'money',
 				done: false,
-				icon: require("../assets/icons/money.png")
+				icon: require('../assets/icons/money.png')
 			},
 			{
-				name: "smile",
-				done: false,
-				icon: require("../assets/icons/intimate.jpg")
+				name: 'smile',
+				done: true,
+				icon: require('../assets/icons/intimate.jpg')
 			},
 			{
-				name: "lokma",
+				name: 'lokma',
 				done: false,
-				icon: require("../assets/icons/smile.png")
+				icon: require('../assets/icons/smile.png')
 			}
 		]
 	},
 
 	{
-		topicName: "Morning Dua/Evening Dua",
-		topic: "morningDua",
+		topicName: 'Morning Dua/Evening Dua',
+		topic: 'morningDua',
 		status: 46,
-		image: require("../assets/images/morning.jpg"),
+		image: require('../assets/images/morning.jpg'),
 		subTasks: [
 			{
-				name: "Read All",
+				name: 'Read All',
 				done: false,
-				icon: require("../assets/icons/sun_full.png")
+				icon: require('../assets/icons/sun_full.png')
 			},
 			{
-				name: "Read Collected ones",
+				name: 'Read Collected ones',
 				done: false,
-				icon: require("../assets/icons/moon_t.png")
+				icon: require('../assets/icons/moon_t.png')
 			}
 		]
 	}
