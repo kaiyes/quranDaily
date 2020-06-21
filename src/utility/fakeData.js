@@ -150,7 +150,7 @@ const FakeData = [
 	},
 
 	{
-		topicName: 'Morning Dua/Evening Dua',
+		topicName: 'Morn/Even Dua',
 		topic: 'morningDua',
 		status: 46,
 		image: require('../assets/images/morning.jpg'),

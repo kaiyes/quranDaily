@@ -33,8 +33,19 @@ export default function Deeds({ navigation }) {
 								<Image
 									source={task.icon}
 									style={styles.taskIcon}
-									blurRadius={task.done ? 7 : null}
+									blurRadius={task.done ? 10 : null}
+									borderColor={'green'}
+									borderWidth={task.done ? 4 : 0}
 								/>
+								{task.done ? (
+									<Icon
+										type={'entypo'}
+										name={'check'}
+										size={21}
+										color={'green'}
+										containerStyle={styles.iconCheck}
+									/>
+								) : null}
 							</TouchableOpacity>
 						))}
 					</View>
@@ -155,5 +166,10 @@ const styles = StyleSheet.create({
 	},
 	footer: {
 		height: wp('3%')
+	},
+	iconCheck: {
+		position: 'absolute',
+		top: 10,
+		left: 10
 	}
 })
