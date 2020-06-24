@@ -14,6 +14,9 @@ export default function Stats() {
 			<View style={styles.container}>
 				<SegmentedControlTab
 					values={['Week', 'Month', 'Year']}
+					tabTextStyle={styles.tabText}
+					activeTabStyle={styles.activeTab}
+					tabStyle={styles.tabStyle}
 					selectedIndex={selectedIndex}
 					onTabPress={item => setIndex(item)}
 				/>
@@ -36,5 +39,15 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white',
 		paddingHorizontal: wp('5%'),
 		paddingTop: hp('1%')
+	},
+	tabText: {
+		fontFamily: 'Menlo',
+		color: 'black'
+	},
+	activeTab: {
+		backgroundColor: 'forestgreen'
+	},
+	tabStyle: {
+		borderColor: 'forestgreen'
 	}
 })
