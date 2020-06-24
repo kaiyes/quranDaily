@@ -44,6 +44,7 @@
 		<string>Feather.ttf</string>
 		<string>me_quran.ttf</string>
 		<string>Entypo.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
