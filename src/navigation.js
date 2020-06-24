@@ -24,7 +24,7 @@ import MemorizeScreen from './screens/Memorize.screen'
 import SuraScreen from './screens/Sura.screen'
 
 //components
-import IconWithBadge from './components/ChatIcon'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -165,37 +165,38 @@ function LoggedInStack() {
 		<Tab.Navigator
 			screenOptions={({ route }) => ({
 				tabBarIcon: ({ focused, color, size = 22 }) => {
-					let iconName
-
 					switch (route.name) {
 						case 'Deeds':
-							iconName = 'list'
+							return (
+								<Icon name={'list'} type={'entypo'} size={22} color={color} />
+							)
 							break
 						case 'Dua':
-							iconName = 'book'
+							return <FontAwesome5 name={'pray'} size={18} color={color} />
+
 							break
 						case 'Stats':
-							iconName = 'bar-graph'
+							return (
+								<Icon
+									name={'bar-chart'}
+									type={'feather'}
+									size={22}
+									color={color}
+								/>
+							)
 							break
 						case 'Quran':
-							iconName = 'book'
+							return (
+								<Icon name={'book'} type={'entypo'} size={22} color={color} />
+							)
 							break
 						case 'Memorize':
-							iconName = 'save'
+							return (
+								<Icon name={'save'} type={'entypo'} size={22} color={color} />
+							)
 							break
 						default:
 					}
-
-					// You can return any component that you like here!
-					return (
-						<IconWithBadge
-							name={iconName}
-							type={'entypo'}
-							size={22}
-							color={color}
-							badgeCount={0}
-						/>
-					)
 				}
 			})}
 			tabBarOptions={{
