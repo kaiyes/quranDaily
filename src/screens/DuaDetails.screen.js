@@ -21,41 +21,43 @@ export default function DuaDetail({ route, navigation }) {
 
 	return (
 		<SafeAreaView style={styles.rootView}>
-			<ScrollView style={styles.backgroundScrollView}>
-				<Text style={styles.title}>{pageTitle}</Text>
+			<View>
+				<ScrollView contentContainerStyle={styles.backgroundScrollView}>
+					<Text style={styles.title}>{pageTitle}</Text>
 
-				{duas.map(item => (
-					<View style={styles.section} key={item.AyaID}>
-						<Text style={styles.dua}>{item.arabic}</Text>
+					{duas.map(item => (
+						<View style={styles.section} key={item.AyaID}>
+							<Text style={styles.dua}>{item.arabic}</Text>
 
-						<Text style={styles.spelling}>
-							<Text style={styles.preSpell}>উচ্চারণ:</Text>
-							{item.transliteration}
-						</Text>
-
-						<View style={styles.secondContainer}>
-							<Text style={styles.meaning}>
-								<Text style={styles.preSpell}>অর্থ:</Text>
-								{item.translations}
+							<Text style={styles.spelling}>
+								<Text style={styles.preSpell}>উচ্চারণ:</Text>
+								{item.transliteration}
 							</Text>
 
-							{item.bottom.length < 1 ? null : (
+							<View style={styles.secondContainer}>
 								<Text style={styles.meaning}>
-									<Text style={styles.preSpell}>ফাজায়েল:</Text>
-									{item.bottom}
+									<Text style={styles.preSpell}>অর্থ:</Text>
+									{item.translations}
 								</Text>
-							)}
 
-							{item.reference.length < 1 ? null : (
-								<Text style={styles.source}>
-									<Text style={styles.preSpell}>উৎস:</Text>
-									{item.reference}
-								</Text>
-							)}
+								{item.bottom.length < 1 ? null : (
+									<Text style={styles.meaning}>
+										<Text style={styles.preSpell}>ফাজায়েল:</Text>
+										{item.bottom}
+									</Text>
+								)}
+
+								{item.reference.length < 1 ? null : (
+									<Text style={styles.source}>
+										<Text style={styles.preSpell}>উৎস:</Text>
+										{item.reference}
+									</Text>
+								)}
+							</View>
 						</View>
-					</View>
-				))}
-			</ScrollView>
+					))}
+				</ScrollView>
+			</View>
 		</SafeAreaView>
 	)
 }
@@ -63,14 +65,11 @@ export default function DuaDetail({ route, navigation }) {
 const styles = StyleSheet.create({
 	rootView: {
 		flex: 1,
-		backgroundColor: 'honeydew',
-		paddingTop: hp('4%'),
-		paddingBottom: hp('5%')
+		backgroundColor: 'honeydew'
 	},
 	backgroundScrollView: {
 		backgroundColor: 'honeydew',
 		paddingHorizontal: wp('5%'),
-
 		paddingTop: hp('2%')
 	},
 	secondContainer: {
@@ -110,7 +109,8 @@ const styles = StyleSheet.create({
 		fontSize: 16,
 		fontWeight: '200',
 		fontFamily: 'Menlo',
-		color: 'darkolivegreen'
+		color: 'darkolivegreen',
+		marginBottom: hp('2%')
 	},
 	playButton: {
 		position: 'absolute',
