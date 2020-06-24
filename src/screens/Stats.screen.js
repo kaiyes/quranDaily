@@ -17,37 +17,48 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 export default function Stats() {
 	const [selectedIndex, setIndex] = useState(0)
+	const [icon, setIcon] = useState('book')
 
 	function iconRow() {
 		return (
 			<View style={styles.iconRow}>
-				<TouchableOpacity>
+				<TouchableOpacity onPress={() => setIcon('book')}>
 					<Icon
 						type={'entypo'}
 						name={'book'}
 						size={15}
 						reverse
-						color={'slateblue'}
+						color={icon === 'book' ? 'forestgreen' : 'slateblue'}
 						reverseColor={'white'}
 						containerStyle={styles.icon}
 					/>
 				</TouchableOpacity>
 
-				<TouchableOpacity style={styles.specialIcon}>
+				<TouchableOpacity
+					onPress={() => setIcon('mosque')}
+					style={[
+						styles.specialIcon,
+						{ backgroundColor: icon === 'mosque' ? 'forestgreen' : 'slateblue' }
+					]}>
 					<FontAwesome5 name={'mosque'} color={'white'} />
 				</TouchableOpacity>
 
-				<TouchableOpacity style={styles.specialIcon}>
+				<TouchableOpacity
+					style={[
+						styles.specialIcon,
+						{ backgroundColor: icon === 'pray' ? 'forestgreen' : 'slateblue' }
+					]}
+					onPress={() => setIcon('pray')}>
 					<FontAwesome5 name={'pray'} color={'white'} />
 				</TouchableOpacity>
 
-				<TouchableOpacity>
+				<TouchableOpacity onPress={() => setIcon('moon')}>
 					<Icon
 						type={'entypo'}
 						name={'moon'}
 						size={15}
 						reverse
-						color={'slateblue'}
+						color={icon === 'moon' ? 'forestgreen' : 'slateblue'}
 						reverseColor={'white'}
 						containerStyle={styles.icon}
 					/>
@@ -106,6 +117,7 @@ const styles = StyleSheet.create({
 	},
 	iconRow: {
 		flexDirection: 'row',
+		justifyContent: 'center',
 		alignItems: 'center',
 		marginVertical: hp('1%')
 	},
@@ -113,7 +125,6 @@ const styles = StyleSheet.create({
 		width: wp('8%'),
 		height: wp('8%'),
 		borderRadius: wp('4%'),
-		backgroundColor: 'slateblue',
 		justifyContent: 'center',
 		marginHorizontal: wp('1.5%'),
 		alignItems: 'center',
