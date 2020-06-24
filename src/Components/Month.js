@@ -25,31 +25,31 @@ export default function Week() {
 	const data = [
 		{
 			habitName: 'Quran',
-			fakeData: QuranData.slice(0, 7)
+			fakeData: QuranData.slice(0, 30)
 		},
 		{
 			habitName: 'Fard Salah',
-			fakeData: FardSalahData.slice(0, 7)
+			fakeData: FardSalahData.slice(0, 30)
 		},
 		{
 			habitName: 'Sunna Salah',
-			fakeData: SunnaSalahData.slice(0, 7)
+			fakeData: SunnaSalahData.slice(0, 30)
 		},
 		{
 			habitName: 'Tahajjud',
-			fakeData: TahajjudData.slice(0, 7)
+			fakeData: TahajjudData.slice(0, 30)
 		},
 		{
 			habitName: 'Sadakah',
-			fakeData: SadakahData.slice(0, 7)
+			fakeData: SadakahData.slice(0, 30)
 		},
 		{
 			habitName: 'Dua Morning',
-			fakeData: FardSalahData.slice(0, 7)
+			fakeData: FardSalahData.slice(0, 30)
 		},
 		{
 			habitName: 'Dua Evening',
-			fakeData: SadakahData.slice(0, 7)
+			fakeData: SadakahData.slice(0, 30)
 		}
 	]
 
@@ -123,10 +123,7 @@ const styles = StyleSheet.create({
 	},
 	boxes: {
 		flexDirection: 'row',
-		justifyContent: 'flex-start',
-		alignItems: 'center',
-		width: wp('80%'),
-		paddingLeft: wp('1.5%')
+		flexWrap: 'wrap'
 	},
 	habitName: {
 		fontSize: 14,

@@ -16,6 +16,7 @@ import { Icon } from 'react-native-elements'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 import Week from '../components/Week'
+import Month from '../components/Month'
 
 export default function Stats() {
 	const [selectedIndex, setIndex] = useState(0)
@@ -51,14 +52,6 @@ export default function Stats() {
 		)
 	}
 
-	function month() {
-		return (
-			<View style={styles.week}>
-				<Text style={styles.text}>Month</Text>
-			</View>
-		)
-	}
-
 	function year() {
 		return (
 			<View style={styles.week}>
@@ -81,7 +74,7 @@ export default function Stats() {
 
 				{iconRow()}
 
-				{selectedIndex === 2 ? year() : selectedIndex ? month() : Week()}
+				{selectedIndex === 2 ? year() : selectedIndex ? Month() : Week()}
 			</View>
 		</SafeAreaView>
 	)
