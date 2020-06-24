@@ -67,6 +67,30 @@ export default function Stats() {
 		)
 	}
 
+	function week() {
+		return (
+			<View style={styles.week}>
+				<Text style={styles.text}>week</Text>
+			</View>
+		)
+	}
+
+	function month() {
+		return (
+			<View style={styles.week}>
+				<Text style={styles.text}>Month</Text>
+			</View>
+		)
+	}
+
+	function year() {
+		return (
+			<View style={styles.week}>
+				<Text style={styles.text}>year</Text>
+			</View>
+		)
+	}
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.container}>
@@ -79,13 +103,9 @@ export default function Stats() {
 					onTabPress={item => setIndex(item)}
 				/>
 
-				{selectedIndex === 2 ? (
-					iconRow()
-				) : selectedIndex ? (
-					<Text style={styles.text}> 1</Text>
-				) : (
-					<Text style={styles.text}>0</Text>
-				)}
+				{iconRow()}
+
+				{selectedIndex === 2 ? year() : selectedIndex ? month() : week()}
 			</View>
 		</SafeAreaView>
 	)
