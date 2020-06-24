@@ -1,36 +1,40 @@
-import React from "react"
+import React, { useState } from 'react'
+import { SafeAreaView, StyleSheet, ScrollView, View, Text } from 'react-native'
 import {
-	SafeAreaView,
-	StyleSheet,
-	ScrollView,
-	View,
-	Text,
-	StatusBar
-} from "react-native"
-
-import {
-	Header,
-	LearnMoreLinks,
-	Colors,
-	DebugInstructions,
-	ReloadInstructions
-} from "react-native/Libraries/NewAppScreen"
+	widthPercentageToDP as wp,
+	heightPercentageToDP as hp
+} from 'react-native-responsive-screen'
+import SegmentedControlTab from 'react-native-segmented-control-tab'
 
 export default function Stats() {
+	const [selectedIndex, setIndex] = useState(0)
+
 	return (
-		<>
-			<StatusBar barStyle="dark-content" />
-			<SafeAreaView>
-				<View style={styles.sectionContainer}>
-					<Text style={styles.sectionTitle}> Stats </Text>
-				</View>
-			</SafeAreaView>
-		</>
+		<SafeAreaView style={styles.container}>
+			<View style={styles.container}>
+				<SegmentedControlTab
+					values={['Week', 'Month', 'Year']}
+					selectedIndex={selectedIndex}
+					onTabPress={item => setIndex(item)}
+				/>
+
+				{selectedIndex === 2 ? (
+					<Text style={styles.text}>2</Text>
+				) : selectedIndex ? (
+					<Text style={styles.text}> 1</Text>
+				) : (
+					<Text style={styles.text}>0</Text>
+				)}
+			</View>
+		</SafeAreaView>
 	)
 }
 
 const styles = StyleSheet.create({
-	scrollView: {
-		backgroundColor: Colors.lighter
+	container: {
+		flex: 1,
+		backgroundColor: 'white',
+		paddingHorizontal: wp('5%'),
+		paddingTop: hp('1%')
 	}
 })
