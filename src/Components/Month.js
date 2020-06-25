@@ -126,8 +126,9 @@ const styles = StyleSheet.create({
 		flexWrap: 'wrap'
 	},
 	habitName: {
-		fontSize: 14,
+		fontSize: 18,
 		fontFamily: 'Menlo',
+		fontWeight: 'bold',
 		padding: hp('.5%')
 	},
 	smallCircle: {

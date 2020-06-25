@@ -13,9 +13,29 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 
+import ProgressBar from 'react-native-progress/Bar'
+
 import Suras from '../utility/suras.js'
 
 export default function Quran({ navigation: { navigate } }) {
+	function switchBarWidth(ayahNumber) {
+		return ayahNumber < 10
+			? 20
+			: ayahNumber >= 10 && ayahNumber <= 30
+			? 30
+			: ayahNumber >= 30 && ayahNumber <= 50
+			? 40
+			: ayahNumber >= 50 && ayahNumber <= 100
+			? 50
+			: ayahNumber >= 100 && ayahNumber <= 150
+			? 60
+			: ayahNumber >= 150 && ayahNumber <= 200
+			? 70
+			: ayahNumber >= 200 && ayahNumber <= 300
+			? 80
+			: 10
+	}
+
 	function suraBlock(item) {
 		return (
 			<TouchableOpacity
@@ -24,12 +44,13 @@ export default function Quran({ navigation: { navigate } }) {
 						? [styles.suraBlock, { backgroundColor: 'palegoldenrod' }]
 						: [styles.suraBlock, { backgroundColor: 'lemonchiffon' }]
 				}
-				onPress={() =>
+				onPress={() => {
+					console.log(item)
 					navigate('Sura', {
 						suraName: item.transliteration_en,
 						suraNumber: item.number
 					})
-				}>
+				}}>
 				<Text style={styles.number}>{item.number}</Text>
 
 				<View style={styles.nameBlock}>
@@ -41,6 +62,13 @@ export default function Quran({ navigation: { navigate } }) {
 					<Text style={styles.subTitle}>
 						{item.revelation_type} - {item.total_verses} verses
 					</Text>
+
+					<View style={styles.spacerV} />
+					<ProgressBar
+						progress={0.2}
+						width={wp(`${switchBarWidth(item.total_verses)}`)}
+						color={'tan'}
+					/>
 				</View>
 			</TouchableOpacity>
 		)
@@ -91,5 +119,8 @@ const styles = StyleSheet.create({
 		fontWeight: '200',
 		fontStyle: 'italic',
 		marginLeft: wp('2%')
+	},
+	spacerV: {
+		height: hp('1%')
 	}
 })

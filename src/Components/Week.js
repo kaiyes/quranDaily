@@ -129,7 +129,8 @@ const styles = StyleSheet.create({
 		paddingLeft: wp('1.5%')
 	},
 	habitName: {
-		fontSize: 14,
+		fontSize: 18,
+		fontWeight: 'bold',
 		fontFamily: 'Menlo',
 		padding: hp('.5%')
 	},
