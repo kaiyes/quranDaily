@@ -23,6 +23,8 @@ import QuranScreen from './screens/Quran.screen'
 import MemorizeScreen from './screens/Memorize.screen'
 import SuraScreen from './screens/Sura.screen'
 
+import testScreen from './components/Year'
+
 //components
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
@@ -216,6 +218,7 @@ function LoggedInStack() {
 			<Tab.Screen name="Dua" component={DuaStack} />
 			<Tab.Screen name="Memorize" component={MemorizeScreen} />
 			<Tab.Screen name="Stats" component={StatScreen} />
+			<Tab.Screen name="Test" component={testScreen} />
 		</Tab.Navigator>
 	)
 }
