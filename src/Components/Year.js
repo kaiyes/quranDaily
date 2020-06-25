@@ -76,12 +76,13 @@ export default function Week() {
 
 						<FlatList
 							data={day.fakeData}
-							numColumns={8}
-							keyExtractor={() => Math.random()}
+							numColumns={12}
+							keyExtractor={item => item._id}
+							scrollEnabled={false}
 							renderItem={({ item }) => (
 								<View style={styles.boxes}>
 									<TouchableOpacity onPress={() => console.log(day)}>
-										<View style={styles.box} key={Math.random()}>
+										<View style={styles.box} key={item._id}>
 											<View
 												style={[
 													swithcCircle(item.status),
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
 		flexWrap: 'wrap'
 	},
 	habitName: {
-		fontSize: 14,
+		fontSize: 22,
 		fontFamily: 'Menlo',
 		padding: hp('.5%')
 	},
