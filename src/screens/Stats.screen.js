@@ -21,37 +21,6 @@ import Year from '../components/Year'
 
 export default function Stats() {
 	const [selectedIndex, setIndex] = useState(0)
-	const [icon, setIcon] = useState('book')
-
-	function iconRow() {
-		return (
-			<View style={styles.iconRow}>
-				<TouchableOpacity onPress={() => setIcon('book')}>
-					<Icon
-						type={'entypo'}
-						name={'calendar'}
-						size={15}
-						reverse
-						color={icon === 'book' ? 'forestgreen' : 'slateblue'}
-						reverseColor={'white'}
-						containerStyle={styles.icon}
-					/>
-				</TouchableOpacity>
-
-				<TouchableOpacity onPress={() => setIcon('moon')}>
-					<Icon
-						type={'entypo'}
-						name={'text-document-inverted'}
-						size={15}
-						reverse
-						color={icon === 'moon' ? 'forestgreen' : 'slateblue'}
-						reverseColor={'white'}
-						containerStyle={styles.icon}
-					/>
-				</TouchableOpacity>
-			</View>
-		)
-	}
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -64,8 +33,6 @@ export default function Stats() {
 					selectedIndex={selectedIndex}
 					onTabPress={item => setIndex(item)}
 				/>
-
-				{iconRow()}
 
 				{selectedIndex === 2 ? Year() : selectedIndex ? Month() : Week()}
 			</View>
