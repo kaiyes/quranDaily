@@ -503,7 +503,7 @@ export default function Quran({ route }) {
 		<SafeAreaView style={styles.container}>
 			<FlatList
 				data={sura}
-				keyExtractor={item => item.number}
+				keyExtractor={item => item.number.toString()}
 				contentContainerStyle={styles.flatList}
 				renderItem={({ item }) => ayah(item)}
 			/>
@@ -519,7 +519,8 @@ const styles = StyleSheet.create({
 	ayahArabic: {
 		fontSize: 32,
 		fontFamily: 'me_quran',
-		marginBottom: hp('1%')
+		marginBottom: hp('1%'),
+		textAlign: 'right'
 	},
 	ayahBlock: {
 		width: wp('100%'),

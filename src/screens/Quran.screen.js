@@ -78,7 +78,7 @@ export default function Quran({ navigation: { navigate } }) {
 		<SafeAreaView style={styles.container}>
 			<FlatList
 				data={Suras}
-				keyExtractor={item => item.number}
+				keyExtractor={item => item.number.toString()}
 				contentContainerStyle={styles.flatList}
 				renderItem={({ item }) => suraBlock(item)}
 			/>
