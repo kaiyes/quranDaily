@@ -23,36 +23,15 @@ import TahajjudData from '../utility/fakeMonthViewWork'
 import SadakahData from '../utility/fakeMonthViewSide'
 
 export default function Week() {
-	const data = [
-		{
-			habitName: 'Quran',
-			fakeData: QuranData
-		},
-		{
-			habitName: 'Fard Salah',
-			fakeData: FardSalahData
-		},
-		{
-			habitName: 'Sunna Salah',
-			fakeData: SunnaSalahData
-		},
-		{
-			habitName: 'Tahajjud',
-			fakeData: TahajjudData
-		},
-		{
-			habitName: 'Sadakah',
-			fakeData: SadakahData
-		},
-		{
-			habitName: 'Dua Morning',
-			fakeData: FardSalahData
-		},
-		{
-			habitName: 'Dua Evening',
-			fakeData: SadakahData
-		}
-	]
+	const data = {
+		Quran: QuranData,
+		'Fard Salah': FardSalahData,
+		'Sunna Salah': SunnaSalahData,
+		Tahajjud: TahajjudData,
+		Sadakah: SadakahData,
+		'Dua Morning': FardSalahData,
+		'Dua Morning': SadakahData
+	}
 
 	function swithcCircle(status) {
 		if (status <= 30) {
@@ -71,7 +50,7 @@ export default function Week() {
 				showsVerticalScrollIndicator={false}
 				contentContainerStyle={styles.scrollView}>
 				{data.map(day => (
-					<View style={styles.boxHolder} key={Math.random()}>
+					<View style={styles.boxHolder} key={Math.random().toString()}>
 						<Text style={styles.habitName}>{day.habitName}</Text>
 
 						<FlatList
@@ -154,3 +133,13 @@ const styles = StyleSheet.create({
 		borderRadius: wp('1.5%')
 	}
 })
+
+// const data = {
+// 	'Quran': QuranData,
+// 	'Fard Salah': FardSalahData,
+// 	'Sunna Salah': SunnaSalahData,
+// 	'Tahajjud': TahajjudData,
+// 	'Sadakah': SadakahData,
+// 	'Dua Morning': FardSalahData,
+// 	'Dua Morning': SadakahData
+// }
