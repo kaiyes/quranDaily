@@ -23,45 +23,17 @@ import TahajjudData from '../utility/fakeMonthViewWork'
 import SadakahData from '../utility/fakeMonthViewSide'
 
 export default function Week() {
-	// const data = {
-	// 	Quran: QuranData,
-	// 	'Fard Salah': FardSalahData,
-	// 	'Sunna Salah': SunnaSalahData,
-	// 	Tahajjud: TahajjudData,
-	// 	Sadakah: SadakahData,
-	// 	'Dua Morning': FardSalahData,
-	// 	'Dua Morning': SadakahData
-	// }
-	const data = [
-		{
-			habitName: 'Quran',
-			fakeData: QuranData
-		},
-		{
-			habitName: 'Fard Salah',
-			fakeData: FardSalahData
-		},
-		{
-			habitName: 'Sunna Salah',
-			fakeData: SunnaSalahData
-		},
-		{
-			habitName: 'Tahajjud',
-			fakeData: TahajjudData
-		},
-		{
-			habitName: 'Sadakah',
-			fakeData: SadakahData
-		},
-		{
-			habitName: 'Dua Morning',
-			fakeData: FardSalahData
-		},
-		{
-			habitName: 'Dua Evening',
-			fakeData: SadakahData
-		}
-	]
+	const [dataArray, setDataArray] = useState([])
+
+	const data = {
+		Quran: QuranData,
+		'Fard Salah': FardSalahData,
+		'Sunna Salah': SunnaSalahData,
+		Tahajjud: TahajjudData,
+		Sadakah: SadakahData,
+		'Dua Morning': FardSalahData,
+		'Dua Morning': SadakahData
+	}
 
 	function swithcCircle(status) {
 		if (status <= 30) {
@@ -73,39 +45,31 @@ export default function Week() {
 		}
 	}
 
+	// function dataClean() {
+	// 	for (const key in data) {
+	// q[key].map(i=>console.log(i))
+	// }
+	// }
+
+	function Card(item) {
+		return (
+			<View style={styles.boxHolder}>
+				{data[item].map(day => (
+					<View style={[styles.mediumCircle, { backgroundColor: day.color }]} />
+				))}
+			</View>
+		)
+	}
+
+	useEffect(() => setDataArray(Object.keys(data)), [])
+
 	return (
 		<View style={styles.container}>
-			<ScrollView
-				horizontal={true}
-				showsVerticalScrollIndicator={false}
-				contentContainerStyle={styles.scrollView}>
-				{data.map(day => (
-					<View style={styles.boxHolder} key={Math.random().toString()}>
-						<Text style={styles.habitName}>{day.habitName}</Text>
-
-						<FlatList
-							data={day.fakeData}
-							numColumns={12}
-							keyExtractor={item => item._id.toString()}
-							scrollEnabled={false}
-							renderItem={({ item }) => (
-								<View style={styles.boxes} key={item._id.toString()}>
-									<TouchableOpacity onPress={() => console.log(day)}>
-										<View style={styles.box} key={item._id}>
-											<View
-												style={[
-													swithcCircle(item.status),
-													{ backgroundColor: item.color }
-												]}
-											/>
-										</View>
-									</TouchableOpacity>
-								</View>
-							)}
-						/>
-					</View>
-				))}
-			</ScrollView>
+			<FlatList
+				data={dataArray}
+				numColumns={1}
+				renderItem={({ item }) => Card(item)}
+			/>
 		</View>
 	)
 }
@@ -136,7 +100,8 @@ const styles = StyleSheet.create({
 		width: wp('4%'),
 		height: wp('4%'),
 		justifyContent: 'center',
-		alignItems: 'center'
+		alignItems: 'center',
+		marginBottom: hp('1%')
 	},
 	boxes: {
 		flexDirection: 'row',
@@ -163,13 +128,3 @@ const styles = StyleSheet.create({
 		borderRadius: wp('1.5%')
 	}
 })
-
-// const data = {
-// 	'Quran': QuranData,
-// 	'Fard Salah': FardSalahData,
-// 	'Sunna Salah': SunnaSalahData,
-// 	'Tahajjud': TahajjudData,
-// 	'Sadakah': SadakahData,
-// 	'Dua Morning': FardSalahData,
-// 	'Dua Morning': SadakahData
-// }
