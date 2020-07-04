@@ -32,10 +32,10 @@ export default function Week() {
 		Tahajjud: TahajjudData,
 		Sadakah: SadakahData,
 		'Dua Morning': FardSalahData,
-		'Dua Morning': SadakahData
+		'Dua Evening': SadakahData
 	}
 
-	function swithcCircle(status) {
+	function switchCircle(status) {
 		if (status <= 30) {
 			return styles.smallCircle
 		} else if (status >= 70) {
@@ -45,32 +45,35 @@ export default function Week() {
 		}
 	}
 
-	// function dataClean() {
-	// 	for (const key in data) {
-	// q[key].map(i=>console.log(i))
-	// }
-	// }
-
 	function Card(item) {
 		return (
-			<View style={styles.boxHolder}>
-				{data[item].map(day => (
-					<View style={[styles.mediumCircle, { backgroundColor: day.color }]} />
-				))}
-			</View>
+			<>
+				<Text style={styles.habitName}>{item}</Text>
+				<View style={styles.boxHolder}>
+					{data[item].map(day => (
+						<View style={styles.box} key={day._id}>
+							<View
+								style={[
+									switchCircle(day.status),
+									{ backgroundColor: day.color }
+								]}
+							/>
+						</View>
+					))}
+				</View>
+			</>
 		)
 	}
 
 	useEffect(() => setDataArray(Object.keys(data)), [])
 
 	return (
-		<View style={styles.container}>
-			<FlatList
-				data={dataArray}
-				numColumns={1}
-				renderItem={({ item }) => Card(item)}
-			/>
-		</View>
+		<FlatList
+			keyExtractor={item => item}
+			data={dataArray}
+			contentContainerStyle={styles.scrollView}
+			renderItem={({ item }) => Card(item)}
+		/>
 	)
 }
 
@@ -80,10 +83,13 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	scrollView: {
-		paddingHorizontal: wp('5%'),
-		paddingVertical: hp('1%')
+		paddingTop: hp('2%'),
+		paddingHorizontal: wp('1%')
 	},
 	boxHolder: {
+		flexDirection: 'row',
+		flexWrap: 'wrap',
+		width: wp('85%'),
 		backgroundColor: 'white',
 		paddingVertical: hp('2%'),
 		paddingHorizontal: wp('3%'),
@@ -97,11 +103,10 @@ const styles = StyleSheet.create({
 		elevation: 6
 	},
 	box: {
-		width: wp('4%'),
-		height: wp('4%'),
+		width: wp('3.6%'),
+		height: wp('3.6%'),
 		justifyContent: 'center',
-		alignItems: 'center',
-		marginBottom: hp('1%')
+		alignItems: 'center'
 	},
 	boxes: {
 		flexDirection: 'row',
