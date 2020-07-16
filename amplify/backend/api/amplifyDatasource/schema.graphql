@@ -1,0 +1,12 @@
+type Dua {
+	arabic: String!
+	translations: String!
+	transliteration: String!
+}
+
+type Duas @model {
+	pageTitle: String!
+	category: String
+	reference: String
+	duas: [Dua]
+}

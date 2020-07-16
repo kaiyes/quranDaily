@@ -16,34 +16,8 @@ import { Icon } from 'react-native-elements'
 //utility
 import '../assets/fonts/me_quran.ttf'
 
-import { DataStore } from '@aws-amplify/datastore'
-import { Duas } from '../models'
-
 export default function DuaDetail({ route, navigation }) {
-	const [loading, setLoading] = useState(false)
-
 	const { pageTitle, duas } = route.params
-
-	async function save() {
-		const sortedDua = await duas.map(i => {
-			return {
-				arabic: i.arabic,
-				translations: i.translations,
-				transliteration: i.transliteration
-			}
-		})
-
-		await DataStore.save(
-			new Duas({
-				pageTitle,
-				category: 'uncategorised',
-				duas: sortedDua
-			})
-		)
-
-		const a = await DataStore.query(Duas)
-		console.log(a)
-	}
 
 	return (
 		<SafeAreaView style={styles.rootView}>
@@ -65,35 +39,10 @@ export default function DuaDetail({ route, navigation }) {
 									<Text style={styles.preSpell}>অর্থ:</Text>
 									{item.translations}
 								</Text>
-
-								{item.bottom.length < 1 ? null : (
-									<Text style={styles.meaning}>
-										<Text style={styles.preSpell}>ফাজায়েল:</Text>
-										{item.bottom}
-									</Text>
-								)}
-
-								{item.reference.length < 1 ? null : (
-									<Text style={styles.source}>
-										<Text style={styles.preSpell}>উৎস:</Text>
-										{item.reference}
-									</Text>
-								)}
 							</View>
 						</View>
 					))}
 				</ScrollView>
-				<TouchableOpacity
-					style={styles.floatingIcon}
-					onPress={async () => await save()}>
-					<Icon
-						type={'feather'}
-						name={'bookmark'}
-						size={22}
-						reverse
-						color={'green'}
-					/>
-				</TouchableOpacity>
 			</View>
 		</SafeAreaView>
 	)

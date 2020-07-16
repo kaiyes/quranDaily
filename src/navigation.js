@@ -16,6 +16,7 @@ import SplashScreen from './screens/Splash.screen'
 import DuaScreen from './screens/DuaHome.screen'
 import AllDuaScreen from './screens/AllDua.screen'
 import DuaCategoriesdScreen from './screens/DuaCategoriesd.screen'
+import DuaDetailsBookmarked from './screens/DuaDetailsBookmarked.screen'
 import FavouriteScreen from './screens/Favourites.screen'
 import DeedsHomeScreen from './screens/DeedsHome.screen'
 import StatScreen from './screens/Stats.screen'
@@ -107,6 +108,18 @@ function DuaStack() {
 			<Stack.Screen
 				name="DuaDetail"
 				component={DuaDetailScreen}
+				options={({ route }) => ({
+					headerTitleAlign: 'center',
+					headerTintColor: 'black',
+					headerStyle: {
+						backgroundColor: '#80ca8e'
+					}
+				})}
+			/>
+
+			<Stack.Screen
+				name="BookmarkedDua"
+				component={DuaDetailsBookmarked}
 				options={({ route }) => ({
 					headerTitleAlign: 'center',
 					headerTintColor: 'black',
