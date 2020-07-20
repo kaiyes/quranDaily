@@ -26,7 +26,7 @@ export default function DuaDetail({ route, navigation }) {
 					<Text style={styles.title}>{pageTitle}</Text>
 
 					{duas.map(item => (
-						<View style={styles.section} key={item.AyaID}>
+						<View style={styles.section} key={Math.random().toString()}>
 							<Text style={styles.dua}>{item.arabic}</Text>
 
 							<Text style={styles.spelling}>

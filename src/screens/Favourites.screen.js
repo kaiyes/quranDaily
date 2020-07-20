@@ -38,14 +38,14 @@ export default function Favourites({ route, navigation: { navigate } }) {
 				? Loader()
 				: duas.map(item => (
 						<TouchableOpacity
+							key={Math.random().toString()}
 							style={styles.basicRow}
-							onPress={() => {
-								console.log(item)
+							onPress={() =>
 								navigate('BookmarkedDua', {
 									duas: item.duas,
 									pageTitle: item.pageTitle
 								})
-							}}>
+							}>
 							<Icon
 								type={'feather'}
 								name={'bookmark'}
