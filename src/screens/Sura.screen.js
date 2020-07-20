@@ -493,6 +493,10 @@ export default function Sura({ route }) {
 				<Text style={styles.ayahArabic} onPress={() => fetchSura()}>
 					{item.ayat}
 				</Text>
+				<Text style={styles.ayahArabic} onPress={() => fetchSura()}>
+					{item.index}
+				</Text>
+
 				<Text style={styles.translation}>
 					{language === 'bn' ? item.translation_bn : item.translation_en}
 				</Text>
