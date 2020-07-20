@@ -19,6 +19,7 @@ import Suras from '../utility/suras.js'
 
 export default function Quran({ navigation: { navigate } }) {
 	const [language, setLanguage] = useState('en')
+	const [hidden, setHidden] = useState(true)
 
 	function switchBarWidth(ayahNumber) {
 		return ayahNumber < 10
@@ -79,29 +80,40 @@ export default function Quran({ navigation: { navigate } }) {
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.topBlock}>
-				<CheckBox
-					center
-					containerStyle={styles.checkBox}
-					title="en"
-					iconType="feather"
-					checkedIcon="check-circle"
-					uncheckedIcon="circle"
-					fontFamily={'Menlo'}
-					checked={language === 'en' ? true : false}
-					onPress={() => setLanguage('en')}
-				/>
-				<CheckBox
-					center
-					containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
-					title="bn"
-					iconType="feather"
-					checkedIcon="check-circle"
-					uncheckedIcon="circle"
-					fontFamily={'Menlo'}
-					checked={language === 'bn' ? true : false}
-					onPress={() => setLanguage('bn')}
-				/>
+				{hidden ? null : (
+					<>
+						<CheckBox
+							center
+							containerStyle={styles.checkBox}
+							title="en"
+							iconType="feather"
+							checkedIcon="check-circle"
+							uncheckedIcon="circle"
+							fontFamily={'Menlo'}
+							checked={language === 'en' ? true : false}
+							onPress={() => setLanguage('en')}
+						/>
+						<CheckBox
+							center
+							containerStyle={{
+								backgroundColor: 'transparent',
+								borderWidth: 0
+							}}
+							title="bn"
+							iconType="feather"
+							checkedIcon="check-circle"
+							uncheckedIcon="circle"
+							fontFamily={'Menlo'}
+							checked={language === 'bn' ? true : false}
+							onPress={() => setLanguage('bn')}
+						/>
+					</>
+				)}
+				<TouchableOpacity onPress={() => setHidden(!hidden)}>
+					<Icon type={'entypo'} name={'cog'} size={22} />
+				</TouchableOpacity>
 			</View>
+
 			<FlatList
 				data={Suras}
 				keyExtractor={item => item.number.toString()}
@@ -151,6 +163,7 @@ const styles = StyleSheet.create({
 	topBlock: {
 		flexDirection: 'row',
 		justifyContent: 'flex-end',
+		alignItems: 'center',
 		paddingRight: wp('4%')
 	},
 	checkBox: {

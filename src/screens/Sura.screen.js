@@ -17,11 +17,6 @@ import Loader from '../components/loader'
 import '../assets/fonts/me_quran.ttf'
 
 export default function Sura({ route }) {
-	const [sura, setSura] = useState([])
-	const [loading, setLoading] = useState(false)
-
-	const { language, suraName, suraNumber } = route.params
-
 	function fetchSura() {
 		let data
 		switch (suraNumber) {
@@ -486,6 +481,11 @@ export default function Sura({ route }) {
 				setSura(data)
 		}
 	}
+
+	const [sura, setSura] = useState([])
+	const [loading, setLoading] = useState(false)
+
+	const { language, suraName, suraNumber } = route.params
 
 	function Card(item) {
 		return (
