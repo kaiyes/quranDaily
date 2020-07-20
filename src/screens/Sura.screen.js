@@ -19,7 +19,8 @@ import '../assets/fonts/me_quran.ttf'
 export default function Sura({ route }) {
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
-	const { suraName, suraNumber } = route.params
+
+	const { language, suraName, suraNumber } = route.params
 
 	function fetchSura() {
 		let data
@@ -492,7 +493,9 @@ export default function Sura({ route }) {
 				<Text style={styles.ayahArabic} onPress={() => fetchSura()}>
 					{item.ayat}
 				</Text>
-				<Text style={styles.translation}>{item.translation_en}</Text>
+				<Text style={styles.translation}>
+					{language === 'bn' ? item.translation_bn : item.translation_en}
+				</Text>
 			</View>
 		)
 	}

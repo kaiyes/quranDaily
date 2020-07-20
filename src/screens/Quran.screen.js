@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
 	SafeAreaView,
 	StyleSheet,
@@ -12,12 +12,14 @@ import {
 	widthPercentageToDP as wp,
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
-
+import { Icon, CheckBox } from 'react-native-elements'
 import ProgressBar from 'react-native-progress/Bar'
 
 import Suras from '../utility/suras.js'
 
 export default function Quran({ navigation: { navigate } }) {
+	const [language, setLanguage] = useState('en')
+
 	function switchBarWidth(ayahNumber) {
 		return ayahNumber < 10
 			? 20
@@ -45,10 +47,10 @@ export default function Quran({ navigation: { navigate } }) {
 						: [styles.suraBlock, { backgroundColor: 'lemonchiffon' }]
 				}
 				onPress={() => {
-					console.log(item)
 					navigate('Sura', {
 						suraName: item.transliteration_en,
-						suraNumber: item.number
+						suraNumber: item.number,
+						language
 					})
 				}}>
 				<Text style={styles.number}>{item.number}</Text>
@@ -76,10 +78,33 @@ export default function Quran({ navigation: { navigate } }) {
 
 	return (
 		<SafeAreaView style={styles.container}>
+			<View style={styles.topBlock}>
+				<CheckBox
+					center
+					containerStyle={styles.checkBox}
+					title="en"
+					iconType="feather"
+					checkedIcon="check-circle"
+					uncheckedIcon="circle"
+					fontFamily={'Menlo'}
+					checked={language === 'en' ? true : false}
+					onPress={() => setLanguage('en')}
+				/>
+				<CheckBox
+					center
+					containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
+					title="bn"
+					iconType="feather"
+					checkedIcon="check-circle"
+					uncheckedIcon="circle"
+					fontFamily={'Menlo'}
+					checked={language === 'bn' ? true : false}
+					onPress={() => setLanguage('bn')}
+				/>
+			</View>
 			<FlatList
 				data={Suras}
 				keyExtractor={item => item.number.toString()}
-				contentContainerStyle={styles.flatList}
 				renderItem={({ item }) => suraBlock(item)}
 			/>
 		</SafeAreaView>
@@ -122,5 +147,15 @@ const styles = StyleSheet.create({
 	},
 	spacerV: {
 		height: hp('1%')
+	},
+	topBlock: {
+		flexDirection: 'row',
+		justifyContent: 'flex-end',
+		paddingRight: wp('4%')
+	},
+	checkBox: {
+		backgroundColor: 'transparent',
+		borderWidth: 0,
+		width: wp('14%')
 	}
 })
