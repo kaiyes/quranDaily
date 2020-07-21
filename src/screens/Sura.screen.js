@@ -13,6 +13,7 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import Loader from '../components/loader'
+import ViewPager from '@react-native-community/viewpager'
 
 import '../assets/fonts/me_quran.ttf'
 
@@ -485,7 +486,7 @@ export default function Sura({ route }) {
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
 
-	const { language, suraName, suraNumber } = route.params
+	const { language, renderStyle, suraName, suraNumber } = route.params
 
 	function Card(item) {
 		return (
@@ -504,6 +505,33 @@ export default function Sura({ route }) {
 		)
 	}
 
+	function List() {
+		return loading ? (
+			Loader()
+		) : (
+			<SafeAreaView style={styles.container}>
+				<FlatList
+					data={sura}
+					keyExtractor={item => item.id.toString()}
+					contentContainerStyle={styles.flatList}
+					renderItem={({ item }) => Card(item)}
+				/>
+			</SafeAreaView>
+		)
+	}
+
+	function Pager() {
+		return (
+			<ViewPager initialPage={0} style={styles.container}>
+				{[1, 2, 3].map(item => (
+					<View style={styles.container} key={0}>
+						<Text style={styles.ayahArabic}>something</Text>
+					</View>
+				))}
+			</ViewPager>
+		)
+	}
+
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
@@ -512,20 +540,7 @@ export default function Sura({ route }) {
 		})()
 	}, [])
 
-	return (
-		<SafeAreaView style={styles.container}>
-			{loading ? (
-				Loader()
-			) : (
-				<FlatList
-					data={sura}
-					keyExtractor={item => item.id.toString()}
-					contentContainerStyle={styles.flatList}
-					renderItem={({ item }) => Card(item)}
-				/>
-			)}
-		</SafeAreaView>
-	)
+	return renderStyle === 'list' ? List() : Pager()
 }
 
 const styles = StyleSheet.create({

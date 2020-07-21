@@ -54,8 +54,7 @@ export default function Quran({ navigation: { navigate } }) {
 					navigate('Sura', {
 						suraName: item.transliteration_en,
 						suraNumber: item.number,
-						language,
-						renderStyle
+						language, renderStyle
 					})
 				}}>
 				<Text style={styles.number}>{item.number}</Text>
@@ -130,7 +129,7 @@ export default function Quran({ navigation: { navigate } }) {
 						<CheckBox
 							center
 							containerStyle={styles.checkBox}
-							title="Pager"
+							title="List"
 							iconType="feather"
 							checkedIcon="check-circle"
 							uncheckedIcon="circle"
@@ -142,7 +141,7 @@ export default function Quran({ navigation: { navigate } }) {
 						<CheckBox
 							center
 							containerStyle={styles.checkBox}
-							title="List"
+							title="Pager"
 							iconType="feather"
 							checkedIcon="check-circle"
 							uncheckedIcon="circle"

@@ -14,7 +14,6 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import { Icon, CheckBox } from 'react-native-elements'
-import ScrollableTabView from 'react-native-scrollable-tab-view'
 //Utility
 import DUA from '../utility/duas'
 import Categories from '../utility/categories'
