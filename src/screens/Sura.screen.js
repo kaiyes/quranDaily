@@ -485,6 +485,8 @@ export default function Sura({ route }) {
 
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
+	const [page, setPage] = useState(1)
+	const [pages, setPages] = useState([])
 
 	const { language, renderStyle, suraName, suraNumber } = route.params
 
@@ -493,9 +495,6 @@ export default function Sura({ route }) {
 			<View style={styles.ayahBlock}>
 				<Text style={styles.ayahArabic} onPress={() => fetchSura()}>
 					{item.ayat}
-				</Text>
-				<Text style={styles.ayahArabic} onPress={() => fetchSura()}>
-					{item.index}
 				</Text>
 
 				<Text style={styles.translation}>
@@ -522,20 +521,34 @@ export default function Sura({ route }) {
 
 	function Pager() {
 		return (
-			<ViewPager initialPage={0} style={styles.container}>
-				{[1, 2, 3].map(item => (
-					<View style={styles.container} key={0}>
-						<Text style={styles.ayahArabic}>something</Text>
+			<ViewPager initialPage={page} style={styles.container}>
+				{pages.map(item => (
+					<View style={styles.container} key={Math.random().toString()}>
+						<Text style={styles.ayahArabic}>{item.surah}</Text>
+						<Text style={styles.ayahArabic}>{item.ayah}</Text>
 					</View>
 				))}
 			</ViewPager>
 		)
 	}
 
+	const chapters = require('../utility/chapters.json')
+
+	async function fetchPage() {
+		//import chapters array
+		//use suraNumber given to find the index of the item that has the first ayah
+		const pageNumber =
+			(await chapters.findIndex(i => i.surah == suraNumber)) + 1
+		console.log(pageNumber)
+		//take that index and set it to page
+		await setPage(pageNumber)
+		await setPages(chapters)
+	}
+
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
-			await fetchSura()
+			renderStyle === 'list' ? await fetchSura() : await fetchPage()
 			setLoading(false)
 		})()
 	}, [])
