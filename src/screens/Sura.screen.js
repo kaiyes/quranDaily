@@ -519,28 +519,91 @@ export default function Sura({ route }) {
 		)
 	}
 
+	const chapters = require('../utility/chapters.json')
+
+	async function fetchPage() {
+		let pageNumber = 1
+		// prettier-ignore
+		const roughSuras = [84, 88, 90, 93, 94, 96, 99, 101, 102, 104, 105, 107, 108, 110, 111, 113, 114]
+
+		if (!roughSuras.includes(suraNumber)) {
+			pageNumber = await chapters.find(i => i.surah == suraNumber).page
+		}
+
+		switch (suraNumber) {
+			case 84:
+				pageNumber = 589
+				break
+			case 88:
+				pageNumber = 592
+				break
+			case 90:
+				pageNumber = 594
+				break
+			case 93:
+				pageNumber = 596
+				break
+			case 94:
+				pageNumber = 596
+				break
+			case 96:
+				pageNumber = 597
+				break
+			case 99:
+				pageNumber = 599
+				break
+			case 101:
+				pageNumber = 600
+				break
+			case 102:
+				pageNumber = 600
+				break
+			case 104:
+				pageNumber = 601
+				break
+			case 105:
+				pageNumber = 601
+				break
+			case 107:
+				pageNumber = 602
+				break
+			case 108:
+				pageNumber = 602
+				break
+			case 110:
+				pageNumber = 603
+				break
+			case 111:
+				pageNumber = 603
+			case 113:
+				pageNumber = 604
+				break
+			case 114:
+				pageNumber = 604
+				break
+			default:
+				pageNumber = 1
+		}
+
+		console.log(suraNumber, pageNumber)
+
+		await setPage(pageNumber - 1)
+		await setPages(chapters)
+	}
+
 	function Pager() {
 		return (
 			<ViewPager initialPage={page} style={styles.container}>
-				{pages.map(item => (
+				{pages.map((item, index) => (
 					<View style={styles.container} key={Math.random().toString()}>
 						<Text style={styles.ayahArabic}>sura no : {item.surah}</Text>
 						<Text style={styles.ayahArabic}>ayah no: {item.ayah}</Text>
+						<Text style={styles.ayahArabic}>page: {item.page}</Text>
+						<Text style={styles.ayahArabic}>index: {index}</Text>
 					</View>
 				))}
 			</ViewPager>
 		)
-	}
-
-	const chapters = require('../utility/chapters.json')
-
-	async function fetchPage() {
-		//import chapters array
-		//use suraNumber given to find the index of the item that has the first ayah
-		const pageNumber = await chapters.findIndex(i => i.surah == suraNumber)
-		//take that index and set it to page
-		await setPage(pageNumber)
-		await setPages(chapters)
 	}
 
 	useEffect(() => {
