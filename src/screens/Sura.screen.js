@@ -524,8 +524,8 @@ export default function Sura({ route }) {
 			<ViewPager initialPage={page} style={styles.container}>
 				{pages.map(item => (
 					<View style={styles.container} key={Math.random().toString()}>
-						<Text style={styles.ayahArabic}>{item.surah}</Text>
-						<Text style={styles.ayahArabic}>{item.ayah}</Text>
+						<Text style={styles.ayahArabic}>sura no : {item.surah}</Text>
+						<Text style={styles.ayahArabic}>ayah no: {item.ayah}</Text>
 					</View>
 				))}
 			</ViewPager>
@@ -537,9 +537,7 @@ export default function Sura({ route }) {
 	async function fetchPage() {
 		//import chapters array
 		//use suraNumber given to find the index of the item that has the first ayah
-		const pageNumber =
-			(await chapters.findIndex(i => i.surah == suraNumber)) + 1
-		console.log(pageNumber)
+		const pageNumber = await chapters.findIndex(i => i.surah == suraNumber)
 		//take that index and set it to page
 		await setPage(pageNumber)
 		await setPages(chapters)
