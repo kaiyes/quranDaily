@@ -18,6 +18,93 @@ import ViewPager from '@react-native-community/viewpager'
 import '../assets/fonts/me_quran.ttf'
 
 export default function Sura({ route }) {
+	const chapters = require('../utility/chapters.json')
+
+	const [sura, setSura] = useState([])
+	const [loading, setLoading] = useState(false)
+	const [page, setPage] = useState(0)
+	const [pages, setPages] = useState([])
+
+	const { language, renderStyle, suraName, suraNumber } = route.params
+
+	async function fetchPage() {
+		let pageNumber = 0
+		// prettier-ignore
+		const roughSuras = [84, 88, 90, 93, 94, 96, 99, 101, 102, 104, 105, 107, 108, 110, 111, 113, 114]
+
+		if (!roughSuras.includes(suraNumber)) {
+			pageNumber = await chapters.find(i => i.surah == suraNumber).page
+		} else {
+			switch (suraNumber) {
+				case 84:
+					pageNumber = 588
+					break
+				case 88:
+					pageNumber = 591
+					break
+				case 90:
+					pageNumber = 593
+					break
+				case 93:
+					pageNumber = 595
+					break
+				case 94:
+					pageNumber = 595
+					break
+				case 96:
+					pageNumber = 596
+					break
+				case 99:
+					pageNumber = 598
+					break
+				case 101:
+					pageNumber = 599
+					break
+				case 102:
+					pageNumber = 599
+					break
+				case 104:
+					pageNumber = 600
+					break
+				case 105:
+					pageNumber = 600
+					break
+				case 107:
+					pageNumber = 601
+					break
+				case 108:
+					pageNumber = 601
+					break
+				case 110:
+					pageNumber = 602
+					break
+				case 111:
+					pageNumber = 602
+				case 113:
+					pageNumber = 603
+					break
+				case 114:
+					pageNumber = 603
+					break
+				default:
+					pageNumber = 0
+			}
+		}
+
+		await setPage(pageNumber)
+		await setPages(chapters)
+
+		// Fetch sura based on Sura Number fetchSura()
+		let currentPageNo = chapters.findIndex(item => item.surah == suraNumber)
+		const currentPage = chapters[currentPageNo]
+		const nextPage = chapters[currentPageNo + 1]
+		console.log(currentPage, nextPage)
+		// check this next page to get the sura + ayah
+		// if it's the same sura as the present one
+		// 	then -> Sura =  [ayahThisPage - ayahNextPage - 1  ]
+		// 	set it
+	}
+
 	function fetchSura() {
 		let data
 		switch (suraNumber) {
@@ -483,13 +570,6 @@ export default function Sura({ route }) {
 		}
 	}
 
-	const [sura, setSura] = useState([])
-	const [loading, setLoading] = useState(false)
-	const [page, setPage] = useState(1)
-	const [pages, setPages] = useState([])
-
-	const { language, renderStyle, suraName, suraNumber } = route.params
-
 	function Card(item) {
 		return (
 			<View style={styles.ayahBlock}>
@@ -519,81 +599,12 @@ export default function Sura({ route }) {
 		)
 	}
 
-	const chapters = require('../utility/chapters.json')
-
-	async function fetchPage() {
-		let pageNumber = 1
-		// prettier-ignore
-		const roughSuras = [84, 88, 90, 93, 94, 96, 99, 101, 102, 104, 105, 107, 108, 110, 111, 113, 114]
-
-		if (!roughSuras.includes(suraNumber)) {
-			pageNumber = await chapters.find(i => i.surah == suraNumber).page
-		}
-
-		switch (suraNumber) {
-			case 84:
-				pageNumber = 589
-				break
-			case 88:
-				pageNumber = 592
-				break
-			case 90:
-				pageNumber = 594
-				break
-			case 93:
-				pageNumber = 596
-				break
-			case 94:
-				pageNumber = 596
-				break
-			case 96:
-				pageNumber = 597
-				break
-			case 99:
-				pageNumber = 599
-				break
-			case 101:
-				pageNumber = 600
-				break
-			case 102:
-				pageNumber = 600
-				break
-			case 104:
-				pageNumber = 601
-				break
-			case 105:
-				pageNumber = 601
-				break
-			case 107:
-				pageNumber = 602
-				break
-			case 108:
-				pageNumber = 602
-				break
-			case 110:
-				pageNumber = 603
-				break
-			case 111:
-				pageNumber = 603
-			case 113:
-				pageNumber = 604
-				break
-			case 114:
-				pageNumber = 604
-				break
-			default:
-				pageNumber = 1
-		}
-
-		console.log(suraNumber, pageNumber)
-
-		await setPage(pageNumber - 1)
-		await setPages(chapters)
-	}
-
 	function Pager() {
 		return (
-			<ViewPager initialPage={page} style={styles.container}>
+			<ViewPager
+				initialPage={page}
+				style={styles.container}
+				onPageSelected={() => console.log('changed')}>
 				{pages.map((item, index) => (
 					<View style={styles.container} key={Math.random().toString()}>
 						<Text style={styles.ayahArabic}>sura no : {item.surah}</Text>
