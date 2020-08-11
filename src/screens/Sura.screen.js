@@ -18,133 +18,15 @@ import ViewPager from '@react-native-community/viewpager'
 import '../assets/fonts/me_quran.ttf'
 
 export default function Sura({ route }) {
-	const chapters = require('../utility/chapters.json')
+	// const chapters = require('../utility/chapters.json')
+	const chapters = require('../utility/pages/page-0-10.json')
 
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
-	const [page, setPage] = useState(0)
-	const [pages, setPages] = useState([])
-	const [ayatsOfPage, setAyats] = useState([{ ayat: 'nothing here' }])
+	const [page, setPage] = useState(1)
+	const [ayats, setAyats] = useState([])
 
 	const { language, renderStyle, suraName, suraNumber } = route.params
-
-	async function fetchPage() {
-		let pageNumber = 0
-		// prettier-ignore
-		const roughSuras = [84, 88, 90, 93, 94, 96, 99, 101, 102, 104, 105, 107, 108, 110, 111, 113, 114]
-
-		if (!roughSuras.includes(suraNumber)) {
-			pageNumber = await chapters.find(i => i.surah == suraNumber).page
-		} else {
-			switch (suraNumber) {
-				case 84:
-					pageNumber = 588
-					break
-				case 88:
-					pageNumber = 591
-					break
-				case 90:
-					pageNumber = 593
-					break
-				case 93:
-					pageNumber = 595
-					break
-				case 94:
-					pageNumber = 595
-					break
-				case 96:
-					pageNumber = 596
-					break
-				case 99:
-					pageNumber = 598
-					break
-				case 101:
-					pageNumber = 599
-					break
-				case 102:
-					pageNumber = 599
-					break
-				case 104:
-					pageNumber = 600
-					break
-				case 105:
-					pageNumber = 600
-					break
-				case 107:
-					pageNumber = 601
-					break
-				case 108:
-					pageNumber = 601
-					break
-				case 110:
-					pageNumber = 602
-					break
-				case 111:
-					pageNumber = 602
-				case 113:
-					pageNumber = 603
-					break
-				case 114:
-					pageNumber = 603
-					break
-				default:
-					pageNumber = 0
-			}
-		}
-
-		await setPage(pageNumber)
-		await setPages(chapters)
-
-		let currentPageNo = await chapters.findIndex(
-			item => item.surah == suraNumber
-		)
-		const currentPage = chapters[page]
-		const nextPage = chapters[page + 1]
-
-		if (
-			currentPage.surah === nextPage.surah &&
-			currentPage.ayah != nextPage.ayah
-		) {
-			const suraCopy = [...sura]
-			const suraPart = await suraCopy.slice(
-				parseInt(currentPage.ayah) - 1,
-				parseInt(nextPage.ayah) - 1
-			)
-			await setAyats(suraPart)
-		} else {
-			console.log('new sura')
-		}
-	}
-
-	async function pageSelected(e) {
-		let position = e.nativeEvent.position
-		console.log('position :', position)
-		await setPage(position)
-
-		let currentPageNo = await chapters.findIndex(
-			item => item.surah == suraNumber
-		)
-		const currentPage = chapters[page]
-		const nextPage = chapters[page + 1]
-
-		console.log('page :', page)
-		console.log('currentPage: ', currentPage)
-		console.log('nextPage : ', nextPage)
-
-		if (
-			currentPage.surah === nextPage.surah &&
-			currentPage.ayah != nextPage.ayah
-		) {
-			const suraCopy = [...sura]
-			const suraPart = await suraCopy.slice(
-				parseInt(currentPage.ayah) - 1,
-				parseInt(nextPage.ayah) - 1
-			)
-			await setAyats(suraPart)
-		} else {
-			console.log('new sura')
-		}
-	}
 
 	function Card(item) {
 		return (
@@ -160,14 +42,11 @@ export default function Sura({ route }) {
 
 	function Pager() {
 		return (
-			<ViewPager
-				initialPage={page}
-				style={styles.container}
-				onPageSelected={position => pageSelected(position)}>
+			<ViewPager initialPage={page} style={styles.container}>
 				{chapters.map(item => (
-					<View>
-						<Text style={styles.ayat}>
-							{ayatsOfPage.map(item => item.ayat)}
+					<View style={styles.suraPage}>
+						<Text style={styles.ayatForPage}>
+							{item.ayahs.map(i => i.text)}
 						</Text>
 					</View>
 				))}
@@ -193,8 +72,9 @@ export default function Sura({ route }) {
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
-			await fetchSura()
-			renderStyle === 'list' ? await fetchSura() : await fetchPage()
+			if (renderStyle === 'list') {
+				await fetchSura()
+			}
 			setLoading(false)
 		})()
 	}, [])
@@ -695,9 +575,7 @@ const styles = StyleSheet.create({
 	},
 
 	suraPage: {
-		flex: 1,
-		flexDirection: 'row',
-		width: wp('90%')
+		paddingHorizontal: wp('3%')
 	},
 	ayat: {
 		fontSize: 24,
@@ -705,5 +583,10 @@ const styles = StyleSheet.create({
 		textAlign: 'right',
 		flexWrap: 'wrap',
 		width: wp('90%')
+	},
+	ayatForPage: {
+		fontSize: 18,
+		fontFamily: 'me_quran',
+		textAlign: 'right'
 	}
 })
