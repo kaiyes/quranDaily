@@ -585,8 +585,8 @@ const styles = StyleSheet.create({
 		width: wp('90%')
 	},
 	ayatForPage: {
-		fontSize: 18,
+		fontSize: 22,
 		fontFamily: 'me_quran',
-		textAlign: 'right'
+		textAlign: 'justify'
 	}
 })
