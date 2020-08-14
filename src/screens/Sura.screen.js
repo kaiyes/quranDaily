@@ -18,8 +18,7 @@ import ViewPager from '@react-native-community/viewpager'
 import '../assets/fonts/me_quran.ttf'
 
 export default function Sura({ route }) {
-	// const chapters = require('../utility/chapters.json')
-	const chapters = require('../utility/pages/page-0-10.json')
+	const pages = require('../utility/pages.json')
 
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
@@ -43,11 +42,9 @@ export default function Sura({ route }) {
 	function Pager() {
 		return (
 			<ViewPager initialPage={page} style={styles.container}>
-				{chapters.map(item => (
+				{pages.map(item => (
 					<View style={styles.suraPage}>
-						<Text style={styles.ayatForPage}>
-							{item.ayahs.map(i => i.text)}
-						</Text>
+						<Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
 					</View>
 				))}
 			</ViewPager>
