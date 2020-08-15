@@ -10,3 +10,65 @@ type Duas @model {
 	reference: String
 	duas: [Dua]
 }
+
+type FardSalah @model {
+	date: String!
+	fajr: Boolean
+	dhuhr: Boolean
+	asr: Boolean
+	magrib: Boolean
+	isha: Boolean
+	color: String
+	status: Int
+}
+
+type Quran @model {
+	date: String!
+	fiveAyats: Boolean
+	page: Boolean
+	hundred: Boolean
+	juz: Boolean
+	manzil: Boolean
+	mulk: Boolean
+	lastAyatsBaqara: Boolean
+	color: String
+	status: Int
+}
+
+type SunnaSalah @model {
+	date: String!
+	fajr: Boolean
+	dhuhr: Boolean
+	asr: Boolean
+	magrib: Boolean
+	isha: Boolean
+	color: String
+	status: Int
+}
+
+type tahajjud @model {
+	date: String!
+	two: Boolean
+	four: Boolean
+	eight: Boolean
+	color: String
+	status: Int
+}
+
+type sadaqat @model {
+	date: String!
+	money: Boolean
+	love: Boolean
+	smile: Boolean
+	lokma: Boolean
+	color: String
+	status: Int
+}
+
+type MorningDua @model {
+	date: String!
+	morning: Boolean
+	evening: Boolean
+	color: String
+	status: Int
+}
