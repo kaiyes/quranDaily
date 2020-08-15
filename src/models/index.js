@@ -4,9 +4,15 @@ import { schema } from './schema';
 
 
 
-const { Duas, Dua } = initSchema(schema);
+const { Duas, FardSalah, Quran, SunnaSalah, tahajjud, sadaqat, MorningDua, Dua } = initSchema(schema);
 
 export {
   Duas,
+  FardSalah,
+  Quran,
+  SunnaSalah,
+  tahajjud,
+  sadaqat,
+  MorningDua,
   Dua
 };

@@ -18,7 +18,81 @@ import { Bar } from 'react-native-progress'
 
 import FakeData from '../utility/fakeData'
 
+import { DataStore } from '@aws-amplify/datastore'
+import { FardSalah } from '../models'
+
 export default function Deeds({ navigation }) {
+	//prayer
+	async function insertSalah(prayer) {
+		const doesExist = await DataStore.query(FardSalah, c =>
+			c.date('eq', '2020-15-08')
+		)
+		if (doesExist.length === 0) {
+			let data = {
+				date: '2020-15-08',
+				fajr: false,
+				dhuhr: false,
+				asr: false,
+				magrib: false,
+				isha: false,
+				color: 'green',
+				status: 1
+			}
+
+			switch (prayer) {
+				case 'fajr':
+					data.fajr = true
+					break
+				case 'dhuhr':
+					data.dhuhr = true
+					break
+				case 'asr':
+					data.asr = true
+					break
+				case 'magrib':
+					data.magrib = true
+					break
+				case 'isha':
+					data.isha = true
+					break
+				default:
+					data
+			}
+
+			await DataStore.save(new FardSalah(data))
+		} else {
+			const original = await DataStore.query(FardSalah, doesExist[0].id)
+
+			await DataStore.save(
+				FardSalah.copyOf(original, updated => {
+					switch (prayer) {
+						case 'fajr':
+							updated.fajr = true
+							break
+						case 'dhuhr':
+							updated.dhuhr = true
+							break
+						case 'asr':
+							updated.asr = true
+							break
+						case 'magrib':
+							updated.magrib = true
+							break
+						case 'isha':
+							updated.isha = true
+							break
+						default:
+							updated
+					}
+				})
+			)
+			const doesExist2 = await DataStore.query(FardSalah, c =>
+				c.date('eq', '2020-15-08')
+			)
+			console.log(doesExist2)
+		}
+	}
+
 	function renderItem({ item: { status, topicName, topic, subTasks, image } }) {
 		return (
 			<View style={styles.card}>
@@ -29,7 +103,9 @@ export default function Deeds({ navigation }) {
 					<Text style={styles.cardHeader}>{topicName}</Text>
 					<View style={styles.dotHolder}>
 						{subTasks.map(task => (
-							<TouchableOpacity key={Math.random()}>
+							<TouchableOpacity
+								key={Math.random()}
+								onPress={() => insertSalah('asr')}>
 								<Image
 									source={task.icon}
 									style={styles.taskIcon}
