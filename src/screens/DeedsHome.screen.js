@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
 	SafeAreaView,
 	StyleSheet,
@@ -22,14 +22,15 @@ import { DataStore } from '@aws-amplify/datastore'
 import { FardSalah } from '../models'
 
 export default function Deeds({ navigation }) {
+	const [loading, setLoading] = useState(false)
+	const [today, setToday] = useState('')
+
 	//prayer
 	async function insertSalah(prayer) {
-		const doesExist = await DataStore.query(FardSalah, c =>
-			c.date('eq', '2020-15-08')
-		)
+		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
 		if (doesExist.length === 0) {
 			let data = {
-				date: '2020-15-08',
+				date: today,
 				fajr: false,
 				dhuhr: false,
 				asr: false,
@@ -86,10 +87,6 @@ export default function Deeds({ navigation }) {
 					}
 				})
 			)
-			const doesExist2 = await DataStore.query(FardSalah, c =>
-				c.date('eq', '2020-15-08')
-			)
-			console.log(doesExist2)
 		}
 	}
 
@@ -129,6 +126,36 @@ export default function Deeds({ navigation }) {
 			</View>
 		)
 	}
+
+	async function insertTodaySalah(day) {
+		const doesFSexist = await DataStore.query(FardSalah, c => c.date('eq', day))
+		if (doesFSexist.length === 0) {
+			let data = {
+				date: day,
+				fajr: false,
+				dhuhr: false,
+				asr: false,
+				magrib: false,
+				isha: false,
+				color: 'green',
+				status: 0
+			}
+			await DataStore.save(new FardSalah(data))
+		}
+		//stuff
+	}
+
+	useEffect(() => {
+		;(async function fetchData() {
+			setLoading(true)
+			const date = new Date()
+			const today = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+			await setToday(today)
+			await insertTodaySalah(today)
+			//stuff
+			setLoading(false)
+		})()
+	}, [])
 
 	return (
 		<SafeAreaView style={styles.container}>
