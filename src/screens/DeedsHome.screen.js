@@ -23,28 +23,7 @@ export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
 	const [today, setToday] = useState('')
 	const [prayerObj, setPrayers] = useState({})
-
-	async function checkSalah(salah) {
-		switch (salah) {
-			case 'fajr':
-				return prayerObj.fajr ? true : false
-				break
-			case 'dhuhr':
-				return prayerObj.dhuhr ? true : false
-				break
-			case 'asr':
-				return prayerObj.asr ? true : false
-				break
-			case 'magrib':
-				return prayerObj.magrib ? true : false
-				break
-			case 'isha':
-				return prayerObj.isha ? true : false
-				break
-			default:
-				return true
-		}
-	}
+	const [quran, setQuran] = useState({})
 
 	//insert prayer
 	async function insertSalah(prayer) {
@@ -96,54 +75,6 @@ export default function Deeds({ navigation }) {
 		setPrayers(existsYet[0])
 	}
 
-	//Quran
-	const quran = [
-		{
-			name: 'hundred',
-			icon: require('../assets/icons/5_ayah.png')
-		},
-		{
-			name: 'mulk',
-			icon: require('../assets/icons/1_page.png')
-		},
-		{
-			name: 'juz',
-			icon: require('../assets/icons/100.png')
-		},
-		{
-			name: 'lastAyatsBaqara',
-			icon: require('../assets/icons/1_juz.png')
-		},
-		{
-			name: 'manzil',
-			icon: require('../assets/icons/1_monjil.png')
-		}
-	]
-
-	async function checkQuran(part) {
-		const doesExist = await DataStore.query(Quran, c => c.date('eq', today))
-		const original = doesExist[0]
-		switch (part) {
-			case 'hundred':
-				return original.hundred ? true : false
-				break
-			case 'juz':
-				return original.juz ? true : false
-				break
-			case 'manzil':
-				return original.manzil ? true : false
-				break
-			case 'mulk':
-				return original.mulk ? true : false
-				break
-			case 'lastAyatsBaqara':
-				return original.lastAyatsBaqara ? true : false
-				break
-			default:
-				return true
-		}
-	}
-
 	async function insertTodayQuran(day) {
 		const doesExist = await DataStore.query(Quran, c => c.date('eq', day))
 		if (doesExist.length === 0) {
@@ -158,7 +89,39 @@ export default function Deeds({ navigation }) {
 			}
 			await DataStore.save(new Quran(data))
 		}
-		//stuff
+		const existsYet = await DataStore.query(Quran, c => c.date('eq', day))
+		setQuran(existsYet[0])
+	}
+
+	//insert prayer
+	async function insertQuran(part) {
+		const doesExist = await DataStore.query(Quran, c => c.date('eq', today))
+		const original = doesExist[0]
+		await DataStore.save(
+			Quran.copyOf(original, updated => {
+				switch (part) {
+					case 'hundred':
+						updated.hundred = true
+						break
+					case 'manzil':
+						updated.manzil = true
+						break
+					case 'juz':
+						updated.juz = true
+						break
+					case 'mulk':
+						updated.mulk = true
+						break
+					case 'lastAyatsBaqara':
+						updated.lastAyatsBaqara = true
+						break
+					default:
+						updated
+				}
+			})
+		)
+		const savedObj = await DataStore.query(Quran, c => c.date('eq', today))
+		await setQuran(savedObj[0])
 	}
 
 	useEffect(() => {
@@ -256,49 +219,52 @@ export default function Deeds({ navigation }) {
 						<View style={styles.bottomRow}>
 							<Text style={styles.cardHeader}>Quran</Text>
 							<View style={styles.dotHolder}>
-								<TouchableOpacity onPress={() => console.log('s')}>
+								<TouchableOpacity onPress={() => insertQuran('hundred')}>
 									<Image
 										source={require('../assets/icons/100.png')}
 										style={styles.taskIcon}
-										blurRadius={checkQuran('100') === true ? 6 : 0}
-										borderColor={checkQuran('100') === true ? 'black' : null}
-										borderWidth={checkQuran('100') === true ? 5 : 0}
+										blurRadius={quran.hundred === true ? 6 : 0}
+										borderColor={quran.hundred === true ? 'black' : null}
+										borderWidth={quran.hundred === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => console.log('s')}>
+								<TouchableOpacity onPress={() => insertQuran('juz')}>
 									<Image
 										source={require('../assets/icons/1_juz.png')}
 										style={styles.taskIcon}
-										blurRadius={checkQuran('1_juz') === true ? 6 : 0}
-										borderColor={checkQuran('1_juz') === true ? 'black' : null}
-										borderWidth={checkQuran('1_juz') === true ? 5 : 0}
+										blurRadius={quran.juz === true ? 6 : 0}
+										borderColor={quran.juz === true ? 'black' : null}
+										borderWidth={quran.juz === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => console.log('s')}>
+								<TouchableOpacity onPress={() => insertQuran('manzil')}>
 									<Image
 										source={require('../assets/icons/1_monjil.png')}
 										style={styles.taskIcon}
-										blurRadius={checkQuran('1_juz') === true ? 6 : 0}
-										borderColor={checkQuran('1_juz') === true ? 'black' : null}
-										borderWidth={checkQuran('1_juz') === true ? 5 : 0}
+										blurRadius={quran.manzil === true ? 6 : 0}
+										borderColor={quran.manzil === true ? 'black' : null}
+										borderWidth={quran.manzil === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => console.log('s')}>
+								<TouchableOpacity onPress={() => insertQuran('mulk')}>
 									<Image
 										source={require('../assets/icons/1_page.png')}
 										style={styles.taskIcon}
-										blurRadius={checkQuran('1_page') === true ? 6 : 0}
-										borderColor={checkQuran('1_page') === true ? 'black' : null}
-										borderWidth={checkQuran('1_page') === true ? 5 : 0}
+										blurRadius={quran.mulk === true ? 6 : 0}
+										borderColor={quran.mulk === true ? 'black' : null}
+										borderWidth={quran.mulk === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => console.log('s')}>
+								<TouchableOpacity
+									onPress={() => insertQuran('lastAyatsBaqara')}>
 									<Image
 										source={require('../assets/icons/5_ayah.png')}
 										style={styles.taskIcon}
-										blurRadius={checkQuran('5_ayah') === true ? 6 : 0}
-										borderColor={checkQuran('5_ayah') === true ? 'black' : null}
-										borderWidth={checkQuran('5_ayah') === true ? 5 : 0}
+										blurRadius={quran.lastAyatsBaqara === true ? 6 : 0}
+										borderColor={
+											quran.lastAyatsBaqara === true ? 'black' : null
+										}
+										borderWidth={quran.lastAyatsBaqara === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
 							</View>
