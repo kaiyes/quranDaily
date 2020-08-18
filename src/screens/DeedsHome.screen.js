@@ -47,11 +47,33 @@ export default function Deeds({ navigation }) {
 		}
 	]
 
+	const quran = [
+		{
+			name: '5_ayah',
+			icon: require('../assets/icons/5_ayah.png')
+		},
+		{
+			name: '1_page',
+			icon: require('../assets/icons/1_page.png')
+		},
+		{
+			name: '100',
+			icon: require('../assets/icons/100.png')
+		},
+		{
+			name: '1_juz',
+			icon: require('../assets/icons/1_juz.png')
+		},
+		{
+			name: '1_monjil',
+			icon: require('../assets/icons/1_monjil.png')
+		}
+	]
+
 	//insert prayer
 	async function insertSalah(prayer) {
 		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
 		const original = await DataStore.query(FardSalah, doesExist[0].id)
-
 		await DataStore.save(
 			FardSalah.copyOf(original, updated => {
 				switch (prayer) {
@@ -113,6 +135,24 @@ export default function Deeds({ navigation }) {
 				asr: false,
 				magrib: false,
 				isha: false,
+				status: 0
+			}
+			await setFardPrayer(data)
+			await DataStore.save(new FardSalah(data))
+		}
+		//stuff
+	}
+
+	async function insertTodayQuran(day) {
+		const doesExist = await DataStore.query(Quran, c => c.date('eq', day))
+		if (doesExist.length === 0) {
+			let data = {
+				date: day,
+				fajr: false,
+				dhuhr: false,
+				asr: false,
+				magrib: false,
+				isha: false,
 				color: 'green',
 				status: 0
 			}
@@ -142,6 +182,7 @@ export default function Deeds({ navigation }) {
 			<ScrollView contentContainerStyle={styles.scrollView}>
 				<View style={styles.cardHolder}>
 					{/* fard salah card */}
+					{/* fard Salaha card */}
 
 					<View style={styles.card}>
 						<View style={styles.topRow}>
@@ -154,6 +195,34 @@ export default function Deeds({ navigation }) {
 							<Text style={styles.cardHeader}>Fard Prayer</Text>
 							<View style={styles.dotHolder}>
 								{prayers.map(item => (
+									<TouchableOpacity onPress={() => insertSalah(item.name)}>
+										<Image
+											source={item.icon}
+											style={styles.taskIcon}
+											blurRadius={checkIfSalahDone(item) ? 6 : 0}
+											borderColor={checkIfSalahDone(item) ? 'black' : null}
+											borderWidth={checkIfSalahDone(item) ? 5 : 0}
+										/>
+									</TouchableOpacity>
+								))}
+							</View>
+						</View>
+					</View>
+
+					{/*  card */}
+					{/*  card */}
+
+					<View style={styles.card}>
+						<View style={styles.topRow}>
+							<Image
+								source={require('../assets/images/quran.jpg')}
+								style={styles.image}
+							/>
+						</View>
+						<View style={styles.bottomRow}>
+							<Text style={styles.cardHeader}>Quran</Text>
+							<View style={styles.dotHolder}>
+								{quran.map(item => (
 									<TouchableOpacity onPress={() => insertSalah(item.name)}>
 										<Image
 											source={item.icon}
@@ -277,7 +346,10 @@ const styles = StyleSheet.create({
 		left: 10
 	},
 	scrollView: {
-		marginTop: hp('1%'),
+		marginTop: hp('2%'),
 		marginLeft: wp('1%')
+	},
+	cardHolder: {
+		flexDirection: 'row'
 	}
 })
