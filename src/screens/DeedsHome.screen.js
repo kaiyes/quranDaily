@@ -16,115 +16,91 @@ import {
 import { Icon } from 'react-native-elements'
 import { Bar } from 'react-native-progress'
 
-import FakeData from '../utility/fakeData'
-
 import { DataStore } from '@aws-amplify/datastore'
 import { FardSalah } from '../models'
 
 export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
 	const [today, setToday] = useState('')
+	const [fardPrayer, setFardPrayer] = useState({})
 
-	//prayer
+	const prayers = [
+		{
+			name: 'fajr',
+			icon: require('../assets/icons/fajr.png')
+		},
+		{
+			name: 'dhuhr',
+			icon: require('../assets/icons/dhuhr.png')
+		},
+		{
+			name: 'asr',
+			icon: require('../assets/icons/asr.png')
+		},
+		{
+			name: 'magrib',
+			icon: require('../assets/icons/magrib.png')
+		},
+		{
+			name: 'isha',
+			icon: require('../assets/icons/isha.png')
+		}
+	]
+
+	//insert prayer
 	async function insertSalah(prayer) {
 		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
-		if (doesExist.length === 0) {
-			let data = {
-				date: today,
-				fajr: false,
-				dhuhr: false,
-				asr: false,
-				magrib: false,
-				isha: false,
-				color: 'green',
-				status: 1
-			}
+		const original = await DataStore.query(FardSalah, doesExist[0].id)
 
-			switch (prayer) {
-				case 'fajr':
-					data.fajr = true
-					break
-				case 'dhuhr':
-					data.dhuhr = true
-					break
-				case 'asr':
-					data.asr = true
-					break
-				case 'magrib':
-					data.magrib = true
-					break
-				case 'isha':
-					data.isha = true
-					break
-				default:
-					data
-			}
-
-			await DataStore.save(new FardSalah(data))
-		} else {
-			const original = await DataStore.query(FardSalah, doesExist[0].id)
-
-			await DataStore.save(
-				FardSalah.copyOf(original, updated => {
-					switch (prayer) {
-						case 'fajr':
-							updated.fajr = true
-							break
-						case 'dhuhr':
-							updated.dhuhr = true
-							break
-						case 'asr':
-							updated.asr = true
-							break
-						case 'magrib':
-							updated.magrib = true
-							break
-						case 'isha':
-							updated.isha = true
-							break
-						default:
-							updated
-					}
-				})
-			)
-		}
+		await DataStore.save(
+			FardSalah.copyOf(original, updated => {
+				switch (prayer) {
+					case 'fajr':
+						updated.fajr = true
+						break
+					case 'dhuhr':
+						updated.dhuhr = true
+						break
+					case 'asr':
+						updated.asr = true
+						break
+					case 'magrib':
+						updated.magrib = true
+						break
+					case 'isha':
+						updated.isha = true
+						break
+					default:
+						updated
+				}
+			})
+		)
+		console.log(await DataStore.query(FardSalah, c => c.date('eq', today)))
 	}
 
-	function renderItem({ item: { status, topicName, topic, subTasks, image } }) {
-		return (
-			<View style={styles.card}>
-				<View style={styles.topRow}>
-					<Image source={image} style={styles.image} />
-				</View>
-				<View style={styles.bottomRow}>
-					<Text style={styles.cardHeader}>{topicName}</Text>
-					<View style={styles.dotHolder}>
-						{subTasks.map(task => (
-							<TouchableOpacity
-								key={Math.random()}
-								onPress={() => insertSalah('asr')}>
-								<Image
-									source={task.icon}
-									style={styles.taskIcon}
-									blurRadius={task.done ? 10 : null}
-									borderColor={'green'}
-									borderWidth={task.done ? 4 : 0}
-								/>
-								{task.done ? (
-									<Icon
-										type={'entypo'}
-										name={'check'}
-										size={21}
-										color={'green'}
-										containerStyle={styles.iconCheck}
-									/>
-								) : null}
-							</TouchableOpacity>
-						))}
-					</View>
-				</View>
-			</View>
-		)
+	async function checkIfSalahDone(salah) {
+		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
+		const original = doesExist[0]
+
+		switch (salah) {
+			case 'fajr':
+				return original.fajr == true ? true : false
+				break
+			case 'dhuhr':
+				return original.dhuhr == true ? true : false
+				break
+			case 'asr':
+				return original.asr == true ? true : false
+				break
+			case 'magrib':
+				return original.magrib == true ? true : false
+				break
+			case 'isha':
+				return original.isha == true ? true : false
+				break
+			default:
+				return true
+		}
 	}
 
 	async function insertTodaySalah(day) {
@@ -140,6 +116,7 @@ export default function Deeds({ navigation }) {
 				color: 'green',
 				status: 0
 			}
+			await setFardPrayer(data)
 			await DataStore.save(new FardSalah(data))
 		}
 		//stuff
@@ -149,9 +126,9 @@ export default function Deeds({ navigation }) {
 		;(async function fetchData() {
 			setLoading(true)
 			const date = new Date()
-			const today = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
-			await setToday(today)
-			await insertTodaySalah(today)
+			const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+			await setToday(day)
+			await insertTodaySalah(day)
 			//stuff
 			setLoading(false)
 		})()
@@ -162,14 +139,38 @@ export default function Deeds({ navigation }) {
 			<Text style={styles.header}>WelCome, Kaiyes</Text>
 			<Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
 
-			<FlatList
-				data={FakeData}
-				keyExtractor={item => item.topicName}
-				contentContainerStyle={styles.flatList}
-				numColumns={2}
-				ListFooterComponent={() => <View style={styles.footer} />}
-				renderItem={item => renderItem(item)}
-			/>
+			<ScrollView contentContainerStyle={styles.scrollView}>
+				<View style={styles.cardHolder}>
+					{/* fard salah card */}
+
+					<View style={styles.card}>
+						<View style={styles.topRow}>
+							<Image
+								source={require('../assets/images/prayer.png')}
+								style={styles.image}
+							/>
+						</View>
+						<View style={styles.bottomRow}>
+							<Text style={styles.cardHeader}>Fard Prayer</Text>
+							<View style={styles.dotHolder}>
+								{prayers.map(item => (
+									<TouchableOpacity onPress={() => insertSalah(item.name)}>
+										<Image
+											source={item.icon}
+											style={styles.taskIcon}
+											blurRadius={checkIfSalahDone(item) ? 6 : 0}
+											borderColor={'green'}
+											borderWidth={0}
+										/>
+									</TouchableOpacity>
+								))}
+							</View>
+						</View>
+					</View>
+
+					{/* fard Salaha card */}
+				</View>
+			</ScrollView>
 		</SafeAreaView>
 	)
 }
@@ -274,5 +275,9 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		top: 10,
 		left: 10
+	},
+	scrollView: {
+		marginTop: hp('1%'),
+		marginLeft: wp('1%')
 	}
 })

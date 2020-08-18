@@ -2,7 +2,6 @@ const FakeData = [
 	{
 		topicName: 'Fard Salah',
 		topic: 'prayer',
-		status: 60,
 		image: require('../assets/images/prayer.png'),
 		subTasks: [
 			{
@@ -36,7 +35,6 @@ const FakeData = [
 	{
 		topicName: 'Quran',
 		topic: 'quran',
-		status: 90,
 		image: require('../assets/images/quran.jpg'),
 		subTasks: [
 			{
@@ -71,7 +69,6 @@ const FakeData = [
 		topicName: 'Sunna Salah',
 		topic: 'sunnahPrayer',
 		image: require('../assets/images/sunnah.png'),
-		status: 73,
 		subTasks: [
 			{
 				name: 'Fajr 2 rakah',
@@ -104,7 +101,6 @@ const FakeData = [
 	{
 		topicName: 'Tahajjud',
 		topic: 'tahajjud',
-		status: 40,
 		image: require('../assets/images/tahajjud.png'),
 		subTasks: [
 			{
@@ -128,7 +124,6 @@ const FakeData = [
 	{
 		topicName: 'Sadakah',
 		topic: 'sadaqa',
-		status: 10,
 		image: require('../assets/images/sadaqa.png'),
 		subTasks: [
 			{
@@ -152,7 +147,6 @@ const FakeData = [
 	{
 		topicName: 'Morn/Even Dua',
 		topic: 'morningDua',
-		status: 46,
 		image: require('../assets/images/morning.jpg'),
 		subTasks: [
 			{
