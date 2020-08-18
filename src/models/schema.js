@@ -143,20 +143,6 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "fiveAyats": {
-                    "name": "fiveAyats",
-                    "isArray": false,
-                    "type": "Boolean",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "page": {
-                    "name": "page",
-                    "isArray": false,
-                    "type": "Boolean",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "hundred": {
                     "name": "hundred",
                     "isArray": false,
@@ -508,5 +494,5 @@ export const schema = {
             }
         }
     },
-    "version": "9dc882d3ccbc10639c91312125e6d5a6"
+    "version": "7f514668a75158aa3ec709c02655f907"
 };

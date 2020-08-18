@@ -24,8 +24,6 @@ type FardSalah @model {
 
 type Quran @model {
 	date: String!
-	fiveAyats: Boolean
-	page: Boolean
 	hundred: Boolean
 	juz: Boolean
 	manzil: Boolean

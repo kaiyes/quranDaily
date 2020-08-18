@@ -36,8 +36,6 @@ export declare class FardSalah {
 export declare class Quran {
   readonly id: string;
   readonly date: string;
-  readonly fiveAyats?: boolean;
-  readonly page?: boolean;
   readonly hundred?: boolean;
   readonly juz?: boolean;
   readonly manzil?: boolean;

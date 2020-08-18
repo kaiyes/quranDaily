@@ -17,12 +17,11 @@ import { Icon } from 'react-native-elements'
 import { Bar } from 'react-native-progress'
 
 import { DataStore } from '@aws-amplify/datastore'
-import { FardSalah } from '../models'
+import { FardSalah, Quran } from '../models'
 
 export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
 	const [today, setToday] = useState('')
-	const [fardPrayer, setFardPrayer] = useState({})
 
 	const prayers = [
 		{
@@ -49,76 +48,69 @@ export default function Deeds({ navigation }) {
 
 	const quran = [
 		{
-			name: '5_ayah',
+			name: 'hundred',
 			icon: require('../assets/icons/5_ayah.png')
 		},
 		{
-			name: '1_page',
+			name: 'mulk',
 			icon: require('../assets/icons/1_page.png')
 		},
 		{
-			name: '100',
+			name: 'juz',
 			icon: require('../assets/icons/100.png')
 		},
 		{
-			name: '1_juz',
+			name: 'lastAyatsBaqara',
 			icon: require('../assets/icons/1_juz.png')
 		},
 		{
-			name: '1_monjil',
+			name: 'manzil',
 			icon: require('../assets/icons/1_monjil.png')
 		}
 	]
 
-	//insert prayer
-	async function insertSalah(prayer) {
-		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
-		const original = await DataStore.query(FardSalah, doesExist[0].id)
-		await DataStore.save(
-			FardSalah.copyOf(original, updated => {
-				switch (prayer) {
-					case 'fajr':
-						updated.fajr = true
-						break
-					case 'dhuhr':
-						updated.dhuhr = true
-						break
-					case 'asr':
-						updated.asr = true
-						break
-					case 'magrib':
-						updated.magrib = true
-						break
-					case 'isha':
-						updated.isha = true
-						break
-					default:
-						updated
-				}
-			})
-		)
-		console.log(await DataStore.query(FardSalah, c => c.date('eq', today)))
-	}
-
-	async function checkIfSalahDone(salah) {
+	async function checkSalah(salah) {
 		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
 		const original = doesExist[0]
-
 		switch (salah) {
 			case 'fajr':
-				return original.fajr == true ? true : false
+				return original.fajr ? true : false
 				break
 			case 'dhuhr':
-				return original.dhuhr == true ? true : false
+				return original.dhuhr ? true : false
 				break
 			case 'asr':
-				return original.asr == true ? true : false
+				return original.asr ? true : false
 				break
 			case 'magrib':
-				return original.magrib == true ? true : false
+				return original.magrib ? true : false
 				break
 			case 'isha':
-				return original.isha == true ? true : false
+				return original.isha ? true : false
+				break
+			default:
+				return true
+		}
+	}
+
+	async function checkQuran(part) {
+		const doesExist = await DataStore.query(Quran, c => c.date('eq', today))
+		const original = doesExist[0]
+		switch (part) {
+			case 'hundred':
+				return original.hundred ? true : false
+				break
+			case 'juz':
+				return original.juz ? true : false
+				break
+			case 'manzil':
+				return original.manzil ? true : false
+				break
+			case 'mulk':
+				return original.mulk ? true : false
+				break
+			case 'lastAyatsBaqara':
+				return original.lastAyatsBaqara ? true : false
 				break
 			default:
 				return true
@@ -126,25 +118,7 @@ export default function Deeds({ navigation }) {
 	}
 
 	async function insertTodaySalah(day) {
-		const doesFSexist = await DataStore.query(FardSalah, c => c.date('eq', day))
-		if (doesFSexist.length === 0) {
-			let data = {
-				date: day,
-				fajr: false,
-				dhuhr: false,
-				asr: false,
-				magrib: false,
-				isha: false,
-				status: 0
-			}
-			await setFardPrayer(data)
-			await DataStore.save(new FardSalah(data))
-		}
-		//stuff
-	}
-
-	async function insertTodayQuran(day) {
-		const doesExist = await DataStore.query(Quran, c => c.date('eq', day))
+		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
@@ -156,8 +130,24 @@ export default function Deeds({ navigation }) {
 				color: 'green',
 				status: 0
 			}
-			await setFardPrayer(data)
 			await DataStore.save(new FardSalah(data))
+		}
+		//stuff
+	}
+
+	async function insertTodayQuran(day) {
+		const doesExist = await DataStore.query(Quran, c => c.date('eq', day))
+		if (doesExist.length === 0) {
+			let data = {
+				date: day,
+				hundred: false,
+				juz: false,
+				manzil: false,
+				mulk: false,
+				lastAyatsBaqara: false,
+				status: 0
+			}
+			await DataStore.save(new Quran(data))
 		}
 		//stuff
 	}
@@ -169,6 +159,7 @@ export default function Deeds({ navigation }) {
 			const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
 			await setToday(day)
 			await insertTodaySalah(day)
+			await insertTodayQuran(day)
 			//stuff
 			setLoading(false)
 		})()
@@ -199,9 +190,11 @@ export default function Deeds({ navigation }) {
 										<Image
 											source={item.icon}
 											style={styles.taskIcon}
-											blurRadius={checkIfSalahDone(item) ? 6 : 0}
-											borderColor={checkIfSalahDone(item) ? 'black' : null}
-											borderWidth={checkIfSalahDone(item) ? 5 : 0}
+											blurRadius={checkSalah(item.name) === true ? 6 : 0}
+											borderColor={
+												checkSalah(item.name) === true ? 'black' : null
+											}
+											borderWidth={checkSalah(item.name) === true ? 5 : 0}
 										/>
 									</TouchableOpacity>
 								))}
@@ -223,13 +216,16 @@ export default function Deeds({ navigation }) {
 							<Text style={styles.cardHeader}>Quran</Text>
 							<View style={styles.dotHolder}>
 								{quran.map(item => (
-									<TouchableOpacity onPress={() => insertSalah(item.name)}>
+									<TouchableOpacity
+										onPress={async () => {
+											console.log(await checkQuran(item.name))
+										}}>
 										<Image
 											source={item.icon}
 											style={styles.taskIcon}
-											blurRadius={checkIfSalahDone(item) ? 6 : 0}
-											borderColor={'green'}
-											borderWidth={0}
+											blurRadius={checkQuran(item.name) ? 6 : 0}
+											borderColor={checkQuran(item.name) ? 'black' : null}
+											borderWidth={checkQuran(item.name) ? 5 : 0}
 										/>
 									</TouchableOpacity>
 								))}
