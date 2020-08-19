@@ -17,15 +17,36 @@ import { Icon } from 'react-native-elements'
 import { Bar } from 'react-native-progress'
 
 import { DataStore } from '@aws-amplify/datastore'
-import { FardSalah, Quran } from '../models'
+import { FardSalah, Quran, SunnaSalah } from '../models'
 
 export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
 	const [today, setToday] = useState('')
 	const [prayerObj, setPrayers] = useState({})
 	const [quran, setQuran] = useState({})
+	const [sunnah, setSunnah] = useState({})
 
-	//insert prayer
+	// first init salah
+	async function insertTodaySalah(day) {
+		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', day))
+		if (doesExist.length === 0) {
+			let data = {
+				date: day,
+				fajr: false,
+				dhuhr: false,
+				asr: false,
+				magrib: false,
+				isha: false,
+				color: 'green',
+				status: 0
+			}
+			await DataStore.save(new FardSalah(data))
+		}
+		const existsYet = await DataStore.query(FardSalah, c => c.date('eq', day))
+		setPrayers(existsYet[0])
+	}
+
+	// daily salah
 	async function insertSalah(prayer) {
 		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
 		const original = doesExist[0]
@@ -56,25 +77,7 @@ export default function Deeds({ navigation }) {
 		await setPrayers(savedObj[0])
 	}
 
-	async function insertTodaySalah(day) {
-		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', day))
-		if (doesExist.length === 0) {
-			let data = {
-				date: day,
-				fajr: false,
-				dhuhr: false,
-				asr: false,
-				magrib: false,
-				isha: false,
-				color: 'green',
-				status: 0
-			}
-			await DataStore.save(new FardSalah(data))
-		}
-		const existsYet = await DataStore.query(FardSalah, c => c.date('eq', day))
-		setPrayers(existsYet[0])
-	}
-
+	// first init Quran
 	async function insertTodayQuran(day) {
 		const doesExist = await DataStore.query(Quran, c => c.date('eq', day))
 		if (doesExist.length === 0) {
@@ -93,7 +96,7 @@ export default function Deeds({ navigation }) {
 		setQuran(existsYet[0])
 	}
 
-	//insert prayer
+	// daily Quran
 	async function insertQuran(part) {
 		const doesExist = await DataStore.query(Quran, c => c.date('eq', today))
 		const original = doesExist[0]
@@ -124,6 +127,59 @@ export default function Deeds({ navigation }) {
 		await setQuran(savedObj[0])
 	}
 
+	// first init Sunnah
+	async function insertTodaySunnah(day) {
+		const doesExist = await DataStore.query(SunnaSalah, c => c.date('eq', day))
+		if (doesExist.length === 0) {
+			let data = {
+				date: day,
+				fajr: false,
+				dhuhr: false,
+				asr: false,
+				magrib: false,
+				isha: false,
+				color: 'green',
+				status: 0
+			}
+			await DataStore.save(new SunnaSalah(data))
+		}
+		const existsYet = await DataStore.query(SunnaSalah, c => c.date('eq', day))
+		setSunnah(existsYet[0])
+	}
+
+	// daily Sunnah
+	async function insertSunnah(prayer) {
+		const doesExist = await DataStore.query(SunnaSalah, c =>
+			c.date('eq', today)
+		)
+		const original = doesExist[0]
+		await DataStore.save(
+			SunnaSalah.copyOf(original, updated => {
+				switch (prayer) {
+					case 'fajr':
+						updated.fajr = true
+						break
+					case 'dhuhr':
+						updated.dhuhr = true
+						break
+					case 'asr':
+						updated.asr = true
+						break
+					case 'magrib':
+						updated.magrib = true
+						break
+					case 'isha':
+						updated.isha = true
+						break
+					default:
+						updated
+				}
+			})
+		)
+		const savedObj = await DataStore.query(SunnaSalah, c => c.date('eq', today))
+		await setSunnah(savedObj[0])
+	}
+
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
@@ -132,6 +188,7 @@ export default function Deeds({ navigation }) {
 			await setToday(day)
 			await insertTodaySalah(day)
 			await insertTodayQuran(day)
+			await insertTodaySunnah(day)
 			//stuff
 			setLoading(false)
 		})()
@@ -157,7 +214,7 @@ export default function Deeds({ navigation }) {
 						<View style={styles.bottomRow}>
 							<Text style={styles.cardHeader}>Fard Prayer</Text>
 							<View style={styles.dotHolder}>
-								<TouchableOpacity onPress={() => insertSalah(item.name)}>
+								<TouchableOpacity onPress={() => insertSalah('fajr')}>
 									<Image
 										source={require('../assets/icons/fajr.png')}
 										style={styles.taskIcon}
@@ -206,8 +263,8 @@ export default function Deeds({ navigation }) {
 						</View>
 					</View>
 
-					{/*  card */}
-					{/*  card */}
+					{/*  Quran */}
+					{/*  Quran */}
 
 					<View style={styles.card}>
 						<View style={styles.topRow}>
@@ -270,8 +327,140 @@ export default function Deeds({ navigation }) {
 							</View>
 						</View>
 					</View>
+				</View>
 
-					{/* fard Salaha card */}
+				{/* Sunnah */}
+				{/* Sunnah */}
+
+				<View style={styles.cardHolder}>
+					{/* Sunnah Card */}
+					{/* Sunnah Card */}
+
+					<View style={styles.card}>
+						<View style={styles.topRow}>
+							<Image
+								source={require('../assets/images/sunnah.png')}
+								style={styles.image}
+							/>
+						</View>
+						<View style={styles.bottomRow}>
+							<Text style={styles.cardHeader}>Sunnah Salah</Text>
+							<View style={styles.dotHolder}>
+								<TouchableOpacity onPress={() => insertSunnah('fajr')}>
+									<Image
+										source={require('../assets/icons/fajr.png')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.fajr === true ? 6 : 0}
+										borderColor={sunnah.fajr === true ? 'black' : null}
+										borderWidth={sunnah.fajr === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertSunnah('dhuhr')}>
+									<Image
+										source={require('../assets/icons/dhuhr.png')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.dhuhr === true ? 6 : 0}
+										borderColor={sunnah.dhuhr === true ? 'black' : null}
+										borderWidth={sunnah.dhuhr === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertSunnah('asr')}>
+									<Image
+										source={require('../assets/icons/asr.png')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.asr === true ? 6 : 0}
+										borderColor={sunnah.asr === true ? 'black' : null}
+										borderWidth={sunnah.asr === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertSunnah('magrib')}>
+									<Image
+										source={require('../assets/icons/magrib.png')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.magrib === true ? 6 : 0}
+										borderColor={sunnah.magrib === true ? 'black' : null}
+										borderWidth={sunnah.magrib === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertSunnah('isha')}>
+									<Image
+										source={require('../assets/icons/isha.png')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.isha === true ? 6 : 0}
+										borderColor={sunnah.isha === true ? 'black' : null}
+										borderWidth={sunnah.isha === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+							</View>
+						</View>
+					</View>
+
+					{/*  Tahajjud card */}
+					{/*  Tahajjud card */}
+
+					<View style={styles.card}>
+						<View style={styles.topRow}>
+							<Image
+								source={require('../assets/images/tahajjud.png')}
+								style={styles.image}
+							/>
+						</View>
+						<View style={styles.bottomRow}>
+							<Text style={styles.cardHeader}>Quran</Text>
+							<View style={styles.dotHolder}>
+								<TouchableOpacity onPress={() => insertQuran('hundred')}>
+									<Image
+										source={require('../assets/icons/100.png')}
+										style={styles.taskIcon}
+										blurRadius={quran.hundred === true ? 6 : 0}
+										borderColor={quran.hundred === true ? 'black' : null}
+										borderWidth={quran.hundred === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertQuran('juz')}>
+									<Image
+										source={require('../assets/icons/1_juz.png')}
+										style={styles.taskIcon}
+										blurRadius={quran.juz === true ? 6 : 0}
+										borderColor={quran.juz === true ? 'black' : null}
+										borderWidth={quran.juz === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertQuran('manzil')}>
+									<Image
+										source={require('../assets/icons/1_monjil.png')}
+										style={styles.taskIcon}
+										blurRadius={quran.manzil === true ? 6 : 0}
+										borderColor={quran.manzil === true ? 'black' : null}
+										borderWidth={quran.manzil === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertQuran('mulk')}>
+									<Image
+										source={require('../assets/icons/1_page.png')}
+										style={styles.taskIcon}
+										blurRadius={quran.mulk === true ? 6 : 0}
+										borderColor={quran.mulk === true ? 'black' : null}
+										borderWidth={quran.mulk === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity
+									onPress={() => insertQuran('lastAyatsBaqara')}>
+									<Image
+										source={require('../assets/icons/5_ayah.png')}
+										style={styles.taskIcon}
+										blurRadius={quran.lastAyatsBaqara === true ? 6 : 0}
+										borderColor={
+											quran.lastAyatsBaqara === true ? 'black' : null
+										}
+										borderWidth={quran.lastAyatsBaqara === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+							</View>
+						</View>
+					</View>
+
+					{/*  3rd Row */}
 				</View>
 			</ScrollView>
 		</SafeAreaView>
