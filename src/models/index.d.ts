@@ -61,7 +61,7 @@ export declare class SunnaSalah {
   static copyOf(source: SunnaSalah, mutator: (draft: MutableModel<SunnaSalah>) => MutableModel<SunnaSalah> | void): SunnaSalah;
 }
 
-export declare class tahajjud {
+export declare class Tahajjud {
   readonly id: string;
   readonly date: string;
   readonly two?: boolean;
@@ -69,11 +69,11 @@ export declare class tahajjud {
   readonly eight?: boolean;
   readonly color?: string;
   readonly status?: number;
-  constructor(init: ModelInit<tahajjud>);
-  static copyOf(source: tahajjud, mutator: (draft: MutableModel<tahajjud>) => MutableModel<tahajjud> | void): tahajjud;
+  constructor(init: ModelInit<Tahajjud>);
+  static copyOf(source: Tahajjud, mutator: (draft: MutableModel<Tahajjud>) => MutableModel<Tahajjud> | void): Tahajjud;
 }
 
-export declare class sadaqat {
+export declare class Sadaqat {
   readonly id: string;
   readonly date: string;
   readonly money?: boolean;
@@ -82,8 +82,8 @@ export declare class sadaqat {
   readonly lokma?: boolean;
   readonly color?: string;
   readonly status?: number;
-  constructor(init: ModelInit<sadaqat>);
-  static copyOf(source: sadaqat, mutator: (draft: MutableModel<sadaqat>) => MutableModel<sadaqat> | void): sadaqat;
+  constructor(init: ModelInit<Sadaqat>);
+  static copyOf(source: Sadaqat, mutator: (draft: MutableModel<Sadaqat>) => MutableModel<Sadaqat> | void): Sadaqat;
 }
 
 export declare class MorningDua {

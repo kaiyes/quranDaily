@@ -17,7 +17,7 @@ import { Icon } from 'react-native-elements'
 import { Bar } from 'react-native-progress'
 
 import { DataStore } from '@aws-amplify/datastore'
-import { FardSalah, Quran, SunnaSalah } from '../models'
+import { FardSalah, Quran, SunnaSalah, Tahajjud } from '../models'
 
 export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
@@ -25,6 +25,7 @@ export default function Deeds({ navigation }) {
 	const [prayerObj, setPrayers] = useState({})
 	const [quran, setQuran] = useState({})
 	const [sunnah, setSunnah] = useState({})
+	const [tahajjud, setTahajjud] = useState({})
 
 	// first init salah
 	async function insertTodaySalah(day) {
@@ -69,7 +70,7 @@ export default function Deeds({ navigation }) {
 						updated.isha = true
 						break
 					default:
-						updated
+						original
 				}
 			})
 		)
@@ -119,7 +120,7 @@ export default function Deeds({ navigation }) {
 						updated.lastAyatsBaqara = true
 						break
 					default:
-						updated
+						original
 				}
 			})
 		)
@@ -172,12 +173,55 @@ export default function Deeds({ navigation }) {
 						updated.isha = true
 						break
 					default:
-						updated
+						original
 				}
 			})
 		)
 		const savedObj = await DataStore.query(SunnaSalah, c => c.date('eq', today))
 		await setSunnah(savedObj[0])
+	}
+
+	// first init tahajjud
+	async function insertTodayTahajjud(day) {
+		const doesExist = await DataStore.query(Tahajjud, c => c.date('eq', day))
+		if (doesExist.length === 0) {
+			let data = {
+				date: day,
+				two: false,
+				four: false,
+				eight: false,
+				color: 'red',
+				status: 0
+			}
+			await DataStore.save(new Tahajjud(data))
+		}
+		const existsYet = await DataStore.query(Tahajjud, c => c.date('eq', day))
+		setTahajjud(existsYet[0])
+	}
+
+	// daily tahajjud
+	async function insertTahajjud(prayer) {
+		const doesExist = await DataStore.query(Tahajjud, c => c.date('eq', today))
+		const original = doesExist[0]
+		await DataStore.save(
+			Tahajjud.copyOf(original, updated => {
+				switch (prayer) {
+					case 'two':
+						updated.two = true
+						break
+					case 'four':
+						updated.four = true
+						break
+					case 'eight':
+						updated.eight = true
+						break
+					default:
+						original
+				}
+			})
+		)
+		const savedObj = await DataStore.query(Tahajjud, c => c.date('eq', today))
+		await setTahajjud(savedObj[0])
 	}
 
 	useEffect(() => {
@@ -189,6 +233,7 @@ export default function Deeds({ navigation }) {
 			await insertTodaySalah(day)
 			await insertTodayQuran(day)
 			await insertTodaySunnah(day)
+			await insertTodayTahajjud(day)
 			//stuff
 			setLoading(false)
 		})()
@@ -200,6 +245,9 @@ export default function Deeds({ navigation }) {
 			<Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
 
 			<ScrollView contentContainerStyle={styles.scrollView}>
+				{/* 1st row*/}
+				{/* 1st row*/}
+
 				<View style={styles.cardHolder}>
 					{/* fard salah card */}
 					{/* fard Salaha card */}
@@ -263,8 +311,8 @@ export default function Deeds({ navigation }) {
 						</View>
 					</View>
 
-					{/*  Quran */}
-					{/*  Quran */}
+					{/*  Quran Card*/}
+					{/*  Quran Card*/}
 
 					<View style={styles.card}>
 						<View style={styles.topRow}>
@@ -329,8 +377,8 @@ export default function Deeds({ navigation }) {
 					</View>
 				</View>
 
-				{/* Sunnah */}
-				{/* Sunnah */}
+				{/* 2nd row*/}
+				{/* 2nd row*/}
 
 				<View style={styles.cardHolder}>
 					{/* Sunnah Card */}
@@ -406,54 +454,33 @@ export default function Deeds({ navigation }) {
 							/>
 						</View>
 						<View style={styles.bottomRow}>
-							<Text style={styles.cardHeader}>Quran</Text>
+							<Text style={styles.cardHeader}>Tahajjud</Text>
 							<View style={styles.dotHolder}>
-								<TouchableOpacity onPress={() => insertQuran('hundred')}>
+								<TouchableOpacity onPress={() => insertTahajjud('two')}>
 									<Image
-										source={require('../assets/icons/100.png')}
+										source={require('../assets/icons/2.png')}
 										style={styles.taskIcon}
-										blurRadius={quran.hundred === true ? 6 : 0}
-										borderColor={quran.hundred === true ? 'black' : null}
-										borderWidth={quran.hundred === true ? 5 : 0}
+										blurRadius={tahajjud.two === true ? 6 : 0}
+										borderColor={tahajjud.two === true ? 'black' : null}
+										borderWidth={tahajjud.two === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => insertQuran('juz')}>
+								<TouchableOpacity onPress={() => insertTahajjud('four')}>
 									<Image
-										source={require('../assets/icons/1_juz.png')}
+										source={require('../assets/icons/4.png')}
 										style={styles.taskIcon}
-										blurRadius={quran.juz === true ? 6 : 0}
-										borderColor={quran.juz === true ? 'black' : null}
-										borderWidth={quran.juz === true ? 5 : 0}
+										blurRadius={tahajjud.four === true ? 6 : 0}
+										borderColor={tahajjud.four === true ? 'black' : null}
+										borderWidth={tahajjud.four === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => insertQuran('manzil')}>
+								<TouchableOpacity onPress={() => insertTahajjud('eight')}>
 									<Image
-										source={require('../assets/icons/1_monjil.png')}
+										source={require('../assets/icons/8.png')}
 										style={styles.taskIcon}
-										blurRadius={quran.manzil === true ? 6 : 0}
-										borderColor={quran.manzil === true ? 'black' : null}
-										borderWidth={quran.manzil === true ? 5 : 0}
-									/>
-								</TouchableOpacity>
-								<TouchableOpacity onPress={() => insertQuran('mulk')}>
-									<Image
-										source={require('../assets/icons/1_page.png')}
-										style={styles.taskIcon}
-										blurRadius={quran.mulk === true ? 6 : 0}
-										borderColor={quran.mulk === true ? 'black' : null}
-										borderWidth={quran.mulk === true ? 5 : 0}
-									/>
-								</TouchableOpacity>
-								<TouchableOpacity
-									onPress={() => insertQuran('lastAyatsBaqara')}>
-									<Image
-										source={require('../assets/icons/5_ayah.png')}
-										style={styles.taskIcon}
-										blurRadius={quran.lastAyatsBaqara === true ? 6 : 0}
-										borderColor={
-											quran.lastAyatsBaqara === true ? 'black' : null
-										}
-										borderWidth={quran.lastAyatsBaqara === true ? 5 : 0}
+										blurRadius={tahajjud.eight === true ? 6 : 0}
+										borderColor={tahajjud.eight === true ? 'black' : null}
+										borderWidth={tahajjud.eight === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
 							</View>

@@ -278,8 +278,8 @@ export const schema = {
                 }
             ]
         },
-        "tahajjud": {
-            "name": "tahajjud",
+        "Tahajjud": {
+            "name": "Tahajjud",
             "fields": {
                 "id": {
                     "name": "id",
@@ -332,7 +332,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "tahajjuds",
+            "pluralName": "Tahajjuds",
             "attributes": [
                 {
                     "type": "model",
@@ -340,8 +340,8 @@ export const schema = {
                 }
             ]
         },
-        "sadaqat": {
-            "name": "sadaqat",
+        "Sadaqat": {
+            "name": "Sadaqat",
             "fields": {
                 "id": {
                     "name": "id",
@@ -401,7 +401,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "sadaqats",
+            "pluralName": "Sadaqats",
             "attributes": [
                 {
                     "type": "model",
@@ -494,5 +494,5 @@ export const schema = {
             }
         }
     },
-    "version": "7f514668a75158aa3ec709c02655f907"
+    "version": "358059c40afd446aaaeeef12ab68d719"
 };

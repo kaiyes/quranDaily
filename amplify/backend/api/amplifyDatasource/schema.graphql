@@ -44,7 +44,7 @@ type SunnaSalah @model {
 	status: Int
 }
 
-type tahajjud @model {
+type Tahajjud @model {
 	date: String!
 	two: Boolean
 	four: Boolean
@@ -53,7 +53,7 @@ type tahajjud @model {
 	status: Int
 }
 
-type sadaqat @model {
+type Sadaqat @model {
 	date: String!
 	money: Boolean
 	love: Boolean
