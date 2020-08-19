@@ -17,7 +17,7 @@ import { Icon } from 'react-native-elements'
 import { Bar } from 'react-native-progress'
 
 import { DataStore } from '@aws-amplify/datastore'
-import { FardSalah, Quran, SunnaSalah, Tahajjud } from '../models'
+import { FardSalah, Quran, SunnaSalah, Tahajjud, Sadaqat } from '../models'
 
 export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
@@ -244,29 +244,29 @@ export default function Deeds({ navigation }) {
 		setSadaqa(existsYet[0])
 	}
 
-	// daily tahajjud
-	async function insertTahajjud(prayer) {
-		const doesExist = await DataStore.query(Tahajjud, c => c.date('eq', today))
+	// daily sadaqa
+	async function insertSadaqa(topic) {
+		const doesExist = await DataStore.query(Sadaqat, c => c.date('eq', today))
 		const original = doesExist[0]
 		await DataStore.save(
-			Tahajjud.copyOf(original, updated => {
-				switch (prayer) {
-					case 'two':
-						updated.two = true
+			Sadaqat.copyOf(original, updated => {
+				switch (topic) {
+					case 'love':
+						updated.love = true
 						break
-					case 'four':
-						updated.four = true
+					case 'smile':
+						updated.smile = true
 						break
-					case 'eight':
-						updated.eight = true
+					case 'money':
+						updated.money = true
 						break
 					default:
-						original
+						updated
 				}
 			})
 		)
-		const savedObj = await DataStore.query(Tahajjud, c => c.date('eq', today))
-		await setTahajjud(savedObj[0])
+		const savedObj = await DataStore.query(Sadaqat, c => c.date('eq', today))
+		await setSadaqa(savedObj[0])
 	}
 
 	useEffect(() => {
@@ -279,6 +279,7 @@ export default function Deeds({ navigation }) {
 			await insertTodayQuran(day)
 			await insertTodaySunnah(day)
 			await insertTodayTahajjud(day)
+			await insertTodaySadaqa(day)
 			//stuff
 			setLoading(false)
 		})()
@@ -550,31 +551,31 @@ export default function Deeds({ navigation }) {
 						<View style={styles.bottomRow}>
 							<Text style={styles.cardHeader}>Sadaqa</Text>
 							<View style={styles.dotHolder}>
-								<TouchableOpacity onPress={() => insertSunnah('fajr')}>
+								<TouchableOpacity onPress={() => insertSadaqa('money')}>
 									<Image
 										source={require('../assets/icons/money.png')}
 										style={styles.taskIcon}
-										blurRadius={sunnah.fajr === true ? 6 : 0}
-										borderColor={sunnah.fajr === true ? 'black' : null}
-										borderWidth={sunnah.fajr === true ? 5 : 0}
+										blurRadius={sadaqa.money === true ? 6 : 0}
+										borderColor={sadaqa.money === true ? 'black' : null}
+										borderWidth={sadaqa.money === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => insertSunnah('dhuhr')}>
+								<TouchableOpacity onPress={() => insertSadaqa('love')}>
 									<Image
 										source={require('../assets/icons/intimate.jpg')}
 										style={styles.taskIcon}
-										blurRadius={sunnah.dhuhr === true ? 6 : 0}
-										borderColor={sunnah.dhuhr === true ? 'black' : null}
-										borderWidth={sunnah.dhuhr === true ? 5 : 0}
+										blurRadius={sadaqa.love === true ? 6 : 0}
+										borderColor={sadaqa.love === true ? 'black' : null}
+										borderWidth={sadaqa.love === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => insertSunnah('asr')}>
+								<TouchableOpacity onPress={() => insertSadaqa('smile')}>
 									<Image
 										source={require('../assets/icons/smile.png')}
 										style={styles.taskIcon}
-										blurRadius={sunnah.asr === true ? 6 : 0}
-										borderColor={sunnah.asr === true ? 'black' : null}
-										borderWidth={sunnah.asr === true ? 5 : 0}
+										blurRadius={sadaqa.smile === true ? 6 : 0}
+										borderColor={sadaqa.smile === true ? 'black' : null}
+										borderWidth={sadaqa.smile === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
 							</View>
