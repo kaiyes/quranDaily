@@ -17,7 +17,14 @@ import { Icon } from 'react-native-elements'
 import { Bar } from 'react-native-progress'
 
 import { DataStore } from '@aws-amplify/datastore'
-import { FardSalah, Quran, SunnaSalah, Tahajjud, Sadaqat } from '../models'
+import {
+	FardSalah,
+	Quran,
+	SunnaSalah,
+	Tahajjud,
+	Sadaqat,
+	MorningDua
+} from '../models'
 
 export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
@@ -27,6 +34,7 @@ export default function Deeds({ navigation }) {
 	const [sunnah, setSunnah] = useState({})
 	const [tahajjud, setTahajjud] = useState({})
 	const [sadaqa, setSadaqa] = useState({})
+	const [morningDua, setMorningDua] = useState({})
 
 	// first init salah
 	async function insertTodaySalah(day) {
@@ -269,6 +277,47 @@ export default function Deeds({ navigation }) {
 		await setSadaqa(savedObj[0])
 	}
 
+	// first init Morning Dua
+	async function insertTodayDua(day) {
+		const doesExist = await DataStore.query(MorningDua, c => c.date('eq', day))
+		if (doesExist.length === 0) {
+			let data = {
+				date: day,
+				morning: false,
+				evening: false,
+				color: 'yellow',
+				status: 0
+			}
+			await DataStore.save(new MorningDua(data))
+		}
+		const existsYet = await DataStore.query(MorningDua, c => c.date('eq', day))
+		await setMorningDua(existsYet[0])
+	}
+
+	// daily Dua
+	async function insertDua(topic) {
+		const doesExist = await DataStore.query(MorningDua, c =>
+			c.date('eq', today)
+		)
+		const original = doesExist[0]
+		await DataStore.save(
+			MorningDua.copyOf(original, updated => {
+				switch (topic) {
+					case 'morning':
+						updated.morning = true
+						break
+					case 'evening':
+						updated.evening = true
+						break
+					default:
+						updated
+				}
+			})
+		)
+		const savedObj = await DataStore.query(MorningDua, c => c.date('eq', today))
+		await setMorningDua(savedObj[0])
+	}
+
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
@@ -280,6 +329,7 @@ export default function Deeds({ navigation }) {
 			await insertTodaySunnah(day)
 			await insertTodayTahajjud(day)
 			await insertTodaySadaqa(day)
+			await insertTodayDua(day)
 			//stuff
 			setLoading(false)
 		})()
@@ -595,22 +645,22 @@ export default function Deeds({ navigation }) {
 						<View style={styles.bottomRow}>
 							<Text style={styles.cardHeader}>Morn/Even Dua</Text>
 							<View style={styles.dotHolder}>
-								<TouchableOpacity onPress={() => insertTahajjud('two')}>
+								<TouchableOpacity onPress={() => insertDua('morning')}>
 									<Image
 										source={require('../assets/icons/dhuhr.png')}
 										style={styles.taskIcon}
-										blurRadius={tahajjud.morning === true ? 6 : 0}
-										borderColor={tahajjud.morning === true ? 'black' : null}
-										borderWidth={tahajjud.morning === true ? 5 : 0}
+										blurRadius={morningDua.morning === true ? 6 : 0}
+										borderColor={morningDua.morning === true ? 'black' : null}
+										borderWidth={morningDua.morning === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
-								<TouchableOpacity onPress={() => insertTahajjud('four')}>
+								<TouchableOpacity onPress={() => insertDua('evening')}>
 									<Image
 										source={require('../assets/icons/moon_t.png')}
 										style={styles.taskIcon}
-										blurRadius={tahajjud.four === true ? 6 : 0}
-										borderColor={tahajjud.four === true ? 'black' : null}
-										borderWidth={tahajjud.four === true ? 5 : 0}
+										blurRadius={morningDua.evening === true ? 6 : 0}
+										borderColor={morningDua.evening === true ? 'black' : null}
+										borderWidth={morningDua.evening === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
 							</View>
