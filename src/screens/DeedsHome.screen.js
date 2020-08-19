@@ -26,6 +26,7 @@ export default function Deeds({ navigation }) {
 	const [quran, setQuran] = useState({})
 	const [sunnah, setSunnah] = useState({})
 	const [tahajjud, setTahajjud] = useState({})
+	const [sadaqa, setSadaqa] = useState({})
 
 	// first init salah
 	async function insertTodaySalah(day) {
@@ -197,6 +198,50 @@ export default function Deeds({ navigation }) {
 		}
 		const existsYet = await DataStore.query(Tahajjud, c => c.date('eq', day))
 		setTahajjud(existsYet[0])
+	}
+
+	// daily tahajjud
+	async function insertTahajjud(prayer) {
+		const doesExist = await DataStore.query(Tahajjud, c => c.date('eq', today))
+		const original = doesExist[0]
+		await DataStore.save(
+			Tahajjud.copyOf(original, updated => {
+				switch (prayer) {
+					case 'two':
+						updated.two = true
+						break
+					case 'four':
+						updated.four = true
+						break
+					case 'eight':
+						updated.eight = true
+						break
+					default:
+						original
+				}
+			})
+		)
+		const savedObj = await DataStore.query(Tahajjud, c => c.date('eq', today))
+		await setTahajjud(savedObj[0])
+	}
+
+	// first init sadaqa
+	async function insertTodaySadaqa(day) {
+		const doesExist = await DataStore.query(Sadaqat, c => c.date('eq', day))
+		if (doesExist.length === 0) {
+			let data = {
+				date: day,
+				money: false,
+				love: false,
+				smile: false,
+				lokma: false,
+				color: 'yellow',
+				status: 0
+			}
+			await DataStore.save(new Sadaqat(data))
+		}
+		const existsYet = await DataStore.query(Sadaqat, c => c.date('eq', day))
+		setSadaqa(existsYet[0])
 	}
 
 	// daily tahajjud
@@ -481,6 +526,90 @@ export default function Deeds({ navigation }) {
 										blurRadius={tahajjud.eight === true ? 6 : 0}
 										borderColor={tahajjud.eight === true ? 'black' : null}
 										borderWidth={tahajjud.eight === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+							</View>
+						</View>
+					</View>
+				</View>
+
+				{/* 3rd row*/}
+				{/* 3rd row*/}
+
+				<View style={styles.cardHolder}>
+					{/* Sadaqa Card */}
+					{/* Sadaqa Card */}
+
+					<View style={styles.card}>
+						<View style={styles.topRow}>
+							<Image
+								source={require('../assets/images/sadaqa.png')}
+								style={styles.image}
+							/>
+						</View>
+						<View style={styles.bottomRow}>
+							<Text style={styles.cardHeader}>Sadaqa</Text>
+							<View style={styles.dotHolder}>
+								<TouchableOpacity onPress={() => insertSunnah('fajr')}>
+									<Image
+										source={require('../assets/icons/money.png')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.fajr === true ? 6 : 0}
+										borderColor={sunnah.fajr === true ? 'black' : null}
+										borderWidth={sunnah.fajr === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertSunnah('dhuhr')}>
+									<Image
+										source={require('../assets/icons/intimate.jpg')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.dhuhr === true ? 6 : 0}
+										borderColor={sunnah.dhuhr === true ? 'black' : null}
+										borderWidth={sunnah.dhuhr === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertSunnah('asr')}>
+									<Image
+										source={require('../assets/icons/smile.png')}
+										style={styles.taskIcon}
+										blurRadius={sunnah.asr === true ? 6 : 0}
+										borderColor={sunnah.asr === true ? 'black' : null}
+										borderWidth={sunnah.asr === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+							</View>
+						</View>
+					</View>
+
+					{/*  Tahajjud card */}
+					{/*  Tahajjud card */}
+
+					<View style={styles.card}>
+						<View style={styles.topRow}>
+							<Image
+								source={require('../assets/images/morning.jpg')}
+								style={styles.image}
+							/>
+						</View>
+						<View style={styles.bottomRow}>
+							<Text style={styles.cardHeader}>Morn/Even Dua</Text>
+							<View style={styles.dotHolder}>
+								<TouchableOpacity onPress={() => insertTahajjud('two')}>
+									<Image
+										source={require('../assets/icons/dhuhr.png')}
+										style={styles.taskIcon}
+										blurRadius={tahajjud.morning === true ? 6 : 0}
+										borderColor={tahajjud.morning === true ? 'black' : null}
+										borderWidth={tahajjud.morning === true ? 5 : 0}
+									/>
+								</TouchableOpacity>
+								<TouchableOpacity onPress={() => insertTahajjud('four')}>
+									<Image
+										source={require('../assets/icons/moon_t.png')}
+										style={styles.taskIcon}
+										blurRadius={tahajjud.four === true ? 6 : 0}
+										borderColor={tahajjud.four === true ? 'black' : null}
+										borderWidth={tahajjud.four === true ? 5 : 0}
 									/>
 								</TouchableOpacity>
 							</View>
