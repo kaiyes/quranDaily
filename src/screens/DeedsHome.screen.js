@@ -65,18 +65,23 @@ export default function Deeds({ navigation }) {
 				switch (prayer) {
 					case 'fajr':
 						updated.fajr = true
+						updated.status += 1
 						break
 					case 'dhuhr':
 						updated.dhuhr = true
+						updated.status += 1
 						break
 					case 'asr':
 						updated.asr = true
+						updated.status += 1
 						break
 					case 'magrib':
 						updated.magrib = true
+						updated.status += 1
 						break
 					case 'isha':
 						updated.isha = true
+						updated.status += 1
 						break
 					default:
 						original
@@ -115,18 +120,23 @@ export default function Deeds({ navigation }) {
 				switch (part) {
 					case 'hundred':
 						updated.hundred = true
+						updated.status += 1
 						break
 					case 'manzil':
 						updated.manzil = true
+						updated.status += 1
 						break
 					case 'juz':
 						updated.juz = true
+						updated.status += 1
 						break
 					case 'mulk':
 						updated.mulk = true
+						updated.status += 1
 						break
 					case 'lastAyatsBaqara':
 						updated.lastAyatsBaqara = true
+						updated.status += 1
 						break
 					default:
 						original
@@ -168,18 +178,23 @@ export default function Deeds({ navigation }) {
 				switch (prayer) {
 					case 'fajr':
 						updated.fajr = true
+						updated.status += 1
 						break
 					case 'dhuhr':
 						updated.dhuhr = true
+						updated.status += 1
 						break
 					case 'asr':
 						updated.asr = true
+						updated.status += 1
 						break
 					case 'magrib':
 						updated.magrib = true
+						updated.status += 1
 						break
 					case 'isha':
 						updated.isha = true
+						updated.status += 1
 						break
 					default:
 						original
@@ -217,12 +232,15 @@ export default function Deeds({ navigation }) {
 				switch (prayer) {
 					case 'two':
 						updated.two = true
+						updated.status += 1
 						break
 					case 'four':
 						updated.four = true
+						updated.status += 1
 						break
 					case 'eight':
 						updated.eight = true
+						updated.status += 1
 						break
 					default:
 						original
@@ -261,12 +279,15 @@ export default function Deeds({ navigation }) {
 				switch (topic) {
 					case 'love':
 						updated.love = true
+						updated.status += 1
 						break
 					case 'smile':
 						updated.smile = true
+						updated.status += 1
 						break
 					case 'money':
 						updated.money = true
+						updated.status += 1
 						break
 					default:
 						updated
@@ -305,9 +326,11 @@ export default function Deeds({ navigation }) {
 				switch (topic) {
 					case 'morning':
 						updated.morning = true
+						updated.status += 1
 						break
 					case 'evening':
 						updated.evening = true
+						updated.status += 1
 						break
 					default:
 						updated
@@ -316,6 +339,7 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(MorningDua, c => c.date('eq', today))
 		await setMorningDua(savedObj[0])
+		console.log(savedObj)
 	}
 
 	useEffect(() => {
