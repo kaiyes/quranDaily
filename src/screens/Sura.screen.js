@@ -51,6 +51,26 @@ export default function Sura({ route }) {
 		)
 	}
 
+	function Card2(item) {
+		return (
+			<View style={styles.card2}>
+				<Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
+			</View>
+		)
+	}
+
+	function Pager2() {
+		return (
+			<FlatList
+				horizontal
+				inverted
+				data={pages}
+				keyExtractor={item => item.p.toString()}
+				renderItem={({ item }) => Card2(item)}
+			/>
+		)
+	}
+
 	function List() {
 		return loading ? (
 			Loader()
@@ -541,7 +561,7 @@ export default function Sura({ route }) {
 		}
 	}
 
-	return renderStyle === 'list' ? List() : Pager()
+	return renderStyle === 'list' ? List() : Pager2()
 }
 
 const styles = StyleSheet.create({
@@ -582,8 +602,15 @@ const styles = StyleSheet.create({
 		width: wp('90%')
 	},
 	ayatForPage: {
-		fontSize: 22,
+		fontSize: 19,
 		fontFamily: 'me_quran',
 		textAlign: 'justify'
+	},
+	card2: {
+		flex: 1,
+		width: wp('100%'),
+		paddingHorizontal: wp('5%'),
+		alignItems: 'center',
+		backgroundColor: 'lemonchiffon'
 	}
 })
