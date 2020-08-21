@@ -64,24 +64,49 @@ export default function Deeds({ navigation }) {
 			FardSalah.copyOf(original, updated => {
 				switch (prayer) {
 					case 'fajr':
-						updated.fajr = true
-						updated.status += 1
+						if (updated.fajr) {
+							updated.fajr = false
+							updated.status -= 1
+						} else {
+							updated.fajr = true
+							updated.status += 1
+						}
 						break
 					case 'dhuhr':
-						updated.dhuhr = true
-						updated.status += 1
+						if (updated.dhuhr) {
+							updated.dhuhr = false
+							updated.status -= 1
+						} else {
+							updated.dhuhr = true
+							updated.status += 1
+						}
 						break
 					case 'asr':
-						updated.asr = true
-						updated.status += 1
+						if (updated.asr) {
+							updated.asr = false
+							updated.status -= 1
+						} else {
+							updated.asr = true
+							updated.status += 1
+						}
 						break
 					case 'magrib':
-						updated.magrib = true
-						updated.status += 1
+						if (updated.magrib) {
+							updated.magrib = false
+							updated.status -= 1
+						} else {
+							updated.magrib = true
+							updated.status += 1
+						}
 						break
 					case 'isha':
-						updated.isha = true
-						updated.status += 1
+						if (updated.isha) {
+							updated.isha = false
+							updated.status -= 1
+						} else {
+							updated.isha = true
+							updated.status += 1
+						}
 						break
 					default:
 						original
@@ -119,24 +144,49 @@ export default function Deeds({ navigation }) {
 			Quran.copyOf(original, updated => {
 				switch (part) {
 					case 'hundred':
-						updated.hundred = true
-						updated.status += 1
+						if (updated.hundred) {
+							updated.hundred = false
+							updated.status -= 1
+						} else {
+							updated.hundred = true
+							updated.status += 1
+						}
 						break
 					case 'manzil':
-						updated.manzil = true
-						updated.status += 1
+						if (updated.manzil) {
+							updated.manzil = false
+							updated.status -= 1
+						} else {
+							updated.manzil = true
+							updated.status += 1
+						}
 						break
 					case 'juz':
-						updated.juz = true
-						updated.status += 1
+						if (updated.juz) {
+							updated.juz = false
+							updated.status -= 1
+						} else {
+							updated.juz = true
+							updated.status += 1
+						}
 						break
 					case 'mulk':
-						updated.mulk = true
-						updated.status += 1
+						if (updated.mulk) {
+							updated.mulk = false
+							updated.status -= 1
+						} else {
+							updated.mulk = true
+							updated.status += 1
+						}
 						break
 					case 'lastAyatsBaqara':
-						updated.lastAyatsBaqara = true
-						updated.status += 1
+						if (updated.lastAyatsBaqara) {
+							updated.lastAyatsBaqara = false
+							updated.status -= 1
+						} else {
+							updated.lastAyatsBaqara = true
+							updated.status += 1
+						}
 						break
 					default:
 						original
@@ -177,24 +227,49 @@ export default function Deeds({ navigation }) {
 			SunnaSalah.copyOf(original, updated => {
 				switch (prayer) {
 					case 'fajr':
-						updated.fajr = true
-						updated.status += 1
+						if (updated.fajr) {
+							updated.fajr = false
+							updated.status -= 1
+						} else {
+							updated.fajr = true
+							updated.status += 1
+						}
 						break
 					case 'dhuhr':
-						updated.dhuhr = true
-						updated.status += 1
+						if (updated.dhuhr) {
+							updated.dhuhr = false
+							updated.status -= 1
+						} else {
+							updated.dhuhr = true
+							updated.status += 1
+						}
 						break
 					case 'asr':
-						updated.asr = true
-						updated.status += 1
+						if (updated.asr) {
+							updated.asr = false
+							updated.status -= 1
+						} else {
+							updated.asr = true
+							updated.status += 1
+						}
 						break
 					case 'magrib':
-						updated.magrib = true
-						updated.status += 1
+						if (updated.magrib) {
+							updated.magrib = false
+							updated.status -= 1
+						} else {
+							updated.magrib = true
+							updated.status += 1
+						}
 						break
 					case 'isha':
-						updated.isha = true
-						updated.status += 1
+						if (updated.isha) {
+							updated.isha = false
+							updated.status -= 1
+						} else {
+							updated.isha = true
+							updated.status += 1
+						}
 						break
 					default:
 						original
@@ -231,16 +306,31 @@ export default function Deeds({ navigation }) {
 			Tahajjud.copyOf(original, updated => {
 				switch (prayer) {
 					case 'two':
-						updated.two = true
-						updated.status += 1
+						if (updated.two) {
+							updated.two = false
+							updated.status -= 1
+						} else {
+							updated.two = true
+							updated.status += 1
+						}
 						break
 					case 'four':
-						updated.four = true
-						updated.status += 1
+						if (updated.four) {
+							updated.four = false
+							updated.status -= 1
+						} else {
+							updated.four = true
+							updated.status += 1
+						}
 						break
 					case 'eight':
-						updated.eight = true
-						updated.status += 1
+						if (updated.eight) {
+							updated.eight = false
+							updated.status -= 1
+						} else {
+							updated.eight = true
+							updated.status += 1
+						}
 						break
 					default:
 						original
@@ -278,16 +368,31 @@ export default function Deeds({ navigation }) {
 			Sadaqat.copyOf(original, updated => {
 				switch (topic) {
 					case 'love':
-						updated.love = true
-						updated.status += 1
+						if (updated.love) {
+							updated.love = false
+							updated.status -= 1
+						} else {
+							updated.love = true
+							updated.status += 1
+						}
 						break
 					case 'smile':
-						updated.smile = true
-						updated.status += 1
+						if (updated.smile) {
+							updated.smile = false
+							updated.status -= 1
+						} else {
+							updated.smile = true
+							updated.status += 1
+						}
 						break
 					case 'money':
-						updated.money = true
-						updated.status += 1
+						if (updated.money) {
+							updated.money = false
+							updated.status -= 1
+						} else {
+							updated.money = true
+							updated.status += 1
+						}
 						break
 					default:
 						updated
@@ -325,12 +430,22 @@ export default function Deeds({ navigation }) {
 			MorningDua.copyOf(original, updated => {
 				switch (topic) {
 					case 'morning':
-						updated.morning = true
-						updated.status += 1
+						if (updated.morning) {
+							updated.morning = false
+							updated.status -= 1
+						} else {
+							updated.morning = true
+							updated.status += 1
+						}
 						break
 					case 'evening':
-						updated.evening = true
-						updated.status += 1
+						if (updated.evening) {
+							updated.evening = false
+							updated.status -= 1
+						} else {
+							updated.evening = true
+							updated.status += 1
+						}
 						break
 					default:
 						updated
@@ -339,7 +454,6 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(MorningDua, c => c.date('eq', today))
 		await setMorningDua(savedObj[0])
-		console.log(savedObj)
 	}
 
 	useEffect(() => {

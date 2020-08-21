@@ -24,6 +24,7 @@ export default function Sura({ route }) {
 	const [loading, setLoading] = useState(false)
 	const [page, setPage] = useState(1)
 	const [ayats, setAyats] = useState([])
+	const [pagesToRender, setPagesToRender] = useState([])
 
 	const { language, renderStyle, suraName, suraNumber } = route.params
 
@@ -64,8 +65,10 @@ export default function Sura({ route }) {
 			<FlatList
 				horizontal
 				inverted
-				data={pages}
+				pagingEnabled
+				data={pagesToRender}
 				keyExtractor={item => item.p.toString()}
+				onEndReached={() => fetchMore()}
 				renderItem={({ item }) => Card2(item)}
 			/>
 		)
@@ -86,11 +89,18 @@ export default function Sura({ route }) {
 		)
 	}
 
+	async function fetchMore() {
+		console.log(pagesToRender.map(item => item.p))
+		await setPagesToRender(pages.slice(0, 6))
+	}
+
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
 			if (renderStyle === 'list') {
 				await fetchSura()
+			} else {
+				setPagesToRender(pages.slice(0, 2))
 			}
 			setLoading(false)
 		})()
