@@ -24,7 +24,7 @@ import QuranScreen from './screens/Quran.screen'
 import MemorizeScreen from './screens/Memorize.screen'
 import SuraScreen from './screens/Sura.screen'
 
-import testScreen from './screens/Test.screen'
+import testScreen from './screens/Stats.screen'
 
 //components
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'

@@ -22,6 +22,9 @@ export declare class Duas {
 export declare class FardSalah {
   readonly id: string;
   readonly date: string;
+  readonly month: string;
+  readonly week: string;
+  readonly year: string;
   readonly fajr?: boolean;
   readonly dhuhr?: boolean;
   readonly asr?: boolean;
@@ -36,6 +39,9 @@ export declare class FardSalah {
 export declare class Quran {
   readonly id: string;
   readonly date: string;
+  readonly month: string;
+  readonly week: string;
+  readonly year: string;
   readonly hundred?: boolean;
   readonly juz?: boolean;
   readonly manzil?: boolean;
@@ -50,6 +56,9 @@ export declare class Quran {
 export declare class SunnaSalah {
   readonly id: string;
   readonly date: string;
+  readonly month: string;
+  readonly week: string;
+  readonly year: string;
   readonly fajr?: boolean;
   readonly dhuhr?: boolean;
   readonly asr?: boolean;
@@ -64,6 +73,9 @@ export declare class SunnaSalah {
 export declare class Tahajjud {
   readonly id: string;
   readonly date: string;
+  readonly month: string;
+  readonly week: string;
+  readonly year: string;
   readonly two?: boolean;
   readonly four?: boolean;
   readonly eight?: boolean;
@@ -76,6 +88,9 @@ export declare class Tahajjud {
 export declare class Sadaqat {
   readonly id: string;
   readonly date: string;
+  readonly month: string;
+  readonly week: string;
+  readonly year: string;
   readonly money?: boolean;
   readonly love?: boolean;
   readonly smile?: boolean;
@@ -89,6 +104,9 @@ export declare class Sadaqat {
 export declare class MorningDua {
   readonly id: string;
   readonly date: string;
+  readonly month: string;
+  readonly week: string;
+  readonly year: string;
   readonly morning?: boolean;
   readonly evening?: boolean;
   readonly color?: string;

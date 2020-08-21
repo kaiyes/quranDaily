@@ -15,6 +15,16 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 
+import { DataStore, Predicates } from '@aws-amplify/datastore'
+import {
+	FardSalah,
+	Quran,
+	SunnaSalah,
+	Tahajjud,
+	Sadaqat,
+	MorningDua
+} from '../models'
+
 import QuranData from '../utility/fakeMonthViewQuran'
 import FardSalahData from '../utility/fakeMonthViewFamily'
 import SunnaSalahData from '../utility/fakeMonthViewEntertainment'
@@ -53,6 +63,11 @@ export default function Week() {
 		}
 	]
 
+	async function setQuranData() {
+		const doesExist = await DataStore.query(MorningDua)
+		console.log(doesExist)
+	}
+
 	function swithcCircle(status) {
 		if (status <= 30) {
 			return styles.smallCircle
@@ -62,6 +77,14 @@ export default function Week() {
 			return styles.mediumCircle
 		}
 	}
+
+	// 	useEffect(() => {
+	// 		;(async function fetchData() {
+	// 			const date = new Date()
+	// 			const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+	// 			setQuranData()
+	// 		})()
+	// 	}, [])
 
 	return (
 		<View style={styles.container}>

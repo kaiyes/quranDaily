@@ -67,6 +67,27 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "month": {
+                    "name": "month",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "week": {
+                    "name": "week",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "year": {
+                    "name": "year",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "fajr": {
                     "name": "fajr",
                     "isArray": false,
@@ -138,6 +159,27 @@ export const schema = {
                 },
                 "date": {
                     "name": "date",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "month": {
+                    "name": "month",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "week": {
+                    "name": "week",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "year": {
+                    "name": "year",
                     "isArray": false,
                     "type": "String",
                     "isRequired": true,
@@ -219,6 +261,27 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "month": {
+                    "name": "month",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "week": {
+                    "name": "week",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "year": {
+                    "name": "year",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "fajr": {
                     "name": "fajr",
                     "isArray": false,
@@ -295,6 +358,27 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "month": {
+                    "name": "month",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "week": {
+                    "name": "week",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "year": {
+                    "name": "year",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "two": {
                     "name": "two",
                     "isArray": false,
@@ -352,6 +436,27 @@ export const schema = {
                 },
                 "date": {
                     "name": "date",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "month": {
+                    "name": "month",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "week": {
+                    "name": "week",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "year": {
+                    "name": "year",
                     "isArray": false,
                     "type": "String",
                     "isRequired": true,
@@ -426,6 +531,27 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "month": {
+                    "name": "month",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "week": {
+                    "name": "week",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "year": {
+                    "name": "year",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "morning": {
                     "name": "morning",
                     "isArray": false,
@@ -494,5 +620,5 @@ export const schema = {
             }
         }
     },
-    "version": "358059c40afd446aaaeeef12ab68d719"
+    "version": "d87d5594b1f16bbed8689cfe545b82ff"
 };

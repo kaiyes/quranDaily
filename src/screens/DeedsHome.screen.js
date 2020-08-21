@@ -15,8 +15,9 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 import { Bar } from 'react-native-progress'
+import { getWeek } from 'date-fns'
 
-import { DataStore } from '@aws-amplify/datastore'
+import { DataStore, Predicates } from '@aws-amplify/datastore'
 import {
 	FardSalah,
 	Quran,
@@ -37,11 +38,14 @@ export default function Deeds({ navigation }) {
 	const [morningDua, setMorningDua] = useState({})
 
 	// first init salah
-	async function insertTodaySalah(day) {
+	async function insertTodaySalah(day, week, month, year) {
 		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
+				year,
+				month,
+				week,
 				fajr: false,
 				dhuhr: false,
 				asr: false,
@@ -115,14 +119,18 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(FardSalah, c => c.date('eq', today))
 		await setPrayers(savedObj[0])
+		console.log(savedObj[0])
 	}
 
 	// first init Quran
-	async function insertTodayQuran(day) {
+	async function insertTodayQuran(day, week, month, year) {
 		const doesExist = await DataStore.query(Quran, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
+				year,
+				month,
+				week,
 				hundred: false,
 				juz: false,
 				manzil: false,
@@ -195,14 +203,18 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Quran, c => c.date('eq', today))
 		await setQuran(savedObj[0])
+		console.log(savedObj[0])
 	}
 
 	// first init Sunnah
-	async function insertTodaySunnah(day) {
+	async function insertTodaySunnah(day, week, month, year) {
 		const doesExist = await DataStore.query(SunnaSalah, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
+				year,
+				month,
+				week,
 				fajr: false,
 				dhuhr: false,
 				asr: false,
@@ -278,14 +290,18 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(SunnaSalah, c => c.date('eq', today))
 		await setSunnah(savedObj[0])
+		console.log(savedObj[0])
 	}
 
 	// first init tahajjud
-	async function insertTodayTahajjud(day) {
+	async function insertTodayTahajjud(day, week, month, year) {
 		const doesExist = await DataStore.query(Tahajjud, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
+				year,
+				month,
+				week,
 				two: false,
 				four: false,
 				eight: false,
@@ -339,14 +355,18 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Tahajjud, c => c.date('eq', today))
 		await setTahajjud(savedObj[0])
+		console.log(savedObj[0])
 	}
 
 	// first init sadaqa
-	async function insertTodaySadaqa(day) {
+	async function insertTodaySadaqa(day, week, month, year) {
 		const doesExist = await DataStore.query(Sadaqat, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
+				year,
+				month,
+				week,
 				money: false,
 				love: false,
 				smile: false,
@@ -401,14 +421,18 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Sadaqat, c => c.date('eq', today))
 		await setSadaqa(savedObj[0])
+		console.log(savedObj[0])
 	}
 
 	// first init Morning Dua
-	async function insertTodayDua(day) {
+	async function insertTodayDua(day, week, month, year) {
 		const doesExist = await DataStore.query(MorningDua, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
+				year,
+				month,
+				week,
 				morning: false,
 				evening: false,
 				color: 'yellow',
@@ -454,6 +478,7 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(MorningDua, c => c.date('eq', today))
 		await setMorningDua(savedObj[0])
+		console.log(savedObj[0])
 	}
 
 	useEffect(() => {
@@ -461,13 +486,17 @@ export default function Deeds({ navigation }) {
 			setLoading(true)
 			const date = new Date()
 			const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+			const year = `${date.getFullYear()}`
+			const month = `${date.getMonth()}`
+			const week = `${getWeek(new Date())}`
+
 			await setToday(day)
-			await insertTodaySalah(day)
-			await insertTodayQuran(day)
-			await insertTodaySunnah(day)
-			await insertTodayTahajjud(day)
-			await insertTodaySadaqa(day)
-			await insertTodayDua(day)
+			await insertTodaySalah(day, week, month, year)
+			await insertTodayQuran(day, week, month, year)
+			await insertTodaySunnah(day, week, month, year)
+			await insertTodayTahajjud(day, week, month, year)
+			await insertTodaySadaqa(day, week, month, year)
+			await insertTodayDua(day, week, month, year)
 			//stuff
 			setLoading(false)
 		})()

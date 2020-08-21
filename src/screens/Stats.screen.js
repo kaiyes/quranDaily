@@ -34,7 +34,7 @@ export default function Stats() {
 					onTabPress={item => setIndex(item)}
 				/>
 
-				{selectedIndex === 2 ? <Year /> : selectedIndex ? Month() : Week()}
+				{selectedIndex === 2 ? <Year /> : selectedIndex ? <Month /> : Week()}
 			</View>
 		</SafeAreaView>
 	)
@@ -56,31 +56,5 @@ const styles = StyleSheet.create({
 	},
 	tabStyle: {
 		borderColor: 'forestgreen'
-	},
-	icon: {
-		shadowColor: '#000',
-		shadowOffset: { width: 0, height: 3 },
-		shadowOpacity: 0.37,
-		shadowRadius: 2,
-		elevation: 5
-	},
-	iconRow: {
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
-		marginVertical: hp('1%')
-	},
-	specialIcon: {
-		width: wp('8%'),
-		height: wp('8%'),
-		borderRadius: wp('4%'),
-		justifyContent: 'center',
-		marginHorizontal: wp('1.5%'),
-		alignItems: 'center',
-		shadowColor: '#000',
-		shadowOffset: { width: 0, height: 3 },
-		shadowOpacity: 0.37,
-		shadowRadius: 2,
-		elevation: 4
 	}
 })
