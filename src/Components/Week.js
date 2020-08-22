@@ -84,10 +84,10 @@ export default function Week() {
 				return styles.threeCircle
 				break
 			case 4:
-				return styles.threeCircle
+				return styles.fourCircle
 				break
 			case 5:
-				return styles.threeCircle
+				return styles.fifthCircle
 				break
 			default:
 				return styles.zeroCircle
