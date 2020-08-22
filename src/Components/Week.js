@@ -69,15 +69,28 @@ export default function Week() {
 		}
 	]
 
-	function swithcShade(status, color) {
-		if (color === 'mediumseagreen') {
-			switch (status) {
-				case 0:
-					return ''
-					break
-				default:
-					return ''
-			}
+	function switchCircle(status) {
+		switch (status) {
+			case 0:
+				return styles.zeroCircle
+				break
+			case 1:
+				return styles.oneCircle
+				break
+			case 2:
+				return styles.twoCircle
+				break
+			case 3:
+				return styles.threeCircle
+				break
+			case 4:
+				return styles.threeCircle
+				break
+			case 5:
+				return styles.threeCircle
+				break
+			default:
+				return styles.zeroCircle
 		}
 	}
 
@@ -137,14 +150,17 @@ export default function Week() {
 						</Text>
 
 						<View style={styles.boxes}>
-							{item.data.map(day => (
-								<View style={styles.box} key={Math.random()}>
+							{item.data.map(stat => (
+								<View style={styles.box} key={stat.toString()}>
 									<View
 										style={[
-											styles.mediumCircle,
-											{ backgroundColor: item.color }
-										]}
-									/>
+											switchCircle(stat),
+											{
+												backgroundColor: stat === 0 ? 'gainsboro' : item.color
+											}
+										]}>
+										{stat === 0 ? <Text style={styles.minus}>-</Text> : null}
+									</View>
 								</View>
 							))}
 						</View>
@@ -196,17 +212,40 @@ const styles = StyleSheet.create({
 		fontFamily: 'Menlo',
 		padding: hp('.5%')
 	},
-	smallCircle: {
+
+	minus: {
+		fontSize: 14,
+		fontWeight: 'bold',
+		color: 'crimson'
+	},
+	zeroCircle: {
+		width: wp('6%'),
+		height: wp('6%'),
+		borderRadius: wp('3%'),
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	oneCircle: {
 		width: wp('2%'),
 		height: wp('2%'),
 		borderRadius: wp('1%')
 	},
-	mediumCircle: {
+	twoCircle: {
+		width: wp('3%'),
+		height: wp('3%'),
+		borderRadius: wp('1.5%')
+	},
+	threeCircle: {
 		width: wp('4%'),
 		height: wp('4%'),
 		borderRadius: wp('2%')
 	},
-	bigCircle: {
+	fourCircle: {
+		width: wp('5%'),
+		height: wp('5%'),
+		borderRadius: wp('2.5%')
+	},
+	fifthCircle: {
 		width: wp('6%'),
 		height: wp('6%'),
 		borderRadius: wp('3%')
