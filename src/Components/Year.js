@@ -38,7 +38,7 @@ export default function Week() {
 		'Sunna Salah': sunnaData,
 		Tahajjud: tajData,
 		Sadakah: sadaqa,
-		'Dua Morning': morn
+		Dua: morn
 	}
 
 	function switchCircle(status) {

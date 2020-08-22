@@ -229,9 +229,7 @@ function LoggedInStack() {
 			<Tab.Screen name="Deeds" component={DeedStack} />
 			<Tab.Screen name="Quran" component={QuranStack} />
 			<Tab.Screen name="Dua" component={DuaStack} />
-			<Tab.Screen name="Memorize" component={MemorizeScreen} />
 			<Tab.Screen name="Stats" component={StatScreen} />
-			<Tab.Screen name="Test" component={testScreen} />
 		</Tab.Navigator>
 	)
 }
@@ -241,4 +239,8 @@ export default function Navigator({ navigation }) {
 	const [isLoggedIn, setIsLoggedIn] = useState(true)
 
 	return isLoading ? Splash() : LoggedInStack()
+}
+
+{
+	/* <Tab.Screen name="Memorize" component={MemorizeScreen} /> */
 }

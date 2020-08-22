@@ -22,7 +22,7 @@ import Suras from '../utility/suras.js'
 export default function Quran({ navigation: { navigate } }) {
 	const [language, setLanguage] = useState('en')
 	const [isModalVisible, setIsModalVisible] = useState(false)
-	const [renderStyle, setRenderStyle] = useState('pager')
+	const [renderStyle, setRenderStyle] = useState('list')
 
 	function switchBarWidth(ayahNumber) {
 		return ayahNumber < 10
@@ -90,66 +90,65 @@ export default function Quran({ navigation: { navigate } }) {
 			</View>
 
 			<TouchableOpacity onPress={() => setIsModalVisible(false)}>
-				<Modal visible={isModalVisible} animationType={'slide'}>
+				<Modal
+					visible={isModalVisible}
+					onBackdropPress={() => setIsModalVisible(false)}
+					animationType={'slide'}>
 					<View style={styles.modal}>
-						<View style={styles.closeButtonHolder}>
-							<TouchableOpacity
-								onPress={() => setIsModalVisible(false)}
-								useNativeDriver={true}>
-								<Icon type={'feather'} name={'x-circle'} size={23} />
-							</TouchableOpacity>
+						<Text style={[styles.subTitle, { marginLeft: wp('5%') }]}>
+							choose language
+						</Text>
+						<View style={styles.basicRow}>
+							<CheckBox
+								center
+								containerStyle={styles.checkBox}
+								title="en"
+								iconType="feather"
+								checkedIcon="check-circle"
+								uncheckedIcon="circle"
+								fontFamily={'Menlo'}
+								checked={language === 'en' ? true : false}
+								onPress={() => setLanguage('en')}
+							/>
+
+							<CheckBox
+								center
+								containerStyle={{
+									backgroundColor: 'transparent',
+									borderWidth: 0
+								}}
+								title="bn"
+								iconType="feather"
+								checkedIcon="check-circle"
+								uncheckedIcon="circle"
+								fontFamily={'Menlo'}
+								checked={language === 'bn' ? true : false}
+								onPress={() => setLanguage('bn')}
+							/>
 						</View>
+						{/* <CheckBox */}
+						{/* 	center */}
+						{/* 	containerStyle={styles.checkBox} */}
+						{/* 	title="Pager" */}
+						{/* 	iconType="feather" */}
+						{/* 	checkedIcon="check-circle" */}
+						{/* 	uncheckedIcon="circle" */}
+						{/* 	fontFamily={'Menlo'} */}
+						{/* 	checked={renderStyle === 'pager' ? true : false} */}
+						{/* 	onPress={() => setRenderStyle('pager')} */}
+						{/* /> */}
 
-						<CheckBox
-							center
-							containerStyle={styles.checkBox}
-							title="en"
-							iconType="feather"
-							checkedIcon="check-circle"
-							uncheckedIcon="circle"
-							fontFamily={'Menlo'}
-							checked={language === 'en' ? true : false}
-							onPress={() => setLanguage('en')}
-						/>
-
-						<CheckBox
-							center
-							containerStyle={{
-								backgroundColor: 'transparent',
-								borderWidth: 0
-							}}
-							title="bn"
-							iconType="feather"
-							checkedIcon="check-circle"
-							uncheckedIcon="circle"
-							fontFamily={'Menlo'}
-							checked={language === 'bn' ? true : false}
-							onPress={() => setLanguage('bn')}
-						/>
-
-						<CheckBox
-							center
-							containerStyle={styles.checkBox}
-							title="Pager"
-							iconType="feather"
-							checkedIcon="check-circle"
-							uncheckedIcon="circle"
-							fontFamily={'Menlo'}
-							checked={renderStyle === 'pager' ? true : false}
-							onPress={() => setRenderStyle('pager')}
-						/>
-
-						<CheckBox
-							center
-							containerStyle={styles.checkBox}
-							title="List"
-							iconType="feather"
-							checkedIcon="check-circle"
-							uncheckedIcon="circle"
-							fontFamily={'Menlo'}
-							checked={renderStyle === 'list' ? true : false}
-							onPress={() => setRenderStyle('list')}
-						/>
+						{/* 						<CheckBox */}
+						{/* 							center */}
+						{/* 							containerStyle={styles.checkBox} */}
+						{/* 							title="List" */}
+						{/* 							iconType="feather" */}
+						{/* 							checkedIcon="check-circle" */}
+						{/* 							uncheckedIcon="circle" */}
+						{/* 							fontFamily={'Menlo'} */}
+						{/* 							checked={renderStyle === 'list' ? true : false} */}
+						{/* 							onPress={() => setRenderStyle('list')} */}
+						{/* 						/> */}
 					</View>
 				</Modal>
 			</TouchableOpacity>
@@ -212,6 +211,7 @@ const styles = StyleSheet.create({
 		marginHorizontal: 1
 	},
 	modal: {
+		paddingTop: hp('3%'),
 		width: wp('80%'),
 		backgroundColor: 'white',
 		justifyContent: 'center',
@@ -225,5 +225,8 @@ const styles = StyleSheet.create({
 		paddingRight: wp('5%'),
 		paddingTop: hp('2%'),
 		width: wp('70%')
+	},
+	basicRow: {
+		flexDirection: 'row'
 	}
 })

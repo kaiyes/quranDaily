@@ -61,7 +61,7 @@ export default function Week() {
 			color: 'slateblue'
 		},
 		{
-			habitName: 'Dua Morning',
+			habitName: 'Dua',
 			data: morn,
 			// color: hsl(289, 60, 63)
 			color: 'lightsalmon'
@@ -199,6 +199,11 @@ const styles = StyleSheet.create({
 		width: wp('80%'),
 		paddingLeft: wp('1.5%'),
 		flexWrap: 'wrap'
+	},
+	habitName: {
+		fontSize: 22,
+		fontFamily: 'Menlo',
+		padding: hp('.5%')
 	},
 
 	minus: {
