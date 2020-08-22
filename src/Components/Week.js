@@ -116,15 +116,6 @@ export default function Week() {
 			const MornCleaned = await MornData.map(item => item.status)
 			const SadaqaCleaned = await SadaqaData.map(item => item.status)
 
-			console.log(
-				FardCleaned,
-				QuranCleaned,
-				SunnaCleaned,
-				TajCleaned,
-				SadaqaCleaned,
-				SadaqaCleaned
-			)
-
 			setFardData(FardCleaned)
 			setQuranData(QuranCleaned)
 			setSunnaData(SunnaCleaned)
@@ -161,6 +152,13 @@ export default function Week() {
 										]}>
 										{stat === 0 ? <Text style={styles.minus}>-</Text> : null}
 									</View>
+								</View>
+							))}
+							{new Array(7 - item.data.length).fill(0).map(stat => (
+								<View style={styles.box} key={Math.random().toString()}>
+									<View
+										style={[styles.futureCircle, { backgroundColor: 'silver' }]}
+									/>
 								</View>
 							))}
 						</View>
@@ -246,6 +244,11 @@ const styles = StyleSheet.create({
 		borderRadius: wp('2.5%')
 	},
 	fifthCircle: {
+		width: wp('6%'),
+		height: wp('6%'),
+		borderRadius: wp('3%')
+	},
+	futureCircle: {
 		width: wp('6%'),
 		height: wp('6%'),
 		borderRadius: wp('3%')
