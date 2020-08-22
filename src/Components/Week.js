@@ -98,8 +98,6 @@ export default function Week() {
 		;(async function fetchData() {
 			setLoading(true)
 			const date = new Date()
-			const year = `${date.getFullYear()}`
-			const month = `${date.getMonth()}`
 			const week = `${getWeek(new Date())}`
 
 			const FardData = await DataStore.query(Fard, c => c.week('eq', week))
@@ -145,11 +143,10 @@ export default function Week() {
 										style={[
 											switchCircle(stat),
 											{
-												backgroundColor: stat === 0 ? 'gainsboro' : item.color
+												backgroundColor: stat === 0 ? 'crimson' : item.color
 											}
-										]}>
-										{stat === 0 ? <Text style={styles.minus}>-</Text> : null}
-									</View>
+										]}
+									/>
 								</View>
 							))}
 							{new Array(7 - item.data.length).fill(0).map(stat => (

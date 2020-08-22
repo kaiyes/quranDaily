@@ -16,32 +16,53 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 
-import QuranData from '../utility/fakeMonthViewQuran'
-import FardSalahData from '../utility/fakeMonthViewFamily'
-import SunnaSalahData from '../utility/fakeMonthViewEntertainment'
-import TahajjudData from '../utility/fakeMonthViewWork'
-import SadakahData from '../utility/fakeMonthViewSide'
+import { DataStore, Predicates } from '@aws-amplify/datastore'
+import { Fard, Quran, Sunna, Tahajjud, Sadaqa, Morn } from '../models'
+
+import Loader from '../components/loader'
 
 export default function Week() {
 	const [dataArray, setDataArray] = useState([])
 
+	const [loading, setLoading] = useState(false)
+	const [quranData, setQuranData] = useState([])
+	const [fardData, setFardData] = useState([])
+	const [sunnaData, setSunnaData] = useState([])
+	const [tajData, setTajData] = useState([])
+	const [morn, setMornData] = useState([])
+	const [sadaqa, setSadaqaData] = useState([])
+
 	const data = {
-		Quran: QuranData,
-		'Fard Salah': FardSalahData,
-		'Sunna Salah': SunnaSalahData,
-		Tahajjud: TahajjudData,
-		Sadakah: SadakahData,
-		'Dua Morning': FardSalahData,
-		'Dua Evening': SadakahData
+		Quran: quranData,
+		'Fard Salah': fardData,
+		'Sunna Salah': sunnaData,
+		Tahajjud: tajData,
+		Sadakah: sadaqa,
+		'Dua Morning': morn
 	}
 
 	function switchCircle(status) {
-		if (status <= 30) {
-			return styles.smallCircle
-		} else if (status >= 70) {
-			return styles.bigCircle
-		} else {
-			return styles.mediumCircle
+		switch (status) {
+			case 0:
+				return styles.zeroCircle
+				break
+			case 1:
+				return styles.oneCircle
+				break
+			case 2:
+				return styles.twoCircle
+				break
+			case 3:
+				return styles.threeCircle
+				break
+			case 4:
+				return styles.fourCircle
+				break
+			case 5:
+				return styles.fifthCircle
+				break
+			default:
+				return styles.zeroCircle
 		}
 	}
 
@@ -50,13 +71,22 @@ export default function Week() {
 			<>
 				<Text style={styles.habitName}>{item}</Text>
 				<View style={styles.boxHolder}>
-					{data[item].map(day => (
-						<View style={styles.box} key={day._id}>
+					{data[item].map(i => (
+						<View style={styles.box} key={Math.random().toString()}>
 							<View
 								style={[
-									switchCircle(day.status),
-									{ backgroundColor: day.color }
+									switchCircle(i),
+									{
+										backgroundColor: i === 0 ? 'crimson' : data[item].color
+									}
 								]}
+							/>
+						</View>
+					))}
+					{new Array(365 - item.length).fill(0).map(stat => (
+						<View style={styles.box} key={Math.random().toString()}>
+							<View
+								style={[styles.futureCircle, { backgroundColor: 'silver' }]}
 							/>
 						</View>
 					))}
@@ -65,9 +95,49 @@ export default function Week() {
 		)
 	}
 
-	useEffect(() => setDataArray(Object.keys(data)), [])
+	useEffect(() => {
+		;(async function fetchData() {
+			setLoading(true)
+			const date = new Date()
+			const year = `${date.getFullYear()}`
 
-	return (
+			const FardData = await DataStore.query(Fard, c => c.year('eq', year))
+			const QuranData = await DataStore.query(Quran, c => c.year('eq', year))
+			const SunnaData = await DataStore.query(Sunna, c => c.year('eq', year))
+			const TajData = await DataStore.query(Tahajjud, c => c.year('eq', year))
+			const MornData = await DataStore.query(Morn, c => c.year('eq', year))
+			const SadaqaData = await DataStore.query(Sadaqa, c => c.year('eq', year))
+
+			const FardCleaned = await FardData.map(item => item.status)
+			const QuranCleaned = await QuranData.map(item => item.status)
+			const SunnaCleaned = await SunnaData.map(item => item.status)
+			const TajCleaned = await TajData.map(item => item.status)
+			const MornCleaned = await MornData.map(item => item.status)
+			const SadaqaCleaned = await SadaqaData.map(item => item.status)
+
+			FardCleaned.color = 'mediumseagreen'
+			QuranData.color = 'steelblue'
+			SunnaData.color = 'gold'
+			TajData.color = 'palevioletred'
+			SadaqaData.color = 'slateblue'
+			MornData.color = 'lightsalmon'
+
+			setFardData(FardCleaned)
+			setQuranData(QuranCleaned)
+			setSunnaData(SunnaCleaned)
+			setTajData(TajCleaned)
+			setMornData(MornCleaned)
+			setSadaqaData(SadaqaCleaned)
+
+			setDataArray(Object.keys(data))
+
+			setLoading(false)
+		})()
+	}, [])
+
+	return loading ? (
+		Loader()
+	) : (
 		<FlatList
 			keyExtractor={item => item}
 			data={dataArray}
@@ -117,19 +187,47 @@ const styles = StyleSheet.create({
 		fontFamily: 'Menlo',
 		padding: hp('.5%')
 	},
-	smallCircle: {
+
+	minus: {
+		fontSize: 14,
+		fontWeight: 'bold',
+		color: 'crimson'
+	},
+	zeroCircle: {
+		width: wp('3%'),
+		height: wp('3%'),
+		borderRadius: wp('1.5%'),
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	oneCircle: {
 		width: wp('1%'),
 		height: wp('1%'),
 		borderRadius: wp('.5%')
 	},
-	mediumCircle: {
+	twoCircle: {
 		width: wp('2%'),
 		height: wp('2%'),
 		borderRadius: wp('1%')
 	},
-	bigCircle: {
+	threeCircle: {
 		width: wp('3%'),
 		height: wp('3%'),
 		borderRadius: wp('1.5%')
+	},
+	fourCircle: {
+		width: wp('4%'),
+		height: wp('4%'),
+		borderRadius: wp('2%')
+	},
+	fifthCircle: {
+		width: wp('5%'),
+		height: wp('5%'),
+		borderRadius: wp('2.5%')
+	},
+	futureCircle: {
+		width: wp('2%'),
+		height: wp('2%'),
+		borderRadius: wp('1%')
 	}
 })

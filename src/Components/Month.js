@@ -145,11 +145,10 @@ export default function Week() {
 										style={[
 											switchCircle(stat),
 											{
-												backgroundColor: stat === 0 ? 'gainsboro' : item.color
+												backgroundColor: stat === 0 ? 'crimson' : item.color
 											}
-										]}>
-										{stat === 0 ? <Text style={styles.minus}>-</Text> : null}
-									</View>
+										]}
+									/>
 								</View>
 							))}
 							{new Array(30 - item.data.length).fill(0).map(stat => (
