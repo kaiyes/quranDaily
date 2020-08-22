@@ -34,7 +34,7 @@ export default function Stats() {
 					onTabPress={item => setIndex(item)}
 				/>
 
-				{selectedIndex === 2 ? <Year /> : selectedIndex ? <Month /> : Week()}
+				{selectedIndex === 2 ? <Year /> : selectedIndex ? <Month /> : <Week />}
 			</View>
 		</SafeAreaView>
 	)

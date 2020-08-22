@@ -50,8 +50,8 @@ export const schema = {
                 }
             ]
         },
-        "FardSalah": {
-            "name": "FardSalah",
+        "Fard": {
+            "name": "Fard",
             "fields": {
                 "id": {
                     "name": "id",
@@ -123,13 +123,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "color": {
-                    "name": "color",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "status": {
                     "name": "status",
                     "isArray": false,
@@ -139,7 +132,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "FardSalahs",
+            "pluralName": "Fards",
             "attributes": [
                 {
                     "type": "model",
@@ -220,13 +213,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "color": {
-                    "name": "color",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "status": {
                     "name": "status",
                     "isArray": false,
@@ -244,8 +230,8 @@ export const schema = {
                 }
             ]
         },
-        "SunnaSalah": {
-            "name": "SunnaSalah",
+        "Sunna": {
+            "name": "Sunna",
             "fields": {
                 "id": {
                     "name": "id",
@@ -317,13 +303,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "color": {
-                    "name": "color",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "status": {
                     "name": "status",
                     "isArray": false,
@@ -333,7 +312,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "SunnaSalahs",
+            "pluralName": "Sunnas",
             "attributes": [
                 {
                     "type": "model",
@@ -400,13 +379,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "color": {
-                    "name": "color",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "status": {
                     "name": "status",
                     "isArray": false,
@@ -424,8 +396,8 @@ export const schema = {
                 }
             ]
         },
-        "Sadaqat": {
-            "name": "Sadaqat",
+        "Sadaqa": {
+            "name": "Sadaqa",
             "fields": {
                 "id": {
                     "name": "id",
@@ -490,13 +462,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "color": {
-                    "name": "color",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "status": {
                     "name": "status",
                     "isArray": false,
@@ -506,7 +471,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "Sadaqats",
+            "pluralName": "Sadaqas",
             "attributes": [
                 {
                     "type": "model",
@@ -514,8 +479,8 @@ export const schema = {
                 }
             ]
         },
-        "MorningDua": {
-            "name": "MorningDua",
+        "Morn": {
+            "name": "Morn",
             "fields": {
                 "id": {
                     "name": "id",
@@ -566,13 +531,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "color": {
-                    "name": "color",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "status": {
                     "name": "status",
                     "isArray": false,
@@ -582,7 +540,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "MorningDuas",
+            "pluralName": "Morns",
             "attributes": [
                 {
                     "type": "model",
@@ -620,5 +578,5 @@ export const schema = {
             }
         }
     },
-    "version": "d87d5594b1f16bbed8689cfe545b82ff"
+    "version": "a6dd9f945b3bcd321bc33aca28716b6e"
 };

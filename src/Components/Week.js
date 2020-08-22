@@ -14,96 +14,126 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
+import { getWeek } from 'date-fns'
 
 import { DataStore, Predicates } from '@aws-amplify/datastore'
-import {
-	FardSalah,
-	Quran,
-	SunnaSalah,
-	Tahajjud,
-	Sadaqat,
-	MorningDua
-} from '../models'
+import { Fard, Quran, Sunna, Tahajjud, Sadaqa, Morn } from '../models'
 
-import QuranData from '../utility/fakeMonthViewQuran'
-import FardSalahData from '../utility/fakeMonthViewFamily'
-import SunnaSalahData from '../utility/fakeMonthViewEntertainment'
-import TahajjudData from '../utility/fakeMonthViewWork'
-import SadakahData from '../utility/fakeMonthViewSide'
+import Loader from '../components/loader'
 
 export default function Week() {
-	const data = [
+	const [loading, setLoading] = useState(false)
+	const [quranData, setQuranData] = useState([])
+	const [fardData, setFardData] = useState([])
+	const [sunnaData, setSunnaData] = useState([])
+	const [tajData, setTajData] = useState([])
+	const [morn, setMornData] = useState([])
+	const [sadaqa, setSadaqaData] = useState([])
+
+	const topics = [
 		{
 			habitName: 'Quran',
-			fakeData: QuranData.slice(0, 7)
+			data: quranData,
+			color: 'mediumseagreen'
 		},
 		{
 			habitName: 'Fard Salah',
-			fakeData: FardSalahData.slice(0, 7)
+			data: fardData,
+			color: 'cornflowerblue'
 		},
 		{
 			habitName: 'Sunna Salah',
-			fakeData: SunnaSalahData.slice(0, 7)
+			data: sunnaData,
+			color: 'gold'
 		},
 		{
 			habitName: 'Tahajjud',
-			fakeData: TahajjudData.slice(0, 7)
+			data: tajData,
+			color: 'palevioletred'
 		},
 		{
 			habitName: 'Sadakah',
-			fakeData: SadakahData.slice(0, 7)
+			data: sadaqa,
+			color: 'steelblue'
 		},
 		{
 			habitName: 'Dua Morning',
-			fakeData: FardSalahData.slice(0, 7)
-		},
-		{
-			habitName: 'Dua Evening',
-			fakeData: SadakahData.slice(0, 7)
+			data: morn,
+			color: 'burlywood'
 		}
 	]
 
-	async function setQuranData() {
-		const doesExist = await DataStore.query(MorningDua)
-		console.log(doesExist)
-	}
-
 	function swithcCircle(status) {
-		if (status <= 30) {
-			return styles.smallCircle
-		} else if (status >= 70) {
-			return styles.bigCircle
-		} else {
-			return styles.mediumCircle
+		switch (status) {
+			case 0:
+				return 's'
+				break
+			default:
+				return ''
 		}
 	}
 
-	// 	useEffect(() => {
-	// 		;(async function fetchData() {
-	// 			const date = new Date()
-	// 			const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
-	// 			setQuranData()
-	// 		})()
-	// 	}, [])
+	useEffect(() => {
+		;(async function fetchData() {
+			setLoading(true)
+			const date = new Date()
+			const year = `${date.getFullYear()}`
+			const month = `${date.getMonth()}`
+			const week = `${getWeek(new Date())}`
+
+			const FardData = await DataStore.query(Fard, c => c.week('eq', week))
+			const QuranData = await DataStore.query(Quran, c => c.week('eq', week))
+			const SunnaData = await DataStore.query(Sunna, c => c.week('eq', week))
+			const TajData = await DataStore.query(Tahajjud, c => c.week('eq', week))
+			const MornData = await DataStore.query(Morn, c => c.week('eq', week))
+			const SadaqaData = await DataStore.query(Sadaqa, c => c.week('eq', week))
+
+			const FardCleaned = await FardData.map(item => item.status)
+			const QuranCleaned = await QuranData.map(item => item.status)
+			const SunnaCleaned = await SunnaData.map(item => item.status)
+			const TajCleaned = await TajData.map(item => item.status)
+			const MornCleaned = await MornData.map(item => item.status)
+			const SadaqaCleaned = await SadaqaData.map(item => item.status)
+			console.log(
+				FardCleaned,
+				QuranCleaned,
+				SunnaCleaned,
+				TajCleaned,
+				SadaqaCleaned,
+				SadaqaCleaned
+			)
+
+			setFardData(FardCleaned)
+			setQuranData(QuranCleaned)
+			setSunnaData(SunnaCleaned)
+			setTajData(TajCleaned)
+			setMornData(MornCleaned)
+			setSadaqaData(SadaqaCleaned)
+
+			setLoading(false)
+		})()
+	}, [])
+
+	if (loading) Loader()
 
 	return (
 		<View style={styles.container}>
 			<ScrollView
 				showsVerticalScrollIndicator={false}
 				contentContainerStyle={styles.scrollView}>
-				{data.map(item => (
+				{topics.map(item => (
 					<View style={styles.boxHolder} key={Math.random()}>
 						<Text style={styles.habitName} onPress={() => console.log(item)}>
 							{item.habitName}
 						</Text>
 
 						<View style={styles.boxes}>
-							{item.fakeData.map(day => (
+							{item.data.map(day => (
 								<View style={styles.box} key={Math.random()}>
 									<View
 										style={[
-											swithcCircle(day.status),
-											{ backgroundColor: day.color }
+											styles.mediumCircle,
+											{ backgroundColor: item.color }
 										]}
 									/>
 								</View>

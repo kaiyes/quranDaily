@@ -18,14 +18,7 @@ import { Bar } from 'react-native-progress'
 import { getWeek } from 'date-fns'
 
 import { DataStore, Predicates } from '@aws-amplify/datastore'
-import {
-	FardSalah,
-	Quran,
-	SunnaSalah,
-	Tahajjud,
-	Sadaqat,
-	MorningDua
-} from '../models'
+import { Fard, Quran, Sunna, Tahajjud, Sadaqa, Morn } from '../models'
 
 export default function Deeds({ navigation }) {
 	const [loading, setLoading] = useState(false)
@@ -35,11 +28,11 @@ export default function Deeds({ navigation }) {
 	const [sunnah, setSunnah] = useState({})
 	const [tahajjud, setTahajjud] = useState({})
 	const [sadaqa, setSadaqa] = useState({})
-	const [morningDua, setMorningDua] = useState({})
+	const [morningDua, setMorn] = useState({})
 
 	// first init salah
 	async function insertTodaySalah(day, week, month, year) {
-		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', day))
+		const doesExist = await DataStore.query(Fard, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
@@ -51,21 +44,20 @@ export default function Deeds({ navigation }) {
 				asr: false,
 				magrib: false,
 				isha: false,
-				color: 'green',
 				status: 0
 			}
-			await DataStore.save(new FardSalah(data))
+			await DataStore.save(new Fard(data))
 		}
-		const existsYet = await DataStore.query(FardSalah, c => c.date('eq', day))
+		const existsYet = await DataStore.query(Fard, c => c.date('eq', day))
 		setPrayers(existsYet[0])
 	}
 
 	// daily salah
 	async function insertSalah(prayer) {
-		const doesExist = await DataStore.query(FardSalah, c => c.date('eq', today))
+		const doesExist = await DataStore.query(Fard, c => c.date('eq', today))
 		const original = doesExist[0]
 		await DataStore.save(
-			FardSalah.copyOf(original, updated => {
+			Fard.copyOf(original, updated => {
 				switch (prayer) {
 					case 'fajr':
 						if (updated.fajr) {
@@ -117,7 +109,7 @@ export default function Deeds({ navigation }) {
 				}
 			})
 		)
-		const savedObj = await DataStore.query(FardSalah, c => c.date('eq', today))
+		const savedObj = await DataStore.query(Fard, c => c.date('eq', today))
 		await setPrayers(savedObj[0])
 		console.log(savedObj[0])
 	}
@@ -208,7 +200,7 @@ export default function Deeds({ navigation }) {
 
 	// first init Sunnah
 	async function insertTodaySunnah(day, week, month, year) {
-		const doesExist = await DataStore.query(SunnaSalah, c => c.date('eq', day))
+		const doesExist = await DataStore.query(Sunna, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
@@ -220,23 +212,20 @@ export default function Deeds({ navigation }) {
 				asr: false,
 				magrib: false,
 				isha: false,
-				color: 'green',
 				status: 0
 			}
-			await DataStore.save(new SunnaSalah(data))
+			await DataStore.save(new Sunna(data))
 		}
-		const existsYet = await DataStore.query(SunnaSalah, c => c.date('eq', day))
+		const existsYet = await DataStore.query(Sunna, c => c.date('eq', day))
 		setSunnah(existsYet[0])
 	}
 
 	// daily Sunnah
 	async function insertSunnah(prayer) {
-		const doesExist = await DataStore.query(SunnaSalah, c =>
-			c.date('eq', today)
-		)
+		const doesExist = await DataStore.query(Sunna, c => c.date('eq', today))
 		const original = doesExist[0]
 		await DataStore.save(
-			SunnaSalah.copyOf(original, updated => {
+			Sunna.copyOf(original, updated => {
 				switch (prayer) {
 					case 'fajr':
 						if (updated.fajr) {
@@ -288,7 +277,7 @@ export default function Deeds({ navigation }) {
 				}
 			})
 		)
-		const savedObj = await DataStore.query(SunnaSalah, c => c.date('eq', today))
+		const savedObj = await DataStore.query(Sunna, c => c.date('eq', today))
 		await setSunnah(savedObj[0])
 		console.log(savedObj[0])
 	}
@@ -305,7 +294,6 @@ export default function Deeds({ navigation }) {
 				two: false,
 				four: false,
 				eight: false,
-				color: 'red',
 				status: 0
 			}
 			await DataStore.save(new Tahajjud(data))
@@ -360,7 +348,8 @@ export default function Deeds({ navigation }) {
 
 	// first init sadaqa
 	async function insertTodaySadaqa(day, week, month, year) {
-		const doesExist = await DataStore.query(Sadaqat, c => c.date('eq', day))
+		const doesExist = await DataStore.query(Sadaqa, c => c.date('eq', day))
+
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
@@ -371,21 +360,20 @@ export default function Deeds({ navigation }) {
 				love: false,
 				smile: false,
 				lokma: false,
-				color: 'yellow',
 				status: 0
 			}
-			await DataStore.save(new Sadaqat(data))
+			await DataStore.save(new Sadaqa(data))
 		}
-		const existsYet = await DataStore.query(Sadaqat, c => c.date('eq', day))
+		const existsYet = await DataStore.query(Sadaqa, c => c.date('eq', day))
 		setSadaqa(existsYet[0])
 	}
 
 	// daily sadaqa
 	async function insertSadaqa(topic) {
-		const doesExist = await DataStore.query(Sadaqat, c => c.date('eq', today))
+		const doesExist = await DataStore.query(Sadaqa, c => c.date('eq', today))
 		const original = doesExist[0]
 		await DataStore.save(
-			Sadaqat.copyOf(original, updated => {
+			Sadaqa.copyOf(original, updated => {
 				switch (topic) {
 					case 'love':
 						if (updated.love) {
@@ -419,14 +407,14 @@ export default function Deeds({ navigation }) {
 				}
 			})
 		)
-		const savedObj = await DataStore.query(Sadaqat, c => c.date('eq', today))
+		const savedObj = await DataStore.query(Sadaqa, c => c.date('eq', today))
 		await setSadaqa(savedObj[0])
 		console.log(savedObj[0])
 	}
 
 	// first init Morning Dua
 	async function insertTodayDua(day, week, month, year) {
-		const doesExist = await DataStore.query(MorningDua, c => c.date('eq', day))
+		const doesExist = await DataStore.query(Morn, c => c.date('eq', day))
 		if (doesExist.length === 0) {
 			let data = {
 				date: day,
@@ -435,23 +423,20 @@ export default function Deeds({ navigation }) {
 				week,
 				morning: false,
 				evening: false,
-				color: 'yellow',
 				status: 0
 			}
-			await DataStore.save(new MorningDua(data))
+			await DataStore.save(new Morn(data))
 		}
-		const existsYet = await DataStore.query(MorningDua, c => c.date('eq', day))
-		await setMorningDua(existsYet[0])
+		const existsYet = await DataStore.query(Morn, c => c.date('eq', day))
+		await setMorn(existsYet[0])
 	}
 
 	// daily Dua
 	async function insertDua(topic) {
-		const doesExist = await DataStore.query(MorningDua, c =>
-			c.date('eq', today)
-		)
+		const doesExist = await DataStore.query(Morn, c => c.date('eq', today))
 		const original = doesExist[0]
 		await DataStore.save(
-			MorningDua.copyOf(original, updated => {
+			Morn.copyOf(original, updated => {
 				switch (topic) {
 					case 'morning':
 						if (updated.morning) {
@@ -476,8 +461,8 @@ export default function Deeds({ navigation }) {
 				}
 			})
 		)
-		const savedObj = await DataStore.query(MorningDua, c => c.date('eq', today))
-		await setMorningDua(savedObj[0])
+		const savedObj = await DataStore.query(Morn, c => c.date('eq', today))
+		await setMorn(savedObj[0])
 		console.log(savedObj[0])
 	}
 

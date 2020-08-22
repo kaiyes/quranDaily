@@ -11,7 +11,7 @@ type Duas @model {
 	duas: [Dua]
 }
 
-type FardSalah @model {
+type Fard @model {
 	date: String!
 	month: String!
 	week: String!
@@ -21,7 +21,6 @@ type FardSalah @model {
 	asr: Boolean
 	magrib: Boolean
 	isha: Boolean
-	color: String
 	status: Int
 }
 
@@ -35,11 +34,10 @@ type Quran @model {
 	manzil: Boolean
 	mulk: Boolean
 	lastAyatsBaqara: Boolean
-	color: String
 	status: Int
 }
 
-type SunnaSalah @model {
+type Sunna @model {
 	date: String!
 	month: String!
 	week: String!
@@ -49,7 +47,6 @@ type SunnaSalah @model {
 	asr: Boolean
 	magrib: Boolean
 	isha: Boolean
-	color: String
 	status: Int
 }
 
@@ -61,11 +58,10 @@ type Tahajjud @model {
 	two: Boolean
 	four: Boolean
 	eight: Boolean
-	color: String
 	status: Int
 }
 
-type Sadaqat @model {
+type Sadaqa @model {
 	date: String!
 	month: String!
 	week: String!
@@ -74,17 +70,15 @@ type Sadaqat @model {
 	love: Boolean
 	smile: Boolean
 	lokma: Boolean
-	color: String
 	status: Int
 }
 
-type MorningDua @model {
+type Morn @model {
 	date: String!
 	month: String!
 	week: String!
 	year: String!
 	morning: Boolean
 	evening: Boolean
-	color: String
 	status: Int
 }
