@@ -489,7 +489,7 @@ export default function Deeds({ navigation }) {
 
 	return (
 		<SafeAreaView style={styles.container}>
-			<Text style={styles.header}>WelCome, Kaiyes</Text>
+			<Text style={styles.header}>Salam ♥️</Text>
 			<Text style={styles.headerSubtitle}>Let's have a sunnah day</Text>
 
 			<ScrollView contentContainerStyle={styles.scrollView}>
