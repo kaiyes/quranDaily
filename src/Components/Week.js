@@ -136,9 +136,7 @@ export default function Week() {
 				contentContainerStyle={styles.scrollView}>
 				{topics.map(item => (
 					<View style={styles.boxHolder} key={Math.random()}>
-						<Text style={styles.habitName} onPress={() => console.log(item)}>
-							{item.habitName}
-						</Text>
+						<Text style={styles.habitName}>{item.habitName}</Text>
 
 						<View style={styles.boxes}>
 							{item.data.map(stat => (

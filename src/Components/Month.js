@@ -15,73 +15,147 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 
-import QuranData from '../utility/fakeMonthViewQuran'
-import FardSalahData from '../utility/fakeMonthViewFamily'
-import SunnaSalahData from '../utility/fakeMonthViewEntertainment'
-import TahajjudData from '../utility/fakeMonthViewWork'
-import SadakahData from '../utility/fakeMonthViewSide'
+import { DataStore, Predicates } from '@aws-amplify/datastore'
+import { Fard, Quran, Sunna, Tahajjud, Sadaqa, Morn } from '../models'
+
+import Loader from '../components/loader'
 
 export default function Week() {
-	const data = [
+	const [loading, setLoading] = useState(false)
+	const [quranData, setQuranData] = useState([])
+	const [fardData, setFardData] = useState([])
+	const [sunnaData, setSunnaData] = useState([])
+	const [tajData, setTajData] = useState([])
+	const [morn, setMornData] = useState([])
+	const [sadaqa, setSadaqaData] = useState([])
+
+	const topics = [
 		{
 			habitName: 'Quran',
-			fakeData: QuranData.slice(0, 30)
+			data: quranData,
+			// color: hsl(147, 60, 47)
+			color: 'mediumseagreen'
 		},
 		{
 			habitName: 'Fard Salah',
-			fakeData: FardSalahData.slice(0, 30)
+			data: fardData,
+			//color: hsl(219, 60, 66)
+			color: 'steelblue'
 		},
 		{
 			habitName: 'Sunna Salah',
-			fakeData: SunnaSalahData.slice(0, 30)
+			data: sunnaData,
+			// color: hsl(51, 60, 50)
+			color: 'gold'
 		},
 		{
 			habitName: 'Tahajjud',
-			fakeData: TahajjudData.slice(0, 30)
+			data: tajData,
+			// color: hsl(340, 60, 65)
+			color: 'palevioletred'
 		},
 		{
 			habitName: 'Sadakah',
-			fakeData: SadakahData.slice(0, 30)
+			data: sadaqa,
+			// color: hsl(207, 60, 49)
+			color: 'slateblue'
 		},
 		{
 			habitName: 'Dua Morning',
-			fakeData: FardSalahData.slice(0, 30)
-		},
-		{
-			habitName: 'Dua Evening',
-			fakeData: SadakahData.slice(0, 30)
+			data: morn,
+			// color: hsl(289, 60, 63)
+			color: 'lightsalmon'
 		}
 	]
 
-	function swithcCircle(status) {
-		if (status <= 30) {
-			return styles.smallCircle
-		} else if (status >= 70) {
-			return styles.bigCircle
-		} else {
-			return styles.mediumCircle
+	function switchCircle(status) {
+		switch (status) {
+			case 0:
+				return styles.zeroCircle
+				break
+			case 1:
+				return styles.oneCircle
+				break
+			case 2:
+				return styles.twoCircle
+				break
+			case 3:
+				return styles.threeCircle
+				break
+			case 4:
+				return styles.fourCircle
+				break
+			case 5:
+				return styles.fifthCircle
+				break
+			default:
+				return styles.zeroCircle
 		}
 	}
+
+	useEffect(() => {
+		;(async function fetchData() {
+			setLoading(true)
+			const date = new Date()
+			const year = `${date.getFullYear()}`
+			const month = `${date.getMonth()}`
+
+			const FardData = await DataStore.query(Fard, c => c.month('eq', month))
+			const QuranData = await DataStore.query(Quran, c => c.month('eq', month))
+			const SunnaData = await DataStore.query(Sunna, c => c.month('eq', month))
+			const TajData = await DataStore.query(Tahajjud, c => c.month('eq', month))
+			const MornData = await DataStore.query(Morn, c => c.month('eq', month))
+			const SadaqaData = await DataStore.query(Sadaqa, c =>
+				c.month('eq', month)
+			)
+
+			const FardCleaned = await FardData.map(item => item.status)
+			const QuranCleaned = await QuranData.map(item => item.status)
+			const SunnaCleaned = await SunnaData.map(item => item.status)
+			const TajCleaned = await TajData.map(item => item.status)
+			const MornCleaned = await MornData.map(item => item.status)
+			const SadaqaCleaned = await SadaqaData.map(item => item.status)
+
+			setFardData(FardCleaned)
+			setQuranData(QuranCleaned)
+			setSunnaData(SunnaCleaned)
+			setTajData(TajCleaned)
+			setMornData(MornCleaned)
+			setSadaqaData(SadaqaCleaned)
+
+			setLoading(false)
+		})()
+	}, [])
+
+	if (loading) Loader()
 
 	return (
 		<View style={styles.container}>
 			<ScrollView
 				showsVerticalScrollIndicator={false}
 				contentContainerStyle={styles.scrollView}>
-				{data.map(item => (
+				{topics.map(item => (
 					<View style={styles.boxHolder} key={Math.random()}>
-						<Text style={styles.habitName} onPress={() => console.log(item)}>
-							{item.habitName}
-						</Text>
+						<Text style={styles.habitName}>{item.habitName}</Text>
 
 						<View style={styles.boxes}>
-							{item.fakeData.map(day => (
-								<View style={styles.box} key={Math.random()}>
+							{item.data.map(stat => (
+								<View style={styles.box} key={stat.toString()}>
 									<View
 										style={[
-											swithcCircle(day.status),
-											{ backgroundColor: day.color }
-										]}
+											switchCircle(stat),
+											{
+												backgroundColor: stat === 0 ? 'gainsboro' : item.color
+											}
+										]}>
+										{stat === 0 ? <Text style={styles.minus}>-</Text> : null}
+									</View>
+								</View>
+							))}
+							{new Array(30 - item.data.length).fill(0).map(stat => (
+								<View style={styles.box} key={Math.random().toString()}>
+									<View
+										style={[styles.futureCircle, { backgroundColor: 'silver' }]}
 									/>
 								</View>
 							))}
@@ -123,25 +197,49 @@ const styles = StyleSheet.create({
 	},
 	boxes: {
 		flexDirection: 'row',
+		width: wp('80%'),
+		paddingLeft: wp('1.5%'),
 		flexWrap: 'wrap'
 	},
-	habitName: {
-		fontSize: 18,
-		fontFamily: 'Menlo',
+
+	minus: {
+		fontSize: 14,
 		fontWeight: 'bold',
-		padding: hp('.5%')
+		color: 'crimson'
 	},
-	smallCircle: {
+	zeroCircle: {
+		width: wp('6%'),
+		height: wp('6%'),
+		borderRadius: wp('3%'),
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	oneCircle: {
 		width: wp('2%'),
 		height: wp('2%'),
 		borderRadius: wp('1%')
 	},
-	mediumCircle: {
+	twoCircle: {
+		width: wp('3%'),
+		height: wp('3%'),
+		borderRadius: wp('1.5%')
+	},
+	threeCircle: {
 		width: wp('4%'),
 		height: wp('4%'),
 		borderRadius: wp('2%')
 	},
-	bigCircle: {
+	fourCircle: {
+		width: wp('5%'),
+		height: wp('5%'),
+		borderRadius: wp('2.5%')
+	},
+	fifthCircle: {
+		width: wp('6%'),
+		height: wp('6%'),
+		borderRadius: wp('3%')
+	},
+	futureCircle: {
 		width: wp('6%'),
 		height: wp('6%'),
 		borderRadius: wp('3%')
