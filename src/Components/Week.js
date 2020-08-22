@@ -34,42 +34,50 @@ export default function Week() {
 		{
 			habitName: 'Quran',
 			data: quranData,
+			// color: hsl(147, 60, 47)
 			color: 'mediumseagreen'
 		},
 		{
 			habitName: 'Fard Salah',
 			data: fardData,
-			color: 'cornflowerblue'
+			//color: hsl(219, 60, 66)
+			color: 'steelblue'
 		},
 		{
 			habitName: 'Sunna Salah',
 			data: sunnaData,
+			// color: hsl(51, 60, 50)
 			color: 'gold'
 		},
 		{
 			habitName: 'Tahajjud',
 			data: tajData,
+			// color: hsl(340, 60, 65)
 			color: 'palevioletred'
 		},
 		{
 			habitName: 'Sadakah',
 			data: sadaqa,
-			color: 'steelblue'
+			// color: hsl(207, 60, 49)
+			color: 'slateblue'
 		},
 		{
 			habitName: 'Dua Morning',
 			data: morn,
-			color: 'burlywood'
+			// color: hsl(289, 60, 63)
+			color: 'lightsalmon'
 		}
 	]
 
-	function swithcCircle(status) {
-		switch (status) {
-			case 0:
-				return 's'
-				break
-			default:
-				return ''
+	function swithcShade(status, color) {
+		if (color === 'mediumseagreen') {
+			switch (status) {
+				case 0:
+					return ''
+					break
+				default:
+					return ''
+			}
 		}
 	}
 
@@ -94,6 +102,7 @@ export default function Week() {
 			const TajCleaned = await TajData.map(item => item.status)
 			const MornCleaned = await MornData.map(item => item.status)
 			const SadaqaCleaned = await SadaqaData.map(item => item.status)
+
 			console.log(
 				FardCleaned,
 				QuranCleaned,
