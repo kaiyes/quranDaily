@@ -149,6 +149,7 @@ export default function Week() {
 									/>
 								</View>
 							))}
+
 							{new Array(7 - item.data.length).fill(0).map(stat => (
 								<View style={styles.box} key={Math.random().toString()}>
 									<View

@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
 	itemName: {
 		fontWeight: '500',
 		color: 'white',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		fontSize: 17,
 		marginTop: hp('3%'),
 		flexWrap: 'wrap'

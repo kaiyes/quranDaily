@@ -176,7 +176,9 @@ const styles = StyleSheet.create({
 		width: wp('3.6%'),
 		height: wp('3.6%'),
 		justifyContent: 'center',
-		alignItems: 'center'
+		alignItems: 'center',
+		marginRight: wp('1%'),
+		marginBottom: hp('.5%')
 	},
 	boxes: {
 		flexDirection: 'row',

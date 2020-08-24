@@ -75,9 +75,9 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		fontWeight: '400',
-		fontSize: hp('2.1%'),
+		fontSize: hp('3%'),
 		color: 'darkolivegreen',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		width: wp('75%')
 	},
 	backNav: {

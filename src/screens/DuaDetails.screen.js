@@ -14,7 +14,6 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 //utility
-import '../assets/fonts/me_quran.ttf'
 
 import { DataStore } from '@aws-amplify/datastore'
 import { Duas } from '../models'
@@ -56,26 +55,26 @@ export default function DuaDetail({ route, navigation }) {
 							<Text style={styles.dua}>{item.arabic}</Text>
 
 							<Text style={styles.spelling}>
-								<Text style={styles.preSpell}>উচ্চারণ:</Text>
+								<Text style={styles.preSpell}>উচ্চারণ: </Text>
 								{item.transliteration}
 							</Text>
 
 							<View style={styles.secondContainer}>
 								<Text style={styles.meaning}>
-									<Text style={styles.preSpell}>অর্থ:</Text>
+									<Text style={styles.preSpell}>অর্থ: </Text>
 									{item.translations}
 								</Text>
 
 								{item.bottom.length < 1 ? null : (
 									<Text style={styles.meaning}>
-										<Text style={styles.preSpell}>ফাজায়েল:</Text>
+										<Text style={styles.preSpell}>ফাজায়েল: </Text>
 										{item.bottom}
 									</Text>
 								)}
 
 								{item.reference.length < 1 ? null : (
 									<Text style={styles.source}>
-										<Text style={styles.preSpell}>উৎস:</Text>
+										<Text style={styles.preSpell}>উৎস: </Text>
 										{item.reference}
 									</Text>
 								)}
@@ -117,6 +116,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		color: 'darkolivegreen',
 		textAlign: 'center',
+		fontFamily: 'SolaimanLipiNormal',
 		textDecorationLine: 'underline'
 	},
 	dua: {
@@ -131,14 +131,14 @@ const styles = StyleSheet.create({
 		marginTop: hp('3%'),
 		fontSize: 18,
 		fontWeight: '400',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		color: 'darkolivegreen'
 	},
 	meaning: {
 		marginTop: hp('3%'),
 		fontSize: 18,
 		fontWeight: '400',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		color: 'darkolivegreen'
 	},
 	source: {
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
 	preSpell: {
 		fontSize: 16,
 		fontWeight: 'bold',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		color: 'darkgreen',
 		textDecorationLine: 'underline',
 		marginRight: wp('10%')

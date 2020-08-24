@@ -109,7 +109,7 @@ function DuaStack() {
 				name="DuaDetail"
 				component={DuaDetailScreen}
 				options={({ route }) => ({
-					headerTitleAlign: 'center',
+					headerTitle: null,
 					headerTintColor: 'black',
 					headerStyle: {
 						backgroundColor: '#80ca8e'
