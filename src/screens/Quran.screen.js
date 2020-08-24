@@ -63,7 +63,6 @@ export default function Quran({ navigation: { navigate } }) {
 				<View style={styles.nameBlock}>
 					<View style={styles.nameRow}>
 						<Text style={styles.name}>{item.transliteration_en}</Text>
-						<Text style={styles.italicSubtitle}>{item.transliteration_en}</Text>
 					</View>
 
 					<Text style={styles.subTitle}>

@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		color: 'darkolivegreen',
 		textAlign: 'center',
-		textDecorationLine: 'underline'
+		textDecorationLine: 'underline',
+		fontFamily: 'SolaimanLipiNormal'
 	},
 	dua: {
 		marginTop: hp('2%'),
@@ -80,52 +81,30 @@ const styles = StyleSheet.create({
 		marginTop: hp('3%'),
 		fontSize: 18,
 		fontWeight: '400',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		color: 'darkolivegreen'
 	},
 	meaning: {
 		marginTop: hp('3%'),
 		fontSize: 18,
 		fontWeight: '400',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		color: 'darkolivegreen'
 	},
 	source: {
 		marginTop: hp('2%'),
 		fontSize: 16,
 		fontWeight: '200',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		color: 'darkolivegreen',
 		marginBottom: hp('2%')
-	},
-	playButton: {
-		position: 'absolute',
-		right: wp('5%'),
-		bottom: hp('3.5%'),
-		width: wp('27%'),
-		height: hp('20%')
 	},
 	preSpell: {
 		fontSize: 16,
 		fontWeight: 'bold',
-		fontFamily: 'Menlo',
+		fontFamily: 'SolaimanLipiNormal',
 		color: 'darkgreen',
 		textDecorationLine: 'underline',
 		marginRight: wp('10%')
-	},
-	backNav: {
-		width: wp('100%'),
-		height: hp('5%'),
-		alignItems: 'flex-start',
-		justifyContent: 'center',
-		paddingLeft: wp('3.5%'),
-		marginBottom: hp('2%'),
-		borderBottomWidth: hp('.2%'),
-		borderBottomColor: 'whitesmoke'
-	},
-	floatingIcon: {
-		position: 'absolute',
-		bottom: 10,
-		right: 10
 	}
 })

@@ -121,6 +121,7 @@ function DuaStack() {
 				name="BookmarkedDua"
 				component={DuaDetailsBookmarked}
 				options={({ route }) => ({
+					headerTitle: null,
 					headerTitleAlign: 'center',
 					headerTintColor: 'black',
 					headerStyle: {

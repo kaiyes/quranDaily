@@ -70,9 +70,9 @@ const styles = StyleSheet.create({
 		padding: 12
 	},
 	circle: {
-		height: 50,
-		width: 50,
-		borderRadius: 25,
+		height: 36,
+		width: 36,
+		borderRadius: 18,
 		backgroundColor: 'lightgreen',
 		marginRight: 10,
 		justifyContent: 'center',
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
 	},
 	number: {
 		fontWeight: '500',
-		fontSize: hp('2%'),
+		fontSize: 14,
 		color: 'darkolivegreen',
 		fontFamily: 'Menlo'
 	},
@@ -98,10 +98,10 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		fontWeight: '400',
-		fontSize: hp('2.1%'),
+		fontSize: hp('3%'),
 		color: 'darkolivegreen',
-		fontFamily: 'Menlo',
-		width: wp('80%')
+		fontFamily: 'SolaimanLipiNormal',
+		width: wp('75%')
 	},
 	backNav: {
 		flexDirection: 'row',

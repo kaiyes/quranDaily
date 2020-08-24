@@ -70,16 +70,20 @@ const styles = StyleSheet.create({
 		fontSize: 22,
 		fontWeight: 'bold',
 		color: 'darkolivegreen',
-		textAlign: 'center'
+		textAlign: 'left',
+		fontFamily: 'SolaimanLipiNormal',
+		width: wp('75%')
 	},
 	basicRow: {
 		flexDirection: 'row',
-		alignItems: 'center',
+		justifyContent: 'flex-start',
+		alignItems: 'flex-start',
 		paddingVertical: hp('2%'),
 		borderBottomWidth: 1,
 		borderBottomColor: 'silver'
 	},
 	icon: {
-		marginRight: wp('3%')
+		marginRight: wp('2%'),
+		marginTop: hp('1%')
 	}
 })

@@ -109,12 +109,12 @@ export default function Week() {
 				c.month('eq', month)
 			)
 
-			const FardCleaned = await FardData.map(item => item.status)
-			const QuranCleaned = await QuranData.map(item => item.status)
-			const SunnaCleaned = await SunnaData.map(item => item.status)
-			const TajCleaned = await TajData.map(item => item.status)
-			const MornCleaned = await MornData.map(item => item.status)
-			const SadaqaCleaned = await SadaqaData.map(item => item.status)
+			const FardCleaned = await FardData.map(item => item.status).reverse()
+			const QuranCleaned = await QuranData.map(item => item.status).reverse()
+			const SunnaCleaned = await SunnaData.map(item => item.status).reverse()
+			const TajCleaned = await TajData.map(item => item.status).reverse()
+			const MornCleaned = await MornData.map(item => item.status).reverse()
+			const SadaqaCleaned = await SadaqaData.map(item => item.status).reverse()
 
 			setFardData(FardCleaned)
 			setQuranData(QuranCleaned)
@@ -140,7 +140,7 @@ export default function Week() {
 
 						<View style={styles.boxes}>
 							{item.data.map(stat => (
-								<View style={styles.box} key={stat.toString()}>
+								<View style={styles.box} key={Math.random().toString()}>
 									<View
 										style={[
 											switchCircle(stat),
@@ -177,6 +177,7 @@ const styles = StyleSheet.create({
 	},
 	boxHolder: {
 		backgroundColor: 'white',
+		width: wp('77%'),
 		paddingVertical: hp('2%'),
 		paddingHorizontal: wp('2%'),
 		marginBottom: hp('2%'),

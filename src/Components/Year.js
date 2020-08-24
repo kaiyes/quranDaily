@@ -108,12 +108,12 @@ export default function Week() {
 			const MornData = await DataStore.query(Morn, c => c.year('eq', year))
 			const SadaqaData = await DataStore.query(Sadaqa, c => c.year('eq', year))
 
-			const FardCleaned = await FardData.map(item => item.status)
-			const QuranCleaned = await QuranData.map(item => item.status)
-			const SunnaCleaned = await SunnaData.map(item => item.status)
-			const TajCleaned = await TajData.map(item => item.status)
-			const MornCleaned = await MornData.map(item => item.status)
-			const SadaqaCleaned = await SadaqaData.map(item => item.status)
+			const FardCleaned = await FardData.map(item => item.status).reverse()
+			const QuranCleaned = await QuranData.map(item => item.status).reverse()
+			const SunnaCleaned = await SunnaData.map(item => item.status).reverse()
+			const TajCleaned = await TajData.map(item => item.status).reverse()
+			const MornCleaned = await MornData.map(item => item.status).reverse()
+			const SadaqaCleaned = await SadaqaData.map(item => item.status).reverse()
 
 			FardCleaned.color = 'mediumseagreen'
 			QuranData.color = 'steelblue'
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
 	boxHolder: {
 		flexDirection: 'row',
 		flexWrap: 'wrap',
-		width: wp('85%'),
+		width: Platform.OS === 'ios' ? wp('85%') : wp('77%'),
 		backgroundColor: 'white',
 		paddingVertical: hp('2%'),
 		paddingHorizontal: wp('3%'),
