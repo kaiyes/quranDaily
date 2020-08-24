@@ -21,6 +21,7 @@
 		596B24D7EE2197ED46522A52 /* libPods-AdminApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6BD851770DAF3C7812DA0 /* libPods-AdminApp-tvOS.a */; };
 		743F685F6A19780F2B237DCE /* libPods-AdminAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3692E78ECB55108ABC1E92 /* libPods-AdminAppTests.a */; };
 		BBE767C084CE989A2B5F3688 /* libPods-AdminApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C72EDAB9007F1ED018CB60B3 /* libPods-AdminApp-tvOSTests.a */; };
+		DCA2039E24F409DA00AF56F2 /* SolaimanLipiNormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCA2039D24F409DA00AF56F2 /* SolaimanLipiNormal.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		B6B039935559FD8011CEE30A /* Pods-AdminApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminApp.debug.xcconfig"; path = "Target Support Files/Pods-AdminApp/Pods-AdminApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C11B69007EE875EA733AF252 /* libPods-AdminApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdminApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72EDAB9007F1ED018CB60B3 /* libPods-AdminApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdminApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA2039D24F409DA00AF56F2 /* SolaimanLipiNormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SolaimanLipiNormal.ttf; path = ../android/app/src/main/assets/fonts/SolaimanLipiNormal.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F55B0DABB19E7E7BD80EC718 /* Pods-AdminApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AdminApp-tvOS/Pods-AdminApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DCA2039D24F409DA00AF56F2 /* SolaimanLipiNormal.ttf */,
 				178C975023AB8D150082267B /* me_quran.ttf */,
 				13B07FAE1A68108700A75B9A /* AdminApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DCA2039E24F409DA00AF56F2 /* SolaimanLipiNormal.ttf in Resources */,
 				178C975123AB8D150082267B /* me_quran.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);

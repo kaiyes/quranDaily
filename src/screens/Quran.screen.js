@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
 	},
 	name: {
 		fontSize: 17,
-		fontFamily: 'Menlo'
+		fontFamily: 'Menlo-Regular'
 	},
 	suraBlock: {
 		width: wp('100%'),
@@ -180,7 +180,8 @@ const styles = StyleSheet.create({
 	subTitle: {
 		fontSize: 14,
 		fontWeight: '200',
-		marginTop: hp('.5%')
+		marginTop: hp('.5%'),
+		fontFamily: 'Menlo-Regular'
 	},
 	number: {
 		fontSize: 20,

@@ -45,6 +45,7 @@
 		<string>me_quran.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>FontAwesome5_Solid.ttf</string>
+		<string>SolaimanLipiNormal.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

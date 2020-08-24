@@ -141,6 +141,7 @@ export default function Week() {
 		<FlatList
 			keyExtractor={item => item}
 			data={dataArray}
+			showsVerticalScrollIndicator={false}
 			contentContainerStyle={styles.scrollView}
 			renderItem={({ item }) => Card(item)}
 		/>

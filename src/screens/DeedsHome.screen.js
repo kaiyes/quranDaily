@@ -834,7 +834,7 @@ const styles = StyleSheet.create({
 	header: {
 		fontWeight: '400',
 		color: 'black',
-		fontFamily: 'Menlo',
+		fontFamily: 'Menlo-Regular',
 		fontSize: 22,
 		marginLeft: wp('5%'),
 		marginTop: hp('1%')
@@ -842,7 +842,7 @@ const styles = StyleSheet.create({
 	headerSubtitle: {
 		fontWeight: '400',
 		color: 'gray',
-		fontFamily: 'Menlo',
+		fontFamily: 'Menlo-Regular',
 		fontSize: 17,
 		marginLeft: wp('5%')
 	},
@@ -865,7 +865,7 @@ const styles = StyleSheet.create({
 		elevation: 4
 	},
 	cardHeader: {
-		fontFamily: 'Menlo',
+		fontFamily: 'Menlo-Regular',
 		fontWeight: '500',
 		color: 'white',
 		fontSize: 17,

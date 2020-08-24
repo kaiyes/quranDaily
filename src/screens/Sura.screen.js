@@ -597,7 +597,7 @@ const styles = StyleSheet.create({
 	},
 	translation: {
 		fontSize: 17,
-		fontFamily: 'Menlo',
+		fontFamily: 'Menlo-Regular',
 		marginVertical: hp('1%')
 	},
 
