@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import {
 	StyleSheet,
 	View,
@@ -13,15 +13,17 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
-//utility
-
 import { DataStore } from '@aws-amplify/datastore'
+
+//utility
 import { Duas } from '../models'
+import LanguageContext from '../utility/context'
 
 export default function DuaDetail({ route, navigation }) {
 	const [loading, setLoading] = useState(false)
 
 	const { pageTitle_en, pageTitle_bn, duas } = route.params
+	const { language, setLanguage } = useContext(LanguageContext)
 
 	async function save() {
 		const sortedDua = await duas.map(i => {
@@ -48,37 +50,74 @@ export default function DuaDetail({ route, navigation }) {
 		<SafeAreaView style={styles.rootView}>
 			<View>
 				<ScrollView contentContainerStyle={styles.backgroundScrollView}>
-					<Text style={styles.title}>{pageTitle_en}</Text>
+					<Text style={styles.title}>
+						{language === 'bn' ? pageTitle_bn : pageTitle_en}
+					</Text>
 
 					{duas.map(item => (
 						<View style={styles.section} key={item.AyaID}>
 							<Text style={styles.dua}>{item.arabic}</Text>
+							{language === 'bn' ? (
+								<>
+									{item.transliteration_bn.length < 1 ? null : (
+										<Text style={styles.spelling}>
+											<Text style={styles.preSpell}>উচ্চারণ:</Text>
+											{item.transliteration_bn}
+										</Text>
+									)}
 
-							<Text style={styles.spelling}>
-								<Text style={styles.preSpell}>উচ্চারণ: </Text>
-								{item.transliteration_en}
-							</Text>
+									<View style={styles.secondContainer}>
+										<Text style={styles.meaning}>
+											<Text style={styles.preSpell}>অর্থ: </Text>
+											{item.translations_bn}
+										</Text>
 
-							<View style={styles.secondContainer}>
-								<Text style={styles.meaning}>
-									<Text style={styles.preSpell}>অর্থ: </Text>
-									{item.translations_en}
-								</Text>
+										{item.bottom_bn.length < 1 ? null : (
+											<Text style={styles.meaning}>
+												<Text style={styles.preSpell}>ফাজায়েল: </Text>
+												{item.bottom_bn}
+											</Text>
+										)}
 
-								{item.bottom_en.length < 1 ? null : (
-									<Text style={styles.meaning}>
-										<Text style={styles.preSpell}>ফাজায়েল: </Text>
-										{item.bottom_en}
-									</Text>
-								)}
+										{item.reference_bn.length < 1 ? null : (
+											<Text style={styles.source}>
+												<Text style={styles.preSpell}>উৎস: </Text>
+												{item.reference_bn}
+											</Text>
+										)}
+									</View>
+								</>
+							) : (
+								<>
+									{item.transliteration.length < 1 ? null : (
+										<Text style={styles.spelling}>
+											<Text style={styles.preSpell}>Spelling</Text>
+											{item.transliteration}
+										</Text>
+									)}
 
-								{item.reference_en.length < 1 ? null : (
-									<Text style={styles.source}>
-										<Text style={styles.preSpell}>উৎস: </Text>
-										{item.reference_en}
-									</Text>
-								)}
-							</View>
+									<View style={styles.secondContainer}>
+										<Text style={styles.meaning}>
+											<Text style={styles.preSpell}>Meaning: </Text>
+											{item.translations_en}
+										</Text>
+
+										{item.bottom_en.length < 1 ? null : (
+											<Text style={styles.meaning}>
+												<Text style={styles.preSpell}>Fazael: </Text>
+												{item.bottom_en}
+											</Text>
+										)}
+
+										{item.reference_en.length < 1 ? null : (
+											<Text style={styles.source}>
+												<Text style={styles.preSpell}>Source: </Text>
+												{item.reference_en}
+											</Text>
+										)}
+									</View>
+								</>
+							)}
 						</View>
 					))}
 				</ScrollView>

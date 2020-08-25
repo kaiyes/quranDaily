@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import {
 	createStackNavigator,
 	TransitionPresets
@@ -24,7 +24,7 @@ import QuranScreen from './screens/Quran.screen'
 import MemorizeScreen from './screens/Memorize.screen'
 import SuraScreen from './screens/Sura.screen'
 
-import testScreen from './screens/Stats.screen'
+import LanguageContext from './utility/context'
 
 //components
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
@@ -52,84 +52,93 @@ function DeedStack() {
 }
 
 function DuaStack() {
+	const [language, setLanguage] = useState('en')
+
+	const value = useMemo(() => ({ language, setLanguage }), [
+		language,
+		setLanguage
+	])
+
 	return (
-		<Stack.Navigator
-			screenOptions={{
-				...TransitionPresets.SlideFromRightIOS
-			}}>
-			<Stack.Screen
-				name="Dua Home"
-				component={DuaScreen}
-				options={{
-					headerShown: false
-				}}
-			/>
+		<LanguageContext.Provider value={value}>
+			<Stack.Navigator
+				screenOptions={{
+					...TransitionPresets.SlideFromRightIOS
+				}}>
+				<Stack.Screen
+					name="Dua Home"
+					component={DuaScreen}
+					options={{
+						headerShown: false
+					}}
+				/>
 
-			<Stack.Screen
-				name="AllDuas"
-				component={AllDuaScreen}
-				options={({ route }) => ({
-					title: 'all duas',
-					headerBackTitle: null,
-					headerTitleAlign: 'center',
-					headerTintColor: 'black',
-					headerStyle: {
-						backgroundColor: '#80ca8e'
-					}
-				})}
-			/>
+				<Stack.Screen
+					name="AllDuas"
+					component={AllDuaScreen}
+					options={({ route }) => ({
+						title: 'all duas',
+						headerBackTitle: null,
+						headerTitleAlign: 'center',
+						headerTintColor: 'black',
+						headerStyle: {
+							backgroundColor: '#80ca8e'
+						}
+					})}
+				/>
 
-			<Stack.Screen
-				name="Categories"
-				component={DuaCategoriesdScreen}
-				options={({ route }) => ({
-					title: route.params.pageTitle,
-					headerBackTitle: null,
-					headerTitleAlign: 'center',
-					headerTintColor: 'black',
-					headerStyle: {
-						backgroundColor: '#80ca8e'
-					}
-				})}
-			/>
+				<Stack.Screen
+					name="Categories"
+					component={DuaCategoriesdScreen}
+					options={({ route }) => ({
+						title: route.params.pageTitle,
+						headerBackTitle: null,
+						headerTitleAlign: 'center',
+						headerTintColor: 'black',
+						headerStyle: {
+							backgroundColor: '#80ca8e'
+						}
+					})}
+				/>
 
-			<Stack.Screen
-				name="Favourites"
-				component={FavouriteScreen}
-				options={({ route }) => ({
-					headerTitleAlign: 'center',
-					headerTintColor: 'black',
-					headerStyle: {
-						backgroundColor: '#80ca8e'
-					}
-				})}
-			/>
+				<Stack.Screen
+					name="Favourites"
+					component={FavouriteScreen}
+					options={({ route }) => ({
+						headerTitleAlign: 'center',
+						headerTintColor: 'black',
+						headerStyle: {
+							backgroundColor: '#80ca8e'
+						}
+					})}
+				/>
 
-			<Stack.Screen
-				name="DuaDetail"
-				component={DuaDetailScreen}
-				options={({ route }) => ({
-					headerTitle: null,
-					headerTintColor: 'black',
-					headerStyle: {
-						backgroundColor: '#80ca8e'
-					}
-				})}
-			/>
+				<Stack.Screen
+					name="DuaDetail"
+					component={DuaDetailScreen}
+					options={({ route }) => ({
+						headerTitle: null,
+						headerTintColor: 'black',
+						headerStyle: {
+							backgroundColor: '#80ca8e'
+						}
+					})}
+				/>
 
-			<Stack.Screen
-				name="BookmarkedDua"
-				component={DuaDetailsBookmarked}
-				options={({ route }) => ({
-					headerTitle: null,
-					headerTitleAlign: 'center',
-					headerTintColor: 'black',
-					headerStyle: {
-						backgroundColor: '#80ca8e'
-					}
-				})}
-			/>
-		</Stack.Navigator>
+				<Stack.Screen
+					name="BookmarkedDua"
+					component={DuaDetailsBookmarked}
+					options={({ route }) => ({
+						headerTitle: null,
+						headerTitleAlign: 'center',
+						headerTintColor: 'black',
+						headerStyle: {
+							backgroundColor: '#80ca8e'
+						}
+					})}
+				/>
+			</Stack.Navigator>
+		</LanguageContext.Provider>
 	)
 }
 

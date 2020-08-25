@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
 	StyleSheet,
 	View,
@@ -16,8 +16,11 @@ import { Icon } from 'react-native-elements'
 
 //utility
 import Duas from '../utility/dua'
+import LanguageContext from '../utility/context'
 
 export default function AllDua({ route, navigation }) {
+	const { language, setLanguage } = useContext(LanguageContext)
+
 	function goToDetail(item) {
 		navigation.navigate('DuaDetail', {
 			pageTitle_en: item.pageTitle_en,
@@ -37,9 +40,17 @@ export default function AllDua({ route, navigation }) {
 						style={styles.item}
 						onPress={() => goToDetail(item)}>
 						<View style={styles.circle}>
-							<Text style={styles.number}>{index + 1}</Text>
+							<Text
+								style={styles.number}
+								onPress={() =>
+									language === 'en' ? setLanguage('bn') : setLanguage('en')
+								}>
+								{index + 1}
+							</Text>
 						</View>
-						<Text style={styles.title}>{item.pageTitle_en}</Text>
+						<Text style={styles.title}>
+							{language === 'en' ? item.pageTitle_en : item.pageTitle_bn}
+						</Text>
 					</TouchableOpacity>
 				)}
 			/>
