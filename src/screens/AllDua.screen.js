@@ -15,29 +15,31 @@ import {
 import { Icon } from 'react-native-elements'
 
 //utility
-import Duas from '../utility/duas'
+import Duas from '../utility/dua'
 
 export default function AllDua({ route, navigation }) {
+	function goToDetail(item) {
+		navigation.navigate('DuaDetail', {
+			pageTitle_en: item.pageTitle_en,
+			pageTitle_bn: item.pageTitle_bn,
+			duas: item.duas
+		})
+	}
+
 	return (
 		<SafeAreaView style={styles.root}>
 			<FlatList
 				data={Duas}
-				tabLabel="All Duas"
 				keyExtractor={item => item.key}
 				contentContainerStyle={styles.scrollContainer}
-				renderItem={({ item }) => (
+				renderItem={({ item, index }) => (
 					<TouchableOpacity
 						style={styles.item}
-						onPress={function goToDetail() {
-							navigation.navigate('DuaDetail', {
-								pageTitle: item.pageTitle,
-								duas: item.duas
-							})
-						}}>
+						onPress={() => goToDetail(item)}>
 						<View style={styles.circle}>
-							<Text style={styles.number}>{item.id}</Text>
+							<Text style={styles.number}>{index + 1}</Text>
 						</View>
-						<Text style={styles.title}>{item.pageTitle}</Text>
+						<Text style={styles.title}>{item.pageTitle_en}</Text>
 					</TouchableOpacity>
 				)}
 			/>
@@ -98,7 +100,7 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		fontWeight: '400',
-		fontSize: hp('3%'),
+		fontSize: Platform.OS === 'ios' ? hp('2%') : hp('3%'),
 		color: 'darkolivegreen',
 		fontFamily: 'SolaimanLipiNormal',
 		width: wp('75%')

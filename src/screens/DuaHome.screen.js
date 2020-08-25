@@ -15,7 +15,6 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon, CheckBox } from 'react-native-elements'
 //Utility
-import DUA from '../utility/duas'
 import Categories from '../utility/categories'
 
 export default function Dua({ navigation }) {

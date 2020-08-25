@@ -21,7 +21,7 @@ import { Duas } from '../models'
 export default function DuaDetail({ route, navigation }) {
 	const [loading, setLoading] = useState(false)
 
-	const { pageTitle, duas } = route.params
+	const { pageTitle_en, pageTitle_bn, duas } = route.params
 
 	async function save() {
 		const sortedDua = await duas.map(i => {
@@ -48,7 +48,7 @@ export default function DuaDetail({ route, navigation }) {
 		<SafeAreaView style={styles.rootView}>
 			<View>
 				<ScrollView contentContainerStyle={styles.backgroundScrollView}>
-					<Text style={styles.title}>{pageTitle}</Text>
+					<Text style={styles.title}>{pageTitle_en}</Text>
 
 					{duas.map(item => (
 						<View style={styles.section} key={item.AyaID}>
@@ -56,26 +56,26 @@ export default function DuaDetail({ route, navigation }) {
 
 							<Text style={styles.spelling}>
 								<Text style={styles.preSpell}>উচ্চারণ: </Text>
-								{item.transliteration}
+								{item.transliteration_en}
 							</Text>
 
 							<View style={styles.secondContainer}>
 								<Text style={styles.meaning}>
 									<Text style={styles.preSpell}>অর্থ: </Text>
-									{item.translations}
+									{item.translations_en}
 								</Text>
 
-								{item.bottom.length < 1 ? null : (
+								{item.bottom_en.length < 1 ? null : (
 									<Text style={styles.meaning}>
 										<Text style={styles.preSpell}>ফাজায়েল: </Text>
-										{item.bottom}
+										{item.bottom_en}
 									</Text>
 								)}
 
-								{item.reference.length < 1 ? null : (
+								{item.reference_en.length < 1 ? null : (
 									<Text style={styles.source}>
 										<Text style={styles.preSpell}>উৎস: </Text>
-										{item.reference}
+										{item.reference_en}
 									</Text>
 								)}
 							</View>
