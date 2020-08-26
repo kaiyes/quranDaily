@@ -15,6 +15,12 @@ let items = [
 		category: 'quranic'
 	},
 	{
+		name_bn: 'উপকারী জিক্র ',
+		name_en: 'Benficial Zikr',
+		color: 'darkslateblue',
+		category: 'zikr'
+	},
+	{
 		name_bn: 'সকাল-সন্ধ্যায়',
 		name_en: 'Morning-evening',
 		color: 'indianred',
@@ -106,12 +112,6 @@ let items = [
 		category: 'forBenefactor'
 	},
 	{
-		name_bn: 'ইস্তেখারার দোয়া ',
-		name_en: 'Divine Guidence',
-		color: 'indianred',
-		category: 'divineGuidence'
-	},
-	{
 		name_bn: 'রোগ ',
 		name_en: 'Disease',
 		color: 'darkslateblue',
@@ -122,12 +122,6 @@ let items = [
 		name_en: 'Child Safety',
 		color: 'indianred',
 		category: 'childSafety'
-	},
-	{
-		name_bn: 'রুকিয়ার দোয়া',
-		name_en: 'Rukia',
-		color: 'darkslateblue',
-		category: 'ruqia'
 	},
 	{
 		name_bn: 'বিয়ে সঙ্ক্রান্ত',

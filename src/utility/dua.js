@@ -4817,30 +4817,6 @@ const Duas = [
 	{
 		duas: [
 			{
-				top_bn:
-					'যদি কোনো বান্দা কোনো পাপ কাজ করে ফেলে, অতঃপর সে উত্তমরূপে পবিত্রতা অর্জন করে এবং দাঁড়িয়ে যায় ও দু রাক‘আত সালাত আদায় করে, তারপর আল্লাহ্‌র কাছে ক্ষমা প্রার্থনা করে, তাহলে আল্লাহ তাকে ক্ষমা করে দেবেন।',
-				transliteration_bn: '',
-				translations_bn: '',
-				bottom_bn: '',
-				reference_bn:
-					'আবূ দাউদ ২/৮৬, ১৫২১; তিরমিযী ২/২৫৭, নং ৪০৬; আর শাইখ আলবানী সহীহ আবি দাউদে ১/২৮৩ একে সহীহ বলে মত প্রকাশ করেছেন।',
-				top_en:
-					"Any servant who commits a sin and as a result, performs ablution, prays two units of prayer [i.e., two rakats] and then seeks Allaah's forgiveness, Allaah would forgive him.'",
-				arabic: '',
-				transliteration: '',
-				translations_en: '',
-				bottom_en: '',
-				reference_en:
-					'Abu Dawud 2/86, At-Tirmithi 2/257. Al-Albani graded it authentic in Sahih Abu Dawud 1/283.'
-			}
-		],
-		pageTitle_bn: 'পাপ করে ফেললে যা বলবে এবং যা করবে',
-		pageTitle_en: 'Upon committing a sin',
-		category: 'repentance'
-	},
-	{
-		duas: [
-			{
 				top_bn: 'তার থেকে আল্লাহ্‌র নিকট আশ্রয় প্রার্থনা করবে',
 				transliteration_bn: 'আ‘ঊযু বিল্লা-হি মিনাশ শাইত্বানির রাজীম',
 				translations_bn: 'বিতাড়িত শয়তান থেকে আমি আল্লাহ্‌র আশ্রয় নিচ্ছি। [১]',
@@ -6634,7 +6610,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বাহনে আরোহণের দো‘আ',
-		pageTitle_en: 'When mounting an animal or any means of transport'
+		pageTitle_en: 'When mounting an animal or any means of transport',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6724,7 +6701,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সফরের দো‘আ',
-		pageTitle_en: 'Dua for travel'
+		pageTitle_en: 'Dua for travel',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6750,7 +6728,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'গ্রাম বা শহরে প্রবেশের দো‘আ',
-		pageTitle_en: 'Upon entering a town or village'
+		pageTitle_en: 'Upon entering a town or village',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6776,7 +6755,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বাজারে প্রবেশের দো‘আ',
-		pageTitle_en: 'When entering the market'
+		pageTitle_en: 'When entering the market',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6797,7 +6777,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বাহন হোঁচট খেলে পড়ার দো‘আ',
-		pageTitle_en: 'When the mounted animal (or mean of transport) stumbles'
+		pageTitle_en: 'When the mounted animal (or mean of transport) stumbles',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6822,7 +6803,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মুক্বীম বা অবস্থানকারীদের জন্য মুসাফিরের দো‘আ',
-		pageTitle_en: 'Dua of the traveller for the resident'
+		pageTitle_en: 'Dua of the traveller for the resident',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6848,7 +6830,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মুসাফিরের জন্য মুক্বীম বা অবস্থানকারীর দো‘আ #১',
-		pageTitle_en: 'Dua of the resident for the traveller #1'
+		pageTitle_en: 'Dua of the resident for the traveller #1',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6872,7 +6855,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মুসাফিরের জন্য মুক্বীম বা অবস্থানকারীর দো‘আ #২',
-		pageTitle_en: 'Dua of the resident for the traveller #2'
+		pageTitle_en: 'Dua of the resident for the traveller #2',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6906,7 +6890,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'উপরে উঠা ও নিচে নামার দো‘আ',
-		pageTitle_en: 'Dua while ascending or descending'
+		pageTitle_en: 'Dua while ascending or descending',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6932,7 +6917,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রাত্রির শেষ প্রহরে মুসাফিরের দো‘আ',
-		pageTitle_en: 'Prayer of the traveller as dawn approaches'
+		pageTitle_en: 'Prayer of the traveller as dawn approaches',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6956,7 +6942,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সফরে বা অন্য অবস্থায় কোনো ঘরে নামলে পড়ার দো‘আ',
-		pageTitle_en: 'Stopping or lodging somewhere'
+		pageTitle_en: 'Stopping or lodging somewhere',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -6995,7 +6982,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সফর থেকে ফেরার যিক্‌র',
-		pageTitle_en: 'While returning from travel'
+		pageTitle_en: 'While returning from travel',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -7036,7 +7024,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আনন্দদায়ক অথবা অপছন্দনীয় কিছুর সম্মুখীন হলে যা বলবে',
-		pageTitle_en: 'Upon receiving pleasing or displeasing news'
+		pageTitle_en: 'Upon receiving pleasing or displeasing news',
+		category: 'travel'
 	},
 	{
 		duas: [
@@ -7176,7 +7165,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'যাকে আপনি গালি দিয়েছেন তার জন্য দো‘আ',
-		pageTitle_en: 'For one you have insulted'
+		pageTitle_en: 'For one you have insulted',
+		category: 'repentance'
 	},
 	{
 		duas: [
@@ -7198,7 +7188,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কোনো মুসলিম অপর মুসলিমকে প্রশংসা করলে যা বলবে',
-		pageTitle_en: 'Etiquette of praising a fellow Muslim'
+		pageTitle_en: 'Etiquette of praising a fellow Muslim',
+		category: 'assembly'
 	},
 	{
 		duas: [
@@ -7224,7 +7215,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কোনো মুসলিমের প্রশংসা করা হলে সে যা বলবে',
-		pageTitle_en: 'For the one that have been praised'
+		pageTitle_en: 'For the one that have been praised',
+		category: 'assembly'
 	},
 	{
 		duas: [
@@ -7248,7 +7240,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'হজ্জ বা উমরায় মুহরিম ব্যক্তি কিভাবে তালবিয়াহ পড়বে',
-		pageTitle_en: "Pilgrim's arrival for Hajj/Umrah - Talbiya"
+		pageTitle_en: "Pilgrim's arrival for Hajj/Umrah - Talbiya",
+		category: 'hajj'
 	},
 	{
 		duas: [
@@ -7271,7 +7264,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'হাজরে আসওয়াদের কাছে আসলে তাকবীর বলা',
-		pageTitle_en: 'Takbir when passing the black stone'
+		pageTitle_en: 'Takbir when passing the black stone',
+		category: 'hajj'
 	},
 	{
 		duas: [
@@ -7298,7 +7292,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকনে ইয়ামানী ও হাজরে আসওয়াদের মাঝে দো‘আ',
-		pageTitle_en: "Between the Yemeni corner and black stone [Ka'bah]"
+		pageTitle_en: "Between the Yemeni corner and black stone [Ka'bah]",
+		category: 'hajj'
 	},
 	{
 		duas: [
@@ -7358,7 +7353,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সাফা ও মারওয়ায় দাঁড়িয়ে যা পড়বে',
-		pageTitle_en: 'When at Mount Safa and Mount Marwah'
+		pageTitle_en: 'When at Mount Safa and Mount Marwah',
+		category: 'hajj'
 	},
 	{
 		duas: [
@@ -7386,7 +7382,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আরাফাতের দিনে দো‘আ',
-		pageTitle_en: "The Day of 'Arafah"
+		pageTitle_en: "The Day of 'Arafah",
+		category: 'hajj'
 	},
 	{
 		duas: [
@@ -7434,7 +7431,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মাশ‘আরুল হারাম তথা মুযদালিফায় যিক্‌র',
-		pageTitle_en: "Sacred Site [al-Mash'ar al-Haraam] - At Muzdalifa"
+		pageTitle_en: "Sacred Site [al-Mash'ar al-Haraam] - At Muzdalifa",
+		category: 'hajj'
 	},
 	{
 		duas: [
@@ -7458,7 +7456,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জামরাসমূহে প্রত্যেক কংকর নিক্ষেপকালে তাকবীর বলা',
-		pageTitle_en: 'When throwing each pebble at the Jamarat'
+		pageTitle_en: 'When throwing each pebble at the Jamarat',
+		category: 'hajj'
 	},
 	{
 		duas: [
@@ -7492,7 +7491,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আশ্চর্যজনক ও আনন্দজনক বিষয়ের পর দো‘আ',
-		pageTitle_en: 'At times of amazement and delight'
+		pageTitle_en: 'At times of amazement and delight',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -7515,7 +7515,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আনন্দদায়ক কোনো সংবাদ আসলে যা করবে',
-		pageTitle_en: 'Upon receiving pleasant news'
+		pageTitle_en: 'Upon receiving pleasant news',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -7554,7 +7555,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শরীরে কোনো ব্যথা অনুভব করলে যা করবে ও বলবে',
-		pageTitle_en: 'When feeling some pain in the body'
+		pageTitle_en: 'When feeling some pain in the body',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -7577,7 +7579,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কোনো কিছুর উপর নিজের চোখ লাগার ভয় থাকলে দো‘আ',
-		pageTitle_en: 'When in fear of afflicting someone with one’s eye'
+		pageTitle_en: 'When in fear of afflicting someone with one’s eye',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -7597,7 +7600,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ভীত অবস্থায় যা বলবে',
-		pageTitle_en: 'When startled'
+		pageTitle_en: 'When startled',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -7623,7 +7627,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'পশু যবেহ বা নাহর করার সময় যা বলবে',
-		pageTitle_en: 'When slaughtering or sacrificing an animal'
+		pageTitle_en: 'When slaughtering or sacrificing an animal',
+		category: 'qurbani'
 	},
 	{
 		duas: [
@@ -7649,7 +7654,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুষ্ট শয়তানদের ষড়যন্ত্র প্রতিহত করতে যা বলবে',
-		pageTitle_en: 'To ward off the deception of the Obstinate Shaytans'
+		pageTitle_en: 'To ward off the deception of the Obstinate Shaytans',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -7679,7 +7685,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ক্ষমা প্রার্থনা ও তাওবা করা',
-		pageTitle_en: 'Seeking Forgiveness & Repentance'
+		pageTitle_en: 'Seeking Forgiveness & Repentance',
+		category: 'repentance'
 	},
 	{
 		duas: [
@@ -7702,7 +7709,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'তাসবীহ, তাহমীদ, তাহলীল ও তাকবীর-এর ফযীলত',
-		pageTitle_en: 'Sins forgiven even if like the foam of the sea'
+		pageTitle_en: 'Sins forgiven even if like the foam of the sea',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7732,7 +7740,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'ইসমাঈল (আ:) এর সন্তানদের চারজনকে দাসত্ব থেকে মুক্ত করার সমান সওয়াব',
-		pageTitle_en: 'Reward of Freeing four slaves'
+		pageTitle_en: 'Reward of Freeing four slaves',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7757,7 +7766,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'যিকির যা জবানে সহজ আর মীযানের পাল্লায় ভারী',
-		pageTitle_en: 'Words Light on tongue, Heavy on the balance'
+		pageTitle_en: 'Words Light on tongue, Heavy on the balance',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7786,7 +7796,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আল্লাহ্‌র নিকট সর্বাধিক প্রিয় বাক্য',
-		pageTitle_en: 'Most beloved words to Allah'
+		pageTitle_en: 'Most beloved words to Allah',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7809,7 +7820,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'এক হাজার সওয়াব লেখা অথবা এক হাজার পাপ মুছে ফেলা',
-		pageTitle_en: '1000 Rewards written, 1000 Sins wiped away'
+		pageTitle_en: '1000 Rewards written, 1000 Sins wiped away',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7832,7 +7844,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জান্নাতের একটি খেজুর গাছ',
-		pageTitle_en: 'Date palm planted in Paradise'
+		pageTitle_en: 'Date palm planted in Paradise',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7855,7 +7868,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জান্নাতের এক রত্নভাণ্ডার',
-		pageTitle_en: 'Treasure of Paradise'
+		pageTitle_en: 'Treasure of Paradise',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7902,7 +7916,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'তাসবীহ, তাহমীদ, তাহলীল ও তাকবীর-এর ফযীলত #৮',
-		pageTitle_en: 'Excellence of Zikr & glorification of Allaah #8'
+		pageTitle_en: 'Excellence of Zikr & glorification of Allaah #8',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7929,7 +7944,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'তাসবীহ, তাহমীদ, তাহলীল ও তাকবীর-এর ফযীলত #৯',
-		pageTitle_en: 'Excellence of Zikr & glorification of Allaah #9'
+		pageTitle_en: 'Excellence of Zikr & glorification of Allaah #9',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7963,7 +7979,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সর্বশ্রেষ্ঠ দো‘আ এবং সর্বোত্তম যিক্‌র',
-		pageTitle_en: 'Best Supplication & Best Remembrance'
+		pageTitle_en: 'Best Supplication & Best Remembrance',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -7989,7 +8006,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'চিরস্থায়ী নেক আমল',
-		pageTitle_en: 'Good deeds which endure'
+		pageTitle_en: 'Good deeds which endure',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -8011,7 +8029,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কীভাবে নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম তাসবীহ পাঠ করতেন?',
-		pageTitle_en: 'How the Prophet (saws) made tasbeeh'
+		pageTitle_en: 'How the Prophet (saws) made tasbeeh',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -8032,7 +8051,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিবিধ কল্যাণ ও সামষ্টিক কিছু আদব',
-		pageTitle_en: 'General and Beneficent rules'
+		pageTitle_en: 'General and Beneficent rules',
+		category: 'zikr'
 	},
 	{
 		duas: [
@@ -8137,7 +8157,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল-ফাতিহা - ১:১-৭',
-		pageTitle_en: 'Surah Fatiha 1:1-7'
+		pageTitle_en: 'Surah Fatiha 1:1-7',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8158,7 +8179,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জাহিলিয়াত থেকে মুক্তি [২:৬৭]',
-		pageTitle_en: 'Protecton from being ignorant [2:67]'
+		pageTitle_en: 'Protecton from being ignorant [2:67]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8182,7 +8204,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল বাকারাহ - ২:১২৬',
-		pageTitle_en: 'Surah Al-Baqarah - 2:126'
+		pageTitle_en: 'Surah Al-Baqarah - 2:126',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8223,7 +8246,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'আমল কবুলের করতে চাওয়া [২:১২৭-১২৮]',
 		pageTitle_en:
-			'Seeking acceptance of deeds &  becoming a devout muslim [2:127-128]'
+			'Seeking acceptance of deeds &  becoming a devout muslim [2:127-128]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8247,7 +8271,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুনিয়া ও আখিরাতের কল্যান চাওয়া [২:২০১]',
-		pageTitle_en: 'Seeking good of this world and the hereafter [2:201]'
+		pageTitle_en: 'Seeking good of this world and the hereafter [2:201]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8271,7 +8296,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ধৈর্য, একনিষ্ঠতা এবং বিজয় প্রার্থনা [২:২৫০]',
-		pageTitle_en: 'Seeking patience, firmness and victory [2:250]'
+		pageTitle_en: 'Seeking patience, firmness and victory [2:250]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8295,7 +8321,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল বাকারাহ - ২:২৮৫',
-		pageTitle_en: 'Surah Al-Baqarah 2:285'
+		pageTitle_en: 'Surah Al-Baqarah 2:285',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8319,7 +8346,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল বাকারাহ - ২:২৮৬',
-		pageTitle_en: 'Surah Al-Baqarah 2:286'
+		pageTitle_en: 'Surah Al-Baqarah 2:286',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8361,7 +8389,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'হেদায়াতের পর অন্তরের বক্রতা হতে মুক্তি চাওয়া [৩:৮-৯]',
-		pageTitle_en: 'Protection from deviation after guidance [3:8-9]'
+		pageTitle_en: 'Protection from deviation after guidance [3:8-9]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8385,7 +8414,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ক্ষমা এবং জাহান্নাম হতে মুক্তি চাওয়া [৩:১৬]',
-		pageTitle_en: 'Asking forgiveness and protection from hell [3:16]'
+		pageTitle_en: 'Asking forgiveness and protection from hell [3:16]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8409,7 +8439,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সুসন্তান লাভের জন্য দোআ [৩:৩৮]',
-		pageTitle_en: 'Asking for a good child [3:38]'
+		pageTitle_en: 'Asking for a good child [3:38]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8433,7 +8464,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আলে ইমরান - ৩:৫৩',
-		pageTitle_en: 'Surah Al-Imran - 3:53'
+		pageTitle_en: 'Surah Al-Imran - 3:53',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8457,7 +8489,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ক্ষমা, একনিষ্ঠতা এবং বিজয় প্রার্থনা [৩:১৪৭]',
-		pageTitle_en: 'Seeking forgiveness, firmness and victory [3:147]'
+		pageTitle_en: 'Seeking forgiveness, firmness and victory [3:147]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8535,7 +8568,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আলে ইমরান - ৩:১৯১-১৯৪',
-		pageTitle_en: 'Surah Al-Imran - 3:191-194'
+		pageTitle_en: 'Surah Al-Imran - 3:191-194',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8559,7 +8593,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মজলুমের দোআ [৪:৭৫]',
-		pageTitle_en: 'Dua of an oppressed person[4:75]'
+		pageTitle_en: 'Dua of an oppressed person[4:75]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8583,7 +8618,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল মায়েদাহ - ৫:২৫',
-		pageTitle_en: "Surah Al-Ma'ida - 5:25"
+		pageTitle_en: "Surah Al-Ma'ida - 5:25",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8622,7 +8658,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল মায়েদাহ - ৫:৮৩ - ৮৪',
-		pageTitle_en: "Surah Al-Ma'ida - 5:83-84"
+		pageTitle_en: "Surah Al-Ma'ida - 5:83-84",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8646,7 +8683,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল মায়েদাহ - ৫:১১৪',
-		pageTitle_en: "Surah Al-Ma'ida - 5:114"
+		pageTitle_en: "Surah Al-Ma'ida - 5:114",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8670,7 +8708,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'পাপ করার পর ক্ষমা প্রার্থনা [৭:২৩]',
-		pageTitle_en: 'Seeking forgiveness and mercy after sinning [7:23]'
+		pageTitle_en: 'Seeking forgiveness and mercy after sinning [7:23]',
+		category: 'qurbani'
 	},
 	{
 		duas: [
@@ -8692,7 +8731,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'যালিম কওমের অন্তর্ভুক্ত না হওয়ার দোআ [৭:৪৭]',
-		pageTitle_en: 'Dua for not placing among wrongdoers [7:47]'
+		pageTitle_en: 'Dua for not placing among wrongdoers [7:47]',
+		category: 'qurbani'
 	},
 	{
 		duas: [
@@ -8716,7 +8756,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল আরাফ - ৭:৮৯',
-		pageTitle_en: "Surah Al-A'raf - 7:89"
+		pageTitle_en: "Surah Al-A'raf - 7:89",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8738,7 +8779,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ধৈর্য লাভ এবং মুসলমান হিসেবে মৃত্যু চাওয়া [৭:১২৬]',
-		pageTitle_en: 'Seeking patience and dying as a muslim [7:126]'
+		pageTitle_en: 'Seeking patience and dying as a muslim [7:126]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8762,7 +8804,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ক্ষমা এবং রহমত প্রার্থনা [৭:১৫১]',
-		pageTitle_en: 'Seeking forgiveness and mercy [7:151]'
+		pageTitle_en: 'Seeking forgiveness and mercy [7:151]',
+		category: 'qurbani'
 	},
 	{
 		duas: [
@@ -8804,7 +8847,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল আরাফ - ৭:১৫৫-১৫৬',
-		pageTitle_en: "Surah Al-A'raf - 7:155-156"
+		pageTitle_en: "Surah Al-A'raf - 7:155-156",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8826,7 +8870,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল আরাফ - ৭:১৮৯',
-		pageTitle_en: "Surah Al-A'raf - 7:189"
+		pageTitle_en: "Surah Al-A'raf - 7:189",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8850,7 +8895,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ইউনুস - ১০:২২',
-		pageTitle_en: 'Surah Yunus - 10:22'
+		pageTitle_en: 'Surah Yunus - 10:22',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8888,7 +8934,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ইউনুস - ১০:৮৫-৮৬',
-		pageTitle_en: 'Surah Yunus - 10:85-86'
+		pageTitle_en: 'Surah Yunus - 10:85-86',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8912,7 +8959,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ইউনুস - ১০:৮৮',
-		pageTitle_en: 'Surah Yunus - 10:88'
+		pageTitle_en: 'Surah Yunus - 10:88',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8936,7 +8984,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা হুদ - ১১:৪১',
-		pageTitle_en: 'Surah Hud - 11:41'
+		pageTitle_en: 'Surah Hud - 11:41',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8960,7 +9009,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা হুদ - ১১:৪৭',
-		pageTitle_en: 'Surah Hud - 11:47'
+		pageTitle_en: 'Surah Hud - 11:47',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -8984,7 +9034,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ইউসুফ - ১২:২৩',
-		pageTitle_en: 'Surah Yusuf - 12:23'
+		pageTitle_en: 'Surah Yusuf - 12:23',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9008,7 +9059,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ইউসুফ - ১২:৩৩',
-		pageTitle_en: 'Surah Yusuf - 12:33'
+		pageTitle_en: 'Surah Yusuf - 12:33',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9032,7 +9084,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মুসলমান হিসেবে মৃত্যু এবং নেককারদের অন্তর্ভুক্তি [১২:১০১]',
-		pageTitle_en: 'Seeking death among the righteous muslims [12:101]'
+		pageTitle_en: 'Seeking death among the righteous muslims [12:101]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9056,7 +9109,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ইবরাহিম - ১৪:৩৫',
-		pageTitle_en: 'Surah Ibraheem - 14:35'
+		pageTitle_en: 'Surah Ibraheem - 14:35',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9098,7 +9152,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ইবরাহিম - ১৪:৪০-৪১',
-		pageTitle_en: 'Surah Ibraheem - 14:40-41'
+		pageTitle_en: 'Surah Ibraheem - 14:40-41',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9119,7 +9174,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'পিতামাতার জন্য দোআ [১৭:২৪]',
-		pageTitle_en: 'Dua for parents [17:24]'
+		pageTitle_en: 'Dua for parents [17:24]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9143,7 +9199,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল-ইসরা - ১৭:৮০',
-		pageTitle_en: 'Surah Al-Isra - 17:80'
+		pageTitle_en: 'Surah Al-Isra - 17:80',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9167,7 +9224,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রহমত এবং সঠিক দিকনির্দেশনার দোআ [১৮:১০]',
-		pageTitle_en: 'Asking for correcting affairs and mercy[18:10]'
+		pageTitle_en: 'Asking for correcting affairs and mercy[18:10]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9227,7 +9285,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা মারিয়াম - ১৯:৪-৬',
-		pageTitle_en: 'Surah Maryam - 19:4-6'
+		pageTitle_en: 'Surah Maryam - 19:4-6',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9249,7 +9308,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা মারিয়াম - ১৯:১৮',
-		pageTitle_en: 'Surah Maryam - 19:18'
+		pageTitle_en: 'Surah Maryam - 19:18',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9307,7 +9367,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মুখের জড়তা দূর করার দোয়া [২০:২৫-২৮]',
-		pageTitle_en: 'Seeking easeness in speech [20:25-28]'
+		pageTitle_en: 'Seeking easeness in speech [20:25-28]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9326,7 +9387,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জ্ঞান বৃদ্ধি চাওয়া [২০:১১৪]',
-		pageTitle_en: 'Asking for increase in knowledge [20:114]'
+		pageTitle_en: 'Asking for increase in knowledge [20:114]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9348,7 +9410,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:৮৩',
-		pageTitle_en: 'Surah Al-Anbiya - 21:83'
+		pageTitle_en: 'Surah Al-Anbiya - 21:83',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9372,7 +9435,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:৮৭',
-		pageTitle_en: 'Surah Al-Anbiya - 21:87'
+		pageTitle_en: 'Surah Al-Anbiya - 21:87',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9394,7 +9458,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:৮৯',
-		pageTitle_en: 'Surah Al-Anbiya - 21:89'
+		pageTitle_en: 'Surah Al-Anbiya - 21:89',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9418,7 +9483,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:১১২',
-		pageTitle_en: 'Surah Al-Anbiya - 21:112'
+		pageTitle_en: 'Surah Al-Anbiya - 21:112',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9438,7 +9504,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: "সূরা আল মু'মিনূন - ২৩:২৬",
-		pageTitle_en: "Surah Al-Mu'minoon - 23:26, 39"
+		pageTitle_en: "Surah Al-Mu'minoon - 23:26, 39",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9462,7 +9529,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: "সূরা আল মু'মিনূন - ২৩:২৯",
-		pageTitle_en: "Surah Al-Mu'minoon - 23:29"
+		pageTitle_en: "Surah Al-Mu'minoon - 23:29",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9484,7 +9552,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'যালিমদের অন্তর্ভুক্ত না হওয়ার দোআ [২৩:৯৪]',
-		pageTitle_en: 'Dua for not placing among wrongdoers [23:94]'
+		pageTitle_en: 'Dua for not placing among wrongdoers [23:94]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9520,7 +9589,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শয়তান হতে আল্লাহর কাছে আশ্রয় প্রার্থনা [২৩:৯৭-৯৮]',
-		pageTitle_en: 'Seeking refuge in Allah from devils [23:97-98]'
+		pageTitle_en: 'Seeking refuge in Allah from devils [23:97-98]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9544,7 +9614,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ক্ষমা এবং রহমত প্রার্থনা [২৩:১০৯]',
-		pageTitle_en: 'Seeking forgiveness and mercy [23:109]'
+		pageTitle_en: 'Seeking forgiveness and mercy [23:109]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9565,7 +9636,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ক্ষমা এবং রহমত প্রার্থনা [২৩:১১৮]',
-		pageTitle_en: 'Seeking forgiveness and mercy [23:118]'
+		pageTitle_en: 'Seeking forgiveness and mercy [23:118]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9589,7 +9661,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জাহান্নামের আজাব হতে আশ্রয় চাওয়া [২৫:৬৫]',
-		pageTitle_en: 'Seeking refuge froom the punishment from hellfire [25:65]'
+		pageTitle_en: 'Seeking refuge froom the punishment from hellfire [25:65]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9615,7 +9688,8 @@ const Duas = [
 		pageTitle_bn:
 			' চক্ষু শীতলকারী স্ত্রী ও সন্তানাদি লাভ আর মুত্তাকীদের নেতা হতে প্রার্থনা [২৫:৭৪]',
 		pageTitle_en:
-			'Asking coolness of eyes from family and becoming example for the righteous [25:74]'
+			'Asking coolness of eyes from family and becoming example for the righteous [25:74]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9724,7 +9798,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: "সূরা আশ্-শু'আরা - ২৬:৮৩-৮৯",
-		pageTitle_en: "Surah Ash-Shu'araa - 26:83-89"
+		pageTitle_en: "Surah Ash-Shu'araa - 26:83-89",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9761,7 +9836,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: "সূরা আশ্-শু'আরা - ২৬:১১৭-১১৮",
-		pageTitle_en: "Surah Ash-Shu'araa - 26:117-118"
+		pageTitle_en: "Surah Ash-Shu'araa - 26:117-118",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9782,7 +9858,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: "সূরা আশ্-শু'আরা - ২৬:১৬৯",
-		pageTitle_en: "Surah Ash-Shu'araa - 26:169"
+		pageTitle_en: "Surah Ash-Shu'araa - 26:169",
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9806,7 +9883,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শুকরিয়া জ্ঞাপন এবং কবুল আমলের প্রার্থনা [২৭:১৯]',
-		pageTitle_en: 'Seeking gratefulness to Allah and approved deeds [27:19]'
+		pageTitle_en: 'Seeking gratefulness to Allah and approved deeds [27:19]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9830,7 +9908,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আন-নামল - ২৭:৪৪',
-		pageTitle_en: 'Surah 27:44'
+		pageTitle_en: 'Surah 27:44',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9872,7 +9951,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল-কাসাস  - ২৮:১৬-১৭',
-		pageTitle_en: 'Surah Al-Qasas - 28:16-17'
+		pageTitle_en: 'Surah Al-Qasas - 28:16-17',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9892,7 +9972,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'যালিম কওম থেকে আশ্রয় প্রার্থনা [২৮:২১]',
-		pageTitle_en: 'Seeking protection from wrongdoing people [28:21]'
+		pageTitle_en: 'Seeking protection from wrongdoing people [28:21]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9914,7 +9995,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আল্লাহর অনুগ্রহের মুখাপেক্ষিতা [২৮:২৪]',
-		pageTitle_en: 'Seeking whatever good Allah can bestow [28:24]'
+		pageTitle_en: 'Seeking whatever good Allah can bestow [28:24]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9934,7 +10016,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ফাসাদ সৃষ্টিকারী কওমের বিরুদ্ধে সাহায্য প্রার্থনা [২৯:৩০]',
-		pageTitle_en: 'Asking help againest corrupt people [29:30]'
+		pageTitle_en: 'Asking help againest corrupt people [29:30]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9954,7 +10037,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সুসন্তান লাভের জন্য দোআ [৩৭:১০০]',
-		pageTitle_en: 'Seeking a righteous child [37:100]'
+		pageTitle_en: 'Seeking a righteous child [37:100]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9978,7 +10062,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা  ছোয়াদ -  ৩৮:৩৫',
-		pageTitle_en: 'Surah Sad - 38:35'
+		pageTitle_en: 'Surah Sad - 38:35',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -9999,7 +10084,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা  ছোয়াদ -  ৩৮:৪১',
-		pageTitle_en: 'Surah Sad - 38:41'
+		pageTitle_en: 'Surah Sad - 38:41',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10059,7 +10145,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা গাফির - ৪০:৭-৯',
-		pageTitle_en: 'Surah Ghafir - 40:7-9'
+		pageTitle_en: 'Surah Ghafir - 40:7-9',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10083,7 +10170,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা গাফির - ৪০:২৭',
-		pageTitle_en: 'Surah Ghafir - 40:27'
+		pageTitle_en: 'Surah Ghafir - 40:27',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10107,7 +10195,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা গাফির - ৪০:৪৪',
-		pageTitle_en: 'Surah Ghafir - 40:44'
+		pageTitle_en: 'Surah Ghafir - 40:44',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10132,7 +10221,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'শুকরিয়া জ্ঞাপন, কবুল আমল এবং সুসন্তান প্রার্থনা [৪৬:১৫]',
 		pageTitle_en:
-			'Seeking gratefulness to Allah, approved deeds and righteous child [46:15]'
+			'Seeking gratefulness to Allah, approved deeds and righteous child [46:15]',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10151,7 +10241,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা ক্বামার - ৫৪:১০',
-		pageTitle_en: 'Surah Qamar 54:10'
+		pageTitle_en: 'Surah Qamar 54:10',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10175,7 +10266,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল-হাশর - ৫৯:১০',
-		pageTitle_en: 'Surah Al-Hashr - 59:10'
+		pageTitle_en: 'Surah Al-Hashr - 59:10',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10199,7 +10291,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল-মুমতাহিনাহ - ৬০:৪',
-		pageTitle_en: 'Surah Al-Mumtahina - 60:4'
+		pageTitle_en: 'Surah Al-Mumtahina - 60:4',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10223,7 +10316,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আত-তাহরীম - ৬৬:৮',
-		pageTitle_en: 'Surah At-Tahreem - 66:8'
+		pageTitle_en: 'Surah At-Tahreem - 66:8',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10247,7 +10341,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আত-তাহরীম - ৬৬:১১',
-		pageTitle_en: 'Surah At-Tahreem - 66:11'
+		pageTitle_en: 'Surah At-Tahreem - 66:11',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10269,7 +10364,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা নূহ - ৭১:২৬',
-		pageTitle_en: 'Surah Nooh - 71:26'
+		pageTitle_en: 'Surah Nooh - 71:26',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10293,7 +10389,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা নূহ - ৭১:২৮',
-		pageTitle_en: 'Surah Nooh - 71:28'
+		pageTitle_en: 'Surah Nooh - 71:28',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10316,7 +10413,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'লাইলাতুল ক্বদরের দোআ',
-		pageTitle_en: 'Dua of Laylatul Qadr'
+		pageTitle_en: 'Dua of Laylatul Qadr',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -10342,15 +10440,21 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'অসুস্থ ব্যক্তির জন্য দোআ',
-		pageTitle_en: 'Dua for the Sick'
+		pageTitle_en: 'Dua for the Sick',
+		category: 'disease'
 	}
 ]
 
 function uniqueId() {
-	return '_' + Math.random().toString(36).substr(2, 9)
+	return (
+		'_' +
+		Math.random()
+			.toString(36)
+			.substr(2, 9)
+	)
 }
 
-Duas.map((item) => {
+Duas.map(item => {
 	item.key = uniqueId()
 	// item.id = item.duas[0]._id
 })
