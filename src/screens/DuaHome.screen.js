@@ -93,7 +93,7 @@ export default function Dua({ navigation }) {
 						style={styles.itemContainer}
 						onPress={() =>
 							navigation.navigate('Categories', {
-								pageTitle: item.name,
+								pageTitle: language === 'bn' ? item.name_bn : item.name_en,
 								category: item.category
 							})
 						}>

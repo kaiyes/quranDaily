@@ -118,18 +118,18 @@ export default function DuaDetail({ route, navigation }) {
 						</View>
 					))}
 				</ScrollView>
-				<TouchableOpacity
-					style={styles.floatingIcon}
-					onPress={async () => await save()}>
-					<Icon
-						type={'feather'}
-						name={'bookmark'}
-						size={22}
-						reverse
-						color={'green'}
-					/>
-				</TouchableOpacity>
 			</View>
+			<TouchableOpacity
+				style={styles.floatingIcon}
+				onPress={async () => await save()}>
+				<Icon
+					type={'feather'}
+					name={'bookmark'}
+					size={22}
+					reverse
+					color={'green'}
+				/>
+			</TouchableOpacity>
 		</SafeAreaView>
 	)
 }

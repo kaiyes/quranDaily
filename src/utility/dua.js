@@ -96,7 +96,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুম থেকে জেগে উঠার সময়ের যিক্‌রসমূহ #১',
-		pageTitle_en: 'When waking up #1'
+		pageTitle_en: 'When waking up #1',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -124,7 +125,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুম থেকে জেগে উঠার সময়ের যিক্‌রসমূহ #২',
-		pageTitle_en: 'When waking up #2'
+		pageTitle_en: 'When waking up #2',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -148,7 +150,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুম থেকে জেগে উঠার সময়ের যিক্‌রসমূহ #৩',
-		pageTitle_en: 'When waking up #3'
+		pageTitle_en: 'When waking up #3',
+		category: 'sleeping'
 	},
 	{
 		duas: [

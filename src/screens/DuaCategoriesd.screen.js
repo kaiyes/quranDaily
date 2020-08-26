@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
 	StyleSheet,
 	View,
@@ -15,9 +15,19 @@ import {
 import { Icon } from 'react-native-elements'
 //utility
 import Duas from '../utility/dua'
+import LanguageContext from '../utility/context'
 
 export default function Categorised({ route, navigation }) {
 	const { pageTitle, category } = route.params
+	const { language } = useContext(LanguageContext)
+
+	function goToDetail(item) {
+		navigation.navigate('DuaDetail', {
+			pageTitle_en: item.pageTitle_en,
+			pageTitle_bn: item.pageTitle_bn,
+			duas: item.duas
+		})
+	}
 
 	return (
 		<FlatList
@@ -25,19 +35,14 @@ export default function Categorised({ route, navigation }) {
 			keyExtractor={item => item.key}
 			contentContainerStyle={styles.flatList}
 			style={styles.backgroundScrollView}
-			renderItem={({ item }) => (
-				<TouchableOpacity
-					style={styles.item}
-					onPress={function goToDetail() {
-						navigation.navigate('DuaDetail', {
-							pageTitle: item.pageTitle,
-							duas: item.duas
-						})
-					}}>
+			renderItem={({ item, index }) => (
+				<TouchableOpacity style={styles.item} onPress={() => goToDetail(item)}>
 					<View style={styles.circle}>
-						<Text style={styles.number}>{item.id}</Text>
+						<Text style={styles.number}>{index + 1}</Text>
 					</View>
-					<Text style={styles.title}>{item.pageTitle}</Text>
+					<Text style={styles.title}>
+						{language === 'bn' ? item.pageTitle_bn : item.pageTitle_en}
+					</Text>
 				</TouchableOpacity>
 			)}
 		/>
@@ -75,7 +80,7 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		fontWeight: '400',
-		fontSize: hp('3%'),
+		fontSize: Platform.OS === 'ios' ? hp('2%') : hp('3%'),
 		color: 'darkolivegreen',
 		fontFamily: 'SolaimanLipiNormal',
 		width: wp('75%')
