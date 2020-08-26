@@ -28,12 +28,12 @@ export default function Sura({ route }) {
 
 	const { language, renderStyle, suraName, suraNumber } = route.params
 
-	function Card(item) {
+	function Card(item, index) {
 		return (
 			<View style={styles.ayahBlock}>
 				<Text style={styles.ayahArabic}>{item.ayat}</Text>
-
 				<Text style={styles.translation}>
+					<Text style={styles.number}>{index + 1}. </Text>
 					{language === 'bn' ? item.translation_bn : item.translation_en}
 				</Text>
 			</View>
@@ -69,7 +69,7 @@ export default function Sura({ route }) {
 				data={pagesToRender}
 				keyExtractor={item => item.p.toString()}
 				onEndReached={() => fetchMore()}
-				renderItem={({ item }) => Card2(item)}
+				renderItem={({ item, index }) => Card2(item, index)}
 			/>
 		)
 	}
@@ -83,7 +83,7 @@ export default function Sura({ route }) {
 					data={sura}
 					keyExtractor={item => item.id.toString()}
 					contentContainerStyle={styles.flatList}
-					renderItem={({ item }) => Card(item)}
+					renderItem={({ item, index }) => Card(item, index)}
 				/>
 			</SafeAreaView>
 		)
@@ -622,5 +622,8 @@ const styles = StyleSheet.create({
 		paddingHorizontal: wp('5%'),
 		alignItems: 'center',
 		backgroundColor: 'lemonchiffon'
+	},
+	number: {
+		marginRight: wp('1%')
 	}
 })

@@ -68,13 +68,6 @@ export default function Quran({ navigation: { navigate } }) {
 					<Text style={styles.subTitle}>
 						{item.revelation_type} - {item.total_verses} verses
 					</Text>
-
-					<View style={styles.spacerV} />
-					<ProgressBar
-						progress={0.2}
-						width={wp(`${switchBarWidth(item.total_verses)}`)}
-						color={'tan'}
-					/>
 				</View>
 			</TouchableOpacity>
 		)
@@ -230,3 +223,10 @@ const styles = StyleSheet.create({
 		flexDirection: 'row'
 	}
 })
+
+// <View style={styles.spacerV} />
+// 					<ProgressBar
+// 						progress={0.2}
+// 						width={wp(`${switchBarWidth(item.total_verses)}`)}
+// 						color={'tan'}
+// 					/>
