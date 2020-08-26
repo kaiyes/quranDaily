@@ -6608,19 +6608,3749 @@ const Duas = [
 		pageTitle_bn: 'অশুভ লক্ষণ গ্রহণকে অপছন্দ করে দো‘আ',
 		pageTitle_en: 'Forbiddance of ascribing things to omens',
 		category: 'eeman'
+	},
+
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'بِسْمِ اللَّهِ، وَالْحَمْدُ لِلَّهِ ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ ، الْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، سُبْحَانَكَ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي ، فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ',
+				transliteration_bn:
+					'বিস্‌মিল্লা-হি, আলহাম্‌দু লিল্লা-হি, সুব্‌হা-নাল্লাযী সাখখারা লানা হা-যা ওয়ামা কুন্না লাহু মুক্বরিনীন। ওয়া ইন্না ইলা রব্বিনা লামুনক্বালিবূন, আলহামদুলিল্লা-হ, আলহামদুলিল্লা-হ, আলহামদুলিল্লা-হ, আল্লা-হু আকবার, আল্লা-হু আকবার, আল্লা-হু আকবার, সুবহা-নাকাল্লা-হুম্মা ইন্নী যালামতু নাফসী ফাগফির লী। ফাইন্নাহু লা ইয়াগফিরুয্যুনূবা ইল্লা আনতা',
+				translations_bn:
+					'আল্লাহ্‌র নামে; আর সকল প্রশংসা আল্লাহ্‌র জন্য। পবিত্র মহান সেই সত্তা, যিনি একে আমাদের জন্য বশীভূত করে দিয়েছেন, অন্যথায় আমরা একে বশীভূত করতে সক্ষম ছিলাম না। আর আমরা অবশ্যই প্রত্যাবর্তন করবো আমাদের রব্বের দিকে। সকল প্রশংসা আল্লাহ্‌র জন্য, সকল প্রশংসা আল্লাহ্‌র জন্য, সকল প্রশংসা আল্লাহ্‌র জন্য। আল্লাহ সবচেয়ে বড়, আল্লাহ সবচেয়ে বড়, আল্লাহ সবচেয়ে বড়। হে আল্লাহ! আপনি পবিত্র-মহান; আমি আমার নিজের উপর যুলুম করেছি, সুতরাং আপনি আমাকে মাফ করে দিন। কেননা, আপনি ছাড়া গুনাহ মাফ করার আর কেউ নেই।',
+				bottom_bn: '',
+				reference_bn:
+					'আবু দাঊদ ৩/৩৪, ২৬০২; তিরমিযী ৫/৫০১, নং ৩৪৪৬। আরও দেখুন, সহীহুত তিরমিযী ৩/১৫৬। আর আয়াত দু’টি হচ্ছে, সূরা আয-যুখরুফের ১৩-১৪।',
+				top_en: '',
+				transliteration:
+					"Bismillaah, Alhamdu lillaah. Subhaanal-la<u>th</u>ee sakhkhara lanaa haa<u>th</u>aa wa maa kunnaa lahu muqrineen. Wa 'innaa 'ilaa Rabbinaa lamunqaliboon. Alhamdu lillaah, alhamdu lillaah, alhamdu lillaah, Allaahu 'Akbar, Allaahu 'Akbar, Allaahu 'Akbar, subhaanakal-laahumma 'innee dhalamtu nafsee faghfir lee, fa'innahu laa yaghfiru<u>th</u>-<u>th</u>unooba 'illaa 'Anta.",
+				translations_en:
+					'With the Name of Allah. Praise is to Allah. Glory is to Him Who has provided this for us though we could never have had it by our efforts. Surely, unto our Lord we are returning. Praise is to Allah. Praise is to Allah. Praise is to Allah. Allah is the Most Great. Allah is the Most Great. Allah is the Most Great. Glory is to You. O Allah, I have wronged my own soul. Forgive me, for surely none forgives sins but You.',
+				bottom_en: '',
+				reference_en:
+					'Abu Dawud 3/34, At-Tirmithi 5/501. See also Al-Albani, Sahih At-Tirmithi 3/156.'
+			}
+		],
+		pageTitle_bn: 'বাহনে আরোহণের দো‘আ',
+		pageTitle_en: 'When mounting an animal or any means of transport'
+	},
+	{
+		duas: [
+			{
+				top_bn: 'তিনবার বলবে,',
+				arabic: 'اللَّهُ أَكْبَرُ',
+				transliteration_bn: 'আল্লা-হু আকবার',
+				translations_bn: 'আল্লাহ সবচেয়ে বড়',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: 'Say three times:',
+				transliteration: "Allaahu 'Akbar",
+				translations_en: 'Allah is the Most Great.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'তারপর বলবে,',
+				arabic:
+					'سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ',
+				transliteration_bn:
+					'সুব্‌হা-নাল্লাযী সাখখারা লানা হা-যা ওয়ামা কুন্না লাহু মুক্বরিনীনা। ওয়া ইন্না ইলা রব্বিনা লামুনক্বালিবূন।',
+				translations_bn:
+					'পবিত্র মহান সেই সত্তা, যিনি আমাদের জন্য একে বশীভূত করে দিয়েছেন, অন্যথায় আমরা একে বশীভূত করতে সক্ষম ছিলাম না। আর আমরা অবশ্যই আমাদের রব্বের নিকট প্রত্যাবর্তন করব।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '..and then say:',
+				transliteration:
+					"Subhaanal-la<u>th</u>ee sakhkhara lanaa haa<u>th</u>aa wa maa kunnaa lahu muqrineen. Wa 'innaa 'ilaa Rabbinaa lamunqaliboon.",
+				translations_en:
+					'Glory is to Him Who has provided this for us though we could never have had it by our efforts. Surely, unto our Lord we are returning.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'اللَّهُمَّ إِنّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا البِرَّ وَالتَّقْوَى، وَمِنَ الْعَمَلِ مَا تَرْضَى، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا وَاطْوِ عَنَّا بُعْدَهُ، اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَلِيفَةُ فِي الْأَهْلِ',
+				transliteration_bn:
+					'আল্লা-হুম্মা ইন্না নাস’আলুকা ফী সাফারিনা হা-যাল-বিররা ওয়াত্তাকওয়া, ওয়ামিনাল ‘আমালি মা তারদ্বা। আল্লা-হুম্মা হাউইন ‘আলাইনা সাফারানা হা-যা ওয়াতউই ‘আন্না বু‘দাহু। আল্লা-হুম্মা আনতাস সা-হিবু ফিস সাফারি ওয়াল-খালীফাতু ফিল আহ্‌লি।',
+				translations_bn:
+					'হে আল্লাহ! আমরা এই সফরে আপনার কাছে চাই পূণ্য ও তাকওয়া এবং এমন কাজ যা আপনি পছন্দ করেন। হে আল্লাহ! আমাদের জন্য এই সফরকে সহজ করে দিন এবং এর দুরত্বকে আমাদের জন্য কমিয়ে দিন। হে আল্লাহ্! আপনিই সফরে আমাদের সাথী এবং আমাদের পরিবার-পরিজনের তত্ত্বাবধায়ণকারী।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					"Allaahumma 'innaa nas'aluka fee safarinaa haathal-birrawattaqwaa, waminal-'amalimaa tardhaa, Allaahumma hawwin 'alaynaa safaranaa haa<u>th</u>aa watwi 'annaa bu'dahu, Allaahumma 'Antas-saahibu fis-safari, walkhaleefatu fil-'ahli,",
+				translations_en:
+					'O Allah, we ask You on this our journey for goodness and piety, and for works that are pleasing to You. O Allah, lighten this journey for us and make its distance easy for us. O Allah, You are our Companion on the road and the One in Whose care we leave our family.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ الْمَنْظَرِ، وَسُوءِ الْمُنْقَلَبِ فِي الْمَالِ وَالْأَهْلِ',
+				transliteration_bn:
+					'আল্লা-হুম্মা ইন্নী আ‘ঊযু বিকা মিন ওয়া‘আসা-ইস্ সাফারি ওয়া কা’আবাতিল মানযারি ওয়া সূ-ইল মুনক্বালাবি ফিল মা-লি ওয়াল আহল',
+				translations_bn:
+					'হে আল্লাহ! আমরা আপনার আশ্রয় প্রার্থনা করি সফরের কষ্ট-ক্লেশ থেকে, অবাঞ্ছিত অবস্থার দৃশ্য থেকে এবং সম্পদ ও পরিবারে অনিষ্টকর প্রত্যাবর্তন থেকে।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					"Allaahumma 'innee 'a'oo<u>th</u>u bika min wa'thaa'is-safari, wa ka'aabanl-man<u>dh</u>ari, wa soo'il-munqalabi fil-maaliwal'ahli.",
+				translations_en:
+					"O Allah, I seek refuge in You from this journey's hardships, and from the wicked sights in store and from finding our family and property in misfortune upon returning.",
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn:
+					'আর নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম সফর থেকে ফেরার সময়ও তা পড়তেন এবং তাতে যোগ করতেন,',
+				arabic: 'آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنَا حَامِدُونَ',
+				transliteration_bn: 'আ-ইবূনা তা-ইবূনা ‘আ-বিদূনা, লিরব্বিনা হা-মিদূন',
+				translations_bn:
+					'আমরা প্রত্যাবর্তনকারী, তওবাকারী, ইবাদতকারী এবং আমাদের রব্বের প্রশংসাকারী।',
+				bottom_bn: '',
+				reference_bn: 'মুসলিম ২/৯৭৮, হাদীস নং ১৩৪২।',
+				top_en: 'Upon returning recite the same again adding:',
+				transliteration:
+					"Aa'iboona, taa'iboona, 'aabidoona, Lirabbinaa haamidoon.",
+				translations_en:
+					'We return repentant to our Lord, worshipping our Lord, and praising our Lord.',
+				bottom_en: '',
+				reference_en: 'Muslim 2/978.'
+			}
+		],
+		pageTitle_bn: 'সফরের দো‘আ',
+		pageTitle_en: 'Dua for travel'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'اللَّهُمَّ رَبَّ السَّمَوَاتِ السَّبْعِ وَمَا أَظْلَلْنَ، وَرَبَّ الأَرَضِينَ السَّبْعِ وَمَا أَقْلَلْنَ، وَرَبَّ الشَّياطِينِ وَمَا أَضْلَلْنَ، وَرَبَّ الرِّيَاحِ وَمَا ذَرَيْنَ، أَسْأَلُكَ خَيْرَ هَذِهِ الْقَرْيَةِ، وَخَيْرَ أَهْلِهَا، وَخَيْرَ مَا فِيهَا، وَأَعُوذُ بِكَ مِنْ شَرِّهَا، وَشَرِّ أَهْلِهَا، وَشَرِّ مَا فِيهَا',
+				transliteration_bn:
+					'আল্লা-হুম্মা রব্বাস্ সামা-ওয়া-তিস্ সাব‘ঈ ওয়ামা আযলালনা, ওয়ারব্বাল আরাদীনাস সাব‘ঈ ওয়ামা আক্বলালনা, ওয়া রব্বাশ শাইয়া-তী-নি ওয়ামা আদ্বলালনা, ওয়া রব্বাররিয়া-হি ওয়ামা যারাইনা, আস’আলুকা খাইরা হা-যিহিল কারইয়াতি ওয়া খাইরা আহলিহা ওয়া খাইরা মা ফীহা। ওয়া আ‘ঊযু বিকা মিন শাররিহা ওয়া শাররি আহলিহা ওয়া শাররি মা ফীহা',
+				translations_bn:
+					'হে আল্লাহ! সাত আসমান এবং তা যা কিছু ছায়া দিয়ে রেখেছে তার রব্ব! সাত যমীন এবং তা যা ধারণ করে রেখেছে তার রব্ব! শয়তানদের এবং ওদের দ্বারা পথভ্রষ্টদের রব্ব! বাতাসসমূহ এবং তা যা উড়িয়ে নেয় তার রব্ব! আমি আপনার নিকট চাই এ জনপদের কল্যাণ, এ জনপদবাসীর কল্যাণ এবং এর মাঝে যা আছে তার কল্যাণ। আর আমি আপনার নিকট আশ্রয় চাই এ জনপদের অনিষ্ট থেকে, তাতে বসবাসকারীদের অনিষ্ট থেকে এবং এর মাঝে যা আছে তার অনিষ্ট থেকে।',
+				bottom_bn: '',
+				reference_bn:
+					'হাকেম, আর তিনি একে সহীহ বলেছেন এবং ইমাম যাহাবী সেটা সমর্থন করেছেন ২/১০০; ইবনুস সুন্নী, নং ৫২৪। তাছাড়া হাফেয ইবন হাজার তাঁর তাখরীজুল আযকার ৫/১৫৪, একে হাসান বলেছেন। আল্লামা ইবন বায রাহেমাহুল্লাহ বলেন, ‘হাদীসটি নাসাঈ হাসান সনদে বর্ণনা করেছেন।’ দেখুন, তুহফাতুল আখইয়ার, পৃ. ৩৭।',
+				top_en: '',
+				transliteration:
+					"Allaahumma Rabbas-samaawaatis-sab'i wa maa 'a<u>dh</u>lalna, wa Rabbal-'aradheenas-sab'i wa maa 'aqlalna, wa Rabbash-shayaateeni wa maa 'adhlalna, wa Rabbar-riyaahi wa maa <u>th</u>arayna. 'As'aluka khayra haathihil-qaryati wa khayra 'ahlihaa, wa khayra maafeehaa, wa 'a'oo<u>th</u>u bika min sharrihaa, wa sharri 'ahlihaa, wa shard maa feehaa.",
+				translations_en:
+					'O Allah, Lord of the seven heavens and all they overshadow, Lord of the seven worlds and all they uphold, Lord of the devils and all they lead astray, Lord of the winds and all they scatter. I ask You for the goodness of this town and for the goodness of its people, and for the goodness it contains. I seek refuge in You from its evil, from the evil of its people and from the evil it contains.',
+				bottom_en: '',
+				reference_en:
+					"Al-Hakim who graded it authentic and Ath-Tfaahabi agreed 2/100, and Ibn As-Sunni (no. 524). Al-Hafidh graded it good in his checking of Al-'Athkdr 5/154. Ibn Baz said in Tuhfatul-'Akhydr p. 37, that An-Nasa'i recorded it with a good chain of narration."
+			}
+		],
+		pageTitle_bn: 'গ্রাম বা শহরে প্রবেশের দো‘আ',
+		pageTitle_en: 'Upon entering a town or village'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لاَ يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+				transliteration_bn:
+					'লা ইলা-হা ইল্লাল্লা-হু ওয়াহ্‌দাহু লা শারীকালাহু লাহুল-মুলকু ওয়ালাহুল হামদু ইয়ুহঈ ওয়াইয়ুমীতু ওয়াহুয়া হায়্যুন লা ইয়ামূতু বিয়াদিহিল খাইরু ওয়া হুওয়া ‘আলা কুল্লি শাই’ইন ক্বাদীর',
+				translations_bn:
+					'একমাত্র আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই, তাঁর কোনো শরিক নেই, রাজত্ব তাঁরই, প্রশংসা মাত্রই তাঁর। তিনিই জীবন দান করেন এবং তিনিই মারেন। আর তিনি চিরঞ্জীব, মারা যাবেন না। সকল প্রকার কল্যাণ তাঁর হাতে নিহিত। তিনি সব কিছুর উপর ক্ষমতাবান।',
+				bottom_bn: '',
+				reference_bn:
+					'তিরমিযী, নং ৩৪২৮; ইবন মাজাহ, ৫/২৯১, নং ৩৮৬০; হাকেম ১/৫৩৮। আর শাইখ আলবানী হাদীসটিকে সহীহ ইবন মাজাহ্‌ ২/২১; সহীহুত তিরমিযী, ৩/১৫২ হাসান হাদীস বলেছেন।',
+				top_en: '',
+				transliteration:
+					"Laa 'ilaaha 'illallaahu wahdahu laa shareeka lahu, lahul-mulku wa lahul-hamdu, yuhyee wa yumeetu, wa Huwa hayyun laa yamootu, biyadihil-khayru, wa Huwa 'alaa kulli shay'in Qadeer.",
+				translations_en:
+					'None has the right to be worshipped but Allah alone, Who has no partener. His is the dominion and His is the praise. He brings life and He causes death, and He is living and does not die. In His Hand is all good, and He is Able to do all things.',
+				bottom_en: '',
+				reference_en:
+					'At-Tirmithi 5/291, and Al-Hakim 1/538. Al-Albani graded it good in Sahih Ibn Majah 2/21 and Sahih At-Tirmithi 3/152.</p></div>'
+			}
+		],
+		pageTitle_bn: 'বাজারে প্রবেশের দো‘আ',
+		pageTitle_en: 'When entering the market'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'بِسْمِ اللَّهِ',
+				transliteration_bn: 'বিসমিল্লা-হ',
+				translations_bn: 'আল্লাহ্‌র নামে।',
+				bottom_bn: '',
+				reference_bn:
+					'আবূ দাউদ, ৪/২৯৬, নং ৪৯৮২। আর শাইখ আলবানী একে সহীহ বলেছেন, সহীহ আবি দাউদে, ৩/৯৪১।',
+				top_en: '',
+				transliteration: 'Bismillaahi.',
+				translations_en: 'With the Name of Allah.',
+				bottom_en: '',
+				reference_en:
+					'Abu Dawud 4/296. Al-Albani graded it authentic in Sahih Abu Dawud 3/941.'
+			}
+		],
+		pageTitle_bn: 'বাহন হোঁচট খেলে পড়ার দো‘আ',
+		pageTitle_en: 'When the mounted animal (or mean of transport) stumbles'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'أَسْتَوْدِعُكُمُ اللَّهَ الَّذِي لاَ تَضِيعُ وَدَائِعُهُ',
+				transliteration_bn:
+					'আস্তাউদি‘উ কুমুল্লা-হাল্লাযী লা তাদ্বী‘উ ওয়াদা-ই‘উহু',
+				translations_bn:
+					'আমি তোমাদেরকে আল্লাহ্‌র হেফাযতে রেখে যাচ্ছি, যাঁর কাছে রাখা আমানতসমূহ কখনও বিনষ্ট হয় না।',
+				bottom_bn: '',
+				reference_bn:
+					'আহমাদ ২/৪০৩, নং ৯২৩০; ইবন মাজাহ্‌, ২/৯৪৩, নং ২৮২৫। আরও দেখুন, সহীহ ইবন মাজাহ্‌ ২/১৩৩।',
+				top_en: '',
+				transliteration:
+					"'Astawdi'ukumul-laahal-la<u>th</u>ee laa tadhee'u wadaa'i'uhu.",
+				translations_en:
+					'I leave you in the care of Allah, as nothing is lost that is in His care.',
+				bottom_en: '',
+				reference_en:
+					'Ahmad 2/403, Ibn Majah 2/943. See also Al-Albani, Sahih Ibn Majah 2/133.'
+			}
+		],
+		pageTitle_bn: 'মুক্বীম বা অবস্থানকারীদের জন্য মুসাফিরের দো‘আ',
+		pageTitle_en: 'Dua of the traveller for the resident'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'أَسْتَوْدِعُ اللَّهَ دِينَكَ، وَأَمَانَتَكَ، وَخَوَاتِيمَ عَمَلِكَ',
+				transliteration_bn:
+					'আস্তাউদি‘উল্লা-হা দীনাকা ওয়া আমা-নাতাকা ওয়া খাওয়া-তীমা ‘আমালিকা',
+				translations_bn:
+					'আমি আপনার দীন, আপনার আমানত (পরিবার-পরিজন ও ধন-সম্পদ) এবং আপনার সর্বশেষ আমলকে আল্লাহ্‌র হেফাযতে রাখছি।',
+				bottom_bn: '',
+				reference_bn:
+					'আহমাদ ২/৭, ৪৫২৪, তিরমিযী ৫/৪৯৯, নং ৩৪৪৩। আর শাইখ আলবানী একে সহীহু সুনানিত তিরমিযীতে ৩/৪১৯ সহীহ হাদীস বলেছেন।',
+				top_en: '',
+				transliteration:
+					"'Astawdi'ullaaha deenaka, wa 'amaanataka, wa khawaateema 'amalika.",
+				translations_en:
+					'I leave your religion in the care of Allah, as well as your safety, and the last of your deeds.',
+				bottom_en: '',
+				reference_en:
+					'Ahmad 2/7, At-Tirmithi 5/499. See also Al-Albani, Sahih At-Tirmithi 2/155.'
+			}
+		],
+		pageTitle_bn: 'মুসাফিরের জন্য মুক্বীম বা অবস্থানকারীর দো‘আ #১',
+		pageTitle_en: 'Dua of the resident for the traveller #1'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'زَوَّدَكَ اللَّهُ التَّقْوَى، وَغَفَرَ ذَنْبَكَ، وَيَسَّرَ لَكَ الخَيْرَ حَيْثُ مَا كُنْتَ',
+				transliteration_bn:
+					'যাওয়াদাকাল্লাহুত তাক্বওয়া, ওয়াগাফারা যানবাকা, ওয়া ইয়াসসারা লাকাল খাইরা হাইসু মা কুনতা',
+				translations_bn:
+					'আল্লাহ আপনাকে তাকওয়ার পাথেয় প্রদান করুন, আপনার গুনাহ ক্ষমা করুন, আর যেখানেই থাকুন না কেন আপনার জন্য কল্যাণকে সহজ করে দিন।',
+				bottom_bn: '',
+				reference_bn: 'তিরমিযী, নং ৩৪৪৪; আরও দেখুন, সহীহুত তিরমিযী, ৩/১৫৫।',
+				top_en: 'Or:',
+				transliteration:
+					'Zawwadakal-laahut-taqwaa, wa ghafara <u>th</u>anbaka, wa yassara lakal-khayra haythu maa kunta.',
+				translations_en:
+					'May Allah give you piety as your provision, forgive your sins, and make goodness easy for you wherever you are.',
+				bottom_en: '',
+				reference_en: 'At-Tirmithi. See Al-Albani, Sahih At-Tirmithi, 3/155.'
+			}
+		],
+		pageTitle_bn: 'মুসাফিরের জন্য মুক্বীম বা অবস্থানকারীর দো‘আ #২',
+		pageTitle_en: 'Dua of the resident for the traveller #2'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'জাবের রাদিয়াল্লাহু ‘আনহু বলেন, “আমরা যখন উঁচুতে আরোহণ করতাম তখন',
+				arabic: 'اللَّهُ أَكْبَرُ',
+				transliteration_bn: 'আল্লা-হু আকবার',
+				translations_bn: 'আল্লাহ সবচেয়ে বড়।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					"Jaabir (radhi-yAllaahu 'anhu) said: While ascending, we would say:",
+				transliteration: "Allaahu 'Akbar",
+				translations_en: 'Allah is the Most Great',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '...আর যখন নীচের দিকে নামতাম তখন',
+				arabic: 'سُبْحَانَاللَّهِ',
+				transliteration_bn: 'সুবহা-নাল্লাহ',
+				translations_bn: 'আল্লাহ কতই না পবিত্র-মহান।',
+				bottom_bn: '...বলতাম।”',
+				reference_bn: 'বুখারী, (ফাতহুল বারীসহ) ৬/১৩৫, নং ২৯৯৩।',
+				top_en: 'And when we descended we would say:',
+				transliteration: 'Subhaanallaah',
+				translations_en: 'Glory is to Allah.',
+				bottom_en: '',
+				reference_en: 'Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 6/135.'
+			}
+		],
+		pageTitle_bn: 'উপরে উঠা ও নিচে নামার দো‘আ',
+		pageTitle_en: 'Dua while ascending or descending'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'سَمَّعَ سَامِعٌ بِحَمْدِ اللَّهِ، وَحُسْنِ بَلاَئِهِ عَلَيْنَا، رَبَّنَا صَاحِبْنَا، وَأَفْضِلْ عَلَيْنَا، عَائِذاً بِاللَّهِ مِنَ النَّارِ',
+				transliteration_bn:
+					'সাম্মা‘আ সা-মি‘উন বিহামদিল্লা-হ, ওয়া হুসনি বালা-ইহী ‘আলাইনা, রাব্বানা সা-হিবনা, ওয়া আফদিল ‘আলাইনা, ‘আ-ইযান বিল্লা-হি মিনান না-রী',
+				translations_bn:
+					'আমরা যে আল্লাহ্‌র প্রশংসা করলাম, আর আমাদের উপর তাঁর উত্তম নেয়ামতের ঘোষণা দিলাম, তা একজন শ্রোতা আমার এ কথা শুনে অন্যের কাছে পৌঁছে দিক। হে আমাদের রব! আপনি আমাদের সাথী হোন, আর আমাদের উপর অনুগ্রহ বর্ষণ করুন। আগুন থেকে আল্লাহ্‌র কাছে আশ্রয়প্রার্থী হয়ে (এ দো‘আ করছি)',
+				bottom_bn: '',
+				reference_bn:
+					'মুসলিম, ৪/২০৮৬, নং ২৭১৮। আর হাদীসে ব্যবহৃত سَمِعَ سامِعٌ শব্দের অর্থ, ‘একজন সাক্ষ্যদাতা সাক্ষ্য প্রদান করুন যে, আমরা আল্লাহর প্রশংসা করেছি তার যাবতীয় নেয়ামতের উপর, তাঁর উত্তম দান-দয়ার উপর।’ আর যদি হাদীসে ব্যবহৃত শব্দটিকে سَمَّعَ سامِعٌ ধরা হয়, তখন অর্থ হবে, ‘একজন শ্রোতা আমার এ কথা শুনে তা অন্যের কাছে পৌঁছে দিক।’ আর এ-কথাটি তিনি বলেছেন শেষ রাত্রির দো‘আ ও যিকর সম্পর্কে সচেতন করার জন্য। শারহুন নাওয়াওয়ী ‘আলা সহীহ মুসলিম, ১৭/৩৯।',
+				top_en: '',
+				transliteration:
+					"Sami'a saami'un bihamdillaahi wa husni balaa'ihi 'alaynaa. Rabbanaa saahibnaa, wa 'afdhil 'alaynaa 'aa'<u>ith</u>an billaahi minan-naar.",
+				translations_en:
+					'He Who listens has heard that we praise Allah for the good things He gives us. Our Lord, be with us and bestow Your favor upon us. I seek the protection of Allah from the Fire.',
+				bottom_en: '',
+				reference_en:
+					"Muslim 4/2086, the meaning of sami'a saami'un (who listens has heard) is that 'a witness has witnessed our praise of Allah due to His blessings and favor upon us.' It could also be read samma'a saami'un, in which case it means 'one who has heard this statement of mine will convey it to another and he will say it as well.' This is due to the attention given to the Thikr (remembrance of Allah) and supplications made during the early morning hours. The meaning of his saying 'Our Lord, be with us and bestow Your favor upon us' is: 'Our Lord, protect us and guard us. Bless us with Your numerous bounties, and avert from us every evil.' See An-Nawawi, Sharh Sahih Muslim 17/39."
+			}
+		],
+		pageTitle_bn: 'রাত্রির শেষ প্রহরে মুসাফিরের দো‘আ',
+		pageTitle_en: 'Prayer of the traveller as dawn approaches'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',
+				transliteration_bn:
+					'আ‘ঊযু বি কালিমা-তিল্লা-হিত তা-ম্মা-তি মিন শাররি মা খালাক্ব',
+				translations_bn:
+					'আল্লাহ্‌র পরিপূর্ণ কালেমাসমূহের ওসিলায় আমি তাঁর নিকট তাঁর সৃষ্টির ক্ষতি থেকে আশ্রয় চাই।',
+				bottom_bn: '',
+				reference_bn: 'মুসলিম, ৪/২০৮০, নং ২৭০৯।',
+				top_en: '',
+				transliteration:
+					"'A'oo<u>th</u>u bikalimaatil-laahit-taammaati min sharri maa khalaq.",
+				translations_en:
+					'I seek refuge in the Perfect Words of Allah from the evil of what He has created.',
+				bottom_en: '',
+				reference_en: 'Muslim 4/2080.'
+			}
+		],
+		pageTitle_bn: 'সফরে বা অন্য অবস্থায় কোনো ঘরে নামলে পড়ার দো‘আ',
+		pageTitle_en: 'Stopping or lodging somewhere'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম যখন কোনো যুদ্ধ অথবা হজ্জ থেকে ফিরতেন, তখন তিনি তিনবার বলতেন,',
+				arabic: 'اللَّهُ أَكْبَرُ',
+				transliteration_bn: 'আল্লা-হু আকবার',
+				translations_bn: 'আল্লাহ সবচেয়ে বড়।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					"Ibn 'Umar (radhi-yAllaahu 'anhaa) reported that the Messenger of Allaah (sal-Allaahu 'alayhe wa sallam) on return from a battle or from performing the pilgrimage would say at every high point:",
+				transliteration: "Allaahu 'Akbar.",
+				translations_en: '"Allaah is the greatest"',
+				bottom_en: '…three times.',
+				reference_en: ''
+			},
+			{
+				top_bn: 'তারপর বলতেন,',
+				arabic:
+					'لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنا حَامِدُونَ، صَدَقَ اللَّهُ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزابَ وَحْدَهُ',
+				transliteration_bn:
+					'লা ইলা-হা ইল্লাল্লা-হু ওয়াহদাহু লা শারীকা লাহু, লাহুল মুলকু ওয়া লাহুল হামদু, ওয়াহুয়া ‘আলা কুল্লি শাই’ইন ক্বাদীর, আ-ইবূনা, তা-ইবূনা, ‘আ-বিদূনা, লি রাব্বিনা হা-মিদূন। সাদাক্বাল্লা-হু ওয়া‘দাহু, ওয়া নাসারা ‘আবদাহু ওয়া হাযামাল আহযাবা ওয়াহদাহু',
+				translations_bn:
+					'একমাত্র আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই, তাঁর কোনো শরীক নেই; রাজত্ব তাঁরই, সমস্ত প্রশংসাও তাঁর; আর তিনি সকল কিছুর উপর ক্ষমতাবান। আমরা প্রত্যাবর্তনকারী, তওবাকারী, ইবাদতকারী এবং আমাদের রব্বের প্রশংসাকারী। আল্লাহ তাঁর ওয়াদা বাস্তবায়ন করেছেন, তিনি তাঁর বান্দাকে সাহায্য করেছেন, আর তিনি সকল বিরোধী দল-গোষ্ঠীকে একাই পরাস্ত করেছেন।',
+				bottom_bn: '',
+				reference_bn: 'বুখারী, ৭/১৬৩, নং ১৭৯৭; মুসলিম, ২/৯৮০, নং ১৩৪৪।',
+				top_en: '...and then he would say:',
+				transliteration:
+					"Laa 'ilaaha 'illallaahu wahdahu laa shareeka lahu, lahul-mulku, wa lahul-hamdu, wa Huwa 'alaa kutti shay 'in Qadeer, 'aa'iboona, taa'iboona, 'aabidoona, lirabbinaa haamidoona, sadaqallaahu wa'dahu, wa nasara 'abdahu, wa hazamal-'ahzaaba wahdahu.",
+				translations_en:
+					'None has the right to be worshipped but Allah alone, Who has no partener. His is the dominion and His is the praise, and He is Able to do all things. We return repentant to our Lord, worshipping our Lord, and praising our Lord. He fulfilled His Promise, He aided His slave, and He alone defeated the Confederates.',
+				bottom_en: '',
+				reference_en: 'Bukhari 7/163, Muslim 2/980.'
+			}
+		],
+		pageTitle_bn: 'সফর থেকে ফেরার যিক্‌র',
+		pageTitle_en: 'While returning from travel'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের কাছে যখন আনন্দায়ক কোনো বিষয় আসত তখন তিনি বলতেন,',
+				arabic: 'الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ',
+				transliteration_bn:
+					'আলহামদু লিল্লা-হিল্লাযী বিনি‘মাতিহী তাতিম্মুস সা-লিহা-ত',
+				translations_bn:
+					'আল্লাহ্‌র জন্য সমস্ত প্রশংসা, যাঁর নেয়ামত দ্বারা সকল ভাল কিছু পরিপূর্ণ হয়।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					"When He (sal-Allaahu 'alayhe wa sallam) used to receive pleasant news, He (sal-Allaahu 'alayhe wa sallam) would say:",
+				transliteration:
+					"Alhamdu lillaahil-la<u>th</u>ee bini'matihi tatimmus-saalihaat.",
+				translations_en:
+					'Praise is to Allah Who by His blessings all good things are perfected.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'আর যখন তার কাছে অপছন্দনীয় বিষয় আসত, তখন তিনি বলতেন,',
+				arabic: 'الْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ',
+				transliteration_bn: 'আলহামদুলিল্লা-হি ‘আলা কুল্লি হাল',
+				translations_bn: 'সকল অবস্থায় যাবতীয় প্রশংসা আল্লাহ্‌র জন্য।',
+				bottom_bn: '',
+				reference_bn:
+					'হাদীসটি সংকলন করেছেন, ইবনুস সুন্নী, আমালুল ইয়াওমি ওয়াল-লাইলাহ, নং ৩৭৭; হাকেম এবং তিনি একে সহীহ বলেছেন, ১/৪৯৯। আর শাইখ আলবানী তাঁর সহীহুল জামে‘ ৪/২০১।',
+				top_en:
+					'And if something happened that displeased him, he used to say:',
+				transliteration: "Alhamdu lillaahi 'alaa kulli haal.",
+				translations_en: 'Praise is to Allah in all circumstances.',
+				bottom_en: '',
+				reference_en:
+					"Ibn As-Sunni, 'Amalul-Yawm wal-Laylah, and Al-Hakim who graded it authentic 1/499. See also Al-Albani, Sahihul-Jami' As-Saghir 4/201."
+			}
+		],
+		pageTitle_bn: 'আনন্দদায়ক অথবা অপছন্দনীয় কিছুর সম্মুখীন হলে যা বলবে',
+		pageTitle_en: 'Upon receiving pleasing or displeasing news'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, “যে ব্যক্তি আমার উপর একবার দরূদ পাঠ করবে, তার বিনিময়ে আল্লাহ্ তার উপর দশবার দরুদ পাঠ করবেন।” [১] \n\nনবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “তোমরা আমার কবরকে ঈদ তথা সম্মিলনস্থলে পরিণত করবে না, আর তোমরা আমার উপর দরূদ পাঠ কর;কেননা তোমাদের দরূদ আমার কাছে পৌঁছে যায়, তোমরা যেখানেই থাক না কেন।” [২] \n\nনবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “যার সামনে আমার নাম উল্লেখ করা হলো অতঃপর সে আমার উপর দরূদ পড়লো না, সে-ই কৃপণ।” [৩] \n\nরাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “পৃথিবীতে আল্লাহর একদল ভ্রাম্যমাণ ফেরেশতা রয়েছে যারা উম্মতের পক্ষ থেকে প্রেরিত সালাম আমার কাছে পৌঁছিয়ে দেয়।” [৪] \n\nরাসুলুল্লাহ্ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “যখন কোনো ব্যক্তি আমাকে সালাম দেয়, তখন আল্লাহ আমার রূহ ফিরিয়ে দেন, যাতে আমি সালামের জবাব দিতে পারি।” [৫]',
+				arabic: '',
+				transliteration_bn: '',
+				translations_bn: '',
+				bottom_bn: '',
+				reference_bn:
+					'[১] হাদীসটি সংকলন করেছেন, মুসলিম ১/২৮৮, নং ৩৮৪। \n[২] আবূ দাউদ ২/২১৮, নং ২০৪৪; আহমাদ ২/৩৬৭, নং ৮৮০৪। আর শাইখ আলবানী একে সহীহ আবি দাঊদে ২/৩৮৩, সহীহ বলেছেন। \n[৩] তিরমিযী, ৫/৫৫১, নং ৩৫৪৬, ইত্যাদি। আরও দেখুন, সহীহুল জামে‘ ৩/২৫; সহীহুত তিরমিযী, ৩/১৭৭। \n[৪] নাসাঈ, ৩/৪৩, নং ১২৮২; হাকেম, ২/৪২১। আর শাইখ আলবানী একে সহীহুন নাসাঈ ১/২৭৪, সহীহ বলেছেন। \n[৫] আবূ দাউদ, নং ২০৪১। আর শাইখ আলবানী সহীহ আবি দাউদে ১/৩৮৩, একে হাসান হাদীস বলেছেন।',
+				top_en:
+					"The Prophet (sal-Allaahu 'alayhe wa sallam) said: \"Whoever sends a prayer upon me, Allaah sends ten upon him.\" [1] \n\nHe (sal-Allaahu 'alayhe wa sallam) also said: \"Do not take my grave as a place of habitual ceremony. Send prayers upon me, for verily your prayers reach me wherever you are.\" [2] \n\nHe (sal-Allaahu 'alayhe wa sallam) also said: \"The miser is one whom when I am mentioned to him, fails to send prayers upon me.\" [3] \n\nHe (sal-Allaahu 'alayhe wa sallam) said: 'Allaah has Angels who roam the earth and convey salaam to me from my ummah.' [4] \n\nHe (sal-Allaahu 'alayhe wa sallam) also said: ''Whenever someone sends salaam upon me, Allaah returns my soul to me so that I may return salaam to that person. [5]",
+				transliteration: '',
+				translations_en: '',
+				bottom_en: '',
+				reference_en:
+					"[1] Muslim 1/288 No. 384.\n[2] Abu Dawud 2/218 No. 2044; Ahmed 2/367 No. 8804. Albani graded it as Sahih in Sahih Abu Dawud 2/363\n[3] At-Tirmithi 5/551 and others. See also Al-Albani, Sahih At-Tirmithi 3/177 and Sahihul-Jarai' As-Saghir 3/25.\n[4] An-Nasa'i, Al-Hakim 2/421. Al-Albani graded it authentic in Sahih An-Nasa'i 1/274.\n[5] Abu Dawud (no. 2041). Al-Albani graded it good in Sahih Abu Dawud 1/383."
+			}
+		],
+		pageTitle_bn: 'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম-এর উপর দরূদ পাঠের ফযীলত',
+		pageTitle_en: 'Excellence of sending prayers upon the Prophet'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, “তোমরা ঈমানদার না হওয়া পর্যন্ত জান্নাতে প্রবেশ করতে পারবে না। আর তোমরা পরস্পরকে না ভালোবাসা পর্যন্ত মুমিন হতে পারবে না। আমি কি তোমাদের এমন কিছু শিখিয়ে দিবো না যা করলে তোমরা পরস্পরকে ভালবাসবে? (তা হলো) তোমরা নিজেদের মধ্যে সালামের ব্যাপক প্রসার ঘটাও।” [১] \n\n“তিনটি জিনিস যে ব্যক্তি একত্রিত করতে পারবে সে ঈমান একত্রিত করল, \n১. নিজের ব্যাপারেও ইনসাফ করা, \n২. জগতের সকলকে সালাম দেওয়া, আর\n৩. অল্প সম্পদ থাকা সত্ত্বেও তা থেকে ব্যয় করা” [২] \n\n‘আবদুল্লাহ ইবন ‘আমর রাদিয়াল্লাহু ‘আনহুমা থেকে বর্ণিত, এক ব্যক্তি নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামকে জিজ্ঞেস করলো, ইসলামের কোন কাজটি শ্রেষ্ঠ?\n\nনবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বললেন, “তুমি খাবার খাওয়াবে এবং তোমার পরিচিত-অপরিচিত সকলকে সালাম দিবে।” [৩]',
+				arabic: '',
+				transliteration_bn: '',
+				translations_bn: '',
+				bottom_bn: '',
+				reference_bn:
+					'[১] মুসলিম ১/৭৪, নং ৫৪; আহমাদ, নং ১৪৩০; আর শব্দ তাঁরই। মুসলিমের শব্দ হচ্ছে, “লা তাদখুলূনা...” ‘তোমরা প্রবেশ করবে না...’। \n[২] বুখারী, (ফাতহুল বারীসহ) ১/৮২, নং ২৮; আম্মার রাদিয়াল্লাহু আনহু থেকে মাওকূফ ও মু‘আল্লাক হিসেবে। \n[৩] বুখারী, (ফাতহুল বারীসহ)১/৫৫, নং ১২; মুসলিম ১/৬৫, নং ৩৯।',
+				top_en:
+					"The Messenger of Allaah (sal-Allaahu 'alayhe wa sallam) said: \"You shall not enter paradise until you believe, and you shall not believe until you love one another. Shall I not inform you of something, if you were to act upon it, you will indeed achieve mutual love for one another? Spread salaam amongst yourselves.\" [1] \n\n'Ammaar (radhi-yAllaahu 'anhu) said: \"Three characteristics, whoever combines them, has completed his faith: to be sincerely just, to spread greetings to all people and to spend [charitably] out of the little you have.\" [2] \n\n'Abdullaah Ibn 'Amr (radhi-yAllaahu 'anhu) reported that a man asked The Prophet (sal-Allaahu 'alayhe wa sallam): \"Which Islaam is the best?\". He (sal-Allaahu 'alayhe wa sallam) replied: Feed [the poor] , and greet those whom you know as well as those whom you do not.\" [3]",
+				transliteration: '',
+				translations_en: '',
+				bottom_en: '',
+				reference_en:
+					"[1] Muslim 1/74 No. 54 It used the wording, ''la Tadkhuluna…\" ''You will not enter''; Ahmed 1430;\n[2] Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 1/82 as a statement of the Companion 'Ammar (RA)\n[3] Fathul-Bari 1/55, Muslim 1/65"
+			}
+		],
+		pageTitle_bn: 'সালামের প্রসার',
+		pageTitle_en: 'Excellence of spreading the Islamic greeting'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'আহলে কিতাব তথা ইয়াহূদী ও নাসারারা যখন তোমাদেরকে সালাম দিবে, তখন তোমরা বলবে,',
+				arabic: 'وَعَلَيْكُمْ',
+				transliteration_bn: 'ওয়া ‘আলাইকুম।',
+				translations_bn: 'আর তোমাদেরও উপর।',
+				bottom_bn: '',
+				reference_bn:
+					'বুখারী, (ফাতহুল বারীসহ) ১১/৪২, নং ৬২৫৮; মুসলিম ৪/১৭০৫, নং ২১৬৩।',
+				top_en: '"When the people of the Book greet you, reply by saying:',
+				transliteration: "Wa 'alaykum",
+				translations_en: 'And upon you.',
+				bottom_en: '',
+				reference_en:
+					'Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 3/408, Muslim 2/841.'
+			}
+		],
+		pageTitle_bn: 'কাফের সালাম দিলে কীভাবে জবাব দিবে',
+		pageTitle_en: 'Returning a greeting to a kaafir'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'“যখন তোমরা মোরগের ডাক শুনবে, তখন তোমরা আল্লাহ্‌র অনুগ্রহ চাইবে, কেননা সে একটি ফেরেশতা দেখেছে। আর যখন তোমরা কোনো গাধার স্বর শুনবে, তখন শয়তান থেকে আল্লাহ্‌র কাছে আশ্রয় চাইবে; কেননা সে শয়তান দেখেছে।” [১] \n\nআবার “যখন তোমরা রাত্রিবেলা কুকুরের ডাক ও গাধার স্বর শুনবে, তখন তোমরা সেগুলো থেকে আল্লাহ্‌র কাছে আশ্রয় চাও; কেননা সেগুলো তা দেখে তোমরা যা দেখতে পাও না।” [২]',
+				arabic: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيـمِ',
+				transliteration_bn: 'আ‘ঊযু বিল্লা-হি মিনাশ শাইত্বানির রাজীম',
+				translations_bn: 'বিতাড়িত শয়তান থেকে আমি আল্লাহ্‌র আশ্রয় নিচ্ছি।',
+				bottom_bn: '',
+				reference_bn:
+					'[১] বুখারী (ফাতহুল বারীসহ), ৬/৩৫০, নং ৩৩০৩; মুসলিম, ৪/২০৯২, নং ২৭২৯। \n[২] আবূ দাঊদ ৪/৩২৭, নং ৫১০৫; আহমাদ ৩/৩০৬, নং ১৪২৮৩। আর শাইখ আলবানী একে সহীহ আবি দাউদে ৩/৯৬১, সহীহ বলেছেন।',
+				top_en:
+					'"If you hear the crow of a rooster, ask Allaah for his bounty for it has seen an angel and if you hear the braying of an ass, seek refuge in Allaah for it has seen a devil." [1] \n\nAlso\n\n"If you hear the barking of dogs or the braying of asses at night, seek refuge in Allaah for they see what you do not." [2]',
+				transliteration: "'A'oo<u>th</u>u billaahi minash-Shaytaanir-rajeem.",
+				translations_en: 'I seek refuge in Allah from Satan the outcast.',
+				bottom_en: '',
+				reference_en:
+					'[1] Al-Bukhari, Muslim 4/2092.\n[2] Abu Dawud 4/327, Ahmed 3/306'
+			}
+		],
+		pageTitle_bn:
+			'মোরগের ডাক ও গাধার স্বর অথবা রাতের বেলায় কুকুরের ডাক শুনলে দো‘আ',
+		pageTitle_en: 'Upon hearing a rooster crow, ass bray or dogs barking'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, “যখন রাত্রি অন্ধকার হবে” অথবা (বলেছেন) “সন্ধায় উপনীত হলে, তখন তোমরা তোমাদের শিশুদেরকে আগলে রাখবে; কারণ, তখন শয়তানরা ছড়িয়ে পড়তে থাকে। তারপর যখন রাতের একটা সময় অতিবাহিত হবে, তখন তাদের ছেড়ে দিবে। আর তোমরা দরজাগুলো বন্ধ করবে এবং আল্লাহ্‌র নাম নিবে; কেননা শয়তান কোনো বন্ধ দরজা খুলে না। আর তোমরা তোমাদের পানপাত্রসমূহ বেঁধে রাখবে এবং আল্লাহ্‌র নাম নিবে। আর তোমরা তোমাদের থালা-বাসন ঢেকে রাখবে এবং আল্লাহ্‌র নাম নিবে, যদিও সামান্য কিছু তার উপর রাখ। আর তোমরা তোমাদের ঘরের প্রদীপগুলো নিভিয়ে রাখবে।”',
+				arabic: '',
+				transliteration_bn: '',
+				translations_bn: '',
+				bottom_bn: '',
+				reference_bn:
+					'বুখারী, ফাতহুল বারীসহ, ১০/৮৮; নং ৫৬২৩; মুসলিম, ৩/১৫৯৫, নং ২০১২।',
+				top_en:
+					'When night falls [i.e., at al-Maghrib] , restrain your children [from going out] because at such time the devils spread about. After a period of time has passed, let them be. Shut your doors and mention Allaah"s name, for verily the devil does not open a shut door, tie up your water-skins and mention Allaah"s name, cover your vessels with anything and mention Allaah"s name and put out your lamps.\'',
+				transliteration: '',
+				translations_en: '',
+				bottom_en: '',
+				reference_en: 'Al-Bukhari, Muslim 3/1595.'
+			}
+		],
+		pageTitle_bn: 'সন্ধায় উপনীত হলে করণীয়',
+		pageTitle_en: 'Etiquette of retiring for the night'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'اللَّهُمَّ فَأَيُّمَا مُؤْمِنٍ سَبَبْتُهُ فَاجْعَلْ ذَلِكَ لَهُ قُرْبَةً إِلَيْكَ يَوْمَ الْقِيَامَةِ',
+				transliteration_bn:
+					'আল্লা-হুম্মা ফাআইয়্যূমা মু’মিনিন্ সাবাবতুহু ফাজ্‘আল যা-লিকা লাহু কুরবাতান ইলাইকা ইয়াউমাল ক্বিয়া-মাতি',
+				translations_bn:
+					'হে আল্লাহ! যে মুমিনকেই আমি গালি দিয়েছি, তা তার জন্য কিয়ামতের দিন আপনার নৈকট্যের মাধ্যম করে দিন।',
+				bottom_bn: '',
+				reference_bn:
+					'বুখারী (ফাতহুল বারীসহ) ১১/১৭১, নং ৬৩৬১; মুসলিম ৪/২০০৭, নং ৩৯৬, আর তার শব্দ হচ্ছে, “ফাজ‘আলহা লাহূ যাকাতান ও রাহমাতান”। অর্থাৎ ‘সেটা তার জন্য পবিত্রতা ও রহমত বানিয়ে দিন’।',
+				top_en: '',
+				transliteration:
+					"Allaahumma fa'ayyumaa mu'minin sababtuhu faj'al <u>th</u>aalika lahu qurbatan 'ilayka yawmal-qiyaamati.",
+				translations_en:
+					'O Allah, whomever of the believers I have abused, give him the reward of a sacrificial slaughter for it on the Day of Resurrection.',
+				bottom_en: '',
+				reference_en:
+					'Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 6/350, Muslim 4/2092.'
+			}
+		],
+		pageTitle_bn: 'যাকে আপনি গালি দিয়েছেন তার জন্য দো‘আ',
+		pageTitle_en: 'For one you have insulted'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, “যখন তোমাদের মধ্যে কেউ কারো প্রশংসা করতেই হয়, তখন যেন সে বলে, \n\nঅমুক প্রসঙ্গে আমি এ ধারণা রাখি, আর আল্লাহই তার ব্যাপারে সঠিক হিসাবকারী, আল্লাহ্‌র উপর (তাঁর জ্ঞানের উপরে উঠে) কারও প্রশংসা করছি না। আমি মনে করি, সে এ ধরনের, ও ধরনের (যদি তার সম্পর্কে তা জানা থাকে)',
+				arabic: '',
+				transliteration_bn: '',
+				translations_bn: '',
+				bottom_bn: '',
+				reference_bn: 'মুসলিম, ৪/২২৯৬, নং ৩০০০।',
+				top_en:
+					'He (sal-Allaahu \'alayhe wa sallam) said: "If anyone of you is impelled to praise his brother, then he should say:',
+				transliteration: '',
+				translations_en:
+					'I deem so-and-so to be...and Allaah is his reckoner...and I don"t praise anyone, putting it [i.e., my praising] forward, in front of Allaah"s commendation, however I assume him to be such and such" - if he knows that of him.',
+				bottom_en: '',
+				reference_en: 'Muslim 4/2296.'
+			}
+		],
+		pageTitle_bn: 'কোনো মুসলিম অপর মুসলিমকে প্রশংসা করলে যা বলবে',
+		pageTitle_en: 'Etiquette of praising a fellow Muslim'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'اللَّهُمَّ لاَ تُؤَاخِذْنِي بِمَا يَقُولُونَ، وَاغْفِرْ لِي مَا لاَ يَعْلَمُونَ، (وَاجْعَلْنِي خَيْراً مِمَّا يَظُّنُّونَ)',
+				transliteration_bn:
+					'আল্লা-হুম্মা লা-তু’আ-খিযনী বিমা ইয়াক্বূলূনা, ওয়াগফিরলী মা-লা ইয়া‘লামূনা, (ওয়াজ‘আলনী খাইরাম মিম্মা ইয়াযুন্নূনা)',
+				translations_bn:
+					'হে আল্লাহ, তারা যা বলছে তার জন্য আমাকে পাকড়াও করবেন না, তারা (আমার ব্যাপারে) যা জানে না সে ব্যাপারে আমাকে ক্ষমা করুন। (আর তারা যা ধারণা করে তার চাইতেও আমাকে উত্তম বানান)',
+				bottom_bn: '',
+				reference_bn:
+					'বুখারী, আল-আদাবুল মুফরাদ, নং ৭৬১। আর শাইখ আলবানী তাঁর সহীহুল আদাবিল মুফরাদ গ্রন্থে নং ৫৮৫, সেটার সনদকে সহীহ বলেছেন। আর দু’ ব্রাকেটের মাঝখানের অংশ বাইহাকীর শু‘আবুল ঈমান গ্রন্থ থেকে নেওয়া হয়েছে, ৪/২২৮, যা অন্য পদ্ধতিতে এসেছে।',
+				top_en: '',
+				transliteration:
+					"Allaahumma laa tu'aakhithnee bimaa yaqooloona, waghfir lee maa laa ya'lamoona [waj'alnee khayram-mimmaa yadhunnoon.]",
+				translations_en:
+					'Oh Allah, do not call me to account for what they say and forgive me for what they have no knowledge of [and make me better than they imagine]',
+				bottom_en: '',
+				reference_en:
+					'Al-Bukhari, Al Adab Al Mufrad No. 761. Al-Albani graded it sahih in Sahih Adabil Mufrad. Words between the brackets are from Baihaqi, 4/228'
+			}
+		],
+		pageTitle_bn: 'কোনো মুসলিমের প্রশংসা করা হলে সে যা বলবে',
+		pageTitle_en: 'For the one that have been praised'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لاَ شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ، وَالنِّعْمَةَ، لَكَ وَالْمُلْكَ، لاَ شَرِيكَ لَكَ',
+				transliteration_bn:
+					'লাব্বাইকাল্লা-হুম্মা লাব্বাইকা, লাব্বাইকা লা শারীকা লাকা লাব্বাইক। ইন্নাল-হামদা ওয়ান-নি‘মাতা লাকা ওয়াল মুলক, লা শারীকা লাকা',
+				translations_bn:
+					'আমি আপনার দরবারে হাযির, হে আল্লাহ! আমি আপনার দরবারে উপস্থিত। আমি আপনার দরবারে হাযির, আপনার কোনো শরীক নেই, আমি আপনার দরবারে উপস্থিত। নিশ্চয় সকল প্রশংসা ও নেয়ামত আপনার, আর রাজত্বও। আপনার কোনো শরীক নেই।',
+				bottom_bn: '',
+				reference_bn: 'বুখারী ৩/৪০৮, নং ১৫৪৯; মুসলিম ২/৮৪১, নং ১১৮৪।',
+				top_en: '',
+				transliteration:
+					"Labbayk Allaahumma labbayk, labbayk laa shareeka laka labbayk, 'innal-hamda, wanni'mata, laka walmulk, laa shareeka laka.",
+				translations_en:
+					'I am here at Your service, O Allah, I am here at Your service. I am here at Your service, You have no partener, I am here at Your service. Surely the praise, and blessings are Yours, and the dominion. You have no partener.',
+				bottom_en: '',
+				reference_en: 'Al-Bukhari, Muslim 2/841.'
+			}
+		],
+		pageTitle_bn: 'হজ্জ বা উমরায় মুহরিম ব্যক্তি কিভাবে তালবিয়াহ পড়বে',
+		pageTitle_en: "Pilgrim's arrival for Hajj/Umrah - Talbiya"
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ্‌ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম উটের উপর আরোহণ করে কা‘বা ঘর তাওয়াফ করলেন; যখনই তিনি হাজরে আসওয়াদের কাছে পৌছতেন, তখনই সেদিকে তার নিকটস্থ কিছু দিয়ে ইঙ্গিত করতেন এবং ‘আল্লাহু আকবার’ বলতেন,',
+				arabic: 'اللَّهُ أَكْبَرُ',
+				transliteration_bn: 'আল্লা-হু আকবার',
+				translations_bn: 'আল্লাহ সবচেয়ে বড়।',
+				bottom_bn: '',
+				reference_bn:
+					'বুখারী, (ফাতহুল বারীসহ) ৩/৪৭৬, নং ১৬১৩। আর ‘কোনো কিছু’ বলে এখানে বাঁকা লাঠি বোঝানো হয়েছে। দেখুন, বুখারী, (ফাতহুল বারীসহ), ৩/৪৭২।',
+				top_en:
+					"\"The Prophet (sal-Allaahu 'alayhe wa sallam) circled the Ka'bah on a camel, every time he reached the black stone he would point to it with something (his staff) and say:",
+				transliteration: "Allaahu 'Akbar.",
+				translations_en: 'Allah is the Most Great.',
+				bottom_en: '',
+				reference_en:
+					"Al-Bukhari,,cf. Al-Asqalani, Fathul-Bari 3/476. See also 472. The 'something' that was referred to in this Hadith was a cane."
+			}
+		],
+		pageTitle_bn: 'হাজরে আসওয়াদের কাছে আসলে তাকবীর বলা',
+		pageTitle_en: 'Takbir when passing the black stone'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَآ اٰتِنَا فِي الدُّنْيَا حَسَنَةً وَّفِي الْاٰخِرَةِ حَسَـنَةً وَّقِنَا عَذَابَ النَّارِ',
+				transliteration_bn:
+					'রব্বানা আ-তিনা ফিদ্দুনিয়া হাসানাতাওঁ ওয়াফিল আ-খিরাতি হাসানাতাওঁ ওয়াকিনা ‘আযা-বান্না-র',
+				translations_bn:
+					'হে আমাদের রব্ব! আমাদেরকে দুনিয়াতে কল্যাণ দিন এবং আখেরাতেও কল্যাণ দিন এবং আমাদেরকে আগুনের শাস্তি থেকে রক্ষা করুন।',
+				bottom_bn: '',
+				reference_bn:
+					'আবূ দাউদ ২/১৭৯, নং ১৮৯৪; মুসনাদে আহমাদ ৩/৪১১, নং ১৫৩৯৮; আল-বাগভী ফী শারহিস সুন্নাহ, ৭/১২৮। আর শাইখ আলবানী সহীহ আবি দাউদে ১/৩৫৪ একে সহীহ বলেছেন। আয়াতটি সূরা আল-বাকারাহ্‌র আয়াত নং ২০১।',
+				top_en:
+					"The Prophet (sal-Allaahu 'alayhe wa sallam) used to say between the Yemeni corner and the black stone:",
+				transliteration:
+					"Rabbanaa 'aatinaa fid-dunyaa hasanatan wa fil-'aakhirati hasanatan wa qinaa 'a<u>th</u>aaban-naar.",
+				translations_en:
+					'Our Lord, grant us the good things in this world and the good things in the next life and save us from the punishment of the Fire.',
+				bottom_en: '',
+				reference_en:
+					"Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 11/171, Muslim 4/2007. The wording in Muslim's report is: 'make it a purification for him and a source of mercy."
+			}
+		],
+		pageTitle_bn: 'রুকনে ইয়ামানী ও হাজরে আসওয়াদের মাঝে দো‘আ',
+		pageTitle_en: "Between the Yemeni corner and black stone [Ka'bah]"
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'যখন নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম সাফা পর্বতের নিকটবর্তী হলেন, তখন এই আয়াত পড়লেনঃ',
+				arabic: 'إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَآئِرِ اللَّهِ،',
+				transliteration_bn: 'ইন্নাস্‌সাফা ওয়াল-মারওয়াতা মিন শা‘আ-ইরিল্লা-হ',
+				translations_bn:
+					'নিশ্চয়ই সাফা ও মারওয়া আল্লাহ্‌র নিদর্শনসমূহের অন্তর্ভুক্ত।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					"Jaabir (radhi-yAllaahu 'anhu) said when describing the Prophet's (sal-Allaahu 'alayhe wa sallam) pilgrimage:\n\nWhen he approached mount as-Safaa he would recite:",
+				transliteration: 'Inna assafa walmarwatamin shaAAa-iri Allahi',
+				translations_en:
+					'Indeed, as-Safa and al-Marwah are among the symbols of Allah',
+				bottom_en: 'Soorah al-Baqarah, Aayah 158',
+				reference_en: ''
+			},
+			{
+				top_bn: 'আর বলেন,',
+				arabic: 'أَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ',
+				transliteration_bn: '',
+				translations_bn:
+					'আল্লাহ্‌ যেখান থেকে শুরু করেছেন আমিও সেখান থেকে শুরু করব।',
+				bottom_bn:
+					'অতঃপর তিনি সাফা পর্বতে আরোহণ করতে লাগলেন যতক্ষণ না কা‘বা দেখলেন, অতঃপর কিবলামুখী হলেন, তারপর আল্লাহ্‌র তাওহীদ (লা ইলাহা ইল্লাল্লাহ) ঘোষণা করেন এবং তাকবীর (আল্লাহু আকবার) বলেন',
+				reference_bn: '',
+				top_en: '...and then say:',
+				transliteration: "Abda'u bimaa bada'allaahu bihi.",
+				translations_en: 'I begin by that which Allah began.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'অতঃপর এই দো‘আ পড়েন,',
+				arabic:
+					'لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ',
+				transliteration_bn:
+					'লা ইলা-হা ইল্লাল্লা-হু ওয়াহ্‌দাহু লা শারীকা লাহু, লাহুল মুলকু ওয়া লাহুল হামদু, ওয়া হুয়া ‘আলা কুল্লি শাই’ইন ক্বাদীর। লা ইলাহা ইল্লাল্লা-হু ওয়াহদাহু, আনজাযা ওয়া‘দাহু, ওয়ানাসারা ‘আবদাহু, ওয়া হাযামাল-আহযা-বা ওয়াহদাহু',
+				translations_bn:
+					'একমাত্র আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই, তাঁর কোনো শরীক নেই; রাজত্ব তাঁরই, সমস্ত প্রশংসাও তাঁর; আর তিনি সকল কিছুর উপর ক্ষমতাবান। একমাত্র আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই, তিনি তাঁর ওয়াদা পূর্ণ করেছেন, তিনি তাঁর বান্দাকে সাহায্য করেছেন, আর তিনি সকল বিরোধী দল-গোষ্ঠীকে একাই পরাস্ত করেছেন।”',
+				bottom_bn:
+					'এভাবে তিনি এর মধ্যবর্তী স্থানেও দো‘আ করতে থাকেন। এই দো‘আ তিনবার পাঠ করেন। হাদীসটিতে আরও আছে, “তিনি সাফা পাহাড়ে যেমন করেছিলেন মারওয়াতেও অনুরূপ করেন।”',
+				reference_bn:
+					'মুসলিম ২/৮৮৮, নং ১২১৮; আর আয়াতটি সূরা আল-বাকারার আয়াত নং ১৫৮।',
+				top_en:
+					"...so he started with as-Safaa and climbed it until he could see the Ka'bah, he then faced it and said:",
+				transliteration:
+					"Laa 'ilaaha 'illallaahu wahdahu laa shareeka lahu, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer, laa 'ilaaha 'illallaahu ilahaahu, 'anjaza wa'dahu, wa nasara 'abdahu, wa hazamal 'ahzaaba wahdahu.",
+				translations_en:
+					'None has the right to be worshipped but Allah alone, Who has no partener, His is the dominion and His is the praise, and He is Able to do all things. None has the right to be worshipped but Allah alone, He fulfilled His Promise, He aided His slave, and He alone defeated Confederates.',
+				bottom_en:
+					'Then he would ask Allah for what he liked, repeating the same thing like this three times. He did at Mount Marwah as he did at Mount Safa.',
+				reference_en: 'Muslim 2/888.'
+			}
+		],
+		pageTitle_bn: 'সাফা ও মারওয়ায় দাঁড়িয়ে যা পড়বে',
+		pageTitle_en: 'When at Mount Safa and Mount Marwah'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, “শ্রেষ্ঠ দো‘আ হচ্ছে আরাফাত দিবসের দো‘আ। আর আমি এবং আমার পূর্ববর্তী নবীগণ যা বলেছি তার মধ্যে শ্রেষ্ঠ হচ্ছে:',
+				arabic:
+					'لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+				transliteration_bn:
+					'লা ইলা-হা ইল্লাল্লা-হু ওয়াহদাহু লা শারীকা লাহু, লাহুল মূলকু ওয়া লাহুল হামদু, ওয়া হুয়া ‘আলা কুল্লি শাই’ইন ক্বাদীর',
+				translations_bn:
+					'একমাত্র আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই, তাঁর কোনো শরীক নেই; রাজত্ব তাঁরই, সমস্ত প্রশংসাও তাঁর; আর তিনি সকল কিছুর উপর ক্ষমতাবান।',
+				bottom_bn: '',
+				reference_bn:
+					'তিরমিযী নং ৩৫৮৫; আর শাইখুল আলবানী সহীহুত তিরমিযীতে হাদীসটিকে হাসান বলেছেন, ৩/১৮৪; অনুরূপভাবে সিলসিলা সহীহায় ৪/৬।',
+				top_en:
+					'"The best of supplications is the supplication on the day of \'Arafah and the best which I and the Prophets before me have said is:',
+				transliteration:
+					"Laa 'ilaaha 'illallaahu wahdahu laa shareeka lahu, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer.",
+				translations_en:
+					'None has the right to be worshipped but Allah alone, Who has no partener. His is the dominion and His is the praise, and He is Able to do all things.',
+				bottom_en: '',
+				reference_en:
+					"At-Tirmithi. Al-Albani graded it good in Sahih At-Tirmithi 3/184, and also Silsilatul-'Ahadith As-Sahihah 4/6."
+			}
+		],
+		pageTitle_bn: 'আরাফাতের দিনে দো‘আ',
+		pageTitle_en: "The Day of 'Arafah"
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম ‘কাসওয়া’ নামক উষ্ট্রীতে আরোহণ করলেন, অবশেষে তিনি যখন মাশ‘আরুল হারামে (মুযদালিফার একটি স্থানে) আসেন, তখন তিনি কিবলামুখী হয়ে দো‘আ করেন এবং তাকবীর বলেন,',
+				arabic: 'اللَّهُ أَكْبَرُ',
+				transliteration_bn: 'আল্লা-হু আকবার',
+				translations_bn: 'আল্লাহ সবচেয়ে বড়।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					"Jaabir (radhi-yAllaahu 'anhu) said: \"He (sal-Allaahu 'alayhe wa sallam) rode al-Qaswaa (prophet's camel) until he reached al-Mash'ar al-Haraam, he then faced the qiblah, supplicated to Allaah,",
+				transliteration: "Allaahu 'Akbar",
+				translations_en: 'Allah is the Most Great.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'লা ইলাহা ইল্লাল্লাহু পাঠ করেন,',
+				arabic: 'لاَ إِلَهَ إِلاَّ اللّهُ',
+				transliteration_bn: 'লা ইলা-হা ইল্লাল্লা-হ',
+				translations_bn: 'একমাত্র আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: 'and extolled His greatness',
+				transliteration: "Laa 'ilaaha 'illallaahu",
+				translations_en: 'None has the right to be worshipped but Allah alone',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'এবং তাঁর তাওহীদ বা একত্ব ঘোষণা করেন,',
+				arabic: 'اللَّهُ اَحَدٌ',
+				transliteration_bn: "আল্লা-হু আহা'দ",
+				translations_bn: '',
+				bottom_bn:
+					'তারপর তিনি (আকাশ) পূর্ণ ফর্সা না হওয়া পর্যন্ত সেখানেই অবস্থান করেন। অতঃপর সূর্য উদিত হওয়ার পূর্বেই তিনি মুযদালিফা ত্যাগ করেন।',
+				reference_bn: 'মুসলিম ২/৮৯১, নং ১২১৮।',
+				top_en: 'and oneness.',
+				transliteration: 'Allahu Ahad',
+				translations_en: 'Allah is the one',
+				bottom_en: 'He stood until the sun shone but left before it rose."',
+				reference_en: 'Muslim 2/891 No. 1218'
+			}
+		],
+		pageTitle_bn: 'মাশ‘আরুল হারাম তথা মুযদালিফায় যিক্‌র',
+		pageTitle_en: "Sacred Site [al-Mash'ar al-Haraam] - At Muzdalifa"
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম তিনটি জামরায় প্রতিটি কংকর নিক্ষেপের সময় বলতেন,',
+				arabic: 'اللَّهُ أَكْبَرُ',
+				transliteration_bn: 'আল্লা-হু আকবার',
+				translations_bn: 'আল্লাহ সবচেয়ে বড়।',
+				bottom_bn:
+					'অতঃপর কিছুটা অগ্রসর হয়ে কিবলামুখী হয়ে দাঁড়াতেন এবং প্রথম জামরা ও দ্বিতীয় জামরায় দুই হাত উঁচু করে দো‘আ করতেন। কিন্তু জামরাতুল ‘আক্বাবায় প্রতিটি কংকর নিক্ষেপের সময় ‘আল্লাহু আকবার’ বলতেন এবং সেখানে অবস্থান না করে ফিরে আসতেন।',
+				reference_bn:
+					'বুখারী, (ফাতহুল বারীসহ) ৩/৫৮৩, নং ১৭৫১; সেখানে তার শব্দ দেখুন, আরও দেখুন, বুখারী, (ফাতহুল বারীসহ) ৩/৫৮৩, ৩/৫৮৪, ৩/৫৮১ নং ১৭৫৩; অনুরূপ মুসলিম নং ১২১৮।',
+				top_en: 'The Prophet (SAW) said:',
+				transliteration: "Allaahu 'Akbar",
+				translations_en: 'Allah is the Most Great!',
+				bottom_en:
+					"...with each pebble he threw at the three pillars. Then he went forward, stood facing the Qiblah and raised his hands and called upon Allah.\n\nThat was after (stoning) the first and second pillar. As for the third, he stoned it and called out Allaahu 'Akbar with every pebble he threw, but when he was finished he left without standing at it (for supplications).",
+				reference_en:
+					'Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 3/581, 3, 4, and Muslim'
+			}
+		],
+		pageTitle_bn: 'জামরাসমূহে প্রত্যেক কংকর নিক্ষেপকালে তাকবীর বলা',
+		pageTitle_en: 'When throwing each pebble at the Jamarat'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'سُبْحَانَ اللَّهِ',
+				transliteration_bn: 'সুবহা-নাল্লা-হ',
+				translations_bn: 'আল্লাহ পবিত্র-মহান। [১]',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Subhaanallaah!',
+				translations_en: 'Glory is to Allah. [1]',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'اللَّهُ أَكْبَرُ',
+				transliteration_bn: 'আল্লা-হু আকবার',
+				translations_bn: 'আল্লাহ সবচেয়ে বড়। [২]',
+				bottom_bn: '',
+				reference_bn:
+					'[১] বুখারী, (ফাতহুল বারীসহ) ১/২১০, ৩৯০, ৪১৪, নং ১১৫, ৩৫৯৯, ৬২১৮; মুসলিম ৪/১৮৫৭, নং ১৬৭৪। \n[২] বুখারী, (ফাতহুল বারীসহ) ৮/৪৪১, নং ৪৭৪১; তিরমিযী নং ২১৮০; আন- নাসাঈ ফিল কুবরা, নং ১১১৮৫। আরও দেখুন, সহীহুত তিরমিযী ২/১০৩, ২/২৩৫, আহমাদ-৫/২১৮, নং ২১৯০০।',
+				top_en: '',
+				transliteration: "Allaahu 'Akbar!",
+				translations_en: 'Allah is the Most Great. [2]',
+				bottom_en: '',
+				reference_en:
+					'[1] Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 1/210, 390, 414 and Muslim 4/1857.\n[2] Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 8/441. See also Al-Albani, Sahih At-Tirmithi 2/103, 235, Ahmad 5/218.'
+			}
+		],
+		pageTitle_bn: 'আশ্চর্যজনক ও আনন্দজনক বিষয়ের পর দো‘আ',
+		pageTitle_en: 'At times of amazement and delight'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের নিকট কোনো আনন্দদায়ক সংবাদ এলে মহান ও বরকতময় আল্লাহ তা‘আলার শুকরিয়া আদায়স্বরূপ সিজদায় পড়ে যেতেন।',
+				arabic: '',
+				transliteration_bn: '',
+				translations_bn: '',
+				bottom_bn: '',
+				reference_bn:
+					'হাদীসটি নাসাঈ ব্যতীত অপরাপর সুনান গ্রন্থকারগণ উদ্ধৃত করেছেন। আবূ দাউদ নং ২৭৭৪; তিরমিযী নং ১৫৭৮; ইবন মাজাহ্‌ ১৩৯৪। আরও দেখুন, সহীহ ইবন মাজাহ ১/২৩৩; ইরওয়াউল গালীল, ২/২২৬।',
+				top_en:
+					"The Prophet (sal-Allaahu 'alayhe wa sallam) would prostrate in gratitude to Allaah (Subhaanahu wa Ta'aala) upon receiving news which pleased him or which caused pleasure.",
+				transliteration: '',
+				translations_en: '',
+				bottom_en: '',
+				reference_en:
+					"Abu Dawud, Ibn Majah, At-Tirmithi. See also Al-Albani, Sahih Ibn Majah 1/233, and 'Irwa'ul-Ghalil 2/226."
+			}
+		],
+		pageTitle_bn: 'আনন্দদায়ক কোনো সংবাদ আসলে যা করবে',
+		pageTitle_en: 'Upon receiving pleasant news'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'আপনার দেহের যে স্থানে আপনি ব্যথা অনুভব করছেন, সেখানে আপনার হাত রেখে তিনবার বলুন,',
+				arabic: 'بِسْمِ اللَّهِ',
+				transliteration_bn: 'বিসমিল্লাহ',
+				translations_bn: 'আল্লাহর নামে।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					'Place your hand at the site of the pain and say (three times):',
+				transliteration: 'Bismillaah.',
+				translations_en: 'In the Name of Allah',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'আর সাতবার বলুন,',
+				arabic:
+					'أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ',
+				transliteration_bn:
+					'আ‘ঊযু বিল্লা-হি ওয়া ক্বুদরাতিহী মিন শাররি মা আজিদু ওয়া উহা-যিরু',
+				translations_bn:
+					'এই যে ব্যথা আমি অনুভব করছি এবং যার আমি আশঙ্কা করছি, তা থেকে আমি আল্লাহ্‌র এবং তাঁর কুদরতের আশ্রয় প্রার্থনা করছি।',
+				bottom_bn: '',
+				reference_bn: 'মুসলিম ৪/১৭২৮, নং ২২০২।',
+				top_en: 'Then say (seven times):',
+				transliteration:
+					"A'oo<u>th</u>u billaahi wa qudratihi min sharri maa 'ajidu wa 'uhaa<u>th</u>iru.",
+				translations_en:
+					'I seek refuge in Allah and in His Power from the evil of what I find and of what I guard against.',
+				bottom_en: '',
+				reference_en: 'Muslim 4/1728.'
+			}
+		],
+		pageTitle_bn: 'শরীরে কোনো ব্যথা অনুভব করলে যা করবে ও বলবে',
+		pageTitle_en: 'When feeling some pain in the body'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'যখন তোমাদের কেউ তার ভাইয়ের, অথবা নিজের কোনো বিষয়ে, অথবা নিজের কোনো সম্পদে এমন কিছু দেখে যা তাকে চমৎকৃত করে, তখন সে যেন বলে,',
+				arabic: 'بَارَكَ اللَّهُ لَك',
+				transliteration_bn: 'বা-রাক আল্লা-হু লাকা',
+				translations_bn: 'আল্লাহ তোমাকে বরকত দান করুন',
+				bottom_bn: '...কারণ, চোখ লাগার (বদ নজরের) বিষয়টি সত্য।',
+				reference_bn:
+					'মুসনাদে আহমাদ ৪/৪৪৭, নং ১৫৭০০; ইবন মাজাহ্, নং ৩৫০৮; মালেক ৩/১১৮-১১৯। আর শাইখুল আলবানী, সহীহুল জামে‘ গ্রন্থে সহীহ বলেছেন, ১/২১২; আরও দেখুন, আরনাঊতের এর যাদুল মা‘আদ এর তাহকীক ৪/১৭০।',
+				top_en:
+					"If you see something from your brother, yourself or wealth which you find impressing, then invoke blessings for it, for the evil eye is indeed true'",
+				transliteration: "Allahumma baarik 'alayhi",
+				translations_en: 'O Allah send blessings upon him',
+				bottom_en: '',
+				reference_en:
+					"Ahmad 4/447, Ibn Majah, Malik. Al-Albani graded it authentic in Sahihul-Jami' As-Saghir 1/212. Also see Al-Arna'ut's checking of Ibn Al-Qayyim's Zadul-Ma'ad 4/170."
+			}
+		],
+		pageTitle_bn: 'কোনো কিছুর উপর নিজের চোখ লাগার ভয় থাকলে দো‘আ',
+		pageTitle_en: 'When in fear of afflicting someone with one’s eye'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'لاَ إِلَهَ إِلاَّ اللَّهُ',
+				transliteration_bn: 'লা ইলা-হা ইল্লাল্লা-হ!',
+				translations_bn: 'আল্লাহ ব্যতীত কোনো হক্ব উপাস্য নেই!',
+				bottom_bn: '',
+				reference_bn:
+					'বুখারী, (ফাতহুল বারীসহ) ৬/৩৮১, নং ৩৩৪৬; মুসলিম ৪/২২০৮, নং ২৮৮০।',
+				top_en: '',
+				transliteration: "Laa 'ilaaha 'illallaah!",
+				translations_en: 'There is none worthy of worship but Allah!',
+				bottom_en: '',
+				reference_en: 'Bukhari 6/361 No. 3346; Muslim 4/2208 No. 2880.'
+			}
+		],
+		pageTitle_bn: 'ভীত অবস্থায় যা বলবে',
+		pageTitle_en: 'When startled'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ [اللَّهُمَّ مِنْكَ وَلَكَ] اللَّهُمَّ تَقَبَّلْ مِنِّي',
+				transliteration_bn:
+					'বিসমিল্লা-হি ওয়াল্লা-হু আকবার, [আল্লা-হুম্মা মিনকা ওয়ালাকা] , আল্লা-হুম্মা তাকাব্বাল মিন্নী',
+				translations_bn:
+					'আল্লাহ্‌র নামে, আর আল্লাহ সবচেয়ে বড়। [হে আল্লাহ! এটা আপনার নিকট থেকে প্রাপ্ত এবং আপনার জন্যই] হে আল্লাহ! আপনি আমার তরফ থেকে তা কবুল করুন।',
+				bottom_bn: '',
+				reference_bn:
+					'তিরমিযী ৫/৮২, নং ২৭৪১; আহমাদ ৪/৪০০, নং ১৯৫৮৬; আবু দাউদ, ৪/৩০৮, নং ৫০৪০। আরও দেখুন, সহীহুত তিরমিযী, ২/৩৫৪।',
+				top_en: '',
+				transliteration:
+					"Bismillaahi wallaahu 'Akbar [Allaahumma minka wa laka] Allaahumma taqabbal minnee.",
+				translations_en:
+					'With the Name of Allah, Allah is the Most Great! [O Allah, from You and to You.] O Allah, accept it from me.',
+				bottom_en: '',
+				reference_en:
+					'At-Tirmithi 5/82, Ahmad 4/400, Abu Dawud 4/ 308. See also Al-Albani, Sahih At-Tirmithi 2/354.'
+			}
+		],
+		pageTitle_bn: 'পশু যবেহ বা নাহর করার সময় যা বলবে',
+		pageTitle_en: 'When slaughtering or sacrificing an animal'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ الَّتِي لاَ يُجَاوِزُهُنَّ بَرٌّ وَلاَ فَاجِرٌ مِنْ شَرِّ مَا خَلَقَ، وَبَرَأَ وَذَرَأَ، وَمِنْ شَرِّ مَا يَنْزِلُ مِنَ السَّمَاءِ، وَمِنْ شَرِّ مَا يَعْرُجُ فيهَا، وَمِنْ شَرِّ مَا ذَرَأَ فِي الْأَرْضِ، وَمِنْ شَرِّ مَا يَخْرُجُ مِنْهَا، وَمِنْ شَرِّ فِتَنِ اللَّيْلِ وَالنَّهَارِ، وَمِنْ شَرِّ كُلِّ طَارِقٍ إِلاَّ طَارِقاً يَطْرُقُ بِخَيْرٍ يَا رَحْمَنُ',
+				transliteration_bn:
+					'আ‘ঊযু বিকালিমা-তিল্লা-হিত্-তা-ম্মা-তিল্লাতী লা ইয়ুজাউইযুহুন্না বাররুন ওয়ালা ফা-জিরুম মিন শাররি মা খালাক্বা, ওয়া বারা’আ, ওয়া যারা’আ, ওয়ামিন শাররি মা ইয়ানযিলু মিনাস্ সামা-য়ি, ওয়ামিন শাররি মা যারাআ ফিল আরদ্বি, ওয়ামিন শাররি মা ইয়াখরুজু মিনহা, ওয়ামিন শাররি ফিতানিল-লাইলি ওয়ান-নাহা-রি, ওয়ামিন শাররি কুল্লি ত্বা-রিকিন ইল্লা ত্বা-রিকান ইয়াত্বরুকু বিখাইরিন, ইয়া রহ্‌মানু',
+				translations_bn:
+					'আমি আল্লাহ্‌র ঐ সকল পরিপূর্ণ বাণীসমূহের সাহায্যে আশ্রয় চাই যা কোনো সৎলোক বা অসৎলোক অতিক্রম করতে পারে না— আল্লাহ যা সৃষ্টি করেছেন, অস্তিত্বে এনেছেন এবং তৈরি করেছেন তার অনিষ্ট থেকে, আসমান থেকে যা নেমে আসে তার অনিষ্ট থেকে, যা আকাশে উঠে তার অনিষ্ট থেকে, যা পৃথিবীতে তিনি সৃষ্টি করেছেন তার অনিষ্ট থেকে, যা পৃথিবী থেকে বেরিয়ে আসে তার অনিষ্ট থেকে, দিনে-রাতে সংঘটিত ফেতনার অনিষ্ট থেকে, আর রাত্রিবেলা হঠাৎ করে আগত অনিষ্ট থেকে, তবে রাতে আগত যে বিষয় কল্যাণ নিয়ে আসে তা ব্যতীত; হে দয়াময়!',
+				bottom_bn: '',
+				reference_bn:
+					'আহমাদ ৩/৪১৯, নং ১৫৪৬১, সহীহ সনদে। আর ইবনুস সুন্নী, নং ৬৩৭; আরনাঊত তার ত্বাহাভীয়ার তাখরীজে এর সনদকে বিশুদ্ধ বলেছেন, পৃ.১৩৩। আরও দেখুন, মাজমা‘উয যাওয়ায়েদ ১০/১২৭।',
+				top_en: '',
+				transliteration:
+					"A'oo<u>th</u>u bikalimaatil-laahit-taammaatil-latee laa yujaawizuhunna barrun wa laa faajimn min sharri maa khalaqa, wa bara'a wa <u>th</u>ara'a, wa min sharri maa yanzilu minas-samaa'i, wa min sharri maa ya'ruju feehaa, wa min sharri maa <u>th</u>ara'a fil-'ardhi, wa min sharri ma yakhruju minhaa, wa min sharri fitanil-layli wannahaari, wa min sharri kulli taariqin 'illaa taariqan yatruqu bikhayrin yaa Rahmaan.",
+				translations_en:
+					'"I take refuge within Allaah"s perfect words which no righteous or unrighteous person can transgress, from all the evil that He has created, made and originated. [I take refuge] from the evil that descends from the sky and the evil that rises up to it. [I take refuge] from the evil that is spread on earth and the evil that springs from her, and I take refuge from the evil of the tribulations of night and day, and the evil of one who visits at night except the one who brings good, O Merciful One."',
+				bottom_en: '',
+				reference_en:
+					'Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 11/42, Muslim 4/1705.'
+			}
+		],
+		pageTitle_bn: 'দুষ্ট শয়তানদের ষড়যন্ত্র প্রতিহত করতে যা বলবে',
+		pageTitle_en: 'To ward off the deception of the Obstinate Shaytans'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসুলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, “আল্লাহ্‌র শপথ, নিশ্চয় আমি দৈনিক সত্তর -এর অধিকবার আল্লাহ্‌র কাছে ক্ষমা চাই এবং তাওবা করি।” [১] \n\nরাসুলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “হে মানুষ, তোমরা আল্লাহ্‌র কাছে তাওবা কর, নিশ্চয় আমি আল্লাহ্‌র কাছে দৈনিক একশত বার তাওবা করি।” [২] \n\nরাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “যে ব্যক্তি বলবে,',
+				arabic:
+					'أَسْتَغْفِرُ اللَّهَ الْعَظيمَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ القَيُّومُ وَأَتُوبُ إِلَيهِ',
+				transliteration_bn:
+					'আস্তাগফিরুল্লা-হাল ‘আযীমল্লাযী লা ইলা-হা ইল্লা হুয়াল হাইয়্যুল কায়্যূমু ওয়া আতূবু ইলাইহি',
+				translations_bn:
+					'আমি মহামহিম আল্লাহ্‌র নিকট ক্ষমা চাই, যিনি ছাড়া আর কোনো হক্ব ইলাহ নেই, তিনি চিরস্থায়ী, সর্বসত্তার ধারক। আর আমি তাঁরই নিকট তওবা করছি।’',
+				bottom_bn:
+					"আল্লাহ তাকে মাফ করে দিবেন যদিও সে যুদ্ধক্ষেত্র থেকে পলায়নকারী হয়।” [৩] \n\nরাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “রব একজন বান্দার সবচেয়ে বেশি নিকটবর্তী হয় রাতের শেষ প্রান্তে, সুতরাং যদি তুমি সে সময়ে আল্লাহ্‌র যিক্‌রকারীদের অন্তর্ভুক্ত হতে সক্ষম হও, তবে তা-ই হও।” [৪] \n\nতিনি সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “একজন বান্দা তার রবের সবচেয়ে কাছে তখনই থাকে, যখন সে সিজদায় যায়, সুতরাং তোমরা তখন বেশি বেশি করে দো‘আ কর।” [৫] \n\nতিনি সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “নিশ্চয় আমার অন্তরেও ঢাকনা এসে পড়ে, আর আমি দৈনিক আল্লাহ্‌র কাছে একশত বার ক্ষমা প্রার্থনা করি।” [৬] \n\nতিনি সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, আল্লাহর কাছে ক্ষমা চাওয়ার সবচেয়ে ভালো দোআ হল সায়্যিদুল ইস্তিগফার। \n\nএর জন্য ২৭.৬ নং দো'আ দেখুন। [৭]",
+				reference_bn:
+					'[১] বুখারী, ফাতহুল বারীসহ, ১১/১০১, নং ৬৩০৭। \n[২] মুসলিম, ৪/২০৭৬, নং ২৭০২। \n[৩] আবূ দাউদ ২/৮৫, নং ১৫১৭; তিরমিযী ৫/৫৬৯, নং ৩৫৭৭; আল-হাকিম এবং সহীহ বলেছেন, তার সাথে ইমাম যাহাবী ঐকমত্য পোষণ করেছেন, ১/৫১১, আর শাইখুল আলবানীও সহীহ বলেছেন। দেখুন, সহীহুত তিরমিযী ৩/১৮২, জামেউল উসূল লি আহাদীসির রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম ৪/৩৮৯-৩৯০, আরনাঊত এর সম্পাদনাসহ। \n[৪] তিরমিযী নং ৩৫৭৯, নাসায়ী, ১/২৭৯ নং ৫৭২; হাকেম ১/৩০৯। আরও দেখুন, সহীহুত তিরমিযী, ৩/১৮৩; জামে‘উল উসূল, আরনাউতের তাহকীকসহ ৪/১৪৪। \n[৫] মুসলিম, ১/৩৫০; নং ৪৮২। \n[৬] মুসলিম, ৪/২০৭৫, নং ২৭০২। ইবনুল আসীর বলেন, «ليُغان على قلبي»এর অর্থ হচ্ছে, ঢাকা পড়ে যায়, পর্দাবৃত হয়ে যায়। উদ্দেশ্য ভুলে যাওয়া; কারণ রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম সর্বদা যিক্‌র, নৈকট্য ও সার্বিক তত্ত্বাবধানে থাকতেন। তাই যখন কোনো সময় এ ব্যাপারে সামান্যতম ব্যাঘাত ঘটত অথবা ভুলে যেতেন, তখনি তিনি এটাকে নিজের জন্য গুনাহ মনে করতেন, সাথে সাথে তিনি ইস্তেগফার বা ক্ষমাপ্রার্থনার দিকে দ্রুত ধাবিত হতেন। দেখুন, জামে‘উল উসূল ৪/৩৮৬। \n[৭] বুখারি ৭/১৫০',
+				top_en:
+					'"The Messenger of Allaah (sal-Allaahu \'alayhe wa sallam) said: "By Allaah, I seek forgiveness and repent to Allaah, more than seventy times a day." [1] \n\nHe (sal-Allaahu \'alayhe wa sallam) also said: "O People, Repent to Allaah! Verily I repent to Him a hundred times a day." [2] \n\n\nHe (sal-Allaahu \'alayhe wa sallam) also said: "Whoever says:',
+				transliteration:
+					"Astaghfirullaahal-'A<u>dh</u>eemal-la<u>th</u>ee laa 'ilaaha 'illaa Huwal-Hayyul-Qayyoomu wa 'atoobu 'ilayhi.",
+				translations_en:
+					'"I seek Allaah"s forgiveness, besides whom, none has the right to be worshipped except He, The Ever Living, The Self-Subsisting and Supporter of all, and I turn to Him in repentance." [3]',
+				bottom_en:
+					'...Allaah would forgive him even if he was one who fled during the advance of an army."\n\n\nHe (sal-Allaahu \'alayhe wa sallam) said: "The nearest the Lord comes to His servant is in the middle of the night, so if you are able to be of those who remember Allaah at that time, then be so." [4] \n\nHe (sal-Allaahu \'alayhe wa sallam) also said: "The nearest a servant is to his Lord is when he is prostrating, so supplicate much therein." [5] \n\nHe (sal-Allaahu \'alayhe wa sallam) also said: "Verily my heart becomes preoccupied, and verily I seek Allaah"s forgiveness a hundred times a day." [6] \n\nHe also said: The most superior way of asking for forgiveness from Allah is to say the Sayyidinal Istighfar.\nFor this, go to Dua 27.6 [7]',
+				reference_en:
+					"[1] Al-Bukhari, cf. Al-Asqalani, Fathul-BAri 11/101 No. 6307\n[2] Muslim 4/2076 No. 2702\n[3] Abu Dawud 2/85, At-Tirmithi 5/569, and Al-Hakim who declared it authentic and Ath-Thahabi agreed with him 1/511. Al-Albani graded it authentic in Sahih At-Tirmithi 3/182. See also Jami'ul-'Usool li-'Ahdaith Ar-Rasool 4/ 389-90 checked by Al-Arna'ut.\n[4] At-Tirmithi, An-Nasa'i 1/279 and Al-Hakim. See also Al-Albani, Sahih At-Tirmithi 3/183, and Jdmi'ul-'Usool with Al-Arna'ut's checking 4/144.\n[5] Muslim 1/350.\n[6] Muslim 4/2075 No. 2702\n[7] Al-Bukhari 7/150"
+			}
+		],
+		pageTitle_bn: 'ক্ষমা প্রার্থনা ও তাওবা করা',
+		pageTitle_en: 'Seeking Forgiveness & Repentance'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু ‘আলাইহি ওয়াসাল্লাম বলেন, যে ব্যক্তি দৈনিক ১০০ বার বলে,',
+				arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+				transliteration_bn: 'সুব্‌হানাল্লা-হি ওয়াবিহামদিহী',
+				translations_bn: 'আমি আল্লাহর সপ্রশংসা পবিত্রতা ঘোষণা করছি',
+				bottom_bn:
+					'...তার পাপসমূহ মুছে ফেলা হয়, যদিও তা সাগরের ফেনারাশির সমান হয়ে থাকে।',
+				reference_bn:
+					'বুখারী ৭/১৬৮, নং ৬৪০৫; মুসলিম ৪/২০৭১, নং ২৬৯১; তাছাড়া এ কিতাবের ### পৃষ্ঠায় যে ব্যক্তি সকাল ও সন্ধায় একশতবার পড়বে, তার যে ফযিলত বর্ণিত হয়েছে তা দেখুন।',
+				top_en: 'Whoever says:',
+				transliteration: 'Subhaanallaahi wa bihamdihi.',
+				translations_en: 'Glorified is Allah and praised is He.',
+				bottom_en:
+					'...one hundred times a day, will have his sins forgiven even if they are like the foam of the sea.',
+				reference_en: 'Al-Bukhari 7/168, Muslim 4/2071'
+			}
+		],
+		pageTitle_bn: 'তাসবীহ, তাহমীদ, তাহলীল ও তাকবীর-এর ফযীলত',
+		pageTitle_en: 'Sins forgiven even if like the foam of the sea'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, \n\n“যে ব্যক্তি নিম্নোক্ত বাণীটি ১০ বার বলবে,',
+				arabic:
+					'لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+				transliteration_bn:
+					'লা ইলা-হা ইল্লাল্লা-হু ওয়াহদাহু লা শারীকা লাহু লাহুল মুলকু ওয়া লাহুল হামদু ওয়া হুয়া ‘আলা কুল্লি শাই’ইন ক্বাদীর',
+				translations_bn:
+					'একমাত্র আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই, তাঁর কোনো শরীক নেই; রাজত্ব তাঁরই, সমস্ত প্রশংসাও তাঁর; আর তিনি সকল কিছুর উপর ক্ষমতাবান।',
+				bottom_bn:
+					'...এটা তার জন্য এমন হবে যেন সে ইসমাঈলের (আ:) সন্তানদের চারজনকে দাসত্ব থেকে মুক্ত করল।”',
+				reference_bn:
+					'বুখারী ৭/৬৭ নং ৬৪০৪; মুসলিম, তার শব্দে ৪/২০৭১ নং ২৬৯৩; অনুরূপভাবে একশবার বলার ফযীলত দেখুন ২৭.১৯ নং দো‘আর হাদীসে।',
+				top_en:
+					"Abu Ayyoob al-Ansaaree (radhi-yAllaahu 'anhu) related that The Prophet (sal-Allaahu 'alayhe wa sallam) said:\n\nWhoever says:",
+				transliteration:
+					"Laa 'ilaaha 'illallaahu wahdahu laa shareeka lahu, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer.",
+				translations_en:
+					'None has the right to be worshipped except Allaah, alone, without any partener. To Him belong all sovereignty and praise and He is over all things omnipotent.',
+				bottom_en:
+					"...ten times, is like one who has freed four souls from among the children of Ismaa'eel.",
+				reference_en: 'Al-Bukhari 7/67, Muslim 4/2071'
+			}
+		],
+		pageTitle_bn:
+			'ইসমাঈল (আ:) এর সন্তানদের চারজনকে দাসত্ব থেকে মুক্ত করার সমান সওয়াব',
+		pageTitle_en: 'Reward of Freeing four slaves'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেছেন, \n\n“দুটি বাক্য এমন রয়েছে, যা জবানে সহজ, মীযানের পাল্লায় ভারী এবং করুণাময় আল্লাহ্‌র নিকট অতি প্রিয়। আর তা হচ্ছে,',
+				arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحانَ اللَّهِ الْعَظِيمِ',
+				transliteration_bn:
+					'সুব্‌হানাল্লা-হি ওয়া বিহামদিহী, সুব্‌হানাল্লা-হিল ‘আযীম',
+				translations_bn:
+					'আল্লাহ্‌র প্রশংসাসহকারে তাঁর পবিত্রতা ও মহিমা বর্ণনা করছি। মহান আল্লাহর পবিত্রতা ও মহিমা ঘোষণা করছি”।',
+				bottom_bn: '',
+				reference_bn: 'বুখারী ৭/১৬৮, নং ৬৪০৪; মুসলিম ৪/২০৭২, নং ২৬৯৪।',
+				top_en:
+					"Abu Hurayrah (radhi-yAllaahu 'anhu) reported that the Messenger of Allaah (sal-Allaahu 'alayhe wa sallam) said:\n\n [There are] Two words, [which are] light on the tongue, heavy on the Scale and beloved to The Most Gracious:",
+				transliteration:
+					"Subhaanal-laahi wa bihamdihi, Subhaanal-laahil-'Adheem.",
+				translations_en:
+					'How perfect Allaah is and I praise Him. How perfect Allaah is, The Supreme.',
+				bottom_en: '',
+				reference_en: 'Al-Bukhari 7/168, Muslim 4/2072'
+			}
+		],
+		pageTitle_bn: 'যিকির যা জবানে সহজ আর মীযানের পাল্লায় ভারী',
+		pageTitle_en: 'Words Light on tongue, Heavy on the balance'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, “আল্লাহ্‌র নিকট সর্বাধিক প্রিয় বাক্য চারটি, তার যে কোনটি দিয়েই শুরু করাতে তোমার কোনো ক্ষতি নেই। আর তা হলো,',
+				arabic:
+					'سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ',
+				transliteration_bn:
+					'সুবহানাল্লা-হি ওয়ালহাম্‌দু লিল্লা-হি ওয়ালা ইলা-হা ইল্লাল্লা-হু ওয়াল্লা-হু আকবার',
+				translations_bn:
+					'আল্লাহ পবিত্র-মহান। সকল হামদ-প্রশংসা আল্লাহর। আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই। আল্লাহ সবচেয়ে বড়। [১]',
+				bottom_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম আরও বলেন, “সূর্য যা কিছুর উপর উদিত হয় তার চেয়ে এগুলো বলা আমার কাছে অধিক প্রিয়।” [২]',
+				reference_bn:
+					'[১] মুসলিম ৩/১৬৮৫, নং ২১৩৭। \n[২] মুসলিম, ৪/২০৭২, নং ২৬৯৫।',
+				top_en:
+					"Abu Hurayrah (radhi-yAllaahu 'anhu) reported that the Messenger of Allaah (sal-Allaahu 'alayhe wa sallam) said: Saying:",
+				transliteration:
+					"Subhaanallaah, Alhamdu lillaah, Laa 'ilaaha 'illallaah, wa Allaahu 'Akbar",
+				translations_en:
+					'How perfect Allaah is, and all praise is for Allaah. None has the right to be worshipped except Allaah, and Allaah is the greatest.',
+				bottom_en:
+					'...is more beloved to me than everything the sun has risen over.\n\nThe most beloved words to Allaah are also these four, and it does not matter which of them you start with.',
+				reference_en: 'Muslim 3/1685.   Muslim 4/2072'
+			}
+		],
+		pageTitle_bn: 'আল্লাহ্‌র নিকট সর্বাধিক প্রিয় বাক্য',
+		pageTitle_en: 'Most beloved words to Allah'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, \n\n“তোমাদের কেউ কি প্রতিদিন এক হাজার সওয়াব অর্জন করতে অপারগ?”\n\nতাঁর সাথীদের মধ্যে একজন প্রশ্ন করে বলল, আমাদের কেউ কী করে এক হাজার সওয়াব অর্জন করতে পারে?\n\nনবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বললেন, “যে ব্যক্তি ১০০ বার বলবে,',
+				arabic: 'سُبْحَانَ اللَّهِ',
+				transliteration_bn: 'সুবহা-নাল্লা-হ',
+				translations_bn: 'আল্লাহ পবিত্র-মহান।',
+				bottom_bn:
+					'তার জন্য এক হাজার সওয়াব লেখা হবে অথবা তার এক হাজার পাপ মুছে ফেলা হবে।”',
+				reference_bn: 'মুসলিম ৪/২০৭৩, নং ২৬৯৮।',
+				top_en:
+					"Sa'd (radhi-yAllaahu 'anhu) said: We were sitting with the Messenger of Allaah (sal-Allaahu 'alayhe wa sallam), and he said:\n\nAre any of you unable to gain a thousand good deeds each day?\n\nSomebody then asked him (sal-Allaahu 'alayhe wa sallam):\nHow does one achieve a thousand good deeds?\n\nHe replied: He should say:",
+				transliteration: 'Subhaanallaahi.',
+				translations_en: 'How perfect Allaah is.',
+				bottom_en:
+					'...one hundred times, for a thousand good deeds are recorded for him or a thousand bad deeds are wiped away.',
+				reference_en: 'Muslim 4/2073'
+			}
+		],
+		pageTitle_bn: 'এক হাজার সওয়াব লেখা অথবা এক হাজার পাপ মুছে ফেলা',
+		pageTitle_en: '1000 Rewards written, 1000 Sins wiped away'
+	},
+	{
+		duas: [
+			{
+				top_bn: '“যে ব্যক্তি বলবে,',
+				arabic: 'سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ',
+				transliteration_bn: 'সুব্‌হানাল্লা-হিল ‘আযীম ওয়াবিহামদিহী',
+				translations_bn:
+					'মহান আল্লাহর প্রশংসার সাথে তাঁর পবিত্রতা ও মহিমা ঘোষণা করছি',
+				bottom_bn: '...তার জন্য জান্নাতে একটি খেজুর গাছ রোপণ করা হবে।”',
+				reference_bn:
+					'তিরমিযী ৫/১১, নং ৩৪৬৪; হাকেম-১/৫০১ এবং এটাকে সহীহ বলেছেন। আর ইমাম যাহাবী তার সাথে একমত হয়েছেন। দেখুন, সহীহুল জামে‘ ৫/৫৩১; সহীহুত তিরমিযী ৩/১৬০।',
+				top_en:
+					"Jaabir (radhi-yAllaahu 'anhu) related that The Prophet (sal-Allaahu 'alayhe wa sallam) said:\n\nWhoever says:",
+				transliteration: "Subhaanallaahil-'Adheemi wa bihamdihi.",
+				translations_en:
+					'How perfect Allaah is, The Supreme, and I praise Him.',
+				bottom_en: '...a palm tree is planted for him in Paradise.',
+				reference_en: 'At-Tirmizi 5/511, Al-Hakim'
+			}
+		],
+		pageTitle_bn: 'জান্নাতের একটি খেজুর গাছ',
+		pageTitle_en: 'Date palm planted in Paradise'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম বলেন, \n\n“ওহে আব্দুল্লাহ ইবন কায়েস! আমি কি জান্নাতের এক রত্নভাণ্ডার সম্পর্কে তোমাকে অবহিত করব না?”\n\nআমি বললাম, “নিশ্চয়ই হে আল্লাহর রাসূল।”\n\nতিনি বললেন, “তুমি বল,',
+				arabic: 'لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ',
+				transliteration_bn: 'লা হাউলা ওয়ালা কূওয়াতা ইল্লা বিল্লা-হ',
+				translations_bn:
+					'আল্লাহর সাহায্য ছাড়া (পাপ কাজ থেকে দূরে থাকার) কোনো উপায় এবং (সৎকাজ করার) কোনো শক্তি কারো নেই।',
+				bottom_bn: '',
+				reference_bn:
+					'বুখারী, ফাতহুল বারীসহ ১১/২১৩, নং ৪২০৬; মুসলিম ৪/২০৭৬, নং ২৭০৪।',
+				top_en:
+					"Adbullaah Ibn Qays (radhi-yAllaahu 'anhu) related that The Prophet (sal-Allaahu 'alayhe wa sallam) said to him:\n\nO 'Adbullaah Ibn Qays, shall I not inform you of a treasure from the treasures of paradise?\n\nHe (sal-Allaahu 'alayhe wa sallam) then said: Say:",
+				transliteration: "Laa hawla wa laa quwwata 'illaa billaah.",
+				translations_en: 'There is no might nor power except with Allaah.',
+				bottom_en: '',
+				reference_en: 'Al-Bukhari , Muslim 4/2076'
+			}
+		],
+		pageTitle_bn: 'জান্নাতের এক রত্নভাণ্ডার',
+		pageTitle_en: 'Treasure of Paradise'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'এক বেদুঈন রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের কাছে এসে জিজ্ঞেস করল, “আমাকে একটি কালেমা শিক্ষা দিন যা আমি বলব।”\n\nতখন রাসূল বললেন, “বল,',
+				arabic:
+					'لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، اللَّهُ أَكْبَرُ كَبِيراً، وَالْحَمْدُ لِلَّهِ كَثِيراً، سُبْحَانَ اللَّهِ رَبِّ العَالَمِينَ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ الْعَزِيزِ الْحَكِيمِ',
+				transliteration_bn:
+					'লা ইলা-হা ইল্লাল্লা-হু ওয়াহদাহু লা শারীকা লাহু, আল্লা-হু আকবার কাবীরান, ওয়ালহামদুলিল্লা-হি কাসীরান, সুবহা-নাল্লা-হি রাব্বিল আ-লামীন, লা হাউলা ওয়ালা কূওয়াতা ইল্লা বিল্লা-হিল ‘আযীযিল হাকীম।',
+				translations_bn:
+					'একমাত্র আল্লাহ ব্যতীত কোনো হক্ব ইলাহ নেই, তাঁর কোনো শরীক নেই। আল্লাহ সবচেয়ে বড়, অতীব বড়। আল্লাহ্‌র অনেক-অজস্র প্রশংসা। সৃষ্টিকুলের রব আল্লাহ কতই না পবিত্র-মহান। প্রবল পরাক্রমশীল ও প্রজ্ঞাময় আল্লাহর সাহায্য ছাড়া (পাপ কাজ থেকে দূরে থাকার) কোনো উপায় এবং (সৎকাজ করার) কোনো শক্তি কারো নেই।',
+				bottom_bn: 'তখন বেদুঈন বলল, এগুলো তো আমার রবের জন্য; আমার জন্য কী?',
+				reference_bn: '',
+				top_en:
+					"Sa'd Ibn Abee Waqqaas (radhi-yAllaahu 'anhu) narrated that a man came to the Messenger of Allaah (sal-Allaahu 'alayhe wa sallam) and said to him:\n\nTeach me something which I should say?\n\nHe (sal-Allaahu 'alayhe wa sallam) said: Say:",
+				transliteration:
+					"Laa 'ilaaha 'illallaahu wahdahu laa shareeka lahu, Allaahu 'Akbaru kabeeran, walhamdu lillaahi katheeran, Subhaanallaahi Rabbil-'aalameen, laa hawla wa laa quwwata 'illaa biilaahil-'Azeezil-Hakeem.",
+				translations_en:
+					'None has the right to be worshipped except Allaah, alone without any partener. Allaah is most great and much praise is for Allaah. How perfect Allaah is, Lord of the worlds. There is no might nor power except with Allaah, The Exalted in might, The Wise.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'তিনি বললেন: “বল,',
+				arabic:
+					'اللَّهُمَّ اغْفِرِ لِي، وَارْحَمْنِي، وَاهْدِنِي، وَعَافِنِي وَارْزُقْنِي',
+				transliteration_bn:
+					'আল্লা-হুম্মাগফির লী ওয়ারহামনী ওয়াহদিনী ওয়া ‘আ-ফিনী ওয়ারযুক্বনী',
+				translations_bn:
+					'হে আল্লাহ! আপনি আমাকে ক্ষমা করুন, আমাকে দয়া করুন, আমাকে আপনি হেদায়াত দিন, আমাকে নিরাপদ রাখুন এবং আমাকে রিযিক দান করুন।',
+				bottom_bn:
+					'এরপর যখন বেদুঈন ফিরে গেল, তখন রাসূলুল্লাহ্‌ সাল্লাল্লাহু ‘আলাইহি ওয়াসাল্লাম বললেন, “লোকটি তার হাত কল্যাণে পূর্ণ করে নিল”।',
+				reference_bn:
+					'মুসলিম ৪/২০৭২, নং ২৬৯৬। আর আবূ দাউদ বর্ধিত বর্ণনা করেন, ১/২২০, নং ৮৩২:',
+				top_en:
+					"...the man then said: These are for my Lord, and what is for me? He (sal-Allaahu 'alayhe wa sallam) replied: Say:",
+				transliteration:
+					"Allaahummaghfir lee, warhamnee, wahdinee, wa 'aafinee warzuqnee.",
+				translations_en:
+					'O Allaah, forgive me, have mercy upon me, guide me and grant me sustenance.',
+				bottom_en: '',
+				reference_en: 'Muslim 4/2072'
+			}
+		],
+		pageTitle_bn: 'তাসবীহ, তাহমীদ, তাহলীল ও তাকবীর-এর ফযীলত #৮',
+		pageTitle_en: 'Excellence of Zikr & glorification of Allaah #8'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'কোনো ব্যক্তি ইসলাম গ্রহণ করলে রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম তাকে প্রথমে সালাত শিক্ষা দিতেন। অতঃপর এসব কথা দিয়ে দো‘আ করার আদেশ দিতেন,',
+				arabic:
+					'اللَّهُمَّ اغْفِرِ لِي، وَارْحَمْنِي، وَاهْدِنِي، وَعَافِنِي وَارْزُقْنِي',
+				transliteration_bn:
+					'আল্লা-হুম্মাগফির লী ওয়ারহামনী ওয়াহদিনী ওয়া ‘আ-ফিনী ওয়ারযুক্বনী',
+				translations_bn:
+					'হে আল্লাহ! আপনি আমাকে ক্ষমা করুন, আমাকে দয়া করুন, আমাকে আপনি হেদায়াত দিন, আমাকে নিরাপদ রাখুন এবং আমাকে রিযিক দান করুন।',
+				bottom_bn: '',
+				reference_bn:
+					'মুসলিম ৪/২০৭৩; নং ৩৬৯৭। মুসলিমের অপর বর্ণনায় এসেছে, “এগুলো তোমার জন্য দুনিয়া ও আখেরাত সবকিছুর সমন্বয় ঘটাবে।”',
+				top_en:
+					"Taariq al-Ashja'ee (radhi-yAllaahu 'anhu) said: When someone would embrace Islaam, The Prophet (sal-Allaahu 'alayhe wa sallam) would teach him how to perform prayer and then order him to supplicate with the following words:",
+				transliteration:
+					"Allaahummaghfir lee, warhamnee, wahdinee, wa 'aafinee warzuqnee.",
+				translations_en:
+					'O Allaah, forgive me, have mercy upon me, guide me, give me health and grant me sustenance.',
+				bottom_en: '',
+				reference_en: 'Muslim 4/2073'
+			}
+		],
+		pageTitle_bn: 'তাসবীহ, তাহমীদ, তাহলীল ও তাকবীর-এর ফযীলত #৯',
+		pageTitle_en: 'Excellence of Zikr & glorification of Allaah #9'
+	},
+	{
+		duas: [
+			{
+				top_bn: 'সর্বশ্রেষ্ঠ দো‘আ হল,',
+				arabic: 'الْحَمْدُ لِلَّهِ',
+				transliteration_bn: 'আলহামদু লিল্লাহ',
+				translations_bn: 'সকল প্রশংসা আল্লাহরই',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					"Jaabir Ibn 'Adbullaah (radhi-yAllaahu 'anhu) related that the Messenger of Allaah (sal-Allaahu 'alayhe wa sallam) said:\n\nVerily, the best supplication is:",
+				transliteration: 'Alhamdu lillaah.',
+				translations_en: 'All praise is for Allaah.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: 'আর সর্বোত্তম যিক্‌র হল,',
+				arabic: 'لاَ إِلَهَ إِلاَّ اللَّهُ',
+				transliteration_bn: 'লা ইলাহা ইল্লাল্লাহ',
+				translations_bn: 'আল্লাহ ব্যতীত কোনো হক্ব ইলাহ নেই।',
+				bottom_bn: '',
+				reference_bn:
+					'তিরমিযী ৫/৪৬২, নং ৩৩৮৩; ইবন মাজাহ্‌ ২/১২৪৯, নং ৩৮০০; আল-হাকিম, ১/৫০৩ এবং সহীহ বলেছেন, আর ইমাম যাহাবী তা সমর্থন করেছেন। আরও দেখুন, সহীহুল জামে‘ ১/৩৬২।',
+				top_en: '...and indeed, the best form of remembrance is:',
+				transliteration: "Laa'ilaaha'illallaah.",
+				translations_en: 'None has the right to be worshipped except Allaah.',
+				bottom_en: '',
+				reference_en: 'At-Tirmizi 5/462, Ibn Majah 2/1249, Al-Hakim'
+			}
+		],
+		pageTitle_bn: 'সর্বশ্রেষ্ঠ দো‘আ এবং সর্বোত্তম যিক্‌র',
+		pageTitle_en: 'Best Supplication & Best Remembrance'
+	},
+	{
+		duas: [
+			{
+				top_bn: 'আল-বাকিয়াতুস সালিহাত’ তথা চিরস্থায়ী নেক আমল হচ্ছে,',
+				arabic:
+					'سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ',
+				transliteration_bn:
+					'সুবহা-নাল্লা-হি, ওয়ালহামদুলিল্লা-হি, ওয়া লা-ইলা-হা ইল্লাল্লা-হু, ওয়াল্লা-হু আকবার, ওয়ালা হাউলা ওয়ালা কূওয়াতা ইল্লা বিল্লা-হি',
+				translations_bn:
+					'আল্লাহ পবিত্র-মহান। সকল হামদ-প্রশংসা আল্লাহর। আল্লাহ ছাড়া কোনো হক্ব ইলাহ নেই। আল্লাহ সবচেয়ে বড়। আর আল্লাহর সাহায্য ছাড়া (পাপ কাজ থেকে দূরে থাকার) কোনো উপায় এবং (সৎকাজ করার) কোনো শক্তি কারো নেই।',
+				bottom_bn: '',
+				reference_bn:
+					'মুসনাদে আহমাদ নং ৫১৩; আহমাদ শাকের এর তারতীব অনুসারে, আর তার সনদ বিশুদ্ধ। দেখুন, মাজমাউয যাওয়ায়িদ, ১/২৯৭; ইবন হাজার বুলুগুল মারাম গ্রন্থে এটাকে আবু সা‘ঈদ রাদিয়াল্লাহু ‘আনহু এর বর্ণনায় ইমাম নাসাঈ (আস-সুনানুল কুবরা, নং ১০৬১৭) নিয়ে এসেছেন বলে ইঙ্গিত করেছেন এবং বলেছেন যে, হাদীসটিকে ইবন হিব্বান (নং ৮৪০) ও হাকেম (১/৫৪১) সহীহ বলেছেন।',
+				top_en: 'The good deeds which endure are:',
+				transliteration:
+					"Subhaanallaah, Alhamdu lillaah, Laa 'ilaaha 'illallaah, wa Allaahu 'Akbar, Laa hawla wa laa quwwata 'illaa billaah.",
+				translations_en:
+					'How perfect Allaah is, and all praise is for Allaah. None has the right to be worshipped except Allaah, and Allaah is the greatest. There is no might nor power except with Allaah.',
+				bottom_en: '',
+				reference_en:
+					"Ahmad (no. 513) (Ahmad Shakir, ed.) and its chain of narration is authentic. See Majma'uz-Zawa'id 1/297. Ibn Hajar mentions it in Bulughul-Maram saying that Ibn Hibban and Al-Hakim considered it authentic."
+			}
+		],
+		pageTitle_bn: 'চিরস্থায়ী নেক আমল',
+		pageTitle_en: 'Good deeds which endure'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'আব্দুল্লাহ ইবন ‘আমর রাদিয়াল্লাহু ‘আনহুমা বলেন, “আমি নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামকে দেখেছি আঙুল ভাঁজ করে তাসবীহ গুনতেন”। অপর বর্ণনায় অতিরিক্ত এসেছে, “তাঁর ডান হাতে।”',
+				arabic: '',
+				transliteration_bn: '',
+				translations_bn: '',
+				bottom_bn: '',
+				reference_bn:
+					'আবূ দাউদ ২/৮১, নং ১৫০২; তিরমিযী ৫/৫২১, নং ৩৪৮৬। আরও দেখুন, সহীহুল জামে‘ ৪/২৭১, নং ৪৮৬৫, আর শাইখ আলবানী সহীহ সুনান আবি দাউদে (১/৪১১) এটাকে সহীহ বলেছেন।',
+				top_en:
+					"Adbullaah Ibn 'Amr (radhi-yAllaahu 'anhu) said:\n\n\"I saw The Prophet (sal-Allaahu 'alayhe wa sallam) make tasbeeh with his right hand.\"",
+				transliteration: '',
+				translations_en: '',
+				bottom_en: '',
+				reference_en: 'Abu Dawud, At-Tirmizi 5/521'
+			}
+		],
+		pageTitle_bn: 'কীভাবে নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম তাসবীহ পাঠ করতেন?',
+		pageTitle_en: 'How the Prophet (saws) made tasbeeh'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'আল্লাহ্ দরূদ ও সালাম এবং বরকত বর্ষণ করুন আমাদের নবী মুহাম্মাদ, তাঁর বংশধর ও তাঁর সকল সাহাবীগণের উপর।',
+				arabic: '',
+				transliteration_bn: '',
+				translations_bn: '',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en:
+					'O Allaah, send peace and blessings upon our Prophet Muhammad, his companions, and his family and all those who follow them in righteousness till the Day of Reckoning.\n\nAameen',
+				transliteration: '',
+				translations_en: '',
+				bottom_en: '',
+				reference_en: ''
+			}
+		],
+		pageTitle_bn: 'বিবিধ কল্যাণ ও সামষ্টিক কিছু আদব',
+		pageTitle_en: 'General and Beneficent rules'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',
+				transliteration_bn: ' বিসমিল্লাহির রাহমা-নির রাহি-ম',
+				translations_bn: 'পরম করুণাময় অতি দয়ালু আল্লাহর নামে',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Bismillaahir Rahmaanir Raheem',
+				translations_en:
+					'In the name of Allah , the Entirely Merciful, the Especially Merciful.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+				transliteration_bn: ' আলহামদু লিল্লাহি রাব্বিল আ’-লামি-ন।',
+				translations_bn: 'সমস্ত প্রশংসা আল্লাহর জন্য, যিনি সৃষ্টিকুলের রব।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: "Alhamdu lillaahi Rabbil 'aalameen",
+				translations_en:
+					'[All] praise is [due] to Allah , Lord of the worlds -',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'الرَّحْمَنِ الرَّحِيمِ',
+				transliteration_bn: 'আররাহমা-নির রাহি-ম',
+				translations_bn: 'দয়াময়, পরম দয়ালু,',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Ar-Rahmaanir-Raheem',
+				translations_en: 'The Entirely Merciful, the Especially Merciful,',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'مَالِكِ يَوْمِ الدِّينِ',
+				transliteration_bn: 'মা-লিকি ইয়াওমিদ্দি-ন',
+				translations_bn: 'বিচার দিবসের মালিক।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Maaliki Yawmid-Deen',
+				translations_en: 'Sovereign of the Day of Recompense.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ',
+				transliteration_bn: ' ইয়্যা-কা না’বুদু ওয়া ইয়্যা-কা নাসতাই’-ন',
+				translations_bn:
+					'আপনারই আমরা ইবাদাত করি এবং আপনারই নিকট আমরা সাহায্য চাই।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: "Iyyaaka na'budu wa lyyaaka nasta'een",
+				translations_en: 'It is You we worship and You we ask for help.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ',
+				transliteration_bn: 'ইহদিনাস সিরাতা’ল মুসতাকি’-ম',
+				translations_bn: 'আমাদেরকে সরল পথের হিদায়াত দিন।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Ihdinas-Siraatal-Mustaqeem',
+				translations_en: 'Guide us to the straight path -',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+				transliteration_bn:
+					' সিরাতা’ল্লা যি-না আনআ’মতা আ’লাইহিম গা’ইরিল মাগ’দু’বি আ’লাইহিম ওয়ালা দ্দ—ল্লি-ন।',
+				translations_bn:
+					'তাদের পথ, যাদেরকে নিয়ামত দিয়েছেন। যাদের উপর (আপনার) ক্রোধ আপতিত হয়নি এবং যারা পথভ্রষ্টও নয়।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-ফাতিহা - ১:১-৭',
+				top_en: '',
+				transliteration:
+					"Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen",
+				translations_en:
+					'The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.',
+				bottom_en: '',
+				reference_en: 'Surah Fatiha 1:1-7'
+			}
+		],
+		pageTitle_bn: 'সূরা আল-ফাতিহা - ১:১-৭',
+		pageTitle_en: 'Surah Fatiha 1:1-7'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'أَعُوذُ بِاللَّهِ أَنْ أَكُونَ مِنَ الْجَاهِلِينَ',
+				transliteration_bn: 'আ‘ঊযুবিল্লা-হি আন্ আকূনা মিনাল্ জ্বা-হিলীন্',
+				translations_bn:
+					'আমি মূর্খদের অন্তর্ভুক্ত হওয়া থেকে আল্লাহর আশ্রয় চাচ্ছি',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল বাকারাহ - ২:৬৭',
+				top_en: '',
+				transliteration: 'AAoothu biAllahi an akoona mina aljahileen',
+				translations_en:
+					'I seek refuge in Allah from being among the ignorant.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Baqarah - 2:67'
+			}
+		],
+		pageTitle_bn: 'জাহিলিয়াত থেকে মুক্তি [২:৬৭]',
+		pageTitle_en: 'Protecton from being ignorant [2:67]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ ٱجْعَلْ هَٰذَا بَلَدًا ءَامِنًا وَٱرْزُقْ أَهْلَهُۥ مِنَ ٱلثَّمَرَٰتِ مَنْ ءَامَنَ مِنْهُم بِٱللَّهِ وَٱلْيَوْمِ ٱلْءَاخِرِ ۖ',
+				transliteration_bn:
+					'রব্বিজ্ব ‘আল্ হা-যা- বালাদান্ আ-মিনাওঁ র্অযুক্ব ্ আহ্লাহূ মিনাছ্ ছামারা-তি মান্ আ-মানা মিন্হুম্ বিল্লা-হি অল্ইয়াওমিল্ আ-খির',
+				translations_bn:
+					'হে আমার রব, আপনি একে নিরাপদ নগরী বানান এবং এর অধিবাসীদেরকে ফল-মুলের রিযিক দিন যারা আল্লাহ ও শেষ দিনের প্রতি ঈমান এনেছে’। তিনি বললেন, ‘যে কুফরী করবে, তাকে আমি স্বল্প ভোগোপকরণ দিব। অতঃপর তাকে আগুনের আযাবে প্রবেশ করতে বাধ্য করব। আর তা কত মন্দ পরিণতি',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল বাকারাহ - ২:১২৬',
+				top_en: '',
+				transliteration:
+					'rabbi ijAAal hatha baladan aminan warzuqahlahu mina aththamarati man amana minhumbillahi walyawmi al-akhiri',
+				translations_en:
+					'My Lord, make this a secure city and provide its people with fruits - whoever of them believes in Allah and the Last Day."',
+				bottom_en: '',
+				reference_en: 'Surah Al-Baqarah - 2:126'
+			}
+		],
+		pageTitle_bn: 'সূরা আল বাকারাহ - ২:১২৬',
+		pageTitle_en: 'Surah Al-Baqarah - 2:126'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ العَلِيمُ',
+				transliteration_bn:
+					'রব্বানা-তাক্বাব্বাল্ মিন্ ; ইন্নাকা আনতাস্ সামী‘উল্ ‘আলীম্।',
+				translations_bn:
+					'হে আমাদের রব, আমাদের পক্ষ থেকে কবূল করুন। নিশ্চয় আপনি সর্বশ্রোতা, সর্বজ্ঞানী',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Rabbana taqabbal minna innaka antas Sameeaul Aleem',
+				translations_en:
+					'Our Lord, accept [this] from us. Indeed You are the Hearing, the Knowing.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا وَاجْعَلْنَا مُسْلِمَيْنِ لَكَ وَمِن ذُرِّيَّتِنَا أُمَّةً مُّسْلِمَةً لَّكَ وَأَرِنَا مَنَاسِكَنَا وَتُبْ عَلَيْنَآ إِنَّكَ أَنتَ التَّوَّابُ الرَّحِيمُ',
+				transliteration_bn:
+					' রব্বানা- অজ্ব্‘আল্না- মুস্লিমাইনি লাকা অমিন্ র্যুরিয়্যাতিনা- উম্মাতাম্ মুস্লিমাতাল্লাকা অআরিনা-মানা-সিকানা-অতুব্ ‘আলাইনা-ইন্নাকা আন্তাত্ তাওয়্যা-র্বু রাহীম্।',
+				translations_bn:
+					'হে আমাদের রব, আমাদেরকে আপনার অনুগত করুন এবং আমাদের বংশধরের মধ্য থেকে আপনার অনুগত জাতি বানান। আর আমাদেরকে আমাদের ইবাদাতের বিধি-বিধান দেখিয়ে দিন এবং আমাদেরকে ক্ষমা করুন। নিশ্চয় আপনি ক্ষমাশীল, পরম দয়ালু',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল বাকারাহ - ২:১২৭-১২৮',
+				top_en: '',
+				transliteration:
+					"Rabbana wa-j'alna Muslimayni laka wa min Dhurriyatina 'Ummatan Muslimatan laka wa 'Arina Manasikana wa tub 'alayna 'innaka 'antat-Tawwabu-Raheem",
+				translations_en:
+					'Our Lord, and make us Muslims [in submission] to You and from our descendants a Muslim nation [in submission] to You. And show us our rites and accept our repentance. Indeed, You are the Accepting of repentance, the Merciful.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Baqarah - 2:127-128'
+			}
+		],
+		pageTitle_bn: 'আমল কবুলের করতে চাওয়া [২:১২৭-১২৮]',
+		pageTitle_en:
+			'Seeking acceptance of deeds &  becoming a devout muslim [2:127-128]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ',
+				transliteration_bn:
+					'রব্বানায় আ-তিনা-ফিদ্ দুন্ইয়া-হাসানাতাওঁ অফিল্ আ-খিরাতি হাসানাতাওঁ অক্বিনা-‘আযা-বান্না-র।',
+				translations_bn:
+					'হে আমাদের রব, আমাদেরকে দুনিয়াতে কল্যাণ দিন। আর আখিরাতেও কল্যাণ দিন এবং আমাদেরকে আগুনের আযাব থেকে রক্ষা করুন।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল বাকারাহ - ২:২০১',
+				top_en: '',
+				transliteration:
+					'Rabbana aatina fiddunya hasanatan wa fil aakhirati hasanatan waqina azaabannaar',
+				translations_en:
+					'Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Baqarah 2:201'
+			}
+		],
+		pageTitle_bn: 'দুনিয়া ও আখিরাতের কল্যান চাওয়া [২:২০১]',
+		pageTitle_en: 'Seeking good of this world and the hereafter [2:201]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْراً وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى القَوْمِ الكَافِرِينَ',
+				transliteration_bn:
+					'রব্বানায় আফ্রিগ্ ‘আলাইনা-ছোয়াব্রাওঁ অছাব্বিত্ আক্ব ্দা-মানা-অর্ন্ছুনা-‘আলাল্ ক্বাওমিল্ কা-ফিরীন্।',
+				translations_bn:
+					'হে আমাদের রব, আমাদের উপর ধৈর্য ঢেলে দিন, আমাদের পা স্থির রাখুন এবং আমাদেরকে কাফের জাতির বিরুদ্ধে সাহায্য করুন।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল বাকারাহ - ২:২৫০',
+				top_en: '',
+				transliteration:
+					"Rabbana afrigh 'alayna sabran wa thabbit aqdamana wansurna 'alal-qawmil-kafirin",
+				translations_en:
+					'Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Baqarah - 2:250'
+			}
+		],
+		pageTitle_bn: 'ধৈর্য, একনিষ্ঠতা এবং বিজয় প্রার্থনা [২:২৫০]',
+		pageTitle_en: 'Seeking patience, firmness and victory [2:250]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ ٱلْمَصِيرُ',
+				transliteration_bn:
+					'সামি’না- অআত্বোয়া’না- গুফ্রা-নাকা রব্বানা- অইলাইকাল্ মার্ছীর',
+				translations_bn:
+					'আমরা শুনলাম এবং মানলাম। হে আমাদের রব! আমরা আপনারই ক্ষমা প্রার্থনা করি, আর আপনার দিকেই প্রত্যাবর্তনস্থল।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল বাকারাহ - ২:২৮৫',
+				top_en: '',
+				transliteration:
+					'samiAAna waataAAna ghufranakarabbana wa-ilayka almaseer',
+				translations_en:
+					'We hear and we obey. [We seek] Your forgiveness, our Lord, and to You is the [final] destination.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Baqarah 2:285'
+			}
+		],
+		pageTitle_bn: 'সূরা আল বাকারাহ - ২:২৮৫',
+		pageTitle_en: 'Surah Al-Baqarah 2:285'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ ۖ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَٰفِرِينَ',
+				transliteration_bn:
+					'রব্বানা- লা-তুআ-খিয্না য় ইন্নাসী য় না-আও আখ্ত্বোয়ানা-, রব্বানা- অলা-তাহ্মিল্ ‘আলাইনায় ইছরান কামা-হামাল্তাহূ ‘আলাল্লাযীনা মিন্ ক্বাব্লিনা-, রব্বানা- অলা-তুহাম্মিল্না- মা-লা-ত্বোয়া-ক্বাতা লানা-বিহ্;অ’ফু ‘আন্না-অর্গ্ফি লানা- র্অহাম্না- আন্তা মাওলা-না- ফান্ছুরনা- ‘আলাল্ ক্বাওমিল্ কা-ফিরীন্',
+				translations_bn:
+					'হে আমাদের রব! আমরা যদি ভুলে যাই, অথবা ভুল করি তাহলে আপনি আমাদেরকে পাকড়াও করবেন না। হে আমাদের রব, আমাদের উপর বোঝা চাপিয়ে দেবেন না, যেমন আমাদের পূর্ববর্তীদের উপর চাপিয়ে দিয়েছেন। হে আমাদের রব, আপনি আমাদেরকে এমন কিছু বহন করাবেন না, যার সামর্থ্য আমাদের নেই। আর আপনি আমাদেরকে মার্জনা করুন এবং আমাদেরকে ক্ষমা করুন, আর আমাদের উপর দয়া করুন। আপনি আমাদের অভিভাবক। অতএব আপনি কাফির সমপ্রদায়ের বিরুদ্ধে আমাদেরকে সাহায্য করুন।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল বাকারাহ - ২:২৮৬',
+				top_en: '',
+				transliteration:
+					'rabbana latu-akhithna in naseena aw akhta/narabbana wala tahmil AAalayna isrankama hamaltahu AAala allatheena minqablina rabbana wala tuhammilnama la taqata lana bihi waAAfuAAanna waghfir lana warhamnaanta mawlana fansurna AAalaalqawmi alkafireen',
+				translations_en:
+					'Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Baqarah 2:286'
+			}
+		],
+		pageTitle_bn: 'সূরা আল বাকারাহ - ২:২৮৬',
+		pageTitle_en: 'Surah Al-Baqarah 2:286'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا لاَ تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ الْوَهَّابُ',
+				transliteration_bn:
+					'রব্বানা-লা-তুযিগ্ কুলূবানা- বা’দা ইয্ হাদাইতানা-অহাবলানা-মিল্ লাদুন্কা রহ্মাতান্ , ইন্নাকা আন্তাল্ অহ্হা-ব্',
+				translations_bn:
+					'হে আমাদের রব, আপনি হিদায়াত দেয়ার পর আমাদের অন্তরসমূহ বক্র করবেন না এবং আপনার পক্ষ থেকে আমাদেরকে রহমত দান করুন।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					"Rabbana la tuzigh quloobana ba'da idh hadaytana wa hab lana milladunka rahmah innaka antal Wahhab",
+				translations_en:
+					'Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا إِنَّكَ جَامِعُ النَّاسِ لِيَوْمٍ لَّا رَيْبَ فِيهِ ۚ إِنَّ اللَّهَ لَا يُخْلِفُ الْمِيعَادَ',
+				transliteration_bn:
+					'রব্বানায় ইন্নাকা জ্বা-মি‘উন্ না-সি লিইয়াওমিল্ লা-রাইবা ফীহ্; ইন্নাল্লা-হা লা-ইয়ুখ্লিফুল্ মী‘আ-দ্। ',
+				translations_bn:
+					'হে আমাদের রব, নিশ্চয় আপনি মানুষকে সমবেত করবেন এমন একদিন, যাতে কোন সন্দেহ নেই। নিশ্চয় আল্লাহ প্রতিশ্রুতি ভঙ্গ করেন না।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আলে ইমরান - ৩:৮-৯',
+				top_en: '',
+				transliteration:
+					'Rabbana innaka jamiAAu annasiliyawmin la rayba feehi inna Allaha layukhlifu almeeAAad',
+				translations_en:
+					'Our Lord, surely You will gather the people for a Day about which there is no doubt. Indeed, Allah does not fail in His promise."',
+				bottom_en: '',
+				reference_en: 'Surah Al-Imran - 3:8-9'
+			}
+		],
+		pageTitle_bn: 'হেদায়াতের পর অন্তরের বক্রতা হতে মুক্তি চাওয়া [৩:৮-৯]',
+		pageTitle_en: 'Protection from deviation after guidance [3:8-9]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا إِنَّنَا آمَنَّا فَاغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ النَّارِ',
+				transliteration_bn:
+					'রব্বানায় ইন্নানায় আ-মান্না-ফার্গ্ফিলানা- যুনূবানা- অক্বিনা- ‘আযা-বান্ নার্-।',
+				translations_bn:
+					'হে আমাদের রব, নিশ্চয় আমরা ঈমান আনলাম। অতএব, আমাদের পাপসমূহ ক্ষমা করুন এবং আমাদেরকে আগুনের আযাব থেকে রক্ষা করুন।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আলে ইমরান - ৩:১৬',
+				top_en: '',
+				transliteration:
+					"Rabbana innana amanna faghfir lana dhunuubana wa qinna 'adhaban-Naar",
+				translations_en:
+					'Our Lord, indeed we have believed, so forgive us our sins and protect us from the punishment of the Fire,',
+				bottom_en: '',
+				reference_en: 'Surah Al-Imran - 3:16'
+			}
+		],
+		pageTitle_bn: 'ক্ষমা এবং জাহান্নাম হতে মুক্তি চাওয়া [৩:১৬]',
+		pageTitle_en: 'Asking forgiveness and protection from hell [3:16]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ هَبْ لِي مِنْ لَدُنْكَ ذُرِّيَّةً طَيِّبَةً ۖ إِنَّكَ سَمِيعُ الدُّعَاءِ',
+				transliteration_bn:
+					'রব্বি হাব্লী মিল্লাদুন্কা র্যুরিয়্যাতান্ ত্বোয়াইয়িবাতান্, ইন্নাকা সামী ‘উদ্ দু‘আ - য়্।',
+				translations_bn:
+					'হে আমার রব, আমাকে আপনার পক্ষ থেকে উত্তম সন্তান দান করুন। নিশ্চয় আপনি প্রার্থনা শ্রবণকারী।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আলে ইমরান - ৩:৩৮',
+				top_en: '',
+				transliteration:
+					'Rabbi hab lee min ladunka thurriyyatan tayyibatan innaka samee ud duaa',
+				translations_en:
+					'My Lord, grant me from Yourself a good offspring. Indeed, You are the Hearer of supplication.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Imran - 3:38'
+			}
+		],
+		pageTitle_bn: 'সুসন্তান লাভের জন্য দোআ [৩:৩৮]',
+		pageTitle_en: 'Asking for a good child [3:38]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا آمَنَّا بِمَا أَنزَلَتْ وَاتَّبَعْنَا الرَّسُولَ فَاكْتُبْنَا مَعَ الشَّاهِدِينَِ',
+				transliteration_bn:
+					'রব্বানায় আ-মান্না-বিমায় আন্যাল্তা অত্তাবা’র্না রাসূলা ফাক্তুব্না- মা‘আশ্ শা-হিদীন্।',
+				translations_bn:
+					'হে আমাদের রব, আপনি যা নাযিল করেছেন তার প্রতি আমরা ঈমান এনেছি এবং আমরা রাসূলের অনুসরণ করেছি। অতএব, আমাদেরকে সাক্ষ্যদাতাদের তালিকাভুক্ত করুন।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আলে ইমরান - ৩:৫৩',
+				top_en: '',
+				transliteration:
+					"Rabbana amanna bima anzalta wattaba 'nar-Rusula fak-tubna ma'ash-Shahideen",
+				translations_en:
+					'Our Lord, we have believed in what You revealed and have followed the messenger Jesus, so register us among the witnesses [to truth].',
+				bottom_en: '',
+				reference_en: 'Surah Al-Imran - 3:53'
+			}
+		],
+		pageTitle_bn: 'সূরা আলে ইমরান - ৩:৫৩',
+		pageTitle_en: 'Surah Al-Imran - 3:53'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'ربَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِي أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَِ',
+				transliteration_bn:
+					'রব্বানাগ্ র্ফিলানা- যুনূবানা- অইস্রা-ফানা- ফী য় আম্রিনা-অছাব্বিত্ আক্বদা-মানা- অর্ন্ছুনা- ‘আলাল্ ক্বাওমিল্ কা-ফিরীন্।',
+				translations_bn:
+					'হে আমাদের রব, আমাদের পাপ ও আমাদের কর্মে আমাদের সীমালঙ্ঘন ক্ষমা করুন এবং অবিচল রাখুন আমাদের পা সমূহকে, আর কাফির কওমের উপর আমাদেরকে সাহায্য করুন।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আলে ইমরান - ৩:১৪৭',
+				top_en: '',
+				transliteration:
+					"Rabbana-ghfir lana dhunuubana wa israfana fi amrina wa thabbit aqdamana wansurna 'alal qawmil kafireen",
+				translations_en:
+					'Our Lord, forgive us our sins and the excess [committed] in our affairs and plant firmly our feet and give us victory over the disbelieving people.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Imran - 3:147'
+			}
+		],
+		pageTitle_bn: 'ক্ষমা, একনিষ্ঠতা এবং বিজয় প্রার্থনা [৩:১৪৭]',
+		pageTitle_en: 'Seeking forgiveness, firmness and victory [3:147]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا مَا خَلَقْتَ هَذا بَاطِلاً سُبْحَانَكَ فَقِنَا عَذَابَ النَّارِ',
+				transliteration_bn:
+					'রব্বানা- মা- খালাক্ব্তা হা-যা-বা-ত্বিলা-; সুব্হা-নাকা ফাক্বিনা- ‘আযা-বান্ নার্-।',
+				translations_bn:
+					'হে আমাদের রব, তুমি এসব অনর্থক সৃষ্টি করনি। তুমি পবিত্র মহান। সুতরাং তুমি আমাদেরকে আগুনের আযাব থেকে রক্ষা কর',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					"Rabbana ma khalaqta hadha batila Subhanaka faqina 'adhaban-Naar",
+				translations_en:
+					'Our Lord, You did not create this aimlessly; exalted are You [above such a thing]; then protect us from the punishment of the Fire.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا إِنَّكَ مَن تُدْخِلِ النَّارَ فَقَدْ أَخْزَيْتَهُ وَمَا لِلظَّالِمِينَ مِنْ أَنصَارٍ',
+				transliteration_bn:
+					'রব্বানা য় ইন্নাকা মান্ তুদ্খিলিন্না-রা ফাক্বাদ্ আখ্যাইতাহূ অমা- লিজ্জোয়া-লিমীনা মিন্ আনছোয়ার্-।',
+				translations_bn:
+					'হে আমাদের রব, নিশ্চয় তুমি যাকে আগুনে প্রবেশ করাবে, অবশ্যই তাকে তুমি অপমান করবে। আর যালিমদের জন্য কোন সাহায্যকারী নেই',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					'Rabbana innaka man tudkhilin nara faqad akhzaytah wa ma liDh-dhalimeena min ansar',
+				translations_en:
+					'Our Lord, indeed whoever You admit to the Fire - You have disgraced him, and for the wrongdoers there are no helpers.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'رَّبَّنَا إِنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِي لِلْإِيمَانِ أَنْ آمِنُوا بِرَبِّكُمْ فَآمَنَّا ۚ رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا وَتَوَفَّنَا مَعَ الْأَبْرَارِ',
+				transliteration_bn:
+					'রব্বানা য় ইন্নানা- সামি’না- মুনা দিয়াইঁ ইয়ুনা-দী লিল্ঈমা-নি আন্ আ-মিনূ বিরব্বিকুম্ ফাআ-মান্না-, রব্বানা- ফার্গ্ফিলানা-যুনূবানা-অকার্ফ্ফি ‘আন্না-সাইয়িআ-তিনা-অতাওয়াফ্ফানা- মা‘আল্ আব্রার্-।',
+				translations_bn:
+					'হে আমাদের রব, নিশ্চয় আমরা শুনেছিলাম একজন আহ্বানকারীকে, যে ঈমানের দিকে আহবান করে যে, ‘তোমরা তোমাদের রবের প্রতি ঈমান আন। তাই আমরা ঈমান এনেছি। হে আমাদের রব আমাদের গুনাহসমূহ ক্ষমা করুন এবং বিদূরিত করুন আমাদের ত্রুটি-বিচ্যুতি, আর আমাদেরকে মৃত্যু দিন নেককারদের সাথে',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					'Rabbana innana samiAAnamunadiyan yunadee lil-eemani an aminoobirabbikum faamanna rabbana faghfirlana thunoobana wakaffir AAannasayyi-atina watawaffana maAAa al-abrar',
+				translations_en:
+					"Our Lord, indeed we have heard a caller calling to faith, [saying], 'Believe in your Lord,' and we have believed. Our Lord, so forgive us our sins and remove from us our misdeeds and cause us to die with the righteous.",
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا وَآتِنَا مَا وَعَدتَّنَا عَلَىٰ رُسُلِكَ وَلَا تُخْزِنَا يَوْمَ الْقِيَامَةِ ۗ إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ',
+				transliteration_bn:
+					'রব্বানা- অআ-তিনা-মা-অ‘আত্তানা- ‘আলা-রুসুলিকা অলা-তুখ্যিনা-ইয়াওমাল্ ক্বিয়া-মাহ্; ইন্নাকা লা-তুখ্লিফুল্ মী‘আ-দ্।',
+				translations_bn:
+					'হে আমাদের রব, আর আপনি আমাদেরকে তা প্রদান করুন যার ওয়াদা আপনি আমাদেরকে দিয়েছেন আপনার রাসূলগণের মাধ্যমে। আর কিয়ামতের দিনে আপনি আমাদেরকে অপমান করবেন না। নিশ্চয় আপনি অঙ্গীকার ভঙ্গ করেন না',
+				bottom_bn: '',
+				reference_bn: 'সূরা আলে ইমরান - ৩:১৯১-১৯৪',
+				top_en: '',
+				transliteration:
+					'Rabbana waatina mawaAAadtana AAala rusulika wala tukhzinayawma alqiyamati innaka la tukhlifu almeeAAad',
+				translations_en:
+					'Our Lord, and grant us what You promised us through Your messengers and do not disgrace us on the Day of Resurrection. Indeed, You do not fail in [Your] promise.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Imran - 3:191-194'
+			}
+		],
+		pageTitle_bn: 'সূরা আলে ইমরান - ৩:১৯১-১৯৪',
+		pageTitle_en: 'Surah Al-Imran - 3:191-194'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا أَخْرِجْنَا مِنْ هَٰذِهِ الْقَرْيَةِ الظَّالِمِ أَهْلُهَا وَاجْعَلْ لَنَا مِنْ لَدُنْكَ وَلِيًّا وَاجْعَلْ لَنَا مِنْ لَدُنْكَ نَصِيرًا',
+				transliteration_bn:
+					'রব্বানা য় আখ্রিজ্ব না-মিন্ হা-যিহিল্ র্ক্বাইয়াতিজ্জোয়া-লিমি আহ্লুহা- অজ্ব’আল্ লানা- মিল্লাদুন্কা অলিয়্যাওঁ অজ্ব ‘আল্ লানা-মিল্লাদুন্কা নাছীরা-।',
+				translations_bn:
+					'হে আমাদের রব, আমাদেরকে বের করুন এ জনপদ থেকে যার অধিবাসীরা যালিম এবং আমাদের জন্য আপনার পক্ষ থেকে একজন অভিভাবক নির্ধারণ করুন। আর নির্ধারণ করুন আপনার পক্ষ থেকে একজন সাহায্যকারী',
+				bottom_bn: '',
+				reference_bn: 'সূরা আন-নিসা - ৪:৭৫ ',
+				top_en: '',
+				transliteration:
+					'rabbana akhrijna min hathihialqaryati aththalimi ahluhawajAAal lana min ladunka waliyyan wajAAallana min ladunka naseera',
+				translations_en:
+					'Our Lord, take us out of this city of oppressive people and appoint for us from Yourself a protector and appoint for us from Yourself a helper?',
+				bottom_en: '',
+				reference_en: 'Surah An-Nisa - 4:75'
+			}
+		],
+		pageTitle_bn: 'মজলুমের দোআ [৪:৭৫]',
+		pageTitle_en: 'Dua of an oppressed person[4:75]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ إِنِّي لَا أَمْلِكُ إِلَّا نَفْسِي وَأَخِي ۖ فَافْرُقْ بَيْنَنَا وَبَيْنَ الْقَوْمِ الْفَاسِقِينَ',
+				transliteration_bn:
+					'রব্বি ইন্নী লা য় আম্লিকু ইল্লা-নাফ্সী অআখী ফাফ্রুক্ব বাইনানা- অবাইনাল্ ক্বাওমিল্ ফা-সিক্বীন্। ',
+				translations_bn:
+					'হে আমার রব, আমি আমার ও আমার ভাই ছাড়া কারো উপরে অধিকার রাখি না। সুতরাং আপনি আমাদের ও ফাসিক কওমের মধ্যে বিচ্ছেদ করে দিন।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল মায়েদাহ - ৫:২৫',
+				top_en: '',
+				transliteration:
+					'rabbi innee la amliku illanafsee waakhee fafruq baynana wabayna alqawmi alfasiqeen',
+				translations_en:
+					'"My Lord, indeed I do not possess except myself and my brother, so part us from the defiantly disobedient people."',
+				bottom_en: '',
+				reference_en: "Surah Al-Ma'idah - 5:25"
+			}
+		],
+		pageTitle_bn: 'সূরা আল মায়েদাহ - ৫:২৫',
+		pageTitle_en: "Surah Al-Ma'ida - 5:25"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبَّنَا آمَنَّا فَاكْتُبْنَا مَعَ الشَّاهِدِينَ',
+				transliteration_bn: 'রব্বানা য় আ-মান্না- ফাক্তুব্না- মা‘আশ্ শা-হিদীন্।',
+				translations_bn:
+					'হে আমাদের রব, আমরা ঈমান এনেছি। সুতরাং আপনি আমাদেরকে সাক্ষ্য দানকারীদের সঙ্গে লিপিবদ্ধ করুন।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: "Rabbana aamana faktubna ma' ash-shahideen",
+				translations_en:
+					'Our Lord, we have believed, so register us among the witnesses.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'وَمَا لَنَا لَا نُؤْمِنُ بِاللَّهِ وَمَا جَاءَنَا مِنَ الْحَقِّ وَنَطْمَعُ أَن يُدْخِلَنَا رَبُّنَا مَعَ الْقَوْمِ الصَّالِحِينَ',
+				transliteration_bn:
+					'অমা- লানা- লা-নু”মিনু বিল্লা-হি অমা-জ্বা - য়ানা-মিনাল্ হাক্ব ক্বি অনাত্ব মা‘উ আঁই ইয়ুদ্খিলানা- রব্বুনা-মা‘আল্ ক্বাওমিছ্ ছোয়া-লিহীন্। ',
+				translations_bn:
+					'আর আমাদের কী হয়েছে যে, আমরা আল্লাহর প্রতি এবং যে সত্য আমাদের কাছে এসেছে তার প্রতি ঈমান আনব না? আর আমরা আশা করব না যে, আমাদের রব আমাদেরকে প্রবেশ করাবেন নেককার সম্প্রদায়ের সাথে’।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল মায়েদাহ - ৫:৮৩ - ৮৪',
+				top_en: '',
+				transliteration:
+					'Wama lana la nu/minu billahiwama jaana mina alhaqqi wanatmaAAuan yudkhilana rabbuna maAAa alqawmi assaliheen',
+				translations_en:
+					'And why should we not believe in Allah and what has come to us of the truth? And we aspire that our Lord will admit us [to Paradise] with the righteous people."',
+				bottom_en: '',
+				reference_en: "Surah Al-Ma'idah - 5:83-84"
+			}
+		],
+		pageTitle_bn: 'সূরা আল মায়েদাহ - ৫:৮৩ - ৮৪',
+		pageTitle_en: "Surah Al-Ma'ida - 5:83-84"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا أَنزِلْ عَلَيْنَا مَآئِدَةً مِّنَ السَّمَاء تَكُونُ لَنَا عِيداً لِّأَوَّلِنَا وَآخِرِنَا وَآيَةً مِّنكَ وَارْزُقْنَا وَأَنتَ خَيْرُ الرَّازِقِينَ',
+				transliteration_bn:
+					'রব্বানা য় আন্যিল্ ‘আলাইনা- মা - য়িদাতাম্ মিনাস্ সামা - য়ি তাকূনু লানা-‘ঈদাল্ লিআওয়্যালিনা-অ আ-খিরিনা-অ আ-ইয়াতাম্ মিন্কা, অরযুক্ব না-অ আন্তা খাইর্রু রা-যিক্বীন্।',
+				translations_bn:
+					'হে আমাদের রব, আসমান থেকে আমাদের প্রতি খাবারপূর্ণ দস্তরখান নাযিল করুন; এটা আমাদের জন্য ঈদ হবে। আমাদের পূর্ববর্তী ও পরবর্তীদের জন্য। আর আপনার পক্ষ থেকে এক নিদর্শন হবে। আর আমাদেরকে রিযিক দান করুন, আপনিই শ্রেষ্ঠ রিযিকদাতা',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল মায়েদাহ - ৫:১১৪',
+				top_en: '',
+				transliteration:
+					"Rabbana anzil 'alayna ma'idatam minas-Samai tuknu lana 'idal li-awwa-lina wa aakhirna wa ayatam-minka war-zuqna wa anta Khayrul-Raziqeen",
+				translations_en:
+					'O Allah, our Lord, send down to us a table [spread with food] from the heaven to be for us a festival for the first of us and the last of us and a sign from You. And provide for us, and You are the best of providers.',
+				bottom_en: '',
+				reference_en: "Surah Al-Ma'ida - 5:114"
+			}
+		],
+		pageTitle_bn: 'সূরা আল মায়েদাহ - ৫:১১৪',
+		pageTitle_en: "Surah Al-Ma'ida - 5:114"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ',
+				transliteration_bn:
+					'রব্বানা- জোয়ালাম্না- আন্ফুসানা- অইল্লাম্ তার্গ্ফিলানা-অর্তাহাম্না-লানাকূনান্না মিনাল্ খা-সিরীন্।',
+				translations_bn:
+					'হে আমাদের রব, আমরা নিজদের উপর যুল্‌ম করেছি। আর যদি আপনি আমাদেরকে ক্ষমা না করেন এবং আমাদেরকে দয়া না করেন তবে অবশ্যই আমরা ক্ষতিগ্রস্তদের অন্তর্ভুক্ত হব',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আরাফ - ৭:২৩',
+				top_en: '',
+				transliteration:
+					'Rabbana zalamna anfusina wa il lam taghfir lana wa tarhamna lana kunan minal-khasireen',
+				translations_en:
+					'Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.',
+				bottom_en: '',
+				reference_en: "Surah Al-A'raf - 7:23"
+			}
+		],
+		pageTitle_bn: 'পাপ করার পর ক্ষমা প্রার্থনা [৭:২৩]',
+		pageTitle_en: 'Seeking forgiveness and mercy after sinning [7:23]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبَّنَا لاَ تَجْعَلْنَا مَعَ الْقَوْمِ الظَّالِمِينَ',
+				transliteration_bn:
+					'রব্বানা- লা-তাজু‘আল্না- মা‘আল্ ক্বাওমিজ্জোয়া-লিমীন্।',
+				translations_bn:
+					'হে আমাদের রব, আমাদেরকে যালিম কওমের অন্তর্ভুক্ত করবেন না',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আরাফ - ৭:৪৭',
+				top_en: '',
+				transliteration: "Rabbana la taj'alna ma'al qawwmi-dhalimeen",
+				translations_en:
+					'Our Lord, do not place us with the wrongdoing people.',
+				bottom_en: '',
+				reference_en: "Surah Al-A'raf - 7:47"
+			}
+		],
+		pageTitle_bn: 'যালিম কওমের অন্তর্ভুক্ত না হওয়ার দোআ [৭:৪৭]',
+		pageTitle_en: 'Dua for not placing among wrongdoers [7:47]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'عَلَى اللَّهِ تَوَكَّلْنَا ۚ رَبَّنَا افْتَحْ بَيْنَنَا وَبَيْنَ قَوْمِنَا بِالْحَقِّ وَأَنتَ خَيْرُ الْفَاتِحِينَ',
+				transliteration_bn:
+					'আলাল্লা-হি তাওয়াক্কাল্না-; রব্বানাফ্তাহ্ বাইনানা- অবাইনা ক্বওমিনা-বিল্হাকক্বি অআন্তা খাইরুল্ ফা-তিহীন্। ',
+				translations_bn:
+					'আল্লাহরই উপর আমরা তাওয়াক্কুল করি। হে আমাদের রব, আমাদের ও আমাদের কওমের মধ্যে যথার্থ ফয়সালা করে দিন। আর আপনি শ্রেষ্ঠ ফয়সালাকারী।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আরাফ - ৭:৮৯',
+				top_en: '',
+				transliteration:
+					'AAala Allahi tawakkalna rabbanaiftah baynana wabayna qawmina bilhaqqiwaanta khayru alfatiheen',
+				translations_en:
+					'Upon Allah we have relied. Our Lord, decide between us and our people in truth, and You are the best of those who give decision."',
+				bottom_en: '',
+				reference_en: "Surah Al-A'raf - 7:89"
+			}
+		],
+		pageTitle_bn: 'সূরা আল আরাফ - ৭:৮৯',
+		pageTitle_en: "Surah Al-A'raf - 7:89"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَتَوَفَّنَا مُسْلِمِينَ',
+				transliteration_bn:
+					'রব্বানা য় আফ্রিগ্ ‘আলাইনা- ছব্বাওঁ অতাওয়াফ্ফানা-মুস্লিমীন্।',
+				translations_bn:
+					'হে আমাদের রব, আমাদেরকে পরিপূর্ণ ধৈর্য দান করুন এবং মুসলিম হিসাবে আমাদেরকে মৃত্যু দান করুন',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আরাফ - ৭:১২৬',
+				top_en: '',
+				transliteration: "Rabbana afrigh 'alayna sabraw wa tawaffana Muslimeen",
+				translations_en:
+					'Our Lord, pour upon us patience and let us die as Muslims [in submission to You].',
+				bottom_en: '',
+				reference_en: "Surah Al-A'raf - 7:126"
+			}
+		],
+		pageTitle_bn: 'ধৈর্য লাভ এবং মুসলমান হিসেবে মৃত্যু চাওয়া [৭:১২৬]',
+		pageTitle_en: 'Seeking patience and dying as a muslim [7:126]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ اغْفِرْ لِي وَلِأَخِي وَأَدْخِلْنَا فِي رَحْمَتِكَ ۖ وَأَنْتَ أَرْحَمُ الرَّاحِمِينَ',
+				transliteration_bn:
+					'রব্বির্গ্ফিলী অলিআখী অআদ্খিল্না- ফী রহ্মাতিকা অ আন্তা র্আহার্মু র-হিমীন্।',
+				translations_bn:
+					'আমার রব, ক্ষমা করুন আমাকে ও আমার ভাইকে এবং আপনার রহমতে আমাদের প্রবেশ করান। আর আপনিই রহমকারীদের মধ্যে শ্রেষ্ঠ।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আরাফ - ৭:১৫১',
+				top_en: '',
+				transliteration:
+					'Rabbi ighfir lee wali akhee wa adkhilna fee rahmatika wa anta arhamur rahimeen',
+				translations_en:
+					'My Lord, forgive me and my brother and admit us into Your mercy, for You are the most merciful of the merciful.',
+				bottom_en: '',
+				reference_en: "Surah Al-A'raf - 7:151"
+			}
+		],
+		pageTitle_bn: 'ক্ষমা এবং রহমত প্রার্থনা [৭:১৫১]',
+		pageTitle_en: 'Seeking forgiveness and mercy [7:151]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ لَوْ شِئْتَ أَهْلَكْتَهُم مِّن قَبْلُ وَإِيَّايَ ۖ أَتُهْلِكُنَا بِمَا فَعَلَ السُّفَهَاءُ مِنَّا ۖ إِنْ هِيَ إِلَّا فِتْنَتُكَ تُضِلُّ بِهَا مَن تَشَاءُ وَتَهْدِي مَن تَشَاءُ ۖ أَنتَ وَلِيُّنَا فَاغْفِرْ لَنَا وَارْحَمْنَا ۖ وَأَنتَ خَيْرُ الْغَافِرِينَ',
+				transliteration_bn:
+					'রব্বি লাও শি”তা আহ্লাক্তাহুম্ মিন্ ক্বব্লু অ ইয়্যা-ইয়া আতুহ্লিকুনা- বিমা-ফা‘আলাস্ সুফাহা - য়ু মিন্না- ইন্ হিয়া ইল্লা- ফিত্নাতুক্ ; তুদ্ধিল্লু বিহা-মান্ তাশা - য়ু অতাহ্দী মান্ তাশা - য়ু; আন্তা অলিয়্যুনা-ফার্গ্ফিলানা-র্অহাম্না- অআন্তা খাইরুল্ গ-ফিরীন্। ',
+				translations_bn:
+					'হে আমার রব, আপনি চাইলে ইতঃপূর্বে এদের ধ্বংস করতে পারতেন এবং আমাকেও। আমাদের মধ্যে নির্বোধরা যা করেছে তার কারণে কি আমাদেরকে ধ্বংস করবেন? এটাতো আপনার পরীক্ষা ছাড়া কিছু না। এর মাধ্যমে যাকে চান আপনি পথভ্রষ্ট করেন এবং যাকে চান হিদায়াত দান করেন। আপনি আমাদের অভিভাবক। সুতরাং আমাদের ক্ষমা করে দিন এবং আপনি উত্তম ক্ষমাশীল।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					'rabbi lawshi/ta ahlaktahum min qablu wa-iyyaya atuhlikunabima faAAala assufahao minna in hiyailla fitnatuka tudillu biha man tashaowatahdee man tashao anta waliyyuna faghfirlana warhamna waanta khayru alghafireen',
+				translations_en:
+					'"My Lord, if You had willed, You could have destroyed them before and me [as well]. Would You destroy us for what the foolish among us have done? This is not but Your trial by which You send astray whom You will and guide whom You will. You are our Protector, so forgive us and have mercy upon us; and You are the best of forgivers.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'وَاكْتُبْ لَنَا فِي هَٰذِهِ الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ إِنَّا هُدْنَا إِلَيْكَ',
+				transliteration_bn:
+					'অক্তুব্ লানা-ফী হা-যিহিদ্ দুন্ইয়া- হাসানাতাঁও অফিল্ আ-খারতি ইন্না-হুদ্না য় ইলাইক্',
+				translations_bn:
+					'আর আমাদের জন্য এ দুনিয়াতে ও আখিরাতে কল্যাণ লিখে দিন। নিশ্চয় আমরা আপনার দিকে প্রত্যাবর্তন করেছি',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আরাফ - ৭:১৫৫-১৫৬',
+				top_en: '',
+				transliteration:
+					'Waktub lana fee hathihi ddunya hasanatan wafee al-akhiratiinna hudna ilayk',
+				translations_en:
+					'And decree for us in this world [that which is] good and [also] in the Hereafter; indeed, we have turned back to You.',
+				bottom_en: '',
+				reference_en: "Surah Al-A'raf - 7:155-156"
+			}
+		],
+		pageTitle_bn: 'সূরা আল আরাফ - ৭:১৫৫-১৫৬',
+		pageTitle_en: "Surah Al-A'raf - 7:155-156"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'لَئِنْ آتَيْتَنَا صَالِحًا لَّنَكُونَنَّ مِنَ الشَّاكِرِينَ',
+				transliteration_bn:
+					'লায়িন্ আ-তাইতানা-ছোয়া-লিহাল্ লানাকূনান্না মিনশ্ শা -কিরীন্',
+				translations_bn:
+					'দি আপনি আমাদেরকে সুসন্তান দান করেন তবে অবশ্যই আমরা কৃতজ্ঞদের অন্তর্ভুক্ত হব',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আরাফ - ৭:১৮৯',
+				top_en: '',
+				transliteration: 'la-in ataytanasalihan lanakoonanna mina ashshakireen',
+				translations_en:
+					'"If You should give us a good [child], we will surely be among the grateful."',
+				bottom_en: '',
+				reference_en: "Surah Al-A'raf - 7:189"
+			}
+		],
+		pageTitle_bn: 'সূরা আল আরাফ - ৭:১৮৯',
+		pageTitle_en: "Surah Al-A'raf - 7:189"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'لَئِنْ أَنجَيْتَنَا مِنْ هَٰذِهِ لَنَكُونَنَّ مِنَ الشَّاكِرِينَ',
+				transliteration_bn:
+					'লায়িন্ আন্জ্বাইতানা-মিন্ হা-যিহী লানাকূনান্না মিনাশ্ শা-কিরীন্',
+				translations_bn:
+					'যদি আপনি এ থেকে আমাদেরকে নাজাত দেন, তাহলে আমরা অবশ্যই কৃতজ্ঞদের অন্তর্ভুক্ত হব',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইউনুস - ১০:২২',
+				top_en: '',
+				transliteration:
+					'la-in anjaytana min hathihi lanakoonanna mina ashshakireen',
+				translations_en:
+					'"If You should save us from this, we will surely be among the thankful."',
+				bottom_en: '',
+				reference_en: 'Surah Yunus - 10:22'
+			}
+		],
+		pageTitle_bn: 'সূরা ইউনুস - ১০:২২',
+		pageTitle_en: 'Surah Yunus - 10:22'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'عَلَى اللَّهِ تَوَكَّلْنَا رَبَّنَا لَا تَجْعَلْنَا فِتْنَةً لِلْقَوْمِ الظَّالِمِينَ',
+				transliteration_bn:
+					"আ'লাল্লাহি তাওাক্কালনা- রাব্বানা- লা- তাজআ'লনা- ফিতনাতান লিক্বওমিয য-লিমি-ন",
+				translations_bn:
+					'আমরা আল্লাহর উপরই তাওয়াক্কুল করলাম। হে আমাদের রব, আপনি আমাদেরকে যালিম কওমের ফিতনার পাত্র বানাবেন না',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					"Alal Allahi thawakkalna rabbana la taj'alna fitnatal lil-qawmidh-Dhalimeen.",
+				translations_en:
+					'Upon Allah do we rely. Our Lord, make us not [objects of] trial for the wrongdoing people',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَنَجِّنَا بِرَحْمَتِكَ مِنَ الْقَوْمِ الْكَافِرِينَ',
+				transliteration_bn: "ওয়া নাজ্জিনা- বিরহ'মাতিকা মিনাল ক্বওমিল কা-ফিরি-ন",
+				translations_bn: 'আর আমাদেরকে আপনার অনুগ্রহে কাফির কওম থেকে নাজাত দিন',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইউনুস - ১০:৮৫-৮৬',
+				top_en: '',
+				transliteration: 'Wa najjina bi-Rahmatika minal qawmil kafireen.',
+				translations_en:
+					'And save us by Your mercy from the disbelieving people.',
+				bottom_en: '',
+				reference_en: 'Surah Yunus - 10:85-86'
+			}
+		],
+		pageTitle_bn: 'সূরা ইউনুস - ১০:৮৫-৮৬',
+		pageTitle_en: 'Surah Yunus - 10:85-86'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا إِنَّكَ آتَيْتَ فِرْعَوْنَ وَمَلَأَهُ زِينَةً وَأَمْوَالًا فِي الْحَيَاةِ الدُّنْيَا رَبَّنَا لِيُضِلُّوا عَن سَبِيلِكَ ۖ رَبَّنَا اطْمِسْ عَلَىٰ أَمْوَالِهِمْ وَاشْدُدْ عَلَىٰ قُلُوبِهِمْ فَلَا يُؤْمِنُوا حَتَّىٰ يَرَوُا الْعَذَابَ الْأَلِيمَ',
+				transliteration_bn:
+					'রব্বানা য় ইন্নাকা আ-তাইতা ফির‘আউনা অমালায়াহূ যীনাতাওঁ অআম্ওয়া-লান্ ফিল্ হা-ইয়া-তিদ্দুন্ইয়া-রব্বানা-লিইয়ুদ্বিল্ল আন্ সাবীলিকা রব্বানাত্বমিস্ ‘আলা য় আম্ওয়া-লিহিম্ অশ্দুদ্ ‘আলা-কুলূবিহিম্ ফালা-ইয়ুমিনূ হাত্তা-ইয়ারাউল্ ‘আযা-বাল্ আলীম্। ',
+				translations_bn:
+					'হে আমাদের রব, আপনি ফির’আউন ও তার পরিষদবর্গকে দুনিয়াবী জীবনে সৌন্দর্য ও ধন-সম্পদ দান করেছেন। হে আমাদের রব, যাতে তারা আপনার পথ থেকে গোমরাহ করতে পারে। হে আমাদের রব, তাদের ধন-সম্পদ নিশ্চিহ্ন করে দিন, তাদের অন্তরসমূহকে কঠোর করে দিন। ফলে তারা ঈমান আনবে না, যতক্ষণ না যন্ত্রণাদায়ক আযাব দেখে',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইউনুস - ১০:৮৮',
+				top_en: '',
+				transliteration:
+					'rabbanainnaka atayta firAAawna wamalaahu zeenatan waamwalanfee alhayati addunya rabbanaliyudilloo AAan sabeelika rabbana itmis AAalaamwalihim washdud AAala quloobihim falayu/minoo hatta yarawoo alAAathaba al-aleem',
+				translations_en:
+					'"Our Lord, indeed You have given Pharaoh and his establishment splendor and wealth in the worldly life, our Lord, that they may lead [men] astray from Your way. Our Lord, obliterate their wealth and harden their hearts so that they will not believe until they see the painful punishment."',
+				bottom_en: '',
+				reference_en: 'Surah Yunus - 10:88'
+			}
+		],
+		pageTitle_bn: 'সূরা ইউনুস - ১০:৮৮',
+		pageTitle_en: 'Surah Yunus - 10:88'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'بِسْمِ ٱللَّهِ مَجْر۪ىٰهَا وَمُرْسَىٰهَآۚ إِنَّ رَبِّى لَغَفُورٌ رَّحِيمٌ',
+				transliteration_bn:
+					'বিস্মিল্লা-হি মাজ্বরে-হা-অর্মুসা-হা-; ইন্না রব্বী লাগফূর্রু রহীম্',
+				translations_bn:
+					'এর চলা ও থামা হবে আল্লাহর নামে। নিশ্চয় আমার রব অতি ক্ষমাশীল, পরম দয়ালু।',
+				bottom_bn: '',
+				reference_bn: 'সূরা হুদ - ১১:৪১',
+				top_en: '',
+				transliteration:
+					"bismillahi majre-ha wa mursa-ha, inna rabbi lagafu-rur ra'heem",
+				translations_en:
+					'in the name of Allah is its course and its anchorage. Indeed, my Lord is Forgiving and Merciful."',
+				bottom_en: '',
+				reference_en: 'Surah Hud - 11:41'
+			}
+		],
+		pageTitle_bn: 'সূরা হুদ - ১১:৪১',
+		pageTitle_en: 'Surah Hud - 11:41'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ إِنِّي أَعُوذُ بِكَ أَنْ أَسْأَلَكَ مَا لَيْسَ لِي بِهِ عِلْمٌ ۖ وَإِلَّا تَغْفِرْ لِي وَتَرْحَمْنِي أَكُنْ مِنَ الْخَاسِرِينَ',
+				transliteration_bn:
+					'রব্বি ইন্নী য় আ‘ঊযুবিকা আন্ আস্য়ালাকা মা-লাইসা লী বিহী ‘ইল্ম্; অ ইল্লা-তার্গ্ফিলী অর্তাহাম্নী য় আকুম্মিনাল্ খা-সিরীন্।',
+				translations_bn:
+					'হে আমার রব, যে বিষয়ে আমার জ্ঞান নেই তা চাওয়া থেকে আমি অবশ্যই আপনার আশ্রয় চাই। আর যদি আপনি আমাকে মাফ না করেন এবং আমার প্রতি দয়া না করেন, তবে আমি ক্ষতিগ্রস্তদের অন্তর্ভুক্ত হয়ে যাব',
+				bottom_bn: '',
+				reference_bn: 'সূরা হুদ - ১১:৪৭',
+				top_en: '',
+				transliteration:
+					'Rabbi innee aoothu bika an as alaka ma laysa lee bihi ilmun wa illa taghfir lee wa tarhamnee akun minal khasireen',
+				translations_en:
+					'My Lord, I seek refuge in You from asking that of which I have no knowledge. And unless You forgive me and have mercy upon me, I will be among the losers.',
+				bottom_en: '',
+				reference_en: 'Surah Hud - 11:47'
+			}
+		],
+		pageTitle_bn: 'সূরা হুদ - ১১:৪৭',
+		pageTitle_en: 'Surah Hud - 11:47'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'مَعَاذَ اللَّهِ ۖ إِنَّهُ رَبِّي أَحْسَنَ مَثْوَايَ ۖ إِنَّهُ لَا يُفْلِحُ الظَّالِمُونَ',
+				transliteration_bn:
+					'মা‘আ-যাল্লাহি ইন্নাহূ রব্বী য় আহ্সানা মাছ্ওয়া-ইয়া; ইন্নাহূ লা-ইয়ুফ্লিহুজ্ জোয়া-লিমূন্। ',
+				translations_bn:
+					'আল্লাহর আশ্রয় (চাই)। নিশ্চয় তিনি আমার মনিব, তিনি আমার থাকার সুন্দর ব্যবস্থা করেছেন। নিশ্চয় যালিমগণ সফল হয় না।',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইউসুফ - ১২:২৩',
+				top_en: '',
+				transliteration:
+					'maAAatha Allahi innahu rabbee ahsanamathwaya innahu la yuflihu aththalimoon',
+				translations_en:
+					'"[I seek] the refuge of Allah . Indeed, he is my master, who has made good my residence. Indeed, wrongdoers will not succeed."',
+				bottom_en: '',
+				reference_en: 'Surah Yusuf - 12:23'
+			}
+		],
+		pageTitle_bn: 'সূরা ইউসুফ - ১২:২৩',
+		pageTitle_en: 'Surah Yusuf - 12:23'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ ٱلسِّجْنُ أَحَبُّ إِلَىَّ مِمَّا يَدْعُونَنِىٓ إِلَيْهِ ۖ وَإِلَّا تَصْرِفْ عَنِّى كَيْدَهُنَّ أَصْبُ إِلَيْهِنَّ وَأَكُن مِّنَ ٱلْجَٰهِلِينَ',
+				transliteration_bn:
+					'রব্বিস্ সিজ্বনু আহাব্বু ইলাইয়্যা মিম্মা- ইয়াদ্‘ঊনানী য় ইলাইহি অইল্লা-তাছ্রিফ্ ‘আন্নী কাইদাহুন্না আছ্বু ইলাইহিন্না অআকুম্মিনাল্ জ্বা-হিলীন্।',
+				translations_bn:
+					'হে আমার রব, তারা আমাকে যে কাজের প্রতি আহ্বান করছে তা থেকে কারাগারই আমার নিকট অধিক প্রিয়। আর যদি আপনি আমার থেকে তাদের চক্রান্ত প্রতিহত না করেন তবে আমি তাদের প্রতি আকৃষ্ট হয়ে পড়ব এবং আমি মূর্খদের অন্তর্ভুক্ত হব',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইউসুফ - ১২:৩৩',
+				top_en: '',
+				transliteration:
+					'rabbi assijnu ahabbuilayya mimma yadAAoonanee ilayhi wa-illa tasrifAAannee kaydahunna asbu ilayhinna waakun mina aljahileen',
+				translations_en:
+					'My Lord, prison is more to my liking than that to which they invite me. And if You do not avert from me their plan, I might incline toward them and [thus] be of the ignorant.',
+				bottom_en: '',
+				reference_en: 'Surah Yusuf - 12:33'
+			}
+		],
+		pageTitle_bn: 'সূরা ইউসুফ - ১২:৩৩',
+		pageTitle_en: 'Surah Yusuf - 12:33'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ قَدْ آتَيْتَنِي مِنَ الْمُلْكِ وَعَلَّمْتَنِي مِن تَأْوِيلِ الْأَحَادِيثِ ۚ فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ أَنتَ وَلِيِّي فِي الدُّنْيَا وَالْآخِرَةِ ۖ تَوَفَّنِي مُسْلِمًا وَأَلْحِقْنِي بِالصَّالِحِينَ',
+				transliteration_bn:
+					'রব্বী ক্বদ্ আ-তাইতানী মিনাল্ মুল্কি অ‘আল্লাম্তানী মিন্ তা’ওয়ীলিল্ আহা-দীছি, ফা-ত্বিরস্ সামা-ওয়া-তি অল্ র্আদ্বি আন্তা অলিয়্যী ফিদ্দুনইয়া-অল্ আ-খিরতি, তাঅফ্ফানী মুস্লিমাওঁ অ আল্হিক্বুনী বিচ্ছোয়া-লিহীন্। ',
+				translations_bn:
+					'হে আমার রব, আপনি আমাকে কিছু রাজত্ব দান করেছেন এবং স্বপ্নের কিছু ব্যাখ্যা শিখিয়েছেন। হে আসমানসমূহ ও যমীনের স্রষ্টা, দুনিয়া ও আখিরাতে আপনিই আমার অভিভাবক, আমাকে মুসলিম অবস্থায় মৃত্যু দিন এবং নেককারদের সাথে আমাকে যুক্ত করুন',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইউসুফ - ১২:১০১',
+				top_en: '',
+				transliteration:
+					'Rabbi qad ataytanee mina almulkiwaAAallamtanee min ta/weeli al-ahadeethi fatira assamawatiwal-ardi anta waliyyee fee addunyawal-akhirati tawaffanee musliman waalhiqneebissaliheen',
+				translations_en:
+					'My Lord, You have given me [something] of sovereignty and taught me of the interpretation of dreams. Creator of the heavens and earth, You are my protector in this world and in the Hereafter. Cause me to die a Muslim and join me with the righteous."',
+				bottom_en: '',
+				reference_en: 'Surah Yusuf - 12:101'
+			}
+		],
+		pageTitle_bn: 'মুসলমান হিসেবে মৃত্যু এবং নেককারদের অন্তর্ভুক্তি [১২:১০১]',
+		pageTitle_en: 'Seeking death among the righteous muslims [12:101]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ اجْعَلْ هَٰذَا الْبَلَدَ آمِنًا وَاجْنُبْنِي وَبَنِيَّ أَن نَّعْبُدَ الْأَصْنَامَ',
+				transliteration_bn:
+					'রব্বিজ্ব‘আল্ হা-যাল্ বালাদা আ-মিনাঁও অজ্বনুব্নী- অ বানিয়্যা আন্ না’বুদাল্ আছ্না-ম্।',
+				translations_bn:
+					'যখন ইবরহীম বলল, ‘হে আমার রব, আপনি এ শহরকে নিরাপদ করে দিন এবং আমাকে ও আমার সন্তানদেরকে মূর্তি পূজা থেকে দূরে রাখুন',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইবরাহিম - ১৪:৩৫',
+				top_en: '',
+				transliteration:
+					'rabbi ijAAal hatha albalada aminan wajnubneewabaniyya an naAAbuda al-asnam',
+				translations_en:
+					'My Lord, make this city [Makkah] secure and keep me and my sons away from worshipping idols.',
+				bottom_en: '',
+				reference_en: 'Surah Ibraheem - 14:35'
+			}
+		],
+		pageTitle_bn: 'সূরা ইবরাহিম - ১৪:৩৫',
+		pageTitle_en: 'Surah Ibraheem - 14:35'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ وَمِنْ ذُرِّيَّتِي ۚ رَبَّنَا وَتَقَبَّلْ دُعَاءِ',
+				transliteration_bn:
+					'রব্বিজ্ব্‘আল্নী মুক্বীমাছ্ ছলা-তি অমিন্ র্যুরিয়্যাতী রব্বানা- অ তাক্বাব্বাল্ দু‘আ-য়।',
+				translations_bn:
+					'হে আমার রব, আমাকে সলাত কায়েমকারী বানান এবং আমার বংশধরদের মধ্য থেকেও, হে আমাদের রব, আর আমার দু’আ কবূল করুন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					'Rabbij alnee muqeemas salaati wa min thurriyyatee rabbana wa taqabbal duaa',
+				translations_en:
+					'My Lord, make me an establisher of prayer, and [many] from my descendants. Our Lord, and accept my supplication.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ',
+				transliteration_bn:
+					'রব্বানার্গ্ফিলী অলিওয়া লিদাইয়্যা অ- লিল্মুমিনীনা ইয়াওমা ইয়াক্বুমুল্ হিসা-ব্।',
+				translations_bn:
+					'হে আমাদের রব, যেদিন হিসাব কায়েম হবে, সেদিন আপনি আমাকে, আমার পিতামাতাকে ও মুমিনদেরকে ক্ষমা করে দিবেন',
+				bottom_bn: '',
+				reference_bn: 'সূরা ইবরাহিম - ১৪:৪০-৪১',
+				top_en: '',
+				transliteration:
+					"Rabbana ghfir li wa li wallidayya wa lil Mu'mineena yawma yaqumul hisaab",
+				translations_en:
+					'Our Lord, forgive me and my parents and the believers the Day the account is established.',
+				bottom_en: '',
+				reference_en: 'Surah Ibraheem - 14:40-41'
+			}
+		],
+		pageTitle_bn: 'সূরা ইবরাহিম - ১৪:৪০-৪১',
+		pageTitle_en: 'Surah Ibraheem - 14:40-41'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا',
+				transliteration_bn: 'রর্ব্বি হাম্হুমা-কামা-রব্বাইয়া-নী ছোয়াগীর।',
+				translations_bn:
+					'হে আমার রব, তাদের প্রতি দয়া করুন যেভাবে শৈশবে তারা আমাকে লালন-পালন করেছেন',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-ইসরা - ১৭:২৪',
+				top_en: '',
+				transliteration: 'Rabbi  irhamhuma kama rabbayani sagheera',
+				translations_en:
+					'My Lord, have mercy upon them as they brought me up [when I was] small.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Isra - 17:24'
+			}
+		],
+		pageTitle_bn: 'পিতামাতার জন্য দোআ [১৭:২৪]',
+		pageTitle_en: 'Dua for parents [17:24]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ أَدْخِلْنِي مُدْخَلَ صِدْقٍ وَأَخْرِجْنِي مُخْرَجَ صِدْقٍ وَاجْعَلْ لِي مِنْ لَدُنْكَ سُلْطَانًا نَصِيرًا',
+				transliteration_bn:
+					'রব্বি আদ্খিল্নী মুদ্খলা ছিদ্ক্বিঁও অ আখ্রিজনী মুখ্রাজ্বা ছিদ্ক্বিঁও অজ্ব‘আল্লী মিল্ লাদুন্কা সুল্ত্বোয়া-নান্ নাছীরা-।',
+				translations_bn:
+					'হে আমার রব, আমাকে প্রবেশ করাও উত্তমভাবে এবং বের কর উত্তমভাবে। আর তোমার পক্ষ থেকে আমাকে সাহায্যকারী শক্তি দান কর',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-ইসরা - ১৭:৮০',
+				top_en: '',
+				transliteration:
+					'Waqul rabbi adkhilnee mudkhala sidqinwaakhrijnee mukhraja sidqin wajAAal lee minladunka sultanan naseera',
+				translations_en:
+					'My Lord, cause me to enter a sound entrance and to exit a sound exit and grant me from Yourself a supporting authority.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Isra - 17:80'
+			}
+		],
+		pageTitle_bn: 'সূরা আল-ইসরা - ১৭:৮০',
+		pageTitle_en: 'Surah Al-Isra - 17:80'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا',
+				transliteration_bn:
+					'রব্বানা য় আ-তিনা-মিল্লাদুন্কা রাহ্মাতাঁও অহাইয়ি লানা- মিন্ আম্রিনা- রশাদা-।',
+				translations_bn:
+					'হে আমাদের রব, আমাদেরকে আপনার পক্ষ থেকে রহমত দিন এবং আমাদের জন্য আমাদের কর্মকাণ্ড সঠিক করে দিন',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-কাহফ - ১৮:১০',
+				top_en: '',
+				transliteration:
+					"Rabbana 'atina mil-ladunka Rahmataw wa hayyi lana min amrina rashada",
+				translations_en:
+					'Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Kahf - 18:10'
+			}
+		],
+		pageTitle_bn: 'রহমত এবং সঠিক দিকনির্দেশনার দোআ [১৮:১০]',
+		pageTitle_en: 'Asking for correcting affairs and mercy[18:10]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ إِنِّي وَهَنَ الْعَظْمُ مِنِّي وَاشْتَعَلَ الرَّأْسُ شَيْبًا وَلَمْ أَكُن بِدُعَائِكَ رَبِّ شَقِيًّا',
+				transliteration_bn:
+					'রব্বি ইন্নী অহানাল্ ‘আজ্মু মিন্নী অশ্তা‘আর্লা রাসু শাইবাঁও অলাম্ আকুম্ বিদু‘আ-য়িকা রব্বি শাক্বিয়্যা-। ',
+				translations_bn:
+					'হে আমার রব! আমার হাড়গুলো দুর্বল হয়ে গেছে এবং বার্ধক্যবশতঃ আমার মাথার চুলগুলো সাদা হয়ে গেছে। হে আমার রব, আপনার নিকট দু’আ করে আমি কখনো ব্যর্থ হইনি’।',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					'rabbi innee wahana alAAathmuminnee washtaAAala arra/su shayban walam akunbiduAAa-ika rabbi shaqiyya',
+				translations_en:
+					'"My Lord, indeed my bones have weakened, and my head has filled with white, and never have I been in my supplication to You, my Lord, unhappy.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'وَإِنِّي خِفْتُ الْمَوَالِيَ مِن وَرَائِي وَكَانَتِ امْرَأَتِي عَاقِرًا فَهَبْ لِي مِن لَّدُنكَ وَلِيًّا',
+				transliteration_bn:
+					'অইন্নী খিফ্তুল্ মাওয়া-লিয়া মিঁও অর-য়ী অকা-নাতিম্ রায়াতী ‘আ-ক্বিরন্ ফাহাব্লী মিল্লাদুন্কা অলিয়্যা-। ',
+				translations_bn:
+					'আর আমার পরে স্বগোত্রীয়দের সম্পর্কে আমি আশংকাবোধ করছি। আমার স্ত্রী তো বন্ধ্যা, অতএব আপনি আমাকে আপনার পক্ষ থেকে একজন উত্তরাধিকারী দান করুন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					'Wa-innee khiftu almawaliya min wara-eewakanati imraatee AAaqiran fahab lee min ladunkawaliyya',
+				translations_en:
+					'And indeed, I fear the successors after me, and my wife has been barren, so give me from Yourself an heir',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'يَرِثُنِي وَيَرِثُ مِنْ آلِ يَعْقُوبَ ۖ وَاجْعَلْهُ رَبِّ رَضِيًّا',
+				transliteration_bn:
+					'ইয়ারিছুনী অইয়ারিছু মিন্ আ-লি ইয়া’কুবা-অজ্ব‘আল্হু রব্বি রদ্বিয়্যা-। ',
+				translations_bn:
+					'যে আমার উত্তরাধিকারী হবে এবং ইয়াকূবের বংশের উত্তরাধিকারী হবে। হে আমার রব, আপনি তাকে পছন্দনীয় বানিয়ে দিন',
+				bottom_bn: '',
+				reference_bn: 'সূরা মারিয়াম - ১৯:৪-৬',
+				top_en: '',
+				transliteration:
+					'Yarithunee wayarithu min ali yaAAqoobawajAAalhu rabbi radiyya',
+				translations_en:
+					'Who will inherit me and inherit from the family of Jacob. And make him, my Lord, pleasing [to You]."',
+				bottom_en: '',
+				reference_en: 'Surah Maryam - 19:4-6'
+			}
+		],
+		pageTitle_bn: 'সূরা মারিয়াম - ১৯:৪-৬',
+		pageTitle_en: 'Surah Maryam - 19:4-6'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'إِنِّي أَعُوذُ بِالرَّحْمَٰنِ مِنكَ إِن كُنتَ تَقِيًّا',
+				transliteration_bn:
+					'ইন্নী য় আ‘ঊযু র্বিরহ্মা-নি মিন্কা ইন্ কুন্তা তাক্বিয়্যা-। ',
+				translations_bn:
+					'আমি তোমার থেকে পরম করুণাময়ের আশ্রয় চাচ্ছি, যদি তুমি মুত্তাকী হও',
+				bottom_bn: '',
+				reference_bn: 'সূরা মারিয়াম - ১৯:১৮',
+				top_en: '',
+				transliteration: 'innee aAAoothu birrahmaniminka in kunta taqiyya',
+				translations_en:
+					'"Indeed, I seek refuge in the Most Merciful from you, [so leave me], if you should be fearing of Allah ."',
+				bottom_en: '',
+				reference_en: 'Surah Maryam - 19:18'
+			}
+		],
+		pageTitle_bn: 'সূরা মারিয়াম - ১৯:১৮',
+		pageTitle_en: 'Surah Maryam - 19:18'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ اشْرَحْ لِي صَدْرِي',
+				transliteration_bn: 'রব্বিশ্ রহ্লী ছোয়াদ্রী।',
+				translations_bn: 'হে আমার রব, আমার বুক প্রশস্ত করে দিন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Rabbi ishrah lee sadree',
+				translations_en: 'My Lord, expand for me my breast [with assurance]',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَيَسِّرْ لِي أَمْرِي',
+				transliteration_bn: ' অ ইয়ার্স্সিলী য় আম্রী।',
+				translations_bn: 'এবং আমার কাজ সহজ করে দিন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Wayassir lee amree',
+				translations_en: 'And ease for me my task',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي',
+				transliteration_bn: 'ওয়াহ্লুল্ ‘উক্ব্দাতাম্ মিল্লিসা-নী।',
+				translations_bn: 'আর আমার জিহবার জড়তা দূর করে দিন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Wahlul AAuqdatan min lisanee',
+				translations_en: 'And untie the knot from my tongue',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'يَفْقَهُوا قَوْلِي',
+				transliteration_bn: 'ইয়াফ্ক্বাহূ ক্বওলী।',
+				translations_bn: 'যাতে তারা আমার কথা বুঝতে পারে',
+				bottom_bn: '',
+				reference_bn: 'সূরা ত্বাহা - ২০:২৫-২৮',
+				top_en: '',
+				transliteration: 'Yafqahoo qawlee',
+				translations_en: 'That they may understand my speech.',
+				bottom_en: '',
+				reference_en: "Surah Ta'ha - 20:25-28"
+			}
+		],
+		pageTitle_bn: 'মুখের জড়তা দূর করার দোয়া [২০:২৫-২৮]',
+		pageTitle_en: 'Seeking easeness in speech [20:25-28]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَّبِّ زِدْنِى عِلْمًا',
+				transliteration_bn: 'রব্বি যিদ্নী ‘ইল্মা-',
+				translations_bn: 'হে আমার রব, আমার জ্ঞান বৃদ্ধি করে দিন',
+				bottom_bn: '',
+				reference_bn: 'সূরা ত্বাহা - ২০:১১৪',
+				top_en: '',
+				transliteration: 'rabbizidnee AAilma',
+				translations_en: 'My Lord, increase me in knowledge',
+				bottom_en: '',
+				reference_en: "Surah Ta'ha - 20:114"
+			}
+		],
+		pageTitle_bn: 'জ্ঞান বৃদ্ধি চাওয়া [২০:১১৪]',
+		pageTitle_en: 'Asking for increase in knowledge [20:114]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'أَنِّي مَسَّنِيَ الضُّرُّ وَأَنتَ أَرْحَمُ الرَّاحِمِينَ',
+				transliteration_bn:
+					' আন্নী মাস্ নানিয়াদ্ব্ দ্বরুরু অআন্তা র্আহার্মু র-হিমীন্',
+				translations_bn:
+					'আমি দুঃখ-কষ্টে পতিত হয়েছি। আর আপনি তো সর্বশ্রেষ্ঠ দয়ালু',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আম্বিয়া - ২১:৮৩',
+				top_en: '',
+				transliteration: 'annee massaniya addurru waanta arhamuarrahimeen',
+				translations_en:
+					'"Indeed, adversity has touched me, and you are the Most Merciful of the merciful."',
+				bottom_en: '',
+				reference_en: 'Surah Al-Anbiya - 21:83'
+			}
+		],
+		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:৮৩',
+		pageTitle_en: 'Surah Al-Anbiya - 21:83'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ',
+				transliteration_bn:
+					'লা-ইলা-হা ইল্লা-আন্তা সুবহা-নাকা ইন্নী কুন্তু মিনাজ জোয়া-লিমীন্',
+				translations_bn:
+					'আপনি ছাড়া কোন (সত্য) ইলাহ নেই’। আপনি পবিত্র মহান। নিশ্চয় আমি ছিলাম যালিম',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আম্বিয়া - ২১:৮৭',
+				top_en: '',
+				transliteration:
+					'la ilaha illa anta subhanaka inneekuntu mina aththalimeen',
+				translations_en:
+					'"There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers."',
+				bottom_en: '',
+				reference_en: 'Surah Al-Anbiya - 21:87'
+			}
+		],
+		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:৮৭',
+		pageTitle_en: 'Surah Al-Anbiya - 21:87'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنتَ خَيْرُ الْوَارِثِينَ',
+				transliteration_bn:
+					'রব্বি লা-তার্যানী র্ফাদাঁও অআন্তা খাইরুল্ ওয়ারিছীন্।',
+				translations_bn:
+					'হে আমার রব! আমাকে একা রেখো না, তুমি তো শ্রেষ্ঠ মালিকানার অধিকারী',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আম্বিয়া - ২১:৮৯',
+				top_en: '',
+				transliteration: 'Rabbi la tatharnee fardan waanta khayru alwaritheen',
+				translations_en:
+					'My Lord, do not leave me alone [with no heir], while you are the best of inheritors',
+				bottom_en: '',
+				reference_en: 'Surah Al-Anbiya - 21:89'
+			}
+		],
+		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:৮৯',
+		pageTitle_en: 'Surah Al-Anbiya - 21:89'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ احْكُم بِالْحَقِّ ۗ وَرَبُّنَا الرَّحْمَٰنُ الْمُسْتَعَانُ عَلَىٰ مَا تَصِفُونَ',
+				transliteration_bn:
+					'রব্বিহ্ কুম্ বিল্হাক্ব; অ রব্বুর্না রহ্মা-নুল্ মুসতা‘আ- নু ‘আলা-মা-তাছিফূন্।',
+				translations_bn:
+					'হে আমার রব, আপনি ন্যায়সঙ্গতভাবে ফয়সালা করে দিন’। আর আমাদের রব তো পরম করুণাময়। তোমরা যা বলছ সে বিষয়ে তিনিই একমাত্র সহায়স্থল।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল আম্বিয়া - ২১:১১২',
+				top_en: '',
+				transliteration:
+					"Rabbi ohkum bilhaqqi wa rabbuna arrahmanul musta'aanu alaa ma tasifoon",
+				translations_en:
+					'My Lord, judge [between us] in truth. And our Lord is the Most Merciful, the one whose help is sought against that which you describe.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Anbiya - 21:112'
+			}
+		],
+		pageTitle_bn: 'সূরা আল আম্বিয়া - ২১:১১২',
+		pageTitle_en: 'Surah Al-Anbiya - 21:112'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ انصُرْنِي بِمَا كَذَّبُونِ',
+				transliteration_bn: ' রব্বিন্ র্ছুনী বিমা-কায্যাবূন্',
+				translations_bn:
+					'হে আমার রব, আমাকে সাহায্য করুন। কেননা তারা আমাকে মিথ্যাবাদী বলেছে',
+				bottom_bn: '',
+				reference_bn: "সূরা আল মু'মিনূন - ২৩:২৬",
+				top_en: '',
+				transliteration: 'rabbi onsurnee bimakaththaboon',
+				translations_en: '"My Lord, support me because they have denied me."',
+				bottom_en: '',
+				reference_en: "Surah Al-Mu'minoon - 23:26, 39"
+			}
+		],
+		pageTitle_bn: "সূরা আল মু'মিনূন - ২৩:২৬",
+		pageTitle_en: "Surah Al-Mu'minoon - 23:26, 39"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَّبِّ أَنزِلْنِي مُنزَلًا مُّبَارَكًا وَأَنتَ خَيْرُ الْمُنزِلِينَ',
+				transliteration_bn:
+					'রব্বি আন্যিল্নী মুন্যালাম্ মুবা-রকাঁও অআন্তা খইরুল মুন্যিলীন্।',
+				translations_bn:
+					'হে আমার রব, আমাকে বরকতময় অবতরণস্থলে অবতরণ করান। আর আপনিই সর্বশ্রেষ্ঠ অবতরণকারী',
+				bottom_bn: '',
+				reference_bn: "সূরা আল মু'মিনূন - ২৩:২৯",
+				top_en: '',
+				transliteration:
+					'Rabbi anzilnee munzalan mubarakanwaanta khayru almunzileen',
+				translations_en:
+					'My Lord, let me land at a blessed landing place, and You are the best to accommodate [us].',
+				bottom_en: '',
+				reference_en: "Surah Al-Mu'minoon - 23:29"
+			}
+		],
+		pageTitle_bn: "সূরা আল মু'মিনূন - ২৩:২৯",
+		pageTitle_en: "Surah Al-Mu'minoon - 23:29"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ فَلَا تَجْعَلْنِي فِي الْقَوْمِ الظَّالِمِينَ',
+				transliteration_bn:
+					'রব্বি ফালা-তাজ্ব্‘আল্নী ফিল্ ক্বওমিজ্ জোয়া-লিমীন্।',
+				translations_bn:
+					'হে আমার রব, তাহলে আমাকে যালিম সম্প্রদায়ভুক্ত করবেন না',
+				bottom_bn: '',
+				reference_bn: "সূরা আল মু'মিনূন - ২৩:৯৪",
+				top_en: '',
+				transliteration: 'Rabbi fala tajAAalnee fee alqawmi aththalimeen',
+				translations_en:
+					'My Lord, then do not place me among the wrongdoing people.',
+				bottom_en: '',
+				reference_en: "Surah Al-Mu'minoon - 23:94"
+			}
+		],
+		pageTitle_bn: 'যালিমদের অন্তর্ভুক্ত না হওয়ার দোআ [২৩:৯৪]',
+		pageTitle_en: 'Dua for not placing among wrongdoers [23:94]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَّبِّ أَعُوذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِينِ',
+				transliteration_bn: 'রব্বি আ‘ঊযুবিকা মিন্ হামাযা -তিশ্ শাইয়া-ত্বীন্।',
+				translations_bn:
+					'হে আমার রব, আমি শয়তানের প্ররোচনা থেকে আপনার কাছে পানাহ চাই',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Rabbi aoothu bika min hamazatish shayateen',
+				translations_en:
+					'My Lord, I seek refuge in You from the incitements of the devils',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَأَعُوذُ بِكَ رَبِّ أَن يَحْضُرُونِ',
+				transliteration_bn: 'অ আ‘ঊ যুবিকা রব্বি আইঁ ইয়াহ্দ্বুরূন্।',
+				translations_bn:
+					'আর হে আমার রব, আমার কাছে তাদের উপস্থিতি হতে আপনার কাছে পানাহ চাই',
+				bottom_bn: '',
+				reference_bn: "সূরা আল মু'মিনূন - ২৩:৯৭-৯৮",
+				top_en: '',
+				transliteration: 'Wa aoothu bika rabbi an yahduroon',
+				translations_en:
+					'And I seek refuge in You, my Lord, lest they be present with me.',
+				bottom_en: '',
+				reference_en: "Surah Al-Mu'minoon - 23:97-98"
+			}
+		],
+		pageTitle_bn: 'শয়তান হতে আল্লাহর কাছে আশ্রয় প্রার্থনা [২৩:৯৭-৯৮]',
+		pageTitle_en: 'Seeking refuge in Allah from devils [23:97-98]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا آمَنَّا فَاغْفِرْ لَنَا وَارْحَمْنَا وَأَنتَ خَيْرُ الرَّاحِمِينَ',
+				transliteration_bn:
+					'রব্বানা য় আ-মান্না- ফার্গ্ফিলানা-র্অহাম্না-অআন্তা খইর্রু র-হিমীন্।',
+				translations_bn:
+					'হে আমাদের রব, আমরা ঈমান এনেছি, অতএব আমাদেরকে ক্ষমা ও দয়া করুন, আর আপনি সর্বশ্রেষ্ঠ দয়ালু',
+				bottom_bn: '',
+				reference_bn: "সূরা আল মু'মিনূন - ২৩:১০৯",
+				top_en: '',
+				transliteration:
+					'Rabbana amanna faghfir lana warhamna wa anta khayrur Rahimiin',
+				translations_en:
+					'Our Lord, we have believed, so forgive us and have mercy upon us, and You are the best of the merciful.',
+				bottom_en: '',
+				reference_en: "Surah Al-Mu'minoon - 23:109"
+			}
+		],
+		pageTitle_bn: 'ক্ষমা এবং রহমত প্রার্থনা [২৩:১০৯]',
+		pageTitle_en: 'Seeking forgiveness and mercy [23:109]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَّبِّ اغْفِرْ وَارْحَمْ وَأَنتَ خَيْرُ الرَّاحِمِينَ',
+				transliteration_bn: 'রব্বিগ্ র্ফি র্অহাম্ অআন্তা খইর্রু র-হিমীন্।',
+				translations_bn:
+					'হে আমাদের রব, আপনি ক্ষমা করুন, দয়া করুন এবং আপনিই সর্বশ্রেষ্ঠ দয়ালু',
+				bottom_bn: '',
+				reference_bn: "সূরা আল মু'মিনূন - ২৩:১১৮",
+				top_en: '',
+				transliteration: 'Rabbi ighfir warhamwaanta khayru arrahimeen',
+				translations_en:
+					'My Lord, forgive and have mercy, and You are the best of the merciful.',
+				bottom_en: '',
+				reference_en: "Surah Al-Mu'minoon - 23:118"
+			}
+		],
+		pageTitle_bn: 'ক্ষমা এবং রহমত প্রার্থনা [২৩:১১৮]',
+		pageTitle_en: 'Seeking forgiveness and mercy [23:118]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا اصْرِفْ عَنَّا عَذَابَ جَهَنَّمَ ۖ إِنَّ عَذَابَهَا كَانَ غَرَامًا',
+				transliteration_bn:
+					'রব্বানাছ্ রিফ্ ‘আন্না-‘আযা-বা জ্বাহান্নামা ইন্না ‘আযা-বাহা-কা-না গরা-মা।',
+				translations_bn:
+					'হে আমাদের রব, তুমি আমাদের থেকে জাহান্নামের আযাব ফিরিয়ে নাও। নিশ্চয় এর আযাব হল অবিচ্ছিন্ন',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-ফুরকান - ২৫:৬৫',
+				top_en: '',
+				transliteration:
+					"Rabbanas-rif 'anna 'adhaba jahannama inna 'adhabaha kana gharama",
+				translations_en:
+					'Our Lord, avert from us the punishment of Hell. Indeed, its punishment is ever adhering;',
+				bottom_en: '',
+				reference_en: 'Surah Al-Furqan - 25:65'
+			}
+		],
+		pageTitle_bn: 'জাহান্নামের আজাব হতে আশ্রয় চাওয়া [২৫:৬৫]',
+		pageTitle_en: 'Seeking refuge froom the punishment from hellfire [25:65]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا',
+				transliteration_bn:
+					'রব্বানা-হাব্লানা-মিন্ আয্ওয়া-জ্বিনা-অ র্যুরিয়্যা-তিনা-কুররাতা আ’ইয়ুনিঁও অজ্ব্‘আল্না-লিল্মুত্তাকীনা ইমা-মা-।',
+				translations_bn:
+					'হে আমাদের রব, আপনি আমাদেরকে এমন স্ত্রী ও সন্তানাদি দান করুন যারা আমাদের চক্ষু শীতল করবে। আর আপনি আমাদেরকে মুত্তাকীদের নেতা বানিয়ে দিন',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-ফুরকান - ২৫:৭৪',
+				top_en: '',
+				transliteration:
+					"Rabbana Hablana min azwaajina wadhurriy-yatina, qurrata 'ayioni wa-jalna lil-muttaqeena Imaama",
+				translations_en:
+					'Our Lord, grant us from among our wives and offspring comfort to our eyes and make us an example for the righteous.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Furqan - 25:74'
+			}
+		],
+		pageTitle_bn:
+			' চক্ষু শীতলকারী স্ত্রী ও সন্তানাদি লাভ আর মুত্তাকীদের নেতা হতে প্রার্থনা [২৫:৭৪]',
+		pageTitle_en:
+			'Asking coolness of eyes from family and becoming example for the righteous [25:74]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ هَبْ لِي حُكْمًا وَأَلْحِقْنِي بِالصَّالِحِينَ',
+				transliteration_bn: 'রব্বি হাব্লী হুক্মাঁও অআল্হিক্নী বিছ্ছো-লিহীন্।',
+				translations_bn:
+					'হে আমার রব, আমাকে প্রজ্ঞা দান করুন এবং আমাকে সৎকর্মশীলদের সাথে শামিল করে দিন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Rabbi hab lee hukman wa alhiqnee bis saliheen.',
+				translations_en:
+					'My Lord, grant me authority and join me with the righteous.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَاجْعَل لِّي لِسَانَ صِدْقٍ فِي الْآخِرِينَ',
+				transliteration_bn: 'অজ্ব ‘আল্লী লিসা-না ছিদ্ক্বিন্ ফিল্ আ-খিরীন্।',
+				translations_bn:
+					'এবং পরবর্তীদের মধ্যে আমার সুনাম-সুখ্যাতি অব্যাহত রাখুন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: "Waj'al lee lisana sidqin fil akhireen.",
+				translations_en:
+					'And grant me a reputation of honor among later generations.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَاجْعَلْنِي مِن وَرَثَةِ جَنَّةِ النَّعِيمِ',
+				transliteration_bn: 'অজ‘আল্নী মিঁও অরছাতি জ্বান্নাতিন্ না‘ঈম্।',
+				translations_bn:
+					'আর আপনি আমাকে সুখময় জান্নাতের ওয়ারিসদের অন্তর্ভুক্ত করুন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: "Waj'al nee min warathati jannatin na'eem.",
+				translations_en:
+					'And place me among the inheritors of the Garden of Pleasure.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَاغْفِرْ لِأَبِي إِنَّهُ كَانَ مِنَ الضَّالِّينَ',
+				transliteration_bn:
+					'অর্গ্ফি লিআবী য় ইন্নাহূ কা-না মিনা দ্ব্ দ্বোয়া-লীন্।',
+				translations_bn:
+					'আর আমার পিতাকে ক্ষমা করুন; নিশ্চয় সে পথভ্রষ্টদের অন্তর্ভুক্ত ছিল',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'Waghfir li-abee innahu kanamina addalleen.',
+				translations_en:
+					'And forgive my father. Indeed, he has been of those astray.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'وَلَا تُخْزِنِي يَوْمَ يُبْعَثُونَ',
+				transliteration_bn: 'অলা-তুখ্যিনী ইয়াওমা ইয়ুব্‘আছূন্।',
+				translations_bn:
+					'আর যেদিন পুনরুত্থিত করা হবে সেদিন আমাকে লাঞ্ছিত করবেন না',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: "Wala tukhzinee yawma yub'asoon.",
+				translations_en:
+					'And do not disgrace me on the Day they are [all] resurrected -',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'يَوْمَ لَا يَنفَعُ مَالٌ وَلَا بَنُونَ',
+				transliteration_bn: ' ইয়াওমা লা-ইয়ান্ফা‘ঊ মা-লুঁও অলা-বানূন্।',
+				translations_bn: 'যেদিন ধন-সম্পদ ও সন্তান-সন্ততি কোন উপকারে আসবে না',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: "Yawma la yanfa'u malun walaa banoon.",
+				translations_en:
+					'The Day when there will not benefit [anyone] wealth or children',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic: 'إِلَّا مَنْ أَتَى اللَّهَ بِقَلْبٍ سَلِيمٍ',
+				transliteration_bn: 'ইল্লা- মান্ আতাল্লা-হা বিক্বল্বিন্ সালীম্।',
+				translations_bn: '‘তবে যে আল্লাহর কাছে আসবে সুস্থ অন্তরে',
+				bottom_bn: '',
+				reference_bn: "সূরা আশ্-শু'আরা - ২৬:৮৩-৮৯",
+				top_en: '',
+				transliteration: 'Illa man ata Allah bi qalbin saleem.',
+				translations_en: 'But only one who comes to Allah with a sound heart.',
+				bottom_en: '',
+				reference_en: "Surah Ash-Shu'araa - 26:83-89"
+			}
+		],
+		pageTitle_bn: "সূরা আশ্-শু'আরা - ২৬:৮৩-৮৯",
+		pageTitle_en: "Surah Ash-Shu'araa - 26:83-89"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ إِنَّ قَوْمِي كَذَّبُونِ',
+				transliteration_bn: ' রব্বি ইন্না ক্বওমী কায্যাবূন্',
+				translations_bn: 'হে আমার রব, আমার কওম আমাকে অস্বীকার করেছে',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration: 'rabbi inna qawmee kaththaboon',
+				translations_en: '"My Lord, indeed my people have denied me.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'فَافْتَحْ بَيْنِي وَبَيْنَهُمْ فَتْحًا وَنَجِّنِي وَمَن مَّعِيَ مِنَ الْمُؤْمِنِينَ',
+				transliteration_bn:
+					' ফাফ্তাহ্ বাইনী অবাইনাহুম্ ফাত্হাঁও অনাজ্জ্বিনী অমাম্ মা‘ইয়া মিনাল্ মুমিনীন্',
+				translations_bn:
+					'সুতরাং আপনি আমার ও তাদের মধ্যে ফয়সালা করে দিন আর আমাকে ও আমার সাথে যেসব মুমিন, আছে তাদেরকে রক্ষা করুন',
+				bottom_bn: '',
+				reference_bn: "সূরা আশ্-শু'আরা - ২৬:১১৭-১১৮",
+				top_en: '',
+				transliteration:
+					'Faftah baynee wabaynahum fathanwanajjinee waman maAAiya mina almu/mineen',
+				translations_en:
+					'Then judge between me and them with decisive judgement and save me and those with me of the believers."',
+				bottom_en: '',
+				reference_en: "Surah Ash-Shu'araa - 26:117-118"
+			}
+		],
+		pageTitle_bn: "সূরা আশ্-শু'আরা - ২৬:১১৭-১১৮",
+		pageTitle_en: "Surah Ash-Shu'araa - 26:117-118"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ نَجِّنِي وَأَهْلِي مِمَّا يَعْمَلُونَ',
+				transliteration_bn: 'রব্বি নাজ্জ্বিনী অআহ্লী মিম্মা-ইয়া’মালূন্।',
+				translations_bn:
+					'হে আমার রব, তারা যা করছে, তা থেকে আমাকে ও আমার পরিবার-পরিজনকে তুমি রক্ষা কর',
+				bottom_bn: '',
+				reference_bn: "সূরা আশ্-শু'আরা - ২৬:১৬৯",
+				top_en: '',
+				transliteration: "Rabbi najjinee waahlee mimma ya'maloon.",
+				translations_en:
+					'My Lord, save me and my family from [the consequence of] what they do.',
+				bottom_en: '',
+				reference_en: "Surah Ash-Shu'araa - 26:169"
+			}
+		],
+		pageTitle_bn: "সূরা আশ্-শু'আরা - ২৬:১৬৯",
+		pageTitle_en: "Surah Ash-Shu'araa - 26:169"
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَدْخِلْنِي بِرَحْمَتِكَ فِي عِبَادِكَ الصَّالِحِينَ',
+				transliteration_bn:
+					'রব্বি আওযি’নী য় আন্ আশ্কুরা নি’মাতাকাল্লা তীয় আন্‘আম্তা ‘আলাইয়্যা অ‘আলা- ওয়া-লিদাইয়্যা অআন্ আ’মালা ছোয়া-লিহান্ র্তাদ্বোয়া-হু অ আদ্খিল্নী বিরহমাতিকা ফী ‘ইবা-দিকাছ্ ছোয়া-লিহীন্।',
+				translations_bn:
+					'হে আমার রব, তুমি আমার প্রতি ও আমার পিতা-মাতার প্রতি যে অনুগ্রহ করেছ তার জন্য আমাকে তোমার শুকরিয়া আদায় করার তাওফীক দাও। আর আমি যাতে এমন সৎকাজ করতে পারি যা তুমি পছন্দ কর। আর তোমার অনুগ্রহে তুমি আমাকে তোমার সৎকর্মপরায়ণ বান্দাদের অন্তর্ভুক্ত কর',
+				bottom_bn: '',
+				reference_bn: 'সূরা আন-নামল - ২৭:১৯',
+				top_en: '',
+				transliteration:
+					'Rabbi awziAAnee an ashkura niAAmataka allateeanAAamta AAalayya waAAala walidayya waan aAAmala salihantardahu waadkhilnee birahmatika fee AAibadikaassaliheen',
+				translations_en:
+					'My Lord, enable me to be grateful for Your favor which You have bestowed upon me and upon my parents and to do righteousness of which You approve. And admit me by Your mercy into [the ranks of] Your righteous servants.',
+				bottom_en: '',
+				reference_en: 'Surah An-Naml - 27:19'
+			}
+		],
+		pageTitle_bn: 'শুকরিয়া জ্ঞাপন এবং কবুল আমলের প্রার্থনা [২৭:১৯]',
+		pageTitle_en: 'Seeking gratefulness to Allah and approved deeds [27:19]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ إِنِّي ظَلَمْتُ نَفْسِي وَأَسْلَمْتُ مَعَ سُلَيْمَانَ لِلَّهِ رَبِّ الْعَالَمِينَ',
+				transliteration_bn:
+					'রব্বি ইন্নী জ্বোয়ালাম্তু নাফ্সী অআস্লাম্তু মা‘আ সুলাইমা-না লিল্লা-হি রব্বিল্ ‘আ-লামীন্। ',
+				translations_bn:
+					'হে আমার রব, নিশ্চয় আমি আমার নিজের প্রতি যুলম করেছি। আমি সুলাইমানের সাথে সৃষ্টিকুলের রব আল্লাহর নিকট আত্মসমর্পণ করলাম',
+				bottom_bn: '',
+				reference_bn: 'সূরা আন-নামল - ২৭:৪৪',
+				top_en: '',
+				transliteration:
+					'rabbi innee thalamtunafsee waaslamtu maAAa sulaymana lillahi rabbi alAAalameen',
+				translations_en:
+					'"My Lord, indeed I have wronged myself, and I submit with Solomon to Allah , Lord of the worlds."',
+				bottom_en: '',
+				reference_en: 'Surah An-Naml - 27:44'
+			}
+		],
+		pageTitle_bn: 'সূরা আন-নামল - ২৭:৪৪',
+		pageTitle_en: 'Surah 27:44'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي فَغَفَرَ لَهُ ۚ إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ',
+				transliteration_bn:
+					'রব্বি ইন্নী জোয়ালাম্তু নাফ্সী ফার্গ্ফিলী ফাগফার লাহ্;ইন্নাহূ হুওয়াল্ গফূর্রু রহীম্।',
+				translations_bn:
+					'হে আমার রব, নিশ্চয় আমি আমার নফ্‌সের প্রতি যুলম করেছি, সুতরাং আপনি আমাকে ক্ষমা করে দিন’। অতঃপর তিনি তাকে ক্ষমা করলেন। নিশ্চয় তিনি অতি ক্ষমাশীল, পরম দয়ালু',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					'Rabbi innee thalamtunafsee faghfir lee faghafara lahu innahu huwa alghafooruarraheem',
+				translations_en:
+					'My Lord, indeed I have wronged myself, so forgive me," and He forgave him. Indeed, He is the Forgiving, the Merciful.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'قَالَ رَبِّ بِمَا أَنْعَمْتَ عَلَيَّ فَلَنْ أَكُونَ ظَهِيرًا لِّلْمُجْرِمِينَ',
+				transliteration_bn:
+					'রব্বি বিমা য় আন্‘আম্তা ‘আলাইয়্যা ফালান্ আকূনা জোয়াহীরল্ লিল্মুজ্বরিমীন্।',
+				translations_bn:
+					'হে আমার রব, আপনি যেহেতু আমার প্রতি নি’আমত দান করেন, তাই আমি কখনো আর অপরাধীদের সাহায্যকারী হব না।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-কাসাস  - ২৮:১৬-১৭',
+				top_en: '',
+				transliteration:
+					'Qala  Rabbi bima anAAamtaAAalayya falan akoona thaheeran lilmujrimeen,',
+				translations_en:
+					'Say: "My Lord, for the favor You bestowed upon me, I will never be an assistant to the criminals."',
+				bottom_en: '',
+				reference_en: 'Surah Al-Qasas - 28:16-17'
+			}
+		],
+		pageTitle_bn: 'সূরা আল-কাসাস  - ২৮:১৬-১৭',
+		pageTitle_en: 'Surah Al-Qasas - 28:16-17'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ نَجِّنِي مِنَ الْقَوْمِ الظَّالِمِينَ',
+				transliteration_bn:
+					'রব্বি ইন্নী লিমা য় আন্যাল্তা ইলাইয়্যা মিন্ খাইরিন্ ফার্ক্বী।',
+				translations_bn: 'হে আমার রব, আপনি যালিম কওম থেকে আমাকে রক্ষা করুন',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-কাসাস  - ২৮:২১',
+				top_en: '',
+				transliteration: 'Rabbi najjinee mina alqawmi aththalimeen',
+				translations_en: 'My Lord, save me from the wrongdoing people.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Qasas - 28:21'
+			}
+		],
+		pageTitle_bn: 'যালিম কওম থেকে আশ্রয় প্রার্থনা [২৮:২১]',
+		pageTitle_en: 'Seeking protection from wrongdoing people [28:21]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ',
+				transliteration_bn:
+					'রব্বি ইন্নী লিমা য় আন্যাল্তা ইলাইয়্যা মিন্ খাইরিন্ ফার্ক্বী।',
+				translations_bn:
+					'হে আমার রব, নিশ্চয় আপনি আমার প্রতি যে অনুগ্রহই নাযিল করবেন, আমি তার মুখাপেক্ষী',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-কাসাস  - ২৮:২৪',
+				top_en: '',
+				transliteration: 'Rabbi innee lima anzalta ilayya min khayrin faqeer',
+				translations_en:
+					'My Lord, indeed I am, for whatever good You would send down to me, in need.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Qasas - 28:24'
+			}
+		],
+		pageTitle_bn: 'আল্লাহর অনুগ্রহের মুখাপেক্ষিতা [২৮:২৪]',
+		pageTitle_en: 'Seeking whatever good Allah can bestow [28:24]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ انصُرْنِي عَلَى الْقَوْمِ الْمُفْسِدِينَ',
+				transliteration_bn: 'ক্ব-লা রব্বিন্ র্ছুনী আ-লাল্ ক্বওমিল্ মুফ্সিদীন্।',
+				translations_bn:
+					'হে আমার রব, আমাকে সাহায্য করুন ফাসাদ সৃষ্টিকারী কওমের বিরুদ্ধে',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-আনকাবুত - ২৯:৩০',
+				top_en: '',
+				transliteration: 'Rabbi onsurnee AAalaalqawmi almufsideen',
+				translations_en: 'My Lord, support me against the corrupting people.',
+				bottom_en: '',
+				reference_en: "Surah Al-'Ankaboot - 29:30"
+			}
+		],
+		pageTitle_bn: 'ফাসাদ সৃষ্টিকারী কওমের বিরুদ্ধে সাহায্য প্রার্থনা [২৯:৩০]',
+		pageTitle_en: 'Asking help againest corrupt people [29:30]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'رَبِّ هَبْ لِي مِنَ الصَّالِحِينَ',
+				transliteration_bn: 'রব্বি হাব্লী মিনাছ্ ছোয়া-লিহীন্।',
+				translations_bn: '‘হে আমার রব, আমাকে সৎকর্মশীল সন্তান দান করুন',
+				bottom_bn: '',
+				reference_bn: 'সূরা আস-সাফফাত - ৩৭:১০০',
+				top_en: '',
+				transliteration: 'Rabbi hablee mina assaliheen',
+				translations_en:
+					'My Lord, grant me [a child] from among the righteous.',
+				bottom_en: '',
+				reference_en: 'Surah As-Saaffaat - 37:100'
+			}
+		],
+		pageTitle_bn: 'সুসন্তান লাভের জন্য দোআ [৩৭:১০০]',
+		pageTitle_en: 'Seeking a righteous child [37:100]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ ٱغْفِرْ لِى وَهَبْ لِى مُلْكًا لَّا يَنۢبَغِى لِأَحَدٍ مِّنۢ بَعْدِىٓ ۖ إِنَّكَ أَنتَ ٱلْوَهَّابُ',
+				transliteration_bn:
+					'রব্বিগ্ র্ফিলী অহাব্লী মুল্কাল্ লা-ইয়াম্বাগী লিআহাদিম্ মিম্ বা’দী ইন্নাকা আন্তাল্ অহ্হা-ব্।',
+				translations_bn:
+					'হে আমার রব, আমাকে ক্ষমা করুন এবং আমাকে এমন এক রাজত্ব দান করুন যা আমার পর আর কারও জন্যই প্রযোজ্য হবে না। নিশ্চয়ই আপনি বড়ই দানশীল।',
+				bottom_bn: '',
+				reference_bn: 'সূরা  ছোয়াদ -  ৩৮:৩৫',
+				top_en: '',
+				transliteration:
+					'rabbi ighfir lee wahab leemulkan la yanbaghee li-ahadin min baAAdee innakaanta alwahhab',
+				translations_en:
+					'My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower.',
+				bottom_en: '',
+				reference_en: 'Surah Sad - 38:35'
+			}
+		],
+		pageTitle_bn: 'সূরা  ছোয়াদ -  ৩৮:৩৫',
+		pageTitle_en: 'Surah Sad - 38:35'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'أَنِّي مَسَّنِيَ الشَّيْطَانُ بِنُصْبٍ وَعَذَابٍ',
+				transliteration_bn:
+					'আন্নী মাস্ সানিয়াশ্ শাইত্বোয়া-নু বিনুছ্বিঁও অ‘আযা-ব্। ',
+				translations_bn: 'শয়তান তো আমাকে কষ্ট ও আযাবের ছোঁয়া দিয়েছে',
+				bottom_bn: '',
+				reference_bn: 'সূরা  ছোয়াদ -  ৩৮:৪১',
+				top_en: '',
+				transliteration: 'annee massaniya ashshaytanubinusbin waAAathab',
+				translations_en:
+					'"Indeed, Satan has touched me with hardship and torment."',
+				bottom_en: '',
+				reference_en: 'Surah Sad - 38:41'
+			}
+		],
+		pageTitle_bn: 'সূরা  ছোয়াদ -  ৩৮:৪১',
+		pageTitle_en: 'Surah Sad - 38:41'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا وَسِعْتَ كُلَّ شَيْءٍ رَّحْمَةً وَعِلْمًا فَاغْفِرْ لِلَّذِينَ تَابُوا وَاتَّبَعُوا سَبِيلَكَ وَقِهِمْ عَذَابَ الْجَحِيمِ',
+				transliteration_bn:
+					'রব্বানা-অসিতা কুল্লা শাইর্য়ি রহ্মাতাঁও অ‘ইল্মান্ ফার্গ্ফি লিল্লাযীনা তা-বূ অত্তাবা‘ঊ সাবীলাকা অক্বিহিম্ ‘আযা-বাল্ জ্বাহীম্',
+				translations_bn:
+					'হে আমাদের রব, আপনি রহমত ও জ্ঞান দ্বারা সব কিছুকে পরিব্যপ্ত করে রয়েছেন। অতএব যারা তাওবা করে এবং আপনার পথ অনুসরণ করে আপনি তাদেরকে ক্ষমা করে দিন। আর জাহান্নামের আযাব থেকে আপনি তাদেরকে রক্ষা করুন',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					"Rabbana wasi'ta kulla sha'ir Rahmatanw wa 'ilman faghfir lilladhina tabu wattaba'u sabilaka waqihim 'adhabal-Jahiim",
+				translations_en:
+					'Our Lord, You have encompassed all things in mercy and knowledge, so forgive those who have repented and followed Your way and protect them from the punishment of Hellfire.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا وَأَدْخِلْهُمْ جَنَّاتِ عَدْنٍ الَّتِي وَعَدتَّهُمْ وَمَن صَلَحَ مِنْ آبَائِهِمْ وَأَزْوَاجِهِمْ وَذُرِّيَّاتِهِمْ ۚ إِنَّكَ أَنتَ الْعَزِيزُ الْحَكِيمُ',
+				transliteration_bn:
+					'রব্বানা-অ‘আদ্খিল্হুম্ জ্বান্না-তি ‘আদ্নি নিল্লাতী অ‘আত্তাহুম্ অমান্ ছলাহা মিন্ আ-বা-য়িহিম্ অআয্ওয়া জ্বিহিম্ অর্যুরিয়্যা-তিহিম্; ইন্নাকা আন্তাল্ ‘আযীযুল্ হাকীম্।',
+				translations_bn:
+					'হে আমাদের রব, আর আপনি তাদেরকে স্থায়ী জান্নাতে প্রবেশ করান, যার ওয়াদা আপনি তাদেরকে দিয়েছেন। আর তাদের পিতা-মাতা, পতি-পত্নি ও সন্তান-সন্ততিদের মধ্যে যারা সৎকর্ম সম্পাদন করেছে তাদেরকেও। নিশ্চয় আপনি মহাপরাক্রমশালী, মহাপ্রজ্ঞাময়',
+				bottom_bn: '',
+				reference_bn: '',
+				top_en: '',
+				transliteration:
+					"Rabbana wa adhkhilhum Jannati 'adninil-lati wa'attahum wa man salaha min aba'ihim wa azwajihim wa dhuriyyatihim innaka antal 'Azizul-Hakim,",
+				translations_en:
+					'Our Lord, and admit them to gardens of perpetual residence which You have promised them and whoever was righteous among their fathers, their spouses and their offspring. Indeed, it is You who is the Exalted in Might, the Wise.',
+				bottom_en: '',
+				reference_en: ''
+			},
+			{
+				top_bn: '',
+				arabic:
+					'وَقِهِمُ السَّيِّئَاتِ ۚ وَمَن تَقِ السَّيِّئَاتِ يَوْمَئِذٍ فَقَدْ رَحِمْتَهُ ۚ وَذَٰلِكَ هُوَ الْفَوْزُ الْعَظِيمُ',
+				transliteration_bn:
+					'অ ক্বিহিমুস্ সাইয়িয়া-ত্; অমান্ তাক্বিস্ সাইয়িয়া-তি ইয়াওমায়িযিন্ ফাক্বদ্ রহিম্তাহ্ ; অ যা-লিকা হুওয়াল্ ফাওযুল্ ‘আজীম্।',
+				translations_bn:
+					'আর আপনি তাদের অপরাধের আযাব হতে রক্ষা করুন এবং সেদিন আপনি যাকে অপরাধের আযাব থেকে রক্ষা করবেন, অবশ্যই তাকে অনুগ্রহ করবেন। আর এটিই মহাসাফল্য',
+				bottom_bn: '',
+				reference_bn: 'সূরা গাফির - ৪০:৭-৯',
+				top_en: '',
+				transliteration:
+					"waqihimus sayyi'at wa man taqis-sayyi'ati yawma'idhin faqad rahimatahu wa dhalika huwal fawzul-'Adheem",
+				translations_en:
+					'And protect them from the evil consequences [of their deeds]. And he whom You protect from evil consequences that Day - You will have given him mercy. And that is the great attainment.',
+				bottom_en: '',
+				reference_en: 'Surah Ghafir - 40:7-9'
+			}
+		],
+		pageTitle_bn: 'সূরা গাফির - ৪০:৭-৯',
+		pageTitle_en: 'Surah Ghafir - 40:7-9'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'إِنِّي عُذْتُ بِرَبِّي وَرَبِّكُم مِّن كُلِّ مُتَكَبِّرٍ لَّا يُؤْمِنُ بِيَوْمِ الْحِسَابِ',
+				transliteration_bn:
+					'ইন্নী উয্তু বিরব্বী অরব্বিকুম্ মিন্ কুল্লি মুতাক্বব্বিরিল্ লা-ইয়ুমিনু বিইয়াওমিল্ হিসা-ব্। ',
+				translations_bn:
+					'আমি আমার রব ও তোমাদের রবের কাছে আশ্রয় প্রার্থনা করছি প্রত্যেক অহঙ্কারী থেকে, যে বিচার দিনের প্রতি ঈমান রাখে না’।',
+				bottom_bn: '',
+				reference_bn: 'সূরা গাফির - ৪০:২৭',
+				top_en: '',
+				transliteration:
+					'innee AAuthtubirabbee warabbikum min kulli mutakabbirin la yu/minubiyawmi alhisab',
+				translations_en:
+					'Indeed, I have sought refuge in my Lord and your Lord from every arrogant one who does not believe in the Day of Account."',
+				bottom_en: '',
+				reference_en: 'Surah Ghafir - 40:27'
+			}
+		],
+		pageTitle_bn: 'সূরা গাফির - ৪০:২৭',
+		pageTitle_en: 'Surah Ghafir - 40:27'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ ۚ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ',
+				transliteration_bn:
+					'অউফাও ওয়িদ্বু আম্রী য় ইলা ল্লা-হ্; ইন্না ল্লা-হা বাছীরুম্ বিল্ ‘ইবা-দ্। ',
+				translations_bn:
+					'আর আমার বিষয়টি আমি আল্লাহর নিকট সমর্পণ করছি; নিশ্চয় আল্লাহ তাঁর বান্দাদের ব্যাপারে সর্বদ্রষ্টা’।',
+				bottom_bn: '',
+				reference_bn: 'সূরা গাফির - ৪০:৪৪',
+				top_en: '',
+				transliteration:
+					'waofawwidu amree ila Allahi inna Allahabaseerun bilAAibad',
+				translations_en:
+					'and I entrust my affair to Allah . Indeed, Allah is Seeing of [His] servants."',
+				bottom_en: '',
+				reference_en: 'Surah Ghafir - 40:44'
+			}
+		],
+		pageTitle_bn: 'সূরা গাফির - ৪০:৪৪',
+		pageTitle_en: 'Surah Ghafir - 40:44'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَصْلِحْ لِي فِي ذُرِّيَّتِي ۖ إِنِّي تُبْتُ إِلَيْكَ وَإِنِّي مِنَ الْمُسْلِمِينَ',
+				transliteration_bn:
+					'রব্বি আওযি’নী য় আন্ আশ্কুরা নি’মাতাকাল্লাতী য় আন্‘আম্তা ‘আলাইয়্যা অ‘আলা-ওয়া-লিদাইয়্যা অআন্ ‘আমালা ছোয়া-লিহান র্তাদ্বোয়া-হু অআছ্লিহ্ লী ফী র্যুরিয়্যাতী; ইন্নী তুব্তু ইলাইকা অইন্নী মিনাল্ মুস্লিমীন্।',
+				translations_bn:
+					'হে আমার রব, আমাকে সামর্থ্য দাও, তুমি আমার উপর ও আমার মাতা-পিতার উপর যে নি’আমত দান করেছ, তোমার সে নিআমতের যেন আমি শোকর আদায় করতে পারি এবং আমি যেন সৎকর্ম করতে পারি, যা তুমি পছন্দ কর। আর আমার জন্য তুমি আমার বংশধরদের মধ্যে সংশোধন করে দাও। নিশ্চয় আমি তোমার কাছে তাওবা করলাম এবং নিশ্চয় আমি মুসলিমদের অন্তর্ভুক্ত',
+				bottom_bn: '',
+				reference_bn: 'শুকরিয়া জ্ঞাপন, কবুল আমল এবং সুসন্তান প্রার্থনা [৪৬:১৫]',
+				top_en: '',
+				transliteration:
+					"Rabbi awzi'nee an ashkura ni'mataka allatee anAAamta AAalayya waAAalawalidayya waan aAAmala salihan tardahuwaaslih lee fee thurriyyatee innee tubtuilayka wa-innee mina almuslimeen",
+				translations_en:
+					'My Lord, enable me to be grateful for Your favor which You have bestowed upon me and upon my parents and to work righteousness of which You will approve and make righteous for me my offspring. Indeed, I have repented to You, and indeed, I am of the Muslims.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Ahqaf - 46:15'
+			}
+		],
+		pageTitle_bn: 'শুকরিয়া জ্ঞাপন, কবুল আমল এবং সুসন্তান প্রার্থনা [৪৬:১৫]',
+		pageTitle_en:
+			'Seeking gratefulness to Allah, approved deeds and righteous child [46:15]'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'أَنِّي مَغْلُوبٌ فَانتَصِرْ',
+				transliteration_bn: 'আন্নী মাগ্লূবুন্ ফান্তার্ছি',
+				translations_bn: 'নিশ্চয় আমি পরাজিত, অতএব তুমিই প্রতিশোধ গ্রহণ কর',
+				bottom_bn: '',
+				reference_bn: 'সূরা ক্বামার - ৫৪:১০',
+				top_en: '',
+				transliteration: 'annee maghloobun fantasir',
+				translations_en: '"Indeed, I am overpowered, so help."',
+				bottom_en: '',
+				reference_en: 'Surah Qamar 54:10'
+			}
+		],
+		pageTitle_bn: 'সূরা ক্বামার - ৫৪:১০',
+		pageTitle_en: 'Surah Qamar 54:10'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ وَلَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِّلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَّحِيمٌ',
+				transliteration_bn:
+					'রব্বানাগ্ ফিরলানা-অলিইখ্ওয়া-নিনাল লাযীনা সাবাক্ব ক্রনা বিল্ ঈমা-নি অলা- তাজ্ব ‘আল্ ফী কুলূবিনা-গিল্লাল্লিল্লাযীনা আ-মানূ রব্বানা য় ইন্নাকা রায়ূফুর রহীম্',
+				translations_bn:
+					'হে আমাদের রব, আমাদেরকে ও আমাদের ভাই যারা ঈমান নিয়ে আমাদের পূর্বে অতিক্রান্ত হয়েছে তাদেরকে ক্ষমা করুন; এবং যারা ঈমান এনেছিল তাদের জন্য আমাদের অন্তরে কোন বিদ্বেষ রাখবেন না; হে আমাদের রব, নিশ্চয় আপনি দয়াবান, পরম দয়ালু।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-হাশর - ৫৯:১০',
+				top_en: '',
+				transliteration:
+					'Rabbana ighfir lana wali-ikhwaninaallatheena sabaqoona bil-eemani walatajAAal fee quloobina ghillan lillatheena amanoorabbana innaka raoofun raheem',
+				translations_en:
+					'Our Lord, forgive us and our brothers who preceded us in faith and put not in our hearts [any] resentment toward those who have believed. Our Lord, indeed You are Kind and Merciful.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Hashr - 59:10'
+			}
+		],
+		pageTitle_bn: 'সূরা আল-হাশর - ৫৯:১০',
+		pageTitle_en: 'Surah Al-Hashr - 59:10'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَّبَّنَا عَلَيْكَ تَوَكَّلْنَا وَإِلَيْكَ أَنَبْنَا وَإِلَيْكَ ٱلْمَصِيرُ',
+				transliteration_bn:
+					'রব্বানা-‘আলাইকা তাওয়াক্কাল্না-অইলাইকা আনাব্না-অইলাইকাল্ মার্ছীর।',
+				translations_bn:
+					'হে আমাদের প্রতিপালক, আমরা আপনার ওপরই ভরসা করি, আপনারই অভিমুখী হই আর প্রত্যাবর্তন তো আপনারই কাছে।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আল-মুমতাহিনাহ - ৬০:৪',
+				top_en: '',
+				transliteration:
+					'rabbanaAAalayka tawakkalna wa-ilayka anabna wa-ilayka almaseer',
+				translations_en:
+					'Our Lord, upon You we have relied, and to You we have returned, and to You is the destination.',
+				bottom_en: '',
+				reference_en: 'Surah Al-Mumtahina - 60:4'
+			}
+		],
+		pageTitle_bn: 'সূরা আল-মুমতাহিনাহ - ৬০:৪',
+		pageTitle_en: 'Surah Al-Mumtahina - 60:4'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبَّنَا أَتْمِمْ لَنَا نُورَنَا وَاغْفِرْ لَنَا إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+				transliteration_bn:
+					'রব্বানা য় আত্মিম্ লানা-নূরানা- ওয়ার্গ্ফি লানা- ইন্নাকা ‘আলা-কুল্লি শাইয়িন্ ক্বর্দীর।',
+				translations_bn:
+					'হে আমাদের রব, আমাদের জন্য আমাদের আলো পূর্ণ করে দিন এবং আমাদেরকে ক্ষমা করুন; নিশ্চয় আপনি সর্ববিষয়ে সর্বক্ষমতাবান',
+				bottom_bn: '',
+				reference_bn: 'সূরা আত-তাহরীম - ৬৬:৮',
+				top_en: '',
+				transliteration:
+					"Rabbana atmim lana nurana waighfir lana innaka 'ala kulli shay-in qadir",
+				translations_en:
+					'Our Lord, perfect for us our light and forgive us. Indeed, You are over all things competent.',
+				bottom_en: '',
+				reference_en: 'Surah At-Tahreem - 66:8'
+			}
+		],
+		pageTitle_bn: 'সূরা আত-তাহরীম - ৬৬:৮',
+		pageTitle_en: 'Surah At-Tahreem - 66:8'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَبِّ ابْنِ لِي عِندَكَ بَيْتًا فِي الْجَنَّةِ وَنَجِّنِي مِن فِرْعَوْنَ وَعَمَلِهِ وَنَجِّنِي مِنَ الْقَوْمِ الظَّالِمِينَ',
+				transliteration_bn:
+					'রব্বিব্নি লী ‘ইন্দাকা বাইতান্ ফিল্ জ্বান্নাতি অনাজজ্বিনী মিন্ ফির‘আউনা অ ‘আমালিহী অনাজজ্বিনী মিনাল্ ক্বওমিজ্ জোয়া-লিমীন।',
+				translations_bn:
+					'হে আমার রব, আপনার কাছে আমার জন্য জান্নাতে একটি বাড়ি নির্মাণ করুন এবং আমাকে ফির’আউন ও তার কর্ম হতে নাজাত দিন, আর আমাকে নাজাত দিন যালিম সম্প্রদায় হতে।',
+				bottom_bn: '',
+				reference_bn: 'সূরা আত-তাহরীম - ৬৬:১১',
+				top_en: '',
+				transliteration:
+					'rabbiibni lee AAindaka baytan fee aljannati wanajjinee min firAAawnawaAAamalihi wanajjinee mina alqawmi aththalimeen',
+				translations_en:
+					'My Lord, build for me near You a house in Paradise and save me from Pharaoh and his deeds and save me from the wrongdoing people.',
+				bottom_en: '',
+				reference_en: 'Surah At-Tahreem - 66:11'
+			}
+		],
+		pageTitle_bn: 'সূরা আত-তাহরীম - ৬৬:১১',
+		pageTitle_en: 'Surah At-Tahreem - 66:11'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَّبِّ لَا تَذَرْ عَلَى الْأَرْضِ مِنَ الْكَافِرِينَ دَيَّارًا',
+				transliteration_bn:
+					'রব্বি লা-তার্যা ‘আলাল্ র্আদ্বি মিনাল্ কা-ফিরীনা দাইইয়া-র-।',
+				translations_bn: 'হে আমার রব! যমীনের উপর কোন কাফিরকে অবশিষ্ট রাখবেন না',
+				bottom_bn: '',
+				reference_bn: 'সূরা নূহ - ৭১:২৬',
+				top_en: '',
+				transliteration: 'rabbi latathar AAala al-ardi mina alkafireenadayyara',
+				translations_en:
+					'My Lord, do not leave upon the earth from among the disbelievers an inhabitant.',
+				bottom_en: '',
+				reference_en: 'Surah Nooh - 71:26'
+			}
+		],
+		pageTitle_bn: 'সূরা নূহ - ৭১:২৬',
+		pageTitle_en: 'Surah Nooh - 71:26'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic:
+					'رَّبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِمَن دَخَلَ بَيْتِيَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَلَا تَزِدِ الظَّالِمِينَ إِلَّا تَبَارًا',
+				transliteration_bn:
+					'রব্বির্গ্ফিলী অলিওয়া-লিদাইয়্যা অলিমান্ দাখলা বাইতিয়া মু”মিনাঁও অলিল্ মু”মিনীনা অল্ মু”মিনা-ত্; অলা-তাযিদিজ্ জোয়া-লিমীনা ইল্লা-তাবা-র-।',
+				translations_bn:
+					'হে আমার রব! আমাকে, আমার পিতা-মাতাকে, যে আমার ঘরে ঈমানদার হয়ে প্রবেশ করবে তাকে এবং মুমিন নারী-পুরুষকে ক্ষমা করুন এবং ধ্বংস ছাড়া আপনি যালিমদের আর কিছুই বাড়িয়ে দেবেন না',
+				bottom_bn: '',
+				reference_bn: 'সূরা নূহ - ৭১:২৮',
+				top_en: '',
+				transliteration:
+					"Rabbi ighfir lee waliwalidayyawaliman dakhala baytiya mu'minan walil mu'mineena wal mu'minati wala tazidi aththalimeena illatabaran",
+				translations_en:
+					'My Lord, forgive me and my parents and whoever enters my house a believer and the believing men and believing women. And do not increase the wrongdoers except in destruction.',
+				bottom_en: '',
+				reference_en: 'Surah Nooh - 71:28'
+			}
+		],
+		pageTitle_bn: 'সূরা নূহ - ৭১:২৮',
+		pageTitle_en: 'Surah Nooh - 71:28'
+	},
+	{
+		duas: [
+			{
+				top_bn: '',
+				arabic: 'اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي',
+				transliteration_bn:
+					"আল্লাহুম্মা ইন্নাকা 'আফুউন, তু'হিব্বুল 'আফওয়া, ফা'ফু 'আন্নী",
+				translations_bn:
+					'হে আল্লাহ! তুমি ক্ষমাকারী, তুমি মাফ করতেই পছন্দ কর, অতএব তুমি আমাকে মাফ করে দাও',
+				bottom_bn: '',
+				reference_bn: 'সুনান ইবনে মাজাহ, বই ৩৪ , হাদিস ২৪',
+				top_en: '',
+				transliteration:
+					'Allāhumma innaka `Afuwwun, tuḥibbul-`afwa fa`fu `annī',
+				translations_en:
+					'O Allah, indeed You are Pardoning, You love pardon, so pardon me',
+				bottom_en: '',
+				reference_en: 'Sunan Ibn Majah : Book 34, Hadith 24'
+			}
+		],
+		pageTitle_bn: 'লাইলাতুল ক্বদরের দোআ',
+		pageTitle_en: 'Dua of Laylatul Qadr'
+	},
+	{
+		duas: [
+			{
+				top_bn:
+					'নাবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম তাদের (তার স্ত্রীদের) কাউকে ঝাড়ার সময় ডান হাত দিয়ে মাসাহ্ করতেন এবং বলতেন,',
+				arabic:
+					'أَذْهِبِ الْبَاسَ رَبَّ النَّاسِ، وَاشْفِ أَنْتَ الشَّافِي، لاَ شِفَاءَ إِلاَّ شِفَاؤُكَ، شِفَاءً لاَ يُغَادِرُ سَقَمًا',
+				transliteration_bn:
+					"আযহিবিল বা'স, রাব্বা ন্নাস, ওয়াশফি আন্তা আশ-শাফি, লা-শিফা-আ ইল্লা- শিফা-উকা। শিফা-আন লা-ইউগা-দিরু সাক্বামা",
+				translations_bn:
+					'হে মানুষের প্রতিপালক! তুমি রোগ দূর করে দাও এবং আরোগ্য দান কর। তুমিই তো আরোগ্যদানকারী, তোমার আরোগ্য ভিন্ন আর কোন আরোগ্য নেই, এমন আরোগ্য দাও, যারপর কোন রোগ থাকে না।',
+				bottom_bn: '',
+				reference_bn: 'বুখারী , বই ৭৬, হাদিস ৬৫',
+				top_en:
+					'The Prophet (ﷺ) used to treat some of his wives by passing his right hand over the place of ailment and used to say,',
+				transliteration:
+					'Adhhib il-ba’s, Rabbi l-naas washfi anta al-Shaafi laa shifaa’a illa shifaa’uka shifaa’an laa yughaadir saqaman',
+				translations_en:
+					'Remove the harm, O Lord of mankind and heal him, for You are the Healer and there is no healing except Your healing, with a healing which does not leave any disease behind',
+				bottom_en: '',
+				reference_en: 'Bukhari : Book 76, Hadith 65'
+			}
+		],
+		pageTitle_bn: 'অসুস্থ ব্যক্তির জন্য দোআ',
+		pageTitle_en: 'Dua for the Sick'
 	}
 ]
 
 function uniqueId() {
-	return (
-		'_' +
-		Math.random()
-			.toString(36)
-			.substr(2, 9)
-	)
+	return '_' + Math.random().toString(36).substr(2, 9)
 }
 
-Duas.map(item => {
+Duas.map((item) => {
 	item.key = uniqueId()
 	// item.id = item.duas[0]._id
 })
