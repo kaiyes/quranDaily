@@ -12,13 +12,20 @@ let items = [
 		name_bn: 'কুরআনের দোয়া',
 		name_en: 'Quranic',
 		color: 'darkslateblue',
-		category: 'quran'
+		category: 'quranic'
 	},
 	{
 		name_bn: 'সকাল-সন্ধ্যায়',
 		name_en: 'Morning-evening',
 		color: 'indianred',
 		category: 'morningEvening'
+	},
+
+	{
+		name_bn: 'কাপড় পরার দোয়া ',
+		name_en: 'Dressing',
+		color: 'darkslateblue',
+		category: 'dressing'
 	},
 	{
 		name_bn: 'খাওয়ার দোয়া',
@@ -33,10 +40,34 @@ let items = [
 		category: 'home'
 	},
 	{
+		name_bn: 'অজু ',
+		name_en: 'Ablution',
+		color: 'darkslateblue',
+		category: 'ablution'
+	},
+	{
+		name_bn: 'টয়লেট ',
+		name_en: 'Toilet',
+		color: 'darkslateblue',
+		category: 'toilet'
+	},
+	{
 		name_bn: 'যাত্রা পথে',
 		name_en: 'Travel',
 		color: 'darkslateblue',
-		category: 'travelling'
+		category: 'travel'
+	},
+	{
+		name_bn: 'মসজিদের দোয়া ',
+		name_en: 'Mosque',
+		color: 'darkslateblue',
+		category: 'mosque'
+	},
+	{
+		name_bn: 'আজান 	',
+		name_en: 'Azan',
+		color: 'darkslateblue',
+		category: 'azan'
 	},
 	{
 		name_bn: 'সালাতের দোয়া',
@@ -48,7 +79,7 @@ let items = [
 		name_bn: 'সালাত শেষে দোয়া',
 		name_en: 'After Salat',
 		color: 'darkslateblue',
-		category: 'salatEnd'
+		category: 'afterSalat'
 	},
 	{
 		name_bn: 'কুরবানির দোয়া',
@@ -60,7 +91,7 @@ let items = [
 		name_en: 'Repentance',
 		name_bn: 'তাওবার দোয়া ',
 		color: 'darkslateblue',
-		category: 'tawba'
+		category: 'repentance'
 	},
 	{
 		name_bn: 'ঈমানের সুরক্ষায় দোয়া',
@@ -72,16 +103,16 @@ let items = [
 		name_bn: 'উপকারীর জন্যে দোয়া',
 		name_en: 'For Benefactor',
 		color: 'darkslateblue',
-		category: 'beneficial'
+		category: 'forBenefactor'
 	},
 	{
 		name_bn: 'ইস্তেখারার দোয়া ',
 		name_en: 'Divine Guidence',
 		color: 'indianred',
-		category: 'istekhara'
+		category: 'divineGuidence'
 	},
 	{
-		name_bn: 'অসুস্থতার দোয়া ',
+		name_bn: 'রোগ ',
 		name_en: 'Disease',
 		color: 'darkslateblue',
 		category: 'disease'
@@ -90,13 +121,13 @@ let items = [
 		name_bn: 'শিশুদের নিরাপত্তা',
 		name_en: 'Child Safety',
 		color: 'indianred',
-		category: 'child'
+		category: 'childSafety'
 	},
 	{
 		name_bn: 'রুকিয়ার দোয়া',
 		name_en: 'Rukia',
 		color: 'darkslateblue',
-		category: 'ruqiah'
+		category: 'ruqia'
 	},
 	{
 		name_bn: 'বিয়ে সঙ্ক্রান্ত',
@@ -108,19 +139,19 @@ let items = [
 		name_bn: 'আর্থিক',
 		name_en: 'Finance',
 		color: 'darkslateblue',
-		category: 'financial'
+		category: 'finance'
 	},
 	{
 		name_en: 'Funeral',
 		name_bn: 'জানাযা',
 		color: 'indianred',
-		category: 'janaza'
+		category: 'funeral'
 	},
 	{
 		name_bn: 'অতিথির জন্যে',
 		name_en: 'Guest',
 		color: 'darkslateblue',
-		category: 'mehman'
+		category: 'guest'
 	},
 	{
 		name_bn: 'রামাদানের দোয়া',
@@ -150,7 +181,7 @@ let items = [
 		name_bn: 'দুর্দশাগ্রস্ত ও বিপদের দোয়া',
 		name_en: 'When in Danger',
 		color: 'indianred',
-		category: 'danger'
+		category: 'whenInDanger'
 	},
 	{
 		name_en: 'Enemy',
@@ -162,7 +193,7 @@ let items = [
 		name_en: 'Child Birth',
 		name_bn: 'জন্ম হলে দোয়া',
 		color: 'indianred',
-		category: 'childborn'
+		category: 'childBirth'
 	},
 	{
 		name_en: 'Weather',
@@ -174,7 +205,7 @@ let items = [
 		name_en: 'Assembly',
 		name_bn: 'মজলিসের দোয়া',
 		color: 'indianred',
-		category: 'majlis'
+		category: 'assembly'
 	}
 ]
 

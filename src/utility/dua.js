@@ -70,7 +70,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'যিক্‌রের ফযীলত',
-		pageTitle_en: 'The Excellence of Zikr'
+		pageTitle_en: 'The Excellence of Zikr',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -356,7 +357,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা আল-ইমরান আয়াত ১৯০-২০০',
-		pageTitle_en: 'Surah Al-Imran, Ayat 190 - 200'
+		pageTitle_en: 'Surah Al-Imran, Ayat 190 - 200',
+		category: 'quranic'
 	},
 	{
 		duas: [
@@ -382,7 +384,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কাপড় পরিধানের দো‘আ',
-		pageTitle_en: 'When wearing a garment'
+		pageTitle_en: 'When wearing a garment',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -408,7 +411,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'নতুন কাপড় পরিধানের দো‘আ',
-		pageTitle_en: 'When wearing a new garment'
+		pageTitle_en: 'When wearing a new garment',
+		category: 'dressing'
 	},
 	{
 		duas: [
@@ -431,7 +435,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'অপরকে নতুন কাপড় পরিধান করতে দেখলে তার জন্য দো‘আ #১',
-		pageTitle_en: 'To someone wearing a new garment #1'
+		pageTitle_en: 'To someone wearing a new garment #1',
+		category: 'dressing'
 	},
 	{
 		duas: [
@@ -453,7 +458,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'অপরকে নতুন কাপড় পরিধান করতে দেখলে তার জন্য দো‘আ #২',
-		pageTitle_en: 'To someone wearing a new garment #2'
+		pageTitle_en: 'To someone wearing a new garment #2',
+		category: 'dressing'
 	},
 	{
 		duas: [
@@ -474,7 +480,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কাপড় খুলে রাখার সময় কী বলবে',
-		pageTitle_en: 'Before undressing'
+		pageTitle_en: 'Before undressing',
+		category: 'dressing'
 	},
 	{
 		duas: [
@@ -512,7 +519,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'পায়খানায় প্রবেশের দো‘আ',
-		pageTitle_en: 'Before entering the toilet'
+		pageTitle_en: 'Before entering the toilet',
+		category: 'toilet'
 	},
 	{
 		duas: [
@@ -533,7 +541,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'পায়খানা থেকে বের হওয়ার দো‘আ',
-		pageTitle_en: 'After leaving the toilet'
+		pageTitle_en: 'After leaving the toilet',
+		category: 'toilet'
 	},
 	{
 		duas: [
@@ -554,7 +563,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ওযুর পূর্বে যিক্‌র',
-		pageTitle_en: 'When starting ablution'
+		pageTitle_en: 'When starting ablution',
+		category: 'ablution'
 	},
 	{
 		duas: [
@@ -578,7 +588,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ওযু শেষ করার পর যিক্‌র #১',
-		pageTitle_en: 'Upon completing the ablution #1'
+		pageTitle_en: 'Upon completing the ablution #1',
+		category: 'ablution'
 	},
 	{
 		duas: [
@@ -603,7 +614,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ওযু শেষ করার পর যিক্‌র #২',
-		pageTitle_en: 'Upon completing the ablution #2'
+		pageTitle_en: 'Upon completing the ablution #2',
+		category: 'ablution'
 	},
 	{
 		duas: [
@@ -629,7 +641,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ওযু শেষ করার পর যিক্‌র #৩',
-		pageTitle_en: 'Upon completing the ablution #3'
+		pageTitle_en: 'Upon completing the ablution #3',
+		category: 'ablution'
 	},
 	{
 		duas: [
@@ -655,7 +668,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বাড়ি থেকে বের হওয়ার সময়ের যিক্‌র #১',
-		pageTitle_en: 'When leaving the home #1'
+		pageTitle_en: 'When leaving the home #1',
+		category: 'home'
 	},
 	{
 		duas: [
@@ -681,7 +695,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বাড়ি থেকে বের হওয়ার সময়ের যিক্‌র #২',
-		pageTitle_en: 'When leaving the home #2'
+		pageTitle_en: 'When leaving the home #2',
+		category: 'home'
 	},
 	{
 		duas: [
@@ -708,7 +723,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘরে প্রবেশের সময় যিক্‌র',
-		pageTitle_en: 'Upon entering the home'
+		pageTitle_en: 'Upon entering the home',
+		category: 'home'
 	},
 	{
 		duas: [
@@ -782,7 +798,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মসজিদে যাওয়ার সময়ে পড়ার দো‘আ',
-		pageTitle_en: 'Going to the mosque'
+		pageTitle_en: 'Going to the mosque',
+		category: 'mosque'
 	},
 	{
 		duas: [
@@ -851,7 +868,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মসজিদে প্রবেশের দো‘আ',
-		pageTitle_en: 'Upon entering the mosque'
+		pageTitle_en: 'Upon entering the mosque',
+		category: 'mosque'
 	},
 	{
 		duas: [
@@ -877,7 +895,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মসজিদ থেকে বের হওয়ার দো‘আ',
-		pageTitle_en: 'Upon leaving the mosque'
+		pageTitle_en: 'Upon leaving the mosque',
+		category: 'mosque'
 	},
 	{
 		duas: [
@@ -954,7 +973,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আযানের যিক্‌রসমূহ',
-		pageTitle_en: 'Upon hearing Adhaan (call to prayer)'
+		pageTitle_en: 'Upon hearing Adhaan (call to prayer)',
+		category: 'azan'
 	},
 	{
 		duas: [
@@ -978,7 +998,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাতের শুরুতে দো‘আ #১',
-		pageTitle_en: 'At the start of the prayer #1'
+		pageTitle_en: 'At the start of the prayer #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1004,7 +1025,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাতের শুরুতে দো‘আ #২',
-		pageTitle_en: 'At the start of the prayer #2'
+		pageTitle_en: 'At the start of the prayer #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1064,7 +1086,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাতের শুরুতে দো‘আ #৩',
-		pageTitle_en: 'At the start of the prayer #3'
+		pageTitle_en: 'At the start of the prayer #3',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1088,7 +1111,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাতের শুরুতে দো‘আ #৪',
-		pageTitle_en: 'At the start of the prayer #4'
+		pageTitle_en: 'At the start of the prayer #4',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1132,7 +1156,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাতের শুরুতে দো‘আ #৫',
-		pageTitle_en: 'At the start of the prayer #5'
+		pageTitle_en: 'At the start of the prayer #5',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1228,7 +1253,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাতের শুরুতে দো‘আ #৬',
-		pageTitle_en: 'When rising from sleep to pray Qiyam al Layl'
+		pageTitle_en: 'When rising from sleep to pray Qiyam al Layl',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1249,7 +1275,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকূ‘র দো‘আ #১',
-		pageTitle_en: 'While in rukoo #1'
+		pageTitle_en: 'While in rukoo #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1273,7 +1300,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকূ‘র দো‘আ #২',
-		pageTitle_en: 'While in rukoo #2'
+		pageTitle_en: 'While in rukoo #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1294,7 +1322,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকূ‘র দো‘আ #৩',
-		pageTitle_en: 'While in rukoo #3'
+		pageTitle_en: 'While in rukoo #3',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1320,7 +1349,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকূ‘র দো‘আ #৪',
-		pageTitle_en: 'While in rukoo #4'
+		pageTitle_en: 'While in rukoo #4',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1346,7 +1376,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকূ‘র দো‘আ #৫',
-		pageTitle_en: 'While in rukoo #5'
+		pageTitle_en: 'While in rukoo #5',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1366,7 +1397,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকু থেকে উঠার দো‘আ #১',
-		pageTitle_en: 'Upon rising from rukoo #1'
+		pageTitle_en: 'Upon rising from rukoo #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1390,7 +1422,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকু থেকে উঠার দো‘আ #২',
-		pageTitle_en: 'Upon rising from rukoo #2'
+		pageTitle_en: 'Upon rising from rukoo #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1414,7 +1447,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রুকু থেকে উঠার দো‘আ #৩',
-		pageTitle_en: 'Upon rising from rukoo #3'
+		pageTitle_en: 'Upon rising from rukoo #3',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1436,7 +1470,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার দো‘আ #১',
-		pageTitle_en: 'Whilst prostrating [sujood] #1'
+		pageTitle_en: 'Whilst prostrating [sujood] #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1461,7 +1496,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার দো‘আ #২',
-		pageTitle_en: 'Whilst prostrating [sujood] #2'
+		pageTitle_en: 'Whilst prostrating [sujood] #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1483,7 +1519,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার দো‘আ #৩',
-		pageTitle_en: 'Whilst prostrating [sujood] #3'
+		pageTitle_en: 'Whilst prostrating [sujood] #3',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1507,7 +1544,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার দো‘আ #৪',
-		pageTitle_en: 'Whilst prostrating [sujood] #4'
+		pageTitle_en: 'Whilst prostrating [sujood] #4',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1533,7 +1571,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার দো‘আ #৫',
-		pageTitle_en: 'Whilst prostrating [sujood] #5'
+		pageTitle_en: 'Whilst prostrating [sujood] #5',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1557,7 +1596,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার দো‘আ #৬',
-		pageTitle_en: 'Whilst prostrating [sujood] #6'
+		pageTitle_en: 'Whilst prostrating [sujood] #6',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1581,7 +1621,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার দো‘আ #৭',
-		pageTitle_en: 'Whilst prostrating [sujood] #7'
+		pageTitle_en: 'Whilst prostrating [sujood] #7',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1603,7 +1644,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুই সিজদার মধ্যবর্তী বৈঠকের দো‘আ #১',
-		pageTitle_en: 'Between two prostrations #1'
+		pageTitle_en: 'Between two prostrations #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1629,7 +1671,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুই সিজদার মধ্যবর্তী বৈঠকের দো‘আ #২',
-		pageTitle_en: 'Between two prostrations #2'
+		pageTitle_en: 'Between two prostrations #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1654,7 +1697,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার আয়াত তেলাওয়াতের পর সিজদায় দো‘আ #১',
-		pageTitle_en: 'Prostration due to Quran recitation #1'
+		pageTitle_en: 'Prostration due to Quran recitation #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1680,7 +1724,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সিজদার আয়াত তেলাওয়াতের পর সিজদায় দো‘আ #২',
-		pageTitle_en: 'Prostration due to Quran recitation #2'
+		pageTitle_en: 'Prostration due to Quran recitation #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1706,7 +1751,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'তাশাহ্‌হুদ',
-		pageTitle_en: 'The Tashahhud'
+		pageTitle_en: 'The Tashahhud',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1731,7 +1777,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'তাশাহ্‌হুদের পর নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের উপর দরুদ পাঠ #১',
-		pageTitle_en: 'Prayers upon the Prophet after tashahhud #1'
+		pageTitle_en: 'Prayers upon the Prophet after tashahhud #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1758,7 +1805,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'তাশাহ্‌হুদের পর নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের উপর দরুদ পাঠ #২',
-		pageTitle_en: 'Prayers upon the Prophet after tashahhud #2'
+		pageTitle_en: 'Prayers upon the Prophet after tashahhud #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1786,7 +1834,8 @@ const Duas = [
 		pageTitle_bn:
 			'কবর ও জাহান্নামের আযাব এবং জীবন, মৃত্যু ও দাজ্জালের ফিতনা থেকে আশ্রয় চাওয়ার দোআ',
 		pageTitle_en:
-			'Protection from punishment of the grave, trials of life, death & Dajjal'
+			'Protection from punishment of the grave, trials of life, death & Dajjal',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1812,7 +1861,8 @@ const Duas = [
 		pageTitle_bn:
 			'কবর ও জাহান্নামের আযাব, জীবন, মৃত্যু ও দাজ্জালের ফিতনা এবং গুনাহ ও ঋণ থেকে আশ্রয় চাওয়ার দোআ',
 		pageTitle_en:
-			'Protection from punishment of the grave, trials of life, death & Dajjal, from sin & debt'
+			'Protection from punishment of the grave, trials of life, death & Dajjal, from sin & debt',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1836,7 +1886,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালামের আগে শেষ তাশাহহুদের পরের দো‘আ #৩',
-		pageTitle_en: 'After the last tashahhud & before salam #3'
+		pageTitle_en: 'After the last tashahhud & before salam #3',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1860,7 +1911,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালামের আগে শেষ তাশাহহুদের পরের দো‘আ #৪',
-		pageTitle_en: 'After the last tashahhud & before salam #4'
+		pageTitle_en: 'After the last tashahhud & before salam #4',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1886,7 +1938,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালামের আগে শেষ তাশাহহুদের পরের দো‘আ #৫',
-		pageTitle_en: 'After the last tashahhud & before salam #5'
+		pageTitle_en: 'After the last tashahhud & before salam #5',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -1910,7 +1963,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কৃপণতা, কাপুরুষতা, বার্ধক্য এবং ফিতনা থেকে আশ্রয় চাওয়ার দোআ',
-		pageTitle_en: 'Protection from misery, cowardice, old age and trials'
+		pageTitle_en: 'Protection from misery, cowardice, old age and trials',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -1935,7 +1989,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জাহান্নাম থেকে আশ্রয় এবং জান্নাত চাওয়ার দোআ',
-		pageTitle_en: 'Ask for paradise & protection from fire'
+		pageTitle_en: 'Ask for paradise & protection from fire',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -1997,7 +2052,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালামের আগে শেষ তাশাহহুদের পরের দো‘আ #৮',
-		pageTitle_en: 'After the last tashahhud & before salam #8'
+		pageTitle_en: 'After the last tashahhud & before salam #8',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -2023,7 +2079,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালামের আগে শেষ তাশাহহুদের পরের দো‘আ #৯',
-		pageTitle_en: 'After the last tashahhud & before salam #9'
+		pageTitle_en: 'After the last tashahhud & before salam #9',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -2049,7 +2106,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালামের আগে শেষ তাশাহহুদের পরের দো‘আ #১০',
-		pageTitle_en: 'After the last tashahhud & before salam #10'
+		pageTitle_en: 'After the last tashahhud & before salam #10',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -2075,7 +2133,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালামের আগে শেষ তাশাহহুদের পরের দো‘আ #১১',
-		pageTitle_en: 'After the last tashahhud & before salam #11'
+		pageTitle_en: 'After the last tashahhud & before salam #11',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -2112,7 +2171,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাম ফিরানোর পর যিকরসমূহ #১',
-		pageTitle_en: 'Dua after salaam #1'
+		pageTitle_en: 'Dua after salaam #1',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2155,7 +2215,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাম ফিরানোর পর যিকরসমূহ #২',
-		pageTitle_en: 'Dua after salaam #2'
+		pageTitle_en: 'Dua after salaam #2',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2179,7 +2240,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাম ফিরানোর পর যিকরসমূহ #৩',
-		pageTitle_en: 'Dua after salaam #3'
+		pageTitle_en: 'Dua after salaam #3',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2221,7 +2283,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'পাপরাশি ক্ষমা করে দেওয়া হয়, যদিও তা সমুদ্রের ফেনারাশির মত হয়',
-		pageTitle_en: 'Sins forgiven even if like the foam of the sea'
+		pageTitle_en: 'Sins forgiven even if like the foam of the sea',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2284,7 +2347,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কুরআনের শেষ তিন সূরা',
-		pageTitle_en: 'Last three Surahs of the Quran'
+		pageTitle_en: 'Last three Surahs of the Quran',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2424,7 +2488,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আয়াতুল কুরসি: সূরা আল-বাকারাহ্‌ ২৫৫',
-		pageTitle_en: 'Ayatul Kursi - Surah Al Baqarah 2:255'
+		pageTitle_en: 'Ayatul Kursi - Surah Al Baqarah 2:255',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2450,7 +2515,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাম ফিরানোর পর যিকরসমূহ #৭',
-		pageTitle_en: 'Dua after salaam #7'
+		pageTitle_en: 'Dua after salaam #7',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2476,7 +2542,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: "উপকারী জ্ঞান, পবিত্র রিযিক এবং কবুলযোগ্য আমলের দো'আ",
-		pageTitle_en: 'Asking for Beneficial Knowledge, Pure Rizq & Accepted Deeds'
+		pageTitle_en: 'Asking for Beneficial Knowledge, Pure Rizq & Accepted Deeds',
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2575,7 +2642,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ইসতিখারার সালাতের দো‘আ',
-		pageTitle_en: "Istikharah (Seeking Allah's help in making a decision)"
+		pageTitle_en: "Istikharah (Seeking Allah's help in making a decision)",
+		category: 'afterSalat'
 	},
 	{
 		duas: [
@@ -2598,7 +2666,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রের ফযীলত',
-		pageTitle_en: 'Excellence of dua in the morning & evening'
+		pageTitle_en: 'Excellence of dua in the morning & evening',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -2751,7 +2820,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আয়াতুল কুরসি: সূরা আল-বাকারাহ্‌ ২৫৫',
-		pageTitle_en: 'Ayatul Kursi - Surah Al Baqarah 2:255'
+		pageTitle_en: 'Ayatul Kursi - Surah Al Baqarah 2:255',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -2818,7 +2888,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'সবকিছুর (নিরাপত্তার) জন্য যথেষ্ট যে দোআ',
 		pageTitle_en:
-			'Dua that will suffice one (as a protection) against everything'
+			'Dua that will suffice one (as a protection) against everything',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -2842,7 +2913,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #৪',
-		pageTitle_en: 'Duas in the morning & evening #4'
+		pageTitle_en: 'Duas in the morning & evening #4',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -2885,7 +2957,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #৫',
-		pageTitle_en: 'Duas in the morning & evening #5'
+		pageTitle_en: 'Duas in the morning & evening #5',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -2963,7 +3036,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সায়্যিদুল ইসতিগফার (ক্ষমা চাওয়ার শ্রেষ্ঠ দোআ)',
-		pageTitle_en: 'Sayyidinal Istighfar (Best way to ask forgiveness)'
+		pageTitle_en: 'Sayyidinal Istighfar (Best way to ask forgiveness)',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -2990,7 +3064,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জাহান্নামের আগুন থেকে মুক্তি',
-		pageTitle_en: 'Saving from the hell fire'
+		pageTitle_en: 'Saving from the hell fire',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3018,7 +3093,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আল্লাহর নিকট শুকরিয়া আদায়',
-		pageTitle_en: 'Completing obligation to thank Allah'
+		pageTitle_en: 'Completing obligation to thank Allah',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3045,7 +3121,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #৯',
 		pageTitle_en:
-			'Asking for healthy body, eyesight and hearing and refuge from disbelief and poverty'
+			'Asking for healthy body, eyesight and hearing and refuge from disbelief and poverty',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3074,7 +3151,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'দুনিয়া ও আখেরাতের সকল চিন্তাভাবনার জন্য আল্লাহ্ই যথেষ্ট হবেন',
-		pageTitle_en: 'Grant whatever you desire from this life or the next'
+		pageTitle_en: 'Grant whatever you desire from this life or the next',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3100,7 +3178,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #১১',
 		pageTitle_en:
-			'Asking for pardon and wellbeing, veiling weakness and refuge from all sides'
+			'Asking for pardon and wellbeing, veiling weakness and refuge from all sides',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3126,7 +3205,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #১২',
 		pageTitle_en:
-			'Refuge from the evil of oneself and shaitan and from harming oneself or others'
+			'Refuge from the evil of oneself and shaitan and from harming oneself or others',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3154,7 +3234,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কোনো কিছু তার ক্ষতি করতে পারবে না',
-		pageTitle_en: 'Not afflicted by any calamity'
+		pageTitle_en: 'Not afflicted by any calamity',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3182,7 +3263,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কিয়ামতের দিনে আল্লাহর সন্তুষ্টি',
-		pageTitle_en: 'Pleasure of Allah in the day of judgment'
+		pageTitle_en: 'Pleasure of Allah in the day of judgment',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3208,7 +3290,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #১৫',
-		pageTitle_en: "Ask for rectification of one's affairs"
+		pageTitle_en: "Ask for rectification of one's affairs",
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3251,7 +3334,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #১৬',
-		pageTitle_en: 'Duas in the morning & evening #16'
+		pageTitle_en: 'Duas in the morning & evening #16',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3276,7 +3360,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #১৭',
-		pageTitle_en: 'Duas in the morning & evening #17'
+		pageTitle_en: 'Duas in the morning & evening #17',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3297,7 +3382,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'তার চেয়ে কেউ উৎকৃষ্ট হবে না যে এই দোআ বেশি পরবে',
-		pageTitle_en: 'Not surpassed by anyone except by one who says the dua more'
+		pageTitle_en: 'Not surpassed by anyone except by one who says the dua more',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3326,7 +3412,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দশটি দাসমুক্তির অনুরূপ ও একশত সাওয়াব',
-		pageTitle_en: 'Freeing Ten slaves, 100 Rewards, 100 Sins taken away'
+		pageTitle_en: 'Freeing Ten slaves, 100 Rewards, 100 Sins taken away',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3353,7 +3440,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'চারটি কালেমা সারা সকাল ইবাদতের চেয়েও ওজনে ভারী',
 		pageTitle_en:
-			'Four phrases Heavier in the Scales than all Morning of Worship'
+			'Four phrases Heavier in the Scales than all Morning of Worship',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3379,7 +3467,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: "উপকারী জ্ঞান, পবিত্র রিযিক এবং কবুলযোগ্য আমলের দো'আ",
-		pageTitle_en: 'Asking for Beneficial Knowledge, Pure Rizq & Accepted Deeds'
+		pageTitle_en: 'Asking for Beneficial Knowledge, Pure Rizq & Accepted Deeds',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3401,7 +3490,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সকাল ও বিকালের যিক্‌রসমূহ #২২',
-		pageTitle_en: 'Seeking forgiveness and repentance'
+		pageTitle_en: 'Seeking forgiveness and repentance',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3429,7 +3519,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিষধর প্রাণীর ক্ষতি থেকে নিরাপত্তা',
-		pageTitle_en: 'Protection of Insect stings'
+		pageTitle_en: 'Protection of Insect stings',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3455,7 +3546,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কিয়ামতের দিন রসুলুল্লাহ (স:)এর সুপারিশ লাভ',
-		pageTitle_en: "Gain Prophet saw's intercession on the Day of Judgment"
+		pageTitle_en: "Gain Prophet saw's intercession on the Day of Judgment",
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3519,7 +3611,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কুরআনের শেষ তিন সূরা',
-		pageTitle_en: 'Last three Surahs of the Quran'
+		pageTitle_en: 'Last three Surahs of the Quran',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3658,7 +3751,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আয়াতুল কুরসি: সূরা আল-বাকারাহ্‌ ২৫৫',
-		pageTitle_en: 'Ayatul Kursi - Surah Al Baqarah 2:255'
+		pageTitle_en: 'Ayatul Kursi - Surah Al Baqarah 2:255',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3704,7 +3798,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সূরা বাকারাহ্‌ আয়াত ২৮৫-২৮৬',
-		pageTitle_en: 'Surah Al Baqarah 2:285-286'
+		pageTitle_en: 'Surah Al Baqarah 2:285-286',
+		category: 'morningEvening'
 	},
 	{
 		duas: [
@@ -3731,7 +3826,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #৪',
-		pageTitle_en: 'If risen from the bed and return to it afterwards'
+		pageTitle_en: 'If risen from the bed and return to it afterwards',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3756,7 +3852,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #৫',
-		pageTitle_en: 'Dua before sleeping #5'
+		pageTitle_en: 'Dua before sleeping #5',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3782,7 +3879,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #৬',
-		pageTitle_en: 'When about to sleep'
+		pageTitle_en: 'When about to sleep',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3803,7 +3901,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #৭',
-		pageTitle_en: 'Dua before sleeping #7'
+		pageTitle_en: 'Dua before sleeping #7',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3852,7 +3951,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #৮',
-		pageTitle_en: 'Dua that is better than a servant'
+		pageTitle_en: 'Dua that is better than a servant',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3894,7 +3994,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #৯',
-		pageTitle_en: 'Dua before sleeping #9'
+		pageTitle_en: 'Dua before sleeping #9',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3918,7 +4019,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #১০',
-		pageTitle_en: 'Dua before sleeping #10'
+		pageTitle_en: 'Dua before sleeping #10',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3943,7 +4045,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #১১',
-		pageTitle_en: 'Dua before sleeping #11'
+		pageTitle_en: 'Dua before sleeping #11',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3965,7 +4068,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমানোর যিক্‌রসমূহ #১২',
-		pageTitle_en: 'Dua before sleeping #12'
+		pageTitle_en: 'Dua before sleeping #12',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -3993,7 +4097,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ফিত্‌রাহের উপর মৃত্যুবরণ করা',
-		pageTitle_en: 'Dying upon the fitrah'
+		pageTitle_en: 'Dying upon the fitrah',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -4021,7 +4126,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রাতে যখন পার্শ্ব পরিবর্তন করে তখন পড়ার দো‘আ',
-		pageTitle_en: 'When turning over during the night'
+		pageTitle_en: 'When turning over during the night',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -4047,7 +4153,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঘুমন্ত অবস্থায় ভয় এবং একাকিত্বের অস্বস্তিতে পড়ার দো‘আ',
-		pageTitle_en: 'Upon experiencing fear or unrest during sleep'
+		pageTitle_en: 'Upon experiencing fear or unrest during sleep',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -4068,7 +4175,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'খারাপ স্বপ্ন বা দুঃস্বপ্ন দেখে যা করবে',
-		pageTitle_en: 'Upon seeing a good or a bad dream'
+		pageTitle_en: 'Upon seeing a good or a bad dream',
+		category: 'sleeping'
 	},
 	{
 		duas: [
@@ -4112,7 +4220,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিত্‌রের কুনুতের দো‘আ #১',
-		pageTitle_en: 'Dua Qunut in Witr prayer #1'
+		pageTitle_en: 'Dua Qunut in Witr prayer #1',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -4138,7 +4247,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিত্‌রের কুনুতের দো‘আ #২',
-		pageTitle_en: 'Dua Qunut in Witr prayer #2'
+		pageTitle_en: 'Dua Qunut in Witr prayer #2',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -4164,7 +4274,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিত্‌রের কুনুতের দো‘আ #৩',
-		pageTitle_en: 'Dua Qunut in Witr prayer #3'
+		pageTitle_en: 'Dua Qunut in Witr prayer #3',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -4200,7 +4311,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিত্‌রের নামায থেকে সালাম ফিরানোর পরের যিক্‌র',
-		pageTitle_en: 'After salaam of the Witr prayer'
+		pageTitle_en: 'After salaam of the Witr prayer',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -4225,7 +4337,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুঃখ ও দুশ্চিন্তার সময় পড়ার দো‘আ #১',
-		pageTitle_en: 'Anxiety and sorrow #1'
+		pageTitle_en: 'Anxiety and sorrow #1',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -4252,7 +4365,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুঃখ ও দুশ্চিন্তার সময় পড়ার দো‘আ #২',
-		pageTitle_en: 'Anxiety and sorrow #2'
+		pageTitle_en: 'Anxiety and sorrow #2',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -4277,7 +4391,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুর্দশাগ্রস্ত ব্যক্তির দো‘আ #১',
-		pageTitle_en: 'When in distress #1'
+		pageTitle_en: 'When in distress #1',
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -4303,7 +4418,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুর্দশাগ্রস্ত ব্যক্তির দো‘আ #২',
-		pageTitle_en: 'When in distress #2'
+		pageTitle_en: 'When in distress #2',
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -4329,7 +4445,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুর্দশাগ্রস্ত ব্যক্তির দো‘আ #৩',
-		pageTitle_en: 'When in distress #3'
+		pageTitle_en: 'When in distress #3',
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -4352,7 +4469,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দুর্দশাগ্রস্ত ব্যক্তির দো‘আ #৪',
-		pageTitle_en: 'When in distress #4'
+		pageTitle_en: 'When in distress #4',
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -4378,7 +4496,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শত্রু এবং শক্তিধর ব্যক্তির সাক্ষাতকালে দো‘আ #১',
-		pageTitle_en: 'Upon encountering an enemy or those of authority #1'
+		pageTitle_en: 'Upon encountering an enemy or those of authority #1',
+		category: 'enemy'
 	},
 	{
 		duas: [
@@ -4404,7 +4523,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শত্রু এবং শক্তিধর ব্যক্তির সাক্ষাতকালে দো‘আ #২',
-		pageTitle_en: 'Upon encountering an enemy or those of authority #2'
+		pageTitle_en: 'Upon encountering an enemy or those of authority #2',
+		category: 'enemy'
 	},
 	{
 		duas: [
@@ -4425,7 +4545,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শত্রু এবং শক্তিধর ব্যক্তির সাক্ষাতকালে দো‘আ #৩',
-		pageTitle_en: 'Upon encountering an enemy or those of authority #3'
+		pageTitle_en: 'Upon encountering an enemy or those of authority #3',
+		category: 'enemy'
 	},
 	{
 		duas: [
@@ -4451,7 +4572,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শাসকের অত্যাচারের ভয় করলে পড়ার দো‘আ #১',
-		pageTitle_en: 'Dua against the oppression of rulers #1'
+		pageTitle_en: 'Dua against the oppression of rulers #1',
+		category: 'enemy'
 	},
 	{
 		duas: [
@@ -4477,7 +4599,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শাসকের অত্যাচারের ভয় করলে পড়ার দো‘আ #২',
-		pageTitle_en: 'Dua against the oppression of rulers #2'
+		pageTitle_en: 'Dua against the oppression of rulers #2',
+		category: 'enemy'
 	},
 	{
 		duas: [
@@ -4501,7 +4624,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শত্রুর উপর বদ-দো‘আ',
-		pageTitle_en: 'Dua made against an enemy'
+		pageTitle_en: 'Dua made against an enemy',
+		category: 'enemy'
 	},
 	{
 		duas: [
@@ -4522,7 +4646,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কোনো সম্প্রদায়কে ভয় করলে যা বলবে',
-		pageTitle_en: 'What to say when in fear of people'
+		pageTitle_en: 'What to say when in fear of people',
+		category: 'enemy'
 	},
 	{
 		duas: [
@@ -4557,7 +4682,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঈমানের মধ্যে সন্দেহে পতিত ব্যক্তির দো‘আ #১',
-		pageTitle_en: 'If afflicted with doubt in his faith #1'
+		pageTitle_en: 'If afflicted with doubt in his faith #1',
+		category: 'eeman'
 	},
 	{
 		duas: [
@@ -4583,7 +4709,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঈমানের মধ্যে সন্দেহে পতিত ব্যক্তির দো‘আ #২',
-		pageTitle_en: 'If afflicted with doubt in his faith #2'
+		pageTitle_en: 'If afflicted with doubt in his faith #2',
+		category: 'eeman'
 	},
 	{
 		duas: [
@@ -4609,7 +4736,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঋণ মুক্তির জন্য দো‘আ #১',
-		pageTitle_en: 'Settling a debt #1'
+		pageTitle_en: 'Settling a debt #1',
+		category: 'finance'
 	},
 	{
 		duas: [
@@ -4634,7 +4762,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ঋণ মুক্তির জন্য দো‘আ #২',
-		pageTitle_en: 'Settling a debt #2'
+		pageTitle_en: 'Settling a debt #2',
+		category: 'finance'
 	},
 	{
 		duas: [
@@ -4655,7 +4784,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সালাতে ও কিরাআতে শয়তানের কুমন্ত্রণায় পতিত ব্যক্তির দো‘আ',
-		pageTitle_en: 'If afflicted by whisperings in prayer or recitation'
+		pageTitle_en: 'If afflicted by whisperings in prayer or recitation',
+		category: 'salat'
 	},
 	{
 		duas: [
@@ -4681,7 +4811,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কঠিন কাজে পতিত ব্যক্তির দো‘আ',
-		pageTitle_en: "When one's affairs have become difficult"
+		pageTitle_en: "When one's affairs have become difficult",
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -4704,7 +4835,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'পাপ করে ফেললে যা বলবে এবং যা করবে',
-		pageTitle_en: 'Upon committing a sin'
+		pageTitle_en: 'Upon committing a sin',
+		category: 'repentance'
 	},
 	{
 		duas: [
@@ -4728,7 +4860,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শয়তান ও তার কুমন্ত্রণা দূর করার দো‘আ',
-		pageTitle_en: 'For expelling the devil and his whisperings'
+		pageTitle_en: 'For expelling the devil and his whisperings',
+		category: 'repentance'
 	},
 	{
 		duas: [
@@ -4768,7 +4901,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'যখন অনাকাঙ্খিত কিছু ঘটে, বা যা করতে চায় তাতে বাধাপ্রাপ্ত হয়, তখন পড়ার দো‘আ',
-		pageTitle_en: 'When stricken with a mishap or overtaken by an affair'
+		pageTitle_en: 'When stricken with a mishap or overtaken by an affair',
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -4812,7 +4946,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'সন্তান লাভকারীকে অভিনন্দন ও তার জবাব',
-		pageTitle_en: 'Congratulations on the occasion of a birth'
+		pageTitle_en: 'Congratulations on the occasion of a birth',
+		category: 'childBirth'
 	},
 	{
 		duas: [
@@ -4839,7 +4974,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'যা দ্বারা শিশুদের জন্য আশ্রয় প্রার্থনা করা হয়',
-		pageTitle_en: "Placing children under Allaah's protection"
+		pageTitle_en: "Placing children under Allaah's protection",
+		category: 'childSafety'
 	},
 	{
 		duas: [
@@ -4862,7 +4998,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রোগী দেখতে যাওয়ার ফযিলত',
-		pageTitle_en: 'Excellence of visiting the sick'
+		pageTitle_en: 'Excellence of visiting the sick',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -4884,7 +5021,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রোগী দেখতে গিয়ে তার জন্য দো‘আ #১',
-		pageTitle_en: 'When visiting the sick #1'
+		pageTitle_en: 'When visiting the sick #1',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -4914,7 +5052,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রোগী দেখতে গিয়ে তার জন্য দো‘আ #২',
-		pageTitle_en: 'When visiting the sick #2'
+		pageTitle_en: 'When visiting the sick #2',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -4938,7 +5077,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জীবনের আশা ছেড়ে দেওয়া রোগীর দো‘আ #১',
-		pageTitle_en: 'When the sick have renounced all hope of life #1'
+		pageTitle_en: 'When the sick have renounced all hope of life #1',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -4963,7 +5103,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জীবনের আশা ছেড়ে দেওয়া রোগীর দো‘আ #২',
-		pageTitle_en: 'When the sick have renounced all hope of life #2'
+		pageTitle_en: 'When the sick have renounced all hope of life #2',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -4989,7 +5130,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'জীবনের আশা ছেড়ে দেওয়া রোগীর দো‘আ #৩',
-		pageTitle_en: 'When the sick have renounced all hope of life #3'
+		pageTitle_en: 'When the sick have renounced all hope of life #3',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -5009,7 +5151,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মরণাপন্ন ব্যক্তিকে তালক্বীন (কালেমা স্মরণ করিয়ে দেওয়া)',
-		pageTitle_en: 'Instruction for the one nearing death'
+		pageTitle_en: 'Instruction for the one nearing death',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -5033,7 +5176,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কোনো মুসিবতে পতিত ব্যক্তির দো‘আ',
-		pageTitle_en: 'Dua for one afflicted by a calamity'
+		pageTitle_en: 'Dua for one afflicted by a calamity',
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -5057,7 +5201,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মৃত ব্যক্তির চোখ বন্ধ করানোর দো‘আ',
-		pageTitle_en: 'When closing the eyes of the deceased'
+		pageTitle_en: 'When closing the eyes of the deceased',
+		category: 'disease'
 	},
 	{
 		duas: [
@@ -5081,7 +5226,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মৃত ব্যক্তির জন্য জানাযার সালাতে দো‘আ #১',
-		pageTitle_en: 'Dua for the deceased at the funeral prayer #1'
+		pageTitle_en: 'Dua for the deceased at the funeral prayer #1',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5107,7 +5253,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মৃত ব্যক্তির জন্য জানাযার সালাতে দো‘আ #২',
-		pageTitle_en: 'Dua for the deceased at the funeral prayer #2'
+		pageTitle_en: 'Dua for the deceased at the funeral prayer #2',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5133,7 +5280,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মৃত ব্যক্তির জন্য জানাযার সালাতে দো‘আ #৩',
-		pageTitle_en: 'Dua for the deceased at the funeral prayer #3'
+		pageTitle_en: 'Dua for the deceased at the funeral prayer #3',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5159,7 +5307,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মৃত ব্যক্তির জন্য জানাযার সালাতে দো‘আ #৪',
-		pageTitle_en: 'Dua for the deceased at the funeral prayer #4'
+		pageTitle_en: 'Dua for the deceased at the funeral prayer #4',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5180,7 +5329,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'নাবালক শিশুদের জন্য জানাযার সালাতে দো‘আ #১',
-		pageTitle_en: 'Dua for a deceased child at the funeral prayer #1'
+		pageTitle_en: 'Dua for a deceased child at the funeral prayer #1',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5206,7 +5356,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'নাবালক শিশুদের জন্য জানাযার সালাতে দো‘আ #২',
-		pageTitle_en: 'Dua for a deceased child at the funeral prayer #2'
+		pageTitle_en: 'Dua for a deceased child at the funeral prayer #2',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5231,7 +5382,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'নাবালক শিশুদের জন্য জানাযার সালাতে দো‘আ #৩',
-		pageTitle_en: 'Dua for a deceased child at the funeral prayer #3'
+		pageTitle_en: 'Dua for a deceased child at the funeral prayer #3',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5255,7 +5407,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শোকার্তদের সান্ত্বনা দেওয়ার দো‘আ #১',
-		pageTitle_en: 'Condolence #1'
+		pageTitle_en: 'Condolence #1',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5279,7 +5432,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শোকার্তদের সান্ত্বনা দেওয়ার দো‘আ #২',
-		pageTitle_en: 'Condolence #2'
+		pageTitle_en: 'Condolence #2',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5302,7 +5456,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মৃতকে কবরে প্রবেশ করানোর দো‘আ',
-		pageTitle_en: 'When placing the deceased in the grave'
+		pageTitle_en: 'When placing the deceased in the grave',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5326,7 +5481,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মৃতকে দাফন করার পর দো‘আ',
-		pageTitle_en: 'After burying the deceased'
+		pageTitle_en: 'After burying the deceased',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5352,7 +5508,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কবর যিয়ারতের দো‘আ',
-		pageTitle_en: 'When visiting the graves'
+		pageTitle_en: 'When visiting the graves',
+		category: 'funeral'
 	},
 	{
 		duas: [
@@ -5378,7 +5535,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বায়ূ প্রবাহিত হলে পড়ার দো‘আ #১',
-		pageTitle_en: 'During a wind storm #1'
+		pageTitle_en: 'During a wind storm #1',
+		category: 'toilet'
 	},
 	{
 		duas: [
