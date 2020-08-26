@@ -28,7 +28,6 @@ export default function Dua({ navigation }) {
 			title: 'language changed',
 			duration: 1000,
 			showAnimationDuration: 220,
-			showEasing: Easing.bounce,
 			Component: NotifierComponents.Alert,
 			componentProps: {
 				alertType: 'success'
@@ -44,12 +43,28 @@ export default function Dua({ navigation }) {
 					<TouchableOpacity
 						style={styles.globe}
 						onPress={() => changeLang('bn')}>
-						<Text style={styles.langText}>বাংলা</Text>
+						<Text
+							style={[
+								styles.langText,
+								language === 'bn'
+									? { backgroundColor: 'lightseagreen', color: 'white' }
+									: null
+							]}>
+							বাংলা
+						</Text>
 					</TouchableOpacity>
 					<TouchableOpacity
 						style={styles.globe}
 						onPress={() => changeLang('en')}>
-						<Text style={styles.langText}>En</Text>
+						<Text
+							style={[
+								styles.langText,
+								language === 'en'
+									? { backgroundColor: 'lightseagreen', color: 'white' }
+									: null
+							]}>
+							En
+						</Text>
 					</TouchableOpacity>
 
 					<TouchableOpacity
@@ -82,7 +97,16 @@ export default function Dua({ navigation }) {
 								category: item.category
 							})
 						}>
-						<Text style={styles.itemName}>{item.name}</Text>
+						<Text
+							style={[
+								styles.itemName,
+								{
+									fontFamily:
+										language === 'bn' ? 'SolaimanLipiNormal' : 'Menlo-Regular'
+								}
+							]}>
+							{language === 'bn' ? item.name_bn : item.name_en}
+						</Text>
 					</TouchableOpacity>
 				)}
 			/>
@@ -121,20 +145,19 @@ const styles = StyleSheet.create({
 		fontSize: 24
 	},
 	itemContainer: {
-		width: wp('25%'),
+		width: wp('28%'),
 		height: hp('16%'),
 		backgroundColor: '#343a40',
 		borderRadius: wp('2%'),
 		alignItems: 'center',
 		paddingTop: hp('1%'),
 		paddingHorizontal: wp('3%'),
-		marginRight: wp('3%'),
+		marginRight: wp('2%'),
 		marginBottom: hp('2%')
 	},
 	itemName: {
-		fontWeight: '500',
+		fontWeight: 'bold',
 		color: 'white',
-		fontFamily: 'SolaimanLipiNormal',
 		fontSize: 17,
 		marginTop: hp('3%'),
 		flexWrap: 'wrap'
