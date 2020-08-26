@@ -21,6 +21,7 @@ import LanguageContext from '../utility/context'
 
 export default function DuaDetail({ route, navigation }) {
 	const [loading, setLoading] = useState(false)
+	const [duasSorted, setDuas] = useState([])
 
 	const { pageTitle_en, pageTitle_bn, duas } = route.params
 	const { language, setLanguage } = useContext(LanguageContext)
@@ -43,7 +44,6 @@ export default function DuaDetail({ route, navigation }) {
 		)
 
 		const a = await DataStore.query(Duas)
-		console.log(a)
 	}
 
 	return (
@@ -55,7 +55,7 @@ export default function DuaDetail({ route, navigation }) {
 					</Text>
 
 					{duas.map(item => (
-						<View style={styles.section} key={item.AyaID}>
+						<View style={styles.section} key={item.arabic}>
 							<Text style={styles.dua}>{item.arabic}</Text>
 							{language === 'bn' ? (
 								<>
@@ -91,7 +91,7 @@ export default function DuaDetail({ route, navigation }) {
 								<>
 									{item.transliteration.length < 1 ? null : (
 										<Text style={styles.spelling}>
-											<Text style={styles.preSpell}>Spelling</Text>
+											<Text style={styles.preSpell}>Spelling: </Text>
 											{item.transliteration}
 										</Text>
 									)}
