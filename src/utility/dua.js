@@ -5536,7 +5536,7 @@ const Duas = [
 		],
 		pageTitle_bn: 'বায়ূ প্রবাহিত হলে পড়ার দো‘আ #১',
 		pageTitle_en: 'During a wind storm #1',
-		category: 'toilet'
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5561,7 +5561,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বায়ূ প্রবাহিত হলে পড়ার দো‘আ #২',
-		pageTitle_en: 'During a wind storm #2'
+		pageTitle_en: 'During a wind storm #2',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5588,7 +5589,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মেঘের গর্জন শুনলে পড়ার দো‘আ',
-		pageTitle_en: 'Upon hearing thunder'
+		pageTitle_en: 'Upon hearing thunder',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5615,7 +5617,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বৃষ্টি চাওয়ার কিছু দো‘আ #১',
-		pageTitle_en: 'Dua asking for rainfall #1'
+		pageTitle_en: 'Dua asking for rainfall #1',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5634,7 +5637,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বৃষ্টি চাওয়ার কিছু দো‘আ #২',
-		pageTitle_en: 'Dua asking for rainfall #2'
+		pageTitle_en: 'Dua asking for rainfall #2',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5660,7 +5664,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বৃষ্টি চাওয়ার কিছু দো‘আ #৩',
-		pageTitle_en: 'Dua asking for rainfall #3'
+		pageTitle_en: 'Dua asking for rainfall #3',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5679,7 +5684,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বৃষ্টি দেখলে দো‘আ',
-		pageTitle_en: 'When it rains'
+		pageTitle_en: 'When it rains',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5699,7 +5705,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বৃষ্টি বর্ষণের পর যিকর',
-		pageTitle_en: 'After rainfall'
+		pageTitle_en: 'After rainfall',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5723,7 +5730,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'অতিবৃষ্টি বন্ধের জন্য কিছু দো‘আ',
-		pageTitle_en: 'Asking for clear skies'
+		pageTitle_en: 'Asking for clear skies',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5749,7 +5757,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'নতুন চাঁদ দেখে পড়ার দো‘আ',
-		pageTitle_en: 'Upon sighting the crescent moon'
+		pageTitle_en: 'Upon sighting the crescent moon',
+		category: 'weather'
 	},
 	{
 		duas: [
@@ -5775,7 +5784,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ইফতারের সময় রোযাদারের দো‘আ #১',
-		pageTitle_en: 'Upon breaking fast (Iftar) #1'
+		pageTitle_en: 'Upon breaking fast (Iftar) #1',
+		category: 'ramadan'
 	},
 	{
 		duas: [
@@ -5801,7 +5811,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ইফতারের সময় রোযাদারের দো‘আ #২',
-		pageTitle_en: 'Upon breaking fast (Iftar) #2'
+		pageTitle_en: 'Upon breaking fast (Iftar) #2',
+		category: 'ramadan'
 	},
 	{
 		duas: [
@@ -5837,7 +5848,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'খাওয়ার পূর্বে দো‘আ #১',
-		pageTitle_en: 'Dua before eating #1'
+		pageTitle_en: 'Dua before eating #1',
+		category: 'eating'
 	},
 	{
 		duas: [
@@ -5876,7 +5888,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'খাওয়ার পূর্বে দো‘আ #২',
-		pageTitle_en: 'Dua before eating #2'
+		pageTitle_en: 'Dua before eating #2',
+		category: 'eating'
 	},
 	{
 		duas: [
@@ -5902,7 +5915,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আহার শেষ করার পর দো‘আ #১',
-		pageTitle_en: 'Upon completing the meal #1'
+		pageTitle_en: 'Upon completing the meal #1',
+		category: 'eating'
 	},
 	{
 		duas: [
@@ -5927,7 +5941,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আহার শেষ করার পর দো‘আ #২',
-		pageTitle_en: 'Upon completing the meal #2'
+		pageTitle_en: 'Upon completing the meal #2',
+		category: 'eating'
 	},
 	{
 		duas: [
@@ -5951,7 +5966,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আহারের আয়োজনকারীর জন্য মেহমানের দো‘আ',
-		pageTitle_en: 'Dua by the guest for the host'
+		pageTitle_en: 'Dua by the guest for the host',
+		category: 'guest'
 	},
 	{
 		duas: [
@@ -5973,7 +5989,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'দো‘আর মাধ্যমে খাবার বা পানীয় চাওয়ার ইঙ্গিত করা',
-		pageTitle_en: 'To one offering a drink or to one who intended to do that'
+		pageTitle_en: 'To one offering a drink or to one who intended to do that',
+		category: 'eating'
 	},
 	{
 		duas: [
@@ -5999,7 +6016,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কোনো পরিবারের কাছে ইফতার করলে তাদের জন্য দো‘আ',
-		pageTitle_en: "When breaking fast in someone's home"
+		pageTitle_en: "When breaking fast in someone's home",
+		category: 'guest'
 	},
 	{
 		duas: [
@@ -6021,7 +6039,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'রোযাদারের নিকট যদি খাবার উপস্থিত হয়, আর সে রোযা না ভাঙ্গে তখন তার দো‘আ করা',
-		pageTitle_en: 'By one fasting when presented with food'
+		pageTitle_en: 'By one fasting when presented with food',
+		category: 'ramadan'
 	},
 	{
 		duas: [
@@ -6042,7 +6061,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'রোযাদারকে কেউ গালি দিলে যা বলবে',
-		pageTitle_en: 'When insulted while fasting'
+		pageTitle_en: 'When insulted while fasting',
+		category: 'ramadan'
 	},
 	{
 		duas: [
@@ -6067,7 +6087,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ফলের কলি দেখলে পড়ার দো‘আ',
-		pageTitle_en: 'Upon seeing the early or premature fruit'
+		pageTitle_en: 'Upon seeing the early or premature fruit',
+		category: 'harvest'
 	},
 	{
 		duas: [
@@ -6114,7 +6135,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'হাঁচির দো‘আ',
-		pageTitle_en: 'Upon sneezing'
+		pageTitle_en: 'Upon sneezing',
+		category: 'sneezing'
 	},
 	{
 		duas: [
@@ -6136,7 +6158,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'কাফের ব্যক্তি হাঁচি দিয়ে আলহামদুলিল্লাহ বললে তার জবাবে যা বলা হবে',
-		pageTitle_en: 'What is said to a kaafir when he sneezes'
+		pageTitle_en: 'What is said to a kaafir when he sneezes',
+		category: 'sneezing'
 	},
 	{
 		duas: [
@@ -6162,7 +6185,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'নব বিবাহিতের জন্য দো‘আ',
-		pageTitle_en: 'Congratulating the newlywed'
+		pageTitle_en: 'Congratulating the newlywed',
+		category: 'marriage'
 	},
 	{
 		duas: [
@@ -6191,7 +6215,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিবাহিত ব্যক্তির দো‘আ এবং বাহন ক্রয়ের পর দো‘আ',
-		pageTitle_en: 'On the wedding night or when buying an animal'
+		pageTitle_en: 'On the wedding night or when buying an animal',
+		category: 'marriage'
 	},
 	{
 		duas: [
@@ -6215,7 +6240,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'স্ত্রী-সহবাসের পুর্বের দো‘আ',
-		pageTitle_en: 'Before sexual intercourse'
+		pageTitle_en: 'Before sexual intercourse',
+		category: 'marriage'
 	},
 	{
 		duas: [
@@ -6234,7 +6260,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'ক্রোধ দমনের দো‘আ',
-		pageTitle_en: 'When angry'
+		pageTitle_en: 'When angry',
+		category: 'feelings'
 	},
 	{
 		duas: [
@@ -6260,7 +6287,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বিপন্ন লোক দেখলে পড়ার দো‘আ',
-		pageTitle_en: 'Upon seeing someone in trial or tribulation'
+		pageTitle_en: 'Upon seeing someone in trial or tribulation',
+		category: 'whenInDanger'
 	},
 	{
 		duas: [
@@ -6288,7 +6316,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'মজলিসে যা বলতে হয়',
-		pageTitle_en: 'Dua said at a sitting or gathering etc.'
+		pageTitle_en: 'Dua said at a sitting or gathering etc.',
+		category: 'assembly'
 	},
 	{
 		duas: [
@@ -6316,7 +6345,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'বৈঠকের শেষে কাফ্‌ফারা হিসেবে দোআ',
-		pageTitle_en: 'Dua at the end of a sitting/gathering [Kaffaratul Majlis]'
+		pageTitle_en: 'Dua at the end of a sitting/gathering [Kaffaratul Majlis]',
+		category: 'assembly'
 	},
 	{
 		duas: [
@@ -6352,7 +6382,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কেউ যদি বলে, ‘আল্লাহ আপনাকে ক্ষমা করুন’, তার জন্য দো‘আ',
-		pageTitle_en: 'Returning a Dua of forgiveness'
+		pageTitle_en: 'Returning a Dua of forgiveness',
+		category: 'forBenefactor'
 	},
 	{
 		duas: [
@@ -6373,7 +6404,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কেউ আপনার সাথে সদাচারণ করলে তার জন্য দো‘আ',
-		pageTitle_en: 'To one who does you a favour'
+		pageTitle_en: 'To one who does you a favour',
+		category: 'forBenefactor'
 	},
 	{
 		duas: [
@@ -6397,6 +6429,7 @@ const Duas = [
 		],
 		pageTitle_bn: 'আল্লাহ যা দ্বারা দাজ্জাল থেকে হেফাযত করবেন',
 		pageTitle_en: 'Protection from the Dajjal'
+		//dajjal
 	},
 	{
 		duas: [
@@ -6419,7 +6452,8 @@ const Duas = [
 		],
 		pageTitle_bn:
 			'যে ব্যক্তি বলবে, ‘আমি আপনাকে আল্লাহ্‌র জন্য ভালোবাসি’— তার জন্য দো‘আ',
-		pageTitle_en: 'To one who pronounces his love for you, for Allah’s sake'
+		pageTitle_en: 'To one who pronounces his love for you, for Allah’s sake',
+		category: 'forBenefactor'
 	},
 	{
 		duas: [
@@ -6439,7 +6473,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'আপনাকে কেউ তার সম্পদ দান করার জন্য পেশ করলে তার জন্য দো‘আ',
-		pageTitle_en: 'To one who has offered you some of his wealth'
+		pageTitle_en: 'To one who has offered you some of his wealth',
+		category: 'forBenefactor'
 	},
 	{
 		duas: [
@@ -6465,7 +6500,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কেউ ঋণ দিলে তা পরিশোধের সময় দো‘আ',
-		pageTitle_en: 'To the debtor when his debt is settled'
+		pageTitle_en: 'To the debtor when his debt is settled',
+		category: 'finance'
 	},
 	{
 		duas: [
@@ -6491,7 +6527,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'শির্কের ভয়ে দো‘আ',
-		pageTitle_en: 'For fear of shirk'
+		pageTitle_en: 'For fear of shirk',
+		category: 'eeman'
 	},
 	{
 		duas: [
@@ -6541,7 +6578,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'কেউ যদি বলে, ‘আল্লাহ আপনার উপর বরকত দিন’, তার জন্য দো‘আ',
-		pageTitle_en: "Dua to one who says 'May Allaah bless you'"
+		pageTitle_en: "Dua to one who says 'May Allaah bless you'",
+		category: 'forBenefactor'
 	},
 	{
 		duas: [
@@ -6568,7 +6606,8 @@ const Duas = [
 			}
 		],
 		pageTitle_bn: 'অশুভ লক্ষণ গ্রহণকে অপছন্দ করে দো‘আ',
-		pageTitle_en: 'Forbiddance of ascribing things to omens'
+		pageTitle_en: 'Forbiddance of ascribing things to omens',
+		category: 'eeman'
 	}
 ]
 

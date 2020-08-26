@@ -206,6 +206,18 @@ let items = [
 		name_bn: 'মজলিসের দোয়া',
 		color: 'indianred',
 		category: 'assembly'
+	},
+	{
+		name_en: 'Harvest',
+		name_bn: 'ফসল ',
+		color: 'indianred',
+		category: 'harvest'
+	},
+	{
+		name_en: 'Sneezing',
+		name_bn: 'হাঁচি ',
+		color: 'indianred',
+		category: 'sneezing'
 	}
 ]
 
