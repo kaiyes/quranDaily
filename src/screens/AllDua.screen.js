@@ -40,13 +40,7 @@ export default function AllDua({ route, navigation }) {
 						style={styles.item}
 						onPress={() => goToDetail(item)}>
 						<View style={styles.circle}>
-							<Text
-								style={styles.number}
-								onPress={() =>
-									language === 'en' ? setLanguage('bn') : setLanguage('en')
-								}>
-								{index + 1}
-							</Text>
+							<Text style={styles.number}>{index + 1}</Text>
 						</View>
 						<Text style={styles.title}>
 							{language === 'en' ? item.pageTitle_en : item.pageTitle_bn}

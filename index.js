@@ -3,17 +3,20 @@ import React, { Component } from 'react'
 import { AppRegistry } from 'react-native'
 import { name as appName } from './app.json'
 import { NavigationNativeContainer } from '@react-navigation/native'
+import { NotifierWrapper } from 'react-native-notifier'
 
 import Navigator from './src/navigation'
 
 export default class App extends Component {
-  render() {
-    return (
-      <NavigationNativeContainer>
-        <Navigator />
-      </NavigationNativeContainer>
-    )
-  }
+	render() {
+		return (
+			<NavigationNativeContainer>
+				<NotifierWrapper>
+					<Navigator />
+				</NotifierWrapper>
+			</NavigationNativeContainer>
+		)
+	}
 }
 
 AppRegistry.registerComponent(appName, () => App)

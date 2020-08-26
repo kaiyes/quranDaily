@@ -20,11 +20,8 @@ import { Duas } from '../models'
 import LanguageContext from '../utility/context'
 
 export default function DuaDetail({ route, navigation }) {
-	const [loading, setLoading] = useState(false)
-	const [duasSorted, setDuas] = useState([])
-
 	const { pageTitle_en, pageTitle_bn, duas } = route.params
-	const { language, setLanguage } = useContext(LanguageContext)
+	const { language } = useContext(LanguageContext)
 
 	async function save() {
 		const sortedDua = await duas.map(i => {

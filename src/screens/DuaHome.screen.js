@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
 	StyleSheet,
 	View,
@@ -14,10 +14,28 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import { Icon, CheckBox } from 'react-native-elements'
+import { Notifier, Easing, NotifierComponents } from 'react-native-notifier'
 //Utility
 import Categories from '../utility/categories'
+import LanguageContext from '../utility/context'
 
 export default function Dua({ navigation }) {
+	const { language, setLanguage } = useContext(LanguageContext)
+
+	async function changeLang(lang) {
+		await setLanguage(lang)
+		Notifier.showNotification({
+			title: 'language changed',
+			duration: 1000,
+			showAnimationDuration: 220,
+			showEasing: Easing.bounce,
+			Component: NotifierComponents.Alert,
+			componentProps: {
+				alertType: 'success'
+			}
+		})
+	}
+
 	return (
 		<SafeAreaView style={styles.root}>
 			<View style={styles.topNav}>
@@ -25,10 +43,21 @@ export default function Dua({ navigation }) {
 				<View style={styles.favHolder}>
 					<TouchableOpacity
 						style={styles.globe}
+						onPress={() => changeLang('bn')}>
+						<Text style={styles.langText}>বাংলা</Text>
+					</TouchableOpacity>
+					<TouchableOpacity
+						style={styles.globe}
+						onPress={() => changeLang('en')}>
+						<Text style={styles.langText}>En</Text>
+					</TouchableOpacity>
+
+					<TouchableOpacity
+						style={styles.globe}
 						onPress={() => {
 							navigation.navigate('AllDuas')
 						}}>
-						<Icon name="globe" type="entypo" color="lightseagreen" size={22} />
+						<Icon name="globe" type="entypo" color="lightseagreen" size={18} />
 					</TouchableOpacity>
 					<TouchableOpacity
 						onPress={() => {
@@ -79,7 +108,8 @@ const styles = StyleSheet.create({
 	},
 	favHolder: {
 		flexDirection: 'row',
-		marginRight: wp('2%')
+		marginRight: wp('2%'),
+		alignItems: 'center'
 	},
 	globe: {
 		marginRight: wp('2%')
@@ -129,5 +159,11 @@ const styles = StyleSheet.create({
 	},
 	spacerH: {
 		width: wp('5%')
+	},
+	langText: {
+		fontWeight: '500',
+		color: 'gray',
+		fontFamily: 'SolaimanLipiNormal',
+		fontSize: 14
 	}
 })
