@@ -696,7 +696,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.QuranDaily;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.QuranDaily;
 				PRODUCT_NAME = AdminApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -716,7 +716,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.QuranDaily;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.QuranDaily;
 				PRODUCT_NAME = AdminApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
