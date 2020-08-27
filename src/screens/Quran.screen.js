@@ -196,7 +196,8 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'flex-end',
 		alignItems: 'center',
-		paddingRight: wp('4%')
+		paddingRight: wp('4%'),
+		marginTop: Platform.OS === 'ios' ? null : hp('2%')
 	},
 	checkBox: {
 		backgroundColor: 'transparent',

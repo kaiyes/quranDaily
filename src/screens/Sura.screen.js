@@ -32,7 +32,14 @@ export default function Sura({ route }) {
 		return (
 			<View style={styles.ayahBlock}>
 				<Text style={styles.ayahArabic}>{item.ayat}</Text>
-				<Text style={styles.translation}>
+				<Text
+					style={[
+						styles.translation,
+						{
+							fontFamily:
+								language === 'bn' ? 'Menlo-Regular' : 'SolaimanLipiNormal'
+						}
+					]}>
 					<Text style={styles.number}>{index + 1}. </Text>
 					{language === 'bn' ? item.translation_bn : item.translation_en}
 				</Text>
@@ -597,7 +604,6 @@ const styles = StyleSheet.create({
 	},
 	translation: {
 		fontSize: 17,
-		fontFamily: 'Menlo-Regular',
 		marginVertical: hp('1%')
 	},
 
