@@ -4,16 +4,18 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 
 export declare class Dua {
   readonly arabic: string;
-  readonly translations: string;
-  readonly transliteration: string;
+  readonly translations_en?: string;
+  readonly translations_bn?: string;
+  readonly transliteration_en?: string;
+  readonly transliteration_bn?: string;
   constructor(init: ModelInit<Dua>);
 }
 
 export declare class Duas {
   readonly id: string;
-  readonly pageTitle: string;
+  readonly pageTitle_bn?: string;
+  readonly pageTitle_en?: string;
   readonly category?: string;
-  readonly reference?: string;
   readonly duas?: Dua[];
   constructor(init: ModelInit<Duas>);
   static copyOf(source: Duas, mutator: (draft: MutableModel<Duas>) => MutableModel<Duas> | void): Duas;

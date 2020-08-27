@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import {
 	StyleSheet,
 	View,
@@ -18,10 +18,13 @@ import Loader from '../components/loader'
 
 import { DataStore } from '@aws-amplify/datastore'
 import { Duas } from '../models'
+import LanguageContext from '../utility/context'
 
 export default function Favourites({ route, navigation: { navigate } }) {
 	const [loading, setLoading] = useState(false)
 	const [duas, setDuas] = useState([])
+
+	const { language, setLanguage } = useContext(LanguageContext)
 
 	useEffect(() => {
 		;(async function fetchData() {
@@ -43,7 +46,8 @@ export default function Favourites({ route, navigation: { navigate } }) {
 							onPress={() =>
 								navigate('BookmarkedDua', {
 									duas: item.duas,
-									pageTitle: item.pageTitle
+									pageTitle_en: item.pageTitle_en,
+									pageTitle_bn: item.pageTitle_bn
 								})
 							}>
 							<Icon
@@ -52,7 +56,9 @@ export default function Favourites({ route, navigation: { navigate } }) {
 								size={22}
 								containerStyle={styles.icon}
 							/>
-							<Text style={styles.title}>{item.pageTitle}</Text>
+							<Text style={styles.title}>
+								{language === 'bn' ? item.pageTitle_bn : item.pageTitle_en}
+							</Text>
 						</TouchableOpacity>
 				  ))}
 		</View>
@@ -84,6 +90,6 @@ const styles = StyleSheet.create({
 	},
 	icon: {
 		marginRight: wp('2%'),
-		marginTop: hp('1%')
+		marginTop: hp('.5%')
 	}
 })

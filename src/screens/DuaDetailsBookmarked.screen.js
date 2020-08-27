@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import {
 	StyleSheet,
 	View,
@@ -14,32 +14,56 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 //utility
-import '../assets/fonts/me_quran.ttf'
+import LanguageContext from '../utility/context'
 
 export default function DuaDetail({ route, navigation }) {
-	const { pageTitle, duas } = route.params
+	const { pageTitle_en, pageTitle_bn, duas } = route.params
+	const { language } = useContext(LanguageContext)
 
 	return (
 		<SafeAreaView style={styles.rootView}>
 			<View>
 				<ScrollView contentContainerStyle={styles.backgroundScrollView}>
-					<Text style={styles.title}>{pageTitle}</Text>
+					<Text style={styles.title}>
+						{language === 'bn' ? pageTitle_bn : pageTitle_en}
+					</Text>
 
 					{duas.map(item => (
-						<View style={styles.section} key={Math.random().toString()}>
+						<View style={styles.section} key={item.arabic}>
 							<Text style={styles.dua}>{item.arabic}</Text>
+							{language === 'bn' ? (
+								<>
+									{item.transliteration_bn.length < 1 ? null : (
+										<Text style={styles.spelling}>
+											<Text style={styles.preSpell}>উচ্চারণ:</Text>
+											{item.transliteration_bn}
+										</Text>
+									)}
 
-							<Text style={styles.spelling}>
-								<Text style={styles.preSpell}>উচ্চারণ:</Text>
-								{item.transliteration}
-							</Text>
+									<View style={styles.secondContainer}>
+										<Text style={styles.meaning}>
+											<Text style={styles.preSpell}>অর্থ: </Text>
+											{item.translations_bn}
+										</Text>
+									</View>
+								</>
+							) : (
+								<>
+									{item.transliteration_en.length < 1 ? null : (
+										<Text style={styles.spelling}>
+											<Text style={styles.preSpell}>Spelling: </Text>
+											{item.transliteration_en}
+										</Text>
+									)}
 
-							<View style={styles.secondContainer}>
-								<Text style={styles.meaning}>
-									<Text style={styles.preSpell}>অর্থ:</Text>
-									{item.translations}
-								</Text>
-							</View>
+									<View style={styles.secondContainer}>
+										<Text style={styles.meaning}>
+											<Text style={styles.preSpell}>Meaning: </Text>
+											{item.translations_en}
+										</Text>
+									</View>
+								</>
+							)}
 						</View>
 					))}
 				</ScrollView>

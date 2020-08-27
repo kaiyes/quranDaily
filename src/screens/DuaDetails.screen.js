@@ -14,6 +14,7 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 import { DataStore } from '@aws-amplify/datastore'
+import { Notifier, Easing, NotifierComponents } from 'react-native-notifier'
 
 //utility
 import { Duas } from '../models'
@@ -27,20 +28,32 @@ export default function DuaDetail({ route, navigation }) {
 		const sortedDua = await duas.map(i => {
 			return {
 				arabic: i.arabic,
-				translations: i.translations,
-				transliteration: i.transliteration
+				translations_bn: i.translations_bn,
+				translations_en: i.translations_en,
+				transliteration_bn: i.transliteration_bn,
+				transliteration_en: i.transliteration
 			}
 		})
 
 		await DataStore.save(
 			new Duas({
-				pageTitle,
+				pageTitle_bn,
+				pageTitle_en,
 				category: 'uncategorised',
 				duas: sortedDua
 			})
 		)
-
-		const a = await DataStore.query(Duas)
+		const c = await DataStore.query(Duas)
+		console.log(c)
+		Notifier.showNotification({
+			title: 'Saved 🎉',
+			duration: 1000,
+			showAnimationDuration: 220,
+			Component: NotifierComponents.Alert,
+			componentProps: {
+				alertType: 'success'
+			}
+		})
 	}
 
 	return (
@@ -53,6 +66,14 @@ export default function DuaDetail({ route, navigation }) {
 
 					{duas.map(item => (
 						<View style={styles.section} key={item.arabic}>
+							{language === 'bn' ? (
+								item.top_bn.length < 1 ? null : (
+									<Text style={styles.meaning}>{item.top_bn}</Text>
+								)
+							) : item.top_en.length < 1 ? null : (
+								<Text style={styles.meaning}>{item.top_en}</Text>
+							)}
+
 							<Text style={styles.dua}>{item.arabic}</Text>
 							{language === 'bn' ? (
 								<>
@@ -64,10 +85,12 @@ export default function DuaDetail({ route, navigation }) {
 									)}
 
 									<View style={styles.secondContainer}>
-										<Text style={styles.meaning}>
-											<Text style={styles.preSpell}>অর্থ: </Text>
-											{item.translations_bn}
-										</Text>
+										{item.translations_bn.length < 1 ? null : (
+											<Text style={styles.meaning}>
+												<Text style={styles.preSpell}>অর্থ: </Text>
+												{item.translations_bn}
+											</Text>
+										)}
 
 										{item.bottom_bn.length < 1 ? null : (
 											<Text style={styles.meaning}>
@@ -94,11 +117,12 @@ export default function DuaDetail({ route, navigation }) {
 									)}
 
 									<View style={styles.secondContainer}>
-										<Text style={styles.meaning}>
-											<Text style={styles.preSpell}>Meaning: </Text>
-											{item.translations_en}
-										</Text>
-
+										{item.translations_en.length < 1 ? null : (
+											<Text style={styles.meaning}>
+												<Text style={styles.preSpell}>Meaning</Text>
+												{item.translations_en}
+											</Text>
+										)}
 										{item.bottom_en.length < 1 ? null : (
 											<Text style={styles.meaning}>
 												<Text style={styles.preSpell}>Fazael: </Text>

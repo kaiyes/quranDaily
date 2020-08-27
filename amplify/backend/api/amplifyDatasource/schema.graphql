@@ -1,13 +1,15 @@
 type Dua {
 	arabic: String!
-	translations: String!
-	transliteration: String!
+	translations_en: String
+	translations_bn: String
+	transliteration_en: String
+	transliteration_bn: String
 }
 
 type Duas @model {
-	pageTitle: String!
+	pageTitle_bn: String
+	pageTitle_en: String
 	category: String
-	reference: String
 	duas: [Dua]
 }
 

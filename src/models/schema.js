@@ -10,22 +10,22 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "pageTitle": {
-                    "name": "pageTitle",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "category": {
-                    "name": "category",
+                "pageTitle_bn": {
+                    "name": "pageTitle_bn",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
-                "reference": {
-                    "name": "reference",
+                "pageTitle_en": {
+                    "name": "pageTitle_en",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "category": {
+                    "name": "category",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -561,22 +561,36 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "translations": {
-                    "name": "translations",
+                "translations_en": {
+                    "name": "translations_en",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
-                "transliteration": {
-                    "name": "transliteration",
+                "translations_bn": {
+                    "name": "translations_bn",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "transliteration_en": {
+                    "name": "transliteration_en",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "transliteration_bn": {
+                    "name": "transliteration_bn",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
                     "attributes": []
                 }
             }
         }
     },
-    "version": "a6dd9f945b3bcd321bc33aca28716b6e"
+    "version": "4cf2bb2b5f0867802561d4b438be3c31"
 };

@@ -15,7 +15,7 @@ let items = [
 		category: 'quranic'
 	},
 	{
-		name_bn: 'উপকারী জিক্র ',
+		name_bn: 'উপকারী জিকর',
 		name_en: 'Benficial Zikr',
 		color: 'darkslateblue',
 		category: 'zikr'
