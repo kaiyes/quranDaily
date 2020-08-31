@@ -1,4 +1,4 @@
-package com.adminapp;
+package com.deenTracker;
 
 import android.app.Application;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.adminapp;
+package com.deenTracker;
 
 import com.facebook.react.ReactActivity;
 
