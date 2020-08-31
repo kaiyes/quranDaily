@@ -111,7 +111,6 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Fard, c => c.date('eq', today))
 		await setPrayers(savedObj[0])
-		console.log(savedObj[0])
 	}
 
 	// first init Quran
@@ -195,7 +194,6 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Quran, c => c.date('eq', today))
 		await setQuran(savedObj[0])
-		console.log(savedObj[0])
 	}
 
 	// first init Sunnah
@@ -279,7 +277,6 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Sunna, c => c.date('eq', today))
 		await setSunnah(savedObj[0])
-		console.log(savedObj[0])
 	}
 
 	// first init tahajjud
@@ -343,7 +340,6 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Tahajjud, c => c.date('eq', today))
 		await setTahajjud(savedObj[0])
-		console.log(savedObj[0])
 	}
 
 	// first init sadaqa
@@ -409,7 +405,6 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Sadaqa, c => c.date('eq', today))
 		await setSadaqa(savedObj[0])
-		console.log(savedObj[0])
 	}
 
 	// first init Morning Dua
@@ -463,7 +458,6 @@ export default function Deeds({ navigation }) {
 		)
 		const savedObj = await DataStore.query(Morn, c => c.date('eq', today))
 		await setMorn(savedObj[0])
-		console.log(savedObj[0])
 	}
 
 	useEffect(() => {

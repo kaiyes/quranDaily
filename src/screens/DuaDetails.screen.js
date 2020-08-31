@@ -44,7 +44,6 @@ export default function DuaDetail({ route, navigation }) {
 			})
 		)
 		const c = await DataStore.query(Duas)
-		console.log(c)
 		Notifier.showNotification({
 			title: 'Saved 🎉',
 			duration: 1000,

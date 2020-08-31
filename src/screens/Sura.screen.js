@@ -97,7 +97,6 @@ export default function Sura({ route }) {
 	}
 
 	async function fetchMore() {
-		console.log(pagesToRender.map(item => item.p))
 		await setPagesToRender(pages.slice(0, 6))
 	}
 
