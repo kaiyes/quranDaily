@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007A3525FFFD99EDD2C05164 /* libPods-deenTracker-deenTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2DBCD24AE2B20215B986D6 /* libPods-deenTracker-deenTrackerTests.a */; };
 		00E356F31AD99517003FC87E /* deenTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* deenTrackerTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DE40319EAB7B4516BFDB5E27 /* libPods-deenTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3408F1C5955759FDA627E6E /* libPods-deenTracker.a */; };
-		E98FD7316E046C5312410B86 /* libPods-deenTracker-deenTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B6E4646CAE59C0C1A6FD6F /* libPods-deenTracker-deenTrackerTests.a */; };
+		A2A4E390B33E8FFAD9352D87 /* libPods-deenTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BE01D9B7CCE37C73B9143B /* libPods-deenTracker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = deenTracker/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = deenTracker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = deenTracker/main.m; sourceTree = "<group>"; };
+		57BE01D9B7CCE37C73B9143B /* libPods-deenTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-deenTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = deenTracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BDAB2DF09C287C967D28D8B4 /* Pods-deenTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker.release.xcconfig"; path = "Target Support Files/Pods-deenTracker/Pods-deenTracker.release.xcconfig"; sourceTree = "<group>"; };
-		C88D061178B6B829763B85F3 /* Pods-deenTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker.debug.xcconfig"; path = "Target Support Files/Pods-deenTracker/Pods-deenTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		CB25E0C71C779830F14E3E79 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker-deenTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
-		E3B6E4646CAE59C0C1A6FD6F /* libPods-deenTracker-deenTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-deenTracker-deenTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E972F63B4A8822209A68B980 /* Pods-deenTracker-deenTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker-deenTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EEAF3F87EEFDD1BE5D8C03D /* Pods-deenTracker-deenTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker-deenTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF2DBCD24AE2B20215B986D6 /* libPods-deenTracker-deenTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-deenTracker-deenTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA27CAD74FD74212EA04177 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker-deenTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F3408F1C5955759FDA627E6E /* libPods-deenTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-deenTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E9851ED3BE0A0ACA6759D2 /* Pods-deenTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker.debug.xcconfig"; path = "Target Support Files/Pods-deenTracker/Pods-deenTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		F9CF80FEC6DCC63C786537B4 /* Pods-deenTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker.release.xcconfig"; path = "Target Support Files/Pods-deenTracker/Pods-deenTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98FD7316E046C5312410B86 /* libPods-deenTracker-deenTrackerTests.a in Frameworks */,
+				007A3525FFFD99EDD2C05164 /* libPods-deenTracker-deenTrackerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE40319EAB7B4516BFDB5E27 /* libPods-deenTracker.a in Frameworks */,
+				A2A4E390B33E8FFAD9352D87 /* libPods-deenTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				F3408F1C5955759FDA627E6E /* libPods-deenTracker.a */,
-				E3B6E4646CAE59C0C1A6FD6F /* libPods-deenTracker-deenTrackerTests.a */,
+				57BE01D9B7CCE37C73B9143B /* libPods-deenTracker.a */,
+				AF2DBCD24AE2B20215B986D6 /* libPods-deenTracker-deenTrackerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 				00E356EF1AD99517003FC87E /* deenTrackerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				E6B8C7EBA4A3CC99E878F65B /* Pods */,
+				D5297184364CD2AB73F03FC2 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,14 +137,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E6B8C7EBA4A3CC99E878F65B /* Pods */ = {
+		D5297184364CD2AB73F03FC2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C88D061178B6B829763B85F3 /* Pods-deenTracker.debug.xcconfig */,
-				BDAB2DF09C287C967D28D8B4 /* Pods-deenTracker.release.xcconfig */,
-				E972F63B4A8822209A68B980 /* Pods-deenTracker-deenTrackerTests.debug.xcconfig */,
-				CB25E0C71C779830F14E3E79 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */,
+				F0E9851ED3BE0A0ACA6759D2 /* Pods-deenTracker.debug.xcconfig */,
+				F9CF80FEC6DCC63C786537B4 /* Pods-deenTracker.release.xcconfig */,
+				9EEAF3F87EEFDD1BE5D8C03D /* Pods-deenTracker-deenTrackerTests.debug.xcconfig */,
+				DDA27CAD74FD74212EA04177 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,12 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "deenTrackerTests" */;
 			buildPhases = (
-				60D36CC07ED896EA3A593C1A /* [CP] Check Pods Manifest.lock */,
+				317D204815A77BC8FA2169BD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				EE129E978A20D7630FA32B6C /* [CP] Embed Pods Frameworks */,
-				147C103B66EA3ACB4C4AEBAC /* [CP] Copy Pods Resources */,
+				9375C484B0653FA220848030 /* [CP] Embed Pods Frameworks */,
+				EA7C27440DBCEE0DEFC8F943 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +177,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "deenTracker" */;
 			buildPhases = (
-				3A2A9C15CF968F8B61BD34EE /* [CP] Check Pods Manifest.lock */,
+				944EDC422637D3FFE8B992E9 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				67E4D00713803FBA85CE35F1 /* [CP] Embed Pods Frameworks */,
-				3D928F07CDB006DF30EED1BF /* [CP] Copy Pods Resources */,
+				6108454CC3F61AE82DFEEFA1 /* [CP] Embed Pods Frameworks */,
+				DA34C48109BA1E9D2FDD6D07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,63 +265,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		147C103B66EA3ACB4C4AEBAC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3A2A9C15CF968F8B61BD34EE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-deenTracker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3D928F07CDB006DF30EED1BF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-deenTracker/Pods-deenTracker-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-deenTracker/Pods-deenTracker-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-deenTracker/Pods-deenTracker-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		60D36CC07ED896EA3A593C1A /* [CP] Check Pods Manifest.lock */ = {
+		317D204815A77BC8FA2169BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,7 +287,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		67E4D00713803FBA85CE35F1 /* [CP] Embed Pods Frameworks */ = {
+		6108454CC3F61AE82DFEEFA1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,7 +304,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-deenTracker/Pods-deenTracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE129E978A20D7630FA32B6C /* [CP] Embed Pods Frameworks */ = {
+		9375C484B0653FA220848030 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,6 +319,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		944EDC422637D3FFE8B992E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-deenTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA34C48109BA1E9D2FDD6D07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-deenTracker/Pods-deenTracker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-deenTracker/Pods-deenTracker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-deenTracker/Pods-deenTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA7C27440DBCEE0DEFC8F943 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -428,7 +429,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E972F63B4A8822209A68B980 /* Pods-deenTracker-deenTrackerTests.debug.xcconfig */;
+			baseConfigurationReference = 9EEAF3F87EEFDD1BE5D8C03D /* Pods-deenTracker-deenTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +456,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB25E0C71C779830F14E3E79 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */;
+			baseConfigurationReference = DDA27CAD74FD74212EA04177 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,14 +480,13 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C88D061178B6B829763B85F3 /* Pods-deenTracker.debug.xcconfig */;
+			baseConfigurationReference = F0E9851ED3BE0A0ACA6759D2 /* Pods-deenTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = deenTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,13 +506,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDAB2DF09C287C967D28D8B4 /* Pods-deenTracker.release.xcconfig */;
+			baseConfigurationReference = F9CF80FEC6DCC63C786537B4 /* Pods-deenTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = deenTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
