@@ -8,13 +8,13 @@ import {
 	View
 } from 'react-native'
 
-export default function App() {
+export default function DuaHome() {
 	return (
 		<SafeAreaView style={styles.container}>
 			<ScrollView
 				contentInsetAdjustmentBehavior="automatic"
 				style={styles.container}>
-				<Text style={styles.highlight}>App.js</Text>
+				<Text style={styles.highlight}>Dua Home</Text>
 			</ScrollView>
 		</SafeAreaView>
 	)
