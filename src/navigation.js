@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Icon } from 'react-native-elements'
 
 //screens
 import DuaHome from './screens/duaHome.screen'
@@ -33,7 +34,35 @@ function QuranStack() {
 
 function AppStack() {
 	return (
-		<Tab.Navigator>
+		<Tab.Navigator
+			screenOptions={({ route }) => ({
+				headerShown: false,
+				tabBarActiveTintColor: 'white',
+				tabBarInactiveTintColor: 'darkseagreen',
+				tabBarStyle: {
+					backgroundColor: 'seagreen'
+				},
+				tabBarLabelStyle: {
+					fontWeight: '400',
+					fontFamily: 'Menlo',
+					fontSize: 14
+				},
+				tabBarIcon: ({ focused, color, size = 22 }) => {
+					switch (route.name) {
+						case 'Dua':
+							return (
+								<Icon name={'air'} type={'entypo'} size={18} color={color} />
+							)
+							break
+						case 'Quran':
+							return (
+								<Icon name={'book'} type={'entypo'} size={22} color={color} />
+							)
+							break
+						default:
+					}
+				}
+			})}>
 			<Tab.Screen name="Dua" component={DuaStack} />
 			<Tab.Screen name="Quran" component={QuranStack} />
 		</Tab.Navigator>
