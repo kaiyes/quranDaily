@@ -7,17 +7,27 @@ import { Icon } from 'react-native-elements'
 import DuaHome from './screens/duaHome.screen'
 import QuranHome from './screens/quran.screen'
 
+import LanguageContext from './utility/context'
+
 const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
 function DuaStack() {
+	const [language, setLanguage] = useState('en')
+
+	const value = useMemo(
+		() => ({ language, setLanguage }),
+		[language, setLanguage]
+	)
 	return (
-		<Stack.Navigator
-			screenOptions={{
-				headerShown: false
-			}}>
-			<Stack.Screen name="DuaHome" component={DuaHome} />
-		</Stack.Navigator>
+		<LanguageContext.Provider value={value}>
+			<Stack.Navigator
+				screenOptions={{
+					headerShown: false
+				}}>
+				<Stack.Screen name="DuaHome" component={DuaHome} />
+			</Stack.Navigator>
+		</LanguageContext.Provider>
 	)
 }
 
