@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A2A4E390B33E8FFAD9352D87 /* libPods-deenTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BE01D9B7CCE37C73B9143B /* libPods-deenTracker.a */; };
+		DC4A677026C00737000D130E /* SolaimanLipiNormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC4A676E26C00737000D130E /* SolaimanLipiNormal.ttf */; };
+		DC4A677126C00737000D130E /* me_quran.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC4A676F26C00737000D130E /* me_quran.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = deenTracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EEAF3F87EEFDD1BE5D8C03D /* Pods-deenTracker-deenTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker-deenTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF2DBCD24AE2B20215B986D6 /* libPods-deenTracker-deenTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-deenTracker-deenTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4A676E26C00737000D130E /* SolaimanLipiNormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SolaimanLipiNormal.ttf; sourceTree = "<group>"; };
+		DC4A676F26C00737000D130E /* me_quran.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = me_quran.ttf; sourceTree = "<group>"; };
 		DDA27CAD74FD74212EA04177 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker-deenTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-deenTracker-deenTrackerTests/Pods-deenTracker-deenTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F0E9851ED3BE0A0ACA6759D2 /* Pods-deenTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deenTracker.debug.xcconfig"; path = "Target Support Files/Pods-deenTracker/Pods-deenTracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DC4A676926C00711000D130E /* Fonts */,
 				13B07FAE1A68108700A75B9A /* deenTracker */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* deenTrackerTests */,
@@ -146,6 +151,15 @@
 				DDA27CAD74FD74212EA04177 /* Pods-deenTracker-deenTrackerTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC4A676926C00711000D130E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DC4A676F26C00737000D130E /* me_quran.ttf */,
+				DC4A676E26C00737000D130E /* SolaimanLipiNormal.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4A677126C00737000D130E /* me_quran.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				DC4A677026C00737000D130E /* SolaimanLipiNormal.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

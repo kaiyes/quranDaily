@@ -19,7 +19,7 @@ import { Notifier, Easing, NotifierComponents } from 'react-native-notifier'
 import Categories from '../utility/categories'
 import LanguageContext from '../utility/context'
 
-export default function DuaHome({ navigation }) {
+export default function DuaHome({ navigation: { navigate } }) {
 	const { language, setLanguage } = useContext(LanguageContext)
 
 	async function changeLang(lang) {
@@ -70,13 +70,13 @@ export default function DuaHome({ navigation }) {
 					<TouchableOpacity
 						style={styles.globe}
 						onPress={() => {
-							navigation.navigate('AllDuas')
+							navigate('AllDuas')
 						}}>
 						<Icon name="globe" type="entypo" color="lightseagreen" size={18} />
 					</TouchableOpacity>
 					<TouchableOpacity
 						onPress={() => {
-							navigation.navigate('Favourites')
+							navigate('Favourites')
 						}}>
 						<Icon name="heart" type="entypo" color="lightseagreen" size={22} />
 					</TouchableOpacity>
@@ -92,7 +92,7 @@ export default function DuaHome({ navigation }) {
 					<TouchableOpacity
 						style={styles.itemContainer}
 						onPress={() =>
-							navigation.navigate('Categories', {
+							navigate('Categories', {
 								pageTitle: language === 'bn' ? item.name_bn : item.name_en,
 								category: item.category
 							})
@@ -101,8 +101,8 @@ export default function DuaHome({ navigation }) {
 							style={[
 								styles.itemName,
 								{
-									fontFamily: 'Menlo-Regular'
-									//	language === 'bn' ? 'SolaimanLipiNormal' : 'Menlo-Regular'
+									fontFamily:
+										language === 'bn' ? 'SolaimanLipiNormal' : 'Menlo-Regular'
 								}
 							]}>
 							{language === 'bn' ? item.name_bn : item.name_en}
