@@ -7,6 +7,7 @@ import { Icon } from 'react-native-elements'
 import DuaHome from './screens/duaHome.screen'
 import AllDuaScreen from './screens/allDua.screen'
 import DuaDetailScreen from './screens/duaDetails.screen'
+import DuaCategoriesdScreen from './screens/duaCategoriesd.screen'
 
 //Quran screens
 import QuranHome from './screens/quran.screen'
@@ -51,6 +52,19 @@ function DuaStack() {
 					component={DuaDetailScreen}
 					options={({ route }) => ({
 						headerTitle: null,
+						headerTintColor: 'black',
+						headerStyle: {
+							backgroundColor: '#80ca8e'
+						}
+					})}
+				/>
+				<Stack.Screen
+					name="Categories"
+					component={DuaCategoriesdScreen}
+					options={({ route }) => ({
+						title: route.params.pageTitle,
+						headerBackTitle: null,
+						headerTitleAlign: 'center',
 						headerTintColor: 'black',
 						headerStyle: {
 							backgroundColor: '#80ca8e'

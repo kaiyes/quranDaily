@@ -38,7 +38,7 @@ export default function DuaHome({ navigation: { navigate } }) {
 	return (
 		<SafeAreaView style={styles.root}>
 			<View style={styles.topNav}>
-				<Text style={styles.title}>Dua Groups</Text>
+				<Text style={styles.title}>Dua Categories</Text>
 				<View style={styles.favHolder}>
 					<TouchableOpacity
 						style={styles.globe}
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		color: '#1c1c1c',
 		fontFamily: 'Menlo',
-		fontSize: 24
+		fontSize: 22
 	},
 	itemContainer: {
 		width: wp('28%'),
