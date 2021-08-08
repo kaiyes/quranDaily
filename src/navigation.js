@@ -11,6 +11,7 @@ import DuaCategoriesdScreen from './screens/duaCategoriesd.screen'
 
 //Quran screens
 import QuranHome from './screens/quran.screen'
+import SuraScreen from './screens/sura.screen'
 
 import LanguageContext from './utility/context'
 
@@ -78,11 +79,26 @@ function DuaStack() {
 
 function QuranStack() {
 	return (
-		<Stack.Navigator
-			screenOptions={{
-				headerShown: false
-			}}>
-			<Stack.Screen name="QuranHome" component={QuranHome} />
+		<Stack.Navigator>
+			<Stack.Screen
+				name="QuranHome"
+				component={QuranHome}
+				options={{
+					headerShown: false
+				}}
+			/>
+			<Stack.Screen
+				name="Sura"
+				component={SuraScreen}
+				options={({ route }) => ({
+					title: route.params.suraName,
+					headerTitleAlign: 'center',
+					headerTintColor: 'black',
+					headerStyle: {
+						backgroundColor: '#80ca8e'
+					}
+				})}
+			/>
 		</Stack.Navigator>
 	)
 }
