@@ -7,14 +7,13 @@ import {
 	Text,
 	FlatList,
 	TouchableOpacity
-	// Modal
 } from 'react-native'
 import {
 	widthPercentageToDP as wp,
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import { Icon, CheckBox } from 'react-native-elements'
-import ProgressBar from 'react-native-progress/Bar'
+//import ProgressBar from 'react-native-progress/Bar'
 import Modal from 'react-native-modal'
 
 import Suras from '../utility/suras.js'
@@ -22,25 +21,7 @@ import Suras from '../utility/suras.js'
 export default function Quran({ navigation: { navigate } }) {
 	const [language, setLanguage] = useState('bn')
 	const [isModalVisible, setIsModalVisible] = useState(false)
-	const [renderStyle, setRenderStyle] = useState('list')
-
-	function switchBarWidth(ayahNumber) {
-		return ayahNumber < 10
-			? 20
-			: ayahNumber >= 10 && ayahNumber <= 30
-			? 30
-			: ayahNumber >= 30 && ayahNumber <= 50
-			? 40
-			: ayahNumber >= 50 && ayahNumber <= 100
-			? 50
-			: ayahNumber >= 100 && ayahNumber <= 150
-			? 60
-			: ayahNumber >= 150 && ayahNumber <= 200
-			? 70
-			: ayahNumber >= 200 && ayahNumber <= 300
-			? 80
-			: 10
-	}
+	const [renderStyle, setRenderStyle] = useState('pager')
 
 	function suraBlock(item) {
 		return (
@@ -52,10 +33,10 @@ export default function Quran({ navigation: { navigate } }) {
 				}
 				onPress={() => {
 					navigate('Sura', {
-						suraName: item.transliteration_en,
 						suraNumber: item.number,
 						language,
-						renderStyle
+						renderStyle,
+						page: item.page
 					})
 				}}>
 				<Text style={styles.number}>{item.number}</Text>
@@ -118,29 +99,29 @@ export default function Quran({ navigation: { navigate } }) {
 								onPress={() => setLanguage('bn')}
 							/>
 						</View>
-						{/* <CheckBox */}
-						{/* 	center */}
-						{/* 	containerStyle={styles.checkBox} */}
-						{/* 	title="Pager" */}
-						{/* 	iconType="feather" */}
-						{/* 	checkedIcon="check-circle" */}
-						{/* 	uncheckedIcon="circle" */}
-						{/* 	fontFamily={'Menlo'} */}
-						{/* 	checked={renderStyle === 'pager' ? true : false} */}
-						{/* 	onPress={() => setRenderStyle('pager')} */}
-						{/* /> */}
+						<CheckBox
+							center
+							containerStyle={styles.checkBox}
+							title="Pager"
+							iconType="feather"
+							checkedIcon="check-circle"
+							uncheckedIcon="circle"
+							fontFamily={'Menlo'}
+							checked={renderStyle === 'pager' ? true : false}
+							onPress={() => setRenderStyle('pager')}
+						/>
 
-						{/* 						<CheckBox */}
-						{/* 							center */}
-						{/* 							containerStyle={styles.checkBox} */}
-						{/* 							title="List" */}
-						{/* 							iconType="feather" */}
-						{/* 							checkedIcon="check-circle" */}
-						{/* 							uncheckedIcon="circle" */}
-						{/* 							fontFamily={'Menlo'} */}
-						{/* 							checked={renderStyle === 'list' ? true : false} */}
-						{/* 							onPress={() => setRenderStyle('list')} */}
-						{/* 						/> */}
+						<CheckBox
+							center
+							containerStyle={styles.checkBox}
+							title="List"
+							iconType="feather"
+							checkedIcon="check-circle"
+							uncheckedIcon="circle"
+							fontFamily={'Menlo'}
+							checked={renderStyle === 'list' ? true : false}
+							onPress={() => setRenderStyle('list')}
+						/>
 					</View>
 				</Modal>
 			</TouchableOpacity>
@@ -225,9 +206,29 @@ const styles = StyleSheet.create({
 	}
 })
 
+//progress Bar
 // <View style={styles.spacerV} />
 // 					<ProgressBar
 // 						progress={0.2}
 // 						width={wp(`${switchBarWidth(item.total_verses)}`)}
 // 						color={'tan'}
 // 					/>
+//
+//progress Bar
+//function switchBarWidth(ayahNumber) {
+// return ayahNumber < 10
+// 	? 20
+// 	: ayahNumber >= 10 && ayahNumber <= 30
+// 	? 30
+// 	: ayahNumber >= 30 && ayahNumber <= 50
+// 	? 40
+// 	: ayahNumber >= 50 && ayahNumber <= 100
+// 	? 50
+// 	: ayahNumber >= 100 && ayahNumber <= 150
+// 	? 60
+// 	: ayahNumber >= 150 && ayahNumber <= 200
+// 	? 70
+// 	: ayahNumber >= 200 && ayahNumber <= 300
+// 	? 80
+// 	: 10
+// }

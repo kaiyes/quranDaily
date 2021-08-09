@@ -1,6 +1,7 @@
 const suras = [
 	{
 		number: 1,
+		page: 1,
 		name: 'سورة الفاتحة',
 		transliteration_en: 'Al-Faatiha',
 		translation_en: 'The Opening',
@@ -9,6 +10,7 @@ const suras = [
 	},
 	{
 		number: 2,
+		page: 2,
 		name: 'سورة البقرة',
 		transliteration_en: 'Al-Baqara',
 		translation_en: 'The Cow',
@@ -17,6 +19,7 @@ const suras = [
 	},
 	{
 		number: 3,
+		page: 50,
 		name: 'سورة آل عمران',
 		transliteration_en: 'Aal-i-Imraan',
 		translation_en: 'The Family of Imraan',
@@ -25,6 +28,7 @@ const suras = [
 	},
 	{
 		number: 4,
+		page: 77,
 		name: 'سورة النساء',
 		transliteration_en: 'An-Nisaa',
 		translation_en: 'The Women',
@@ -33,6 +37,7 @@ const suras = [
 	},
 	{
 		number: 5,
+		page: 106,
 		name: 'سورة المائدة',
 		transliteration_en: 'Al-Maaida',
 		translation_en: 'The Table',
@@ -41,6 +46,7 @@ const suras = [
 	},
 	{
 		number: 6,
+		page: 128,
 		name: 'سورة الأنعام',
 		transliteration_en: "Al-An'aam",
 		translation_en: 'The Cattle',
@@ -49,6 +55,7 @@ const suras = [
 	},
 	{
 		number: 7,
+		page: 151,
 		name: 'سورة الأعراف',
 		transliteration_en: "Al-A'raaf",
 		translation_en: 'The Heights',
@@ -57,6 +64,7 @@ const suras = [
 	},
 	{
 		number: 8,
+		page: 177,
 		name: 'سورة الأنفال',
 		transliteration_en: 'Al-Anfaal',
 		translation_en: 'The Spoils of War',
@@ -65,6 +73,7 @@ const suras = [
 	},
 	{
 		number: 9,
+		page: 187,
 		name: 'سورة التوبة',
 		transliteration_en: 'At-Tawba',
 		translation_en: 'The Repentance',
@@ -73,6 +82,7 @@ const suras = [
 	},
 	{
 		number: 10,
+		page: 208,
 		name: 'سورة يونس',
 		transliteration_en: 'Yunus',
 		translation_en: 'Jonas',
@@ -81,6 +91,7 @@ const suras = [
 	},
 	{
 		number: 11,
+		page: 221,
 		name: 'سورة هود',
 		transliteration_en: 'Hud',
 		translation_en: 'Hud',
@@ -89,6 +100,7 @@ const suras = [
 	},
 	{
 		number: 12,
+		page: 235,
 		name: 'سورة يوسف',
 		transliteration_en: 'Yusuf',
 		translation_en: 'Joseph',
@@ -97,6 +109,7 @@ const suras = [
 	},
 	{
 		number: 13,
+		page: 249,
 		name: 'سورة الرعد',
 		transliteration_en: "Ar-Ra'd",
 		translation_en: 'The Thunder',
@@ -105,6 +118,7 @@ const suras = [
 	},
 	{
 		number: 14,
+		page: 255,
 		name: 'سورة ابراهيم',
 		transliteration_en: 'Ibrahim',
 		translation_en: 'Abraham',
@@ -113,6 +127,7 @@ const suras = [
 	},
 	{
 		number: 15,
+		page: 262,
 		name: 'سورة الحجر',
 		transliteration_en: 'Al-Hijr',
 		translation_en: 'The Rock',
@@ -121,6 +136,7 @@ const suras = [
 	},
 	{
 		number: 16,
+		page: 267,
 		name: 'سورة النحل',
 		transliteration_en: 'An-Nahl',
 		translation_en: 'The Bee',
@@ -129,6 +145,7 @@ const suras = [
 	},
 	{
 		number: 17,
+		page: 282,
 		name: 'سورة الإسراء',
 		transliteration_en: 'Al-Israa',
 		translation_en: 'The Night Journey',
@@ -137,6 +154,7 @@ const suras = [
 	},
 	{
 		number: 18,
+		page: 293,
 		name: 'سورة الكهف',
 		transliteration_en: 'Al-Kahf',
 		translation_en: 'The Cave',
@@ -145,6 +163,7 @@ const suras = [
 	},
 	{
 		number: 19,
+		page: 305,
 		name: 'سورة مريم',
 		transliteration_en: 'Maryam',
 		translation_en: 'Mary',
@@ -153,6 +172,7 @@ const suras = [
 	},
 	{
 		number: 20,
+		page: 312,
 		name: 'سورة طه',
 		transliteration_en: 'Taa-Haa',
 		translation_en: 'Taa-Haa',
@@ -161,6 +181,7 @@ const suras = [
 	},
 	{
 		number: 21,
+		page: 322,
 		name: 'سورة الأنبياء',
 		transliteration_en: 'Al-Anbiyaa',
 		translation_en: 'The Prophets',
@@ -169,6 +190,7 @@ const suras = [
 	},
 	{
 		number: 22,
+		page: 332,
 		name: 'سورة الحج',
 		transliteration_en: 'Al-Hajj',
 		translation_en: 'The Pilgrimage',
@@ -177,6 +199,7 @@ const suras = [
 	},
 	{
 		number: 23,
+		page: 342,
 		name: 'سورة المؤمنون',
 		transliteration_en: 'Al-Muminoon',
 		translation_en: 'The Believers',
@@ -185,6 +208,7 @@ const suras = [
 	},
 	{
 		number: 24,
+		page: 350,
 		name: 'سورة النور',
 		transliteration_en: 'An-Noor',
 		translation_en: 'The Light',
@@ -193,6 +217,7 @@ const suras = [
 	},
 	{
 		number: 25,
+		page: 359,
 		name: 'سورة الفرقان',
 		transliteration_en: 'Al-Furqaan',
 		translation_en: 'The Criterion',
@@ -201,6 +226,7 @@ const suras = [
 	},
 	{
 		number: 26,
+		page: 367,
 		name: 'سورة الشعراء',
 		transliteration_en: "Ash-Shu'araa",
 		translation_en: 'The Poets',
@@ -209,6 +235,7 @@ const suras = [
 	},
 	{
 		number: 27,
+		page: 377,
 		name: 'سورة النمل',
 		transliteration_en: 'An-Naml',
 		translation_en: 'The Ant',
@@ -217,6 +244,7 @@ const suras = [
 	},
 	{
 		number: 28,
+		page: 385,
 		name: 'سورة القصص',
 		transliteration_en: 'Al-Qasas',
 		translation_en: 'The Stories',
@@ -225,6 +253,7 @@ const suras = [
 	},
 	{
 		number: 29,
+		page: 396,
 		name: 'سورة العنكبوت',
 		transliteration_en: 'Al-Ankaboot',
 		translation_en: 'The Spider',
@@ -233,6 +262,7 @@ const suras = [
 	},
 	{
 		number: 30,
+		page: 404,
 		name: 'سورة الروم',
 		transliteration_en: 'Ar-Room',
 		translation_en: 'The Romans',
@@ -241,6 +271,7 @@ const suras = [
 	},
 	{
 		number: 31,
+		page: 441,
 		name: 'سورة لقمان',
 		transliteration_en: 'Luqman',
 		translation_en: 'Luqman',
@@ -249,6 +280,7 @@ const suras = [
 	},
 	{
 		number: 32,
+		page: 415,
 		name: 'سورة السجدة',
 		transliteration_en: 'As-Sajda',
 		translation_en: 'The Prostration',
@@ -257,6 +289,7 @@ const suras = [
 	},
 	{
 		number: 33,
+		page: 418,
 		name: 'سورة الأحزاب',
 		transliteration_en: 'Al-Ahzaab',
 		translation_en: 'The Clans',
@@ -265,6 +298,7 @@ const suras = [
 	},
 	{
 		number: 34,
+		page: 428,
 		name: 'سورة سبإ',
 		transliteration_en: 'Saba',
 		translation_en: 'Sheba',
@@ -273,6 +307,7 @@ const suras = [
 	},
 	{
 		number: 35,
+		page: 434,
 		name: 'سورة فاطر',
 		transliteration_en: 'Faatir',
 		translation_en: 'The Originator',
@@ -281,6 +316,7 @@ const suras = [
 	},
 	{
 		number: 36,
+		page: 440,
 		name: 'سورة يس',
 		transliteration_en: 'Yaseen',
 		translation_en: 'Yaseen',
@@ -289,6 +325,7 @@ const suras = [
 	},
 	{
 		number: 37,
+		page: 446,
 		name: 'سورة الصافات',
 		transliteration_en: 'As-Saaffaat',
 		translation_en: 'Those drawn up in Ranks',
@@ -297,6 +334,7 @@ const suras = [
 	},
 	{
 		number: 38,
+		page: 453,
 		name: 'سورة ص',
 		transliteration_en: 'Saad',
 		translation_en: 'The letter Saad',
@@ -305,6 +343,7 @@ const suras = [
 	},
 	{
 		number: 39,
+		page: 458,
 		name: 'سورة الزمر',
 		transliteration_en: 'Az-Zumar',
 		translation_en: 'The Groups',
@@ -313,6 +352,7 @@ const suras = [
 	},
 	{
 		number: 40,
+		page: 467,
 		name: 'سورة غافر',
 		transliteration_en: 'Ghafir',
 		translation_en: 'The Forgiver',
@@ -321,6 +361,7 @@ const suras = [
 	},
 	{
 		number: 41,
+		page: 477,
 		name: 'سورة فصلت',
 		transliteration_en: 'Fussilat',
 		translation_en: 'Explained in detail',
@@ -329,6 +370,7 @@ const suras = [
 	},
 	{
 		number: 42,
+		page: 483,
 		name: 'سورة الشورى',
 		transliteration_en: 'Ash-Shura',
 		translation_en: 'Consultation',
@@ -337,6 +379,7 @@ const suras = [
 	},
 	{
 		number: 43,
+		page: 489,
 		name: 'سورة الزخرف',
 		transliteration_en: 'Az-Zukhruf',
 		translation_en: 'Ornaments of gold',
@@ -345,6 +388,7 @@ const suras = [
 	},
 	{
 		number: 44,
+		page: 496,
 		name: 'سورة الدخان',
 		transliteration_en: 'Ad-Dukhaan',
 		translation_en: 'The Smoke',
@@ -353,6 +397,7 @@ const suras = [
 	},
 	{
 		number: 45,
+		page: 499,
 		name: 'سورة الجاثية',
 		transliteration_en: 'Al-Jaathiya',
 		translation_en: 'Crouching',
@@ -361,6 +406,7 @@ const suras = [
 	},
 	{
 		number: 46,
+		page: 502,
 		name: 'سورة الأحقاف',
 		transliteration_en: 'Al-Ahqaf',
 		translation_en: 'The Dunes',
@@ -369,6 +415,7 @@ const suras = [
 	},
 	{
 		number: 47,
+		page: 507,
 		name: 'سورة محمد',
 		transliteration_en: 'Muhammad',
 		translation_en: 'Muhammad',
@@ -377,6 +424,7 @@ const suras = [
 	},
 	{
 		number: 48,
+		page: 511,
 		name: 'سورة الفتح',
 		transliteration_en: 'Al-Fath',
 		translation_en: 'The Victory',
@@ -385,6 +433,7 @@ const suras = [
 	},
 	{
 		number: 49,
+		page: 515,
 		name: 'سورة الحجرات',
 		transliteration_en: 'Al-Hujuraat',
 		translation_en: 'The Inner Apartments',
@@ -393,6 +442,7 @@ const suras = [
 	},
 	{
 		number: 50,
+		page: 518,
 		name: 'سورة ق',
 		transliteration_en: 'Qaaf',
 		translation_en: 'The letter Qaaf',
@@ -401,6 +451,7 @@ const suras = [
 	},
 	{
 		number: 51,
+		page: 520,
 		name: 'سورة الذاريات',
 		transliteration_en: 'Adh-Dhaariyat',
 		translation_en: 'The Winnowing Winds',
@@ -409,6 +460,7 @@ const suras = [
 	},
 	{
 		number: 52,
+		page: 503,
 		name: 'سورة الطور',
 		transliteration_en: 'At-Tur',
 		translation_en: 'The Mount',
@@ -417,6 +469,7 @@ const suras = [
 	},
 	{
 		number: 53,
+		page: 526,
 		name: 'سورة النجم',
 		transliteration_en: 'An-Najm',
 		translation_en: 'The Star',

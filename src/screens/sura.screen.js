@@ -13,20 +13,15 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import Loader from '../components/loader'
-//import ViewPager from '@react-native-community/viewpager'
-
-//import '../assets/fonts/me_quran.ttf'
+import { PagerView } from 'react-native-pager-view'
 
 export default function Sura({ route }) {
 	const pages = require('../utility/pages.json')
 
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
-	const [page, setPage] = useState(1)
-	const [ayats, setAyats] = useState([])
-	const [pagesToRender, setPagesToRender] = useState([])
 
-	const { language, renderStyle, suraName, suraNumber } = route.params
+	const { language, renderStyle, suraNumber, page } = route.params
 
 	function Card(item, index) {
 		return (
@@ -47,37 +42,18 @@ export default function Sura({ route }) {
 		)
 	}
 
-	// 	function Pager() {
-	// 		return (
-	// 			<ViewPager initialPage={page} style={styles.container}>
-	// 				{pages.map(item => (
-	// 					<View style={styles.suraPage}>
-	// 						<Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
-	// 					</View>
-	// 				))}
-	// 			</ViewPager>
-	// 		)
-	// 	}
-
-	function Card2(item) {
+	function Pager() {
 		return (
-			<View style={styles.card2}>
-				<Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
-			</View>
-		)
-	}
-
-	function Pager2() {
-		return (
-			<FlatList
-				horizontal
-				inverted
-				pagingEnabled
-				data={pagesToRender}
-				keyExtractor={item => item.p.toString()}
-				onEndReached={() => fetchMore()}
-				renderItem={({ item, index }) => Card2(item, index)}
-			/>
+			<PagerView
+				initialPage={page}
+				style={styles.containerPV}
+				offscreenPageLimit={2}>
+				{pages.map(item => (
+					<View style={styles.suraPage}>
+						<Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
+					</View>
+				))}
+			</PagerView>
 		)
 	}
 
@@ -96,18 +72,10 @@ export default function Sura({ route }) {
 		)
 	}
 
-	async function fetchMore() {
-		await setPagesToRender(pages.slice(0, 6))
-	}
-
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
-			if (renderStyle === 'list') {
-				await fetchSura()
-			} else {
-				setPagesToRender(pages.slice(0, 2))
-			}
+			if (renderStyle === 'list') await fetchSura()
 			setLoading(false)
 		})()
 	}, [])
@@ -577,12 +545,17 @@ export default function Sura({ route }) {
 		}
 	}
 
-	return renderStyle === 'list' ? List() : Pager2()
+	return renderStyle === 'list' ? List() : Pager()
 }
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		backgroundColor: 'lemonchiffon'
+	},
+	containerPV: {
+		width: wp('100%'),
+		height: hp('100%'),
 		backgroundColor: 'lemonchiffon'
 	},
 	ayahArabic: {
