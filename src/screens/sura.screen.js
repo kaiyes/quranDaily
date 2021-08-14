@@ -19,6 +19,7 @@ import {
 	PagerView,
 	LazyPagerView
 } from 'react-native-pager-view'
+import pages from '../utility/pageImages.js'
 
 export default function Sura({ route }) {
 	//const pages = require('../utility/pages.json')
@@ -28,14 +29,6 @@ export default function Sura({ route }) {
 
 	// prettier-ignore
 	const { language, renderStyle, suraNumber, page } = route.params
-
-	pages = [
-		{ img: require('../utility/pageImages/page001.png') },
-		{ img: require('../utility/pageImages/page002.png') },
-		{ img: require('../utility/pageImages/page003.png') },
-		{ img: require('../utility/pageImages/page004.png') },
-		{ img: require('../utility/pageImages/page005.png') }
-	]
 
 	function Card(item, index) {
 		return (
@@ -60,8 +53,14 @@ export default function Sura({ route }) {
 		)
 	}
 
-	function Page(item) {
-		return <Image source={item.img} style={styles.sura} />
+	function Page(item, index) {
+		return (
+			<Image
+				source={item.img}
+				style={styles.sura}
+				key={index}
+			/>
+		)
 	}
 
 	// <Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
@@ -70,9 +69,10 @@ export default function Sura({ route }) {
 		return (
 			<PagerView
 				layoutDirection="RTL"
-				initialPage={0}
+				initialPage={page}
+				//setPage={page}
 				style={styles.container}>
-				{pages.map(i => Page(i))}
+				{pages.map((item, index) => Page(item, index))}
 			</PagerView>
 		)
 	}
@@ -94,10 +94,25 @@ export default function Sura({ route }) {
 		)
 	}
 
+	function ListPager() {
+		return (
+			<FlatList
+				horizontal
+				inverted
+				pagingEnabled
+				data={pages}
+				keyExtractor={() => Math.random().toString()}
+				//onEndReached={() => fetchMore()}
+				renderItem={({ item, index }) => Page(item, index)}
+			/>
+		)
+	}
+
 	useEffect(() => {
 		;(async function fetchData() {
 			setLoading(true)
 			if (renderStyle === 'list') await fetchSura()
+			console.log(page)
 			setLoading(false)
 		})()
 	}, [])
@@ -567,7 +582,7 @@ export default function Sura({ route }) {
 		}
 	}
 
-	return renderStyle === 'list' ? List() : Pager()
+	return renderStyle === 'list' ? List() : ListPager()
 }
 
 const styles = StyleSheet.create({
@@ -601,7 +616,6 @@ const styles = StyleSheet.create({
 		fontSize: 17,
 		marginVertical: hp('1%')
 	},
-
 	suraPage: {
 		paddingHorizontal: wp('3%')
 	},
