@@ -25,6 +25,7 @@ function DuaStack() {
 		() => ({ language, setLanguage }),
 		[language, setLanguage]
 	)
+
 	return (
 		<LanguageContext.Provider value={value}>
 			<Stack.Navigator>
@@ -91,12 +92,10 @@ function QuranStack() {
 				name="Sura"
 				component={SuraScreen}
 				options={({ route }) => ({
-					title: route.params.suraName,
-					headerTitleAlign: 'center',
+					headerBackTitleVisible: false,
+					headerTransparent: true,
 					headerTintColor: 'black',
-					headerStyle: {
-						backgroundColor: '#80ca8e'
-					}
+					headerTitle: false
 				})}
 			/>
 		</Stack.Navigator>
@@ -109,9 +108,15 @@ function AppStack() {
 			screenOptions={({ route }) => ({
 				headerShown: false,
 				tabBarActiveTintColor: 'white',
-				tabBarInactiveTintColor: 'darkseagreen',
+				tabBarInactiveTintColor:
+					route.name === 'Quran'
+						? 'darkseagreen'
+						: 'lightsteelblue',
 				tabBarStyle: {
-					backgroundColor: 'seagreen'
+					backgroundColor:
+						route.name === 'Quran'
+							? 'royalblue'
+							: 'seagreen'
 				},
 				tabBarLabelStyle: {
 					fontWeight: '400',
@@ -122,12 +127,22 @@ function AppStack() {
 					switch (route.name) {
 						case 'Dua':
 							return (
-								<Icon name={'air'} type={'entypo'} size={18} color={color} />
+								<Icon
+									name={'air'}
+									type={'entypo'}
+									size={18}
+									color={color}
+								/>
 							)
 							break
 						case 'Quran':
 							return (
-								<Icon name={'book'} type={'entypo'} size={22} color={color} />
+								<Icon
+									name={'book'}
+									type={'entypo'}
+									size={22}
+									color={color}
+								/>
 							)
 							break
 						default:

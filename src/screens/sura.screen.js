@@ -6,22 +6,36 @@ import {
 	View,
 	Text,
 	FlatList,
-	TouchableOpacity
+	TouchableOpacity,
+	Image,
+	StatusBar
 } from 'react-native'
 import {
 	widthPercentageToDP as wp,
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import Loader from '../components/loader'
-import { PagerView } from 'react-native-pager-view'
+import {
+	PagerView,
+	LazyPagerView
+} from 'react-native-pager-view'
 
 export default function Sura({ route }) {
-	const pages = require('../utility/pages.json')
+	//const pages = require('../utility/pages.json')
 
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
 
-	const { language, renderStyle, suraNumber, page } = route.params
+	const { language, renderStyle, suraNumber, page } =
+		route.params
+
+	pages = [
+		{ img: require('../utility/pageImages/001.png') },
+		{ img: require('../utility/pageImages/002.png') },
+		{ img: require('../utility/pageImages/003.png') },
+		{ img: require('../utility/pageImages/004.png') },
+		{ img: require('../utility/pageImages/005.png') }
+	]
 
 	function Card(item, index) {
 		return (
@@ -32,27 +46,33 @@ export default function Sura({ route }) {
 						styles.translation,
 						{
 							fontFamily:
-								language === 'bn' ? 'Menlo-Regular' : 'SolaimanLipiNormal'
+								language === 'bn'
+									? 'Menlo-Regular'
+									: 'SolaimanLipiNormal'
 						}
 					]}>
 					<Text style={styles.number}>{index + 1}. </Text>
-					{language === 'bn' ? item.translation_bn : item.translation_en}
+					{language === 'bn'
+						? item.translation_bn
+						: item.translation_en}
 				</Text>
 			</View>
 		)
 	}
 
+	function Page(item) {
+		return <Image source={item.img} style={styles.sura} />
+	}
+
+	// <Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
+
 	function Pager() {
 		return (
 			<PagerView
-				initialPage={page}
-				style={styles.containerPV}
-				offscreenPageLimit={2}>
-				{pages.map(item => (
-					<View style={styles.suraPage}>
-						<Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
-					</View>
-				))}
+				layoutDirection="RTL"
+				initialPage={0}
+				style={styles.container}>
+				{pages.map(i => Page(i))}
 			</PagerView>
 		)
 	}
@@ -66,7 +86,9 @@ export default function Sura({ route }) {
 					data={sura}
 					keyExtractor={item => item.id.toString()}
 					contentContainerStyle={styles.flatList}
-					renderItem={({ item, index }) => Card(item, index)}
+					renderItem={({ item, index }) =>
+						Card(item, index)
+					}
 				/>
 			</SafeAreaView>
 		)
@@ -551,7 +573,8 @@ export default function Sura({ route }) {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: 'lemonchiffon'
+		backgroundColor: 'aliceblue'
+		//backgroundColor: '#E8FBFF',
 	},
 	containerPV: {
 		width: wp('100%'),
@@ -603,5 +626,10 @@ const styles = StyleSheet.create({
 	},
 	number: {
 		marginRight: wp('1%')
+	},
+	sura: {
+		width: wp('100%'),
+		height: hp('100%'),
+		resizeMode: 'contain'
 	}
 })

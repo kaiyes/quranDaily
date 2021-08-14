@@ -18,9 +18,12 @@ import Modal from 'react-native-modal'
 
 import Suras from '../utility/suras.js'
 
-export default function Quran({ navigation: { navigate } }) {
+export default function Quran({
+	navigation: { navigate }
+}) {
 	const [language, setLanguage] = useState('bn')
-	const [isModalVisible, setIsModalVisible] = useState(false)
+	const [isModalVisible, setIsModalVisible] =
+		useState(false)
 	const [renderStyle, setRenderStyle] = useState('pager')
 
 	function suraBlock(item) {
@@ -28,26 +31,36 @@ export default function Quran({ navigation: { navigate } }) {
 			<TouchableOpacity
 				style={
 					item.number % 2 === 0
-						? [styles.suraBlock, { backgroundColor: 'palegoldenrod' }]
-						: [styles.suraBlock, { backgroundColor: 'lemonchiffon' }]
+						? [
+								styles.suraBlock,
+								{ backgroundColor: 'skyblue' }
+						  ]
+						: [
+								styles.suraBlock,
+								{ backgroundColor: 'lightblue' }
+						  ]
 				}
 				onPress={() => {
 					navigate('Sura', {
 						suraNumber: item.number,
 						language,
 						renderStyle,
-						page: item.page
+						page: item.page,
+						suraName: item.transliteration_en
 					})
 				}}>
 				<Text style={styles.number}>{item.number}</Text>
 
 				<View style={styles.nameBlock}>
 					<View style={styles.nameRow}>
-						<Text style={styles.name}>{item.transliteration_en}</Text>
+						<Text style={styles.name}>
+							{item.transliteration_en}
+						</Text>
 					</View>
 
 					<Text style={styles.subTitle}>
-						{item.revelation_type} - {item.total_verses} verses
+						{item.revelation_type} - {item.total_verses}{' '}
+						verses
 					</Text>
 				</View>
 			</TouchableOpacity>
@@ -57,18 +70,24 @@ export default function Quran({ navigation: { navigate } }) {
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.topBlock}>
-				<TouchableOpacity onPress={() => setIsModalVisible(true)}>
+				<TouchableOpacity
+					onPress={() => setIsModalVisible(true)}>
 					<Icon type={'entypo'} name={'cog'} size={22} />
 				</TouchableOpacity>
 			</View>
 
-			<TouchableOpacity onPress={() => setIsModalVisible(false)}>
+			<TouchableOpacity
+				onPress={() => setIsModalVisible(false)}>
 				<Modal
 					visible={isModalVisible}
 					onBackdropPress={() => setIsModalVisible(false)}
 					animationType={'slide'}>
 					<View style={styles.modal}>
-						<Text style={[styles.subTitle, { marginLeft: wp('5%') }]}>
+						<Text
+							style={[
+								styles.subTitle,
+								{ marginLeft: wp('5%') }
+							]}>
 							choose language
 						</Text>
 						<View style={styles.basicRow}>
@@ -107,7 +126,9 @@ export default function Quran({ navigation: { navigate } }) {
 							checkedIcon="check-circle"
 							uncheckedIcon="circle"
 							fontFamily={'Menlo'}
-							checked={renderStyle === 'pager' ? true : false}
+							checked={
+								renderStyle === 'pager' ? true : false
+							}
 							onPress={() => setRenderStyle('pager')}
 						/>
 
@@ -119,7 +140,9 @@ export default function Quran({ navigation: { navigate } }) {
 							checkedIcon="check-circle"
 							uncheckedIcon="circle"
 							fontFamily={'Menlo'}
-							checked={renderStyle === 'list' ? true : false}
+							checked={
+								renderStyle === 'list' ? true : false
+							}
 							onPress={() => setRenderStyle('list')}
 						/>
 					</View>
@@ -138,7 +161,7 @@ export default function Quran({ navigation: { navigate } }) {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: 'lemonchiffon'
+		backgroundColor: 'lightblue'
 	},
 	name: {
 		fontSize: 17,
