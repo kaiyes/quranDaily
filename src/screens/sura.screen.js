@@ -101,7 +101,16 @@ export default function Sura({ route }) {
 				inverted
 				pagingEnabled
 				data={pages}
-				keyExtractor={() => Math.random().toString()}
+				initialScrollIndex={page}
+				animated={false}
+				showsHorizontalScrollIndicator={false}
+				keyExtractor={(item, index) => index.toString()}
+				getItemLayout={(pages, index) => ({
+					length: wp('100%'),
+					offset: wp('100%') * index,
+					index
+				})}
+				//initialNumToRender={30}
 				//onEndReached={() => fetchMore()}
 				renderItem={({ item, index }) => Page(item, index)}
 			/>
