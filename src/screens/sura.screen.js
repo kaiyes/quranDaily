@@ -26,15 +26,15 @@ export default function Sura({ route }) {
 	const [sura, setSura] = useState([])
 	const [loading, setLoading] = useState(false)
 
-	const { language, renderStyle, suraNumber, page } =
-		route.params
+	// prettier-ignore
+	const { language, renderStyle, suraNumber, page } = route.params
 
 	pages = [
-		{ img: require('../utility/pageImages/001.png') },
-		{ img: require('../utility/pageImages/002.png') },
-		{ img: require('../utility/pageImages/003.png') },
-		{ img: require('../utility/pageImages/004.png') },
-		{ img: require('../utility/pageImages/005.png') }
+		{ img: require('../utility/pageImages/page001.png') },
+		{ img: require('../utility/pageImages/page002.png') },
+		{ img: require('../utility/pageImages/page003.png') },
+		{ img: require('../utility/pageImages/page004.png') },
+		{ img: require('../utility/pageImages/page005.png') }
 	]
 
 	function Card(item, index) {

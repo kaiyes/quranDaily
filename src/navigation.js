@@ -91,11 +91,11 @@ function QuranStack() {
 			<Stack.Screen
 				name="Sura"
 				component={SuraScreen}
-				options={({ route }) => ({
+				options={() => ({
 					headerBackTitleVisible: false,
 					headerTransparent: true,
 					headerTintColor: 'black',
-					headerTitle: false
+					title: null
 				})}
 			/>
 		</Stack.Navigator>

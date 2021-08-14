@@ -45,8 +45,7 @@ export default function Quran({
 						suraNumber: item.number,
 						language,
 						renderStyle,
-						page: item.page,
-						suraName: item.transliteration_en
+						page: item.page
 					})
 				}}>
 				<Text style={styles.number}>{item.number}</Text>
