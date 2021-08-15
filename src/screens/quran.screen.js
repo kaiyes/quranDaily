@@ -45,7 +45,11 @@ export default function Quran({
 						suraNumber: item.number,
 						language,
 						renderStyle,
-						page: item.page
+						page: item.page,
+						suraName:
+							language === 'bn'
+								? item.bangla_name
+								: item.transliteration_en
 					})
 				}}>
 				<Text style={styles.number}>{item.number}</Text>
@@ -53,7 +57,9 @@ export default function Quran({
 				<View style={styles.nameBlock}>
 					<View style={styles.nameRow}>
 						<Text style={styles.name}>
-							{item.transliteration_en}
+							{language === 'bn'
+								? item.bangla_name
+								: item.transliteration_en}
 						</Text>
 					</View>
 
@@ -108,7 +114,7 @@ export default function Quran({
 									backgroundColor: 'transparent',
 									borderWidth: 0
 								}}
-								title="bn"
+								title="বাংলা "
 								iconType="feather"
 								checkedIcon="check-circle"
 								uncheckedIcon="circle"

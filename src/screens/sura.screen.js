@@ -25,7 +25,7 @@ export default function Sura({ route }) {
 	const [loading, setLoading] = useState(false)
 
 	// prettier-ignore
-	const { language, renderStyle, suraNumber, page } = route.params
+	const { language, renderStyle, suraNumber, page, suraName} = route.params
 
 	function Card(item, index) {
 		return (
@@ -104,7 +104,6 @@ export default function Sura({ route }) {
 		;(async function fetchData() {
 			setLoading(true)
 			if (renderStyle === 'list') await fetchSura()
-			console.log(page)
 			setLoading(false)
 		})()
 	}, [])
