@@ -14,13 +14,20 @@ import {
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
 import { Icon, CheckBox } from 'react-native-elements'
-import { Notifier, Easing, NotifierComponents } from 'react-native-notifier'
+import {
+	Notifier,
+	Easing,
+	NotifierComponents
+} from 'react-native-notifier'
 //Utility
 import Categories from '../utility/categories'
 import LanguageContext from '../utility/context'
 
-export default function DuaHome({ navigation: { navigate } }) {
-	const { language, setLanguage } = useContext(LanguageContext)
+export default function DuaHome({
+	navigation: { navigate }
+}) {
+	const { language, setLanguage } =
+		useContext(LanguageContext)
 
 	async function changeLang(lang) {
 		await setLanguage(lang)
@@ -41,44 +48,55 @@ export default function DuaHome({ navigation: { navigate } }) {
 				<Text style={styles.title}>Dua Categories</Text>
 				<View style={styles.favHolder}>
 					<TouchableOpacity
-						style={styles.globe}
+						style={[
+							styles.globe,
+							language === 'bn'
+								? {
+										backgroundColor: 'black'
+								  }
+								: null
+						]}
 						onPress={() => changeLang('bn')}>
-						<Text
-							style={[
-								styles.langText,
-								language === 'bn'
-									? { backgroundColor: 'lightseagreen', color: 'white' }
-									: null
-							]}>
-							বাংলা
-						</Text>
+						<Text style={styles.langText}>ব</Text>
 					</TouchableOpacity>
 					<TouchableOpacity
-						style={styles.globe}
+						style={[
+							styles.globe,
+							language === 'en'
+								? {
+										backgroundColor: 'black'
+								  }
+								: null
+						]}
 						onPress={() => changeLang('en')}>
-						<Text
-							style={[
-								styles.langText,
-								language === 'en'
-									? { backgroundColor: 'lightseagreen', color: 'white' }
-									: null
-							]}>
-							En
-						</Text>
+						<Text style={styles.langText}>E</Text>
 					</TouchableOpacity>
 
 					<TouchableOpacity
-						style={styles.globe}
 						onPress={() => {
 							navigate('AllDuas')
 						}}>
-						<Icon name="globe" type="entypo" color="lightseagreen" size={18} />
+						<Icon
+							name="globe"
+							type="entypo"
+							color="seagreen"
+							size={12}
+							reverse
+							reverseColor="white"
+						/>
 					</TouchableOpacity>
 					<TouchableOpacity
 						onPress={() => {
 							navigate('Favourites')
 						}}>
-						<Icon name="heart" type="entypo" color="lightseagreen" size={22} />
+						<Icon
+							name="heart"
+							type="entypo"
+							color="seagreen"
+							size={12}
+							reverse
+							reverseColor="white"
+						/>
 					</TouchableOpacity>
 				</View>
 			</View>
@@ -93,7 +111,10 @@ export default function DuaHome({ navigation: { navigate } }) {
 						style={styles.itemContainer}
 						onPress={() =>
 							navigate('Categories', {
-								pageTitle: language === 'bn' ? item.name_bn : item.name_en,
+								pageTitle:
+									language === 'bn'
+										? item.name_bn
+										: item.name_en,
 								category: item.category
 							})
 						}>
@@ -102,10 +123,14 @@ export default function DuaHome({ navigation: { navigate } }) {
 								styles.itemName,
 								{
 									fontFamily:
-										language === 'bn' ? 'SolaimanLipiNormal' : 'Menlo-Regular'
+										language === 'bn'
+											? 'SolaimanLipiNormal'
+											: 'Menlo-Regular'
 								}
 							]}>
-							{language === 'bn' ? item.name_bn : item.name_en}
+							{language === 'bn'
+								? item.name_bn
+								: item.name_en}
 						</Text>
 					</TouchableOpacity>
 				)}
@@ -136,6 +161,12 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	globe: {
+		height: wp('7%'),
+		width: wp('7%'),
+		borderRadius: wp('3.5%'),
+		backgroundColor: 'seagreen',
+		justifyContent: 'center',
+		alignItems: 'center',
 		marginRight: wp('2%')
 	},
 	title: {
@@ -147,7 +178,8 @@ const styles = StyleSheet.create({
 	itemContainer: {
 		width: wp('28%'),
 		height: hp('16%'),
-		backgroundColor: '#343a40',
+		//backgroundColor: '#343a40',
+		backgroundColor: '#416D03',
 		borderRadius: wp('2%'),
 		alignItems: 'center',
 		paddingTop: hp('1%'),
@@ -185,8 +217,7 @@ const styles = StyleSheet.create({
 	},
 	langText: {
 		fontWeight: '500',
-		color: 'gray',
-		//fontFamily: 'SolaimanLipiNormal',
+		color: 'white',
 		fontSize: 14
 	}
 })

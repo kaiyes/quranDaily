@@ -14,11 +14,8 @@ import {
 	widthPercentageToDP as wp,
 	heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
+
 import Loader from '../components/loader'
-import {
-	PagerView,
-	LazyPagerView
-} from 'react-native-pager-view'
 import pages from '../utility/pageImages.js'
 
 export default function Sura({ route }) {
@@ -60,20 +57,6 @@ export default function Sura({ route }) {
 				style={styles.sura}
 				key={index}
 			/>
-		)
-	}
-
-	// <Text style={styles.ayatForPage}>{item.a.map(i => i.t)}</Text>
-
-	function Pager() {
-		return (
-			<PagerView
-				layoutDirection="RTL"
-				initialPage={page}
-				//setPage={page}
-				style={styles.container}>
-				{pages.map((item, index) => Page(item, index))}
-			</PagerView>
 		)
 	}
 
