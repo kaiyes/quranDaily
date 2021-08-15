@@ -178,8 +178,8 @@ const styles = StyleSheet.create({
 	itemContainer: {
 		width: wp('28%'),
 		height: hp('16%'),
-		//backgroundColor: '#343a40',
-		backgroundColor: '#416D03',
+		backgroundColor: '#343a40',
+		//backgroundColor: '#416D03',
 		borderRadius: wp('2%'),
 		alignItems: 'center',
 		paddingTop: hp('1%'),
