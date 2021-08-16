@@ -1,10 +1,5 @@
 function uniqueId() {
-	return (
-		'_' +
-		Math.random()
-			.toString(36)
-			.substr(2, 9)
-	)
+	return '_' + Math.random().toString(36).substr(2, 9)
 }
 
 let items = [
@@ -40,7 +35,7 @@ let items = [
 		category: 'eating'
 	},
 	{
-		name_bn: 'বাড়ী থেকে বের হওয়ার দোয়া',
+		name_bn: 'বাড়ি থেকে বের হলে',
 		name_en: 'Going out of home',
 		color: 'indianred',
 		category: 'home'

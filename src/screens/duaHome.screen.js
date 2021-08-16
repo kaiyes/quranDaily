@@ -182,17 +182,16 @@ const styles = StyleSheet.create({
 		//backgroundColor: '#416D03',
 		borderRadius: wp('2%'),
 		alignItems: 'center',
-		paddingTop: hp('1%'),
-		paddingHorizontal: wp('3%'),
 		marginRight: wp('2%'),
-		marginBottom: hp('2%')
+		marginBottom: hp('2%'),
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	itemName: {
 		fontWeight: 'bold',
 		color: 'white',
-		fontSize: 17,
-		marginTop: hp('3%'),
-		flexWrap: 'wrap'
+		fontSize: 16,
+		width: wp('20%')
 	},
 	duaHolder: {
 		width: wp('35%'),
