@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'honeydew'
     },
     flatList: {
+        paddingTop: hp("4%"),
         backgroundColor: 'honeydew'
     },
     item: {

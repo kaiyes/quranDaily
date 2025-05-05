@@ -22,7 +22,13 @@ import {
 import Categories from '../../../utility/categories'
 import { useNavigation } from 'expo-router'
 import { LanguageContext } from '../../../utility/context'
-
+import { Image } from 'react-native'
+const backgroundImages = [
+    require('../../../assets/images/duabg/1.jpg'),
+    require('../../../assets/images/duabg/2.jpg'),
+    require('../../../assets/images/duabg/3.jpg'),
+    require('../../../assets/images/duabg/4.jpg'),
+];
 export default function Page() {
     const { navigate } = useNavigation()
     const { language, setLanguage } =
@@ -104,10 +110,15 @@ export default function Page() {
                 data={Categories}
                 keyExtractor={item => item.key}
                 contentContainerStyle={styles.scrollContainer}
-                numColumns={3}
-                renderItem={({ item }) => (
+                numColumns={2}
+                renderItem={({ item, index }) => (
                     <TouchableOpacity
-                        style={styles.itemContainer}
+                        style={[
+                            styles.itemContainer,
+                            {
+                                marginRight: index % 2 === 0 ? wp('4%') : null
+                            }
+                        ]}
                         onPress={() =>
                             navigate('categories', {
                                 pageTitle:
@@ -117,6 +128,18 @@ export default function Page() {
                                 category: item.category
                             })
                         }>
+                        <Image
+                            source={backgroundImages[(index % 4)]}
+                            style={{
+                                position: 'absolute',
+                                width: '100%',
+                                height: '100%'
+                            }}
+                            resizeMode="cover"
+                        />
+                        <View
+                            style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(0,0,0,0.7)' }]}
+                        />
                         <Text
                             style={[
                                 styles.itemName,
@@ -145,13 +168,19 @@ const styles = StyleSheet.create({
     },
     scrollContainer: {
         backgroundColor: 'honeydew',
-        alignItems: 'center'
+        paddingHorizontal: wp('4%'),
+        gap: wp('4%'),
+        paddingBottom: wp('4%')
+        // paddingVertical: hp('2%'),
+        // padding: wp('2%'),
+        // alignItems: 'center'
     },
     topNav: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginVertical: hp('2%'),
+        marginTop: hp('4%'),
+        marginBottom: hp('2%'),
         paddingHorizontal: wp('5%')
     },
     favHolder: {
@@ -175,22 +204,26 @@ const styles = StyleSheet.create({
         fontSize: 22
     },
     itemContainer: {
-        width: wp('28%'),
-        height: hp('16%'),
-        backgroundColor: '#343a40',
+        flex: 1,
+        // width: wp('50%'),
+        aspectRatio: 1,
+        // height: hp('16%'),
+        // backgroundColor: '#343a40',
         //backgroundColor: '#416D03',
         borderRadius: wp('2%'),
-        alignItems: 'center',
-        marginRight: wp('2%'),
-        marginBottom: hp('2%'),
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden'
+        // margin: wp('2%'),
+        // marginRight: wp('2%'),
+        // marginBottom: hp('2%'),
     },
     itemName: {
         fontWeight: 'bold',
         color: 'white',
         fontSize: 16,
-        width: wp('20%')
+        textAlign: 'center',
+        paddingHorizontal: wp('4%')
     },
     duaHolder: {
         width: wp('35%'),

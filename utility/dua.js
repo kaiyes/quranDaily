@@ -6005,7 +6005,7 @@ const Duas = [
 				bottom_bn: '',
 				reference_bn: 'মুসলিম, ২/১০৫৪, নং ১১৫০।',
 				top_en:
-					'"If you are invited [to a meal] then answer.\n\nIf you happen to be fasting, then supplicate [for those present] and if you are not fasting, then eat."',
+					"If you are invited [to a meal] then answer.\n\nIf you happen to be fasting, then supplicate [for those present] and if you are not fasting, then eat.",
 				arabic: '',
 				transliteration: '',
 				translations_en: '',
