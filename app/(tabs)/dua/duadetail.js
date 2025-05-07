@@ -57,7 +57,7 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
         duration: {
             scale: 8000 + Math.random() * 1000,
             translate: 12000 + Math.random() * 1000,
-            initial: 2000,
+            initial: 8000,
             final: 2000
         }
     }).current
