@@ -25,10 +25,11 @@ export default function AllDua() {
   const { language, setLanguage } = useContext(LanguageContext);
 
   function goToDetail(item, dua_index) {
+    console.log("From allduas page: ", dua_index);
     navigation.navigate("duadetail", {
       pageTitle_en: item.pageTitle_en,
       pageTitle_bn: item.pageTitle_bn,
-      duas: item.duas,
+      //   duas: item.duas,
       dua_index: dua_index,
     });
   }

@@ -208,7 +208,7 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
 
 export default function DuaDetail() {
   const route = useRoute();
-  const { pageTitle_en, pageTitle_bn, duas, dua_index } = route.params;
+  const { pageTitle_en, pageTitle_bn, dua_index } = route.params;
   const { language } = useContext(LanguageContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const insets = useSafeAreaInsets();
@@ -223,7 +223,7 @@ export default function DuaDetail() {
   const viewabilityConfig = useRef({
     itemVisiblePercentThreshold: 50,
   }).current;
-  console.log(Duas);
+  console.log(dua_index);
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
@@ -238,8 +238,11 @@ export default function DuaDetail() {
         initialScrollIndex={dua_index}
         renderItem={({ item, index }) => {
           return (
-            <ScrollView
-              key={index.toString()}
+            <FlatList
+              keyExtractor={(dua, index) =>
+                `${dua.arabic}-${index.toString()}` ??
+                `${dua.translations_en}-${index.toString()}`
+              }
               horizontal
               pagingEnabled
               snapToInterval={screenWidth}
@@ -255,27 +258,22 @@ export default function DuaDetail() {
                 height: itemHeight,
                 width: screenWidth,
               }}
-            >
-              {item?.duas?.map((dua, index) => (
+              viewabilityConfig={viewabilityConfig}
+              data={item.duas}
+              renderItem={(dua, index) => (
                 <DuaItem
-                  key={
-                    `${dua.arabic}-${index.toString()}` ??
-                    `${dua.translations_en}-${index.toString()}`
-                  }
                   item={dua}
                   isActive={index === activeIndex}
                   itemHeight={itemHeight}
                   language={language}
                 />
-              ))}
-            </ScrollView>
+              )}
+            />
           );
         }}
         keyExtractor={(item, index) => index.toString()}
         pagingEnabled
         showsVerticalScrollIndicator={false}
-        onViewableItemsChanged={onViewableItemsChanged}
-        viewabilityConfig={viewabilityConfig}
         snapToInterval={itemHeight}
         snapToAlignment="start"
         decelerationRate="fast"
@@ -287,6 +285,7 @@ export default function DuaDetail() {
         snapToOffsets={Duas.map((_, index) => index * itemHeight)}
         disableIntervalMomentum={true}
         scrollEventThrottle={16}
+        onViewableItemsChanged={onViewableItemsChanged}
       />
 
       {/* Fixed Footer */}
@@ -301,9 +300,9 @@ export default function DuaDetail() {
           <Text style={styles.duaTitle}>
             {language === "bn" ? pageTitle_bn : pageTitle_en}
           </Text>
-          <Text style={styles.duaIndex}>
+          {/* <Text style={styles.duaIndex}>
             {activeIndex + 1} / {duas.length}
-          </Text>
+          </Text> */}
         </View>
       </LinearGradient>
     </SafeAreaView>
