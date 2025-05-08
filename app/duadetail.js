@@ -8,6 +8,7 @@ import {
   Image,
   Dimensions,
   FlatList,
+  ScrollView,
 } from "react-native";
 import {
   widthPercentageToDP as wp,
@@ -30,8 +31,9 @@ import { router, Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
+import Duas from "../utility/dua";
 
-const { height: screenHeight } = Dimensions.get("window");
+const { height: screenHeight, width: screenWidth } = Dimensions.get("window");
 
 const backgroundImages = [
   require("../assets/images/backgroundImgs/1.jpg"),
@@ -206,10 +208,9 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
 
 export default function DuaDetail() {
   const route = useRoute();
-  const { pageTitle_en, pageTitle_bn, duas } = route.params;
+  const { pageTitle_en, pageTitle_bn, duas, dua_index } = route.params;
   const { language } = useContext(LanguageContext);
   const [activeIndex, setActiveIndex] = useState(0);
-  const flatListRef = useRef(null);
   const insets = useSafeAreaInsets();
   const itemHeight = screenHeight - insets.bottom;
 
@@ -222,7 +223,7 @@ export default function DuaDetail() {
   const viewabilityConfig = useRef({
     itemVisiblePercentThreshold: 50,
   }).current;
-
+  console.log(Duas);
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
@@ -233,16 +234,43 @@ export default function DuaDetail() {
       </View>
 
       <FlatList
-        ref={flatListRef}
-        data={duas}
-        renderItem={({ item, index }) => (
-          <DuaItem
-            item={item}
-            isActive={index === activeIndex}
-            itemHeight={itemHeight}
-            language={language}
-          />
-        )}
+        data={Duas}
+        initialScrollIndex={dua_index}
+        renderItem={({ item, index }) => {
+          return (
+            <ScrollView
+              key={index.toString()}
+              horizontal
+              pagingEnabled
+              snapToInterval={screenWidth}
+              snapToAlignment="start"
+              decelerationRate={"fast"}
+              bounces={false}
+              snapToOffsets={item.duas.map(
+                (i, mainindex) => mainindex * screenWidth
+              )}
+              disableIntervalMomentum={true}
+              scrollEventThrottle={16}
+              style={{
+                height: itemHeight,
+                width: screenWidth,
+              }}
+            >
+              {item?.duas?.map((dua, index) => (
+                <DuaItem
+                  key={
+                    `${dua.arabic}-${index.toString()}` ??
+                    `${dua.translations_en}-${index.toString()}`
+                  }
+                  item={dua}
+                  isActive={index === activeIndex}
+                  itemHeight={itemHeight}
+                  language={language}
+                />
+              ))}
+            </ScrollView>
+          );
+        }}
         keyExtractor={(item, index) => index.toString()}
         pagingEnabled
         showsVerticalScrollIndicator={false}
@@ -256,7 +284,7 @@ export default function DuaDetail() {
         maxToRenderPerBatch={2}
         windowSize={3}
         removeClippedSubviews={true}
-        snapToOffsets={duas.map((_, index) => index * itemHeight)}
+        snapToOffsets={Duas.map((_, index) => index * itemHeight)}
         disableIntervalMomentum={true}
         scrollEventThrottle={16}
       />
@@ -297,7 +325,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.3)",
   },
   duaItem: {
-    width: "100%",
+    width: screenWidth,
     overflow: "hidden",
   },
   imageContainer: {
