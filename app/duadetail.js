@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useMemo, useCallback } from "react";
 import {
   StyleSheet,
   View,
@@ -8,7 +8,7 @@ import {
   Image,
   Dimensions,
   FlatList,
-  ScrollView,
+  ScrollView
 } from "react-native";
 import {
   widthPercentageToDP as wp,
@@ -208,7 +208,7 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
 
 export default function DuaDetail() {
   const route = useRoute();
-  const { pageTitle_en, pageTitle_bn, dua_index } = route.params;
+  const { pageTitle_en, pageTitle_bn, dua_key } = route.params;
   const { language } = useContext(LanguageContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const insets = useSafeAreaInsets();
@@ -223,7 +223,30 @@ export default function DuaDetail() {
   const viewabilityConfig = useRef({
     itemVisiblePercentThreshold: 50,
   }).current;
-  console.log(dua_index);
+  const getItemLayout = useCallback((data, index) => ({
+    length: itemHeight,
+    offset: itemHeight * index,
+    index,
+  }), [itemHeight]);
+
+  const onScrollToIndexFailed = useCallback(({ index, averageItemLength }) => {
+    // Fallback handling for scrolling to index
+    const wait = new Promise(resolve => setTimeout(resolve, 500));
+    wait.then(() => {
+      flatListRef.current?.scrollToIndex({
+        index: index,
+        animated: true
+      });
+    });
+  }, []);
+
+
+  const dua_index = useMemo(() => {
+    return Duas.findIndex(item => item.key === dua_key);
+  }, [dua_key]);
+
+
+  const flatListRef = useRef(null);
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
@@ -234,43 +257,54 @@ export default function DuaDetail() {
       </View>
 
       <FlatList
+        ref={flatListRef}
+        getItemLayout={getItemLayout}
+        onScrollToIndexFailed={onScrollToIndexFailed}
         data={Duas}
         initialScrollIndex={dua_index}
-        renderItem={({ item, index }) => {
-          return (
-            <FlatList
-              keyExtractor={(dua, index) =>
-                `${dua.arabic}-${index.toString()}` ??
-                `${dua.translations_en}-${index.toString()}`
-              }
-              horizontal
-              pagingEnabled
-              snapToInterval={screenWidth}
-              snapToAlignment="start"
-              decelerationRate={"fast"}
-              bounces={false}
-              snapToOffsets={item.duas.map(
-                (i, mainindex) => mainindex * screenWidth
-              )}
-              disableIntervalMomentum={true}
-              scrollEventThrottle={16}
-              style={{
-                height: itemHeight,
-                width: screenWidth,
-              }}
-              viewabilityConfig={viewabilityConfig}
-              data={item.duas}
-              renderItem={(dua, index) => (
-                <DuaItem
-                  item={dua}
-                  isActive={index === activeIndex}
-                  itemHeight={itemHeight}
-                  language={language}
-                />
-              )}
-            />
-          );
-        }}
+        renderItem={({ item, index }) => (
+          <ScrollView
+            horizontal
+            pagingEnabled
+            snapToInterval={screenWidth}
+            snapToAlignment="start"
+            decelerationRate="fast"
+            bounces={false}
+            showsHorizontalScrollIndicator={false}
+            scrollEventThrottle={16}
+            style={{
+              height: itemHeight,
+              width: screenWidth,
+            }}
+          >
+            {item.duas.map((dua, duaIndex) => (
+              <DuaItem
+                key={`${dua.arabic}-${duaIndex}`}
+                item={dua}
+                isActive={duaIndex === activeIndex}
+                itemHeight={itemHeight}
+                language={language}
+              />
+            ))}
+            {/* Fixed Footer */}
+            <LinearGradient
+              colors={["transparent", "rgba(0,0,0,0.8)"]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 1 }}
+              locations={[0.3, 1]}
+              style={styles.footerContainer}
+            >
+              <View style={styles.footerContent}>
+                <Text style={styles.duaTitle}>
+                  {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
+                </Text>
+                {/* <Text style={styles.duaIndex}>
+            {activeIndex + 1} / {duas.length}
+          </Text> */}
+              </View>
+            </LinearGradient>
+          </ScrollView>
+        )}
         keyExtractor={(item, index) => index.toString()}
         pagingEnabled
         showsVerticalScrollIndicator={false}
@@ -287,24 +321,6 @@ export default function DuaDetail() {
         scrollEventThrottle={16}
         onViewableItemsChanged={onViewableItemsChanged}
       />
-
-      {/* Fixed Footer */}
-      <LinearGradient
-        colors={["transparent", "rgba(0,0,0,0.8)"]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 0, y: 1 }}
-        locations={[0.3, 1]}
-        style={styles.footerContainer}
-      >
-        <View style={styles.footerContent}>
-          <Text style={styles.duaTitle}>
-            {language === "bn" ? pageTitle_bn : pageTitle_en}
-          </Text>
-          {/* <Text style={styles.duaIndex}>
-            {activeIndex + 1} / {duas.length}
-          </Text> */}
-        </View>
-      </LinearGradient>
     </SafeAreaView>
   );
 }

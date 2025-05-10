@@ -13,7 +13,8 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { Icon } from "react-native-elements";
+
+
 
 //utility
 import Duas from "../../../utility/dua";
@@ -24,13 +25,13 @@ export default function AllDua() {
   const navigation = useNavigation();
   const { language, setLanguage } = useContext(LanguageContext);
 
-  function goToDetail(item, dua_index) {
+  function goToDetail(item) {
     console.log("From allduas page: ", dua_index);
     navigation.navigate("duadetail", {
       pageTitle_en: item.pageTitle_en,
       pageTitle_bn: item.pageTitle_bn,
       //   duas: item.duas,
-      dua_index: dua_index,
+      dua_key: item.key,
     });
   }
 
@@ -43,7 +44,7 @@ export default function AllDua() {
         renderItem={({ item, index }) => (
           <TouchableOpacity
             style={styles.item}
-            onPress={() => goToDetail(item, index)}
+            onPress={() => goToDetail(item)}
           >
             <View style={styles.circle}>
               <Text style={styles.number}>{index + 1}</Text>

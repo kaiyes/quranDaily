@@ -30,13 +30,14 @@ export default function Categorised() {
         navigation.navigate('duadetail', {
             pageTitle_en: item.pageTitle_en,
             pageTitle_bn: item.pageTitle_bn,
-            duas: item.duas
+            dua_key: item.key
+            // duas: item.duas
         })
     }
-
+    const categoryDuas = Duas.filter(item => item.category == category)
     return (
         <FlatList
-            data={Duas.filter(item => item.category == category)}
+            data={categoryDuas}
             keyExtractor={item => item.key}
             contentContainerStyle={styles.flatList}
             style={styles.backgroundScrollView}
