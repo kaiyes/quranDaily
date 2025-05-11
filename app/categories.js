@@ -18,7 +18,7 @@ import { Icon } from 'react-native-elements'
 import Duas from '../utility/dua'
 import { LanguageContext } from '../utility/context'
 import { useRoute } from '@react-navigation/native'
-import { useNavigation } from 'expo-router'
+import { Stack, useNavigation } from 'expo-router'
 
 export default function Categorised() {
     const route = useRoute()
@@ -36,6 +36,16 @@ export default function Categorised() {
     }
     const categoryDuas = Duas.filter(item => item.category == category)
     return (
+        <>
+        <Stack.Screen
+        options={{
+            headerTitle: String(category).charAt(0).toUpperCase() + String(category).slice(1).toLowerCase(),
+            headerTitleAlign:'center',
+            headerStyle:{backgroundColor:'honeydew'},
+        headerShadowVisible:false,
+
+        }}
+        />
         <FlatList
             data={categoryDuas}
             keyExtractor={item => item.key}
@@ -52,6 +62,7 @@ export default function Categorised() {
                 </TouchableOpacity>
             )}
         />
+        </>
     )
 }
 
@@ -60,7 +71,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'honeydew'
     },
     flatList: {
-        paddingTop: hp("4%"),
         backgroundColor: 'honeydew'
     },
     item: {

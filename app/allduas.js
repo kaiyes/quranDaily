@@ -19,14 +19,13 @@ import {
 //utility
 import Duas from "../utility/dua";
 import { LanguageContext } from "../utility/context";
-import { useNavigation } from "expo-router";
+import { Stack, useNavigation } from "expo-router";
 
 export default function AllDua() {
   const navigation = useNavigation();
   const { language, setLanguage } = useContext(LanguageContext);
 
   function goToDetail(item) {
-    console.log("From allduas page: ", dua_index);
     navigation.navigate("duadetail", {
       pageTitle_en: item.pageTitle_en,
       pageTitle_bn: item.pageTitle_bn,
@@ -36,7 +35,15 @@ export default function AllDua() {
   }
 
   return (
-    <SafeAreaView style={styles.root}>
+    <View style={styles.root}>
+      <Stack.Screen
+      options={{
+        headerTitle:language==='bn'?"সকল দুয়া":"All Duas",
+        headerTitleAlign:'center',
+        headerStyle:{backgroundColor:'honeydew'},
+        headerShadowVisible:false
+      }}
+      />
       <FlatList
         data={Duas}
         keyExtractor={(item) => item.key}
@@ -55,7 +62,7 @@ export default function AllDua() {
           </TouchableOpacity>
         )}
       />
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -67,7 +74,6 @@ const styles = StyleSheet.create({
   scrollContainer: {
     backgroundColor: "honeydew",
     alignItems: "center",
-    paddingTop: hp("10%"),
   },
   itemName: {
     fontWeight: "500",

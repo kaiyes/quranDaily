@@ -1,9 +1,17 @@
 import { Stack } from 'expo-router';
-import { useColorScheme } from 'react-native';
-import { useMemo, useState } from 'react';
+import { useColorScheme, View } from 'react-native';
+import { useCallback, useMemo, useState } from 'react';
 import { LanguageContext } from '../utility/context';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 
+
+SplashScreen.preventAutoHideAsync();
 export default function DuaLayout() {
+    const [isLoaded] = useFonts({
+        "me_quran": require("../assets/fonts/me_quran.ttf"),
+        "SolaimanLipiNormal": require("../assets/fonts/SolaimanLipi.ttf"),
+      });
 
     const [language, setLanguage] = useState('bn')
 
@@ -11,27 +19,38 @@ export default function DuaLayout() {
         () => ({ language, setLanguage }),
         [language, setLanguage]
     )
+    const handleOnLayout = useCallback(async () => {
+        if (isLoaded) {
+          await SplashScreen.hideAsync(); //hide the splashscreen
+        }
+      }, [isLoaded]);
+
+      if (!isLoaded) {
+        return null;
+      }
 
     return (
+        <View style={{flex:1}} onLayout={handleOnLayout}>
         <LanguageContext.Provider value={value}>
             <Stack
                 screenOptions={{
-                    headerShown: false
+                    // headerShown: false
                 }}
-            >
+                >
                 <Stack.Screen
                     name="index"
                     options={{
                         title: 'Dua'
                     }}
-                />
+                    />
                 <Stack.Screen
                     name="categories"
                     options={{
                         title: 'Categorized Dua'
                     }}
-                />
+                    />
             </Stack>
         </LanguageContext.Provider>
+</View>
     );
 }

@@ -21,7 +21,7 @@ import {
     NotifierComponents
 } from 'react-native-notifier'
 import Categories from '../utility/categories'
-import { useNavigation } from 'expo-router'
+import { Stack, useNavigation } from 'expo-router'
 import { LanguageContext } from '../utility/context'
 const backgroundImages = [
     require('../assets/images/duabg/1.jpg'),
@@ -48,63 +48,71 @@ export default function Page() {
     }
 
     return (
-        <SafeAreaView style={styles.root}>
-            <View style={styles.topNav}>
-                <Text style={styles.title}>Dua Categories</Text>
-                <View style={styles.favHolder}>
-                    <TouchableOpacity
-                        style={[
-                            styles.globe,
-                            language === 'bn'
-                                ? {
-                                    backgroundColor: 'black'
-                                }
-                                : null
-                        ]}
-                        onPress={() => changeLang('bn')}>
-                        <Text style={styles.langText}>ব</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={[
-                            styles.globe,
-                            language === 'en'
-                                ? {
-                                    backgroundColor: 'black'
-                                }
-                                : null
-                        ]}
-                        onPress={() => changeLang('en')}>
-                        <Text style={styles.langText}>E</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigate('allduas')
-                        }}>
-                        <Icon
-                            name="globe"
-                            type="entypo"
-                            color="seagreen"
-                            size={12}
-                            reverse
-                            reverseColor="white"
-                        />
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => {
-                            navigate('favourites')
-                        }}>
-                        <Icon
-                            name="heart"
-                            type="entypo"
-                            color="seagreen"
-                            size={12}
-                            reverse
-                            reverseColor="white"
-                        />
-                    </TouchableOpacity>
-                </View>
-            </View>
+        <View style={styles.root}>
+            <Stack.Screen
+            options={{
+                headerTitle:"Dua Categories",
+                headerStyle:{backgroundColor: 'honeydew'},
+            headerShadowVisible:false,
+                headerRight:()=>{
+                    return(
+                        <View style={styles.favHolder}>
+                        <TouchableOpacity
+                            style={[
+                                styles.globe,
+                                language === 'bn'
+                                    ? {
+                                        backgroundColor: 'black'
+                                    }
+                                    : null
+                            ]}
+                            onPress={() => changeLang('bn')}>
+                            <Text style={styles.langText}>ব</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={[
+                                styles.globe,
+                                language === 'en'
+                                    ? {
+                                        backgroundColor: 'black'
+                                    }
+                                    : null
+                            ]}
+                            onPress={() => changeLang('en')}>
+                            <Text style={styles.langText}>E</Text>
+                        </TouchableOpacity>
+    
+                        <TouchableOpacity
+                            onPress={() => {
+                                navigate('allduas')
+                            }}>
+                            <Icon
+                                name="globe"
+                                type="entypo"
+                                color="seagreen"
+                                size={12}
+                                reverse
+                                reverseColor="white"
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => {
+                                navigate('favourites')
+                            }}>
+                            <Icon
+                                name="heart"
+                                type="entypo"
+                                color="seagreen"
+                                size={12}
+                                reverse
+                                reverseColor="white"
+                            />
+                        </TouchableOpacity>
+                    </View>
+                    )
+                }
+            }}
+            />
 
             <FlatList
                 data={Categories}
@@ -157,7 +165,7 @@ export default function Page() {
                     </TouchableOpacity>
                 )}
             />
-        </SafeAreaView>
+        </View>
     )
 }
 
@@ -179,7 +187,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: hp('4%'),
         marginBottom: hp('2%'),
         paddingHorizontal: wp('5%')
     },
