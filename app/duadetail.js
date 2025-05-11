@@ -47,6 +47,18 @@ const backgroundImages = [
   require("../assets/images/backgroundImgs/5.jpg"),
   require("../assets/images/backgroundImgs/6.jpg"),
   require("../assets/images/backgroundImgs/7.jpg"),
+  require("../assets/images/backgroundImgs/8.jpg"),
+  require("../assets/images/backgroundImgs/9.jpg"),
+  require("../assets/images/backgroundImgs/10.jpg"),
+  require("../assets/images/backgroundImgs/11.jpg"),
+  require("../assets/images/backgroundImgs/12.jpg"),
+  require("../assets/images/backgroundImgs/13.jpg"),
+  require("../assets/images/backgroundImgs/14.jpg"),
+  require("../assets/images/backgroundImgs/15.jpg"),
+  require("../assets/images/backgroundImgs/16.jpg"),
+  require("../assets/images/backgroundImgs/17.jpg"),
+  require("../assets/images/backgroundImgs/18.jpg"),
+
 ];
 
 const DuaItem = ({ item, isActive, itemHeight, language }) => {
