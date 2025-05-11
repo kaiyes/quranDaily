@@ -15,8 +15,8 @@ import {
 } from 'react-native-responsive-screen'
 import { Icon } from 'react-native-elements'
 //utility
-import Duas from '../../../utility/dua'
-import { LanguageContext } from '../../../utility/context'
+import Duas from '../utility/dua'
+import { LanguageContext } from '../utility/context'
 import { useRoute } from '@react-navigation/native'
 import { useNavigation } from 'expo-router'
 

@@ -1,48 +1,37 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { useColorScheme } from 'react-native';
+import { useMemo, useState } from 'react';
+import { LanguageContext } from '../utility/context';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-import { NotifierWrapper } from 'react-native-notifier';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+export default function DuaLayout() {
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+    const [language, setLanguage] = useState('bn')
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+    const value = useMemo(
+        () => ({ language, setLanguage }),
+        [language, setLanguage]
+    )
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
-  return (
-    <GestureHandlerRootView>
-
-      <NotifierWrapper>
-        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="+not-found" />
-            {/* necessary stack for expo router */}
-            <Stack.Screen redirect name="index" />
-          </Stack>
-          <StatusBar style="auto" />
-        </ThemeProvider>
-      </NotifierWrapper>
-    </GestureHandlerRootView>
-  );
+    return (
+        <LanguageContext.Provider value={value}>
+            <Stack
+                screenOptions={{
+                    headerShown: false
+                }}
+            >
+                <Stack.Screen
+                    name="index"
+                    options={{
+                        title: 'Dua'
+                    }}
+                />
+                <Stack.Screen
+                    name="categories"
+                    options={{
+                        title: 'Categorized Dua'
+                    }}
+                />
+            </Stack>
+        </LanguageContext.Provider>
+    );
 }

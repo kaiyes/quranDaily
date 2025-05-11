@@ -26,6 +26,10 @@ import Animated, {
   withSequence,
   Easing,
   cancelAnimation,
+  interpolate,
+  useAnimatedScrollHandler,
+  Extrapolation,
+  runOnJS,
 } from "react-native-reanimated";
 import { router, Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
@@ -172,7 +176,21 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
           >
             <Text style={styles.dua}>{item.arabic}</Text>
 
-            {language === "bn" ? (
+            {language === "en" ? (
+                            <>
+                            {item.transliteration && (
+                              <Text style={styles.spelling}>
+                                <Text style={styles.preSpell}>Spelling: </Text>
+                                {item.transliteration}
+                              </Text>
+                            )}
+                            <Text style={styles.meaning}>
+                              <Text style={styles.preSpell}>Meaning: </Text>
+                              {item.translations_en}
+                            </Text>
+                          </>
+
+            ) : (
               <>
                 {item.transliteration_bn && (
                   <Text style={styles.spelling}>
@@ -185,19 +203,6 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
                   {item.translations_bn}
                 </Text>
               </>
-            ) : (
-              <>
-                {item.transliteration && (
-                  <Text style={styles.spelling}>
-                    <Text style={styles.preSpell}>Spelling: </Text>
-                    {item.transliteration}
-                  </Text>
-                )}
-                <Text style={styles.meaning}>
-                  <Text style={styles.preSpell}>Meaning: </Text>
-                  {item.translations_en}
-                </Text>
-              </>
             )}
           </View>
         </View>
@@ -205,10 +210,49 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
     </View>
   );
 };
-
+const HScrollIndicator = ({hScrollX,index})=>{
+  const hscrollIndicatorStyle = useAnimatedStyle(() => ({
+    borderRadius:8,
+    opacity:interpolate(
+      hScrollX.value,
+      [
+        (index - 1) * screenWidth,  // previous item
+        index * screenWidth,        // current item
+        (index + 1) * screenWidth   // next item
+      ],
+      [
+        0.5,
+        1,
+        0.5
+      ],
+      Extrapolation.CLAMP
+    ),
+    height:2,
+    backgroundColor:'white',
+    width: interpolate(
+      hScrollX.value,
+      [
+        (index - 1) * screenWidth,  // previous item
+        index * screenWidth,        // current item
+        (index + 1) * screenWidth   // next item
+      ],
+      [
+        20,  // width at previous item
+        40,  // width at current item
+        20   // width at next item
+      ],
+      Extrapolation.CLAMP
+    )
+  }))
+  return(
+    <Animated.View
+                      style={hscrollIndicatorStyle}
+                      />
+  )
+}
 export default function DuaDetail() {
   const route = useRoute();
-  const { pageTitle_en, pageTitle_bn, dua_key } = route.params;
+  const { pageTitle_en, pageTitle_bn, dua_key } = route.params
   const { language } = useContext(LanguageContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const insets = useSafeAreaInsets();
@@ -245,8 +289,21 @@ export default function DuaDetail() {
     return Duas.findIndex(item => item.key === dua_key);
   }, [dua_key]);
 
-
+const modActiveIndex = (i)=>{
+  setActiveIndex(i)
+}
   const flatListRef = useRef(null);
+  const hScrollX = useSharedValue(0)
+  const hScrollHandler = useAnimatedScrollHandler({
+    onScroll:(event)=>{
+      hScrollX.value=event.contentOffset.x
+      const horizontalIndex = Math.round(
+        hScrollX.value / screenWidth
+      );
+      runOnJS(modActiveIndex)(horizontalIndex)
+    }
+  })
+
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
@@ -263,7 +320,8 @@ export default function DuaDetail() {
         data={Duas}
         initialScrollIndex={dua_index}
         renderItem={({ item, index }) => (
-          <ScrollView
+          <>
+          <Animated.ScrollView
             horizontal
             pagingEnabled
             snapToInterval={screenWidth}
@@ -276,6 +334,7 @@ export default function DuaDetail() {
               height: itemHeight,
               width: screenWidth,
             }}
+            onScroll={hScrollHandler}
           >
             {item.duas.map((dua, duaIndex) => (
               <DuaItem
@@ -286,24 +345,31 @@ export default function DuaDetail() {
                 language={language}
               />
             ))}
-            {/* Fixed Footer */}
-            <LinearGradient
-              colors={["transparent", "rgba(0,0,0,0.8)"]}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 0, y: 1 }}
-              locations={[0.3, 1]}
-              style={styles.footerContainer}
-            >
-              <View style={styles.footerContent}>
-                <Text style={styles.duaTitle}>
-                  {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
-                </Text>
-                {/* <Text style={styles.duaIndex}>
-            {activeIndex + 1} / {duas.length}
-          </Text> */}
-              </View>
-            </LinearGradient>
-          </ScrollView>
+
+          </Animated.ScrollView>
+                      {/* Fixed Footer */}
+                      <LinearGradient
+                      colors={["transparent", "rgba(0,0,0,0.8)"]}
+                      start={{ x: 0, y: 0 }}
+                      end={{ x: 0, y: 1 }}
+                      locations={[0.3, 1]}
+                      style={styles.footerContainer}
+                    >
+                        <Text style={styles.duaTitle}>
+                          {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
+                        </Text>
+                        <Animated.View style={{flexDirection:'row',gap:2}}>
+                    {item.duas.length>1 && item.duas.map((d,index)=>(
+                      <HScrollIndicator
+                      key={index.toString()+Math.random().toString()}
+                      hScrollX={hScrollX}
+                      index={index}
+                      />
+                    ))}
+                        </Animated.View>
+                    </LinearGradient>
+
+          </>
         )}
         keyExtractor={(item, index) => index.toString()}
         pagingEnabled
@@ -319,7 +385,7 @@ export default function DuaDetail() {
         snapToOffsets={Duas.map((_, index) => index * itemHeight)}
         disableIntervalMomentum={true}
         scrollEventThrottle={16}
-        onViewableItemsChanged={onViewableItemsChanged}
+        // onViewableItemsChanged={onViewableItemsChanged}
       />
     </SafeAreaView>
   );
@@ -393,9 +459,9 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     paddingHorizontal: 16,
-    paddingBottom: 40,
-    paddingTop: 40,
+    paddingVertical:20,
     zIndex: 2,
+    gap:10
   },
   footerContent: {
     flexDirection: "row",

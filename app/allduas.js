@@ -17,8 +17,8 @@ import {
 
 
 //utility
-import Duas from "../../../utility/dua";
-import { LanguageContext } from "../../../utility/context";
+import Duas from "../utility/dua";
+import { LanguageContext } from "../utility/context";
 import { useNavigation } from "expo-router";
 
 export default function AllDua() {
