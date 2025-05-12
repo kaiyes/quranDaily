@@ -292,9 +292,9 @@ const HScrollIndicator = ({ hScrollX, index, indicatorWidth }) => {
         (index + 1) * screenWidth   // next item
       ],
       [
-        0.8,  // smaller scale for previous item
-        1,    // full scale for current item
-        0.8   // smaller scale for next item
+        0.85,  // less dramatic scale for inactive items
+        1,     // full scale for active item
+        0.85   // less dramatic scale for inactive items
       ],
       Extrapolation.CLAMP
     );
@@ -302,7 +302,7 @@ const HScrollIndicator = ({ hScrollX, index, indicatorWidth }) => {
     return {
       opacity,
       borderRadius: 8,
-      height: 2,
+      height: 4,
       backgroundColor: 'white',
       width: indicatorWidth,
       transform: [{ scaleX }],
@@ -384,14 +384,19 @@ export default function DuaDetail() {
         data={Duas}
         initialScrollIndex={dua_index}
         renderItem={({ item, index }) => {
-          // Calculate available width (screen width minus left and right margins)
+          // Inside the renderItem function of the FlatList component
           const availableWidth = screenWidth - (16 * 2);
-
-          // Calculate total gap space (number of gaps between indicators is totalItems - 1)
           const totalGapSpace = (item.duas.length - 1) * 2;
 
-          // Calculate individual indicator width
-          const indicatorWidth = (availableWidth - totalGapSpace) / item.duas.length;
+          // Calculate the raw indicator width
+          let rawIndicatorWidth = (availableWidth - totalGapSpace) / item.duas.length;
+
+          // Restrict the indicator width to a reasonable maximum value (e.g., 60)
+          const maxIndicatorWidth = 25;
+          const minIndicatorWidth = 10;
+
+          // Clamp the indicator width between min and max values
+          const indicatorWidth = Math.max(minIndicatorWidth, Math.min(rawIndicatorWidth, maxIndicatorWidth));
           return (
             <>
               <Animated.ScrollView
@@ -426,9 +431,6 @@ export default function DuaDetail() {
               </Animated.ScrollView>
               {/* Title & Scroll Indicator Container */}
               <View style={styles.titleNIndicator}>
-                <Text style={{ ...styles.duaTitle, textAlignVertical: 'center', textAlign: 'center' }}>
-                  {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
-                </Text>
                 {item.duas.length > 1 && (
                   <View style={styles.indicatorContainer}>
                     {item.duas.map((d, index) => (
@@ -441,6 +443,9 @@ export default function DuaDetail() {
                     ))}
                   </View>
                 )}
+                <Text style={styles.duaTitle}>
+                  {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
+                </Text>
               </View>
             </>
           )
@@ -490,10 +495,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginTop: 90,
     marginHorizontal: 16,
-    width: screenWidth,
     zIndex: 10,
     gap: 8,
-    // alignItems: 'center'
+    alignItems: 'center',
+    alignSelf: 'center',
+    width: "90%", // Give it a defined width to allow proper wrapping
   },
   indicatorContainer: {
     flexDirection: 'row',
@@ -563,12 +569,20 @@ const styles = StyleSheet.create({
   },
   duaTitle: {
     color: "#fff",
-    fontSize: 18,
+    fontSize: 22,
     fontFamily: "SolaimanLipiNormal",
     fontWeight: "500",
     textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 3,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    width: "100%",
+    borderRadius: 16,
+    flexWrap: 'wrap', // Allow text to wrap
   },
   duaIndex: {
     color: "#fff",
