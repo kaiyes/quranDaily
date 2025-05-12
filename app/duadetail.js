@@ -61,7 +61,7 @@ const backgroundImages = [
   // require("../assets/images/backgroundImgs/19.jpg"),
 ];
 
-const DuaItem = ({ item, isActive, itemHeight, language }) => {
+const DuaItem = ({ item, isActive, itemHeight, language, pageTitle_bn, pageTitle_en }) => {
   const baseScale = 1.4;
   const scale = useSharedValue(1);
   const translateX = useSharedValue(0);
@@ -184,23 +184,25 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
               borderRadius: 16,
               backgroundColor: "rgba(0,0,0,0.5)",
               gap: 20,
+              maxHeight: screenHeight * 0.7,
+              overflow: 'hidden'
             }}
           >
             <Text style={styles.dua}>{item.arabic}</Text>
 
             {language === "en" ? (
-                            <>
-                            {item.transliteration && (
-                              <Text style={styles.spelling}>
-                                <Text style={styles.preSpell}>Spelling: </Text>
-                                {item.transliteration}
-                              </Text>
-                            )}
-                            <Text style={styles.meaning}>
-                              <Text style={styles.preSpell}>Meaning: </Text>
-                              {item.translations_en}
-                            </Text>
-                          </>
+              <>
+                {item.transliteration && (
+                  <Text style={styles.spelling}>
+                    <Text style={styles.preSpell}>Spelling: </Text>
+                    {item.transliteration}
+                  </Text>
+                )}
+                <Text style={styles.meaning}>
+                  <Text style={styles.preSpell}>Meaning: </Text>
+                  {item.translations_en}
+                </Text>
+              </>
 
             ) : (
               <>
@@ -222,10 +224,52 @@ const DuaItem = ({ item, isActive, itemHeight, language }) => {
     </View>
   );
 };
-const HScrollIndicator = ({hScrollX,index})=>{
-  const hscrollIndicatorStyle = useAnimatedStyle(() => ({
-    borderRadius:8,
-    opacity:interpolate(
+// const HScrollIndicator = ({ hScrollX, index }) => {
+//   const hscrollIndicatorStyle = useAnimatedStyle(() => ({
+//     borderRadius: 8,
+//     opacity: interpolate(
+//       hScrollX.value,
+//       [
+//         (index - 1) * screenWidth,  // previous item
+//         index * screenWidth,        // current item
+//         (index + 1) * screenWidth   // next item
+//       ],
+//       [
+//         0.5,
+//         1,
+//         0.5
+//       ],
+//       Extrapolation.CLAMP
+//     ),
+//     height: 2,
+//     backgroundColor: 'white',
+//     width: interpolate(
+//       hScrollX.value,
+//       [
+//         (index - 1) * screenWidth,  // previous item
+//         index * screenWidth,        // current item
+//         (index + 1) * screenWidth   // next item
+//       ],
+//       [
+//         20,  // width at previous item
+//         40,  // width at current item
+//         20   // width at next item
+//       ],
+//       Extrapolation.CLAMP
+//     )
+//   }))
+//   return (
+//     <Animated.View
+//       style={hscrollIndicatorStyle}
+//     />
+//   )
+// }
+
+
+const HScrollIndicator = ({ hScrollX, index, indicatorWidth }) => {
+
+  const hscrollIndicatorStyle = useAnimatedStyle(() => {
+    const opacity = interpolate(
       hScrollX.value,
       [
         (index - 1) * screenWidth,  // previous item
@@ -233,15 +277,14 @@ const HScrollIndicator = ({hScrollX,index})=>{
         (index + 1) * screenWidth   // next item
       ],
       [
-        0.5,
-        1,
-        0.5
+        0.5,  // less opacity for previous item
+        1,    // full opacity for current item
+        0.5   // less opacity for next item
       ],
       Extrapolation.CLAMP
-    ),
-    height:2,
-    backgroundColor:'white',
-    width: interpolate(
+    );
+
+    const scaleX = interpolate(
       hScrollX.value,
       [
         (index - 1) * screenWidth,  // previous item
@@ -249,19 +292,30 @@ const HScrollIndicator = ({hScrollX,index})=>{
         (index + 1) * screenWidth   // next item
       ],
       [
-        20,  // width at previous item
-        40,  // width at current item
-        20   // width at next item
+        0.8,  // smaller scale for previous item
+        1,    // full scale for current item
+        0.8   // smaller scale for next item
       ],
       Extrapolation.CLAMP
-    )
-  }))
-  return(
-    <Animated.View
-                      style={hscrollIndicatorStyle}
-                      />
-  )
-}
+    );
+
+    return {
+      opacity,
+      borderRadius: 8,
+      height: 2,
+      backgroundColor: 'white',
+      width: indicatorWidth,
+      transform: [{ scaleX }],
+      // transformOrigin: 'center'
+    };
+  });
+
+  return (
+    <Animated.View style={hscrollIndicatorStyle} />
+  );
+};
+
+
 export default function DuaDetail() {
   const route = useRoute();
   const { pageTitle_en, pageTitle_bn, dua_key } = route.params
@@ -301,14 +355,14 @@ export default function DuaDetail() {
     return Duas.findIndex(item => item.key === dua_key);
   }, [dua_key]);
 
-const modActiveIndex = (i)=>{
-  setActiveIndex(i)
-}
+  const modActiveIndex = (i) => {
+    setActiveIndex(i)
+  }
   const flatListRef = useRef(null);
   const hScrollX = useSharedValue(0)
   const hScrollHandler = useAnimatedScrollHandler({
-    onScroll:(event)=>{
-      hScrollX.value=event.contentOffset.x
+    onScroll: (event) => {
+      hScrollX.value = event.contentOffset.x
       const horizontalIndex = Math.round(
         hScrollX.value / screenWidth
       );
@@ -317,13 +371,11 @@ const modActiveIndex = (i)=>{
   })
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
-      <View style={styles.topControls}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Ionicons name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity style={styles.navBackButton} onPress={() => router.back()}>
+        <Ionicons name="arrow-back" size={24} color="white" />
+      </TouchableOpacity>
 
       <FlatList
         ref={flatListRef}
@@ -331,58 +383,68 @@ const modActiveIndex = (i)=>{
         onScrollToIndexFailed={onScrollToIndexFailed}
         data={Duas}
         initialScrollIndex={dua_index}
-        renderItem={({ item, index }) => (
-          <>
-          <Animated.ScrollView
-            horizontal
-            pagingEnabled
-            snapToInterval={screenWidth}
-            snapToAlignment="start"
-            decelerationRate="fast"
-            bounces={false}
-            showsHorizontalScrollIndicator={false}
-            scrollEventThrottle={16}
-            style={{
-              height: itemHeight,
-              width: screenWidth,
-            }}
-            onScroll={hScrollHandler}
-          >
-            {item.duas.map((dua, duaIndex) => (
-              <DuaItem
-                key={`${dua.arabic}-${duaIndex}`}
-                item={dua}
-                isActive={duaIndex === activeIndex}
-                itemHeight={itemHeight}
-                language={language}
-              />
-            ))}
+        renderItem={({ item, index }) => {
+          // Calculate available width (screen width minus left and right margins)
+          const availableWidth = screenWidth - (16 * 2);
 
-          </Animated.ScrollView>
-                      {/* Fixed Footer */}
-                      <LinearGradient
-                      colors={["transparent", "rgba(0,0,0,0.8)"]}
-                      start={{ x: 0, y: 0 }}
-                      end={{ x: 0, y: 1 }}
-                      locations={[0.3, 1]}
-                      style={styles.footerContainer}
-                    >
-                        <Text style={styles.duaTitle}>
-                          {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
-                        </Text>
-                        <Animated.View style={{flexDirection:'row',gap:2}}>
-                    {item.duas.length>1 && item.duas.map((d,index)=>(
+          // Calculate total gap space (number of gaps between indicators is totalItems - 1)
+          const totalGapSpace = (item.duas.length - 1) * 2;
+
+          // Calculate individual indicator width
+          const indicatorWidth = (availableWidth - totalGapSpace) / item.duas.length;
+          return (
+            <>
+              <Animated.ScrollView
+                horizontal
+                pagingEnabled
+                snapToInterval={screenWidth}
+                snapToAlignment="start"
+                decelerationRate="fast"
+                bounces={false}
+                showsHorizontalScrollIndicator={false}
+                scrollEventThrottle={16}
+                style={{
+                  height: itemHeight,
+                  width: screenWidth,
+                }}
+                onScroll={hScrollHandler}
+              >
+                {item.duas.map((dua, duaIndex) => (
+                  <DuaItem
+                    key={`${dua.arabic}-${duaIndex}`}
+                    item={dua}
+                    isActive={duaIndex === activeIndex}
+                    itemHeight={itemHeight}
+                    language={language}
+                    pageTitle_bn={pageTitle_bn}
+                    pageTitle_en={pageTitle_en}
+                    hScrollX={hScrollX}
+                    mainItem={item}
+                  />
+                ))}
+
+              </Animated.ScrollView>
+              {/* Title & Scroll Indicator Container */}
+              <View style={styles.titleNIndicator}>
+                <Text style={{ ...styles.duaTitle, textAlignVertical: 'center', textAlign: 'center' }}>
+                  {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
+                </Text>
+                {item.duas.length > 1 && (
+                  <View style={styles.indicatorContainer}>
+                    {item.duas.map((d, index) => (
                       <HScrollIndicator
-                      key={index.toString()+Math.random().toString()}
-                      hScrollX={hScrollX}
-                      index={index}
+                        key={index.toString()}
+                        hScrollX={hScrollX}
+                        index={index}
+                        indicatorWidth={indicatorWidth}
                       />
                     ))}
-                        </Animated.View>
-                    </LinearGradient>
-
-          </>
-        )}
+                  </View>
+                )}
+              </View>
+            </>
+          )
+        }}
         keyExtractor={(item, index) => index.toString()}
         pagingEnabled
         showsVerticalScrollIndicator={false}
@@ -397,9 +459,9 @@ const modActiveIndex = (i)=>{
         snapToOffsets={Duas.map((_, index) => index * itemHeight)}
         disableIntervalMomentum={true}
         scrollEventThrottle={16}
-        // onViewableItemsChanged={onViewableItemsChanged}
+      // onViewableItemsChanged={onViewableItemsChanged}
       />
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -408,18 +470,35 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#000",
   },
-  topControls: {
+  navBackButton: {
     position: "absolute",
     top: 40,
     left: 16,
     zIndex: 2,
-    padding: 8,
+    width: 40,
+    aspectRatio: 1,
     borderRadius: 20,
     backgroundColor: "rgba(0, 0, 0, 0.3)",
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   duaItem: {
     width: screenWidth,
     overflow: "hidden",
+  },
+  titleNIndicator: {
+    position: "absolute",
+    marginTop: 90,
+    marginHorizontal: 16,
+    width: screenWidth,
+    zIndex: 10,
+    gap: 8,
+    // alignItems: 'center'
+  },
+  indicatorContainer: {
+    flexDirection: 'row',
+    gap: 2,
+    alignItems: 'center'
   },
   imageContainer: {
     flex: 1,
@@ -440,6 +519,8 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
+    gap: 10,
+    marginTop: 90
   },
   dua: {
     fontSize: 32,
@@ -467,13 +548,13 @@ const styles = StyleSheet.create({
   },
   footerContainer: {
     position: "absolute",
-    bottom: 0,
+    top: screenHeight * 0.05,
     left: 0,
     right: 0,
     paddingHorizontal: 16,
-    paddingVertical:20,
+    paddingVertical: 20,
     zIndex: 2,
-    gap:10
+    gap: 10
   },
   footerContent: {
     flexDirection: "row",
@@ -485,8 +566,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "SolaimanLipiNormal",
     fontWeight: "500",
-    flex: 1,
-    marginRight: 16,
     textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 3,
