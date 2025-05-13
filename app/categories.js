@@ -36,7 +36,7 @@ export default function Categorised() {
     }
     const categoryDuas = Duas.filter(item => item.category == category)
     return (
-        <>
+        <View style={styles.root}>
             <Stack.Screen
                 options={{
                     headerTitle: String(category).charAt(0).toUpperCase() + String(category).slice(1).toLowerCase(),
@@ -62,11 +62,15 @@ export default function Categorised() {
                     </TouchableOpacity>
                 )}
             />
-        </>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
+    root: {
+        flex: 1,
+        backgroundColor: "honeydew",
+    },
     backgroundScrollView: {
         backgroundColor: 'honeydew'
     },

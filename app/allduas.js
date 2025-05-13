@@ -37,12 +37,12 @@ export default function AllDua() {
   return (
     <View style={styles.root}>
       <Stack.Screen
-      options={{
-        headerTitle:language==='bn'?"সকল দুয়া":"All Duas",
-        headerTitleAlign:'center',
-        headerStyle:{backgroundColor:'honeydew'},
-        headerShadowVisible:false
-      }}
+        options={{
+          headerTitle: language === 'bn' ? "সকল দুয়া" : "All Duas",
+          headerTitleAlign: 'center',
+          headerStyle: { backgroundColor: 'honeydew' },
+          headerShadowVisible: false
+        }}
       />
       <FlatList
         data={Duas}
@@ -91,22 +91,22 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   circle: {
-    height: 36,
-    width: 36,
-    borderRadius: 18,
-    backgroundColor: "lightgreen",
-    marginRight: 10,
-    justifyContent: "center",
-    alignItems: "center",
+    width: 40,
+    aspectRatio: 1,
+    borderRadius: 25,
+    backgroundColor: 'lightgreen',
+    marginRight: wp('5%'),
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   spacer: {
     marginTop: hp("5%"),
   },
   number: {
-    fontWeight: "500",
-    fontSize: 14,
-    color: "darkolivegreen",
-    fontFamily: "Menlo",
+    fontWeight: '700',
+    fontSize: hp('2%'),
+    color: 'darkolivegreen',
+    fontFamily: 'Menlo'
   },
   tabBarText: {
     fontWeight: "500",
@@ -118,11 +118,11 @@ const styles = StyleSheet.create({
     backgroundColor: "darkgreen",
   },
   title: {
-    fontWeight: "400",
-    fontSize: Platform.OS === "ios" ? hp("2%") : hp("3%"),
-    color: "darkolivegreen",
-    fontFamily: "SolaimanLipiNormal",
-    width: wp("75%"),
+    fontWeight: '400',
+    fontSize: hp('2%'),
+    color: 'darkolivegreen',
+    fontFamily: 'SolaimanLipiNormal',
+    width: wp('75%')
   },
   backNav: {
     flexDirection: "row",

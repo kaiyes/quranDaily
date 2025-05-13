@@ -10,11 +10,6 @@ import {
   FlatList,
   ScrollView
 } from "react-native";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
-import { Icon } from "react-native-elements";
 import { useRoute } from "@react-navigation/native";
 import { LanguageContext } from "../utility/context";
 import { useContext } from "react";
@@ -36,6 +31,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import Duas from "../utility/dua";
+import { StatusBar } from "expo-status-bar";
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get("window");
 
@@ -184,34 +180,50 @@ const DuaItem = ({ item, isActive, itemHeight, language, indicatorWidth }) => {
           resizeMode="cover"
         />
       </Animated.View>
-
+      {/* Title & Scroll Indicator Container */}
+      <Text style={styles.duaTitle}>
+        {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
+      </Text>
       {/* Scrollable Content Container */}
-      <Animated.ScrollView
-        horizontal
-        pagingEnabled
-        snapToInterval={screenWidth}
-        snapToAlignment="start"
-        decelerationRate="fast"
-        bounces={false}
-        showsHorizontalScrollIndicator={false}
-        scrollEventThrottle={16}
-        style={{
-          height: itemHeight,
-          width: screenWidth,
-        }}
-        onScroll={hScrollHandler}
-      >
-        {item.duas.map((dua, duaIndex) => (
-          <View key={`${dua.arabic}-${duaIndex}`} style={styles.contentContainer}>
+      <Animated.View style={styles.contentContainer}>
+        <View style={styles.titleNIndicator}>
+          {item.duas.length > 1 && (
+            <View style={styles.indicatorContainer}>
+              {item.duas.map((d, index) => (
+                <HScrollIndicator
+                  key={index.toString()}
+                  hScrollX={hScrollX}
+                  index={index}
+                  indicatorWidth={indicatorWidth}
+                />
+              ))}
+            </View>
+          )}
+        </View>
+        <Animated.ScrollView
+          horizontal
+          pagingEnabled
+          snapToInterval={screenWidth - 32}
+          snapToAlignment="start"
+          decelerationRate="fast"
+          bounces={false}
+          showsHorizontalScrollIndicator={false}
+          scrollEventThrottle={16}
+          onScroll={hScrollHandler}
+          contentContainerStyle={{
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          {item.duas.map((dua, duaIndex) => (
             <View
+              key={`${dua.arabic}-${duaIndex}`}
               style={{
-                padding: 16,
-                borderRadius: 16,
-                backgroundColor: "rgba(0,0,0,0.5)",
                 gap: 20,
-                maxHeight: screenHeight * 0.7,
+                maxHeight: screenHeight * 0.75,
                 overflow: 'hidden',
-                width: "100%"
+                width: screenWidth - 32,
+                padding: 20
               }}
             >
               <Text style={styles.dua}>{dua.arabic}</Text>
@@ -243,28 +255,10 @@ const DuaItem = ({ item, isActive, itemHeight, language, indicatorWidth }) => {
                 </>
               )}
             </View>
-          </View>
-        ))}
-      </Animated.ScrollView>
 
-      {/* Title & Scroll Indicator Container */}
-      <View style={styles.titleNIndicator}>
-        {item.duas.length > 1 && (
-          <View style={styles.indicatorContainer}>
-            {item.duas.map((d, index) => (
-              <HScrollIndicator
-                key={index.toString()}
-                hScrollX={hScrollX}
-                index={index}
-                indicatorWidth={indicatorWidth}
-              />
-            ))}
-          </View>
-        )}
-        <Text style={styles.duaTitle}>
-          {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
-        </Text>
-      </View>
+          ))}
+        </Animated.ScrollView>
+      </Animated.View>
     </View>
   );
 };
@@ -362,7 +356,7 @@ export default function DuaDetail() {
   const flatListRef = useRef(null);
 
   const calculateIndicatorWidth = (duasLength) => {
-    const availableWidth = screenWidth - (16 * 2);
+    const availableWidth = screenWidth - (32 * 2);
     const totalGapSpace = (duasLength - 1) * 2;
     const rawIndicatorWidth = (availableWidth - totalGapSpace) / duasLength;
     const maxIndicatorWidth = 25;
@@ -440,22 +434,28 @@ const styles = StyleSheet.create({
   },
   duaItem: {
     width: screenWidth,
+    height: screenHeight,
+    alignItems: 'center',
+    justifyContent: 'center',
     overflow: "hidden",
+    gap: 16,
+    paddingTop: 70
   },
   titleNIndicator: {
-    position: "absolute",
-    marginTop: 90,
-    marginHorizontal: 16,
+    // position: "absolute",
+    // marginTop: 90,
+    // marginHorizontal: 16,
     zIndex: 10,
     gap: 8,
     alignItems: 'center',
     alignSelf: 'center',
-    width: "90%", // Give it a defined width to allow proper wrapping
+    width: "90%",
+    marginTop: 20
   },
   indicatorContainer: {
     flexDirection: 'row',
     gap: 2,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   imageContainer: {
     flex: 1,
@@ -466,15 +466,12 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   contentContainer: {
-    // flex: 1,
-    // backgroundColor: "rgba(0, 0, 0, 0.5)",
-    padding: 20,
-    justifyContent: "center",
-    alignItems: "center",
     gap: 10,
-    marginTop: 90,
-    width: screenWidth,
-
+    // marginTop: 90,
+    marginBottom: 16,
+    width: screenWidth - 32,
+    borderRadius: 16,
+    backgroundColor: 'rgba(0,0,0,0.5)'
   },
   dua: {
     fontSize: 32,
@@ -528,7 +525,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.5)',
     paddingHorizontal: 16,
     paddingVertical: 8,
-    width: "100%",
+    width: screenWidth - 32,
     borderRadius: 16,
     flexWrap: 'wrap', // Allow text to wrap
   },
