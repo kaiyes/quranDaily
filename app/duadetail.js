@@ -61,7 +61,7 @@ const backgroundImages = [
   // require("../assets/images/backgroundImgs/19.jpg"),
 ];
 
-const DuaItem = ({ item, isActive, itemHeight, language, pageTitle_bn, pageTitle_en }) => {
+const DuaItem = ({ item, isActive, itemHeight, language, indicatorWidth }) => {
   const baseScale = 1.4;
   const scale = useSharedValue(1);
   const translateX = useSharedValue(0);
@@ -79,6 +79,13 @@ const DuaItem = ({ item, isActive, itemHeight, language, pageTitle_bn, pageTitle
       final: 2000,
     },
   }).current;
+
+  const hScrollX = useSharedValue(0)
+  const hScrollHandler = useAnimatedScrollHandler({
+    onScroll: (event) => {
+      hScrollX.value = event.contentOffset.x
+    }
+  })
 
   useEffect(() => {
     if (isActive) {
@@ -153,6 +160,7 @@ const DuaItem = ({ item, isActive, itemHeight, language, pageTitle_bn, pageTitle
   }, [isActive]);
 
   const animatedImageStyle = useAnimatedStyle(() => ({
+    ...StyleSheet.absoluteFill,
     transform: [
       { scale: scale.value },
       { translateX: translateX.value },
@@ -161,65 +169,101 @@ const DuaItem = ({ item, isActive, itemHeight, language, pageTitle_bn, pageTitle
     ],
   }));
 
-  const randomImage =
-    backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+  // const randomImage =
+  //   backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
 
   return (
-    <View style={[styles.duaItem, { height: itemHeight }]}>
-      <View style={styles.imageContainer}>
-        <Animated.View
-          style={[styles.animatedImageContainer, animatedImageStyle]}
-        >
-          <Image
-            source={randomImage}
-            style={styles.backgroundImage}
-            resizeMode="cover"
-          />
-        </Animated.View>
+    <View style={[styles.duaItem]}>
+      {/* Background Image Container - Fixed position */}
+      <Animated.View
+        style={[animatedImageStyle]}
+      >
+        <Image
+          source={item.backgroundImage}
+          style={styles.backgroundImage}
+          resizeMode="cover"
+        />
+      </Animated.View>
 
-        <View style={styles.contentContainer}>
-          <View
-            style={{
-              padding: 16,
-              borderRadius: 16,
-              backgroundColor: "rgba(0,0,0,0.5)",
-              gap: 20,
-              maxHeight: screenHeight * 0.7,
-              overflow: 'hidden'
-            }}
-          >
-            <Text style={styles.dua}>{item.arabic}</Text>
-
-            {language === "en" ? (
-              <>
-                {item.transliteration && (
-                  <Text style={styles.spelling}>
-                    <Text style={styles.preSpell}>Spelling: </Text>
-                    {item.transliteration}
+      {/* Scrollable Content Container */}
+      <Animated.ScrollView
+        horizontal
+        pagingEnabled
+        snapToInterval={screenWidth}
+        snapToAlignment="start"
+        decelerationRate="fast"
+        bounces={false}
+        showsHorizontalScrollIndicator={false}
+        scrollEventThrottle={16}
+        style={{
+          height: itemHeight,
+          width: screenWidth,
+        }}
+        onScroll={hScrollHandler}
+      >
+        {item.duas.map((dua, duaIndex) => (
+          <View key={`${dua.arabic}-${duaIndex}`} style={styles.contentContainer}>
+            <View
+              style={{
+                padding: 16,
+                borderRadius: 16,
+                backgroundColor: "rgba(0,0,0,0.5)",
+                gap: 20,
+                maxHeight: screenHeight * 0.7,
+                overflow: 'hidden',
+                width: "100%"
+              }}
+            >
+              <Text style={styles.dua}>{dua.arabic}</Text>
+              {language === "en" ? (
+                <>
+                  {dua.transliteration && (
+                    <Text style={styles.spelling}>
+                      <Text style={styles.preSpell}>Spelling: </Text>
+                      {dua.transliteration}
+                    </Text>
+                  )}
+                  <Text style={styles.meaning}>
+                    <Text style={styles.preSpell}>Meaning: </Text>
+                    {dua.translations_en}
                   </Text>
-                )}
-                <Text style={styles.meaning}>
-                  <Text style={styles.preSpell}>Meaning: </Text>
-                  {item.translations_en}
-                </Text>
-              </>
-
-            ) : (
-              <>
-                {item.transliteration_bn && (
-                  <Text style={styles.spelling}>
-                    <Text style={styles.preSpell}>উচ্চারণ: </Text>
-                    {item.transliteration_bn}
+                </>
+              ) : (
+                <>
+                  {dua.transliteration_bn && (
+                    <Text style={styles.spelling}>
+                      <Text style={styles.preSpell}>উচ্চারণ: </Text>
+                      {dua.transliteration_bn}
+                    </Text>
+                  )}
+                  <Text style={styles.meaning}>
+                    <Text style={styles.preSpell}>অর্থ: </Text>
+                    {dua.translations_bn}
                   </Text>
-                )}
-                <Text style={styles.meaning}>
-                  <Text style={styles.preSpell}>অর্থ: </Text>
-                  {item.translations_bn}
-                </Text>
-              </>
-            )}
+                </>
+              )}
+            </View>
           </View>
-        </View>
+        ))}
+      </Animated.ScrollView>
+
+      {/* Title & Scroll Indicator Container */}
+      <View style={styles.titleNIndicator}>
+        {item.duas.length > 1 && (
+          <View style={styles.indicatorContainer}>
+            {item.duas.map((d, index) => (
+              <HScrollIndicator
+                key={index.toString()}
+                hScrollX={hScrollX}
+                index={index}
+                indicatorWidth={indicatorWidth}
+              />
+            ))}
+          </View>
+        )}
+        <Text style={styles.duaTitle}>
+          {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
+        </Text>
       </View>
     </View>
   );
@@ -282,7 +326,7 @@ export default function DuaDetail() {
   const { language } = useContext(LanguageContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const insets = useSafeAreaInsets();
-  const itemHeight = screenHeight - insets.bottom;
+  const itemHeight = screenHeight
 
   const onViewableItemsChanged = useRef(({ viewableItems }) => {
     if (viewableItems.length > 0) {
@@ -315,20 +359,24 @@ export default function DuaDetail() {
     return Duas.findIndex(item => item.key === dua_key);
   }, [dua_key]);
 
-  const modActiveIndex = (i) => {
-    setActiveIndex(i)
-  }
   const flatListRef = useRef(null);
-  const hScrollX = useSharedValue(0)
-  const hScrollHandler = useAnimatedScrollHandler({
-    onScroll: (event) => {
-      hScrollX.value = event.contentOffset.x
-      const horizontalIndex = Math.round(
-        hScrollX.value / screenWidth
-      );
-      runOnJS(modActiveIndex)(horizontalIndex)
-    }
-  })
+
+  const calculateIndicatorWidth = (duasLength) => {
+    const availableWidth = screenWidth - (16 * 2);
+    const totalGapSpace = (duasLength - 1) * 2;
+    const rawIndicatorWidth = (availableWidth - totalGapSpace) / duasLength;
+    const maxIndicatorWidth = 25;
+    const minIndicatorWidth = 10;
+    return Math.max(minIndicatorWidth, Math.min(rawIndicatorWidth, maxIndicatorWidth));
+  };
+
+  const duasWithImages = useMemo(() => {
+    return Duas.map(item => ({
+      ...item,
+      backgroundImage: backgroundImages[Math.floor(Math.random() * backgroundImages.length)]
+    }));
+  }, []);
+  console.log(Duas.length)
 
   return (
     <View style={styles.container}>
@@ -341,75 +389,17 @@ export default function DuaDetail() {
         ref={flatListRef}
         getItemLayout={getItemLayout}
         onScrollToIndexFailed={onScrollToIndexFailed}
-        data={Duas}
+        data={duasWithImages}
         initialScrollIndex={dua_index}
-        renderItem={({ item, index }) => {
-          // Inside the renderItem function of the FlatList component
-          const availableWidth = screenWidth - (16 * 2);
-          const totalGapSpace = (item.duas.length - 1) * 2;
-
-          // Calculate the raw indicator width
-          let rawIndicatorWidth = (availableWidth - totalGapSpace) / item.duas.length;
-
-          // Restrict the indicator width to a reasonable maximum value (e.g., 60)
-          const maxIndicatorWidth = 25;
-          const minIndicatorWidth = 10;
-
-          // Clamp the indicator width between min and max values
-          const indicatorWidth = Math.max(minIndicatorWidth, Math.min(rawIndicatorWidth, maxIndicatorWidth));
-          return (
-            <>
-              <Animated.ScrollView
-                horizontal
-                pagingEnabled
-                snapToInterval={screenWidth}
-                snapToAlignment="start"
-                decelerationRate="fast"
-                bounces={false}
-                showsHorizontalScrollIndicator={false}
-                scrollEventThrottle={16}
-                style={{
-                  height: itemHeight,
-                  width: screenWidth,
-                }}
-                onScroll={hScrollHandler}
-              >
-                {item.duas.map((dua, duaIndex) => (
-                  <DuaItem
-                    key={`${dua.arabic}-${duaIndex}`}
-                    item={dua}
-                    isActive={duaIndex === activeIndex}
-                    itemHeight={itemHeight}
-                    language={language}
-                    pageTitle_bn={pageTitle_bn}
-                    pageTitle_en={pageTitle_en}
-                    hScrollX={hScrollX}
-                    mainItem={item}
-                  />
-                ))}
-
-              </Animated.ScrollView>
-              {/* Title & Scroll Indicator Container */}
-              <View style={styles.titleNIndicator}>
-                {item.duas.length > 1 && (
-                  <View style={styles.indicatorContainer}>
-                    {item.duas.map((d, index) => (
-                      <HScrollIndicator
-                        key={index.toString()}
-                        hScrollX={hScrollX}
-                        index={index}
-                        indicatorWidth={indicatorWidth}
-                      />
-                    ))}
-                  </View>
-                )}
-                <Text style={styles.duaTitle}>
-                  {language === "bn" ? item.pageTitle_bn : item.pageTitle_en}
-                </Text>
-              </View>
-            </>
-          )
-        }}
+        renderItem={({ item, index }) => (
+          <DuaItem
+            item={item}
+            isActive={index === activeIndex}
+            itemHeight={itemHeight}
+            language={language}
+            indicatorWidth={calculateIndicatorWidth(item.duas.length)}
+          />
+        )}
         keyExtractor={(item, index) => index.toString()}
         pagingEnabled
         showsVerticalScrollIndicator={false}
@@ -424,7 +414,8 @@ export default function DuaDetail() {
         snapToOffsets={Duas.map((_, index) => index * itemHeight)}
         disableIntervalMomentum={true}
         scrollEventThrottle={16}
-      // onViewableItemsChanged={onViewableItemsChanged}
+        onViewableItemsChanged={onViewableItemsChanged}
+        viewabilityConfig={viewabilityConfig}
       />
     </View>
   );
@@ -470,23 +461,20 @@ const styles = StyleSheet.create({
     flex: 1,
     overflow: "hidden",
   },
-  animatedImageContainer: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-  },
   backgroundImage: {
     width: "100%",
     height: "100%",
   },
   contentContainer: {
-    flex: 1,
+    // flex: 1,
     // backgroundColor: "rgba(0, 0, 0, 0.5)",
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
     gap: 10,
-    marginTop: 90
+    marginTop: 90,
+    width: screenWidth,
+
   },
   dua: {
     fontSize: 32,
