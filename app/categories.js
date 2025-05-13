@@ -37,31 +37,31 @@ export default function Categorised() {
     const categoryDuas = Duas.filter(item => item.category == category)
     return (
         <>
-        <Stack.Screen
-        options={{
-            headerTitle: String(category).charAt(0).toUpperCase() + String(category).slice(1).toLowerCase(),
-            headerTitleAlign:'center',
-            headerStyle:{backgroundColor:'honeydew'},
-        headerShadowVisible:false,
+            <Stack.Screen
+                options={{
+                    headerTitle: String(category).charAt(0).toUpperCase() + String(category).slice(1).toLowerCase(),
+                    headerTitleAlign: 'center',
+                    headerStyle: { backgroundColor: 'honeydew' },
+                    headerShadowVisible: false,
 
-        }}
-        />
-        <FlatList
-            data={categoryDuas}
-            keyExtractor={item => item.key}
-            contentContainerStyle={styles.flatList}
-            style={styles.backgroundScrollView}
-            renderItem={({ item, index }) => (
-                <TouchableOpacity style={styles.item} onPress={() => goToDetail(item)}>
-                    <View style={styles.circle}>
-                        <Text style={styles.number}>{index + 1}</Text>
-                    </View>
-                    <Text style={styles.title}>
-                        {language === 'bn' ? item.pageTitle_bn : item.pageTitle_en}
-                    </Text>
-                </TouchableOpacity>
-            )}
-        />
+                }}
+            />
+            <FlatList
+                data={categoryDuas}
+                keyExtractor={item => item.key}
+                contentContainerStyle={styles.flatList}
+                style={styles.backgroundScrollView}
+                renderItem={({ item, index }) => (
+                    <TouchableOpacity style={styles.item} onPress={() => goToDetail(item)}>
+                        <View style={styles.circle}>
+                            <Text style={styles.number}>{index + 1}</Text>
+                        </View>
+                        <Text style={styles.title}>
+                            {language === 'bn' ? item.pageTitle_bn : item.pageTitle_en}
+                        </Text>
+                    </TouchableOpacity>
+                )}
+            />
         </>
     )
 }
@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
         padding: 12
     },
     circle: {
-        height: 50,
-        width: 50,
+        width: 40,
+        aspectRatio: 1,
         borderRadius: 25,
         backgroundColor: 'lightgreen',
         marginRight: wp('5%'),
@@ -90,14 +90,14 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     number: {
-        fontWeight: '500',
+        fontWeight: '700',
         fontSize: hp('2%'),
         color: 'darkolivegreen',
         fontFamily: 'Menlo'
     },
     title: {
         fontWeight: '400',
-        fontSize: Platform.OS === 'ios' ? hp('2%') : hp('3%'),
+        fontSize: hp('2%'),
         color: 'darkolivegreen',
         fontFamily: 'SolaimanLipiNormal',
         width: wp('75%')
