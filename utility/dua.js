@@ -98,7 +98,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'ঘুম থেকে জেগে উঠার সময়ের যিক্‌রসমূহ #১',
 		pageTitle_en: 'When waking up #1',
-		category: 'sleeping'
+		category: 'sleeping',
+		audio_id: '001_01',
 	},
 	{
 		duas: [
@@ -127,7 +128,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'ঘুম থেকে জেগে উঠার সময়ের যিক্‌রসমূহ #২',
 		pageTitle_en: 'When waking up #2',
-		category: 'sleeping'
+		category: 'sleeping',
+		audio_id: '001_01',
 	},
 	{
 		duas: [
@@ -152,213 +154,8 @@ const Duas = [
 		],
 		pageTitle_bn: 'ঘুম থেকে জেগে উঠার সময়ের যিক্‌রসমূহ #৩',
 		pageTitle_en: 'When waking up #3',
-		category: 'sleeping'
-	},
-	{
-		duas: [
-			{
-				top_bn: '',
-				transliteration_bn:
-					'ইন্না ফী খলকিস্ সামাওয়াতি ওয়াল আরদি ওয়াখতিলা-ফিল লাইলি ওয়ান্নাহা-রি লাআয়া-তিল্ লিউলিল্ আলবা-ব।',
-				translations_bn:
-					'নিশ্চয় আসমানসমূহ ও যমীনের সৃষ্টিতে, রাত ও দিনের পরিবর্তনে নিদর্শনাবলী রয়েছে বোধশক্তি সম্পন্ন লোকদের জন্য।',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'إِنَّ فِى خَلْقِ السَّمٰوٰتِ وَالْأَرْضِ وَاخْتِلٰفِ الَّيْلِ وَالنَّهَارِ لَءَايٰتٍ لِّأُولِى الْأَلْبٰبِ',
-				transliteration:
-					"Inna fee khalqis-samaawaati wal'ardhi wakhtilaafil-layli wannahaari la'aayaatil-li 'oolil-'albaab.",
-				translations_en:
-					'Verily! In the creation of the heavens and the earth, and in the alternation of night and day, there are indeed Signs for men of understanding. [190] ',
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'আল্লাযীনা ইয়াযকুরূনাল্লাহা কিয়া-মাও ওয়াকু‘উদাঁও ওয়া‘আলা জুনূবিহিম ওয়াইয়াতাফাক্কারূনা ফী খলকিস্ সামাওয়াতি ওয়াল আরদি, রববানা মা খালাকতা হাযা বা-তিলান, সুবহানাকা ফাকিনা ‘আযা-বান্ নার।',
-				translations_bn:
-					'যারা দাঁড়িয়ে, বসে ও শুয়ে আল্লাহ্‌র স্মরণ করে এবং আসমানসমূহ ও যমীনের সৃষ্টি সম্বন্ধে চিন্তা করে, আর বলে, ‘হে আমাদের রব! আপনি এগুলো অনর্থক সৃষ্টি করেননি, আপনি অত্যন্ত পবিত্র, অতএব আপনি আমাদেরকে আগুনের শাস্তি হতে রক্ষা করুন।’',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'الَّذِينَ يَذْكُرُونَ اللَّهَ قِيٰمًا وَقُعُودًا وَعَلٰى جُنُوبِهِمْ وَيَتَفَكَّرُونَ فِى خَلْقِ السَّمٰوٰتِ وَالْأَرْضِ رَبَّنَا مَا خَلَقْتَ هٰذَا بٰطِلًا سُبْحٰنَكَ فَقِنَا عَذَابَ النَّارِ',
-				transliteration:
-					"Alla<u>th</u>eena ya<u>th</u>kuroon-allaaha 'qiyaaman wa qu'oodan vua 'alaa junoobihim wa yatafakkaroona fee khalqis-samaawaati wal'ardhi Rabbanaa maa khalaqta haa<u>th</u>aa baatilan subhaanaka faqinaa 'a<u>th</u>aaban-naar.",
-				translations_en:
-					"Those who remember Allah standing, sitting and lying down on their sides, and think deeply about the creation of the heavens and the earth, (saying:) 'Our LordA You. have not created this without purpose, glory is to You! Give us salvation from the torment of the Fire. [191] ",
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'রববানা ইন্নাকা মান তুদখিলিন্ না-রা ফাকাদ আখযাইতাহু, ওয়ামা লিয্যালিমীনা মিন আনসা-র।',
-				translations_bn:
-					'‘হে আমাদের রব! আপনি কাউকেও আগুনে নিক্ষেপ করলে তাকে তো আপনি নিশ্চয়ই হেয় করলেন এবং যালেমদের কোন সাহায্যকারী নেই।’',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'رَبَّنَا إِنَّكَ مَنْ تُدْخِلِ النَّارَ فَقَدْ أَخْزَيْتَهُ وَمَا لِلظَّالِمِينَ مِنْ أَنْصَارٍ',
-				transliteration:
-					"Rabbanaa 'innaka man tudkhilin-naara faqad 'akhzaytahu wa maa li<u>dhdh</u>alimeena rain 'ansaar. Rabbanaa 'innanaa sami'naa munaadiyan yunaadee lil'eemaani 'an 'aaminoo birabbikum fa'aamannaa",
-				translations_en:
-					'Our Lord! Verily, whom You admit to the Fire, indeed, You have disgraced him, and never will the oppressors find any helpers. [192] ',
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'রববানা ইন্নানা সামি‘না মুনাদিইয়াইয়্যুনা-দী লিলঈমানি আন্ আ-মিনু বিরব্বিকুম ফাআ--মান্না। রব্বানা ফাগফির লানা যুনূবানা ওয়াকাফফির ‘আন্না সায়্যিআ-তিনা ওয়া তাওয়াফ্‌ফানা মা‘আল আবরা-র।',
-				translations_bn:
-					'‘হে আমাদের রব, আমরা এক আহ্বায়ককে ঈমানের দিকে আহ্বান করতে শুনেছি, ‘তোমরা তোমাদের রবের উপর ঈমান আন।’ কাজেই আমরা ঈমান এনেছি। হে আমাদের রব! আপনি আমাদের পাপরাশি ক্ষমা করুন, আমাদের মন্দ কাজগুলো দূরীভূত করুন এবং আমাদেরকে সৎকর্মপরায়ণদের সহগামী করে মৃত্যু দিন।',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'رَبَّنَا إِنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِي لِلْإِيمَانِ أَنْ آمِنُوا بِرَبِّكُمْ فَآمَنَّا رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا وَتَوَفَّنَا مَعَ الْأَبْرَارِ',
-				transliteration:
-					"Rabbanaa 'innanaa sami'naa munaadiyan yunaadee lil'eemaani 'an 'aaminoo birabbikum fa'aamannaa Rabbanaa faghfir lanaa <u>th</u>unoobanaa wa kaffir 'annaa sayyi'aatinaa wa tawaffanaa ma'al-'abraar.",
-				translations_en:
-					"Our Lord! Verily, we have heard the call of one calling to Faith (saying:) 'Believe in your Lord,' and we have believed. Our Lord! Forgive us our sins and expiate from us our evil deeds, and make us die in the state of righteousness together with the pious and righteous slaves. [193] ",
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'রববানা ওয়া আতিনা মা ওয়া‘আদতানা ‘আলা রুসুলিকা ওয়ালা তুখযিনা ইয়াওমাল কিয়া-মাতি, ইন্নাকা লা তুখলিফুল মী‘আদ।',
-				translations_bn:
-					'‘হে আমাদের রব! আপনার রাসূলগণের মাধ্যমে আমাদেরকে যা দিতে প্রতিশ্রুতি দিয়েছেন তা আমাদেরকে দান করুন এবং কেয়ামতের দিন আমাদেরকে হেয় করবেন না। নিশ্চয় আপনি প্রতিশ্রুতির ব্যতিক্রম করেন না।’',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'رَبَّنَا وَءَاتِنَا مَا وَعَدتَّنَا عَلٰى رُسُلِكَ وَلَا تُخْزِنَا يَوْمَ الْقِيٰمَةِ ۗ إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ',
-				transliteration:
-					"Rabbanaa wa 'aatinaa maa wa'adtanaa 'alaa rusulika wa laa tukhzinaa yawmal-qiyaamati 'innaka laa tukhliful-mee'aad.",
-				translations_en:
-					'Our Lord! Grant us what You promised us through Your Messengers, and disgrace us not on the Day of Resurrection, for You never break (Your) promise. [194] ',
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'ফাস্তাজাবা লাহুম রববুহুম আন্নী লা উদী‘উ আমালা ‘আমিলিম মিনকুম মিন যাকারিন ওয়া উনসা বা‘দুকুম মিন বা‘দ, ফাল্লাযীনা হা-জারূ ওয়া উখরিজূ মিন দিয়ারিহিম ওয়া ঊ-যূ ফী সাবীলী ওয়া কা-তালু ওয়া কু-তিলু লাউকাফফিরান্না ‘আনহুম সায়্যিআ-তিহিম ওয়ালাউদখিলান্নাহুম জান্না-তিন তাজরী মিন তাহ-তিহাল আনহারু, ছাওয়া-বাম্ মিন ‘ইনদিল্লাহি, ওয়াল্লা-হু ইনদাহু হুসনুছ ছাওয়া-ব।',
-				translations_bn:
-					'তারপর তাদের রব তাদের ডাকে সাড়া দিয়ে বলেন, ‘নিশ্চয় আমি তোমাদের মধ্যে আমলকারী কোনো নর বা নারীর আমল বিফল করি না; তোমরা একে অপরের অংশ। কাজেই যারা হিজরত করেছে, নিজ ঘর থেকে উৎখাত হয়েছে, আমার পথে নির্যাতিত হয়েছে এবং যুদ্ধ করেছে ও নিহত হয়েছে আমি তাদের পাপ কাজগুলো অবশ্যই দূর করব এবং অবশ্যই তাদেরকে প্রবেশ করাব জান্নাতে, যার পাদদেশে নদী প্রবাহিত। এটা আল্লাহ্‌র কাছ থেকে পুরস্কার; আর উত্তম পুরস্কার আল্লাহ্‌রই কাছে রয়েছে।',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'فَاسْتَجَابَ لَهُمْ رَبُّهُمْ أَنِّي لَا أُضِيعُ عَمَلَ عَامِلٍ مِنْكُمْ مِنْ ذَكَرٍ أَوْ أُنْثَى بَعْضُكُمْ مِنْ بَعْضٍ فَالَّذِينَ هَاجَرُوا وَأُخْرِجُوا مِنْ دِيَارِهِمْ وَأُوذُوا فِي سَبِيلِي وَقَاتَلُوا وَقُتِلُوا لَأُكَفِّرَنَّ عَنْهُمْ سَيِّئَاتِهِمْ وَلَأُدْخِلَنَّهُمْ جَنَّاتٍ تَجْرِي مِنْ تَحْتِهَا الْأَنْهَارُ ثَوَابًا مِنْ عِنْدِ اللَّهِ وَاللَّهُ عِنْدَهُ حُسْنُ الثَّوَابِ',
-				transliteration:
-					"Fastajaaba lahum Rabbuhum'annee laa 'udhee'u 'amala 'aanulim-minkum min thakarin 'aw 'unthaa ba'dhukum mim ba'dh falla<u>th</u>eena haajaroo wa 'ukhrijoo min diyaarihim wa 'oo<u>th</u>oo fee sabeelee wa qaataloo wa qutiloo la'ukaffiranna 'anhum sayyi'aatihim wa la'udkhilannahum jannaatin tajree min tahtihal-'anhaaru thawaaban min 'indillaah wallaahu 'indahu husnuth-thawaab.",
-				translations_en:
-					"So, their Lord answered them (saying): 'Never will I allow to be lost the work of any of you, be he male or female. You issue forth one from another, so those who emigrated and were driven out from their homes, and suffered harm in My Cause and who fought, and were killed in My Cause, verily, I will expiate from them their evil deeds and admit them into Gardens under which rivers flow; a reward from Allah, and with Allah is the best of rewards.' [195] ",
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'লা ইয়াগুররান্নাকা তাকল্লুবুল্লাযীনা কাফারূ ফিল্ বিলা-দ।',
-				translations_bn:
-					'যারা কুফরী করেছে, দেশে দেশে তাদের অবাধ বিচরণ যেন কিছুতেই আপনাকে বিভ্রান্ত না করে।',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic: 'لَا يَغُرَّنَّكَ تَقَلُّبُ الَّذِينَ كَفَرُوا فِى الْبِلٰدِ',
-				transliteration:
-					'Laa yaghur-rannaka taqallubul-la<u>th</u>eena kafaroo fil-bilaad.',
-				translations_en:
-					'Let not the free disposal of the disbelievers through out the land deceive you. [196] ',
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'মাতা‘উন কালীলুন ছুম্মা মা’ওয়াহুম জাহান্নামু ওয়া বি’সাল মিহা-দ।',
-				translations_bn:
-					'এ তো স্বল্পকালীন ভোগ মাত্র; তারপর জাহান্নাম তাদের আবাস; আর ওটা কত নিকৃষ্ট বিশ্রামস্থল!',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'مَتٰعٌ قَلِيلٌ ثُمَّ مَأْوٰىهُمْ جَهَنَّمُ ۚ وَبِئْسَ الْمِهَادُ',
-				transliteration:
-					"Mataa'un qaleelun thumma ma'waahum jahannam wa bi'sal-mihaad.",
-				translations_en:
-					'A brief enjoyment; then, their ultimate abode is Hell; and worst indeed is that place for rest. [197] ',
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'লা-কিনিল্লাযীনাত্তাকাও রববাহুম লাহুম জান্না-তুন তাজরী মিন তাহতিহাল আনহারু খা-লিদীনা ফীহা নুযুলাম্ মিন ইনদিল্লাহি ওয়ামা ইনদাল্লাহি খাইরুল লিল্ আবরার।',
-				translations_bn:
-					'কিন্তু যারা তাদের রবকে ভয় করে তাদের জন্য রয়েছে জান্নাত, যার পাদদেশে নদী প্রবাহিত, সেখানে তারা স্থায়ী হবে। এ হচ্ছে আল্লাহ্‌র পক্ষ থেকে আতিথেয়তা; আর আল্লাহ্‌র কাছে যা আছে তা সৎকর্মপরায়ণদের জন্য উত্তম।',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'لٰكِنِ الَّذِينَ اتَّقَوْا رَبَّهُمْ لَهُمْ جَنّٰتٌ تَجْرِى مِن تَحْتِهَا الْأَنْهٰرُ خٰلِدِينَ فِيهَا نُزُلًا مِّنْ عِندِ اللَّهِ ۗ وَمَا عِندَ اللَّهِ خَيْرٌ لِّلْأَبْرَارِ',
-				transliteration:
-					"Laakinil-la<u>th</u>eenat-taqaw Rabbahum lahumjannaatun tajree min tahtihal-'anhaaru khaalideena feehaa nuzulam-min 'indillaah wa maa 'indallaahi khayrul-lil'abraar.",
-				translations_en:
-					'But, for those who fear their Lord, are Gardens under which rivers flow; therein are they to dwell forever, and entertainment from Allah; and that which is with Allah is the best for the pious and righteous slaves. [198] ',
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'ওয়াইন্না মিন আহলিল কিতাবি লামইয়ূ’মিনু বিল্লাহি ওয়ামা উনযিলা ইলাইকুম ওয়ামা উনযিলা ইলাইহিম খা-শিঈনা লিল্লা-হি লা ইয়াশতারূনা বিআ-য়া-তিল্লাহি ছামানান্ কালীলা। উলা-ইকা লাহুম আজরুহুম ‘ইনদা রববিহিম। ইন্নাল্লাহা সারী‘উল হিসাব।',
-				translations_bn:
-					'আর নিশ্চয় কিতাবীদের মধ্যে এমন লোকও আছে যারা আল্লাহ্‌র প্রতি বিনয়াবনত হয়ে তাঁর প্রতি এবং তিনি যা তোমাদের ও তাদের প্রতি নাযিল করেছেন তাতে ঈমান আনে। তারা আল্লাহ্‌র আয়াত তুচ্ছ মূল্যে বিক্রি করে না। তারাই, যাদের জন্য আল্লাহ্‌র কাছে পুরস্কার রয়েছে। নিশ্চয়ই আল্লাহ্ দ্রুত হিসাব গ্রহণকারী।',
-				bottom_bn: '',
-				reference_bn: '',
-				top_en: '',
-				arabic:
-					'وَإِنَّ مِنْ أَهْلِ الْكِتَابِ لَمَنْ يُؤْمِنُ بِاللَّهِ وَمَا أُنْزِلَ إِلَيْكُمْ وَمَا أُنْزِلَ إِلَيْهِمْ خَاشِعِينَ للَّهِ لَا يَشْتَرُونَ بِآيَاتِ اللَّهِ ثَمَنًا قَلِيلًا أُولَئِكَ لَهُمْ أَجْرُهُمْ عِنْدَ رَبِّهِمْ إِنَّ اللهَ سَرِيعُ الْحِسَابِ',
-				transliteration:
-					"Wa 'inna min 'ahlil-kitaabi laman yu'minu billaahi wa maa 'unzila 'ilaykum wa maa 'unzila 'ilayhim khaashi'eena lillaahi laa yashtaroona bi'aayaatillaahi thamanan qaleela 'oolaa'ika lahum 'ajruhum 'inda Rabbihim 'innallaaha saree'ul-hisaab.",
-				translations_en:
-					'And there are, certainly , among the people of the Scripture, those who believe in Allah and in that which has been revealed to you, and in that which has been revealed to them, hum bling themselves before Allah. They do not sell the Verses of Allah for a little price, for them is a reward with their Lord. Surely, Allah is Swift in account. [199] ',
-				bottom_en: '',
-				reference_en: ''
-			},
-			{
-				top_bn: '',
-				transliteration_bn:
-					'ইয়া আয়্যুহাল্লাযীনা আমানুসবিরূ ওয়াসা-বিরূ ওয়া রা-বিতু ওয়াত্তাকুল্লাহা লা‘আল্লাকুম তুফলিহুন',
-				translations_bn:
-					'হে ঈমানদারগণ! তোমরা ধৈর্য ধারণ কর, ধৈর্যে প্রতিযোগিতা কর এবং সবসময় যুদ্ধের জন্য প্রস্তুত থাক, আর আল্লাহ্‌র তাকওয়া অবলম্বন কর; যাতে তোমরা সফলকাম হতে পার”',
-				bottom_bn: '',
-				reference_bn:
-					'সূরা আলে ইমরান ১৯০-২০০; বুখারী, ফাতহুল বারীসহ ৮/২৩৭, নং ৪৫৬৯; মুসলিম ১/৫৩০, নং ২৫৬।',
-				top_en: '',
-				arabic:
-					'يٰٓأَيُّهَا الَّذِينَ ءَامَنُوا اصْبِرُوا وَصَابِرُوا وَرَابِطُوا وَاتَّقُوا اللَّهَ لَعَلَّكُمْ تُفْلِحُونَ',
-				transliteration:
-					"Yaa'ayyuhal-la<u>th</u>eena 'aamanus-biroo wa saabiroo wa raabitoo wattaqul-laaha la'allakum tuflihoon.\"",
-				translations_en:
-					'O you who believe! Have patience and contend in patience, be vigilant and informed, and fear Allah, so that you may be successful. [200] ',
-				bottom_en: "Qur'an Al-'Imran 3: 190-200;",
-				reference_en:
-					'Al-Bukhari, cf. Al-Asqalani, Fathul-Bari 8/237; Muslim 1/530'
-			}
-		],
-		pageTitle_bn: 'সূরা আল-ইমরান আয়াত ১৯০-২০০',
-		pageTitle_en: 'Surah Al-Imran, Ayat 190 - 200',
-		category: 'quranic'
+		category: 'sleeping',
+		audio_id: '001_03',
 	},
 	{
 		duas: [
