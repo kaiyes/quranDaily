@@ -129,7 +129,7 @@ const Duas = [
 		pageTitle_bn: 'ঘুম থেকে জেগে উঠার সময়ের যিক্‌রসমূহ #২',
 		pageTitle_en: 'When waking up #2',
 		category: 'sleeping',
-		audio_id: '001_01',
+		audio_id: '001_02',
 	},
 	{
 		duas: [
