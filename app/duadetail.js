@@ -47,11 +47,11 @@ const backgroundImages = [
   require("../assets/images/backgroundImgs/5.jpg"),
   require("../assets/images/backgroundImgs/6.jpg"),
   require("../assets/images/backgroundImgs/7.jpg"),
-  // require("../assets/images/backgroundImgs/8.jpg"),
-  // require("../assets/images/backgroundImgs/9.jpg"),
-  // require("../assets/images/backgroundImgs/10.jpg"),
-  // require("../assets/images/backgroundImgs/11.jpg"),
-  // require("../assets/images/backgroundImgs/12.jpg"),
+  require("../assets/images/backgroundImgs/8.jpg"),
+  require("../assets/images/backgroundImgs/9.jpg"),
+  require("../assets/images/backgroundImgs/10.jpg"),
+  require("../assets/images/backgroundImgs/11.jpg"),
+  require("../assets/images/backgroundImgs/12.jpg"),
   // require("../assets/images/backgroundImgs/13.jpg"),
   // require("../assets/images/backgroundImgs/14.jpg"),
   // require("../assets/images/backgroundImgs/15.jpg"),
@@ -224,46 +224,6 @@ const DuaItem = ({ item, isActive, itemHeight, language, pageTitle_bn, pageTitle
     </View>
   );
 };
-// const HScrollIndicator = ({ hScrollX, index }) => {
-//   const hscrollIndicatorStyle = useAnimatedStyle(() => ({
-//     borderRadius: 8,
-//     opacity: interpolate(
-//       hScrollX.value,
-//       [
-//         (index - 1) * screenWidth,  // previous item
-//         index * screenWidth,        // current item
-//         (index + 1) * screenWidth   // next item
-//       ],
-//       [
-//         0.5,
-//         1,
-//         0.5
-//       ],
-//       Extrapolation.CLAMP
-//     ),
-//     height: 2,
-//     backgroundColor: 'white',
-//     width: interpolate(
-//       hScrollX.value,
-//       [
-//         (index - 1) * screenWidth,  // previous item
-//         index * screenWidth,        // current item
-//         (index + 1) * screenWidth   // next item
-//       ],
-//       [
-//         20,  // width at previous item
-//         40,  // width at current item
-//         20   // width at next item
-//       ],
-//       Extrapolation.CLAMP
-//     )
-//   }))
-//   return (
-//     <Animated.View
-//       style={hscrollIndicatorStyle}
-//     />
-//   )
-// }
 
 
 const HScrollIndicator = ({ hScrollX, index, indicatorWidth }) => {
