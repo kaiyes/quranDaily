@@ -50,68 +50,68 @@ export default function Page() {
     return (
         <View style={styles.root}>
             <Stack.Screen
-            options={{
-                headerTitle:"Dua Categories",
-                headerStyle:{backgroundColor: 'honeydew'},
-            headerShadowVisible:false,
-                headerRight:()=>{
-                    return(
-                        <View style={styles.favHolder}>
-                        <TouchableOpacity
-                            style={[
-                                styles.globe,
-                                language === 'bn'
-                                    ? {
-                                        backgroundColor: 'black'
-                                    }
-                                    : null
-                            ]}
-                            onPress={() => changeLang('bn')}>
-                            <Text style={styles.langText}>ব</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={[
-                                styles.globe,
-                                language === 'en'
-                                    ? {
-                                        backgroundColor: 'black'
-                                    }
-                                    : null
-                            ]}
-                            onPress={() => changeLang('en')}>
-                            <Text style={styles.langText}>E</Text>
-                        </TouchableOpacity>
-    
-                        <TouchableOpacity
-                            onPress={() => {
-                                navigate('allduas')
-                            }}>
-                            <Icon
-                                name="globe"
-                                type="entypo"
-                                color="seagreen"
-                                size={12}
-                                reverse
-                                reverseColor="white"
-                            />
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            onPress={() => {
-                                navigate('favourites')
-                            }}>
-                            <Icon
-                                name="heart"
-                                type="entypo"
-                                color="seagreen"
-                                size={12}
-                                reverse
-                                reverseColor="white"
-                            />
-                        </TouchableOpacity>
-                    </View>
-                    )
-                }
-            }}
+                options={{
+                    headerTitle: "Dua Categories",
+                    headerStyle: { backgroundColor: 'honeydew' },
+                    headerShadowVisible: false,
+                    headerRight: () => {
+                        return (
+                            <View style={styles.favHolder}>
+                                <TouchableOpacity
+                                    style={[
+                                        styles.globe,
+                                        language === 'bn'
+                                            ? {
+                                                backgroundColor: 'black'
+                                            }
+                                            : null
+                                    ]}
+                                    onPress={() => changeLang('bn')}>
+                                    <Text style={styles.langText}>ব</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    style={[
+                                        styles.globe,
+                                        language === 'en'
+                                            ? {
+                                                backgroundColor: 'black'
+                                            }
+                                            : null
+                                    ]}
+                                    onPress={() => changeLang('en')}>
+                                    <Text style={styles.langText}>E</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        navigate('allduas')
+                                    }}>
+                                    <Icon
+                                        name="globe"
+                                        type="entypo"
+                                        color="seagreen"
+                                        size={12}
+                                        reverse
+                                        reverseColor="white"
+                                    />
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        // navigate('favourites')
+                                    }}>
+                                    <Icon
+                                        name="heart"
+                                        type="entypo"
+                                        color="seagreen"
+                                        size={12}
+                                        reverse
+                                        reverseColor="white"
+                                    />
+                                </TouchableOpacity>
+                            </View>
+                        )
+                    }
+                }}
             />
 
             <FlatList

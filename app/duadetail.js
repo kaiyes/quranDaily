@@ -8,7 +8,8 @@ import {
   Image,
   Dimensions,
   FlatList,
-  ScrollView
+  ScrollView,
+  Modal
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { LanguageContext } from "../utility/context";
@@ -31,7 +32,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import Duas from "../utility/dua";
-import { StatusBar } from "expo-status-bar";
+import * as Sharing from 'expo-sharing';
+import ViewShot from "react-native-view-shot";
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get("window");
 
@@ -58,6 +60,9 @@ const backgroundImages = [
 ];
 
 const DuaItem = ({ item, isActive, itemHeight, language, indicatorWidth }) => {
+
+  const [showShareableImage, setShowShareableImage] = useState(false);
+
   const baseScale = 1.4;
   const scale = useSharedValue(1);
   const translateX = useSharedValue(0);
@@ -164,6 +169,26 @@ const DuaItem = ({ item, isActive, itemHeight, language, indicatorWidth }) => {
       { rotate: rotate.value },
     ],
   }));
+  const [isSharing, setIsSharing] = useState(false);
+  const viewShotRef = useRef(null);
+
+  const captureAndShare = async () => {
+    try {
+      setIsSharing(true);
+      // Wait for the modal to render
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      const uri = await viewShotRef.current.capture();
+      await Sharing.shareAsync(uri, {
+        mimeType: 'image/png',
+        dialogTitle: 'Share Dua',
+      });
+    } catch (error) {
+      console.error('Error sharing image:', error);
+    } finally {
+      setIsSharing(false);
+    }
+  };
 
   // const randomImage =
   //   backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
@@ -259,11 +284,82 @@ const DuaItem = ({ item, isActive, itemHeight, language, indicatorWidth }) => {
           ))}
         </Animated.ScrollView>
       </Animated.View>
+      <TouchableOpacity
+        style={styles.shareButton}
+        onPress={captureAndShare}
+      >
+        <Ionicons name="share-outline" size={24} color="white" />
+      </TouchableOpacity>
+
+      {isSharing && (
+        <Modal
+          visible={isSharing}
+          transparent={true}
+          animationType="slide"
+          onRequestClose={() => setIsSharing(false)}
+        >
+          <View style={styles.modalContainer}>
+            <ShareableDuaImage
+              dua={item.duas[Math.floor(hScrollX.value / (screenWidth - (32 * 2)))]}
+              backgroundImage={item.backgroundImage}
+              language={language}
+              viewShotRef={viewShotRef}
+            />
+          </View>
+        </Modal>
+      )}
     </View>
   );
 };
 
-
+const ShareableDuaImage = ({ dua, backgroundImage, language, viewShotRef }) => {
+  return (
+    <ViewShot
+      ref={viewShotRef}
+      options={{
+        format: 'png',
+        quality: 1,
+      }}
+      style={styles.shareableContainer}
+    >
+      <Image
+        source={backgroundImage}
+        style={StyleSheet.absoluteFill}
+        resizeMode="cover"
+      />
+      <View style={styles.shareableContent}>
+        <Text style={styles.shareableDua}>{dua.arabic}</Text>
+        {language === "en" ? (
+          <>
+            {dua.transliteration && (
+              <Text style={styles.shareableSpelling}>
+                <Text style={styles.shareablePreSpell}>Spelling: </Text>
+                {dua.transliteration}
+              </Text>
+            )}
+            <Text style={styles.shareableMeaning}>
+              <Text style={styles.shareablePreSpell}>Meaning: </Text>
+              {dua.translations_en}
+            </Text>
+          </>
+        ) : (
+          <>
+            {dua.transliteration_bn && (
+              <Text style={styles.shareableSpelling}>
+                <Text style={styles.shareablePreSpell}>উচ্চারণ: </Text>
+                {dua.transliteration_bn}
+              </Text>
+            )}
+            <Text style={styles.shareableMeaning}>
+              <Text style={styles.shareablePreSpell}>অর্থ: </Text>
+              {dua.translations_bn}
+            </Text>
+          </>
+        )}
+      </View>
+    </ViewShot>
+  );
+};
 const HScrollIndicator = ({ hScrollX, index, indicatorWidth }) => {
 
   const hscrollIndicatorStyle = useAnimatedStyle(() => {
@@ -370,7 +466,6 @@ export default function DuaDetail() {
       backgroundImage: backgroundImages[Math.floor(Math.random() * backgroundImages.length)]
     }));
   }, []);
-  console.log(Duas.length)
 
   return (
     <View style={styles.container}>
@@ -541,5 +636,81 @@ const styles = StyleSheet.create({
     textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 3,
+  },
+  shareButton: {
+    position: 'absolute',
+    top: 40,
+    right: 16,
+    zIndex: 2,
+    width: 40,
+    aspectRatio: 1,
+    borderRadius: 20,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  shareableContainer: {
+    height: screenHeight,
+    width: screenWidth,
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  shareableContent: {
+    // flex: 1,
+    width: screenWidth - 64,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    borderRadius: 16,
+    maxHeight: screenHeight * 0.7,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  shareableDua: {
+    fontSize: 32,
+    color: '#fff',
+    textAlign: 'center',
+    fontFamily: 'me_quran',
+    marginBottom: 20,
+  },
+  shareableSpelling: {
+    fontSize: 18,
+    color: '#fff',
+    textAlign: 'center',
+    fontFamily: 'SolaimanLipiNormal',
+    marginBottom: 10,
+  },
+  shareableMeaning: {
+    fontSize: 18,
+    color: '#fff',
+    textAlign: 'center',
+    fontFamily: 'SolaimanLipiNormal',
+  },
+  shareablePreSpell: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+    fontFamily: 'SolaimanLipiNormal',
+  },
+  modalContainer: {
+    position: 'absolute',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContent: {
+    flex: 1,
+  },
+  closeButton: {
+    position: 'absolute',
+    zIndex: 5000,
+    top: 16,
+    right: 16,
+    width: 40,
+    aspectRatio: 1,
+    borderRadius: 20,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
