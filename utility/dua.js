@@ -10252,4 +10252,28 @@ Duas.map(item => {
 
 // let x = Duas.sort((a, b) => a.id - b.id)
 
-export default Duas
+// Fields to check for non-empty values
+const requiredFields = [
+	'arabic',
+	'transliteration_bn',
+	'translations_bn',
+	'transliteration',
+	'translations_en'
+];
+
+// Function to check that all required fields are present and not empty
+function hasAllRequiredFields(dua) {
+	return requiredFields.every(field => dua[field] && dua[field].trim() !== '');
+}
+
+// Filter the Duas array
+const filteredDuas = Duas.map(entry => {
+	const validDuas = entry.duas.filter(hasAllRequiredFields);
+	return validDuas.length > 0 ? { ...entry, duas: validDuas } : null;
+}).filter(Boolean);
+
+// Output the cleaned-up data
+// console.log(JSON.stringify(filteredDuas, null, 2));
+
+
+export default filteredDuas
